@@ -1,0 +1,77 @@
+{
+    "answers": {
+        "": {
+            "availableHook": "",
+            "hook": "",
+            "state": "",
+            "text": ""
+        },
+        "call-out": {
+            "availableHook": "hasRobberQuest",
+            "state": "called-out",
+            "text": "call-out"
+        },
+        "convince-escape": {
+            "hook": "",
+            "state": "escape",
+            "text": "convince-escape"
+        },
+        "convince-talk-to-owner": {
+            "hook": "tryToConvince",
+            "state": "",
+            "text": "convince-talk-to-owner"
+        },
+        "leave-him-be": {
+            "text": "leave-him-be"
+        },
+        "take-to-owner": {
+            "hook": "tryToIntimidate",
+            "state": "come-with",
+            "text": "take-to-owner"
+        }
+    },
+    "entryPoint": "intro",
+    "states": {
+        "called-out": {
+            "answers": [
+                "convince-talk-to-owner",
+                "take-to-owner",
+                "convince-escape"
+            ],
+            "hook": "onRobberFound",
+            "text": "called-out"
+        },
+        "come-with": {
+            "answers": [
+            ],
+            "hook": "onComeWith",
+            "text": "come-with"
+        },
+        "escape": {
+            "answers": [
+            ],
+            "hook": "onEscaped",
+            "text": "escape"
+        },
+        "intro": {
+            "answers": [
+                "call-out",
+                "leave-him-be"
+            ],
+            "hook": "",
+            "text": "intro"
+        },
+        "run-for-it": {
+            "answers": [
+            ],
+            "hook": "onEscapeAttempt",
+            "text": "run-for-it"
+        },
+        "saved": {
+            "answers": [
+            ],
+            "hook": "onEscaped",
+            "text": "saved"
+        }
+    }
+}
