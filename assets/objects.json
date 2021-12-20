@@ -1,0 +1,278 @@
+{
+    "9mm-ammo": {
+        "icon": "9mm-bullets.png",
+        "isGroupable": true,
+        "scriptName": "ammo.mjs",
+        "sprite": "dynamite",
+        "type": "ammo",
+        "value": 4,
+        "weight": 0
+    },
+    "agility-potion": {
+        "icon": "healthPotion.webp",
+        "isGroupable": true,
+        "scriptName": "agilityPotion.mjs",
+        "sprite": "health-potion",
+        "type": "consommables",
+        "value": 1,
+        "weight": 1
+    },
+    "apple-cider": {
+        "icon": "apple-cider.png",
+        "isGroupable": true,
+        "scriptName": "alcohol.mjs",
+        "sprite": "bottle",
+        "type": "consommables",
+        "value": 10,
+        "weight": 1
+    },
+    "apple-whiskey": {
+        "icon": "apple-whiskey.png",
+        "isGroupable": true,
+        "scriptName": "alcohol.mjs",
+        "sprite": "bottle",
+        "type": "consommables",
+        "value": 25,
+        "weight": 1
+    },
+    "book": {
+        "icon": "book.png",
+        "isGroupable": true,
+        "scriptName": "book.mjs",
+        "sprite": "misc",
+        "type": "consommables",
+        "value": 45,
+        "weight": 3
+    },
+    "bottlecaps": {
+        "icon": "caps.png",
+        "isGroupable": true,
+        "sprite": "misc",
+        "type": "misc",
+        "value": 1,
+        "weight": 0
+    },
+    "dynamite": {
+        "icon": "dynamite.png",
+        "isGroupable": false,
+        "scriptName": "dynamite.mjs",
+        "sprite": "dynamite",
+        "type": "weapon",
+        "value": 130,
+        "weight": 5
+    },
+    "food-bread": {
+        "icon": "bread.png",
+        "isGroupable": true,
+        "scriptName": "food.mjs",
+        "sprite": "misc",
+        "type": "consommables",
+        "value": 6,
+        "weight": 1
+    },
+    "food-butter": {
+        "icon": "butter.png",
+        "isGroupable": true,
+        "sprite": "misc",
+        "type": "misc",
+        "value": 10,
+        "weight": 1
+    },
+    "food-croissant": {
+        "icon": "croissant.png",
+        "isGroupable": true,
+        "scriptName": "food.mjs",
+        "sprite": "misc",
+        "type": "consommables",
+        "value": 18,
+        "weight": 1
+    },
+    "frag-grenade": {
+        "icon": "frag-grenade.png",
+        "isGroupable": true,
+        "scriptName": "grenade.mjs",
+        "sprite": "medikit",
+        "type": "weapon",
+        "value": 80,
+        "weight": 1
+    },
+    "gemstone": {
+        "icon": "gemstones.png",
+        "isGroupable": true,
+        "scriptName": "item.mjs",
+        "sprite": "misc",
+        "type": "misc",
+        "value": 55,
+        "weight": 2
+    },
+    "health-potion": {
+        "icon": "healthPotion.webp",
+        "isGroupable": true,
+        "scriptName": "health-potion.mjs",
+        "sprite": "health-potion",
+        "type": "consommables",
+        "value": 75,
+        "weight": 2
+    },
+    "healthPotion": {
+        "isGroupable": true,
+        "scriptName": "medikit.mjs",
+        "sprite": "",
+        "type": "consommables",
+        "value": 75,
+        "weight": 1
+    },
+    "melee-bite": {
+        "scriptName": "melee-bite.mjs",
+        "type": "weapon",
+        "weight": 0
+    },
+    "melee-bucking": {
+        "scriptName": "melee-bucking.mjs",
+        "type": "weapon",
+        "weight": 0
+    },
+    "melee-hoofercut": {
+        "scriptName": "melee-hoofercut.mjs",
+        "type": "weapon",
+        "weight": 0
+    },
+    "melee-stinger": {
+        "scriptName": "melee-stinger.mjs",
+        "type": "weapon",
+        "weight": 0
+    },
+    "metal-armor": {
+        "icon": "metal-armor.png",
+        "isGroupable": true,
+        "scriptName": "armor.mjs",
+        "sprite": "metal-armor",
+        "type": "armor",
+        "value": 850,
+        "weight": 15
+    },
+    "mouthgun": {
+        "icon": "littlemacintosh.png",
+        "isGroupable": false,
+        "scriptName": "mouthgun.mjs",
+        "sprite": "dynamite",
+        "type": "weapon",
+        "value": 375,
+        "weight": 5
+    },
+    "pickaxe": {
+        "icon": "pickaxe.png",
+        "isGroupable": true,
+        "scriptName": "pickaxe.mjs",
+        "sprite": "misc",
+        "type": "weapon",
+        "value": 25,
+        "weight": 5
+    },
+    "power-armor": {
+        "icon": "powerarmor.png",
+        "isGroupable": true,
+        "scriptName": "powerArmor.mjs",
+        "sprite": "metal-armor",
+        "type": "armor",
+        "value": 9000,
+        "weight": 50
+    },
+    "skill-book-medicine": {
+        "icon": "firstaid-book.png",
+        "isGroupable": true,
+        "scriptName": "skillbook.mjs",
+        "sprite": "misc",
+        "type": "consommables",
+        "value": 190,
+        "weight": 3
+    },
+    "skill-book-outdoorsman": {
+        "icon": "survival-book.png",
+        "isGroupable": true,
+        "scriptName": "skillbook.mjs",
+        "sprite": "misc",
+        "type": "consommables",
+        "value": 125,
+        "weight": 3
+    },
+    "skill-book-smallGuns": {
+        "icon": "smallguns-book.png",
+        "isGroupable": true,
+        "scriptName": "skillbook.mjs",
+        "sprite": "misc",
+        "type": "consommables",
+        "value": 250,
+        "weight": 3
+    },
+    "sparkle-cola": {
+        "icon": "sparkle-cola.png",
+        "isGroupable": true,
+        "scriptName": "drink.mjs",
+        "sprite": "bottle",
+        "type": "consommables",
+        "value": 12,
+        "weight": 1
+    },
+    "stable-suit": {
+        "icon": "stable-suit.png",
+        "isGroupable": true,
+        "scriptName": "armor.mjs",
+        "sprite": "stable-suit",
+        "type": "armor",
+        "value": 50,
+        "weight": 2
+    },
+    "surgeon-coat": {
+        "icon": "tuxedo.png",
+        "isGroupable": true,
+        "scriptName": "armor.mjs",
+        "sprite": "surgeon-coat",
+        "type": "armor",
+        "value": 150,
+        "weight": 3
+    },
+    "testGun": {
+        "isGroupable": false,
+        "scriptName": "gun.mjs",
+        "sprite": "gun",
+        "type": "weapon",
+        "value": 120,
+        "weight": 15
+    },
+    "testItem": {
+        "isGroupable": false,
+        "scriptName": "medikit.mjs",
+        "sprite": "medikit",
+        "type": "consommables",
+        "value": 12,
+        "weight": 5
+    },
+    "trialKey": {
+        "icon": "trial-key.png",
+        "isGroupable": false,
+        "scriptName": "item.mjs",
+        "sprite": "misc",
+        "type": "misc",
+        "value": 1,
+        "weight": 0
+    },
+    "trialStartKey": {
+        "icon": "trial-key-2.png",
+        "isGroupable": false,
+        "scriptName": "item.mjs",
+        "sprite": "misc",
+        "type": "misc",
+        "value": 1,
+        "weight": 0
+    },
+    "tuxedo": {
+        "icon": "tuxedo.png",
+        "isGroupable": true,
+        "scriptName": "armor.mjs",
+        "sprite": "tuxedo",
+        "type": "armor",
+        "value": 75,
+        "weight": 2
+    }
+}

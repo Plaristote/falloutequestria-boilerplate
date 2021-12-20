@@ -1,0 +1,43 @@
+[
+  {
+    "name": "Plaristote",
+    "category": "developers",
+    "url": "https://github.com/Plaristote"
+  },
+  {
+    "name": "Munkari",
+    "category": "artwork",
+    "url": "https://www.deviantart.com/munkari",
+    "files": ["assets/backgrounds/default.png"]
+  },
+  {
+    "name": "Zeka10000",
+    "category": "sprites",
+    "url": "https://www.deviantart.com/zeka10000",
+    "files": ["assets/credits/zeka10000.png"]
+  },
+  {
+    "name": "Akumath",
+    "category": "sprites",
+    "url": "https://www.deviantart.com/akumath",
+    "files": ["assets/credits/akumath.png"]
+  },
+  {
+    "name": "Boo",
+    "category": "sprites",
+    "url": "https://www.spriters-resource.com/submitter/Boo",
+    "files": ["assets/credits/boo.png"],
+    "consent": false
+  },
+  {
+    "name": "Captain Macintosh",
+    "category": "sprites",
+    "url": "https://dribbble.com/Sunseifer",
+    "files": [
+      "assets/icons/firstaid-book.png",
+      "assets/icons/smallguns-book.png",
+      "assets/icons/survival-book.png"
+    ],
+    "consent": false
+  }
+]

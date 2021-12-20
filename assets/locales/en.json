@@ -230,7 +230,32 @@
 		"give-butter": "You gave butter to the baker.",
 		"got-reward": "You received a tasty reward.",
 		"description": "The baker needs butter to bake cakes. It seems like the hostel's kitchen hoards a lot of the available ingredients around town."
-	}
+	},
+        "catch-robber": {
+            "bring-robber": "Bring the thief to Mordino.",
+            "description": "The hostel's director asked you to bring him the thief that steals from customers at night.",
+            "director-scene": {
+                "part1": "Ah, such a pleasure making your aquaintance ! At long last we'll put an end to that situation.",
+                "part1-1": "Hmpf",
+                "part10": "Oh, no, we can't have that here. Bobo ?",
+                "part11": "Aaargh",
+                "part12": "Last chance. I really don't like seeing you in that sorry state. Please give me one good reason not to kill you.",
+                "part13": "Shut it and finish it...",
+                "part14": "What a pity. Very well. Bobo, please rid me of that pest.",
+                "part2": "My personal told me you've stolen quite a sum to our establishment. I'll go straight to the point.",
+                "part3": "What have you done with your gains ? And how do you plan on making up to me ?",
+                "part4": "[spits] I have nothing to tell you. Do what you have to do.",
+                "part5": "Very well. Bobo, it's your time to act.",
+                "part6": "argh",
+                "part7": "urgh",
+                "part8": "So, how do you do ? Are you gonna talk ?",
+                "part9": "Screw you, scumbag."
+            },
+            "find-robber": "Intercept the thief.",
+            "help-escape": "Help the thief escape.",
+            "kill": "The robber died.",
+            "title": "Catch a thief"
+        }
   },
   "bubbles": {
     "passerby-1": "I'm busy.",
@@ -252,14 +277,180 @@
     "steal-warning-4": "Guards ! We got a shoplifter over here",
     "chase-from-kitchen": "Get ouf of my kitchen !"
   },
+  "sample-city": {
+    "director-not-receiving": "Boss isn't receiving anyone right now. Come back later.",
+    "director-at-lunch": "Boss is taking her launch. Come back in a couple hours.",
+    "shady-robber": "He looks kinda shady."
+  },
   "dialogs": {
+        "slotMachine": {
+            "bet10": "10 caps",
+            "bet100": "100 caps",
+            "bet20": "20 caps",
+            "bet50": "50 caps",
+            "intro": "The slot machine stands before you. How much do you want to bet ?",
+            "leave": "Go away",
+            "lost": "You lost. Better luck next time !",
+            "won": "You won {{amount}} caps ! Yay !"
+        },
+        "myDialog": {
+            "acceptance": "I see... I guess I don't have a choice then. Let's do this.",
+            "answer": "Hello to you !",
+            "askDetails": "Trial ? What do you mean ? What's going on ?",
+            "convinceNotToFight": "That might be. But I still do not wish to fight. I do not want to live in such a world. And the only way to make the world a better place is to start solving our problems using wits and diplomacy, rather than violence. I'll be careful out there. Trust me. Just let me pass. It'll be fine.",
+            "dialoguePath1": "I don't want to do this anymore than you, friend. But this is the way of our people. You've started the trial, and you won't get out of it unless you overcome every part of it.",
+            "dialoguePath2": "We could, friend, we could. But this is for your own good. The world out there is dangerous. You might be able to avoid most fights, but at some point, you'll be stuck with no other choices. You must be ready. We have to do this.",
+            "dialoguePath3": "Traditions endure for a reason, friend. You've tried my patience long enough. Prepare yourself.",
+            "dialogueSuccess": "You may be right... it's true that you've always had a way with words. I shall trust you then. I just hope we won't regret it later. Here friend. Take the key, and go back to the surface.",
+            "dumbTraditions": "Those traditions are stupid ! I need to go to the wastes, and time is of the essence ! Just let me go !",
+            "hello-world": "Hello world !",
+            "hostileFightStart": "Well... I wasn't looking forward to breaking your bones, but you really are asking for it.",
+            "hostileStart1": "Oh, so you laid those traps for me ? It's a good thing I already hate your face, I won't regret ruining it. Come at me !",
+            "intimidated": "Look, I know what I'm getting into. I don't like this one bit either, but I have to do this.",
+            "intimidation2": "[Flex muscles] Here's a suggestion. We both walk away right now, and tell whoever waits outside that I beat you fair and square. This way, I don't have to bash your head in. Sounds good ?",
+            "intimidationStep1": "You ? Fight me ? You must've a death wish.",
+            "intimidationSuccess": "Alright. You win. We both know how this would've ended anyway. Just tell them I did my best, alright ? Here, take the key.",
+            "intro": "Greetings, young fellow, and welcome to the last part of your trial ! Shall we begin ?",
+            "moveAside": "Get out of my way, or else...",
+            "ohShit": "Oh, shit !",
+            "passiveStart": "I guess so ? Whatever it is, let's do it !",
+            "proposeToLie": "There's no point getting hurt over this. We could just both walk away, and tell everyone I won the fight.",
+            "protest": "Wait, what ? Are you guys insane ? I alsmot died back there ! You all nearly killed me !",
+            "reaction": "Oh, ok, good bye then !",
+            "refuseFight": "Ok, I get it... but I really don't want to fight you. How about you just let me through ?",
+            "trialExplanation": "You must've hurt your head pretty hard while getting here, huh ? This is the last part of your trial, to see if you're ready to face the hardships of the outside world. Since you're here, it means you've overcome the traps and obstacles we had laid out for you. Now's the time for your last trial. You must best me in hoof to hoof combat. What say you ? Shall we get started ?",
+            "trialExplanation2": "Sure. And if you don't manage to beat me, I will have to kill you myself. Not that I'll take any pleasure doing it. You knew what you were getting into when you entered this place, friend. There ain't no going back from here. Do, or do not. There is no try.",
+            "victory": "Alright, alright, I give up. Well done, you passed all the trials. You may go on. Here, take the key.",
+            "victoryAngry": "Stop it ! I've had enough, you've passed. Just take the key and get out of here."
+        },
+    "tutoDog": {
+            "askPayment": "And how do you plan to make it worth my while exactly ?",
+            "completedWork": "Yes, here they are. [<i>Give your gemstones</i>]",
+            "intro": "Hey ! You there ! Are you pony ? Been a while since I last saw one of you. What's a pony doing in these dark and dangerous tunnels ?",
+            "introWithWork": "Pony back so soon ! Do you have my gemstones ?",
+            "lookingForExit": "I'm looking for a way out of here. Can you help ?",
+            "mehThanks": "These are called explosives, dummy. Thanks anyway.",
+            "negotiatePayment": "Hm. Those gemstones don't look anything like the good stuff... tell you what, I find those real gemstones for you, you get me those fake ones and your pickaxe. Do we have a deal ?",
+            "paymentAccept": "Are those grenades ? That could prove useful to me. I'm in.",
+            "quickExit": "Just having a look. I'll be going now.",
+            "quickReject": "I don't have time for this. See you another time.",
+            "refusePayment": "Yeah, that won't do. I guess you have nothing of interest to me then. So long, and good luck with your gem thing.",
+            "wayOut": "Exits are everywhere. For us dogs. But I guess ponies can't dig with their silly weaker paws... there's an exit you could go through, south-east of here. Dogs don't go there though. It's full of pony contraptions that go boom.",
+            "wayOutThanks": "That's very helpful of you. See you around !",
+            "workAccept": "Sure, I'll get those gems for you.",
+            "workAccepted": "Good, very good, helpful pony ! Here, take this pickaxe, and go fetch me the gems ! Quickly, go !",
+            "workComplete": "Ooo, yes, yes, those are some fine gemstones ! You did a good job, pony ! <i>[He searches his pockets, and extend his paws in your direction, revealing a set of grenades]</i> Here, take this and go away now !",
+            "workNotComplete": "No, not yet.",
+            "workPaymentAsked": "I have the perfect payment for a pony. While I was looking for actual gems, I found these counterfeit pony gems [<i>He searches his pocket and show you a grenade. He quickly hides it back in his pocket</i>]. These mean nothing to us, but I know you pony love that kind of crap, right ?",
+            "workProposal": "Pony, wait ! Ponies are so helpful. Maybe you can help an old diamond dog ? I know there are gemstones out there, but there's also plenty of rats. I can't stand rats. They're dirty and make weird noises. If you can get some gemstones for me, I'll make it worth your time.",
+            "workUncomplete": "Then quit wasting precious time and go back to work, stupid pony !"
+    },
     "town-guard": {
       "arrest": "Hands up ! No sudden movements, or I'll shoot to kill.<br/>You've broken the law one too many times pal. You've got some jailtime ahead of you. Follow me nicely and quietly.",
+      "back-to-cell": "Hey ! What are you doing over here ? Go back to your cell, dammit !",
       "fight": "[Fight]",
       "surrender": "[Surrender]"
-    }
-  },
-  "inspection": {
+    },
+        "town-guard-jail": {
+            "detected": "Hey ! What are you doing over here ? Go back to your cell, dammit !",
+            "fight": "[Se battre]",
+            "surrender": "[Se rendre]"
+        },
+        "town-trader": {
+            "": "[Leave]",
+            "after-trade": "Great, come back soon !",
+            "ask-quest": "I'm a bit disappointed. I was expecting to find some sweets. Don't you bake any ?",
+            "butter-quest-accept": "I might be able to help you with that. Let me see what I can do.",
+            "butter-quest-completed": "Why, you're such a sweetheart ! I'll make a batch of croissants right away ! Just stay still and you'll get to taste those right out o the oven !<br/><i>[he disappears in the backroom]</i>",
+            "butter-quest-not-interested": "That's too bad. Well, I'll get going then.",
+            "butter-quest-offer": "[sighs heavily] I would love to bake sweeter things. I have some ideas, but ingredients are hard to come by, and the hostel's kitchen hoards pretty much all the available goods around here... if I could get my hands on a good deal of butter, I would be a made pony.",
+            "croissant-done": "I wasn't too long I hope ? Here, take these <i>[hands you a handful of croissants]</i><br/>Come back anytime, buddy !",
+            "give-butter": "Here, I found some butter for you ! Can you make some delicacies out of it ?",
+            "leave": "[Give up and go away]",
+            "trade-reject": "I don't need anything right now. Goodbye !",
+            "trade-show": "Here's what I have in store for you.",
+            "trade-start": "Show me what you're selling.",
+            "trade-trigger": "Welcome, estimed customer ! What are we trading today ?",
+            "wait": "[You wait for him]"
+        },
+        "town-hotel-owner": {
+            "accept-job-pickpocket-respect": "It will be done.",
+            "ask-job": "I'm looking for a job.",
+            "call-guards": "Interesting choice of last words. Guards !",
+            "disrespect-exit": "What a bummer... I'll be on my way then.",
+            "disrespected-intro": "Oh no, this just won't do. This is a respetable venture. We show respect over here. Guards, will you kindly show his way to that gentleman ?",
+            "disrespectful-intro": "The name is {{name}}. What's yours ?",
+            "intro": "Hello. I'm the owner of this fine establishment, and you've just entered my office. I'd very much like to know who I'm about to have kicked out of here. Who are you ?",
+            "intro-lacks-respect": "I recommend you not be so familiar with me. It displeases me greatly. I'll give you one last chance. Why are you here ?",
+            "job-pickpocket": "Well, {{name}}, I happen to have a task fit for a stranger.<br/>I've heard many complaints about thefts happening at the bar, on the floor level. Any money stolen from my customer doesn't end in my pockets. Whoever is doing this, I need them stopped.<br/>I need someone inconspicuous to be my eyes down there. Find the thief, and bring them to me. Can you do that for me ?",
+            "job-pickpocket-info": "That's what I like to hear. They say the thiefs happen nearly every day, late in the evening. There'll be a hefty monetary reward if you complete the job.<br/>Now go.",
+            "job-rejected": "Then quit wasting my time. Guards, take this fellow outside.",
+            "pickpocket-intro": "Ha, my faithful investigator ! What are the news from our thief ?",
+            "provoke-combat": "I'm the new owner. And I'm about to redecorate my new office with your bowels.",
+            "refuse-job-pickpocket": "Sorry, but stake-outs aren't exactly my specialty.",
+            "reject-intro": "My name is no business of yours.",
+            "respect-murder": "Holy Celestia, you guys are so stiff already I doubt anyone will notice the difference after I've sent you to your coffins.",
+            "respectfulIntro": "Pleased to meet you, sir. My name is {{name}}. I've come to offer you my services."
+        },
+        "town-hotel-owner-pickpocket-done": {
+            "call-guards": "Oh no, and I was just starting to like you too. But we can't have people throwing threats around like that. Guards, please dispose of this fellow.",
+            "exit-angry": "I was hoping you'd handle this peacefully. With all due respect, screw you.",
+            "hostile-exit": "Wait... is this how you handle things over here ? I bet some people at the police station wouldn't be too happy about that.",
+            "intro": "Well done. You've done me a great service, and I'm a pony who knows how to show gratefulness. Here's your reward. You may leave now, I have no more jobs for you.",
+            "thank-exit": "Thank you, sir. Good evening."
+        },
+        "town-robber": {
+            "call-out": "Busy ? That's what you call emptying the pockets of the customers ?",
+            "called-out": "Keep it down ! Alright, yeah, I'm trying to make a living here ! What's it to you ?",
+            "come-with": "Alright... I guess there's no point trying to run now. I'll come with you. Let's go.",
+            "convince-escape": "The owner is on to you. I'm not a snitch, but if you know what's good for you, you'll pick up your stuff and leave.",
+            "convince-talk-to-owner": "You're in luck. Mister Mordino asked me to find you. He wants to have a chat with you.",
+            "escape": "Oh boy ! Well, thank you for the tip. I guess the pockets around here are already dry enough, I'll pack up and leave right now. Thanks again, I won't forget it anytime soon.",
+            "intro": "Hm, what ?<br/>Leave me alone buddy, I'm busy right now.",
+            "leave-him-be": "Oops, sorry, I'll be on my way.",
+            "run-for-it": "Oh yeah ? Sure, lead the way... [suddenly sprints towards the door]",
+            "take-to-owner": "[Flex muscles] Mister Mordino wants to speak with you. I'll take you to his office. Right now."
+        },
+    "tutoCharIntro": {
+      "start": "Wow ! You've arrived ! At long last ! We need to find a way out of this hole !",
+      "what-happened": "Wait a moment, what's going on ?",
+      "who-are-you": "Do we know each other ?",
+      "scram": "Can't you see I'm busy ? Leave me alone",
+      "what-happened-response": "I don't know dude ! I woke up in this place, it was dark, moist, and riddled with friggin rats !<br/>I have a strong intuition that we must leave this place though... it's just as if some kind of omniscient puppeteer sent us here, but didn't bother to write us a backstory...",
+      "who-are-you-response": "Come to think of it... I don't really remember. My name is Helpful Copain, but I conveniently forgot everything else, so I won't bother you with a poorly written backstory.",
+      "scram-response": "Ooh, sorry big guy, seems like we have a tough one over here !",
+      "provoke-further": "You better watch your mouth, or else...",
+      "provoke-further-response": "Or else what ? You gonna kick my ass, is that it ? Hah ! I'd like to see you try !",
+      "provoke-further-attack": "Prepare to meet your maker. [Fight]",
+      "provoke-leave": "You're not worth it. [Leave]",
+      "scram-excuses": "Sorry, I didn't mean to be rude. I'd just rather do this on my own.",
+      "scram-excuses-response": "Alright, I get it... sorry I got carried away myself. Well, if you don't want my help, it can't be helped. Carry on then.",
+      "scram-leave": "Look, I don't have time for this... see you around, I guess. [Leave]",
+      "ask-situation": "So, what am I supposed to do ?",
+      "aggressively-ask-situation": "I don't actually care. Just tell me how to get out of this place.",
+      "explain-situation": "We need to leave this place. There are two potential ways I know of: on the eastern side, you have the regular entrance for the stable. It's locked though. There are other tunnels on the western side, but they're full of mutated rats. It might lead outside, but I wouldn't know... it's too dangerous to go alone.",
+      "enough-details": "I think I've got a good enough grasp of the situation. I'll be on my way then. [Leave]",
+      "ask-help": "You know, I might need some help leaving this cave. Do you mind coming with me ?",
+      "provoke-details": "So you didn't even try to explore any further ? You're so damn useless, I could slap you.",
+      "accept-to-help": "Sure, we'll be stronger if we stick together.",
+      "decline-to-help": "I don't know... you don't look like you can survive out there... I guess I'll just stay here and wait for someone stronger to show up."
+    },
+        "parley": {
+            "change-color": "You're lacking in colors. Perhaps we could change that ?",
+            "changed-color": "Is that colorful enough ?",
+            "freaking-face": "I've got a freaking face and all ! Isn't that cool enough ?!",
+            "greetings": "Hi there ! Gosh, it's been a while ! What's happening ?",
+            "greetings-alt": "Hi again. Is there something else ?",
+            "no-mane": "Looks like I was too lazy to give you a mane...",
+            "oh-fancy": "Oh. Fancy.",
+            "rep1": "You're damn right, \"it's been a while\" ! It's about time we get to work, isn't it ?",
+            "rep2": "Well, I've been pretty busy... but lately, I had an illumination of sorts, and I decided to see this thing to the end.",
+            "rep3": "Let's cut to the chase. Show me something cool",
+            "top-hatted": "Quite.",
+            "walk-away": "[Walk away]"
+        }
+    },
+    "inspection": {
         "character": "You see {{target}}.",
         "character-male": "You see {{target}}.",
         "character-female": "You see {{target}}.",
@@ -469,6 +660,7 @@
       "8":  "Looking around",
       "9":  "Explosives",
       "10": "Field of View",
-      "11": "Traps"
+      "11": "Traps",
+      "12": "Exit zones"
     }
 }
