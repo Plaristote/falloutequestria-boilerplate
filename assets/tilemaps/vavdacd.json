@@ -1,0 +1,14 @@
+{ "columns":10,
+ "image":"..\/tilesets\/stable-walls.png",
+ "imageheight":526,
+ "imagewidth":737,
+ "margin":1,
+ "name":"vavdacd",
+ "spacing":1,
+ "tilecount":40,
+ "tiledversion":"1.7.2",
+ "tileheight":108,
+ "tilewidth":72,
+ "type":"tileset",
+ "version":"1.6"
+}

@@ -8,6 +8,15 @@
         "value": 4,
         "weight": 0
     },
+    "agility-potion": {
+        "icon": "healthPotion.webp",
+        "isGroupable": true,
+        "scriptName": "agilityPotion.mjs",
+        "sprite": "health-potion",
+        "type": "consommables",
+        "value": 1,
+        "weight": 1
+    },
     "apple-cider": {
         "icon": "apple-cider.png",
         "isGroupable": true,
@@ -178,6 +187,15 @@
         "value": 670,
         "weight": 10
     },
+    "power-armor": {
+        "icon": "powerarmor.png",
+        "isGroupable": true,
+        "scriptName": "powerArmor.mjs",
+        "sprite": "metal-armor",
+        "type": "armor",
+        "value": 9000,
+        "weight": 50
+    },
     "skill-book-medicine": {
         "icon": "firstaid-book.png",
         "isGroupable": true,
@@ -232,13 +250,38 @@
         "value": 150,
         "weight": 3
     },
-    "turret-gun": {
-        "icon": "",
+    "testGun": {
         "isGroupable": false,
-        "scriptName": "turret-gun.mjs",
-        "sprite": "misc",
+        "scriptName": "gun.mjs",
+        "sprite": "gun",
         "type": "weapon",
-        "value": 0,
+        "value": 120,
+        "weight": 15
+    },
+    "testItem": {
+        "isGroupable": false,
+        "scriptName": "medikit.mjs",
+        "sprite": "medikit",
+        "type": "consommables",
+        "value": 12,
+        "weight": 5
+    },
+    "trialKey": {
+        "icon": "trial-key.png",
+        "isGroupable": false,
+        "scriptName": "item.mjs",
+        "sprite": "misc",
+        "type": "misc",
+        "value": 1,
+        "weight": 0
+    },
+    "trialStartKey": {
+        "icon": "trial-key-2.png",
+        "isGroupable": false,
+        "scriptName": "item.mjs",
+        "sprite": "misc",
+        "type": "misc",
+        "value": 1,
         "weight": 0
     },
     "tuxedo": {
