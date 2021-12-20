@@ -1,0 +1,168 @@
+{
+    "answers": {
+        "": {
+            "availableHook": "",
+            "hook": "",
+            "state": "",
+            "text": ""
+        },
+        "accept": {
+            "hook": "onStartFight",
+            "state": "",
+            "text": "passiveStart"
+        },
+        "acceptance": {
+            "hook": "onStartFight",
+            "state": "",
+            "text": "acceptance"
+        },
+        "answer": {
+            "state": "reaction",
+            "text": "answer"
+        },
+        "chaseAway": {
+            "hook": "",
+            "state": "hostileFightStart",
+            "text": "moveAside"
+        },
+        "convinceNotToFight": {
+            "state": "dialogueSuccess",
+            "text": "convinceNotToFight"
+        },
+        "dumbTraditions": {
+            "availableHook": "",
+            "hook": "tryToConvinceDifficult",
+            "state": "dialoguePath#3",
+            "text": "dumbTraditions"
+        },
+        "exit": {
+            "state": ""
+        },
+        "hesitant": {
+            "hook": "",
+            "state": "trialExplanation",
+            "text": "askDetails"
+        },
+        "hostileStart1": {
+            "state": "hostileFightStart",
+            "text": "hostileStart1"
+        },
+        "intimidation#1": {
+            "state": "intimidationPath",
+            "text": "intimidationStep1"
+        },
+        "intimidation#2": {
+            "availableHook": "canIntimidate",
+            "hook": "tryToIntimidate",
+            "state": "intimidationSuccess",
+            "text": "intimidation2"
+        },
+        "ohShit": {
+            "state": "",
+            "text": "ohShit"
+        },
+        "proposeToLie": {
+            "availableHook": "canConvince",
+            "hook": "tryToConvince",
+            "state": "dialoguePath#2",
+            "text": "proposeToLie"
+        },
+        "protest": {
+            "state": "trialExplanation2",
+            "text": "protest"
+        },
+        "refuseFight": {
+            "state": "dialoguePath",
+            "text": "refuseFight"
+        }
+    },
+    "entryPoint": "dialoguePath",
+    "states": {
+        "dialoguePath": {
+            "answers": [
+                "acceptance",
+                "dumbTraditions",
+                "proposeToLie"
+            ],
+            "hook": "",
+            "text": "dialoguePath1"
+        },
+        "dialoguePath#2": {
+            "answers": [
+                "acceptance",
+                "convinceNotToFight"
+            ],
+            "text": "dialoguePath2"
+        },
+        "dialoguePath#3": {
+            "answers": [
+                "acceptance",
+                "ohShit"
+            ],
+            "hook": "onStartFight",
+            "text": "dialoguePath3"
+        },
+        "dialogueSuccess": {
+            "answers": [
+            ],
+            "hook": "",
+            "text": "dialogueSuccess"
+        },
+        "entryPoint": {
+            "answers": [
+                "chaseAway",
+                "hesitant",
+                "accept"
+            ],
+            "hook": "onEntryPoint",
+            "text": "intro"
+        },
+        "hostileFightStart": {
+            "answers": [
+            ],
+            "hook": "onHostileAndStartFight",
+            "text": "hostileFightStart"
+        },
+        "intimidationPath": {
+            "answers": [
+                "acceptance",
+                "chaseAway",
+                "intimidation#2"
+            ],
+            "hook": "",
+            "text": "intimidated"
+        },
+        "intimidationSuccess": {
+            "answers": [
+            ],
+            "hook": "onIntimidated",
+            "text": "intimidationSuccess"
+        },
+        "trialExplanation": {
+            "answers": [
+                "protest",
+                "hostileStart1",
+                "intimidation#1",
+                "refuseFight"
+            ],
+            "hook": "",
+            "text": "trialExplanation"
+        },
+        "trialExplanation2": {
+            "answers": [
+                "acceptance",
+                "chaseAway",
+                "intimidation#1",
+                "refuseFight"
+            ],
+            "hook": "",
+            "text": "trialExplanation2"
+        },
+        "victory": {
+            "answers": [
+            ],
+            "hook": "onVictory",
+            "text": "victory"
+        }
+    }
+}

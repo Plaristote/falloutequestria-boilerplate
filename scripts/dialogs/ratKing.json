@@ -1,0 +1,32 @@
+{
+    "answers": {
+        "": {
+            "state": "intro",
+            "text": ""
+        },
+        "Cool story bro.": {
+            "state": "death-sentence",
+            "text": "cool"
+        },
+        "Oh crap !": {
+            "state": "",
+            "text": "crap"
+        }
+    },
+    "entryPoint": "intro",
+    "states": {
+        "death-sentence": {
+            "answers": [
+                "Oh crap !"
+            ],
+            "hook": "setAsEnemy",
+            "text": "die"
+        },
+        "intro": {
+            "answers": [
+                "Cool story bro."
+            ],
+            "text": "intro"
+        }
+    }
+}

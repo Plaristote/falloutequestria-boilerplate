@@ -1,0 +1,70 @@
+{
+    "answers": {
+        "": {
+            "availableHook": "",
+            "state": "",
+            "text": ""
+        },
+        "cancel": {
+            "availableHook": "",
+            "state": "",
+            "text": "exit"
+        },
+        "exit": {
+            "text": ""
+        },
+        "looking-work": {
+            "availableHook": "workAvailable",
+            "state": "workHints",
+            "text": "looking-work"
+        },
+        "robber-hint-tip": {
+            "text": "robber-hint-tip"
+        },
+        "robber-quest": {
+            "availableHook": "hasRobberQuest",
+            "state": "robberHints",
+            "text": "robber-quest"
+        },
+        "roober-hint-thanks": {
+            "text": "robber-hint-thanks"
+        },
+        "start-trade": {
+            "availableHook": "",
+            "state": "startBarter",
+            "text": "start-trade"
+        }
+    },
+    "entryPoint": "intro",
+    "states": {
+        "intro": {
+            "answers": [
+                "start-trade",
+                "looking-work",
+                "robber-quest",
+                "cancel"
+            ],
+            "hook": "",
+            "text": "intro"
+        },
+        "robberHints": {
+            "answers": [
+                "robber-hint-tip",
+                "roober-hint-thanks"
+            ],
+            "hook": "",
+            "text": "robber-hints"
+        },
+        "startBarter": {
+            "answers": [
+            ],
+            "hook": "startBarter",
+            "text": "start-barter"
+        },
+        "workHints": {
+            "answers": [
+            ],
+            "text": "workHints"
+        }
+    }
+}

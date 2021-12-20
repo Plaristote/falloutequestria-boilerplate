@@ -1,4 +1,16 @@
 {
+    "acid-puddle": {
+        "idle": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 113,
+            "offsetX": 0,
+            "offsetY": 0,
+            "repeat": false,
+            "source": "acid.png",
+            "width": 207
+        }
+    },
     "bathroom": {
         "bathtub1-left": {
             "frameCount": 1,
@@ -4335,7 +4347,7 @@
             "frameInterval": 100,
             "height": 62,
             "offsetX": 172,
-            "offsetY": 589,
+            "offsetY": 650,
             "repeat": false,
             "width": 86
         },

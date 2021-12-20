@@ -1,4 +1,14 @@
 {
-  "mainmenu": { "menu": "menu.ogg" },
-  "worldmap": { "worldmap": "worldmap.ogg" }
+  "mainmenu": {
+    "menu": "menu.ogg"
+  },
+  "eltest": { "desert-wind": "desert-wind.ogg" },
+  "eltest5": { "desert-wind": "desert-wind.ogg" },
+  "stable-cavern": { "moribound-world": "moribund-world.ogg" },
+  "worldmap": { "highwayman": "worldmap.ogg" },
+  "tutorial": { "moribound-world": "moribund-world.ogg" },
+  "city-sample": { "second-chance": "second-chance.ogg" },
+  "random-desert-1": { "desert-wind": "desert-wind.ogg" },
+  "random-desert-2": { "desert-wind": "desert-wind.ogg" },
+  "random-desert-cabin": { "desert-wind": "desert-wind.ogg" }
 }
