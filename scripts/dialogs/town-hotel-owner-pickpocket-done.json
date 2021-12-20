@@ -1,0 +1,37 @@
+{
+    "answers": {
+        "": {
+            "state": "",
+            "text": ""
+        },
+        "exit-angry": {
+            "state": "",
+            "text": "exit-angry"
+        },
+        "hostile-exit": {
+            "state": "callGuards",
+            "text": "hostile-exit"
+        },
+        "thank-exit": {
+            "text": "thank-exit"
+        }
+    },
+    "entryPoint": "intro",
+    "states": {
+        "callGuards": {
+            "answers": [
+            ],
+            "hook": "startCombat",
+            "text": "call-guards"
+        },
+        "intro": {
+            "answers": [
+                "thank-exit",
+                "exit-angry",
+                "hostile-exit"
+            ],
+            "hook": "giveReawrd",
+            "text": "intro"
+        }
+    }
+}
