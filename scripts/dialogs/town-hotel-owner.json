@@ -1,0 +1,208 @@
+{
+    "answers": {
+        "": {
+            "availableHook": "",
+            "hook": "",
+            "state": "",
+            "text": "",
+            "textHook": ""
+        },
+        "I found him, and he escaped. He won't come back here anytime soon.": {
+            "text": ""
+        },
+        "accept-job-pickpocket": {
+            "hook": "addPickpocketQuest",
+            "state": "job-pickpocket-info",
+            "text": "accept-job-pickpocket-respect"
+        },
+        "ask-job": {
+            "hook": "",
+            "state": "job-pickpocket",
+            "text": "ask-job"
+        },
+        "disrespect-exit": {
+            "hook": "increaseDisrespect",
+            "state": "",
+            "text": "disrespect-exit"
+        },
+        "disrespectful-intro": {
+            "state": "intro-lacks-respect",
+            "text": "disrespectful-intro",
+            "textHook": "disrespectfulIntro"
+        },
+        "exit": {
+            "text": ""
+        },
+        "oh-shit": {
+            "text": "oh-shit"
+        },
+        "pickpocket-escaped": {
+            "availableHook": "pickpocketFound",
+            "hook": "",
+            "state": "pickpocket-fail",
+            "text": "pickpocket-escaped"
+        },
+        "pickpocket-fail-fight": {
+            "state": "call-guards",
+            "text": "pickpocket-fail-fight"
+        },
+        "pickpocket-fail-nonchalant": {
+            "state": "",
+            "text": "pickpocket-fail-nonchalant"
+        },
+        "pickpocket-fail-sorry": {
+            "text": "pickpocket-fail-sorry"
+        },
+        "pickpocket-helped": {
+            "availableHook": "pickpocketFound",
+            "hook": "",
+            "state": "call-guards",
+            "text": "pickpocket-helped"
+        },
+        "pickpocket-killed": {
+            "availableHook": "pickpocketWasKilled",
+            "hook": "",
+            "state": "pickpocket-killed",
+            "text": "pickpocket-killed"
+        },
+        "pickpocket-killed-done": {
+            "text": "pickpocket-killed-done"
+        },
+        "pickpocket-lie": {
+            "availableHook": "pickpocketFound",
+            "hook": "pickpocketTryToLie",
+            "state": "",
+            "text": "pickpocket-lie"
+        },
+        "pickpocket-no-news": {
+            "availableHook": "",
+            "state": "time-wasted",
+            "text": "pickpocket-no-news"
+        },
+        "provoke-combat": {
+            "state": "call-guards",
+            "text": "provoke-combat",
+            "textHook": ""
+        },
+        "refuse-job-pickpocket": {
+            "hook": "",
+            "state": "job-rejected",
+            "text": "refuse-job-pickpocket"
+        },
+        "reject-intro": {
+            "state": "disrespected-intro",
+            "text": "reject-intro",
+            "textHook": ""
+        },
+        "respect-murder": {
+            "hook": "",
+            "state": "call-guards",
+            "text": "respect-murder"
+        },
+        "respectful-intro": {
+            "hook": "onRespectIntro",
+            "state": "job-pickpocket",
+            "text": "respectfulIntro",
+            "textHook": "respectfulIntro"
+        }
+    },
+    "entryPoint": "intro",
+    "states": {
+        "call-guards": {
+            "answers": [
+            ],
+            "hook": "startCombat",
+            "text": "call-guards"
+        },
+        "disrespected-intro": {
+            "answers": [
+            ],
+            "hook": "kickOutOfOffice",
+            "text": "disrespected-intro"
+        },
+        "intro": {
+            "answers": [
+                "respectful-intro",
+                "disrespectful-intro",
+                "reject-intro",
+                "provoke-combat"
+            ],
+            "hook": "onIntro",
+            "text": "intro"
+        },
+        "intro-lacks-respect": {
+            "answers": [
+                "ask-job",
+                "disrespect-exit",
+                "respect-murder"
+            ],
+            "hook": "",
+            "text": "intro-lacks-respect"
+        },
+        "job-pickpocket": {
+            "answers": [
+                "accept-job-pickpocket",
+                "refuse-job-pickpocket"
+            ],
+            "hook": "jobPickpocketText",
+            "text": "job-pickpocket"
+        },
+        "job-pickpocket-info": {
+            "answers": [
+            ],
+            "hook": "",
+            "text": "job-pickpocket-info"
+        },
+        "job-rejected": {
+            "answers": [
+            ],
+            "hook": "sendOutOfOffice",
+            "text": "job-rejected"
+        },
+        "pickpocket-fail": {
+            "answers": [
+                "pickpocket-fail-sorry",
+                "pickpocket-fail-nonchalant",
+                "pickpocket-fail-fight"
+            ],
+            "text": "pickpocket-fail"
+        },
+        "pickpocket-intro": {
+            "answers": [
+                "pickpocket-killed",
+                "pickpocket-escaped",
+                "pickpocket-lie",
+                "pickpocket-helped",
+                "pickpocket-no-news"
+            ],
+            "hook": "",
+            "text": "pickpocket-intro"
+        },
+        "pickpocket-killed": {
+            "answers": [
+                "pickpocket-killed-done"
+            ],
+            "hook": "giveReward",
+            "text": "pickpocket-killed-answer"
+        },
+        "pickpocket-lie-failure": {
+            "answers": [
+                "oh-shit"
+            ],
+            "hook": "startCombat",
+            "text": "pickpocket-lie-failure"
+        },
+        "pickpocket-lie-success": {
+            "answers": [
+            ],
+            "hook": "giveReward",
+            "text": "pickpocket-lie-success"
+        },
+        "time-wasted": {
+            "answers": [
+            ],
+            "hook": "onTimeWasted",
+            "text": "time-wasted"
+        }
+    }
+}

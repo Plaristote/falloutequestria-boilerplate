@@ -1,0 +1,37 @@
+{
+    "answers": {
+        "": {
+            "hook": "",
+            "state": "",
+            "text": ""
+        },
+        "mordino-decline": {
+            "hook": "",
+            "text": "mordino-decline"
+        },
+        "mordino-help": {
+            "hook": "catchMordino",
+            "text": "mordino-help"
+        },
+        "mordino-intro": {
+            "state": "mordino-start",
+            "text": "mordino-intro"
+        }
+    },
+    "entryPoint": "intro",
+    "states": {
+        "intro": {
+            "answers": [
+                "mordino-intro"
+            ],
+            "text": "intro"
+        },
+        "mordino-start": {
+            "answers": [
+                "mordino-help",
+                "mordino-decline"
+            ],
+            "text": "mordino-start"
+        }
+    }
+}
