@@ -505,7 +505,26 @@
     },
     "item-descriptions": {
         "dynamite": "Un explosif dangereux ! Il peut etre utile pour passer au travers d'obstacles, ou pour eparpiller tes ennemis facon puzzle.",
-        "health-potion": "Une potion de vie standard."
+        "health-potion": "Une potion de vie standard.",
+	"stable-suit": "Your everyday standard stable suit, issued by Stable Tech.",
+        "trialStartKey": "Une vieille clef rouillée, ramassée au fin fond de la caverne des épreuves.",
+        "trialKey": "La clef de la caverne des épreuves, ayant autrefois appartenue à Trial Blister.",
+	"pickaxe": "Une pioche, qui peut être utilisée pour récuperer du minerai. Ou pour planter vos adversaires.",
+	"book": "Un vieux livre d'avant-guerre.",
+	"skill-book-medicine": "Un livre destiné aux apprentis secouristes. Tu pourrais peut-être apprendre de nouvelles techniques en le lisant.",
+        "skill-book-outdoorsman": "Un livre sur la survie en milieu hostile, avec de nombreux conseils sur la mise en place d'un campement et la traversée de milieux sauvages.",
+        "skill-book-smallGuns": "Un magazine Gun's and Bullet, plein de conseils sur la pratique du tir sportif et l'entretien des armes à feu.",
+	"bottlecaps": "Des capsules de bouteilles. Elles sont courrement utilisées comme monnaie, par ici.",
+	"tuxedo": "Un costume élégant.",
+	"sparkle-cola": "Une boisson gazeuse saveur carrotte. Sparkle Cola était la boisson la plus populaire d'Equestria, avant et durant la Grande Guerre.",
+	"metal-armor": "Une armure conçue à partir de pièces de métal rafistolées. En dépit de son apparence grotesque, elle semble constituer une protection efficace.",
+	"gemstone": "Des pierres précieuses, utilisées comme matériau ou ingrédient dans le cadre de rituels magiques.",
+	"frag-grenade": "Une grenade à fragmentation. Il vaut mieux être prudent avec cette goupille.",
+	"apple-cider": "Une boisson alcolisé, faite à partir de pommes.",
+	"apple-whiskey": "Une boisson fermentée et distillée a base de pommes. Techniquement, c'est de l'applejack, mais il semble que par ici, ça s'appelle du whiskey de pomme.",
+        "food-butter": "Substance alimentaire, grasse, onctueuse, que l’on extrait, en la battant, de la crème de lait de vache.",
+        "food-bread": "Une délicieuse baguette de pain.",
+        "food-croissant": "Une pâtisserie comme on en fait plus !"
     },
     "item-slots": {
         "armor": "Armure",
@@ -517,7 +536,26 @@
         "dynamite": "Dynamite",
         "health-potion": "Potion de vie",
         "melee-bucking": "Ruade",
-        "melee-hoofercut": "Coup de sabot"
+        "melee-hoofercut": "Coup de sabot",
+	"stable-suit": "Uniforme",
+        "trialStartKey": "Clef rouillée",
+	"trialKey": "Clef de la caverne des épreuves",
+	"pickaxe": "Pioche",
+	"book": "Livre",
+	"skill-book-medicine": "Manuel de premiers secours",
+        "skill-book-outdoorsman": "Guide de survie",
+        "skill-book-smallGuns": "Magazine de flingues",
+	"bottlecaps": "Capsules",
+	"tuxedo": "Costume",
+        "sparkle-cola": "Sparkle Cola",
+	"metal-armor": "Armure de métal",
+	"gemstone": "Pierres précieuses",
+	"frag-grenade": "Grenade",
+	"apple-whiskey": "Whiskey de pomme",
+	"apple-cider": "Cidre",
+        "food-butter": "Beurre",
+        "food-bread": "Baguette",
+        "food-croissant": "Croissant"
     },
     "locations": {
         "city-sample": "Expoville",
@@ -599,7 +637,9 @@
         "stairs": "des escaliers",
         "stairs-groundlevel": "des escaliers",
         "stairs-toplevel": "des escaliers",
-        "stool": "un tabouret"
+        "stool": "un tabouret",
+	"locker": "casier",
+	"gem-ore": "gisement de minerai"
     },
     "options": {
         "combatSpeed": "Vitesse des combats",
