@@ -39,7 +39,7 @@
             "reputation": false
         }
     },
-    "level": "city-sample",
+    "level": "tutorial",
     "levels": {
         "city-sample": {
             "ambientColor": [
@@ -11145,7 +11145,7 @@
                     "nextY": 0,
                     "objectName": "door#1",
                     "opened": false,
-                    "picklvl": 1,
+                    "picklvl": 0,
                     "rx": -2268,
                     "ry": 1782,
                     "script": "tutoDoor.mjs",
@@ -11336,7 +11336,7 @@
                     "mty": 828,
                     "nextX": 0,
                     "nextY": 0,
-                    "objectName": "door#3",
+                    "objectName": "door#2",
                     "opened": false,
                     "picklvl": 5,
                     "rx": -576,
