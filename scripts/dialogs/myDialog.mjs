@@ -101,6 +101,11 @@ class Dialog extends DialogHelper {
     if (roll > this.dialog.player.statistics.speech)
       return "dialoguePath#3";
   }
+
+  onBarterStart() {
+    this.dialog.text = i18n.t("messages.wont-barter");
+    return false;
+  }
 }
 
 export function create(dialog) {
