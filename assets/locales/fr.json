@@ -639,7 +639,7 @@
         "stairs-toplevel": "des escaliers",
         "stool": "un tabouret",
 	"locker": "casier",
-	"gem-ore": "gisement de minerai"
+	"gemOre": "gisement de minerai"
     },
     "options": {
         "combatSpeed": "Vitesse des combats",

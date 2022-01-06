@@ -174,7 +174,7 @@
     "shelf": "a shelf",
     "pool-table": "a pool table",
     "locker": "locker",
-    "gem-ore": "mineral deposit"
+    "gemOre": "mineral deposit"
   },
   "use-modes": {
     "use": "Use",
@@ -384,6 +384,18 @@
             "workPaymentAsked": "I have the perfect payment for a pony. While I was looking for actual gems, I found these counterfeit pony gems [<i>He searches his pocket and show you a grenade. He quickly hides it back in his pocket</i>]. These mean nothing to us, but I know you pony love that kind of crap, right ?",
             "workProposal": "Pony, wait ! Ponies are so helpful. Maybe you can help an old diamond dog ? I know there are gemstones out there, but there's also plenty of rats. I can't stand rats. They're dirty and make weird noises. If you can get some gemstones for me, I'll make it worth your time.",
             "workUncomplete": "Then quit wasting precious time and go back to work, stupid pony !"
+    },
+    "town-barpony": {
+        "exit": "Nothing for now, see you around !",
+        "intro": "Hi, and welcome to the Sample Hotel ! What can I get you ?",
+        "looking-work": "Hi ! I'm looking for work, is there anything to do around here ?",
+        "robber-hint-thanks": "So you're telling me this happens every night right under your musle, and you've seen nothing ? I can see why your boss doesn't trust you to handle this. Go back to your glasses, I'll take care of this.",
+        "robber-hint-tip": "Alright, thanks for the tip.",
+        "robber-hints": "Yeah, I've received the complaints... I haven't seen anything, but from what the customers told me, the robber acts late at night. We close at 3 in the morning, and that's usually when I hear the most complaints... I guess the robber just waits for all of us to get drunk enough, so no one notices him doing his rounds.",
+        "robber-quest": "Actually, your boss hired me to catch out somepony who's been robbing the customers. Anything you can tell me that might help ?",
+        "start-barter": "Here it is ! Pick your poison, mate !",
+        "start-trade": "Show me the stuff !",
+        "workHints": "Yeah, I think we have something that may be interesting to you. I guess you should ask Mordino. She's my boss. Go upstairs to the second floor, she's usually at her office from 10am to 10pm."
     },
     "town-guard": {
       "arrest": "Hands up ! No sudden movements, or I'll shoot to kill.<br/>You've broken the law one too many times pal. You've got some jailtime ahead of you. Follow me nicely and quietly.",
