@@ -1,14 +1,14 @@
 {
   "mainmenu": {
-    "menu": "menu.ogg"
+    "menu": "menu.mp3"
   },
-  "eltest": { "desert-wind": "desert-wind.ogg" },
-  "eltest5": { "desert-wind": "desert-wind.ogg" },
-  "stable-cavern": { "moribound-world": "moribund-world.ogg" },
-  "worldmap": { "highwayman": "worldmap.ogg" },
-  "tutorial": { "moribound-world": "moribund-world.ogg" },
-  "city-sample": { "second-chance": "second-chance.ogg" },
-  "random-desert-1": { "desert-wind": "desert-wind.ogg" },
-  "random-desert-2": { "desert-wind": "desert-wind.ogg" },
-  "random-desert-cabin": { "desert-wind": "desert-wind.ogg" }
+  "eltest": { "desert-wind": "desert-wind.mp3" },
+  "eltest5": { "desert-wind": "desert-wind.mp3" },
+  "stable-cavern": { "moribound-world": "moribund-world.mp3" },
+  "worldmap": { "highwayman": "worldmap.mp3" },
+  "tutorial": { "moribound-world": "moribund-world.mp3" },
+  "city-sample": { "second-chance": "second-chance.mp3" },
+  "random-desert-1": { "desert-wind": "desert-wind.mp3" },
+  "random-desert-2": { "desert-wind": "desert-wind.mp3" },
+  "random-desert-cabin": { "desert-wind": "desert-wind.mp3" }
 }
