@@ -5,6 +5,14 @@
     "url": "https://github.com/Plaristote"
   },
   {
+    "name": "Szamanx",
+    "category": "UI design",
+    "files": [
+      "assets/credits/szamanx.png",
+      "assets/credits/szamanx2.png"
+    ]
+  },
+  {
     "name": "Munkari",
     "category": "artwork",
     "url": "https://www.deviantart.com/munkari",
