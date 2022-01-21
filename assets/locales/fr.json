@@ -584,6 +584,7 @@
         "door-locked-failed": "Tu ne reussi pas a verouiller la porte.",
         "door-unlocked": "Tu as deverouille la porte.",
         "door-unlocked-failed": "Tu ne parviens pas a deverouiller la porte.",
+        "door-close-first": "Vous devez fermer la porte avant de la verouiller.",
         "drunk": "Tu es ivre.",
         "drunk-pass-out": "Tu as trop picolé, et tu t'es évanouis comme une loque.",
         "encounter-prompt": "Veux-tu voir ça de plus près ?",

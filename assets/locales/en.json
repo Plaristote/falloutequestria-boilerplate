@@ -137,6 +137,7 @@
     "lock-is-broken": "The lock is broken",
     "door-is-locked": "It's locked",
     "door-is-blocked": "Something's in the way.",
+    "door-close-first": "You must close the door before locking it.",
     "xp-gain": "You gained {{xp}} experience points.",
     "nothing-happens": "That does nothing.",
     "no-path": "Can't reach.",
