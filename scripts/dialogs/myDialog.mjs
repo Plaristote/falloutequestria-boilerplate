@@ -91,7 +91,7 @@ class Dialog extends DialogHelper {
   tryToConvince() {
     const winner = skillContest(this.dialog.player, this.dialog.npc, 'speech');
 
-    if (winner === this.dialog.npc);
+    if (winner === this.dialog.npc)
       return "dialoguePath#3";
   }
 
@@ -100,6 +100,11 @@ class Dialog extends DialogHelper {
 
     if (roll > this.dialog.player.statistics.speech)
       return "dialoguePath#3";
+  }
+  
+  passTrial() {
+    this.giveKey();
+    game.quests.getQuest("tutorial").completeObjective("pass-last-trial");
   }
 
   onBarterStart() {
