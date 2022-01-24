@@ -69,6 +69,9 @@ class QuestioningScene extends SceneManager {
     robber.lookAt(director);
     level.cameraFocusRequired(director);
     this.model.completeObjective("bring");
+    try {
+      this.saveLocked = true;
+    } catch (err) {}
     super.initialize();
   }
 

@@ -1,7 +1,12 @@
-class Level {
+import {LevelBase} from "./base.mjs";
+
+class Level extends LevelBase {
   onZoneEntered(zoneName, object) {
     if (zoneName.startsWith("exit-") && object.path === "passerby.passerby#5") {
-      console.log("robber should escape");
+      const quest = game.quests.getQuest("catch-robber");
+
+      if (quest)
+        quest.setVariable("escaped", true);
     }
   }
 }
