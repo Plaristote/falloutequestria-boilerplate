@@ -41,6 +41,9 @@ class MordinoScene extends SceneManager {
       }
     });
     level.cameraFocusRequired(director);
+    try {
+      this.saveLocked = true;
+    } catch (err) {}
     super.initialize();
   }
 
