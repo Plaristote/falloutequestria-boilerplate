@@ -8662,7 +8662,7 @@
                     ],
                     "ox": 64,
                     "oy": 8,
-                    "script": "",
+                    "script": "shop.mjs",
                     "tasks": {
                     },
                     "zone": [
