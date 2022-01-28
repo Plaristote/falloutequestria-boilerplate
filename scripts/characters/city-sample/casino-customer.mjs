@@ -28,6 +28,7 @@ class CasinoCustomer extends CharacterBehaviour {
   constructor(model) {
     super(model);
     this.routineComponent = new RoutineComponent(this, routine);
+    this.model.tasks.addTask("updateTextBubbles", 10, 1);
   }
 
   initialize() {
