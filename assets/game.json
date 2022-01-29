@@ -78,7 +78,6 @@
                                                 "quantity": 4,
                                                 "rx": 0,
                                                 "ry": 0,
-                                                "script": "drink.mjs",
                                                 "spriteName": "items",
                                                 "useMode": "",
                                                 "x": -1,
@@ -97,7 +96,6 @@
                                                 "quantity": 1,
                                                 "rx": 0,
                                                 "ry": 0,
-                                                "script": "armor.mjs",
                                                 "spriteName": "items",
                                                 "useMode": "",
                                                 "x": -1,
@@ -116,7 +114,6 @@
                                                 "quantity": 271,
                                                 "rx": 0,
                                                 "ry": 0,
-                                                "script": "bottlecaps.mjs",
                                                 "spriteName": "items",
                                                 "useMode": "",
                                                 "x": -1,
@@ -168,7 +165,6 @@
                                                 "quantity": 2,
                                                 "rx": 0,
                                                 "ry": 0,
-                                                "script": "armor.mjs",
                                                 "spriteName": "items",
                                                 "useMode": "",
                                                 "x": -1,
@@ -186,7 +182,6 @@
                                                 "quantity": 1,
                                                 "rx": 0,
                                                 "ry": 0,
-                                                "script": "armor.mjs",
                                                 "spriteName": "items",
                                                 "useMode": "",
                                                 "x": -1,
@@ -238,7 +233,6 @@
                                                 "quantity": 5,
                                                 "rx": 0,
                                                 "ry": 0,
-                                                "script": "dynamite.mjs",
                                                 "spriteName": "items",
                                                 "useMode": "",
                                                 "x": -1,
@@ -256,7 +250,6 @@
                                                 "quantity": 3,
                                                 "rx": 0,
                                                 "ry": 0,
-                                                "script": "pickaxe.mjs",
                                                 "spriteName": "items",
                                                 "useMode": "",
                                                 "x": -1,
@@ -274,7 +267,6 @@
                                                 "quantity": 15,
                                                 "rx": 0,
                                                 "ry": 0,
-                                                "script": "health-potion.mjs",
                                                 "spriteName": "items",
                                                 "useMode": "",
                                                 "x": -1,
@@ -802,7 +794,6 @@
                                                 "quantity": 1,
                                                 "rx": 0,
                                                 "ry": 0,
-                                                "script": "mouthgun.mjs",
                                                 "spriteName": "items",
                                                 "useMode": "",
                                                 "x": -1,
@@ -820,7 +811,6 @@
                                                 "quantity": 20,
                                                 "rx": 0,
                                                 "ry": 0,
-                                                "script": "ammo.mjs",
                                                 "spriteName": "items",
                                                 "useMode": "",
                                                 "x": -1,
@@ -848,7 +838,254 @@
                             "oy": 49,
                             "script": "",
                             "tasks": {
-                            }
+                            },
+                            "zone": [
+                                [
+                                    0,
+                                    0
+                                ],
+                                [
+                                    0,
+                                    1
+                                ],
+                                [
+                                    0,
+                                    2
+                                ],
+                                [
+                                    0,
+                                    3
+                                ],
+                                [
+                                    0,
+                                    7
+                                ],
+                                [
+                                    0,
+                                    6
+                                ],
+                                [
+                                    0,
+                                    5
+                                ],
+                                [
+                                    0,
+                                    4
+                                ],
+                                [
+                                    1,
+                                    7
+                                ],
+                                [
+                                    1,
+                                    6
+                                ],
+                                [
+                                    2,
+                                    5
+                                ],
+                                [
+                                    1,
+                                    4
+                                ],
+                                [
+                                    1,
+                                    5
+                                ],
+                                [
+                                    1,
+                                    3
+                                ],
+                                [
+                                    1,
+                                    2
+                                ],
+                                [
+                                    1,
+                                    1
+                                ],
+                                [
+                                    1,
+                                    0
+                                ],
+                                [
+                                    2,
+                                    0
+                                ],
+                                [
+                                    3,
+                                    0
+                                ],
+                                [
+                                    3,
+                                    2
+                                ],
+                                [
+                                    3,
+                                    1
+                                ],
+                                [
+                                    2,
+                                    1
+                                ],
+                                [
+                                    2,
+                                    2
+                                ],
+                                [
+                                    2,
+                                    3
+                                ],
+                                [
+                                    2,
+                                    4
+                                ],
+                                [
+                                    2,
+                                    6
+                                ],
+                                [
+                                    2,
+                                    7
+                                ],
+                                [
+                                    3,
+                                    7
+                                ],
+                                [
+                                    3,
+                                    6
+                                ],
+                                [
+                                    3,
+                                    5
+                                ],
+                                [
+                                    3,
+                                    4
+                                ],
+                                [
+                                    3,
+                                    3
+                                ],
+                                [
+                                    4,
+                                    0
+                                ],
+                                [
+                                    5,
+                                    0
+                                ],
+                                [
+                                    6,
+                                    0
+                                ],
+                                [
+                                    7,
+                                    0
+                                ],
+                                [
+                                    4,
+                                    1
+                                ],
+                                [
+                                    4,
+                                    2
+                                ],
+                                [
+                                    4,
+                                    6
+                                ],
+                                [
+                                    5,
+                                    7
+                                ],
+                                [
+                                    4,
+                                    7
+                                ],
+                                [
+                                    5,
+                                    6
+                                ],
+                                [
+                                    5,
+                                    5
+                                ],
+                                [
+                                    5,
+                                    4
+                                ],
+                                [
+                                    5,
+                                    3
+                                ],
+                                [
+                                    5,
+                                    2
+                                ],
+                                [
+                                    5,
+                                    1
+                                ],
+                                [
+                                    6,
+                                    1
+                                ],
+                                [
+                                    7,
+                                    1
+                                ],
+                                [
+                                    7,
+                                    2
+                                ],
+                                [
+                                    7,
+                                    3
+                                ],
+                                [
+                                    7,
+                                    4
+                                ],
+                                [
+                                    7,
+                                    5
+                                ],
+                                [
+                                    7,
+                                    6
+                                ],
+                                [
+                                    7,
+                                    7
+                                ],
+                                [
+                                    6,
+                                    7
+                                ],
+                                [
+                                    6,
+                                    6
+                                ],
+                                [
+                                    6,
+                                    5
+                                ],
+                                [
+                                    6,
+                                    4
+                                ],
+                                [
+                                    6,
+                                    3
+                                ],
+                                [
+                                    6,
+                                    2
+                                ]
+                            ],
+                            "zoneBlocked": false
                         },
                         {
                             "groups": [
@@ -945,6 +1182,438 @@
                             "tasks": {
                             },
                             "z": 1
+                        },
+                        {
+                            "groups": [
+                            ],
+                            "name": "upstairs",
+                            "objects": [
+                            ],
+                            "ox": 0,
+                            "oy": 0,
+                            "script": "",
+                            "tasks": {
+                            },
+                            "z": 1,
+                            "zone": [
+                                [
+                                    44,
+                                    46
+                                ],
+                                [
+                                    43,
+                                    46
+                                ],
+                                [
+                                    43,
+                                    47
+                                ],
+                                [
+                                    43,
+                                    48
+                                ],
+                                [
+                                    44,
+                                    49
+                                ],
+                                [
+                                    43,
+                                    49
+                                ],
+                                [
+                                    44,
+                                    48
+                                ],
+                                [
+                                    45,
+                                    46
+                                ],
+                                [
+                                    45,
+                                    49
+                                ],
+                                [
+                                    45,
+                                    48
+                                ],
+                                [
+                                    44,
+                                    47
+                                ],
+                                [
+                                    45,
+                                    47
+                                ],
+                                [
+                                    46,
+                                    46
+                                ],
+                                [
+                                    46,
+                                    47
+                                ],
+                                [
+                                    46,
+                                    49
+                                ],
+                                [
+                                    46,
+                                    48
+                                ],
+                                [
+                                    47,
+                                    49
+                                ],
+                                [
+                                    47,
+                                    48
+                                ],
+                                [
+                                    47,
+                                    47
+                                ],
+                                [
+                                    47,
+                                    45
+                                ],
+                                [
+                                    47,
+                                    46
+                                ],
+                                [
+                                    47,
+                                    40
+                                ],
+                                [
+                                    47,
+                                    41
+                                ],
+                                [
+                                    47,
+                                    42
+                                ],
+                                [
+                                    47,
+                                    43
+                                ],
+                                [
+                                    47,
+                                    44
+                                ],
+                                [
+                                    48,
+                                    40
+                                ],
+                                [
+                                    49,
+                                    40
+                                ],
+                                [
+                                    50,
+                                    40
+                                ],
+                                [
+                                    50,
+                                    42
+                                ],
+                                [
+                                    50,
+                                    41
+                                ],
+                                [
+                                    50,
+                                    43
+                                ],
+                                [
+                                    50,
+                                    45
+                                ],
+                                [
+                                    50,
+                                    44
+                                ],
+                                [
+                                    50,
+                                    46
+                                ],
+                                [
+                                    50,
+                                    47
+                                ],
+                                [
+                                    49,
+                                    48
+                                ],
+                                [
+                                    50,
+                                    48
+                                ],
+                                [
+                                    50,
+                                    49
+                                ],
+                                [
+                                    49,
+                                    49
+                                ],
+                                [
+                                    48,
+                                    49
+                                ],
+                                [
+                                    48,
+                                    48
+                                ],
+                                [
+                                    49,
+                                    47
+                                ],
+                                [
+                                    48,
+                                    47
+                                ],
+                                [
+                                    48,
+                                    46
+                                ],
+                                [
+                                    48,
+                                    45
+                                ],
+                                [
+                                    49,
+                                    45
+                                ],
+                                [
+                                    48,
+                                    44
+                                ],
+                                [
+                                    48,
+                                    42
+                                ],
+                                [
+                                    48,
+                                    41
+                                ],
+                                [
+                                    49,
+                                    42
+                                ],
+                                [
+                                    49,
+                                    41
+                                ],
+                                [
+                                    48,
+                                    43
+                                ],
+                                [
+                                    49,
+                                    43
+                                ],
+                                [
+                                    49,
+                                    44
+                                ],
+                                [
+                                    49,
+                                    46
+                                ],
+                                [
+                                    47,
+                                    50
+                                ],
+                                [
+                                    47,
+                                    51
+                                ],
+                                [
+                                    48,
+                                    51
+                                ],
+                                [
+                                    49,
+                                    50
+                                ],
+                                [
+                                    48,
+                                    50
+                                ],
+                                [
+                                    49,
+                                    51
+                                ],
+                                [
+                                    50,
+                                    51
+                                ],
+                                [
+                                    50,
+                                    50
+                                ],
+                                [
+                                    47,
+                                    56
+                                ],
+                                [
+                                    47,
+                                    55
+                                ],
+                                [
+                                    48,
+                                    56
+                                ],
+                                [
+                                    49,
+                                    56
+                                ],
+                                [
+                                    50,
+                                    56
+                                ],
+                                [
+                                    50,
+                                    55
+                                ],
+                                [
+                                    50,
+                                    54
+                                ],
+                                [
+                                    50,
+                                    53
+                                ],
+                                [
+                                    50,
+                                    52
+                                ],
+                                [
+                                    49,
+                                    52
+                                ],
+                                [
+                                    48,
+                                    53
+                                ],
+                                [
+                                    48,
+                                    52
+                                ],
+                                [
+                                    48,
+                                    54
+                                ],
+                                [
+                                    48,
+                                    55
+                                ],
+                                [
+                                    49,
+                                    55
+                                ],
+                                [
+                                    49,
+                                    54
+                                ],
+                                [
+                                    49,
+                                    53
+                                ],
+                                [
+                                    43,
+                                    51
+                                ],
+                                [
+                                    43,
+                                    55
+                                ],
+                                [
+                                    43,
+                                    56
+                                ],
+                                [
+                                    45,
+                                    55
+                                ],
+                                [
+                                    44,
+                                    55
+                                ],
+                                [
+                                    44,
+                                    56
+                                ],
+                                [
+                                    45,
+                                    56
+                                ],
+                                [
+                                    46,
+                                    56
+                                ],
+                                [
+                                    46,
+                                    55
+                                ],
+                                [
+                                    46,
+                                    54
+                                ],
+                                [
+                                    46,
+                                    53
+                                ],
+                                [
+                                    46,
+                                    52
+                                ],
+                                [
+                                    44,
+                                    52
+                                ],
+                                [
+                                    45,
+                                    52
+                                ],
+                                [
+                                    45,
+                                    53
+                                ],
+                                [
+                                    44,
+                                    53
+                                ],
+                                [
+                                    45,
+                                    54
+                                ],
+                                [
+                                    44,
+                                    54
+                                ],
+                                [
+                                    44,
+                                    51
+                                ],
+                                [
+                                    45,
+                                    51
+                                ],
+                                [
+                                    44,
+                                    50
+                                ],
+                                [
+                                    45,
+                                    50
+                                ],
+                                [
+                                    46,
+                                    50
+                                ]
+                            ],
+                            "zoneBlocked": false
                         }
                     ],
                     "name": "mansion",
@@ -1057,7 +1726,7 @@
                             "objectName": "owner",
                             "rx": 72,
                             "ry": 1611,
-                            "script": "city-sample/shop-owner.mjs",
+                            "script": "city-sample/mansion-owner.mjs",
                             "spriteName": "pony-f5cbcb-pinkie-fbee26-static-pony-eyes-overlay-blank-armor-blank-equip-blank",
                             "type": "Character",
                             "uniq": false,
@@ -1424,7 +2093,6 @@
                                         "quantity": 42,
                                         "rx": 0,
                                         "ry": 0,
-                                        "script": "food.mjs",
                                         "spriteName": "items",
                                         "useMode": "",
                                         "x": -1,
@@ -1443,7 +2111,6 @@
                                         "quantity": 37,
                                         "rx": 0,
                                         "ry": 0,
-                                        "script": "bottlecaps.mjs",
                                         "spriteName": "items",
                                         "useMode": "",
                                         "x": -1,
@@ -1743,7 +2410,6 @@
                                         "quantity": 6,
                                         "rx": 0,
                                         "ry": 0,
-                                        "script": "skillbook.mjs",
                                         "spriteName": "items",
                                         "useMode": "",
                                         "x": -1,
@@ -1762,7 +2428,6 @@
                                         "quantity": 5,
                                         "rx": 0,
                                         "ry": 0,
-                                        "script": "book.mjs",
                                         "spriteName": "items",
                                         "useMode": "",
                                         "x": -1,
@@ -1855,7 +2520,6 @@
                                         "quantity": 12,
                                         "rx": 0,
                                         "ry": 0,
-                                        "script": "book.mjs",
                                         "spriteName": "items",
                                         "useMode": "",
                                         "x": -1,
@@ -1874,7 +2538,6 @@
                                         "quantity": 9,
                                         "rx": 0,
                                         "ry": 0,
-                                        "script": "skillbook.mjs",
                                         "spriteName": "items",
                                         "useMode": "",
                                         "x": -1,
@@ -1926,7 +2589,6 @@
                                         "quantity": 6,
                                         "rx": 0,
                                         "ry": 0,
-                                        "script": "skillbook.mjs",
                                         "spriteName": "items",
                                         "useMode": "",
                                         "x": -1,
@@ -1945,7 +2607,6 @@
                                         "quantity": 8,
                                         "rx": 0,
                                         "ry": 0,
-                                        "script": "book.mjs",
                                         "spriteName": "items",
                                         "useMode": "",
                                         "x": -1,
@@ -2507,7 +3168,6 @@
                                         "quantity": 1,
                                         "rx": 0,
                                         "ry": 0,
-                                        "script": "pickaxe.mjs",
                                         "spriteName": "items",
                                         "useMode": "",
                                         "x": -1,
@@ -2790,7 +3450,6 @@
                                         "quantity": 24,
                                         "rx": 0,
                                         "ry": 0,
-                                        "script": "ammo.mjs",
                                         "spriteName": "items",
                                         "useMode": "",
                                         "x": -1,
@@ -2811,7 +3470,6 @@
                                         "quantity": 1,
                                         "rx": 0,
                                         "ry": 0,
-                                        "script": "armor.mjs",
                                         "slotType": "armor",
                                         "spriteName": "items",
                                         "useMode": "use",
@@ -2836,7 +3494,6 @@
                                         "quantity": 1,
                                         "rx": 0,
                                         "ry": 0,
-                                        "script": "mouthgun.mjs",
                                         "slotType": "any",
                                         "spriteName": "items",
                                         "useMode": "shoot",
@@ -2889,7 +3546,6 @@
                                         "quantity": 24,
                                         "rx": 0,
                                         "ry": 0,
-                                        "script": "ammo.mjs",
                                         "spriteName": "items",
                                         "useMode": "",
                                         "x": -1,
@@ -2910,7 +3566,6 @@
                                         "quantity": 1,
                                         "rx": 0,
                                         "ry": 0,
-                                        "script": "armor.mjs",
                                         "slotType": "armor",
                                         "spriteName": "items",
                                         "useMode": "use",
@@ -2935,7 +3590,6 @@
                                         "quantity": 1,
                                         "rx": 0,
                                         "ry": 0,
-                                        "script": "mouthgun.mjs",
                                         "slotType": "any",
                                         "spriteName": "items",
                                         "useMode": "shoot",
@@ -3260,7 +3914,6 @@
                                                 "quantity": 24,
                                                 "rx": 0,
                                                 "ry": 0,
-                                                "script": "ammo.mjs",
                                                 "spriteName": "items",
                                                 "useMode": "",
                                                 "x": -1,
@@ -3278,7 +3931,6 @@
                                                 "quantity": 1,
                                                 "rx": 0,
                                                 "ry": 0,
-                                                "script": "health-potion.mjs",
                                                 "spriteName": "items",
                                                 "useMode": "",
                                                 "x": -1,
@@ -3299,7 +3951,6 @@
                                                 "quantity": 1,
                                                 "rx": 0,
                                                 "ry": 0,
-                                                "script": "armor.mjs",
                                                 "slotType": "armor",
                                                 "spriteName": "items",
                                                 "useMode": "use",
@@ -3324,7 +3975,6 @@
                                                 "quantity": 1,
                                                 "rx": 0,
                                                 "ry": 0,
-                                                "script": "mouthgun.mjs",
                                                 "slotType": "any",
                                                 "spriteName": "items",
                                                 "useMode": "shoot",
@@ -3528,7 +4178,6 @@
                                                 "quantity": 10,
                                                 "rx": 0,
                                                 "ry": 0,
-                                                "script": "grenade.mjs",
                                                 "spriteName": "items",
                                                 "useMode": "",
                                                 "x": -1,
@@ -3546,7 +4195,6 @@
                                                 "quantity": 126,
                                                 "rx": 0,
                                                 "ry": 0,
-                                                "script": "ammo.mjs",
                                                 "spriteName": "items",
                                                 "useMode": "",
                                                 "x": -1,
@@ -3564,7 +4212,6 @@
                                                 "quantity": 3,
                                                 "rx": 0,
                                                 "ry": 0,
-                                                "script": "health-potion.mjs",
                                                 "spriteName": "items",
                                                 "useMode": "",
                                                 "x": -1,
@@ -3748,7 +4395,6 @@
                                                 "quantity": 24,
                                                 "rx": 0,
                                                 "ry": 0,
-                                                "script": "ammo.mjs",
                                                 "spriteName": "items",
                                                 "useMode": "",
                                                 "x": -1,
@@ -3766,7 +4412,6 @@
                                                 "quantity": 1,
                                                 "rx": 0,
                                                 "ry": 0,
-                                                "script": "health-potion.mjs",
                                                 "spriteName": "items",
                                                 "useMode": "",
                                                 "x": -1,
@@ -3787,7 +4432,6 @@
                                                 "quantity": 1,
                                                 "rx": 0,
                                                 "ry": 0,
-                                                "script": "armor.mjs",
                                                 "slotType": "armor",
                                                 "spriteName": "items",
                                                 "useMode": "use",
@@ -3812,7 +4456,6 @@
                                                 "quantity": 1,
                                                 "rx": 0,
                                                 "ry": 0,
-                                                "script": "mouthgun.mjs",
                                                 "slotType": "any",
                                                 "spriteName": "items",
                                                 "useMode": "shoot",
@@ -4053,7 +4696,6 @@
                                         "quantity": 24,
                                         "rx": 0,
                                         "ry": 0,
-                                        "script": "ammo.mjs",
                                         "spriteName": "items",
                                         "useMode": "",
                                         "x": -1,
@@ -4071,7 +4713,6 @@
                                         "quantity": 1,
                                         "rx": 0,
                                         "ry": 0,
-                                        "script": "health-potion.mjs",
                                         "spriteName": "items",
                                         "useMode": "",
                                         "x": -1,
@@ -4092,7 +4733,6 @@
                                         "quantity": 1,
                                         "rx": 0,
                                         "ry": 0,
-                                        "script": "armor.mjs",
                                         "slotType": "armor",
                                         "spriteName": "items",
                                         "useMode": "use",
@@ -4117,7 +4757,6 @@
                                         "quantity": 1,
                                         "rx": 0,
                                         "ry": 0,
-                                        "script": "mouthgun.mjs",
                                         "slotType": "any",
                                         "spriteName": "items",
                                         "useMode": "shoot",
@@ -4423,7 +5062,6 @@
                                         "quantity": 79,
                                         "rx": 0,
                                         "ry": 0,
-                                        "script": "bottlecaps.mjs",
                                         "spriteName": "items",
                                         "useMode": "",
                                         "x": -1,
@@ -4609,7 +5247,6 @@
                                                 "quantity": 1,
                                                 "rx": 0,
                                                 "ry": 0,
-                                                "script": "tuxedo.mjs",
                                                 "slotType": "armor",
                                                 "spriteName": "items",
                                                 "useMode": "use",
@@ -4671,7 +5308,6 @@
                                                 "quantity": 13,
                                                 "rx": 0,
                                                 "ry": 0,
-                                                "script": "bottlecaps.mjs",
                                                 "spriteName": "items",
                                                 "useMode": "",
                                                 "x": -1,
@@ -4738,7 +5374,6 @@
                                                 "quantity": 31,
                                                 "rx": 0,
                                                 "ry": 0,
-                                                "script": "bottlecaps.mjs",
                                                 "spriteName": "items",
                                                 "useMode": "",
                                                 "x": -1,
@@ -4805,7 +5440,6 @@
                                                 "quantity": 5,
                                                 "rx": 0,
                                                 "ry": 0,
-                                                "script": "bottlecaps.mjs",
                                                 "spriteName": "items",
                                                 "useMode": "",
                                                 "x": -1,
@@ -4824,7 +5458,6 @@
                                                 "quantity": 1,
                                                 "rx": 0,
                                                 "ry": 0,
-                                                "script": "alcohol.mjs",
                                                 "spriteName": "items",
                                                 "useMode": "",
                                                 "x": -1,
@@ -4884,7 +5517,6 @@
                                                 "quantity": 20,
                                                 "rx": 0,
                                                 "ry": 0,
-                                                "script": "alcohol.mjs",
                                                 "spriteName": "items",
                                                 "useMode": "",
                                                 "x": -1,
@@ -4903,7 +5535,6 @@
                                                 "quantity": 15,
                                                 "rx": 0,
                                                 "ry": 0,
-                                                "script": "alcohol.mjs",
                                                 "spriteName": "items",
                                                 "useMode": "",
                                                 "x": -1,
@@ -4922,7 +5553,6 @@
                                                 "quantity": 31,
                                                 "rx": 0,
                                                 "ry": 0,
-                                                "script": "drink.mjs",
                                                 "spriteName": "items",
                                                 "useMode": "",
                                                 "x": -1,
@@ -4941,7 +5571,6 @@
                                                 "quantity": 15,
                                                 "rx": 0,
                                                 "ry": 0,
-                                                "script": "bottlecaps.mjs",
                                                 "spriteName": "items",
                                                 "useMode": "",
                                                 "x": -1,
@@ -5281,7 +5910,6 @@
                                                         "quantity": 1,
                                                         "rx": 0,
                                                         "ry": 0,
-                                                        "script": "skillbook.mjs",
                                                         "spriteName": "items",
                                                         "useMode": "",
                                                         "x": -1,
@@ -5474,7 +6102,6 @@
                                                         "quantity": 1,
                                                         "rx": 0,
                                                         "ry": 0,
-                                                        "script": "book.mjs",
                                                         "spriteName": "items",
                                                         "useMode": "",
                                                         "x": -1,
@@ -5493,7 +6120,6 @@
                                                         "quantity": 1,
                                                         "rx": 0,
                                                         "ry": 0,
-                                                        "script": "health-potion.mjs",
                                                         "spriteName": "items",
                                                         "useMode": "",
                                                         "x": -1,
@@ -6332,7 +6958,6 @@
                                                 "quantity": 1,
                                                 "rx": 0,
                                                 "ry": 0,
-                                                "script": "armor.mjs",
                                                 "slotType": "armor",
                                                 "spriteName": "items",
                                                 "useMode": "use",
@@ -6397,7 +7022,6 @@
                                                 "quantity": 1,
                                                 "rx": 0,
                                                 "ry": 0,
-                                                "script": "armor.mjs",
                                                 "slotType": "armor",
                                                 "spriteName": "items",
                                                 "useMode": "use",
@@ -6451,7 +7075,6 @@
                                                 "quantity": 3,
                                                 "rx": 0,
                                                 "ry": 0,
-                                                "script": "food-butter.mjs",
                                                 "spriteName": "items",
                                                 "useMode": "",
                                                 "x": -1,
@@ -6732,7 +7355,6 @@
                                                         "quantity": 1,
                                                         "rx": 0,
                                                         "ry": 0,
-                                                        "script": "tuxedo.mjs",
                                                         "slotType": "armor",
                                                         "spriteName": "items",
                                                         "useMode": "use",
@@ -6796,7 +7418,6 @@
                                                         "quantity": 1,
                                                         "rx": 0,
                                                         "ry": 0,
-                                                        "script": "tuxedo.mjs",
                                                         "slotType": "armor",
                                                         "spriteName": "items",
                                                         "useMode": "use",
@@ -6872,7 +7493,6 @@
                                                         "quantity": 1,
                                                         "rx": 0,
                                                         "ry": 0,
-                                                        "script": "tuxedo.mjs",
                                                         "slotType": "armor",
                                                         "spriteName": "items",
                                                         "useMode": "use",
@@ -7449,7 +8069,6 @@
                                         "quantity": 1,
                                         "rx": 0,
                                         "ry": 0,
-                                        "script": "tuxedo.mjs",
                                         "slotType": "armor",
                                         "spriteName": "items",
                                         "useMode": "use",
@@ -8317,7 +8936,6 @@
                                                 "quantity": 8,
                                                 "rx": 0,
                                                 "ry": 0,
-                                                "script": "book.mjs",
                                                 "spriteName": "items",
                                                 "useMode": "",
                                                 "x": -1,
@@ -8369,7 +8987,6 @@
                                                 "quantity": 1,
                                                 "rx": 0,
                                                 "ry": 0,
-                                                "script": "book.mjs",
                                                 "spriteName": "items",
                                                 "useMode": "",
                                                 "x": -1,
@@ -8540,7 +9157,6 @@
                                         "quantity": 3,
                                         "rx": 0,
                                         "ry": 0,
-                                        "script": "book.mjs",
                                         "spriteName": "items",
                                         "useMode": "",
                                         "x": -1,
@@ -8559,7 +9175,6 @@
                                         "quantity": 1,
                                         "rx": 0,
                                         "ry": 0,
-                                        "script": "skillbook.mjs",
                                         "spriteName": "items",
                                         "useMode": "",
                                         "x": -1,
