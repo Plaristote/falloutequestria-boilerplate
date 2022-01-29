@@ -16,7 +16,7 @@ class MansionShop extends Shop {
 
     doors.forEach(door => {
       overrideBehaviour(door.getScriptObject(), "onUse", (user) => {
-        if (this.isUnderSurveillance()) {
+        if (user !== this.shopOwner && this.isUnderSurveillance()) {
           level.addTextBubble(owner, "Don't touch that", 2000);
           return true;
         }
@@ -45,6 +45,17 @@ class MansionShop extends Shop {
     super.closeShopRoutine();
     if (this.isShopOwnerConscious())
       this.shopOwner.getScriptObject().goToSleep();
+  }
+
+  mansionOccupants() {
+    var occupants = this.shopOccupants();
+
+    ["backroom", "bedroom", "upstairs"].forEach(groupName => {
+      const group = this.model.parent.findGroup(groupName);
+
+      occupants = occupants.concat(group.getControlZoneOccupants());
+    });
+    return occupants;
   }
 }
 
