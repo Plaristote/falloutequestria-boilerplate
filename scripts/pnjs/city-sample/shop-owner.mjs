@@ -75,13 +75,15 @@ export class ShopOwner extends CharacterBehaviour {
     super.onActionQueueCompleted();
   }
 
-  onTalkTo() {
-    if (this.shop && !this.shop.getScriptObject().opened) {
+  onCharacterDetected(character) {
+    const script = this.shop ? this.shop.getScriptObject() : null;
+
+    if (script && !script.opened && script.shopOccupants().indexOf(character) >= 0) {
       level.addTextBubble(this.model, i18n.t("bubbles.shop-closed"), 2000, "orange");
-      this.shop.tasks.addTask("chaseCustomer", 1370, 1);
-      return true;
+      callGuards(level.findGroup("guards"), character, AlarmLevel.Arrest);
     }
-    return super.onTalkTo();
+    else
+      super.onCharacterDetected();
   }
 }
 
