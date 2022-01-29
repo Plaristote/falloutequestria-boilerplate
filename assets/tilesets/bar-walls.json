@@ -4,7 +4,7 @@
  "imagewidth":585,
  "name":"Bar",
  "spacing":1,
- "tilecount":32,
+ "tilecount":24,
  "tiledversion":"1.7.2",
  "tileheight":108,
  "tiles":[
