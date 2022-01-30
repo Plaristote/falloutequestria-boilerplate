@@ -2,7 +2,7 @@ import {CasinoGuard} from "./casino-guard.mjs";
 import {overrideBehaviour} from "../../behaviour/override.mjs";
 
 const textBubbles = {
-  goToOffice:     { content: i18n.t("sample-city.director-not-receiving"), duration: 3500, color: "orange" },
+  goToSleep:      { content: i18n.t("sample-city.director-not-receiving"), duration: 3500, color: "orange" },
   goToRestaurant: { content: i18n.t("sample-city.director-at-lunch"), duration: 4500, color: "orange" }
 };
 
@@ -15,8 +15,8 @@ function onPreventDoorOpening(self, currentRoutine) {
 function onDoorOpening(self, director, user) {
   if (user === game.player && self.isAlive() && self.fieldOfView.isDetected(user) && self.hasLineOfSight(user)) {
     const currentRoutine = director.routineComponent.getCurrentRoutine().callback;
-    switch (currentRouine) {
-      case "goToOffice":
+    switch (currentRoutine) {
+      case "goToSleep":
       case "goToRestaurant":
         onPreventDoorOpening(self, currentRoutine);
         return true;
