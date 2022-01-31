@@ -201,7 +201,7 @@ class QuestioningScene extends SceneManager {
     [director, robber, bodyguard].forEach(character => {
       toggleRoutine(character, true);
     });
-    this.finalize();
+    this.triggerNextStep();
   }
 
   triggerFight() {
