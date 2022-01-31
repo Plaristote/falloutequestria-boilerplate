@@ -78,7 +78,7 @@ class MordinoScene extends SceneManager {
     director.actionQueue.pushScript(() => {
       chief.actionQueue.pushSpeak("So that's how it's gonna be huh...", 3000, "red");
       chief.actionQueue.pushWait(3);
-      chief.actionQueue.pushScript(this.finalize.bind(this));
+      chief.actionQueue.pushScript(this.triggerNextStep.bind(this));
       chief.actionQueue.start();
     });
     director.actionQueue.start();
