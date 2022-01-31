@@ -78,7 +78,6 @@ export class ShopOwner extends CharacterBehaviour {
   onCharacterDetected(character) {
     const script = this.shop ? this.shop.getScriptObject() : null;
 
-    console.log("COUCOU sHOPOWNER onCharacterDetected", script);
     if (script && !script.opened && script.shopOccupants().indexOf(character) >= 0) {
       level.addTextBubble(this.model, i18n.t("bubbles.shop-closed"), 2000, "orange");
       callGuards(level.findGroup("guards"), character, AlarmLevel.Arrest);
