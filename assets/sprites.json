@@ -2768,6 +2768,10 @@
         },
         "defaultSource": "stairs.png"
     },
+    "stairs-left": {
+        "cloneOf": "stairs",
+        "defaultSource": "stairs-left.png"
+    },
     "timberwolf": {
         "cloneOf": "wolf",
         "defaultSource": "critters/timberwolf.png"
