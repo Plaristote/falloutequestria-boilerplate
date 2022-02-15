@@ -39,7 +39,7 @@
             "reputation": false
         }
     },
-    "level": "city-sample",
+    "level": "stable",
     "levels": {
         "city-sample": {
             "ambientColor": [
@@ -10032,6 +10032,1782 @@
                 }
             ]
         },
+        "new-map": {
+            "ambientColor": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "currentFloor": 0,
+            "groups": [
+            ],
+            "init": true,
+            "objects": [
+                {
+                    ">": 8,
+                    "animation": "close-down",
+                    "destroyed": false,
+                    "float": false,
+                    "key": "",
+                    "locked": false,
+                    "mtx": -144,
+                    "mty": 1332,
+                    "nextX": 0,
+                    "nextY": 0,
+                    "objectName": "door",
+                    "opened": false,
+                    "picklvl": 1,
+                    "rx": -144,
+                    "ry": 1332,
+                    "script": "door.mjs",
+                    "spriteName": "wooden-door",
+                    "type": "Doorway",
+                    "x": 35,
+                    "y": 39
+                },
+                {
+                    ">": 2,
+                    "animation": "idle-left",
+                    "ap": 0,
+                    "buffs": [
+                    ],
+                    "charsheet": "new-npc",
+                    "currentPath": [
+                    ],
+                    "enemyFlag": 0,
+                    "float": false,
+                    "inventory": {
+                        "items": [
+                            {
+                                "animation": "misc",
+                                "blocksPath": false,
+                                "float": false,
+                                "itemType": "pickaxe",
+                                "mtx": 0,
+                                "mty": 0,
+                                "nextX": 0,
+                                "nextY": 0,
+                                "objectName": "pickaxe",
+                                "quantity": 1,
+                                "rx": 0,
+                                "ry": 0,
+                                "spriteName": "items",
+                                "useMode": "",
+                                "x": -1,
+                                "y": -1
+                            },
+                            {
+                                "animation": "misc",
+                                "blocksPath": false,
+                                "float": false,
+                                "itemType": "skill-book-smallGuns",
+                                "mtx": 0,
+                                "mty": 0,
+                                "nextX": 0,
+                                "nextY": 0,
+                                "objectName": "skill-book-smallGuns",
+                                "quantity": 2,
+                                "rx": 0,
+                                "ry": 0,
+                                "spriteName": "items",
+                                "useMode": "",
+                                "x": -1,
+                                "y": -1
+                            }
+                        ],
+                        "slots": {
+                            "armor": {
+                                "hasItem": false,
+                                "slotType": "armor"
+                            },
+                            "use-1": {
+                                "hasItem": false,
+                                "slotType": "any"
+                            },
+                            "use-2": {
+                                "hasItem": false,
+                                "slotType": "any"
+                            }
+                        }
+                    },
+                    "moveMode": "walking",
+                    "mtx": -36,
+                    "mty": 1269,
+                    "nextX": 0,
+                    "nextY": 0,
+                    "objectName": "mynpc",
+                    "rx": -36,
+                    "ry": 1269,
+                    "script": "character.mjs",
+                    "spriteName": "griffon-000000-griffon-messy-000000-static-blank-overlay-griffon-wings-armor-blank-equip-blank",
+                    "type": "Character",
+                    "uniq": false,
+                    "x": 35,
+                    "y": 36
+                }
+            ],
+            "ox": 0,
+            "oy": 0,
+            "tasks": {
+            },
+            "useAmbientLight": false,
+            "useDaylight": false
+        },
+        "stable": {
+            "ambientColor": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "currentFloor": 0,
+            "groups": [
+                {
+                    "groups": [
+                        {
+                            "groups": [
+                                {
+                                    "groups": [
+                                    ],
+                                    "name": "room#1",
+                                    "objects": [
+                                        {
+                                            "animation": "bottom-left",
+                                            "cover": 30,
+                                            "float": true,
+                                            "mtx": 108,
+                                            "mty": 564,
+                                            "nextX": 0,
+                                            "nextY": 0,
+                                            "objectName": "bed",
+                                            "rx": 108,
+                                            "ry": 564,
+                                            "script": "",
+                                            "spriteName": "wooden-bed",
+                                            "type": "DynamicObject",
+                                            "x": 18,
+                                            "y": 15,
+                                            "zone": [
+                                                [
+                                                    0,
+                                                    -1
+                                                ],
+                                                [
+                                                    0,
+                                                    0
+                                                ]
+                                            ],
+                                            "zoneBlocked": true
+                                        },
+                                        {
+                                            "animation": "left",
+                                            "cover": 10,
+                                            "float": true,
+                                            "inventory": {
+                                                "items": [
+                                                ],
+                                                "slots": {
+                                                }
+                                            },
+                                            "mtx": 180,
+                                            "mty": 512,
+                                            "nextX": 0,
+                                            "nextY": 0,
+                                            "objectName": "storage",
+                                            "rx": 180,
+                                            "ry": 512,
+                                            "script": "",
+                                            "spriteName": "wooden-shelf",
+                                            "type": "StorageObject",
+                                            "x": 17,
+                                            "y": 12
+                                        }
+                                    ],
+                                    "ox": 17,
+                                    "oy": 12,
+                                    "script": "",
+                                    "tasks": {
+                                    }
+                                },
+                                {
+                                    "groups": [
+                                    ],
+                                    "name": "room#2",
+                                    "objects": [
+                                        {
+                                            "animation": "bottom-left",
+                                            "cover": 30,
+                                            "float": true,
+                                            "mtx": 252,
+                                            "mty": 492,
+                                            "nextX": 0,
+                                            "nextY": 0,
+                                            "objectName": "bed",
+                                            "rx": 252,
+                                            "ry": 492,
+                                            "script": "",
+                                            "spriteName": "wooden-bed",
+                                            "type": "DynamicObject",
+                                            "x": 18,
+                                            "y": 11,
+                                            "zone": [
+                                                [
+                                                    0,
+                                                    -1
+                                                ],
+                                                [
+                                                    0,
+                                                    0
+                                                ]
+                                            ],
+                                            "zoneBlocked": true
+                                        },
+                                        {
+                                            "animation": "left",
+                                            "cover": 10,
+                                            "float": true,
+                                            "inventory": {
+                                                "items": [
+                                                ],
+                                                "slots": {
+                                                }
+                                            },
+                                            "mtx": 324,
+                                            "mty": 440,
+                                            "nextX": 0,
+                                            "nextY": 0,
+                                            "objectName": "storage",
+                                            "rx": 324,
+                                            "ry": 440,
+                                            "script": "",
+                                            "spriteName": "wooden-shelf",
+                                            "type": "StorageObject",
+                                            "x": 17,
+                                            "y": 8
+                                        }
+                                    ],
+                                    "ox": 17,
+                                    "oy": 8,
+                                    "script": "",
+                                    "tasks": {
+                                    }
+                                },
+                                {
+                                    "groups": [
+                                    ],
+                                    "name": "room#3",
+                                    "objects": [
+                                        {
+                                            "animation": "bottom-left",
+                                            "cover": 30,
+                                            "float": true,
+                                            "mtx": 396,
+                                            "mty": 420,
+                                            "nextX": 0,
+                                            "nextY": 0,
+                                            "objectName": "bed",
+                                            "rx": 396,
+                                            "ry": 420,
+                                            "script": "",
+                                            "spriteName": "wooden-bed",
+                                            "type": "DynamicObject",
+                                            "x": 18,
+                                            "y": 7,
+                                            "zone": [
+                                                [
+                                                    0,
+                                                    -1
+                                                ],
+                                                [
+                                                    0,
+                                                    0
+                                                ]
+                                            ],
+                                            "zoneBlocked": true
+                                        },
+                                        {
+                                            "animation": "left",
+                                            "cover": 10,
+                                            "float": true,
+                                            "inventory": {
+                                                "items": [
+                                                ],
+                                                "slots": {
+                                                }
+                                            },
+                                            "mtx": 504,
+                                            "mty": 350,
+                                            "nextX": 0,
+                                            "nextY": 0,
+                                            "objectName": "storage",
+                                            "rx": 504,
+                                            "ry": 350,
+                                            "script": "",
+                                            "spriteName": "wooden-shelf",
+                                            "type": "StorageObject",
+                                            "x": 17,
+                                            "y": 3
+                                        }
+                                    ],
+                                    "ox": 17,
+                                    "oy": 3,
+                                    "script": "",
+                                    "tasks": {
+                                    }
+                                },
+                                {
+                                    "groups": [
+                                    ],
+                                    "name": "room#4",
+                                    "objects": [
+                                        {
+                                            "animation": "bottom-left",
+                                            "cover": 30,
+                                            "float": true,
+                                            "mtx": 1224,
+                                            "mty": 834,
+                                            "nextX": 0,
+                                            "nextY": 0,
+                                            "objectName": "bed",
+                                            "rx": 1224,
+                                            "ry": 834,
+                                            "script": "",
+                                            "spriteName": "wooden-bed",
+                                            "type": "DynamicObject",
+                                            "x": 41,
+                                            "y": 7,
+                                            "zone": [
+                                                [
+                                                    0,
+                                                    -1
+                                                ],
+                                                [
+                                                    0,
+                                                    0
+                                                ]
+                                            ],
+                                            "zoneBlocked": true
+                                        },
+                                        {
+                                            "animation": "left",
+                                            "cover": 10,
+                                            "float": true,
+                                            "inventory": {
+                                                "items": [
+                                                ],
+                                                "slots": {
+                                                }
+                                            },
+                                            "mtx": 1224,
+                                            "mty": 710,
+                                            "nextX": 0,
+                                            "nextY": 0,
+                                            "objectName": "storage",
+                                            "rx": 1224,
+                                            "ry": 710,
+                                            "script": "",
+                                            "spriteName": "wooden-shelf",
+                                            "type": "StorageObject",
+                                            "x": 37,
+                                            "y": 3
+                                        }
+                                    ],
+                                    "ox": 37,
+                                    "oy": 3,
+                                    "script": "",
+                                    "tasks": {
+                                    }
+                                },
+                                {
+                                    "groups": [
+                                    ],
+                                    "name": "room#5",
+                                    "objects": [
+                                        {
+                                            "animation": "bottom-left",
+                                            "cover": 30,
+                                            "float": true,
+                                            "mtx": 1080,
+                                            "mty": 906,
+                                            "nextX": 0,
+                                            "nextY": 0,
+                                            "objectName": "bed",
+                                            "rx": 1080,
+                                            "ry": 906,
+                                            "script": "",
+                                            "spriteName": "wooden-bed",
+                                            "type": "DynamicObject",
+                                            "x": 41,
+                                            "y": 11,
+                                            "zone": [
+                                                [
+                                                    0,
+                                                    -1
+                                                ],
+                                                [
+                                                    0,
+                                                    0
+                                                ]
+                                            ],
+                                            "zoneBlocked": true
+                                        },
+                                        {
+                                            "animation": "left",
+                                            "cover": 10,
+                                            "float": true,
+                                            "inventory": {
+                                                "items": [
+                                                ],
+                                                "slots": {
+                                                }
+                                            },
+                                            "mtx": 1044,
+                                            "mty": 800,
+                                            "nextX": 0,
+                                            "nextY": 0,
+                                            "objectName": "storage",
+                                            "rx": 1044,
+                                            "ry": 800,
+                                            "script": "",
+                                            "spriteName": "wooden-shelf",
+                                            "type": "StorageObject",
+                                            "x": 37,
+                                            "y": 8
+                                        }
+                                    ],
+                                    "ox": 37,
+                                    "oy": 8,
+                                    "script": "",
+                                    "tasks": {
+                                    }
+                                },
+                                {
+                                    "groups": [
+                                    ],
+                                    "name": "room#6",
+                                    "objects": [
+                                        {
+                                            "animation": "bottom-left",
+                                            "cover": 30,
+                                            "float": true,
+                                            "mtx": 900,
+                                            "mty": 996,
+                                            "nextX": 0,
+                                            "nextY": 0,
+                                            "objectName": "bed",
+                                            "rx": 900,
+                                            "ry": 996,
+                                            "script": "",
+                                            "spriteName": "wooden-bed",
+                                            "type": "DynamicObject",
+                                            "x": 41,
+                                            "y": 16,
+                                            "zone": [
+                                                [
+                                                    0,
+                                                    -1
+                                                ],
+                                                [
+                                                    0,
+                                                    0
+                                                ]
+                                            ],
+                                            "zoneBlocked": true
+                                        },
+                                        {
+                                            "animation": "left",
+                                            "cover": 10,
+                                            "float": true,
+                                            "inventory": {
+                                                "items": [
+                                                ],
+                                                "slots": {
+                                                }
+                                            },
+                                            "mtx": 900,
+                                            "mty": 872,
+                                            "nextX": 0,
+                                            "nextY": 0,
+                                            "objectName": "storage",
+                                            "rx": 900,
+                                            "ry": 872,
+                                            "script": "",
+                                            "spriteName": "wooden-shelf",
+                                            "type": "StorageObject",
+                                            "x": 37,
+                                            "y": 12
+                                        }
+                                    ],
+                                    "ox": 37,
+                                    "oy": 12,
+                                    "script": "",
+                                    "tasks": {
+                                    }
+                                },
+                                {
+                                    "groups": [
+                                    ],
+                                    "name": "room#7",
+                                    "objects": [
+                                        {
+                                            "animation": "bottom-left",
+                                            "cover": 30,
+                                            "float": true,
+                                            "mtx": 648,
+                                            "mty": 510,
+                                            "nextX": 0,
+                                            "nextY": 0,
+                                            "objectName": "bed",
+                                            "rx": 648,
+                                            "ry": 510,
+                                            "script": "",
+                                            "spriteName": "wooden-bed",
+                                            "type": "DynamicObject",
+                                            "x": 24,
+                                            "y": 6,
+                                            "zone": [
+                                                [
+                                                    0,
+                                                    -1
+                                                ],
+                                                [
+                                                    0,
+                                                    0
+                                                ]
+                                            ],
+                                            "zoneBlocked": true
+                                        },
+                                        {
+                                            "animation": "left",
+                                            "cover": 10,
+                                            "float": true,
+                                            "inventory": {
+                                                "items": [
+                                                ],
+                                                "slots": {
+                                                }
+                                            },
+                                            "mtx": 720,
+                                            "mty": 458,
+                                            "nextX": 0,
+                                            "nextY": 0,
+                                            "objectName": "storage",
+                                            "rx": 720,
+                                            "ry": 458,
+                                            "script": "",
+                                            "spriteName": "wooden-shelf",
+                                            "type": "StorageObject",
+                                            "x": 23,
+                                            "y": 3
+                                        }
+                                    ],
+                                    "ox": 23,
+                                    "oy": 3,
+                                    "script": "",
+                                    "tasks": {
+                                    }
+                                },
+                                {
+                                    "groups": [
+                                    ],
+                                    "name": "room#8",
+                                    "objects": [
+                                        {
+                                            "animation": "bottom-left",
+                                            "cover": 30,
+                                            "float": true,
+                                            "mtx": 1008,
+                                            "mty": 690,
+                                            "nextX": 0,
+                                            "nextY": 0,
+                                            "objectName": "bed",
+                                            "rx": 1008,
+                                            "ry": 690,
+                                            "script": "",
+                                            "spriteName": "wooden-bed",
+                                            "type": "DynamicObject",
+                                            "x": 34,
+                                            "y": 6,
+                                            "zone": [
+                                                [
+                                                    0,
+                                                    -1
+                                                ],
+                                                [
+                                                    0,
+                                                    0
+                                                ]
+                                            ],
+                                            "zoneBlocked": true
+                                        },
+                                        {
+                                            "animation": "left",
+                                            "cover": 10,
+                                            "float": true,
+                                            "inventory": {
+                                                "items": [
+                                                ],
+                                                "slots": {
+                                                }
+                                            },
+                                            "mtx": 1008,
+                                            "mty": 602,
+                                            "nextX": 0,
+                                            "nextY": 0,
+                                            "objectName": "storage",
+                                            "rx": 1008,
+                                            "ry": 602,
+                                            "script": "",
+                                            "spriteName": "wooden-shelf",
+                                            "type": "StorageObject",
+                                            "x": 31,
+                                            "y": 3
+                                        }
+                                    ],
+                                    "ox": 31,
+                                    "oy": 3,
+                                    "script": "",
+                                    "tasks": {
+                                    }
+                                }
+                            ],
+                            "name": "rooms",
+                            "objects": [
+                            ],
+                            "ox": 0,
+                            "oy": 0,
+                            "script": "",
+                            "tasks": {
+                            }
+                        }
+                    ],
+                    "name": "level#0",
+                    "objects": [
+                        {
+                            "animation": "A",
+                            "ax": 21,
+                            "ay": 18,
+                            "az": 0,
+                            "bx": 17,
+                            "by": 18,
+                            "bz": 1,
+                            "float": true,
+                            "mtx": 0,
+                            "mty": 568,
+                            "nextX": 0,
+                            "nextY": 0,
+                            "objectName": "stairs",
+                            "rx": 0,
+                            "ry": 568,
+                            "script": "",
+                            "spriteName": "stairs-left",
+                            "type": "Elevator",
+                            "x": 18,
+                            "y": 18,
+                            "zone": [
+                                [
+                                    2,
+                                    0
+                                ],
+                                [
+                                    1,
+                                    0
+                                ],
+                                [
+                                    0,
+                                    0
+                                ]
+                            ],
+                            "zoneBlocked": true
+                        }
+                    ],
+                    "ox": 0,
+                    "oy": 0,
+                    "script": "",
+                    "tasks": {
+                    }
+                },
+                {
+                    "groups": [
+                        {
+                            "groups": [
+                                {
+                                    "groups": [
+                                    ],
+                                    "name": "room#1",
+                                    "objects": [
+                                        {
+                                            "animation": "bottom-left",
+                                            "cover": 30,
+                                            "float": true,
+                                            "mtx": 108,
+                                            "mty": 564,
+                                            "nextX": 0,
+                                            "nextY": 0,
+                                            "objectName": "bed",
+                                            "rx": 108,
+                                            "ry": 564,
+                                            "script": "",
+                                            "spriteName": "wooden-bed",
+                                            "type": "DynamicObject",
+                                            "x": 18,
+                                            "y": 15,
+                                            "z": 1,
+                                            "zone": [
+                                                [
+                                                    0,
+                                                    -1
+                                                ],
+                                                [
+                                                    0,
+                                                    0
+                                                ]
+                                            ],
+                                            "zoneBlocked": true
+                                        },
+                                        {
+                                            "animation": "left",
+                                            "cover": 10,
+                                            "float": true,
+                                            "inventory": {
+                                                "items": [
+                                                ],
+                                                "slots": {
+                                                }
+                                            },
+                                            "mtx": 180,
+                                            "mty": 512,
+                                            "nextX": 0,
+                                            "nextY": 0,
+                                            "objectName": "storage",
+                                            "rx": 180,
+                                            "ry": 512,
+                                            "script": "",
+                                            "spriteName": "wooden-shelf",
+                                            "type": "StorageObject",
+                                            "x": 17,
+                                            "y": 12,
+                                            "z": 1
+                                        }
+                                    ],
+                                    "ox": 17,
+                                    "oy": 12,
+                                    "script": "",
+                                    "tasks": {
+                                    },
+                                    "z": 1
+                                },
+                                {
+                                    "groups": [
+                                    ],
+                                    "name": "room#2",
+                                    "objects": [
+                                        {
+                                            "animation": "bottom-left",
+                                            "cover": 30,
+                                            "float": true,
+                                            "mtx": 252,
+                                            "mty": 492,
+                                            "nextX": 0,
+                                            "nextY": 0,
+                                            "objectName": "bed",
+                                            "rx": 252,
+                                            "ry": 492,
+                                            "script": "",
+                                            "spriteName": "wooden-bed",
+                                            "type": "DynamicObject",
+                                            "x": 18,
+                                            "y": 11,
+                                            "z": 1,
+                                            "zone": [
+                                                [
+                                                    0,
+                                                    -1
+                                                ],
+                                                [
+                                                    0,
+                                                    0
+                                                ]
+                                            ],
+                                            "zoneBlocked": true
+                                        },
+                                        {
+                                            "animation": "left",
+                                            "cover": 10,
+                                            "float": true,
+                                            "inventory": {
+                                                "items": [
+                                                ],
+                                                "slots": {
+                                                }
+                                            },
+                                            "mtx": 324,
+                                            "mty": 440,
+                                            "nextX": 0,
+                                            "nextY": 0,
+                                            "objectName": "storage",
+                                            "rx": 324,
+                                            "ry": 440,
+                                            "script": "",
+                                            "spriteName": "wooden-shelf",
+                                            "type": "StorageObject",
+                                            "x": 17,
+                                            "y": 8,
+                                            "z": 1
+                                        }
+                                    ],
+                                    "ox": 17,
+                                    "oy": 8,
+                                    "script": "",
+                                    "tasks": {
+                                    },
+                                    "z": 1
+                                },
+                                {
+                                    "groups": [
+                                    ],
+                                    "name": "room#3",
+                                    "objects": [
+                                        {
+                                            "animation": "bottom-left",
+                                            "cover": 30,
+                                            "float": true,
+                                            "mtx": 396,
+                                            "mty": 420,
+                                            "nextX": 0,
+                                            "nextY": 0,
+                                            "objectName": "bed",
+                                            "rx": 396,
+                                            "ry": 420,
+                                            "script": "",
+                                            "spriteName": "wooden-bed",
+                                            "type": "DynamicObject",
+                                            "x": 18,
+                                            "y": 7,
+                                            "z": 1,
+                                            "zone": [
+                                                [
+                                                    0,
+                                                    -1
+                                                ],
+                                                [
+                                                    0,
+                                                    0
+                                                ]
+                                            ],
+                                            "zoneBlocked": true
+                                        },
+                                        {
+                                            "animation": "left",
+                                            "cover": 10,
+                                            "float": true,
+                                            "inventory": {
+                                                "items": [
+                                                ],
+                                                "slots": {
+                                                }
+                                            },
+                                            "mtx": 504,
+                                            "mty": 350,
+                                            "nextX": 0,
+                                            "nextY": 0,
+                                            "objectName": "storage",
+                                            "rx": 504,
+                                            "ry": 350,
+                                            "script": "",
+                                            "spriteName": "wooden-shelf",
+                                            "type": "StorageObject",
+                                            "x": 17,
+                                            "y": 3,
+                                            "z": 1
+                                        }
+                                    ],
+                                    "ox": 17,
+                                    "oy": 3,
+                                    "script": "",
+                                    "tasks": {
+                                    },
+                                    "z": 1
+                                },
+                                {
+                                    "groups": [
+                                    ],
+                                    "name": "room#4",
+                                    "objects": [
+                                        {
+                                            "animation": "bottom-left",
+                                            "cover": 30,
+                                            "float": true,
+                                            "mtx": 1224,
+                                            "mty": 834,
+                                            "nextX": 0,
+                                            "nextY": 0,
+                                            "objectName": "bed",
+                                            "rx": 1224,
+                                            "ry": 834,
+                                            "script": "",
+                                            "spriteName": "wooden-bed",
+                                            "type": "DynamicObject",
+                                            "x": 41,
+                                            "y": 7,
+                                            "z": 1,
+                                            "zone": [
+                                                [
+                                                    0,
+                                                    -1
+                                                ],
+                                                [
+                                                    0,
+                                                    0
+                                                ]
+                                            ],
+                                            "zoneBlocked": true
+                                        },
+                                        {
+                                            "animation": "left",
+                                            "cover": 10,
+                                            "float": true,
+                                            "inventory": {
+                                                "items": [
+                                                ],
+                                                "slots": {
+                                                }
+                                            },
+                                            "mtx": 1224,
+                                            "mty": 710,
+                                            "nextX": 0,
+                                            "nextY": 0,
+                                            "objectName": "storage",
+                                            "rx": 1224,
+                                            "ry": 710,
+                                            "script": "",
+                                            "spriteName": "wooden-shelf",
+                                            "type": "StorageObject",
+                                            "x": 37,
+                                            "y": 3,
+                                            "z": 1
+                                        }
+                                    ],
+                                    "ox": 37,
+                                    "oy": 3,
+                                    "script": "",
+                                    "tasks": {
+                                    },
+                                    "z": 1
+                                },
+                                {
+                                    "groups": [
+                                    ],
+                                    "name": "room#5",
+                                    "objects": [
+                                        {
+                                            "animation": "bottom-left",
+                                            "cover": 30,
+                                            "float": true,
+                                            "mtx": 1080,
+                                            "mty": 906,
+                                            "nextX": 0,
+                                            "nextY": 0,
+                                            "objectName": "bed",
+                                            "rx": 1080,
+                                            "ry": 906,
+                                            "script": "",
+                                            "spriteName": "wooden-bed",
+                                            "type": "DynamicObject",
+                                            "x": 41,
+                                            "y": 11,
+                                            "z": 1,
+                                            "zone": [
+                                                [
+                                                    0,
+                                                    -1
+                                                ],
+                                                [
+                                                    0,
+                                                    0
+                                                ]
+                                            ],
+                                            "zoneBlocked": true
+                                        },
+                                        {
+                                            "animation": "left",
+                                            "cover": 10,
+                                            "float": true,
+                                            "inventory": {
+                                                "items": [
+                                                ],
+                                                "slots": {
+                                                }
+                                            },
+                                            "mtx": 1044,
+                                            "mty": 800,
+                                            "nextX": 0,
+                                            "nextY": 0,
+                                            "objectName": "storage",
+                                            "rx": 1044,
+                                            "ry": 800,
+                                            "script": "",
+                                            "spriteName": "wooden-shelf",
+                                            "type": "StorageObject",
+                                            "x": 37,
+                                            "y": 8,
+                                            "z": 1
+                                        }
+                                    ],
+                                    "ox": 37,
+                                    "oy": 8,
+                                    "script": "",
+                                    "tasks": {
+                                    },
+                                    "z": 1
+                                },
+                                {
+                                    "groups": [
+                                    ],
+                                    "name": "room#6",
+                                    "objects": [
+                                        {
+                                            "animation": "bottom-left",
+                                            "cover": 30,
+                                            "float": true,
+                                            "mtx": 900,
+                                            "mty": 996,
+                                            "nextX": 0,
+                                            "nextY": 0,
+                                            "objectName": "bed",
+                                            "rx": 900,
+                                            "ry": 996,
+                                            "script": "",
+                                            "spriteName": "wooden-bed",
+                                            "type": "DynamicObject",
+                                            "x": 41,
+                                            "y": 16,
+                                            "z": 1,
+                                            "zone": [
+                                                [
+                                                    0,
+                                                    -1
+                                                ],
+                                                [
+                                                    0,
+                                                    0
+                                                ]
+                                            ],
+                                            "zoneBlocked": true
+                                        },
+                                        {
+                                            "animation": "left",
+                                            "cover": 10,
+                                            "float": true,
+                                            "inventory": {
+                                                "items": [
+                                                ],
+                                                "slots": {
+                                                }
+                                            },
+                                            "mtx": 900,
+                                            "mty": 872,
+                                            "nextX": 0,
+                                            "nextY": 0,
+                                            "objectName": "storage",
+                                            "rx": 900,
+                                            "ry": 872,
+                                            "script": "",
+                                            "spriteName": "wooden-shelf",
+                                            "type": "StorageObject",
+                                            "x": 37,
+                                            "y": 12,
+                                            "z": 1
+                                        }
+                                    ],
+                                    "ox": 37,
+                                    "oy": 12,
+                                    "script": "",
+                                    "tasks": {
+                                    },
+                                    "z": 1
+                                },
+                                {
+                                    "groups": [
+                                    ],
+                                    "name": "room#7",
+                                    "objects": [
+                                        {
+                                            "animation": "bottom-left",
+                                            "cover": 30,
+                                            "float": true,
+                                            "mtx": 648,
+                                            "mty": 510,
+                                            "nextX": 0,
+                                            "nextY": 0,
+                                            "objectName": "bed",
+                                            "rx": 648,
+                                            "ry": 510,
+                                            "script": "",
+                                            "spriteName": "wooden-bed",
+                                            "type": "DynamicObject",
+                                            "x": 24,
+                                            "y": 6,
+                                            "z": 1,
+                                            "zone": [
+                                                [
+                                                    0,
+                                                    -1
+                                                ],
+                                                [
+                                                    0,
+                                                    0
+                                                ]
+                                            ],
+                                            "zoneBlocked": true
+                                        },
+                                        {
+                                            "animation": "left",
+                                            "cover": 10,
+                                            "float": true,
+                                            "inventory": {
+                                                "items": [
+                                                ],
+                                                "slots": {
+                                                }
+                                            },
+                                            "mtx": 720,
+                                            "mty": 458,
+                                            "nextX": 0,
+                                            "nextY": 0,
+                                            "objectName": "storage",
+                                            "rx": 720,
+                                            "ry": 458,
+                                            "script": "",
+                                            "spriteName": "wooden-shelf",
+                                            "type": "StorageObject",
+                                            "x": 23,
+                                            "y": 3,
+                                            "z": 1
+                                        }
+                                    ],
+                                    "ox": 23,
+                                    "oy": 3,
+                                    "script": "",
+                                    "tasks": {
+                                    },
+                                    "z": 1
+                                },
+                                {
+                                    "groups": [
+                                    ],
+                                    "name": "room#8",
+                                    "objects": [
+                                        {
+                                            "animation": "bottom-left",
+                                            "cover": 30,
+                                            "float": true,
+                                            "mtx": 1008,
+                                            "mty": 690,
+                                            "nextX": 0,
+                                            "nextY": 0,
+                                            "objectName": "bed",
+                                            "rx": 1008,
+                                            "ry": 690,
+                                            "script": "",
+                                            "spriteName": "wooden-bed",
+                                            "type": "DynamicObject",
+                                            "x": 34,
+                                            "y": 6,
+                                            "z": 1,
+                                            "zone": [
+                                                [
+                                                    0,
+                                                    -1
+                                                ],
+                                                [
+                                                    0,
+                                                    0
+                                                ]
+                                            ],
+                                            "zoneBlocked": true
+                                        },
+                                        {
+                                            "animation": "left",
+                                            "cover": 10,
+                                            "float": true,
+                                            "inventory": {
+                                                "items": [
+                                                ],
+                                                "slots": {
+                                                }
+                                            },
+                                            "mtx": 1008,
+                                            "mty": 602,
+                                            "nextX": 0,
+                                            "nextY": 0,
+                                            "objectName": "storage",
+                                            "rx": 1008,
+                                            "ry": 602,
+                                            "script": "",
+                                            "spriteName": "wooden-shelf",
+                                            "type": "StorageObject",
+                                            "x": 31,
+                                            "y": 3,
+                                            "z": 1
+                                        }
+                                    ],
+                                    "ox": 31,
+                                    "oy": 3,
+                                    "script": "",
+                                    "tasks": {
+                                    },
+                                    "z": 1
+                                }
+                            ],
+                            "name": "rooms",
+                            "objects": [
+                            ],
+                            "ox": 0,
+                            "oy": 0,
+                            "script": "",
+                            "tasks": {
+                            },
+                            "z": 1
+                        }
+                    ],
+                    "name": "level#1",
+                    "objects": [
+                        {
+                            "animation": "B",
+                            "ax": 21,
+                            "ay": 20,
+                            "az": 1,
+                            "bx": 17,
+                            "by": 20,
+                            "bz": 2,
+                            "float": true,
+                            "mtx": -72,
+                            "mty": 604,
+                            "nextX": 0,
+                            "nextY": 0,
+                            "objectName": "stairs",
+                            "rx": -72,
+                            "ry": 604,
+                            "script": "",
+                            "spriteName": "stairs-left",
+                            "type": "Elevator",
+                            "x": 18,
+                            "y": 20,
+                            "z": 2,
+                            "zone": [
+                                [
+                                    2,
+                                    0
+                                ],
+                                [
+                                    1,
+                                    0
+                                ],
+                                [
+                                    0,
+                                    0
+                                ]
+                            ],
+                            "zoneBlocked": true
+                        }
+                    ],
+                    "ox": 0,
+                    "oy": 0,
+                    "script": "",
+                    "tasks": {
+                    },
+                    "z": 1
+                },
+                {
+                    "groups": [
+                        {
+                            "groups": [
+                                {
+                                    "groups": [
+                                    ],
+                                    "name": "room#1",
+                                    "objects": [
+                                        {
+                                            "animation": "bottom-left",
+                                            "cover": 30,
+                                            "float": true,
+                                            "mtx": 108,
+                                            "mty": 564,
+                                            "nextX": 0,
+                                            "nextY": 0,
+                                            "objectName": "bed",
+                                            "rx": 108,
+                                            "ry": 564,
+                                            "script": "",
+                                            "spriteName": "wooden-bed",
+                                            "type": "DynamicObject",
+                                            "x": 18,
+                                            "y": 15,
+                                            "z": 2,
+                                            "zone": [
+                                                [
+                                                    0,
+                                                    -1
+                                                ],
+                                                [
+                                                    0,
+                                                    0
+                                                ]
+                                            ],
+                                            "zoneBlocked": true
+                                        },
+                                        {
+                                            "animation": "left",
+                                            "cover": 10,
+                                            "float": true,
+                                            "inventory": {
+                                                "items": [
+                                                ],
+                                                "slots": {
+                                                }
+                                            },
+                                            "mtx": 180,
+                                            "mty": 512,
+                                            "nextX": 0,
+                                            "nextY": 0,
+                                            "objectName": "storage",
+                                            "rx": 180,
+                                            "ry": 512,
+                                            "script": "",
+                                            "spriteName": "wooden-shelf",
+                                            "type": "StorageObject",
+                                            "x": 17,
+                                            "y": 12,
+                                            "z": 2
+                                        }
+                                    ],
+                                    "ox": 17,
+                                    "oy": 12,
+                                    "script": "",
+                                    "tasks": {
+                                    },
+                                    "z": 2
+                                },
+                                {
+                                    "groups": [
+                                    ],
+                                    "name": "room#2",
+                                    "objects": [
+                                        {
+                                            "animation": "bottom-left",
+                                            "cover": 30,
+                                            "float": true,
+                                            "mtx": 252,
+                                            "mty": 492,
+                                            "nextX": 0,
+                                            "nextY": 0,
+                                            "objectName": "bed",
+                                            "rx": 252,
+                                            "ry": 492,
+                                            "script": "",
+                                            "spriteName": "wooden-bed",
+                                            "type": "DynamicObject",
+                                            "x": 18,
+                                            "y": 11,
+                                            "z": 2,
+                                            "zone": [
+                                                [
+                                                    0,
+                                                    -1
+                                                ],
+                                                [
+                                                    0,
+                                                    0
+                                                ]
+                                            ],
+                                            "zoneBlocked": true
+                                        },
+                                        {
+                                            "animation": "left",
+                                            "cover": 10,
+                                            "float": true,
+                                            "inventory": {
+                                                "items": [
+                                                ],
+                                                "slots": {
+                                                }
+                                            },
+                                            "mtx": 324,
+                                            "mty": 440,
+                                            "nextX": 0,
+                                            "nextY": 0,
+                                            "objectName": "storage",
+                                            "rx": 324,
+                                            "ry": 440,
+                                            "script": "",
+                                            "spriteName": "wooden-shelf",
+                                            "type": "StorageObject",
+                                            "x": 17,
+                                            "y": 8,
+                                            "z": 2
+                                        }
+                                    ],
+                                    "ox": 17,
+                                    "oy": 8,
+                                    "script": "",
+                                    "tasks": {
+                                    },
+                                    "z": 2
+                                },
+                                {
+                                    "groups": [
+                                    ],
+                                    "name": "room#3",
+                                    "objects": [
+                                        {
+                                            "animation": "bottom-left",
+                                            "cover": 30,
+                                            "float": true,
+                                            "mtx": 396,
+                                            "mty": 420,
+                                            "nextX": 0,
+                                            "nextY": 0,
+                                            "objectName": "bed",
+                                            "rx": 396,
+                                            "ry": 420,
+                                            "script": "",
+                                            "spriteName": "wooden-bed",
+                                            "type": "DynamicObject",
+                                            "x": 18,
+                                            "y": 7,
+                                            "z": 2,
+                                            "zone": [
+                                                [
+                                                    0,
+                                                    -1
+                                                ],
+                                                [
+                                                    0,
+                                                    0
+                                                ]
+                                            ],
+                                            "zoneBlocked": true
+                                        },
+                                        {
+                                            "animation": "left",
+                                            "cover": 10,
+                                            "float": true,
+                                            "inventory": {
+                                                "items": [
+                                                ],
+                                                "slots": {
+                                                }
+                                            },
+                                            "mtx": 504,
+                                            "mty": 350,
+                                            "nextX": 0,
+                                            "nextY": 0,
+                                            "objectName": "storage",
+                                            "rx": 504,
+                                            "ry": 350,
+                                            "script": "",
+                                            "spriteName": "wooden-shelf",
+                                            "type": "StorageObject",
+                                            "x": 17,
+                                            "y": 3,
+                                            "z": 2
+                                        }
+                                    ],
+                                    "ox": 17,
+                                    "oy": 3,
+                                    "script": "",
+                                    "tasks": {
+                                    },
+                                    "z": 2
+                                },
+                                {
+                                    "groups": [
+                                    ],
+                                    "name": "room#4",
+                                    "objects": [
+                                        {
+                                            "animation": "bottom-left",
+                                            "cover": 30,
+                                            "float": true,
+                                            "mtx": 1224,
+                                            "mty": 834,
+                                            "nextX": 0,
+                                            "nextY": 0,
+                                            "objectName": "bed",
+                                            "rx": 1224,
+                                            "ry": 834,
+                                            "script": "",
+                                            "spriteName": "wooden-bed",
+                                            "type": "DynamicObject",
+                                            "x": 41,
+                                            "y": 7,
+                                            "z": 2,
+                                            "zone": [
+                                                [
+                                                    0,
+                                                    -1
+                                                ],
+                                                [
+                                                    0,
+                                                    0
+                                                ]
+                                            ],
+                                            "zoneBlocked": true
+                                        },
+                                        {
+                                            "animation": "left",
+                                            "cover": 10,
+                                            "float": true,
+                                            "inventory": {
+                                                "items": [
+                                                ],
+                                                "slots": {
+                                                }
+                                            },
+                                            "mtx": 1224,
+                                            "mty": 710,
+                                            "nextX": 0,
+                                            "nextY": 0,
+                                            "objectName": "storage",
+                                            "rx": 1224,
+                                            "ry": 710,
+                                            "script": "",
+                                            "spriteName": "wooden-shelf",
+                                            "type": "StorageObject",
+                                            "x": 37,
+                                            "y": 3,
+                                            "z": 2
+                                        }
+                                    ],
+                                    "ox": 37,
+                                    "oy": 3,
+                                    "script": "",
+                                    "tasks": {
+                                    },
+                                    "z": 2
+                                },
+                                {
+                                    "groups": [
+                                    ],
+                                    "name": "room#5",
+                                    "objects": [
+                                        {
+                                            "animation": "bottom-left",
+                                            "cover": 30,
+                                            "float": true,
+                                            "mtx": 1080,
+                                            "mty": 906,
+                                            "nextX": 0,
+                                            "nextY": 0,
+                                            "objectName": "bed",
+                                            "rx": 1080,
+                                            "ry": 906,
+                                            "script": "",
+                                            "spriteName": "wooden-bed",
+                                            "type": "DynamicObject",
+                                            "x": 41,
+                                            "y": 11,
+                                            "z": 2,
+                                            "zone": [
+                                                [
+                                                    0,
+                                                    -1
+                                                ],
+                                                [
+                                                    0,
+                                                    0
+                                                ]
+                                            ],
+                                            "zoneBlocked": true
+                                        },
+                                        {
+                                            "animation": "left",
+                                            "cover": 10,
+                                            "float": true,
+                                            "inventory": {
+                                                "items": [
+                                                ],
+                                                "slots": {
+                                                }
+                                            },
+                                            "mtx": 1044,
+                                            "mty": 800,
+                                            "nextX": 0,
+                                            "nextY": 0,
+                                            "objectName": "storage",
+                                            "rx": 1044,
+                                            "ry": 800,
+                                            "script": "",
+                                            "spriteName": "wooden-shelf",
+                                            "type": "StorageObject",
+                                            "x": 37,
+                                            "y": 8,
+                                            "z": 2
+                                        }
+                                    ],
+                                    "ox": 37,
+                                    "oy": 8,
+                                    "script": "",
+                                    "tasks": {
+                                    },
+                                    "z": 2
+                                },
+                                {
+                                    "groups": [
+                                    ],
+                                    "name": "room#6",
+                                    "objects": [
+                                        {
+                                            "animation": "bottom-left",
+                                            "cover": 30,
+                                            "float": true,
+                                            "mtx": 900,
+                                            "mty": 996,
+                                            "nextX": 0,
+                                            "nextY": 0,
+                                            "objectName": "bed",
+                                            "rx": 900,
+                                            "ry": 996,
+                                            "script": "",
+                                            "spriteName": "wooden-bed",
+                                            "type": "DynamicObject",
+                                            "x": 41,
+                                            "y": 16,
+                                            "z": 2,
+                                            "zone": [
+                                                [
+                                                    0,
+                                                    -1
+                                                ],
+                                                [
+                                                    0,
+                                                    0
+                                                ]
+                                            ],
+                                            "zoneBlocked": true
+                                        },
+                                        {
+                                            "animation": "left",
+                                            "cover": 10,
+                                            "float": true,
+                                            "inventory": {
+                                                "items": [
+                                                ],
+                                                "slots": {
+                                                }
+                                            },
+                                            "mtx": 900,
+                                            "mty": 872,
+                                            "nextX": 0,
+                                            "nextY": 0,
+                                            "objectName": "storage",
+                                            "rx": 900,
+                                            "ry": 872,
+                                            "script": "",
+                                            "spriteName": "wooden-shelf",
+                                            "type": "StorageObject",
+                                            "x": 37,
+                                            "y": 12,
+                                            "z": 2
+                                        }
+                                    ],
+                                    "ox": 37,
+                                    "oy": 12,
+                                    "script": "",
+                                    "tasks": {
+                                    },
+                                    "z": 2
+                                }
+                            ],
+                            "name": "rooms",
+                            "objects": [
+                            ],
+                            "ox": 0,
+                            "oy": 0,
+                            "script": "",
+                            "tasks": {
+                            },
+                            "z": 2
+                        },
+                        {
+                            "groups": [
+                            ],
+                            "name": "overmare-room",
+                            "objects": [
+                                {
+                                    "animation": "up-left",
+                                    "cover": 30,
+                                    "float": true,
+                                    "mtx": -144,
+                                    "mty": 1024,
+                                    "nextX": 0,
+                                    "nextY": 0,
+                                    "objectName": "bed",
+                                    "rx": -144,
+                                    "ry": 1024,
+                                    "script": "",
+                                    "spriteName": "wooden-bed",
+                                    "type": "DynamicObject",
+                                    "x": 27,
+                                    "y": 31,
+                                    "z": 2,
+                                    "zone": [
+                                        [
+                                            0,
+                                            0
+                                        ],
+                                        [
+                                            1,
+                                            0
+                                        ]
+                                    ],
+                                    "zoneBlocked": true
+                                }
+                            ],
+                            "ox": 27,
+                            "oy": 28,
+                            "script": "",
+                            "tasks": {
+                            },
+                            "z": 2
+                        },
+                        {
+                            "groups": [
+                            ],
+                            "name": "overmare-office",
+                            "objects": [
+                            ],
+                            "ox": 27,
+                            "oy": 23,
+                            "script": "",
+                            "tasks": {
+                            },
+                            "z": 2
+                        }
+                    ],
+                    "name": "level#2",
+                    "objects": [
+                    ],
+                    "ox": 0,
+                    "oy": 0,
+                    "script": "",
+                    "tasks": {
+                    },
+                    "z": 2
+                }
+            ],
+            "init": true,
+            "objects": [
+            ],
+            "ox": 0,
+            "oy": 0,
+            "tasks": {
+            },
+            "useAmbientLight": false,
+            "useDaylight": false
+        },
         "stable-cavern": {
             "currentFloor": 0,
             "groups": [
@@ -11692,7 +13468,6 @@
                                         "quantity": 2,
                                         "rx": 0,
                                         "ry": 0,
-                                        "script": "dynamite.mjs",
                                         "spriteName": "items",
                                         "useMode": "",
                                         "x": -1,
@@ -11839,7 +13614,6 @@
                                 "quantity": 1,
                                 "rx": 0,
                                 "ry": 0,
-                                "script": "item.mjs",
                                 "spriteName": "items",
                                 "useMode": "use",
                                 "x": -1,
@@ -11898,7 +13672,6 @@
                                 "quantity": 1,
                                 "rx": 0,
                                 "ry": 0,
-                                "script": "item.mjs",
                                 "spriteName": "items",
                                 "useMode": "",
                                 "x": -1,
@@ -11917,7 +13690,6 @@
                                 "quantity": 1,
                                 "rx": 0,
                                 "ry": 0,
-                                "script": "health-potion.mjs",
                                 "spriteName": "items",
                                 "useMode": "",
                                 "x": -1,
@@ -11980,7 +13752,6 @@
                                 "quantity": 12,
                                 "rx": 0,
                                 "ry": 0,
-                                "script": "ammo.mjs",
                                 "spriteName": "items",
                                 "useMode": "",
                                 "x": -1,
@@ -12000,7 +13771,6 @@
                                 "quantity": 1,
                                 "rx": 0,
                                 "ry": 0,
-                                "script": "mouthgun.mjs",
                                 "spriteName": "items",
                                 "useMode": "",
                                 "x": -1,
@@ -12287,7 +14057,6 @@
                                 "quantity": 1,
                                 "rx": 0,
                                 "ry": 0,
-                                "script": "health-potion.mjs",
                                 "spriteName": "items",
                                 "useMode": "",
                                 "x": -1,
@@ -12306,7 +14075,6 @@
                                 "quantity": 4,
                                 "rx": 0,
                                 "ry": 0,
-                                "script": "grenade.mjs",
                                 "spriteName": "items",
                                 "useMode": "",
                                 "x": -1,
@@ -12325,7 +14093,6 @@
                                 "quantity": 1,
                                 "rx": 0,
                                 "ry": 0,
-                                "script": "pickaxe.mjs",
                                 "spriteName": "items",
                                 "useMode": "use",
                                 "x": -1,
