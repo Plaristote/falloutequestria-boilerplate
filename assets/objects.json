@@ -284,6 +284,15 @@
         "value": 1,
         "weight": 0
     },
+    "turret-gun": {
+        "icon": "",
+        "isGroupable": false,
+        "scriptName": "turret-gun.mjs",
+        "sprite": "misc",
+        "type": "weapon",
+        "value": 0,
+        "weight": 0
+    },
     "tuxedo": {
         "icon": "tuxedo.png",
         "isGroupable": true,
