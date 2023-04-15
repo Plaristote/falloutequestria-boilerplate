@@ -1,6 +1,11 @@
 {
     "bubbles": {
         "chase-from-kitchen": "Get ouf of my kitchen !",
+        "fear-reaction-1": "Help ! Guards !",
+        "fear-reaction-2": "Aaaah !",
+        "fear-reaction-3": "Please, help !",
+        "fear-reaction-4": "Get away from me !",
+        "fear-reaction-5": "Leave me alone !",
         "guard-1": "Move along, nothing to see here.",
         "guard-2": "I've got my eye on you.",
         "guard-3": "Keep calm.",
