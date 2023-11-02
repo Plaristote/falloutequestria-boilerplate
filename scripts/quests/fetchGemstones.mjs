@@ -3,6 +3,8 @@ import {QuestHelper} from "./helpers.mjs";
 class GemstoneQuest extends QuestHelper {
   initialize() {
     this.model.location = "tutorial";
+    this.model.addObjective("gemstones", "objective-mine");
+    this.model.addObjective("give-gemstones", "objective-give");
   }
 
   onCharacterKilled(victim, killer) {
@@ -12,14 +14,7 @@ class GemstoneQuest extends QuestHelper {
 
   onItemPicked(item) {
     if (item.itemType === "gemstone")
-      this.completeObjective("gemstones");
-  }
-
-  getObjectives() {
-    return [
-      {label: this.tr("objective-mine"), success: this.isObjectiveCompleted("gemstones")},
-      {label: this.tr("objective-give"), success: this.isObjectiveCompleted("give-gemstones")}
-    ];
+      this.model.completeObjective("gemstones");
   }
 
   onCompleted() {
