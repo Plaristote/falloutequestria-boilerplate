@@ -17,7 +17,7 @@ class TutorialQuest extends QuestHelper {
   }
 
   getObjective(name) {
-    return {label: this.tr(name), success: this.isObjectiveCompleted(name)};
+    return {label: this.tr(name), success: this.model.isObjectiveCompleted(name)};
   }
 
   getObjectives() {
@@ -25,7 +25,7 @@ class TutorialQuest extends QuestHelper {
 
     array.push(this.getObjective("exit-cavern"));
     array.push(this.getObjective("leave-first-room"));
-    if (this.isObjectiveCompleted("leave-first-room"))
+    if (this.model.isObjectiveCompleted("leave-first-room"))
       array.push(this.getObjective("win-first-fight"));
     if (this.lastTrialTriggered())
       array.push(this.getObjective("pass-last-trial"));
@@ -33,7 +33,7 @@ class TutorialQuest extends QuestHelper {
   }
 
   completeObjective(objective) {
-    if (!this.isObjectiveCompleted(objective)) {
+    if (!this.model.isObjectiveCompleted(objective)) {
       switch (objective) {
         case "exit-cavern":
           this.model.completed = true;
@@ -54,11 +54,10 @@ class TutorialQuest extends QuestHelper {
           break ;
       }
     }
-    return super.completeObjective(objective);
   }
 
   lastTrialTriggered() {
-    return this.model.hasVariable("lastTrialOn") || this.isObjectiveCompleted("pass-last-trial");
+    return this.model.hasVariable("lastTrialOn") || this.model.isObjectiveCompleted("pass-last-trial");
   }
 
   onCharacterKilled(character, killer) {
