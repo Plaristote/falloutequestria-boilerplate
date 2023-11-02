@@ -4,7 +4,7 @@ import {callGuards, AlarmLevel} from "../components/alarm.mjs";
 const fearReactions = (function() {
   const list = [];
   for (let i = 1 ; i <= 5 ; ++i)
-    list.push({text: i18n.t(`bubbles.fear-reaction-${i}`, time: 2000, color: "yellow")});
+    list.push({text: i18n.t(`bubbles.fear-reaction-${i}`), time: 2000, color: "yellow"});
   return list;
 })();
 
