@@ -1,18 +1,23 @@
 import {QuestHelper} from "./helpers.mjs";
 
 export class Quest extends QuestHelper {
+  constructor(model) {
+    super(model);
+    this.xpReward = 1000;
+  }
+
   initialize() {
     this.model.location = "city-sample";
   }
 	
   getObjectives() {
     const array = [
-      {label: this.tr("find-butter"), success: this.isObjectiveCompleted("butter")}
+      {label: this.tr("find-butter"), success: this.model.isObjectiveCompleted("butter")}
     ];
 
-    if (this.isObjectiveCompleted("butter"))
-      array.push({label: this.tr("give-butter"), success: this.isObjectiveCompleted("give")});
-    if (this.isObjectiveCompleted("reward"))
+    if (this.model.isObjectiveCompleted("butter"))
+      array.push({label: this.tr("give-butter"), success: this.model.isObjectiveCompleted("give")});
+    if (this.model.isObjectiveCompleted("reward"))
       array.push({label: this.tr("got-reward"), success: true });
     return array;
   }
@@ -22,14 +27,8 @@ export class Quest extends QuestHelper {
       this.completeObjective("butter");
   }
 
-  onCompleted() {
-    const xp = 1000;
-
-    game.appendToConsole(i18n.t("messages.quest-complete", {
-      title: this.tr("title"),
-      xp:    xp
-    }));
-    game.player.statistics.addExperience(xp);
+  onSuccess() {
+    super.onSuccess();
     game.dataEngine.addReputation("city-sample", 25);
   }
 }
