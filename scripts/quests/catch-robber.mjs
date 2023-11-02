@@ -226,11 +226,15 @@ class CatchRobber extends QuestHelper {
     this.onLevelChanged();
   }
 
+  get xpReward() {
+    return this.model.isObjectiveCompleted("bring") ? 1000 : 750;
+  }
+
   getObjectives() {
     const array = [
       {
         label:   this.tr("find-robber"),
-        success: this.isObjectiveCompleted("find"),
+        success: this.model.isObjectiveCompleted("find"),
         failed:  this.model.hasVariable("escaped")
       },
       {
@@ -240,9 +244,9 @@ class CatchRobber extends QuestHelper {
       }
     ];
 
-    if (this.isObjectiveCompleted("help-escape"))
+    if (this.model.isObjectiveCompleted("help-escape"))
       array.push({ label: this.tr("help-escape"), success: true });
-    if (this.isObjectiveCompleted("kill-robber"))
+    if (this.model.isObjectiveCompleted("kill-robber"))
       array.push({ label: this.tr("kill"), success: true });
     return array;
   }
@@ -261,16 +265,8 @@ class CatchRobber extends QuestHelper {
     }
   }
 
-  onCompleted() {
-    var xp = 750;
-
-    if (this.isObjectiveCompleted("bring"))
-      xp += 250;
-    game.appendToConsole(i18n.t("messages.quest-complete", {
-      title: this.tr("title"),
-      xp:    xp
-    }));
-    game.player.statistics.addExperience(xp);
+  onSuccess() {
+    super.onSuccess();
     ["city-sample","mordino"].forEach(faction => {
       game.dataEngine.addReputation(faction, 30);
     });
