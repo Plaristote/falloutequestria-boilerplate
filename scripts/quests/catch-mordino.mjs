@@ -140,18 +140,18 @@ class CatchMordino extends QuestHelper {
 
     array.push({
       label: this.tr("speak-to-chief"),
-      success: this.isObjectiveCompleted("speak-to-chief")
+      success: this.model.isObjectiveCompleted("speak-to-chief")
     });
     array.push({
       label: this.tr("chief-must-live"),
-      success: this.isObjectiveCompleted("kill"),
+      success: this.model.isObjectiveCompleted("kill"),
       failed: this.model.hasVariable("chief-dead")
     });
     array.push({
       label: this.tr("kill-guards"),
-      success: this.isObjectiveCompleted("kill-guard") && this.isObjectiveCompleted("kill-bodyguard")
+      success: this.model.isObjectiveCompleted("kill-guard") && this.model.isObjectiveCompleted("kill-bodyguard")
     });
-    array.push({ label: this.tr("kill"), success: this.isObjectiveCompleted("kill-mordino") });
+    array.push({ label: this.tr("kill"), success: this.model.isObjectiveCompleted("kill-mordino") });
     return array;
   }
 
@@ -184,8 +184,8 @@ class CatchMordino extends QuestHelper {
       this.model.completed = true;
   }
 
-  onCompleted() {
-    var xp = 250;
+  get xpReward() {
+    let xp = 250;
 
     this.getObjectives().forEach(objective => {
       if (objective.success)
@@ -193,11 +193,11 @@ class CatchMordino extends QuestHelper {
       else if (objective.failed)
         xp -= 333;
     });
-    game.appendToConsole(i18n.t("messages.quest-complete", {
-      title: this.tr("title"),
-      xp:    xp
-    }));
-    game.player.statistics.addExperience(xp);
+    return xp;
+  }
+
+  onSuccess() {
+    super.onSuccess();
     game.dataEngine.addReputation("city-sample", 150);
     game.dataEngine.addReputation("mordino",     -150);
     clearMordinoDudes();
