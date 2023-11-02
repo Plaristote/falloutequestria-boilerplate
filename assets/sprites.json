@@ -4794,7 +4794,16 @@
         }
     },
     "stairs": {
-        "A": {
+        "A-down": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 150,
+            "offsetX": 0,
+            "offsetY": 453,
+            "repeat": false,
+            "width": 142
+        },
+        "A-left": {
             "frameCount": 1,
             "frameInterval": 0,
             "height": 150,
@@ -4803,7 +4812,34 @@
             "repeat": false,
             "width": 142
         },
-        "B": {
+        "A-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 150,
+            "offsetX": 0,
+            "offsetY": 151,
+            "repeat": false,
+            "width": 142
+        },
+        "A-up": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 150,
+            "offsetX": 0,
+            "offsetY": 302,
+            "repeat": false,
+            "width": 142
+        },
+        "B-down": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 150,
+            "offsetX": 143,
+            "offsetY": 453,
+            "repeat": false,
+            "width": 142
+        },
+        "B-left": {
             "frameCount": 1,
             "frameInterval": 0,
             "height": 150,
@@ -4812,11 +4848,28 @@
             "repeat": false,
             "width": 142
         },
-        "defaultSource": "stairs.png"
+        "B-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 150,
+            "offsetX": 143,
+            "offsetY": 151,
+            "repeat": false,
+            "width": 142
+        },
+        "B-up": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 150,
+            "offsetX": 143,
+            "offsetY": 302,
+            "repeat": false,
+            "width": 142
+        },
+        "defaultSource": "stairs/wood.png"
     },
     "stairs-left": {
-        "cloneOf": "stairs",
-        "defaultSource": "stairs-left.png"
+        "cloneOf": "stairs"
     },
     "timberwolf": {
         "cloneOf": "wolf",
