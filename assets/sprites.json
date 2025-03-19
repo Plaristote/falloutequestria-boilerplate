@@ -2170,6 +2170,10 @@
             "width": 210
         }
     },
+    "ghoul": {
+        "cloneOf": "pony",
+        "defaultSource": "characters/ghoul.png"
+    },
     "giant-rat": {
         "cloneOf": "griffon",
         "defaultSource": "critters/giant-mutated-rat.png"
