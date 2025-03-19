@@ -3358,6 +3358,42 @@
             "repeat": true,
             "width": 47
         },
+        "slash-bottom": {
+            "frameCount": 6,
+            "frameInterval": 110,
+            "height": 47,
+            "offsetX": 376,
+            "offsetY": 376,
+            "repeat": false,
+            "width": 47
+        },
+        "slash-left": {
+            "frameCount": 6,
+            "frameInterval": 110,
+            "height": 47,
+            "offsetX": 376,
+            "offsetY": 423,
+            "repeat": false,
+            "width": 47
+        },
+        "slash-right": {
+            "frameCount": 6,
+            "frameInterval": 100,
+            "height": 47,
+            "offsetX": 376,
+            "offsetY": 469,
+            "repeat": false,
+            "width": 47
+        },
+        "slash-up": {
+            "frameCount": 6,
+            "frameInterval": 100,
+            "height": 47,
+            "offsetX": 376,
+            "offsetY": 516,
+            "repeat": false,
+            "width": 47
+        },
         "use-down": {
             "frameCount": 7,
             "frameInterval": 100,
