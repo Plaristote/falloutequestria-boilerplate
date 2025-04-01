@@ -4675,6 +4675,126 @@
             "width": 68
         }
     },
+    "machinery": {
+        "air-pump": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 132,
+            "offsetX": 348,
+            "offsetY": 758,
+            "repeat": false,
+            "width": 133
+        },
+        "big-machine-down": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 228,
+            "offsetX": 0,
+            "offsetY": 533,
+            "repeat": false,
+            "width": 211
+        },
+        "big-machine-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 228,
+            "offsetX": 453,
+            "offsetY": 533,
+            "repeat": false,
+            "width": 237
+        },
+        "big-machine-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 228,
+            "offsetX": 213,
+            "offsetY": 533,
+            "repeat": false,
+            "width": 240
+        },
+        "big-machine-up": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 248,
+            "offsetX": 692,
+            "offsetY": 513,
+            "repeat": false,
+            "width": 211
+        },
+        "defaultSource": "machinery.png",
+        "rusty-machine-down": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 127,
+            "offsetX": 0,
+            "offsetY": 405,
+            "repeat": false,
+            "width": 154
+        },
+        "rusty-machine-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 127,
+            "offsetX": 320,
+            "offsetY": 405,
+            "repeat": false,
+            "width": 154
+        },
+        "rusty-machine-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 127,
+            "offsetX": 155,
+            "offsetY": 405,
+            "repeat": false,
+            "width": 154
+        },
+        "rusty-machine-up": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 127,
+            "offsetX": 484,
+            "offsetY": 405,
+            "repeat": false,
+            "width": 154
+        },
+        "vat-computer-destroyed-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 182,
+            "offsetX": 436,
+            "offsetY": 0,
+            "repeat": false,
+            "width": 81
+        },
+        "vat-computer-destroyed-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 182,
+            "offsetX": 599,
+            "offsetY": 0,
+            "repeat": false,
+            "width": 81
+        },
+        "vat-computer-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 182,
+            "offsetX": 82,
+            "offsetY": 0,
+            "repeat": false,
+            "width": 81
+        },
+        "vat-computer-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 182,
+            "offsetX": 245,
+            "offsetY": 0,
+            "repeat": false,
+            "width": 81
+        }
+    },
     "misc": {
         "barrel-magical-waste": {
             "frameCount": 1,
