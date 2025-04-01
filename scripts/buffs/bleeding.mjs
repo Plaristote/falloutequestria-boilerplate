@@ -1,4 +1,4 @@
-class Bleeding {
+export class Bleeding {
   constructor(model) {
     console.log("Bleeding buff constructed");
     this.model = model;
@@ -25,8 +25,4 @@ class Bleeding {
     else
       this.model.remove();
   }
-}
-
-export function create(model) {
-  return new Bleeding(model);
 }

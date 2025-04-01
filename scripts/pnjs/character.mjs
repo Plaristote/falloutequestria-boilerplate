@@ -97,7 +97,7 @@ export class CharacterBehaviour extends SceneActorComponent {
   }
 
   onCharacterDetected(character) {
-    if (character === level.player && this.dialogDetectionHook())
+    if (character === game.player && this.dialogDetectionHook())
       return ;
   }
 }
