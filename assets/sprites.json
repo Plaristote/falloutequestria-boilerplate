@@ -1154,8 +1154,8 @@
         }
     },
     "changeling-evil": {
-      "cloneOf": "pony",
-      "defaultSource": "characters/changeling-evil.png"
+        "cloneOf": "pony",
+        "defaultSource": "characters/changeling-evil.png"
     },
     "coal-ore": {
         "A": {
@@ -1790,6 +1790,26 @@
             "repeat": false,
             "source": "gunshot.png",
             "width": 95
+        },
+        "polymorph-end": {
+            "frameCount": 7,
+            "frameInterval": 60,
+            "height": 85,
+            "offsetX": 480,
+            "offsetY": 0,
+            "repeat": false,
+            "source": "polymorph-effect.png",
+            "width": 60
+        },
+        "polymorph-start": {
+            "frameCount": 8,
+            "frameInterval": 60,
+            "height": 85,
+            "offsetX": 0,
+            "offsetY": 0,
+            "repeat": false,
+            "source": "polymorph-effect.png",
+            "width": 60
         }
     },
     "gator-pony": {
