@@ -5475,6 +5475,45 @@
             "width": 47
         }
     },
+    "pony-skeleton": {
+        "defaultSource": "characters/pony-skeleton.png",
+        "idle-down": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 47,
+            "offsetX": 0,
+            "offsetY": 141,
+            "repeat": false,
+            "width": 47
+        },
+        "idle-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 47,
+            "offsetX": 0,
+            "offsetY": 0,
+            "repeat": false,
+            "width": 47
+        },
+        "idle-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 47,
+            "offsetX": 0,
+            "offsetY": 47,
+            "repeat": false,
+            "width": 47
+        },
+        "idle-up": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 47,
+            "offsetX": 0,
+            "offsetY": 94,
+            "repeat": false,
+            "width": 47
+        }
+    },
     "pool-table": {
         "defaultSource": "furnitures/pool-table.png",
         "left-empty": {
