@@ -1,0 +1,12 @@
+{
+  "name": {
+    "default": "Fallout Equestria: Make Your Game"
+  },
+  "description": {
+    "default": "The game you made mostly by yourself, yes you did !"
+  },
+  "path": "./boilerplate",
+  "logo": "./boilerplate/assets/icon.ico",
+  "organizationName": "Ile Noire Dev",
+  "organizationDomain": "ile-noire.fr"
+}
