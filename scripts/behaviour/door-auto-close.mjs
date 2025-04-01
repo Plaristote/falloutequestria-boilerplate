@@ -23,7 +23,6 @@ export class AutoClosingDoor extends Door {
       this.model.tasks.removeTask(autocloseMethod);
       this.model.tasks.addTask(autocloseMethod, autocloseDelay, 1);
     }
-    return false;
   }
   
   disableAutoclose() {
