@@ -21,9 +21,6 @@
             "ko": "Unconscious",
             "poisoned": "Poisoned"
         },
-        "spells": {
-          "polymorph": "Polymorph"
-        },
         "carryWeight": "Carry weight",
         "charisma": "Charisma",
         "chem-resistant": "Chem resistant",

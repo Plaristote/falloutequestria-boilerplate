@@ -15,13 +15,18 @@
             "middle": "assez amoché",
             "min": "d'agoniser"
         },
+        "moveable-object": {
+          "found": "Après une inspection plus minutieuse, tu te dis que ce {{target}} cache quelque chose. Tu devrais peut-être essayer de le déplacer.",
+          "look": "Ce {{target}} cache quelque chose. Tu pourrais le déplacer.",
+          "moved": "Tu vois {{target}}. Tu l'as déplacé pour découvrir un passage."
+        },
         "disarmed": "C'est desarme.",
         "item": "Tu vois {{item}}.",
-	"off": "Ça ne fonctionne pas.",
-	"on": "Ça fonctionne.",
-	"stable-103": {
+        "off": "Ça ne fonctionne pas.",
+        "on": "Ça fonctionne.",
+        "stable-103": {
           "terminal-disabled": "C'est éteint... curieux. On dirait qu'ils ne veulent pas que tu recule tout de suite."
-	},
+        },
         "trap": "Tu vois un piege."
     }
 }
