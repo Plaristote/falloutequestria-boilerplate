@@ -4507,6 +4507,24 @@
             "repeat": false,
             "width": 48
         },
+        "wall-terminal-left-off": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 84,
+            "offsetX": 672,
+            "offsetY": 299,
+            "repeat": false,
+            "width": 49
+        },
+        "wall-terminal-left-sleep": {
+            "frameCount": 2,
+            "frameInterval": 500,
+            "height": 84,
+            "offsetX": 672,
+            "offsetY": 299,
+            "repeat": true,
+            "width": 49
+        },
         "wall-terminal-right": {
             "frameCount": 1,
             "frameInterval": 0,
@@ -4515,6 +4533,24 @@
             "offsetY": 302,
             "repeat": false,
             "width": 48
+        },
+        "wall-terminal-right-off": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 84,
+            "offsetX": 574,
+            "offsetY": 299,
+            "repeat": false,
+            "width": 48
+        },
+        "wall-terminal-right-sleep": {
+            "frameCount": 2,
+            "frameInterval": 500,
+            "height": 84,
+            "offsetX": 574,
+            "offsetY": 299,
+            "repeat": true,
+            "width": 49
         }
     },
     "vault-desk": {
