@@ -3,7 +3,8 @@ import {skillCheck} from "../cmap/helpers/checks.mjs";
 export class Generator {
   constructor(model) {
     this.model = model;
-    this.repairLevel = 1;
+    if (typeof this.repairLevel == "undefined")
+      this.repairLevel = 1;
   }
 
   getAvailableInteractions() {
