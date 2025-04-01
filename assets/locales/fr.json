@@ -2,6 +2,14 @@
     "bubbles": {
         "chase-from-bar": "Éh, sors de mon bar !",
         "chase-from-kitchen": "Sors de ma cuisine !",
+        "fear-reaction-1": "À l'aide ! Gardes !",
+        "fear-reaction-2": "Aaaah !",
+        "fear-reaction-3": "Pitié, épargnez-moi !",
+        "fear-reaction-4": "N'approchez pas !",
+        "fear-reaction-5": "Fous-moi la paix !",
+        "forbid-rummaging-1": "Ne touche pas à ça.",
+        "forbid-rummaging-2": "On touche avec les yeux !",
+        "forbid-rummaging-3": "Pas touche !",
         "guard-1": "Circulez, y'a rien à voir.",
         "guard-2": "Je t'ai à l'oeil, toi.",
         "guard-3": "Reste tranquille.",
@@ -21,11 +29,12 @@
         "steal-warning-4": "Gardes ! Au voleur !"
     },
     "spells": {
-	"title": "Sorts",
-	"empty-spellbook": "Tu n'as pas encore appris de sorts",
-	"teleport": "Teleportation",
-	"sleep": "Torpeur",
-	"purification": "Purification"
+        "title": "Sorts",
+        "empty-spellbook": "Tu n'as pas encore appris de sorts",
+        "teleport": "Teleportation",
+        "sleep": "Torpeur",
+        "purification": "Purification",
+        "polymorph": "Métamorphose"
     },
     "dialogs": {
         "ratKing": {

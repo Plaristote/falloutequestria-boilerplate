@@ -45,6 +45,7 @@
     },
     "messages": {
         "buff-wear-off": "{{character}} is no longer {{buff}}.",
+        "spell-wear-off": "The effects of the {{spell}} spell wore off.",
         "cannot-sneak": "You cannot sneak in plain sight.",
         "cannot-use-in-combat": "Cannot be used during combat.",
         "collected-ore": "You mined some ore.",
@@ -74,6 +75,7 @@
         "lock-is-broken": "The lock is broken",
         "no-path": "Can't reach.",
         "not-enough-ap": "Not enough action points.",
+        "not-available-in-combat": "Not available during combat.",
         "nothing-happens": "That does nothing.",
         "out-of-range": "Out of range.",
         "player-ko": "You passed out.",
