@@ -1,0 +1,278 @@
+{
+    "answers": {
+        "age-sarcasm": {
+            "availableHook": "canJokeAboutAge",
+            "state": "on-age-sarcasm",
+            "text": "age-sarcasm"
+        },
+        "ask-about-consequences": {
+            "state": "about-consequences",
+            "text": "ask-about-consequences"
+        },
+        "ask-about-cult": {
+            "availableHook": "knowsHowEntityGotHere",
+            "state": "called-out",
+            "text": "ask-about-cult"
+        },
+        "ask-about-problem": {
+            "state": "about-problem",
+            "text": "ask-about-problem"
+        },
+        "ask-about-sample": {
+            "state": "about-sample",
+            "text": "ask-about-sample"
+        },
+        "ask-are-you-alive": {
+            "state": "called-out",
+            "text": "ask-are-you-alive"
+        },
+        "ask-for-device-location": {
+            "availableHook": "promisedDevice",
+            "state": "free-device-location",
+            "text": "ask-for-device-location"
+        },
+        "ask-how-got-here": {
+            "state": "called-out",
+            "text": "ask-how-got-here"
+        },
+        "ask-who-are-you": {
+            "state": "called-out",
+            "text": "ask-who-are-you"
+        },
+        "ask-who-is-that": {
+            "state": "called-out",
+            "text": "ask-who-is-that"
+        },
+        "ask-why-should-i-free-you": {
+            "state": "free-prompt",
+            "text": "ask-why-should-i-free-you"
+        },
+        "call-out": {
+            "availableHook": "canCallOut",
+            "state": "called-out",
+            "text": "call-out"
+        },
+        "chose-destroy": {
+            "state": "destroy-entity",
+            "text": "chose-destroy"
+        },
+        "chose-freedom": {
+            "state": "free-entity",
+            "text": "chose-freedom"
+        },
+        "chose-leave": {
+            "text": "chose-leave"
+        },
+        "destroy-magic": {
+            "availableHook": "canDestroyWithMagic",
+            "hook": "destroyVat",
+            "state": "destroyed-entity",
+            "text": "destroy-magic"
+        },
+        "destroy-science": {
+            "availableHook": "canDestroyWithScience",
+            "hook": "destroyVat",
+            "state": "destroyed-entity",
+            "text": "destroy-science"
+        },
+        "fragment-leave": {
+            "text": "fragment-leave"
+        },
+        "fragment-take": {
+            "hook": "takeEntity",
+            "text": "fragment-take"
+        },
+        "free-entity": {
+            "state": "free-entity",
+            "text": "free-entity"
+        },
+        "inspect-terminal": {
+            "availableHook": "canInspectTerminal",
+            "hook": "inspectTerminal",
+            "state": "terminal-inspected",
+            "text": "inspect-terminal"
+        },
+        "leave-terminal": {
+            "text": "leave-terminal"
+        },
+        "more-called-out-questions": {
+            "state": "called-out",
+            "text": "more-called-out-questions"
+        },
+        "on-device-help-accept": {
+            "state": "free-entity",
+            "text": "on-device-help-accept"
+        },
+        "on-device-help-kill": {
+            "state": "destroy-entity",
+            "text": "on-device-help-kill"
+        },
+        "on-device-help-negociate": {
+            "availableHook": "canNegociateDeviceHelp",
+            "hook": "negociateDeviceHelp",
+            "state": "on-device-negociated",
+            "text": "on-device-help-negociate"
+        },
+        "put-immortality-to-the-test": {
+            "state": "destroy-entity",
+            "text": "put-immortality-to-the-test"
+        },
+        "sarcasm-continue": {
+            "hook": "sarcasmContinue",
+            "state": "on-sarcasm-continue",
+            "text": "sarcasm-continue"
+        }
+    },
+    "entryPoint": "entry",
+    "states": {
+        "about-consequences": {
+            "answers": [
+                "ask-about-sample",
+                "inspect-terminal",
+                "leave-terminal"
+            ],
+            "text": "about-consequences"
+        },
+        "about-problem": {
+            "answers": [
+                "free-entity",
+                "ask-about-consequences",
+                "inspect-terminal",
+                "leave-terminal"
+            ],
+            "hook": "",
+            "text": "about-problem"
+        },
+        "about-sample": {
+            "answers": [
+                "call-out",
+                "free-entity",
+                "inspect-terminal",
+                "leave-terminal"
+            ],
+            "hook": "",
+            "text": "about-sample"
+        },
+        "alt-entry": {
+            "answers": [
+                "chose-freedom",
+                "chose-destroy",
+                "more-called-out-questions",
+                "leave-terminal"
+            ],
+            "hook": "",
+            "text": "alt-entry"
+        },
+        "called-out": {
+            "answers": [
+                "ask-who-is-that",
+                "age-sarcasm",
+                "ask-are-you-alive",
+                "ask-how-got-here",
+                "ask-about-cult",
+                "ask-why-should-i-free-you"
+            ],
+            "hook": "bigRevealIndex",
+            "text": "called-out"
+        },
+        "destroy-entity": {
+            "answers": [
+                "destroy-science",
+                "destroy-magic",
+                "leave-terminal"
+            ],
+            "hook": "",
+            "text": "destroy-entity"
+        },
+        "destroyed-entity": {
+            "answers": [
+            ],
+            "text": "destroyed-entity"
+        },
+        "entry": {
+            "answers": [
+                "ask-about-problem",
+                "inspect-terminal",
+                "leave-terminal"
+            ],
+            "hook": "",
+            "text": "entry"
+        },
+        "free-device-location": {
+            "answers": [
+                "fragment-take",
+                "fragment-leave"
+            ],
+            "hook": "",
+            "text": "free-device-location"
+        },
+        "free-entity": {
+            "answers": [
+                "ask-for-device-location",
+                "fragment-take",
+                "fragment-leave"
+            ],
+            "hook": "freeEntity",
+            "text": "on-free-entity-called-out"
+        },
+        "free-prompt": {
+            "answers": [
+                "chose-freedom",
+                "chose-destroy",
+                "chose-leave"
+            ],
+            "hook": "",
+            "text": "free-prompt"
+        },
+        "on-age-sarcasm": {
+            "answers": [
+                "sarcasm-continue",
+                "more-called-out-questions"
+            ],
+            "hook": "",
+            "text": "on-age-sarcasm"
+        },
+        "on-device-help": {
+            "answers": [
+                "on-device-help-negociate",
+                "on-device-help-accept",
+                "on-device-help-kill"
+            ],
+            "hook": "",
+            "text": "on-device-help"
+        },
+        "on-device-negociated": {
+            "answers": [
+                "chose-freedom",
+                "chose-destroy",
+                "leave-terminal"
+            ],
+            "text": "on-device-negociated"
+        },
+        "on-sarcasm-continue": {
+            "answers": [
+                "ask-why-should-i-free-you",
+                "put-immortality-to-the-test",
+                "more-called-out-questions"
+            ],
+            "hook": "",
+            "text": "on-sarcasm-continue"
+        },
+        "take-prompt": {
+            "answers": [
+                "fragment-take",
+                "fragment-leave"
+            ],
+            "hook": "",
+            "text": "take-prompt"
+        },
+        "terminal-inspected": {
+            "answers": [
+                "ask-who-are-you",
+                "leave-terminal"
+            ],
+            "hook": "terminalInspected",
+            "text": "find-anomaly-with-spellcasting"
+        }
+    }
+}

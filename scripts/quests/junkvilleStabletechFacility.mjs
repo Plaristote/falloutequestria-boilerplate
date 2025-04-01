@@ -35,7 +35,10 @@ function tryToPopRathianInCurrentLevel() {
 
 export class JunkvilleStabletechFacility extends QuestHelper {
   initialize() {
+    const mainQuest = requireQuest("celestialDevice");
+
     this.model.location = "junkville";
+    mainQuest.addObjective("explore-junkville-facility", mainQuest.script.tr("explore-junkville-facility"));
   }
 
   get xpReward() { return 2500; }

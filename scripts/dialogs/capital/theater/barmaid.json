@@ -1,0 +1,256 @@
+{
+    "answers": {
+        "about-bar-ask-singer": {
+            "state": "about-singer",
+            "text": "about-bar-ask-singer"
+        },
+        "ask-about-bar": {
+            "state": "about-bar",
+            "text": "ask-about-bar"
+        },
+        "ask-about-cadence": {
+            "state": "about-cadence",
+            "text": "ask-about-cadence"
+        },
+        "ask-about-crystal-den": {
+            "text": "ask-about-crystal-den"
+        },
+        "ask-about-npc": {
+            "state": "about-npc",
+            "text": "ask-about-npc"
+        },
+        "ask-about-npc-more": {
+            "state": "about-npc-more",
+            "text": "ask-about-npc-more"
+        },
+        "ask-about-singer": {
+            "state": "about-singer",
+            "text": "ask-about-singer"
+        },
+        "ask-about-still": {
+            "text": "ask-about-still"
+        },
+        "ask-drink": {
+            "state": "drinks",
+            "text": "ask-drink"
+        },
+        "ask-drink-politely": {
+            "availableHook": "canBePolite",
+            "state": "drinks",
+            "text": "ask-drink-politely"
+        },
+        "back-to-intro": {
+            "state": "introduction",
+            "text": "back-to-intro"
+        },
+        "entry-exit": {
+            "text": "entry-exit"
+        },
+        "exit-about-bar": {
+            "state": "introduction",
+            "text": "exit-about-bar"
+        },
+        "exit-investigation-result": {
+            "state": "introduction",
+            "text": "exit-investigation-result"
+        },
+        "ghoul-love-confirm-and-encourage": {
+            "state": "goul-love/feelings-confirmed-and-encouraged",
+            "text": "ghoul-love-confirm-and-encourage"
+        },
+        "ghoul-love-confirm-feelings": {
+            "state": "goul-love/feelings-confirmed",
+            "text": "ghoul-love-confirm-feelings"
+        },
+        "ghoul-love-inform-feelings": {
+            "state": "goul-love/feelings-revealed",
+            "text": "ghoul-love-inform-feelings"
+        },
+        "ghoul-love-investigated": {
+            "availableHook": "ghoulLoveKnowsAboutFeelings",
+            "state": "goul-love/investigated-entry",
+            "text": "ghoul-love-investigated"
+        },
+        "ghoul-love-investigation-give-up": {
+            "text": "ghoul-love-investigation-give-up"
+        },
+        "ghoul-love-investigation-start": {
+            "hook": "revealGhoulLove",
+            "text": "ghoul-love-investigation-start"
+        },
+        "ghoul-love-sure-about-suspicions": {
+            "state": "goul-love/suspicions",
+            "text": "ghoul-love-sure-about-suspicions"
+        },
+        "love-ask-suspicions": {
+            "state": "goul-love/suspicions",
+            "text": "love-ask-suspicions"
+        },
+        "love-encourage-confession": {
+            "state": "goul-love/intro",
+            "text": "love-encourage-confession"
+        },
+        "love-encourage-confession-alt": {
+            "state": "goul-love/suspicions",
+            "text": "love-encourage-confession-alt"
+        },
+        "love-suggest-investigation": {
+            "state": "goul-love/investigation-suggested",
+            "text": "love-suggest-investigation"
+        },
+        "singer-compliment": {
+            "state": "introduction",
+            "text": "singer-compliment"
+        },
+        "singer-disrespect": {
+            "state": "singer-disrespected",
+            "text": "singer-disrespect"
+        },
+        "start-love-route": {
+            "state": "goul-love/intro",
+            "text": "start-love-route"
+        },
+        "take-drink": {
+            "text": "take-drink"
+        }
+    },
+    "entryPoint": "introduction",
+    "states": {
+        "about-bar": {
+            "answers": [
+                "ask-about-npc",
+                "about-bar-ask-singer",
+                "exit-about-bar"
+            ],
+            "hook": "",
+            "mood": "neutral",
+            "text": "about-bar"
+        },
+        "about-cadence": {
+            "answers": [
+                "ask-about-npc-more",
+                "back-to-intro"
+            ],
+            "mood": "sad",
+            "text": "about-cadence"
+        },
+        "about-npc": {
+            "answers": [
+                "ask-about-npc-more",
+                "ask-about-cadence",
+                "back-to-intro"
+            ],
+            "mood": "neutral",
+            "text": "about-npc"
+        },
+        "about-npc-more": {
+            "answers": [
+                "start-love-route",
+                "ask-about-crystal-den",
+                "back-to-intro"
+            ],
+            "mood": "smile",
+            "text": "about-npc-more"
+        },
+        "about-singer": {
+            "answers": [
+                "singer-compliment",
+                "singer-disrespect"
+            ],
+            "mood": "smile",
+            "text": "about-singer"
+        },
+        "drinks": {
+            "answers": [
+                "take-drink",
+                "ask-about-still",
+                "entry-exit"
+            ],
+            "hook": "drinks",
+            "mood": "smile",
+            "text": "drinks"
+        },
+        "goul-love/feelings-confirmed": {
+            "answers": [
+            ],
+            "hook": "ghoulLoveCompleted",
+            "mood": "angry",
+            "text": "goul-love/feelings-confirmed"
+        },
+        "goul-love/feelings-confirmed-and-encouraged": {
+            "answers": [
+            ],
+            "hook": "ghoulLoveCompleted",
+            "mood": "smile",
+            "text": "goul-love/feelings-confirmed-and-encouraged"
+        },
+        "goul-love/feelings-revealed": {
+            "answers": [
+                "ghoul-love-confirm-feelings",
+                "ghoul-love-confirm-and-encourage"
+            ],
+            "hook": "",
+            "mood": "neutral",
+            "text": "goul-love/feelings-revealed"
+        },
+        "goul-love/intro": {
+            "answers": [
+                "love-ask-suspicions",
+                "love-encourage-confession",
+                "love-suggest-investigation",
+                "back-to-intro"
+            ],
+            "hook": "startGhoulLove",
+            "mood": "sad",
+            "text": "goul-love/intro"
+        },
+        "goul-love/investigated-entry": {
+            "answers": [
+                "ghoul-love-inform-feelings",
+                "exit-investigation-result"
+            ],
+            "hook": "",
+            "text": "goul-love/investigated-entry"
+        },
+        "goul-love/investigation-suggested": {
+            "answers": [
+                "ghoul-love-investigation-start",
+                "back-to-intro",
+                "ghoul-love-investigation-give-up"
+            ],
+            "hook": "",
+            "mood": "neutral",
+            "text": "goul-love/investigation-suggested"
+        },
+        "goul-love/suspicions": {
+            "answers": [
+                "love-suggest-investigation",
+                "ghoul-love-sure-about-suspicions",
+                "love-encourage-confession-alt",
+                "back-to-intro"
+            ],
+            "hook": "ghoulLoveSuspicions",
+            "mood": "sad",
+            "text": "goul-love/suspicions"
+        },
+        "introduction": {
+            "answers": [
+                "ask-drink",
+                "ask-drink-politely",
+                "ask-about-bar",
+                "ask-about-singer",
+                "ghoul-love-investigated",
+                "entry-exit"
+            ],
+            "hook": "introduction",
+            "mood": "neutral",
+            "text": "introduction"
+        },
+        "singer-disrespected": {
+            "answers": [
+            ],
+            "mood": "angry",
+            "text": "singer-disrespected"
+        }
+    }
+}

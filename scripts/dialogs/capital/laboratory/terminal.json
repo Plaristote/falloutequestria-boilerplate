@@ -1,0 +1,507 @@
+{
+    "answers": {
+        "alim-consult-corrupt-files": {
+            "hook": "scanCorruptFiles",
+            "state": "restricted-alim/corrupt-files",
+            "text": "alim-consult-corrupt-files"
+        },
+        "alim-pact-accept": {
+            "hook": "makeBloodPact",
+            "text": "alim-pact-accept"
+        },
+        "alim-pact-reject": {
+            "text": "alim-pact-reject"
+        },
+        "alim-reorient-energy": {
+            "availableHook": "canRedirectEnergyToElevators",
+            "state": "restricted-alim/alim-transfer",
+            "text": "alim-reorient-energy"
+        },
+        "alim-transfer-confirm": {
+            "hook": "redirectEnergyToElevator",
+            "text": "alim-transfer-confirm"
+        },
+        "ask-confinement-room": {
+            "state": "restricted-mode/about-confinement-room",
+            "text": "ask-confinement-room"
+        },
+        "ask-control-log-1": {
+            "state": "control-room/log-1",
+            "text": "ask-control-log-1"
+        },
+        "ask-control-log-2": {
+            "state": "control-room/log-2",
+            "text": "ask-control-log-2"
+        },
+        "ask-control-log-3": {
+            "state": "control-room/log-3",
+            "text": "ask-control-log-3"
+        },
+        "ask-generator-location": {
+            "availableHook": "knowsAboutOfflineGenerator",
+            "state": "restricted-mode/generator-location",
+            "text": "ask-generator-location"
+        },
+        "ask-log-014": {
+            "state": "scientist-room/log-entries/14",
+            "text": "ask-log-014"
+        },
+        "ask-log-047": {
+            "state": "scientist-room/log-entries/47",
+            "text": "ask-log-047"
+        },
+        "ask-log-065": {
+            "availableHook": "scientistLogsFixed",
+            "state": "scientist-room/log-entries/65",
+            "text": "ask-log-065"
+        },
+        "ask-log-093": {
+            "availableHook": "scientistLogsFixed",
+            "state": "scientist-room/log-entries/93",
+            "text": "ask-log-093"
+        },
+        "ask-log-101": {
+            "state": "scientist-room/log-entries/101",
+            "text": "ask-log-101"
+        },
+        "ask-log-113": {
+            "state": "scientist-room/log-entries/113",
+            "text": "ask-log-113"
+        },
+        "ask-restricted-advanced-diagnostic": {
+            "availableHook": "canTriggerAdvancedDiagnostic",
+            "state": "restricted-mode/full-diagnostic",
+            "text": "ask-restricted-advanced-diagnostic"
+        },
+        "ask-restricted-alimented-systems": {
+            "state": "restricted-mode/alimented-systems",
+            "text": "ask-restricted-alimented-systems"
+        },
+        "ask-restricted-diagnostic": {
+            "state": "restricted-mode/diagnostic",
+            "text": "ask-restricted-diagnostic"
+        },
+        "back-to-alim-main-menu": {
+            "state": "restricted-alim/entry",
+            "text": "back-to-alim-main-menu"
+        },
+        "back-to-restricted-main-menu": {
+            "state": "restricted-mode/entry",
+            "text": "back-to-restricted-main-menu"
+        },
+        "check-for-celestial-device-part": {
+            "state": "control-room/about-celestial-device-part",
+            "text": "check-for-celestial-device-part"
+        },
+        "chemistry-back-to-experiments": {
+            "state": "chemistry-lab/experiments",
+            "text": "chemistry-back-to-experiments"
+        },
+        "chemistry-back-to-main-menu": {
+            "state": "chemistry-lab/entry",
+            "text": "chemistry-back-to-main-menu"
+        },
+        "chemistry-lab-consult-experiments": {
+            "state": "chemistry-lab/experiments",
+            "text": "chemistry-lab-consult-experiments"
+        },
+        "chemistry-lab-consult-notes": {
+            "state": "chemistry-lab/notes",
+            "text": "chemistry-lab-consult-notes"
+        },
+        "chemistry-lab-experiment-note-1": {
+            "state": "chemistry-lab/experiment-note-1",
+            "text": "chemistry-lab-experiment-note-1"
+        },
+        "chemistry-lab-experiment-note-2": {
+            "state": "chemistry-lab/experiment-note-2",
+            "text": "chemistry-lab-experiment-note-2"
+        },
+        "chemistry-lab-further-celestial-device": {
+            "state": "chemistry-lab/celestial-device-hint",
+            "text": "chemistry-lab-further-celestial-device"
+        },
+        "computer-room-back-to-logs": {
+            "state": "computer-room/logs",
+            "text": "scientist-back-to-logs"
+        },
+        "computer-room-log-access": {
+            "state": "computer-room/logs",
+            "text": "computer-room-log-access"
+        },
+        "consult-generator-manual": {
+            "state": "restricted-alim/generator-manual",
+            "text": "consult-generator-manual"
+        },
+        "control-ask-recent-logs": {
+            "state": "control-room/log-index",
+            "text": "control-ask-recent-logs"
+        },
+        "control-room-next-log-2": {
+            "state": "control-room/log-2",
+            "text": "control-room-next-log-2"
+        },
+        "control-room-next-log-3": {
+            "state": "control-room/log-3",
+            "text": "control-room-next-log-2"
+        },
+        "corrupt-files-go-furhter-beyond": {
+            "state": "restricted-alim/corrupt-files-pact",
+            "text": "corrupt-files-go-furhter-beyond"
+        },
+        "corrupt-files-go-further": {
+            "state": "restricted-alim/corrupt-files-open",
+            "text": "corrupt-files-go-further"
+        },
+        "corrupt-files-leave": {
+            "text": "corrupt-files-leave"
+        },
+        "leave-terminal": {
+            "text": "leave-terminal"
+        },
+        "lookup-alim-data": {
+            "state": "restricted-alim/alim-data-lookup",
+            "text": "lookup-alim-data"
+        },
+        "read-scientist-mail-warning": {
+            "text": "read-scientist-mail-warning"
+        },
+        "read-scientist-request": {
+            "text": "read-scientist-request"
+        },
+        "scientist-back-to-logs": {
+            "state": "scientist-room/logs",
+            "text": "scientist-back-to-logs"
+        },
+        "scientist-fix-corrupt-files": {
+            "availableHook": "canFixScientistLogs",
+            "hook": "fixScientistCorruptFiles",
+            "state": "scientist-room/logs",
+            "text": "scientist-fix-corrupt-files"
+        },
+        "scientist-log-065-2-next": {
+            "state": "scientist-room/log-entries/65-3",
+            "text": "log-read-more"
+        },
+        "scientist-log-065-3-next": {
+            "state": "scientist-room/log-entries/65-4",
+            "text": "log-read-more"
+        },
+        "scientist-log-065-next": {
+            "state": "scientist-room/log-entries/65-2",
+            "text": "log-read-more"
+        },
+        "scientist-log-access": {
+            "state": "scientist-room/logs",
+            "text": "scientist-log-access"
+        }
+    },
+    "entryPoint": "",
+    "states": {
+        "chemistry-lab/celestial-device-hint": {
+            "answers": [
+                "chemistry-back-to-main-menu",
+                "leave-terminal"
+            ],
+            "text": "chemistry-lab/celestial-device-hint"
+        },
+        "chemistry-lab/entry": {
+            "answers": [
+                "chemistry-lab-consult-notes",
+                "chemistry-lab-consult-experiments",
+                "leave-terminal"
+            ],
+            "text": "chemistry-lab/entry"
+        },
+        "chemistry-lab/experiment-note-1": {
+            "answers": [
+                "chemistry-back-to-experiments",
+                "leave-terminal"
+            ],
+            "text": "chemistry-lab/experiment-note-1"
+        },
+        "chemistry-lab/experiment-note-2": {
+            "answers": [
+                "chemistry-back-to-experiments",
+                "leave-terminal"
+            ],
+            "text": "chemistry-lab/experiment-note-2"
+        },
+        "chemistry-lab/experiments": {
+            "answers": [
+                "chemistry-lab-experiment-note-1",
+                "chemistry-lab-experiment-note-2",
+                "chemistry-back-to-main-menu",
+                "leave-terminal"
+            ],
+            "text": "chemistry-lab/experiments"
+        },
+        "chemistry-lab/notes": {
+            "answers": [
+                "chemistry-lab-further-celestial-device"
+            ],
+            "text": "chemistry-lab/notes"
+        },
+        "computer-room/entry": {
+            "answers": [
+                "computer-room-log-access",
+                "leave-terminal"
+            ],
+            "hook": "",
+            "text": "computer-room/entry"
+        },
+        "computer-room/logs": {
+            "answers": [
+                "ask-log-101",
+                "ask-log-113",
+                "leave-terminal"
+            ],
+            "hook": "",
+            "text": "scientist-room/logs-fixed"
+        },
+        "control-room/about-celestial-device-part": {
+            "answers": [
+                "control-ask-recent-logs",
+                "leave-terminal"
+            ],
+            "text": "control-room/about-celestial-device-part"
+        },
+        "control-room/entry": {
+            "answers": [
+                "check-for-celestial-device-part",
+                "control-ask-recent-logs",
+                "leave-terminal"
+            ],
+            "text": "control-room/entry"
+        },
+        "control-room/log-1": {
+            "answers": [
+                "control-room-next-log-2",
+                "control-ask-recent-logs",
+                "leave-terminal"
+            ],
+            "text": "control-room/log-1"
+        },
+        "control-room/log-2": {
+            "answers": [
+                "control-room-next-log-3",
+                "control-ask-recent-logs",
+                "leave-terminal"
+            ],
+            "text": "control-room/log-2"
+        },
+        "control-room/log-3": {
+            "answers": [
+                "control-ask-recent-logs",
+                "leave-terminal"
+            ],
+            "text": "control-room/log-3"
+        },
+        "control-room/log-index": {
+            "answers": [
+                "ask-control-log-1",
+                "ask-control-log-2",
+                "ask-control-log-3",
+                "leave-terminal"
+            ],
+            "text": "control-room/log-index"
+        },
+        "restricted-alim/alim-data-lookup": {
+            "answers": [
+                "consult-generator-manual",
+                "alim-consult-corrupt-files",
+                "back-to-alim-main-menu"
+            ],
+            "text": "restricted-alim/alim-data-lookup"
+        },
+        "restricted-alim/alim-transfer": {
+            "answers": [
+                "alim-transfer-confirm",
+                "back-to-alim-main-menu"
+            ],
+            "text": "restricted-alim/alim-transfer"
+        },
+        "restricted-alim/corrupt-files": {
+            "answers": [
+                "back-to-alim-main-menu"
+            ],
+            "text": "restricted-alim/corrupt-files"
+        },
+        "restricted-alim/corrupt-files-open": {
+            "answers": [
+                "corrupt-files-go-furhter-beyond",
+                "corrupt-files-leave"
+            ],
+            "text": "restricted-alim/corrupt-files-open"
+        },
+        "restricted-alim/corrupt-files-pact": {
+            "answers": [
+                "alim-pact-accept",
+                "alim-pact-reject"
+            ],
+            "text": "restricted-alim/corrupt-files-pact"
+        },
+        "restricted-alim/corrupt-files-success": {
+            "answers": [
+                "corrupt-files-go-further",
+                "back-to-alim-main-menu"
+            ],
+            "text": "restricted-alim/corrupt-files-success"
+        },
+        "restricted-alim/entry": {
+            "answers": [
+                "alim-reorient-energy",
+                "lookup-alim-data",
+                "leave-terminal"
+            ],
+            "hook": "",
+            "text": "restricted-alim/entry"
+        },
+        "restricted-alim/generator-manual": {
+            "answers": [
+                "leave-terminal"
+            ],
+            "hook": "facilitateGeneratorRepair",
+            "text": "restricted-alim/generator-manual"
+        },
+        "restricted-mode/about-confinement-room": {
+            "answers": [
+                "back-to-restricted-main-menu",
+                "leave-terminal"
+            ],
+            "text": "restricted-mode/about-confinement-room"
+        },
+        "restricted-mode/alimented-systems": {
+            "answers": [
+                "back-to-restricted-main-menu",
+                "leave-terminal"
+            ],
+            "hook": "",
+            "text": "restricted-mode/alimented-systems"
+        },
+        "restricted-mode/diagnostic": {
+            "answers": [
+                "ask-restricted-advanced-diagnostic",
+                "ask-generator-location",
+                "ask-restricted-alimented-systems",
+                "back-to-restricted-main-menu",
+                "leave-terminal"
+            ],
+            "hook": "runDiagnostic",
+            "text": "restricted-mode/diagnostic"
+        },
+        "restricted-mode/entry": {
+            "answers": [
+                "ask-restricted-diagnostic",
+                "ask-generator-location",
+                "leave-terminal"
+            ],
+            "hook": "",
+            "text": "restricted-mode/entry"
+        },
+        "restricted-mode/full-diagnostic": {
+            "answers": [
+                "ask-confinement-room",
+                "back-to-restricted-main-menu",
+                "leave-terminal"
+            ],
+            "hook": "",
+            "text": "restricted-mode/full-diagnostic"
+        },
+        "restricted-mode/generator-location": {
+            "answers": [
+                "back-to-restricted-main-menu",
+                "leave-terminal"
+            ],
+            "hook": "",
+            "text": "restricted-mode/generator-location"
+        },
+        "scientist-room/entry": {
+            "answers": [
+                "scientist-log-access",
+                "leave-terminal"
+            ],
+            "hook": "",
+            "text": "scientist-room/entry"
+        },
+        "scientist-room/log-entries/101": {
+            "answers": [
+                "computer-room-back-to-logs",
+                "leave-terminal"
+            ],
+            "text": "scientist-room/log-entries/101"
+        },
+        "scientist-room/log-entries/113": {
+            "answers": [
+                "computer-room-back-to-logs",
+                "leave-terminal"
+            ],
+            "text": "scientist-room/log-entries/113"
+        },
+        "scientist-room/log-entries/14": {
+            "answers": [
+                "scientist-back-to-logs",
+                "leave-terminal"
+            ],
+            "text": "scientist-room/log-entries/14"
+        },
+        "scientist-room/log-entries/47": {
+            "answers": [
+                "scientist-back-to-logs",
+                "leave-terminal"
+            ],
+            "text": "scientist-room/log-entries/47"
+        },
+        "scientist-room/log-entries/65": {
+            "answers": [
+                "scientist-log-065-next"
+            ],
+            "hook": "",
+            "text": "scientist-room/log-entries/65"
+        },
+        "scientist-room/log-entries/65-2": {
+            "answers": [
+                "scientist-log-065-2-next"
+            ],
+            "text": "scientist-room/log-entries/65-2"
+        },
+        "scientist-room/log-entries/65-3": {
+            "answers": [
+                "scientist-log-065-3-next"
+            ],
+            "text": "scientist-room/log-entries/65-3"
+        },
+        "scientist-room/log-entries/65-4": {
+            "answers": [
+                "scientist-back-to-logs",
+                "leave-terminal"
+            ],
+            "text": "scientist-room/log-entries/65-4"
+        },
+        "scientist-room/log-entries/93": {
+            "answers": [
+                "scientist-back-to-logs",
+                "leave-terminal"
+            ],
+            "hook": "",
+            "text": "scientist-room/log-entries/93"
+        },
+        "scientist-room/logs": {
+            "answers": [
+                "ask-log-014",
+                "ask-log-047",
+                "ask-log-065",
+                "ask-log-093",
+                "scientist-fix-corrupt-files",
+                "leave-terminal"
+            ],
+            "hook": "scientistLogs",
+            "text": "scientist-room/logs"
+        },
+        "scientist-room/logs/14": {
+            "answers": [
+            ],
+            "text": "scientist-room/logs/14"
+        }
+    }
+}

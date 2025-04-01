@@ -1,0 +1,221 @@
+{
+    "answers": {
+        "answer-explorer": {
+            "state": "visit-resons/explorer",
+            "text": "answer-explorer"
+        },
+        "answer-looking-for-device": {
+            "state": "visit-resons/celestial-device",
+            "text": "answer-looking-for-device"
+        },
+        "answer-refuse-to-elaborate": {
+            "state": "visit-resons/refused-to-elaborate",
+            "text": "answer-refuse-to-elaborate"
+        },
+        "ask-about-ash-aven": {
+            "state": "ash-aven-intro",
+            "text": "ask-about-ash-aven"
+        },
+        "ask-about-npc": {
+            "state": "about",
+            "text": "ask-about-npc"
+        },
+        "ask-about-npc-alt": {
+            "text": "ask-about-npc-alt"
+        },
+        "ask-about-town": {
+            "state": "ash-aven-intro",
+            "text": "ask-about-town"
+        },
+        "ask-guarding": {
+            "state": "ash-aven-intro",
+            "text": "ask-guarding"
+        },
+        "ask-investigation": {
+            "state": "investigation/intro",
+            "text": "ask-investigation"
+        },
+        "ask-investigation-discoveries": {
+            "state": "investigation/intro",
+            "text": "ask-investigation-discoveries"
+        },
+        "ask-investigation-inconsistencies": {
+            "state": "investigation/intro",
+            "text": "ask-investigation-inconsistencies"
+        },
+        "ask-investigation-interruption": {
+            "state": "investigation/intro",
+            "text": "ask-investigation-interruption"
+        },
+        "ask-investigation-suspicious": {
+            "state": "investigation/intro",
+            "text": "ask-investigation-suspicious"
+        },
+        "ask-mutants": {
+            "state": "ash-aven-intro",
+            "text": "ask-mutants"
+        },
+        "ask-population": {
+            "state": "ash-aven-intro",
+            "text": "ask-population"
+        },
+        "ask-smoothskin": {
+            "state": "smoothskin",
+            "text": "ask-smoothskin"
+        },
+        "leave": {
+            "hook": "onLeave",
+            "text": "leave"
+        },
+        "leave-entry": {
+            "hook": "onLeave",
+            "text": "leave-entry",
+            "textHook": "leaveEntry"
+        },
+        "smoothskin-dislike": {
+            "state": "entry",
+            "text": "smoothskin-dislike"
+        },
+        "smoothskin-sarcasm": {
+            "state": "entry",
+            "text": "smoothskin-sarcasm"
+        }
+    },
+    "entryPoint": "introduction",
+    "states": {
+        "about": {
+            "answers": [
+                "ask-investigation",
+                "ask-about-town",
+                "leave"
+            ],
+            "hook": "",
+            "mood": "cocky",
+            "text": "about"
+        },
+        "ash-aven-garde": {
+            "answers": [
+            ],
+            "hook": "",
+            "mood": "cocky",
+            "text": "ash-aven-garde"
+        },
+        "ash-aven-intro": {
+            "answers": [
+                "ask-mutants",
+                "ask-population",
+                "ask-about-npc",
+                "leave"
+            ],
+            "hook": "aboutTown",
+            "mood": "smile",
+            "text": "ash-aven-intro"
+        },
+        "ash-aven-mutants": {
+            "answers": [
+            ],
+            "hook": "",
+            "text": "ash-aven-mutants"
+        },
+        "ash-aven-population": {
+            "answers": [
+            ],
+            "hook": "",
+            "text": "ash-aven-population"
+        },
+        "entry": {
+            "answers": [
+                "ask-about-town",
+                "ask-about-npc-alt",
+                "ask-smoothskin",
+                "leave-entry"
+            ],
+            "hook": "entry",
+            "text": "entry"
+        },
+        "introduction": {
+            "answers": [
+                "ask-about-ash-aven",
+                "ask-guarding",
+                "ask-smoothskin",
+                "leave-entry"
+            ],
+            "hook": "",
+            "text": "introduction"
+        },
+        "investigation/discoveries": {
+            "answers": [
+            ],
+            "hook": "",
+            "text": "investigation/discoveries"
+        },
+        "investigation/inconsistencies": {
+            "answers": [
+            ],
+            "mood": "neutral",
+            "text": "investigation/inconsistencies"
+        },
+        "investigation/interruption": {
+            "answers": [
+            ],
+            "hook": "",
+            "text": "investigation/interruption"
+        },
+        "investigation/intro": {
+            "answers": [
+                "ask-investigation-inconsistencies",
+                "ask-investigation-discoveries",
+                "ask-investigation-suspicious",
+                "ask-investigation-interruption",
+                "leave"
+            ],
+            "hook": "aboutInvestigation",
+            "mood": "smile",
+            "text": "investigation/intro"
+        },
+        "investigation/suspicions": {
+            "answers": [
+            ],
+            "hook": "",
+            "text": "investigation/suspicions"
+        },
+        "smoothskin": {
+            "answers": [
+                "smoothskin-sarcasm",
+                "smoothskin-dislike",
+                "ask-about-ash-aven"
+            ],
+            "hook": "",
+            "mood": "smile",
+            "text": "smoothskin"
+        },
+        "visit-resons/celestial-device": {
+            "answers": [
+            ],
+            "mood": "neutral",
+            "text": "visit-resons/celestial-device"
+        },
+        "visit-resons/explorer": {
+            "answers": [
+            ],
+            "mood": "laugh",
+            "text": "visit-resons/explorer"
+        },
+        "visit-resons/intro": {
+            "answers": [
+                "answer-looking-for-device",
+                "answer-explorer",
+                "answer-refuse-to-elaborate"
+            ],
+            "hook": "",
+            "mood": "smile",
+            "text": "visit-resons/intro"
+        },
+        "visit-resons/refused-to-elaborate": {
+            "answers": [
+            ],
+            "mood": "cocky",
+            "text": "visit-resons/refused-to-elaborate"
+        }
+    }
+}

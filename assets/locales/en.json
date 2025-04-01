@@ -146,6 +146,10 @@
         }
     },
     "factions": {
+        "ash-aven": {
+            "description": "Amidst the polluted ruins of the once beautiful capital of the Crystal Empire, an unlikely village took shape. A haven for those that no one else would accept among them : the ghouls. Its inhabitants decided to name it Ash-Aven.",
+            "name": "Ash-Aven"
+        },
         "bandits": {
             "description": "factions.bandits.description",
             "name": "factions.bandits.name"
@@ -155,8 +159,8 @@
             "name": "Bibin's Band"
         },
         "cristal-den": {
-            "description": "factions.cristal-den.description",
-            "name": "factions.cristal-den.name"
+            "description": "The most prosperous town of the crystal wastes, Crystal Den was built by the Potiok family, soon after the destruction of the Crystal Empire. The Crystal Den is home to many farmers, merchants, caravaneers, slavers, and it is also the resting place of many lost souls, who live day by day and try to get by.",
+            "name": "Crystal Den"
         },
         "cristal-den-slaves": {
             "description": "factions.cristal-den-slaves.description",
@@ -170,7 +174,7 @@
             "name": "Diamond dogs"
         },
         "hillburrow": {
-            "description": "A small town located on the hills, west of the Cristal Empire. It's best known for its coal mine, which provides a power source to the inhabitants of the wastes.",
+            "description": "Hillburrow is a small mining community, who built their home atop a high hill, near to the coal mine that guarantee their livelihood. The original inhabitants of the town were mostly chased away by the Potiok, who took control of the mine, and repopulated the town with the rejects or otherwise undesirable people from the Crystal Den.",
             "name": "Hillburrow"
         },
         "hillburrow-slaves": {

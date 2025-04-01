@@ -39,7 +39,7 @@ export class BibinsSabotageDelivery extends QuestHelper {
 
   completeObjective(name) {
     if (name == "report")
-      this.completed = true;
+      this.model.completed = true;
   }
 
   onSuccess() {

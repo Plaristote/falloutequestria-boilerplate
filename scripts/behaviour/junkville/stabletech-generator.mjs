@@ -6,8 +6,8 @@ export class StabletechGenerator extends Generator {
     const sentinels = level.findGroup("security-room").objects;
 
     super.onRunningChanged();
-    commandTerminal.getScriptObject().enabled = this.running;
-    level.getScriptObject().guards.forEach(sentinel => {
+    commandTerminal.script.enabled = this.running;
+    level.script.guards.forEach(sentinel => {
       if (this.running) {
         sentinel.wakeUp();
         sentinel.setAnimation("get-up");
