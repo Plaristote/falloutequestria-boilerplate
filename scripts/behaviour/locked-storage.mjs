@@ -1,16 +1,20 @@
 import {LockedComponent} from "./locked.mjs";
 
-class LockedStorage {
-  constructor(model) {
+export class LockedStorage {
+  constructor(model, options = { lockpickLevel: 2, breakable: true }) {
     this.model = model;
     this.lockedComponent = new LockedComponent(this, {
-      lockpickLevel: 2,
-      breakable: true,
+      lockpickLevel: options.lockpickLevel,
+      breakable: options.breakable == true,
       onSuccess: this.onLockpickSuccess.bind(this),
       onFailure: this.onLockpickFailure.bind(this),
       onCriticalFailure: this.onLockpickCriticalFailure.bind(this)
     });
     this.lockedComponent.toggleLocked = this.toggleLocked.bind(this);
+  }
+
+  getAvailableInteractions() {
+    return ["use", "look", "use-object", "use-skill"];
   }
   
   get locked() {
@@ -32,7 +36,10 @@ class LockedStorage {
   }
   
   onLockpickCriticalFailure(user) {
-    game.appendToConsole(i18n.t("messages.locker-broken"));
+    if (this.lockedComponent.breakable)
+      game.appendToConsole(i18n.t("messages.locker-broken"));
+    else
+      this.onLockpickFailure(user);
   }
 
   onUse() {
@@ -44,11 +51,12 @@ class LockedStorage {
   }
   
   onUseLockpick(user) {
-    return this.lockedComponent.onUseLockpick(user);
+    this.lockedComponent.onUseLockpick(user);
+    return true;
   }
   
   onUseSteal() {
-    return !this.locked;
+    return this.onUse();
   }
 }
 

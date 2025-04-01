@@ -49,10 +49,10 @@ export class Door {
   
   onUseLockpick(user) {
     if (!this.model.opened)
-      return this.lockedComponent.onUseLockpick(user);
+      this.lockedComponent.onUseLockpick(user);
     else if (user === level.player)
       game.appendToConsole(i18n.t("messages.door-close-first"));
-    return false;
+    return true;
   }
 
   onUseItem(user, item) {

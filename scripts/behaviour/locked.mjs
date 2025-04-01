@@ -32,6 +32,7 @@ export class LockedComponent {
   }
   
   toggleLocked() {
+    this.model.playSound("door-unlock");
     this.model.locked = !this.model.locked;
   }
   

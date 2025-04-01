@@ -16,6 +16,7 @@
   "energy-shot":       "weapons/energy-shot.wav",
   "door-locked":       "door-locked.wav",
   "door-open":         "door-open.wav",
+  "door-unlock":       "door-unlock.wav",
   "vault/door-open":   "vault-door-open.wav",
   "vault/door-close":  "vault-door-close.wav",
   "vault/door-locked": "vault-door-locked.wav",
