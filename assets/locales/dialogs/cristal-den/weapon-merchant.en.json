@@ -1,0 +1,7 @@
+{
+    "dialogs": {
+        "cristal-den/weapon-merchant": {
+            "entry": "Howdy ! What can {{npc}} do you for on this good day ?"
+        }
+    }
+}

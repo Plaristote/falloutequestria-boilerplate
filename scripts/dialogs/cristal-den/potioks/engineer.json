@@ -85,13 +85,11 @@
                 "do-not-give-details-about-celestial-device",
                 "do-not-give-details-about-celestial-device-hostile"
             ],
-            "mood": "",
             "text": "about-celestial-device"
         },
         "about-creations": {
             "answers": [
             ],
-            "mood": "",
             "text": "about-creations"
         },
         "about-place": {
@@ -109,7 +107,6 @@
                 "leave-celestial-device-thanks",
                 "leave-about-place"
             ],
-            "mood": "",
             "text": "celestial-device/about-labs"
         },
         "celestial-device/about-steel-rangers": {
@@ -118,7 +115,6 @@
                 "leave-celestial-device-thanks",
                 "leave-about-place"
             ],
-            "mood": "",
             "text": "celestial-device/about-steel-rangers"
         },
         "celestial-device/no-details-given": {
@@ -126,7 +122,6 @@
                 "give-details-about-celestial-device",
                 "leave-about-place"
             ],
-            "mood": "",
             "text": "celestial-device/no-details-given"
         },
         "celestial-device/where-to-find-one": {
@@ -135,13 +130,11 @@
                 "celestial-device-ask-steel-rangers",
                 "leave-about-place"
             ],
-            "mood": "",
             "text": "celestial-device/where-to-find-one"
         },
         "creations/finished": {
             "answers": [
             ],
-            "mood": "",
             "text": "creations/finished"
         },
         "creations/powerhoof-intro": {
@@ -150,7 +143,6 @@
                 "powerhoof-intro-ask-danger",
                 "powerhoof-intro-leave"
             ],
-            "mood": "",
             "text": "creations/powerhoof-intro"
         },
         "creations/powerhoof-risk-reward-response": {
@@ -158,7 +150,6 @@
                 "powerhoof-risk-accept-reward",
                 "powerhoof-risk-reject-reward"
             ],
-            "mood": "",
             "text": "creations/powerhoof-risk-reward-response"
         },
         "creations/powerhoof-risks": {
@@ -168,7 +159,6 @@
                 "powerhoof-risk-reward",
                 "powerhoof-risk-reject"
             ],
-            "mood": "",
             "text": "creations/powerhoof-risks"
         },
         "entry": {
@@ -176,7 +166,6 @@
                 "ask-about-place",
                 "entry-exit"
             ],
-            "mood": "",
             "text": "entry"
         }
     }

@@ -60,6 +60,35 @@
         "value": 1,
         "weight": 0
     },
+    "capital-laboratory-key-lvl-1": {
+        "icon": "access-card-yellow.png",
+        "isGroupable": false,
+        "sprite": "misc",
+        "value": 5,
+        "weight": null
+    },
+    "capital-laboratory-key-lvl-2": {
+        "icon": "access-card-red.png",
+        "isGroupable": false,
+        "sprite": "misc",
+        "value": 5,
+        "weight": null
+    },
+    "capital-laboratory-key-lvl-3": {
+        "icon": "access-card-blue.png",
+        "isGroupable": false,
+        "sprite": "misc",
+        "value": 5,
+        "weight": null
+    },
+    "capital-laboratory-locker-key": {
+        "icon": "locker-key.png",
+        "isGroupable": false,
+        "sprite": "misc",
+        "type": "keys",
+        "value": null,
+        "weight": null
+    },
     "celestial-device-blueprints": {
         "icon": "blueprints.png",
         "isGroupable": false,
@@ -67,6 +96,14 @@
         "type": "misc",
         "value": 0,
         "weight": 1
+    },
+    "celestial-device-mra": {
+        "icon": "celestial-device-arm.png",
+        "isGroupable": false,
+        "sprite": "misc",
+        "type": "misc",
+        "value": 0,
+        "weight": 10
     },
     "combat-armor": {
         "icon": "combat-armor.webp",
@@ -84,6 +121,15 @@
         "sprite": "knife",
         "type": "weapon",
         "value": 95,
+        "weight": 1
+    },
+    "dark-magic-artefact": {
+        "icon": "dark-magic-artefact.png",
+        "isGroupable": false,
+        "scriptName": "dark-magic-artefact.mjs",
+        "sprite": "misc",
+        "type": "misc",
+        "value": 3000,
         "weight": 1
     },
     "doctor-bag": {
@@ -186,6 +232,15 @@
     "melee-hoofercut": {
         "scriptName": "melee-hoofercut.mjs",
         "type": "weapon",
+        "weight": 0
+    },
+    "melee-shadow-blade": {
+        "icon": "",
+        "isGroupable": false,
+        "scriptName": "shadow-blade.mjs",
+        "sprite": "",
+        "type": "weapon",
+        "value": 0,
         "weight": 0
     },
     "melee-stinger": {

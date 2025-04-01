@@ -1,0 +1,157 @@
+{
+    "answers": {
+        "ask-about-love": {
+            "availableHook": "hasLoversQuest",
+            "state": "love-quest/intro",
+            "text": "ask-about-love"
+        },
+        "ask-about-self": {
+            "state": "about",
+            "text": "ask-about-self"
+        },
+        "ask-about-town": {
+            "state": "about",
+            "text": "ask-about-town"
+        },
+        "compliment-voice": {
+            "availableHook": "canSpeakInRhymes",
+            "hook": "onComplimented",
+            "state": "introduction",
+            "text": "compliment-voice"
+        },
+        "disrespecting": {
+            "availableHook": "canSpeakInRhymes",
+            "hook": "onDisrespected",
+            "state": "disrespected",
+            "text": "disrespecting"
+        },
+        "intro-ask-questions": {
+            "state": "about",
+            "text": "intro-ask-questions"
+        },
+        "leave": {
+            "text": "leave"
+        },
+        "leave-intro": {
+            "text": "leave-intro"
+        },
+        "love-compliment": {
+            "availableHook": "canFlirt",
+            "hook": "onFlirted",
+            "state": "love-quest/intro",
+            "text": "love-compliment"
+        },
+        "love-convince": {
+            "availableHook": "canSpeakInRhymes",
+            "state": "love-quest/convince-success",
+            "text": "love-convince"
+        },
+        "love-guess-barmaid": {
+            "state": "love-quest/guessed",
+            "text": "love-guess-barmaid"
+        },
+        "love-guess-founder": {
+            "state": "love-quest/pressed",
+            "text": "love-guess-founder"
+        },
+        "love-guess-self": {
+            "hook": "onFlirtedAgain",
+            "state": "love-quest/pressed",
+            "text": "love-guess-self"
+        },
+        "love-press": {
+            "state": "love-quest/pressed",
+            "text": "love-press"
+        },
+        "love-stop-guessing": {
+            "text": "love-stop-guessing"
+        },
+        "love-try-convince": {
+            "state": "love-quest/convince-failure",
+            "text": "love-try-convince"
+        }
+    },
+    "entryPoint": "introduction",
+    "states": {
+        "about": {
+            "answers": [
+                "ask-about-love",
+                "ask-about-self",
+                "ask-about-town",
+                "leave"
+            ],
+            "hook": "aboutSelf",
+            "mood": "smile",
+            "text": "about"
+        },
+        "disrespected": {
+            "answers": [
+            ],
+            "mood": "sad",
+            "text": "disrespected"
+        },
+        "entry": {
+            "answers": [
+                "intro-ask-questions",
+                "leave"
+            ],
+            "mood": "smile",
+            "text": "entry"
+        },
+        "introduction": {
+            "answers": [
+                "disrespecting",
+                "compliment-voice",
+                "intro-ask-questions",
+                "leave-intro"
+            ],
+            "mood": "smile",
+            "text": "introduction"
+        },
+        "love-quest/convince-failure": {
+            "answers": [
+                "love-stop-guessing"
+            ],
+            "hook": "",
+            "mood": "sad",
+            "text": "love-quest/convince-failure"
+        },
+        "love-quest/convince-success": {
+            "answers": [
+            ],
+            "hook": "loveTriggerConfession",
+            "text": "love-quest/convince-success"
+        },
+        "love-quest/guessed": {
+            "answers": [
+                "love-convince",
+                "love-try-convince",
+                "love-stop-guessing"
+            ],
+            "hook": "loveGuessed",
+            "mood": "angry",
+            "text": "love-quest/guessed"
+        },
+        "love-quest/intro": {
+            "answers": [
+                "love-press",
+                "love-compliment",
+                "leave"
+            ],
+            "hook": "loveIntro",
+            "mood": "smile",
+            "text": "love-quest/intro"
+        },
+        "love-quest/pressed": {
+            "answers": [
+                "love-guess-barmaid",
+                "love-guess-founder",
+                "love-guess-self",
+                "love-stop-guessing"
+            ],
+            "hook": "lovePressed",
+            "mood": "neutral",
+            "text": "love-quest/pressed"
+        }
+    }
+}

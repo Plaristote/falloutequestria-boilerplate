@@ -7420,6 +7420,265 @@
             "width": 59
         }
     },
+    "shadow-knight": {
+        "appear-down": {
+            "frameCount": 6,
+            "frameInterval": 140,
+            "height": 66,
+            "offsetX": 129,
+            "offsetY": 334,
+            "repeat": false,
+            "reverse": true,
+            "width": 128
+        },
+        "appear-left": {
+            "frameCount": 6,
+            "frameInterval": 140,
+            "height": 66,
+            "offsetX": 129,
+            "offsetY": 466,
+            "repeat": false,
+            "reverse": true,
+            "width": 128
+        },
+        "appear-right": {
+            "frameCount": 6,
+            "frameInterval": 140,
+            "height": 66,
+            "offsetX": 129,
+            "offsetY": 400,
+            "repeat": false,
+            "reverse": true,
+            "width": 128
+        },
+        "appear-up": {
+            "frameCount": 6,
+            "frameInterval": 140,
+            "height": 66,
+            "offsetX": 129,
+            "offsetY": 532,
+            "repeat": false,
+            "reverse": true,
+            "width": 128
+        },
+        "dead-down": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 1,
+            "offsetX": 0,
+            "offsetY": 0,
+            "repeat": false,
+            "width": 1
+        },
+        "dead-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 1,
+            "offsetX": 0,
+            "offsetY": 0,
+            "repeat": false,
+            "width": 1
+        },
+        "dead-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 1,
+            "offsetX": 0,
+            "offsetY": 0,
+            "repeat": false,
+            "width": 1
+        },
+        "dead-up": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 1,
+            "offsetX": 0,
+            "offsetY": 0,
+            "repeat": false,
+            "width": 1
+        },
+        "defaultSource": "characters/shadow-knight.png",
+        "fall-down": {
+            "frameCount": 8,
+            "frameInterval": 105,
+            "height": 66,
+            "offsetX": 0,
+            "offsetY": 267,
+            "repeat": false,
+            "width": 128
+        },
+        "fall-left": {
+            "frameCount": 8,
+            "frameInterval": 105,
+            "height": 66,
+            "offsetX": 0,
+            "offsetY": 267,
+            "repeat": false,
+            "width": 128
+        },
+        "fall-right": {
+            "frameCount": 8,
+            "frameInterval": 105,
+            "height": 66,
+            "offsetX": 0,
+            "offsetY": 267,
+            "repeat": false,
+            "width": 128
+        },
+        "fall-up": {
+            "frameCount": 8,
+            "frameInterval": 105,
+            "height": 66,
+            "offsetX": 0,
+            "offsetY": 267,
+            "repeat": false,
+            "width": 128
+        },
+        "idle-down": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 66,
+            "offsetX": 0,
+            "offsetY": 334,
+            "repeat": false,
+            "width": 128
+        },
+        "idle-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 66,
+            "offsetX": 0,
+            "offsetY": 466,
+            "repeat": false,
+            "width": 128
+        },
+        "idle-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 66,
+            "offsetX": 0,
+            "offsetY": 400,
+            "repeat": false,
+            "width": 128
+        },
+        "idle-up": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 66,
+            "offsetX": 0,
+            "offsetY": 532,
+            "repeat": false,
+            "width": 128
+        },
+        "melee-down": {
+            "frameCount": 4,
+            "frameInterval": 150,
+            "height": 66,
+            "offsetX": 384,
+            "offsetY": 0,
+            "repeat": false,
+            "width": 128
+        },
+        "melee-left": {
+            "frameCount": 4,
+            "frameInterval": 150,
+            "height": 66,
+            "offsetX": 384,
+            "offsetY": 132,
+            "repeat": false,
+            "width": 128
+        },
+        "melee-right": {
+            "frameCount": 4,
+            "frameInterval": 150,
+            "height": 66,
+            "offsetX": 384,
+            "offsetY": 66,
+            "repeat": false,
+            "width": 128
+        },
+        "melee-up": {
+            "frameCount": 4,
+            "frameInterval": 150,
+            "height": 66,
+            "offsetX": 384,
+            "offsetY": 198,
+            "repeat": false,
+            "width": 128
+        },
+        "slip-down": {
+            "frameCount": 6,
+            "frameInterval": 140,
+            "height": 66,
+            "offsetX": 129,
+            "offsetY": 334,
+            "repeat": false,
+            "width": 128
+        },
+        "slip-left": {
+            "frameCount": 6,
+            "frameInterval": 140,
+            "height": 66,
+            "offsetX": 129,
+            "offsetY": 466,
+            "repeat": false,
+            "width": 128
+        },
+        "slip-right": {
+            "frameCount": 6,
+            "frameInterval": 140,
+            "height": 66,
+            "offsetX": 129,
+            "offsetY": 400,
+            "repeat": false,
+            "width": 128
+        },
+        "slip-up": {
+            "frameCount": 6,
+            "frameInterval": 140,
+            "height": 66,
+            "offsetX": 129,
+            "offsetY": 532,
+            "repeat": false,
+            "width": 128
+        },
+        "walking-down": {
+            "frameCount": 3,
+            "frameInterval": 150,
+            "height": 66,
+            "offsetX": 0,
+            "offsetY": 0,
+            "repeat": true,
+            "width": 128
+        },
+        "walking-left": {
+            "frameCount": 3,
+            "frameInterval": 150,
+            "height": 66,
+            "offsetX": 0,
+            "offsetY": 134,
+            "repeat": true,
+            "width": 128
+        },
+        "walking-right": {
+            "frameCount": 3,
+            "frameInterval": 150,
+            "height": 66,
+            "offsetX": 0,
+            "offsetY": 67,
+            "repeat": true,
+            "width": 128
+        },
+        "walking-up": {
+            "frameCount": 3,
+            "frameInterval": 150,
+            "height": 66,
+            "offsetX": 0,
+            "offsetY": 201,
+            "repeat": false,
+            "width": 128
+        }
+    },
     "shelf": {
         "defaultSource": "shelf.png",
         "idle": {

@@ -10,6 +10,7 @@ export function initialize() {
   worldmap.revealCity("stable-103");
   initializePlayerInventory();
 
+  game.quests.addQuest("celestialDevice");
   game.tasks.addTask("enableEncounters", 25280000, 1);
   game.onCityEnteredAt("stable-entrance", "from-stable");
 
