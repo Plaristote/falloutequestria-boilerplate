@@ -102,6 +102,8 @@ export class Explosion {
   applyDamageOnDestructible(object) {
     if (object.destructible)
       level.deleteObject(object);
+    else if (typeof object.script?.onDamaged == "function")
+      object.script.onDamaged();
   }
 }
 
