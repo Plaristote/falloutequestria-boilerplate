@@ -47,8 +47,8 @@
         "icon": "book.png",
         "isGroupable": true,
         "scriptName": "book.mjs",
-        "sprite": "misc",
         "type": "consommables",
+        "sprite": "book",
         "value": 45,
         "weight": 3
     },
@@ -306,8 +306,8 @@
         "icon": "firstaid-book.png",
         "isGroupable": true,
         "scriptName": "skillbook.mjs",
-        "sprite": "misc",
         "type": "consommables",
+        "sprite": "book",
         "value": 190,
         "weight": 3
     },
@@ -315,17 +315,27 @@
         "icon": "survival-book.png",
         "isGroupable": true,
         "scriptName": "skillbook.mjs",
-        "sprite": "misc",
         "type": "consommables",
+        "sprite": "book",
         "value": 125,
         "weight": 3
+    },
+    "skill-book-repair": {
+        "icon": "repair-book.png",
+        "isGroupable": true,
+        "scriptName": "skillbook.mjs",
+        "type": "consommables",
+        "sprite": "book",
+        "type": "consommables",
+        "value": 275,
+        "weight": 5
     },
     "skill-book-smallGuns": {
         "icon": "smallguns-book.png",
         "isGroupable": true,
         "scriptName": "skillbook.mjs",
-        "sprite": "misc",
         "type": "consommables",
+        "sprite": "book",
         "value": 250,
         "weight": 3
     },
