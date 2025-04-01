@@ -2,16 +2,20 @@ import {CharacterBehaviour} from "./character.mjs";
 
 export class Changeling extends CharacterBehaviour {
   changelingTransform(race, params) {
-    Object.keys(params).forEach(key => {
-      this.model.statistics[key] = params[key];
-    });
-    this.model.statistics.race = race;
-    this.model.updateSpriteSheet();
+    const buff = this.model.getBuff("polymorphed");
+
+    this.polymorphParams = params;
+    this.polymorphParams.race = race;
+    if (!buff) {
+      this.model.addBuff("polymorphed");
+    } else {
+      buff.script.initialize();
+    }
   }
 
   changelingEndTransform() {
-    this.model.statistics.faceColor = "transparent";
-    this.model.statistics.race = "changeling";
-    this.model.updateSpriteSheet();
+    const buff = this.model.getBuff("polymorphed");
+    if (buff)
+      buff.remove();
   }
 }
