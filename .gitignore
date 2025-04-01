@@ -1,2 +1,5 @@
 .prerender/
 saves/
+*~
+.*.swp
+.*.swo
