@@ -1,0 +1,14 @@
+{
+  "name": {
+    "default": "Fallout Equestria: Crystal Wasteland",
+    "fr": "Fallout Equestria : Ruines du Royaume de Cristal"
+  },
+  "description": {
+    "default": "The game",
+    "fr": "Le jeu"
+  },
+  "path": "./boilerplate",
+  "logo": "./boilerplate/assets/icon.ico",
+  "organizationName": "Ile Noire Dev",
+  "organizationDomain": "ile-noire.fr"
+}
