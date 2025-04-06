@@ -45,9 +45,7 @@ export class WeaponBehaviour extends ItemBehaviour {
 
   triggerUseOn(target) {
     const successRate = this.getUseSuccessRate(target);
-    const roll        = getValueFromRange(0, 100);
 
-    console.log("ROLL", roll, '/', successRate);
     if (this.fireSound)
       game.sounds.play(this.fireSound);
     return randomCheck(successRate, {
