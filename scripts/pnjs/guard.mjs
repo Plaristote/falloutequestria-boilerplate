@@ -1,10 +1,12 @@
 import {CharacterBehaviour} from "./character.mjs";
 import {AlarmComponent} from "./components/alarm.mjs";
+import {SquadFighterComponent} from "./components/squadFighter.mjs";
 
 export class GuardBehaviour extends CharacterBehaviour {
   constructor(model) {
     super(model);
     this.alarmComponent = new AlarmComponent(this);
+    this.squadComponent = new SquadFighterComponent(this);
     if (this.textBubbles === undefined) {
       this.textBubbles = [
         { content: i18n.t("bubbles.guard-1"), duration: 2500 },
@@ -17,15 +19,6 @@ export class GuardBehaviour extends CharacterBehaviour {
 
   get squad() { return this.model.parent.objects; }
 
-  callSquadToCombat() {
-    if (this.squad) {
-      for (var i = 0 ; i < this.squad.length ; ++i) {
-        if (!level.isInCombat(this.squad[i]))
-          level.joinCombat(this.squad[i]);
-      }
-    }
-  }
-
   onCharacterDetected(character) {
     if (this.alarmComponent.onCharacterDetected(character))
       return ;
@@ -33,7 +26,6 @@ export class GuardBehaviour extends CharacterBehaviour {
   }
 
   onTurnStart() {
-    this.callSquadToCombat();
     if (this.alarmComponent.onTurnStart())
       return true;
     return super.onTurnStart();
