@@ -165,6 +165,7 @@
         "Automap": "Carte locale",
         "Clock": "Horloge",
         "Quests": "Quêtes",
+        "clock-disabled": "Indisponible pour le moment.",
         "clock-title": "Se reposer",
         "clock-wait-day": "Attendre {{time}} jours",
         "clock-wait-heal": "Attendre jusqu'à guérison complète",

@@ -135,6 +135,7 @@
         "Automap": "Automap",
         "Clock": "Clock",
         "Quests": "Quests",
+        "clock-disabled": "Not available at the moment.",
         "clock-title": "Take a rest",
         "clock-wait-day": "Wait {{time}} days",
         "clock-wait-heal": "Wait until fully healed",
