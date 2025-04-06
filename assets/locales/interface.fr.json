@@ -98,6 +98,7 @@
         "drunk-pass-out": "Tu as trop picolé, et tu t'es évanouis comme une loque.",
         "encounter-prompt": "Veux-tu voir ça de plus près ?",
         "encounter-title": "Tu es tombé sur {{title}}.",
+        "encounter-avoid-roll-success": "Tu detecte une rencontre hostile et gagne {{xp}} points d'expérience.",
         "explosive-critical-failure": "Tu echoue maladroitement et declenche l'explosif !",
         "explosive-triggered": "{{item}} explose.",
         "explosive-triggered-prematurely": "{{item}} explose inopinement !",

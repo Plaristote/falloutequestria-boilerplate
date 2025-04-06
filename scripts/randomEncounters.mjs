@@ -1,4 +1,5 @@
 import {getValueFromRange} from "behaviour/random.mjs";
+import {skillCheck} from "cmap/helpers/checks.mjs";
 
 const RandomEncounterChart = {
   None:     0,
@@ -7,6 +8,41 @@ const RandomEncounterChart = {
   Special:  3,
   Dungeon:  4
 };
+
+class OutdoorsmanCheck {
+  constructor(party, groups) {
+    this.party = party;
+    this.groups = groups;
+    this.success = false;
+    this.character = party.mostSkilledAt("outdoorsman");
+  }
+
+  run() {
+    console.log("running OutdoorsmanCheck against", this.groups.length, "groups");
+    for (let i = 0 ; i < this.groups.length ; ++i) {
+      if (this.checkGroup(this.groups[i])) break ;
+    }
+  }
+
+  checkGroup(group) {
+    this.success = skillCheck(this.character, "outdoorsman", {
+      target: group.avoidRoll,
+      dice: 20
+    });
+    if (this.success)
+      this.gainExperience(group);
+    return this.success;
+  }
+
+  gainExperience(group) {
+    console.log("DONE. Gaining experience now");
+    const reward = group.avoidRoll / 7;
+    party.addExperience(reward);
+    game.appendToConsole(i18n.t("messages.encounter-avoid-roll-success", {
+      xp: reward
+    }));
+  }
+}
 
 export class RandomEncounterComponent {
   constructor() {
@@ -58,8 +94,8 @@ export class RandomEncounterComponent {
   triggerHostileEncounter() {
     const desertMaps = ["random-desert-1", "random-desert-2", "random-desert-cabin"];
     const desertEasyEncounters = [
-      function(difficultyRoll) { return { "name": "Rats", "members": [{"sheet": "mutatedRat", "script": "rat.mjs", "amount": Math.max(3, Math.floor(4 * (difficultyRoll / 40)))}] }; },
-      function(difficultyRoll) { return { "name": "Scorpions", "members": [{"sheet": "scorpion", "script": "scorpion.mjs", "amount": Math.max(3, Math.floor(4 * (difficultyRoll / 40)))}] }; }
+      function(difficultyRoll) { return { "name": "Rats", "members": [{"sheet": "mutatedRat", "script": "rat.mjs", "avoidRoll": (80 + difficultyRoll / 4), "amount": Math.max(3, Math.floor(4 * (difficultyRoll / 40)))}] }; },
+      function(difficultyRoll) { return { "name": "Scorpions", "members": [{"sheet": "scorpion", "script": "scorpion.mjs", "avoidRoll": (80 + difficultyRoll / 4), "amount": Math.max(3, Math.floor(4 * (difficultyRoll / 40)))}] }; }
     ];
     const candidateMaps       = desertMaps;
     const candidateEncounters = desertEasyEncounters;
@@ -72,8 +108,11 @@ export class RandomEncounterComponent {
     enemyParty1.zone = "encounter-zone-1";
     console.log("encounterRoll", encounterRoll, enemyParty1.name, enemyParty1.members[0].amount);
 
+    const avoidable = new OutdoorsmanCheck(game.playerParty, [enemyParty1]);
+    avoidable.run();
+
     game.randomEncounters.prepareEncounter(candidateMaps[mapRoll], {
-      "optional": (getValueFromRange(0, 100) + difficultyRoll / 2) <= game.player.statistics.outdoorsman,
+      "optional": avoidable.success,
       "title": "danger",
       "parties": [enemyParty1]
     });

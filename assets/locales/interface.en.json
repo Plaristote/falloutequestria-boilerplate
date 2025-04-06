@@ -63,6 +63,7 @@
         "drunk-pass-out": "You've had too much alcohol and passed out like a wreck.",
         "encounter-prompt": "Do you wish to check it out ?",
         "encounter-title": "You've stumbled upon {{title}}.",
+        "encounter-avoid-roll-success": "You've successfully detected an hostile encounter and gained {{xp}} experience points.",
         "explosive-critical-failure": "You failed miserably and triggered the device !",
         "explosive-triggered": "{{item}} exploded.",
         "explosive-triggered-prematurely": "{{item}} exploded prematurely !",
