@@ -1,8 +1,11 @@
 {
     "character-names": {
         "capital/elder-shadow-pony": "Aînée des Chevaliers d'Ombre",
+        "capital/feral-ghoul-1": "Goule Férale",
+        "capital/feral-ghoul-2": "Goule Férale",
         "capital/shadow-pony": "Chevalier d'Ombre",
         "cristal-den/bibins/guard-A": "Garde",
-        "cristal-den/bibins/guard-B": "Garde"
+        "cristal-den/bibins/guard-B": "Garde",
+        "cristal-den/gypsi-kind": "Rose Dye"
     }
 }
