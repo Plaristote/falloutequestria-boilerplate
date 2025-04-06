@@ -18,9 +18,13 @@ export class SquadFighterComponent {
 
   callSquadToCombat() {
     if (this.squad) {
+      const target = this.script.requireCombatTarget();
+
       for (var i = 0 ; i < this.squad.length ; ++i) {
-       if (!level.isInCombat(this.squad[i]))
+       if (!level.isInCombat(this.squad[i])) {
           level.joinCombat(this.squad[i]);
+          this.squad[i].combatTarget = target;
+       }
      }
     }
   }

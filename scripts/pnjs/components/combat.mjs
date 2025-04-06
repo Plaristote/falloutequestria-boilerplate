@@ -54,6 +54,10 @@ export class CombatComponent extends SkillTargetComponent {
     return this.combatTarget != null;
   }
 
+  requireCombatTarget() {
+    return this.combatTarget ? this.combatTarget : (() => { this.findCombatTarget(); return this.combatTarget })();
+  }
+
   onTurnStart() {
     console.log("on turn start", this.model, this.combatTarget);
     if (this.findCombatTarget()) {
