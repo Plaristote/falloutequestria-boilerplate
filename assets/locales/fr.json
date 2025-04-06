@@ -63,6 +63,10 @@
             "description": "factions.diamond-dogs.description",
             "name": "Diamond dogs"
         },
+        "feral-ghouls": {
+            "description": "factions.feral-ghouls.description",
+            "name": "factions.feral-ghouls.name"
+        },
         "mordino": {
             "description": "factions.mordino.description",
             "name": "Famille Mordino"
