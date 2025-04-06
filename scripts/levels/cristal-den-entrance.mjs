@@ -7,7 +7,7 @@ function importCaravaners() {
     game.uniqueCharacterStorage.loadCharacterToCurrentLevel("cristal-den/caravan-leader", 17, 26);
 }
 
-export class CristalDenCenter extends LevelBase {
+export class CristalDenEntrance extends LevelBase {
   onLoaded() {
     importCaravaners();
   }
