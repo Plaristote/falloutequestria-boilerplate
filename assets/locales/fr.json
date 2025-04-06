@@ -28,14 +28,6 @@
         "steal-warning-3": "Dernier avertissement ! Remet ça où tu l'a trouvé !",
         "steal-warning-4": "Gardes ! Au voleur !"
     },
-    "spells": {
-        "title": "Sorts",
-        "empty-spellbook": "Tu n'as pas encore appris de sorts",
-        "teleport": "Teleportation",
-        "sleep": "Torpeur",
-        "purification": "Purification",
-        "polymorph": "Métamorphose"
-    },
     "dialogs": {
         "ratKing": {
             "cool": "Cool story bro.",
@@ -76,27 +68,27 @@
         }
     },
     "item-descriptions": {
+        "apple-cider": "Une boisson alcolisé, faite à partir de pommes.",
+        "apple-whiskey": "Une boisson fermentée et distillée a base de pommes. Techniquement, c'est de l'applejack, mais il semble que par ici, ça s'appelle du whiskey de pomme.",
+        "book": "Un vieux livre d'avant-guerre.",
+        "bottlecaps": "Des capsules de bouteilles. Elles sont courrement utilisées comme monnaie, par ici.",
         "dynamite": "Un explosif dangereux ! Il peut etre utile pour passer au travers d'obstacles, ou pour eparpiller tes ennemis facon puzzle.",
+        "food-bread": "Une délicieuse baguette de pain.",
+        "food-butter": "Substance alimentaire, grasse, onctueuse, que l’on extrait, en la battant, de la crème de lait de vache.",
+        "food-croissant": "Une pâtisserie comme on en fait plus !",
+        "frag-grenade": "Une grenade à fragmentation. Il vaut mieux être prudent avec cette goupille.",
+        "gemstone": "Des pierres précieuses, utilisées comme matériau ou ingrédient dans le cadre de rituels magiques.",
         "health-potion": "Une potion de vie standard.",
-	"stable-suit": "Your everyday standard stable suit, issued by Stable Tech.",
-        "trialStartKey": "Une vieille clef rouillée, ramassée au fin fond de la caverne des épreuves.",
-        "trialKey": "La clef de la caverne des épreuves, ayant autrefois appartenue à Trial Blister.",
-	"pickaxe": "Une pioche, qui peut être utilisée pour récuperer du minerai. Ou pour planter vos adversaires.",
-	"book": "Un vieux livre d'avant-guerre.",
-	"skill-book-medicine": "Un livre destiné aux apprentis secouristes. Tu pourrais peut-être apprendre de nouvelles techniques en le lisant.",
+        "metal-armor": "Une armure conçue à partir de pièces de métal rafistolées. En dépit de son apparence grotesque, elle semble constituer une protection efficace.",
+        "pickaxe": "Une pioche, qui peut être utilisée pour récuperer du minerai. Ou pour planter vos adversaires.",
+        "skill-book-medicine": "Un livre destiné aux apprentis secouristes. Tu pourrais peut-être apprendre de nouvelles techniques en le lisant.",
         "skill-book-outdoorsman": "Un livre sur la survie en milieu hostile, avec de nombreux conseils sur la mise en place d'un campement et la traversée de milieux sauvages.",
         "skill-book-smallGuns": "Un magazine Gun's and Bullet, plein de conseils sur la pratique du tir sportif et l'entretien des armes à feu.",
-	"bottlecaps": "Des capsules de bouteilles. Elles sont courrement utilisées comme monnaie, par ici.",
-	"tuxedo": "Un costume élégant.",
-	"sparkle-cola": "Une boisson gazeuse saveur carrotte. Sparkle Cola était la boisson la plus populaire d'Equestria, avant et durant la Grande Guerre.",
-	"metal-armor": "Une armure conçue à partir de pièces de métal rafistolées. En dépit de son apparence grotesque, elle semble constituer une protection efficace.",
-	"gemstone": "Des pierres précieuses, utilisées comme matériau ou ingrédient dans le cadre de rituels magiques.",
-	"frag-grenade": "Une grenade à fragmentation. Il vaut mieux être prudent avec cette goupille.",
-	"apple-cider": "Une boisson alcolisé, faite à partir de pommes.",
-	"apple-whiskey": "Une boisson fermentée et distillée a base de pommes. Techniquement, c'est de l'applejack, mais il semble que par ici, ça s'appelle du whiskey de pomme.",
-        "food-butter": "Substance alimentaire, grasse, onctueuse, que l’on extrait, en la battant, de la crème de lait de vache.",
-        "food-bread": "Une délicieuse baguette de pain.",
-        "food-croissant": "Une pâtisserie comme on en fait plus !"
+        "sparkle-cola": "Une boisson gazeuse saveur carrotte. Sparkle Cola était la boisson la plus populaire d'Equestria, avant et durant la Grande Guerre.",
+        "stable-suit": "Your everyday standard stable suit, issued by Stable Tech.",
+        "trialKey": "La clef de la caverne des épreuves, ayant autrefois appartenue à Trial Blister.",
+        "trialStartKey": "Une vieille clef rouillée, ramassée au fin fond de la caverne des épreuves.",
+        "tuxedo": "Un costume élégant."
     },
     "locations": {
         "city-sample": "Expoville",
@@ -111,15 +103,15 @@
         "bed": "un lit",
         "chair": "une chaise",
         "door": "une porte",
+        "gemOre": "gisement de minerai",
+        "locker": "casier",
         "pool-table": "un billard",
         "shelf": "une commode",
         "slot-machine": "une machine à sou",
         "stairs": "des escaliers",
         "stairs-groundlevel": "des escaliers",
         "stairs-toplevel": "des escaliers",
-        "stool": "un tabouret",
-	"locker": "casier",
-	"gemOre": "gisement de minerai"
+        "stool": "un tabouret"
     },
     "quests": {
         "catch-robber": {
@@ -184,6 +176,14 @@
         "director-at-launch": "Le patron prend son dejeuner. Revient dans une heure ou deux.",
         "director-not-receiving": "Le patron ne reçoit personne à cette heure-ci. Revient plus tard.",
         "shady-robber": "Il a l'air suspect."
+    },
+    "spells": {
+        "empty-spellbook": "Tu n'as pas encore appris de sorts",
+        "polymorph": "Métamorphose",
+        "purification": "Purification",
+        "sleep": "Torpeur",
+        "teleport": "Teleportation",
+        "title": "Sorts"
     },
     "tutorial": {
         "1": "PipBuck",
