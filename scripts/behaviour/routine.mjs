@@ -120,8 +120,8 @@ export class RoutineComponent {
     if (callback) {
       if (typeof callback == "function")
         callback();
-      else if (typeof callback == "string")
-        this.parent[callback]();
+      else if (typeof callback == "string" && typeof this.parent[callback] == "function")
+        callback(this.parent.model);
       else
         console.log("triggerRoutine: invalid routine callback", callback);
     }

@@ -37,17 +37,13 @@ export class Shop {
   }
 
   get shopDoors() {
-    const doors = [];
-
-    for (var i = 0 ; i < this.model.objects.length ; ++i) {
-      if (this.model.objects[i].getObjectType() == "Doorway")
-        doors.push(this.model.objects[i]);
-    }
-    return doors;
+    return this.model.find(object => object.type == "Doorway");
   }
 
   get shopOwner() {
-    return this.model.findObject("owner") || this.model.parent.findObject("owner");
+    return this.model.findObject("owner")
+        || this.model.parent.findObject("owner")
+        || this.model.find(object => object.type == "Character")[0];
   }
 
   get shopShelfs() {
