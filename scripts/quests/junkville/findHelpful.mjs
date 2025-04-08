@@ -88,7 +88,7 @@ export class FindHelpful extends QuestHelper {
         failure: this.model.hasVariable("died")
       });
     }
-    if (this.isObjectiveCompleted("find-helpful")) {
+    if (this.model.isObjectiveCompleted("find-helpful")) {
       objectives.push({
         label: this.tr("save-helpful"),
         success: this.model.isObjectiveCompleted("save-helpful"),

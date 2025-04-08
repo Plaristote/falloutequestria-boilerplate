@@ -1,11 +1,15 @@
 {
     "answers": {
         "": {
-            "hook": "",
-            "state": ""
         },
         "I need supplies. Show me what you're selling.": {
             "text": "I need supplies. Show me what you're selling."
+        },
+        "ask-about-scavengers": {
+            "availableHook": "canWarnAboutMissingScavengers",
+            "hook": "reportMissingScavengers",
+            "state": "scavengers/towards-cook",
+            "text": "ask-about-scavengers"
         },
         "ask-celestial-device": {
             "state": "about-celestial-device",
@@ -15,16 +19,31 @@
             "state": "about-leader",
             "text": "ask-leader"
         },
+        "ask-ramsom-for-missing-scavengers": {
+            "hook": "scavengerCheckRansomAvailability",
+            "state": "scavengers/negociate",
+            "text": "ask-ramsom-for-missing-scavengers"
+        },
+        "ask-ransom-for-missing-scavengers-with-cook-approval": {
+            "availableHook": "cookApprovedScavengerRansom",
+            "hook": "scavengerCheckRansomAvailability",
+            "state": "scavengers/accept-ransom",
+            "text": "ask-ransom-for-missing-scavengers-with-cook-approval"
+        },
         "ask-safety": {
             "state": "about-safety",
             "text": "ask-safety"
+        },
+        "ask-scavenger-ransom": {
+            "availableHook": "isLookingForScavengerRansom",
+            "state": "scavengers/ransom-entry",
+            "text": "ask-scavenger-ransom"
         },
         "ask-something-else": {
             "state": "about-town",
             "text": "ask-something-else"
         },
         "ask-town": {
-            "hook": "",
             "state": "about-town",
             "text": "ask-town"
         },
@@ -38,14 +57,23 @@
             "text": "introduce-player"
         },
         "nothing-needed": {
-            "hook": "",
-            "state": "",
             "text": "nothing-needed"
         },
         "open-trade": {
-            "hook": "",
             "state": "trade",
             "text": "open-trade"
+        },
+        "scavenger-negociate-accept": {
+            "state": "scavengers/sub-quest",
+            "text": "scavenger-negociate-accept"
+        },
+        "scavenger-negociate-give-up": {
+            "text": "scavenger-negociate-give-up"
+        },
+        "scavengers-negociate-insist": {
+            "availableHook": "scavengerCanNegociateInsist",
+            "state": "scavengers/accept-ransom",
+            "text": "scavengers-negociate-insist"
         }
     },
     "entryPoint": "entry",
@@ -86,6 +114,8 @@
         },
         "entry": {
             "answers": [
+                "ask-about-scavengers",
+                "ask-scavenger-ransom",
                 "open-trade",
                 "ask-town",
                 "ask-celestial-device",
@@ -97,12 +127,54 @@
         "introduction": {
             "answers": [
                 "introduce-player",
+                "ask-about-scavengers",
+                "ask-scavenger-ransom",
                 "open-trade",
                 "ask-town",
                 "nothing-needed"
             ],
             "hook": "",
             "text": "introduction"
+        },
+        "scavengers/accept-ransom": {
+            "answers": [
+            ],
+            "hook": "scavengerAcceptRansom",
+            "text": "scavengers/accept-ransom"
+        },
+        "scavengers/cannot-accept-ransom": {
+            "answers": [
+            ],
+            "hook": "",
+            "text": "scavengers/cannot-accept-ransom"
+        },
+        "scavengers/negociate": {
+            "answers": [
+                "scavengers-negociate-insist",
+                "scavenger-negociate-accept",
+                "scavenger-negociate-give-up"
+            ],
+            "hook": "",
+            "text": "scavengers/negociate"
+        },
+        "scavengers/ransom-entry": {
+            "answers": [
+                "ask-ransom-for-missing-scavengers-with-cook-approval",
+                "ask-ramsom-for-missing-scavengers"
+            ],
+            "hook": "",
+            "text": "scavengers/ransom-entry"
+        },
+        "scavengers/sub-quest": {
+            "answers": [
+            ],
+            "text": "scavengers/sub-quest"
+        },
+        "scavengers/towards-cook": {
+            "answers": [
+            ],
+            "hook": "",
+            "text": "scavengers/towards-cook"
         },
         "trade": {
             "answers": [

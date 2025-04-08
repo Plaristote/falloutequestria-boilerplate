@@ -20,7 +20,7 @@ export class PackMember extends CharacterBehaviour {
                      && !isCharacterInPonyPen(game.player)
                      && this.model.hasLineOfSight(game.player);
       if (sendToPen)
-        this.startDialog("junkville-dog-jail");
+        this.startDialog("junkville/dog-jail");
     }
   }
 

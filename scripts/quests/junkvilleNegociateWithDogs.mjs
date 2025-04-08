@@ -30,8 +30,7 @@ export function mediationNeedsCaptiveRelease() {
 
 export function startMediation(type) {
   const quest = requireQuest("junkvilleNegociateWithDogs");
-  quest.setVariable("mediation", type);
-  console.log(questName, "-> startMediation", type);
+  quest.setVariable("mediation", 1);
 }
 
 export function hasMediationStarted() {
@@ -191,6 +190,11 @@ export function makeAltLeaderTakeOver() {
   game.diplomacy.setAsEnemy(true, "diamond-dogs", "junkville");
 }
 
+export function hasSupplyRequestObjective() {
+  const quest = requireQuest("junkvilleDumpsDisappeared");
+  return quest.script.ransomActive || quest.script.suppliesRequested;
+}
+
 export class JunkvilleNegociateWithDogs extends QuestHelper {
   initialize() {
     this.model.location = "junkville";
@@ -201,7 +205,18 @@ export class JunkvilleNegociateWithDogs extends QuestHelper {
       return 1450;
     return 750;
   }
-  
+
+  get leadersDead() {
+    return this.model.hasVariable("leadersDead") && this.model.hasVariable("altLeaderDead");
+  }
+
+  onCharacterKilled(character) {
+    switch (character.characterSheet) {
+      case "junkville-dog-leader": this.model.setVariable("leaderDead", 1); break ;
+      case "junkville-dog-second": this.model.setVariable("altLeaderDead", 1); break ;
+    }
+  }
+
   getObjectives() {
     const objectives = [];
 
@@ -209,11 +224,13 @@ export class JunkvilleNegociateWithDogs extends QuestHelper {
       label: this.tr("save-yourself-from-the-diamond-dogs"),
       success: this.model.isObjectiveCompleted("safe")
     });
-    objectives.push({
-      label: this.tr("warn-junkville-about-diamond-dogs"),
-      success: this.model.isObjectiveCompleted("junkville-warned"),
-      failure: !this.model.isObjectiveCompleted("junkville-warned") && hasBattleStarted()
-    });
+    if (hasSupplyRequestObjective()) {
+      objectives.push({
+        label: this.tr("bring-medical-supplies"),
+        success: this.model.isObjectiveCompleted("bring-medical-supplies"),
+        failure: !this.model.isObjectiveCompleted("bring-medical-supplies") && (hasBattleStarted() || this.leadersDead)
+      });
+    }
     if (internalPackIssueDone()) {
       objectives.push({
         label: this.tr("solve-pack-unrest"),
@@ -223,7 +240,7 @@ export class JunkvilleNegociateWithDogs extends QuestHelper {
     }
     if (hasMediationStarted()) {
       objectives.push({
-        label: this.model.getVariable("mediation") == "trade" ? this.tr("peaceful-resolve-trade") : this.tr("peaceful-resolve-zone"),
+        label: this.tr("peaceful-resolve"),
         success: this.model.isObjectiveCompleted("peaceful-resolve"),
         failure: !this.model.isObjectiveCompleted("peaceful-resolve") && hasBattleStarted()
       });

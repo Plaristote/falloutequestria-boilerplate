@@ -1,0 +1,19 @@
+{
+    "dialogs": {
+        "junkville/intendant": {
+            "ask-about-scavengers": "Hey ! I found a group of scavengers stuck in the tunnels below the junkyard !",
+            "ask-ramsom-for-missing-scavengers": "C'est pour des fouilleurs disparus. Je les ai trouvés, mais ils sont tenus captifs par des chiens à diamant. Ils exigent des soins en échange.",
+            "ask-ransom-for-missing-scavengers-with-cook-approval": "C'est pour les fouilleurs disparus. Ils sont vivants, mais tenus captis. Raggedy Randy pense qu'il faut payer la rançon.",
+            "ask-scavenger-ransom": "I need supplies. A medical kit and 5 health potions. Can you help ?",
+            "scavenger-negociate-accept": "Of course... what do you want ?",
+            "scavenger-negociate-give-up": "Forget about it, I'm just gonna handle this myself.",
+            "scavengers-negociate-insist": "Lives are at stake, Facade. If we wait to long, there won't be anything to negociate anymore, except a bunch of dead bodies.",
+            "scavengers/accept-ransom": "Ok. I won't argue. But it's a huge blow on our stocks, you know ? I sure hope we'll get something out of it.",
+            "scavengers/cannot-accept-ransom": "<i>She goes through her inventory, and looks up to you, visibly annoyed:</i>\n<br><br>\nI'd like to help, but I don't have what you're asking for. I'm sorry... I guess we have no choice but to let them die... fuck.",
+            "scavengers/negociate": "Okay. This is going to seriously mess up our stocks though... we might need these supplies soon, and I'll have a hard time replenishing. I'm not going to let people die. But I want something in return.",
+            "scavengers/ransom-entry": "I see. You either intend on surviving something stupid, or you need to save somepony who failed to do so. What are you up to ?",
+            "scavengers/sub-quest": "The scavengers are important, but I can't risk sacrificing our resources without some kind of warranty. I will need to resupply.<br><br>\nAnd I know how to do it. Rathian, who lives in the workshop in front of here, has entire crate of electronical devices... but we can't get him to share these resources. A Steel Ranger thing, probably, they don't like sharing tech.<br><br>\nIf you get me a crate of electronical devices, I will be able to sell it to the caraveneers, and buy back the supplies the diamond dogs want from us.",
+            "scavengers/towards-cook": "Missing scavengers ? Holy crap. You should bring that up to Raggedy Randy. He's at the inn, he's been worried sick about them !"
+        }
+    }
+}

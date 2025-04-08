@@ -1,0 +1,339 @@
+{
+    "answers": {
+        "accept-scavenger-trade": {
+            "text": "accept-scavenger-trade"
+        },
+        "ask-about-dogs": {
+            "state": "about-dogs",
+            "text": "ask-about-dogs"
+        },
+        "bring-up-negociations": {
+            "availableHook": "negociateCanBringUp",
+            "hook": "negociateBringUp",
+            "text": "bring-up-negociations"
+        },
+        "came-seeking-scavengers": {
+            "availableHook": "hasLostScavengerQuest",
+            "state": "scavengers/about",
+            "text": "came-seeking-scavengers"
+        },
+        "go-to-the-pen": {
+            "hook": "sendPlayerToPen",
+            "text": "go-to-the-pen"
+        },
+        "intimidation-free-scavengers": {
+            "availableHook": "knowsAboutDisappearedScavengers",
+            "hook": "intimidateIntoFreeingScavengers",
+            "text": "intimidation-free-scavengers"
+        },
+        "leave": {
+            "hook": "tryToLeave",
+            "text": "leave"
+        },
+        "motives-followup": {
+            "state": "scavengers/motives",
+            "text": "motives-followup"
+        },
+        "motives-question": {
+            "availableHook": "scavengerCanQuestionCaptivity",
+            "state": "scavengers/convince-success",
+            "text": "motives-question"
+        },
+        "negociate-accept": {
+            "availableHook": "negociateClarified",
+            "state": "negociations/on-accepted",
+            "text": "negociate-accept"
+        },
+        "negociate-ask-clarifications": {
+            "state": "negociations/clarifications",
+            "text": "negociate-ask-clarifications"
+        },
+        "negociate-ask-skepticism": {
+            "state": "negociations/skepticism",
+            "text": "negociate-ask-skepticism"
+        },
+        "negociate-push-hiding": {
+            "state": "negociations/pushed-to-hide",
+            "text": "negociate-push-hiding"
+        },
+        "negociate-push-hiding-2": {
+            "state": "negociations/pushed-to-hide",
+            "text": "negociate-push-hiding-2"
+        },
+        "negociate-reject-sarcastically": {
+            "text": "negociate-reject-sarcastically"
+        },
+        "negociation-suggest-waiting": {
+            "state": "negociations/entry",
+            "text": "negociation-suggest-waiting"
+        },
+        "negociation-why-me": {
+            "state": "negociations/entry",
+            "text": "negociation-why-me"
+        },
+        "push-to-hide-dolly": {
+            "state": "negociations/entry",
+            "text": "push-to-hide-dolly"
+        },
+        "push-to-hide-further": {
+            "state": "negociations/hiding",
+            "text": "push-to-hide-further"
+        },
+        "push-to-hide-wait": {
+            "state": "negociations/entry",
+            "text": "push-to-hide-wait"
+        },
+        "ransom-entry-healed-dogs": {
+            "availableHook": "scavengerHealedWoundedDogs",
+            "state": "scavengers/on-dogs-healed",
+            "text": "ransom-entry-healed-dogs"
+        },
+        "ransom-entry-not-yet": {
+            "state": "scavengers/on-ransom-not-yet",
+            "text": "ransom-entry-not-yet"
+        },
+        "ransom-entry-payup": {
+            "availableHook": "scavengerCanPayRansom",
+            "state": "scavengers/on-ransom-received",
+            "text": "ransom-entry-payup"
+        },
+        "ransom-entry-turncoat": {
+            "state": "scavengers/on-ransom-turnedcoat",
+            "text": "ransom-entry-turncoat"
+        },
+        "ransom-received-next": {
+            "hook": "scavengerOnRansomNext",
+            "text": "ransom-received-next"
+        },
+        "reject-scavenger-trade": {
+            "state": "scavengers/on-reject-trade",
+            "text": "reject-scavenger-trade"
+        },
+        "scavengers-ask-demands": {
+            "state": "scavengers/motives",
+            "text": "scavengers-ask-demands"
+        },
+        "scavengers-ask-why-captives": {
+            "state": "scavengers/about",
+            "text": "scavengers-ask-why-captives"
+        },
+        "start-fight": {
+            "hook": "startCombat",
+            "text": "start-fight"
+        }
+    },
+    "entryPoint": "first-meeting",
+    "states": {
+        "about-dogs": {
+            "answers": [
+            ],
+            "text": "about-dogs"
+        },
+        "entry": {
+            "answers": [
+                "bring-up-negociations",
+                "ask-about-dogs",
+                "leave"
+            ],
+            "text": "entry"
+        },
+        "first-meeting": {
+            "answers": [
+                "came-seeking-scavengers",
+                "intimidation-free-scavengers",
+                "ask-about-dogs",
+                "leave"
+            ],
+            "hook": "",
+            "text": "first-meeting"
+        },
+        "negociations/clarifications": {
+            "answers": [
+                "negociate-accept",
+                "negociate-ask-skepticism",
+                "negociate-push-hiding-2",
+                "negociate-reject-sarcastically"
+            ],
+            "hook": "negociateClarifications",
+            "text": "negociations/clarifications"
+        },
+        "negociations/entry": {
+            "answers": [
+                "negociate-accept",
+                "negociate-ask-clarifications",
+                "negociate-ask-skepticism",
+                "negociate-push-hiding",
+                "negociate-reject-sarcastically"
+            ],
+            "hook": "negociateEntry",
+            "mood": "neutral",
+            "text": "negociations/entry"
+        },
+        "negociations/entry-alt": {
+            "answers": [
+            ],
+            "hook": "",
+            "text": "negociations/entry-alt"
+        },
+        "negociations/hiding": {
+            "answers": [
+            ],
+            "hook": "",
+            "mood": "sad",
+            "text": "negociations/hiding"
+        },
+        "negociations/on-accepted": {
+            "answers": [
+            ],
+            "hook": "negociateOnAccepted",
+            "mood": "smile",
+            "text": "negociations/on-accepted"
+        },
+        "negociations/pushed-to-hide": {
+            "answers": [
+                "push-to-hide-wait",
+                "push-to-hide-further",
+                "push-to-hide-dolly"
+            ],
+            "hook": "",
+            "mood": "dubious",
+            "text": "negociations/pushed-to-hide"
+        },
+        "negociations/skepticism": {
+            "answers": [
+                "negociate-accept",
+                "negociation-why-me",
+                "negociation-suggest-waiting",
+                "negociate-reject-sarcastically"
+            ],
+            "hook": "",
+            "mood": "smile",
+            "text": "negociations/skepticism"
+        },
+        "negociations/why-dolly-hide": {
+            "answers": [
+            ],
+            "hook": "",
+            "text": "negociations/why-dolly-hide"
+        },
+        "negociations/why-not-wait": {
+            "answers": [
+            ],
+            "text": "negociations/why-not-wait"
+        },
+        "negociations/why-player": {
+            "answers": [
+            ],
+            "text": "negociations/why-player"
+        },
+        "scavengers/about": {
+            "answers": [
+                "scavengers-ask-why-captives",
+                "scavengers-ask-demands",
+                "intimidation-free-scavengers"
+            ],
+            "hook": "scavengerAbout",
+            "text": "scavengers/about"
+        },
+        "scavengers/convince-success": {
+            "answers": [
+            ],
+            "hook": "scavengerConvincedToRelease",
+            "mood": "dubious",
+            "text": "scavengers/convince-success"
+        },
+        "scavengers/intimidation-failure": {
+            "answers": [
+            ],
+            "hook": "",
+            "text": "scavengers/intimidation-failure"
+        },
+        "scavengers/intimidation-success": {
+            "answers": [
+            ],
+            "text": "scavengers/intimidation-success"
+        },
+        "scavengers/introduction": {
+            "answers": [
+            ],
+            "hook": "",
+            "text": "scavengers/introduction"
+        },
+        "scavengers/motives": {
+            "answers": [
+                "accept-scavenger-trade",
+                "motives-question",
+                "motives-followup",
+                "reject-scavenger-trade"
+            ],
+            "hook": "scavengerMotives",
+            "mood": "cocky",
+            "text": "scavengers/motives"
+        },
+        "scavengers/on-dogs-healed": {
+            "answers": [
+            ],
+            "hook": "",
+            "text": "scavengers/on-dogs-healed"
+        },
+        "scavengers/on-motives-followup": {
+            "answers": [
+            ],
+            "hook": "",
+            "text": "scavengers/on-motives-followup"
+        },
+        "scavengers/on-ransom-not-yet": {
+            "answers": [
+            ],
+            "hook": "",
+            "text": "scavengers/on-ransom-not-yet"
+        },
+        "scavengers/on-ransom-received": {
+            "answers": [
+                "ransom-received-next"
+            ],
+            "hook": "scavengerOnRansomReceived",
+            "mood": "smile",
+            "text": "scavengers/on-ransom-received"
+        },
+        "scavengers/on-ransom-received-free-scavengers": {
+            "answers": [
+                "ransom-received-next"
+            ],
+            "hook": "",
+            "text": "scavengers/on-ransom-received-free-scavengers"
+        },
+        "scavengers/on-ransom-turnedcoat": {
+            "answers": [
+            ],
+            "hook": "startCombat",
+            "mood": "angry",
+            "text": "scavengers/on-ransom-turnedcoat"
+        },
+        "scavengers/on-reject-trade": {
+            "answers": [
+                "accept-scavenger-trade",
+                "go-to-the-pen",
+                "start-fight"
+            ],
+            "hook": "scavengerRejectedTrade",
+            "text": "scavengers/on-reject-trade"
+        },
+        "scavengers/ransom-entry": {
+            "answers": [
+                "ransom-entry-payup",
+                "ransom-entry-healed-dogs",
+                "ransom-entry-turncoat",
+                "ransom-entry-not-yet"
+            ],
+            "hook": "",
+            "text": "scavengers/ransom-entry"
+        },
+        "scavengers/why": {
+            "answers": [
+            ],
+            "hook": "",
+            "text": "scavengers/why"
+        }
+    }
+}

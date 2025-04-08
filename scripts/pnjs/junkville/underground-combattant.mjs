@@ -66,10 +66,12 @@ export class UndergroundCombattant extends CharacterBehaviour {
       this.model.actionQueue.pushReach(target);
       this.model.actionQueue.start();
     }
-    if (!this.model.actionQueue.isEmpty())
+    if (!this.model.actionQueue.isEmpty()) {
       return true;
-    else if (level.combat)
+    }
+    else if (level.combat) {
       level.passTurn(this.model)
+    }
     return false;
   }
 
