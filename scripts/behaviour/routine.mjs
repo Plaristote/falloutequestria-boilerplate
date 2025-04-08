@@ -119,7 +119,7 @@ export class RoutineComponent {
     this.scheduleNextRoutineAction();
     if (callback) {
       if (typeof callback == "function")
-        callback();
+        callback(this.parent.model);
       else if (typeof callback == "string" && typeof this.parent[callback] == "function")
         this.parent[callback]();
       else

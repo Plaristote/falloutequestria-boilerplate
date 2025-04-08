@@ -46,9 +46,9 @@ export class ShopOwner extends CharacterBehaviour {
 
   onActionQueueCompleted() {
     if (!level.combat) {
-      if (this.shop.getScriptObject().opened && !this.isAtWork())
+      if (this.shop.script.opened && !this.isAtWork())
         this.model.tasks.addTask("goToWork", 1000);
-      if (!this.shop.getScriptObject().opened && !this.isAtHome())
+      if (!this.shop.script.opened && !this.isAtHome())
         this.model.tasks.addTask("goToSleep", 1000);
     }
     super.onActionQueueCompleted();
