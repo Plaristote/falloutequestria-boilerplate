@@ -112,24 +112,6 @@
         "xp-gain": "You gained {{xp}} experience points.",
         "training": "You trained {{skill}} and gained {{amount}} skill points."
     },
-    "options": {
-        "title": {
-          "interface": "Interface",
-	  "sounds": "Audio",
-	  "gameplay": "Gameplay"
-        },
-        "combatSpeed": "Combat speed",
-        "fullscreen": "Full screen",
-        "locale": "Language",
-        "movement": {
-            "alwaysRun": "Always run",
-            "alwaysWalk": "Always walk",
-            "mixed": "Run on double-click"
-        },
-        "movementMode": "Movement mode",
-        "musicVolume": "Music volume",
-        "soundEffectsVolume": "Sound effects volume"
-    },
     "pipboy": {
         "Archives": "Archives",
         "Automap": "Automap",
