@@ -1,10 +1,14 @@
 import {DialogHelper} from "../helpers.mjs";
 import {skillContest} from "../../cmap/helpers/checks.mjs";
 import {requireQuest, QuestFlags} from "../../quests/helpers.mjs";
-import {areCaptorsDead} from "../../quests/junkvilleDumpsDisappeared.mjs";
+import {
+  areCaptorsDead,
+  hasFoundDisappearedPonies
+} from "../../quests/junkvilleDumpsDisappeared.mjs";
 import {
   startUndergroundBattle,
-  hasAltLeaderTakenOver
+  hasAltLeaderTakenOver,
+  hasMediationStarted
 } from "../../quests/junkvilleNegociateWithDogs.mjs";
 import {isHelpfulQuestAvailable} from "../../quests/junkville/findHelpful.mjs";
 
@@ -58,7 +62,7 @@ class Dialog extends DialogHelper {
 
   hasHauntedDumpQuest() {
     const quest = this.junkvilleDumpsDisappeared;
-    return quest && !quest.completed && !quest.failed;
+    return quest && ((!quest.completed && !quest.failed) || (!quest.isObjectiveCompleted("report-success")));
   }
 
   availableHauntedDumpQuest() {
@@ -90,15 +94,9 @@ class Dialog extends DialogHelper {
   
   hauntedDumpOnReport() {
     if (this.hauntedDumpAreCaptiveAllAlive()) {
-      return this.dialog.t("job-haunted-heap-on-report");
-    } else if (this.hauntedDumpAreCaptiveAllDead()) {
-      game.dataEngine.addReputation("junkville", -35);
-      return {
-        text: this.dialog.t("job-haunted-heap-on-report-lie"),
-        answers: []
-      };
+      return this.dialog.t("scavengers/report-freed");
     }
-    return this.dialog.t("job-haunted-heap-on-report-partial-success");
+    return this.dialog.t("scavengers/report-freed-with-dead");
   }
 
   hauntedHeapTakeReward() {
@@ -191,8 +189,8 @@ class Dialog extends DialogHelper {
 
   onDogsBattlePeacemaingAppease() {
     if (this.dogsBattleCanAppease())
-      return "dogs-battle-peacemaking-appeased";
-    return "dogs-battle-peacemaking-not-appeased";
+      return "dogs/battle/peacemaking-appeased";
+    return "dogs/battle/peacemaking-not-appeased";
   }
 
   onAskReward() {
@@ -235,6 +233,81 @@ class Dialog extends DialogHelper {
 
   startBattleWithoutPlayer() {
     this.dialog.npc.tasks.addTask("headTowardsBattle", 1500, 0);
+  }
+
+
+  // NEW VERSION SCAVENGER
+  onScavengerReport() {
+    if (this.hasFreedScavengers()) {
+      this.junkvilleDumpsDisappeared.completeObjective("report-success");
+      return "scavengers/report-freed";
+    } else if (requireQuest("junkvilleDumpsDisappeared").hasVariable("reportedScavengerFound")) {
+      return "scavengers/report-ransom"
+    }
+    return "scavengers/report";
+  }
+
+  scavengersKnowLocation() {
+    return hasFoundDisappearedPonies();
+  }
+
+  scavengersAllDead() {
+    return this.junkvilleDumpsDisappeared.script.captiveAllDead();
+  }
+
+  canConvinceToPayRansom() {
+    return game.player.statistics.speech > 70;
+  }
+
+  hasFreedScavengers() {
+    return this.junkvilleDumpsDisappeared.isObjectiveCompleted("save-captives");
+  }
+
+  scavengersRansomConvinced() {
+    game.playerParty.addExperience(50);
+    this.junkvilleDumpsDisappeared.setVariable("ransomApproved", 1);
+  }
+
+  reportMissingScavengers() {
+    requireQuest("junkvilleDumpsDisappeared").setVariable("reportedScavengerFound", 1);
+  }
+
+  // NEW VERSION NEGOCIATE
+  negociateCanTellDogsWantNegociate() {
+    return hasMediationStarted();
+  }
+
+  negociateTellDogsWantToNegociate() {
+    return this.hasFreedScavengers() ? "dogs/negociations/start-step-1" : "dogs/negociations/captives-not-freed";
+  }
+
+  negociateCanExposeDemandsNicely() {
+    return game.player.statistics.speech > 70;
+  }
+
+  negociationStart() {
+    this.negociationPoints = 0;
+  }
+
+  negociationIncreasePoints() {
+    this.negociationPoints += 1;
+  }
+
+  negociationDecreasePoints() {
+    this.negociationPoints -= 1;
+  }
+
+  negociationEnd() {
+    console.log("negociationEnd with", this.negociationPoints, "points.");
+    if (this.negociationPoints > 2)
+      return "dogs/negociations/step-5-convinced";
+    else if (this.negociationPoints < 1)
+      return "dogs/negociations/step-5-angered";
+    return "dogs/negociations/step-5-neutral";
+  }
+
+  negociationStartAssembly() {
+    this.negociationPoints
   }
 }
 

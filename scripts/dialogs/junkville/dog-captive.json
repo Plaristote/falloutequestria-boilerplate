@@ -57,13 +57,14 @@
         "breakout": {
             "answers": [
             ],
-            "hook": "",
+            "hook": "triggerGoToExit",
             "mood": "dubious",
-            "text": "breakout-fail"
+            "text": "breakout"
         },
         "breakout-fail": {
             "answers": [
             ],
+            "hook": "",
             "mood": "angry",
             "text": "breakout-fail"
         },

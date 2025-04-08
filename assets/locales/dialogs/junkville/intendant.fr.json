@@ -1,0 +1,35 @@
+{
+    "dialogs": {
+        "junkville/intendant": {
+            "about-celestial-device": "Un Appareil Célèste ? Je l'avais encore jamais entendue, celle-là. Mais j'imagine que c'est de la technologie d'avant guerre, non ? Tu devrais demander à Rathian. C'est un scribe des Steel Rangers. Il a installé un atelier par ici, ne me demande pas pourquoi. Si quelqu'un ici peut t'aider pour des histoires de technos d'avant-guerre, c'est bien lui. Tu le trouvera dans la maison qui est juste en face de toi quand tu sors de mon magasin.",
+            "about-leader": "Alors, les gens du coin aiment croire qu'ici, c'est une espèce d'utopie anarchiste, et que personne ne dirige. La vérité, c'est que tout le monde écoute Randy. C'est un bon gars, il tient l'auberge juste à côté, et il manque pas de charisme. C'est un peu le centre de notre communauté.<br>\nSi tu veux aider, va le voir : il sait probablement tout ce qui se passe dans le coin.",
+            "about-safety": "Ben, pour commencer, personne n'est spécialement responsable de la protection de la ville. Jusqu'à maintenant, les gens se protègent les uns les autres. Mais on est à la merci de la première bande de raiders qui passerait dans le coin.",
+            "about-town": "Tu es à junkville, une petite ville construite aux abords d'une vieille décharge.<br>\nC'est un peu chaotique, pas très sûr, mais les gens sont gentils, et la quantité incroyable de déchêts tout autour de nous représente une belle opportunités pour les marchands et les fouilleurs.",
+            "ask-about-scavengers": "Éh ! J'ai trouvé une bande de fouilleurs coincée dans les tunnels, sous la ville !",
+            "ask-celestial-device": "Je cherche quelque chose d'un peu spécial. Tu as déjà entendu parler d'un Appareil Célèste ?",
+            "ask-leader": "Je voudrais filer un coup de main. C'est qui le patron par ici ?",
+            "ask-ramsom-for-missing-scavengers": "C'est pour des fouilleurs disparus. Je les ai trouvés, mais ils sont tenus captifs par des chiens à diamant. Ils exigent des soins en échange.",
+            "ask-ransom-for-missing-scavengers-with-cook-approval": "C'est pour les fouilleurs disparus. Ils sont vivants, mais tenus captis. Raggedy Randy pense qu'il faut payer la rançon.",
+            "ask-safety": "Tu dis que ce lieu n'est pas sûr. Pourquoi ?",
+            "ask-scavenger-ransom": "J'ai besion de matériel. Un kit médical et 5 potions de soin.",
+            "ask-something-else": "Je voudrais te demander autre chose.",
+            "ask-town": "Qu'est-ce que tu peux me dire à propos de cette ville ?",
+            "end-ask": "C'est tout ce que je voulais savoir.",
+            "entry": "Salut, {{name}} ! Qu'est-ce qeu je peux faire pour toi aujourd'hui ?",
+            "introduce-player": "Salut ! Je suis {{name}}, et je cherche un Appareil Célèste.",
+            "introduction": "Salut, et bienvenue à Junkville ! Je suis Midnight Facade, et je gère les stocks de cette ville. Viens me voir si tu as besoin de quelque chose, et je te le vendrais ! Alors, qu'est-ce qui t'amène dans notre petit coin des terres de cristal ?",
+            "nothing-needed": "Je n'ai besoin de rien, je passais juste dire bonjour !",
+            "open-trade": "J'ai besoin de matériel. Qu'est-ce que tu as à vendre ?",
+            "scavenger-negociate-accept": "D'accord. De quoi as-tu besoin ?",
+            "scavenger-negociate-give-up": "Bah, oublie ce que j'ai dit. Je vais m'occuper de ça moi-même.",
+            "scavengers-negociate-insist": "Il s’agit de vies, Facade. Si on attend trop longtemps, on aura plus rien à négocier, sauf des cadavres.",
+            "scavengers/accept-ransom": "Bien. Je vais pas discuter. Mais c'est une sacrée perte pour nos stocks, tu sais ? On aura intérêt à en tirer quelque chose.",
+            "scavengers/cannot-accept-ransom": "<i>Elle fouille son inventaire, puis te regarde, visiblement ennuyée:</i>\n<br><br>\nJ'aimerais aider, mais je n'ai pas ce que tu me demande. Je suis désolée... je suppose qu'on a pas d'autre choix que de les laisser crever... merde.",
+            "scavengers/negociate": "T’as pas idée du merdier qu’on gère ici. Si je donne ça sans garantie, et que ça tourne mal, c’est ma responsabilité. Je vais pas les laisser crever, mais il va me falloir quelque chose en échange.",
+            "scavengers/ransom-entry": "Je vois. Soit tu as l'intention de survivre à quelque chose de stupide, soit tu veux sauver quelqu'un qui a essayé. Pourquoi t'as besoin de tout ça ?",
+            "scavengers/sub-quest": "Les fouilleurs sont précieux, mais je ne peux pas risquer de mettre nos ressources en jeu sans garantie. Je vais avoir besoin de re-stocker.<br><br>\nEt je sais comment faire. Rathian, ui vit dans l'atelier en face d'ici, détient des caisses entières de matériel éléctronique... impossible de le convaincre de les partager avec nous, pourtant. Un truc de Steel Rangers, sans doute, ils n'aiment pas partager la technologie.<br><br>\nSi tu m'obtiens une caisse de son matériel, je pourrais vendre tout ça aux caravaniers, et racheter le matériel médical que les chiens à diamant nous demandent.",
+            "scavengers/towards-cook": "Des fouilleurs disparus ? Merde. Tu devrais en parler à Raggedy Randy. Il est à l'auberge, il se faisait du soucis pour eux !",
+            "trade": "Voilà ce que j'ai à vendre, jette un oeil !"
+        }
+    }
+}

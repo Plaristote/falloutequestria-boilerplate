@@ -6,17 +6,21 @@ const questName = "junkvilleDumpsDisappeared";
 function hasQuest() { return game.quests.hasQuest(questName); }
 function getQuest() { return game.quests.getQuest(questName); }
 
+export function startLookingForDisappearedPonies() {
+  return requireQuest(questName);
+}
+
 export function isLookingForDisappearedPonies() {
   let result = false;
   if (hasQuest())
-    result = !getQuest().getScriptObject().captiveFound();
+    result = !getQuest().script.captiveFound();
   console.log(questName, "-> isLookingForDisappearedPonies?", result);
   return result;
 }
 
 export function hasFoundDisappearedPonies() {
   let result = false;
-  result = hasQuest() && getQuest().getScriptObject().captiveFound();
+  result = hasQuest() && getQuest().script.captiveFound();
   console.log(questName, "-> hasFoundDisappearedPonies?", result);
   return result;
 }
@@ -40,6 +44,19 @@ export function captiveReleaseAuthorized() {
 
 export function areCaptorsDead() {
   return game.hasVariable("junkvilleDogsWipedOut");
+}
+
+export function enableScavengerRansom(mode) {
+  getQuest().setVariable("ransom", mode);
+}
+
+export function skipScavengerRansom() {
+  getQuest().setVariable("ransomSkipped", 1);
+}
+
+export function dogsExpectingSupplies() {
+  const quest = getQuest();
+  return quest.hasVariable("ransom") && !quest.isObjectiveCompleted("bring-ransom");
 }
 
 export class JunkvilleDumpsDisappeared extends QuestHelper {
@@ -67,6 +84,37 @@ export class JunkvilleDumpsDisappeared extends QuestHelper {
     this.model.setVariable("killed-captives", value);
   }
 
+  get suppliesRequested() {
+    return this.model.hasVariable("ransom");
+  }
+
+  get ransomActive() {
+    return this.model.hasVariable("ransom") && this.model.getVariable("ransom") == "normal";
+  }
+
+  get ransomSkipped() {
+    return this.model.hasVariable("ransomSkipped");
+  }
+
+  get requiredSupplies() {
+    return { "medikit": 1, "healing-potion": 5 };
+  }
+
+  canInventoryProvideRequiredSupplies(inventory) {
+    return inventory.count("health-potion") >= 5 && inventory.count("doctor-bag") >= 1;
+  }
+
+  transferRequiredSupplies(inventorySource, inventoryTarget) {
+    if (inventorySource) {
+      inventorySource.removeItemOfType("health-potion", 5);
+      inventorySource.removeItemOfType("doctor-bag");
+    }
+    if (inventoryTarget) {
+      inventoryTarget.addItemOfType("health-potion", 5);
+      inventoryTarget.addItemOfType("doctor-bag");
+    }
+  }
+
   getObjectives() {
     const objectives = [];
 
@@ -75,6 +123,13 @@ export class JunkvilleDumpsDisappeared extends QuestHelper {
       success: this.captiveFound()
     });
     if (this.model.isObjectiveCompleted("find-disappeared")) {
+      if (this.ransomActive) {
+        objectives.push({
+          label: this.tr("bring-ransom"),
+          success: this.captiveAlive() && this.model.isObjectiveCompleted("bring-ransom"),
+          failed: !this.captiveAlive()
+        });
+      }
       objectives.push({
         label: this.tr("save-all-captives"),
         success: this.captiveAlive() && this.model.isObjectiveCompleted("save-captives"),
@@ -130,9 +185,13 @@ export class JunkvilleDumpsDisappeared extends QuestHelper {
   }
 
   completeObjective(name, success) {
+    console.log("JUNKVILLEDUMPSDISAPPEARED COMPLETEOBJECTIVE", name, success);
     if (name === "save-captives") {
       this.model.completed = true;
       this.model.failed = !success;
+    } else if (name === "bring-ransom" && success) {
+      const negociateQuest = requireQuest("junkvilleNegociateWithDogs");
+      negociateQuest.completeObjective("bring-medical-supplies");
     }
   }
 

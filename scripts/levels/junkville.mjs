@@ -32,10 +32,12 @@ class Level extends LevelBase {
   prepareCook() {
     const cook = game.uniqueCharacterStorage.getCharacter("junkville-cook");
 
-    if (cook && cook.getScriptObject().shouldBeAtJunkville()) {
+    if (cook && cook.script.shouldBeAtJunkville()) {
       game.uniqueCharacterStorage.loadCharacterToCurrentLevel("junkville-cook", 32, 6, 0);
       cook.setScript("junkville/cook.mjs");
       cook.movementMode = "walking";
+    } else {
+      console.log("Damned, where is cook ??");
     }
   }
 

@@ -30,11 +30,11 @@ class Dialog {
   wasReleaseAccepted() { return captiveReleaseAuthorized(); }
 
   triggerGoToExit() {
-    level.script.sendCaptivesToExit();
+    game.level.script.sendCaptivesToExit();
   }
 
   onBreakout() {
-    if (game.player.level > 2 && (game.player.statistics.strength > 8 || game.player.statistics.traits.indexOf("bruiser") >= 0))
+    if (game.player.statistics.level > 2 && (game.player.statistics.strength > 8 || game.player.statistics.traits.indexOf("bruiser") >= 0))
     {
       this.triggerGoToExit();
       return "breakout";

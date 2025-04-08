@@ -2,7 +2,8 @@
     "races": {
         "earth-pony": "Poney",
         "pegasus": "Pegasus",
-        "unicorn": "Licorne"
+        "unicorn": "Licorne",
+        "diamond-dog": "Chien à diamant"
     },
     "genders": {
         "female": "Femelle",

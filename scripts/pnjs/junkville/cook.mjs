@@ -1,9 +1,16 @@
 import {CharacterBehaviour} from "../character.mjs";
 import {requireQuest} from "../../quests/helpers.mjs";
+import {RoutineComponent} from "../../behaviour/routine.mjs";
+import {routine, initializeRoutineUser} from "./resident-routine.mjs";
 
 export class Cook extends CharacterBehaviour {
   constructor(model) {
     super(model);
+    this.routineComponent = new RoutineComponent(this, routine);
+  }
+
+  initialize() {
+    initializeRoutineUser(this.model);
   }
 
   onDied() {
@@ -15,6 +22,10 @@ export class Cook extends CharacterBehaviour {
     if (this.model.tasks.hasTask("headTowardsBattle"))
       return ;
     return "junkville/cook";
+  }
+
+  get bed() {
+    return level.findObject("inn.floor.owner-room.bed");
   }
 
   shouldBeAtJunkville() {

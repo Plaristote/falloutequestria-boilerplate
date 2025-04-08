@@ -13,6 +13,10 @@
             "state": "job-haunted-heap-details",
             "text": "accept-haunting-heap"
         },
+        "ask-about-facade": {
+            "state": "scavengers/about-facade",
+            "text": "ask-about-facade"
+        },
         "ask-about-leader": {
             "state": "town-leader",
             "text": "ask-about-leader"
@@ -35,6 +39,7 @@
             "text": "ask-meal"
         },
         "ask-payment": {
+            "state": "job-haunted-heap-reward",
             "text": "ask-payment"
         },
         "ask-something-else": {
@@ -52,12 +57,12 @@
         "battle-reward-negociate": {
             "availableHook": "canAskBetterReward",
             "hook": "askBetterReward",
-            "state": "dogs-battle-ask-reward",
+            "state": "dogs/battle/ask-reward",
             "text": "battle-reward-negociate"
         },
         "dogs-battle-impossible-all-dead": {
             "availableHook": "dogsAlreadyDead",
-            "state": "dogs-battle-canceled",
+            "state": "dogs/battle/canceled",
             "text": "dogs-battle-impossible-all-dead"
         },
         "dogs-battle-join-gladly": {
@@ -65,7 +70,7 @@
             "text": "dogs-battle-join-gladly"
         },
         "dogs-battle-join-money": {
-            "state": "dogs-battle-ask-reward",
+            "state": "dogs/battle/ask-reward",
             "text": "dogs-battle-join-money"
         },
         "dogs-battle-join-reward": {
@@ -73,7 +78,7 @@
             "text": "dogs-battle-join-reward"
         },
         "dogs-battle-peace": {
-            "state": "dogs-battle-peacemaking",
+            "state": "dogs/battle/peacemaking",
             "text": "dogs-battle-peace"
         },
         "dogs-battle-peacemaking-come": {
@@ -82,9 +87,9 @@
         },
         "dogs-battle-peacemaking-convince": {
             "hook": "onDogsBattlePeacemakingAppease",
-            "state": "dogs-battle-peacemaking-not-appeased",
+            "state": "dogs/battle/peacemaking-not-appeased",
             "text": "dogs-battle-peacemaking-convince-success",
-            "textHook": "undefined"
+            "textHook": "dogsBattlePeacemakingLine"
         },
         "dogs-battle-peacemaking-exit": {
             "text": "dogs-battle-peacemaking-exit"
@@ -113,8 +118,11 @@
         },
         "dogs-mediation-start": {
             "availableHook": "hasDogMediationQuest",
-            "state": "dogs-mediation-entry",
+            "state": "dogs/negociations/entry",
             "text": "dogs-mediation-start"
+        },
+        "dogs-negociate-cancel": {
+            "text": "dogs-negociate-cancel"
         },
         "dogs-negociation-trigger-ask-hostage-release": {
             "hook": "onDogsMediationMustRelease",
@@ -122,7 +130,6 @@
         },
         "dogs-warpath-trigger": {
             "availableHook": "dogsStillAlive",
-            "state": "dogs-battle-start",
             "text": "dogs-warpath-trigger"
         },
         "dogs-warpath-trigger-no-involvment": {
@@ -146,7 +153,8 @@
         },
         "job-haunted-heap-report-trigger": {
             "availableHook": "hasHauntedDumpQuest",
-            "state": "job-haunted-heap-report",
+            "hook": "onScavengerReport",
+            "state": "scavengers/report",
             "text": "job-haunted-heap-report-trigger"
         },
         "job-haunted-heap-tell-about-dogs": {
@@ -156,17 +164,81 @@
         },
         "job-haunted-heap-tell-about-saved": {
             "availableHook": "hauntedDumpDisappearedDone",
-            "state": "job-haunted-heap-on-report",
             "text": "job-haunted-heap-tell-about-saved"
         },
         "just-passing-by": {
             "text": "just-passing-by"
         },
+        "leave-ok": {
+            "text": "leave-ok"
+        },
         "meal-reject": {
             "text": "meal-reject"
         },
+        "negociate-explain-demands": {
+            "state": "dogs/negociations/start-step-3-2",
+            "text": "negociate-explain-demands"
+        },
+        "negociate-explain-demands-advanced": {
+            "availableHook": "negociateCanExposeDemandsNicely",
+            "hook": "negociationIncreasePoints",
+            "state": "dogs/negociations/start-step-3-2",
+            "text": "negociate-explain-demands-advanced"
+        },
+        "negociate-step1-anger": {
+            "state": "dogs/negociations/step-1-angered",
+            "text": "negociate-step1-anger"
+        },
+        "negociate-step1-convince": {
+            "state": "dogs/negociations/step-1-convinced",
+            "text": "negociate-step1-convince"
+        },
+        "negociate-step1-neutral": {
+            "state": "dogs/negociations/step-1-neutral",
+            "text": "negociate-step1-neutral"
+        },
+        "negociate-step2-anger": {
+            "state": "dogs/negociations/step-2-angered",
+            "text": "negociate-step2-anger"
+        },
+        "negociate-step2-convince": {
+            "state": "dogs/negociations/step-2-convinced",
+            "text": "negociate-step2-convince"
+        },
+        "negociate-step2-neutral": {
+            "state": "dogs/negociations/step-2-neutral",
+            "text": "negociate-step2-neutral"
+        },
+        "negociate-to-step-2": {
+            "state": "dogs/negociations/start-step-2",
+            "text": "negociate-next"
+        },
+        "negociate-to-step-3": {
+            "state": "dogs/negociations/start-step-3",
+            "text": "negociate-next"
+        },
+        "negociate-to-step-4": {
+            "state": "dogs/negociations/start-step-4",
+            "text": "negociate-next"
+        },
+        "negociate-to-step-5": {
+            "hook": "negociationEnd",
+            "state": "dogs/negociations/step-5-neutral",
+            "text": "negociate-next"
+        },
+        "negociate-to-warpath": {
+            "state": "dogs/battle/start",
+            "text": "negociate-next"
+        },
+        "negociation-ask-about-assembly": {
+            "state": "dogs/negociations/about-assembly",
+            "text": "negociation-ask-about-assembly"
+        },
         "nothing-new": {
             "text": "nothing-new"
+        },
+        "ok-and-leave": {
+            "text": "ok-and-leave"
         },
         "report-dog-captives": {
             "state": "dogs-warpath",
@@ -176,6 +248,72 @@
             "state": "dogs-warpath",
             "text": "report-dog-hostages"
         },
+        "scavenger-convince-ransom": {
+            "availableHook": "canConvinceToPayRansom",
+            "state": "scavengers/ransom-convinced",
+            "text": "scavenger-convince-ransom"
+        },
+        "scavenger-convince-ransom-fail": {
+            "availableHook": "!canConvinceToPayRansom",
+            "state": "scavengers/ransom-war",
+            "text": "scavenger-convince-ransom-fail"
+        },
+        "scavenger-convince-sarcasm": {
+            "state": "scavengers/ransom-not-convined",
+            "text": "scavenger-convince-sarcasm"
+        },
+        "scavenger-ransom-give-up": {
+            "state": "scavengers/on-ransom-give-up",
+            "text": "scavenger-ransom-give-up"
+        },
+        "scavenger-ransom-more-time": {
+            "text": "scavenger-ransom-more-time"
+        },
+        "scavenger-report-cancel": {
+            "text": "scavenger-report-cancel"
+        },
+        "scavengers-asked-ransom": {
+            "availableHook": "scavengersKnowLocation",
+            "hook": "reportMissingScavengers",
+            "state": "scavengers/ransom-intro",
+            "text": "scavengers-asked-ransom"
+        },
+        "scavengers-saved-convinced": {
+            "availableHook": "hasFreedScavengers",
+            "hook": "reportMissingScavengers",
+            "state": "scavengers/convinced-dogs",
+            "text": "scavengers-saved-convinced"
+        },
+        "scavengers-tell-theyre-dead": {
+            "availableHook": "scavengersAllDead",
+            "hook": "reportMissingScavengers",
+            "state": "scavengers/on-death-report",
+            "text": "scavengers-tell-theyre-dead"
+        },
+        "step-3-anger": {
+            "state": "dogs/negociations/step-3-angered",
+            "text": "step-3-anger"
+        },
+        "step-3-convince": {
+            "state": "dogs/negociations/step-3-convinced",
+            "text": "step-3-convince"
+        },
+        "step-3-neutral": {
+            "state": "dogs/negociations/step-3-neutral",
+            "text": "step-3-neutral"
+        },
+        "step-4-anger": {
+            "state": "dogs/negociations/step-4-angered",
+            "text": "step-4-anger"
+        },
+        "step-4-convince": {
+            "state": "dogs/negociations/step-4-convinced",
+            "text": "step-4-convince"
+        },
+        "step-4-neutral": {
+            "state": "dogs/negociations/step-4-neutral",
+            "text": "step-4-neutral"
+        },
         "take-meal": {
             "text": "take-meal"
         },
@@ -184,11 +322,26 @@
         },
         "take-meal-stew": {
             "text": "take-meal-stew"
+        },
+        "tell-dogs-want-to-negociate": {
+            "availableHook": "negociateCanTellDogsWantNegociate",
+            "hook": "negociateTellDogsWantToNegociate",
+            "text": "tell-dogs-want-to-negociate"
+        },
+        "to-scavenger-war": {
+            "state": "dogs/battle/start",
+            "text": "to-scavenger-war"
         }
     },
     "entryPoint": "entry",
     "states": {
-        "dogs-battle-ask-reward": {
+        "dogs-get-reward": {
+            "answers": [
+            ],
+            "hook": "giveBattleReward",
+            "text": "dogs-get-reward"
+        },
+        "dogs/battle/ask-reward": {
             "answers": [
                 "battle-reward-negociate",
                 "dogs-battle-join-reward",
@@ -197,34 +350,35 @@
             "hook": "onAskReward",
             "text": "dogs-battle-ask-reward"
         },
-        "dogs-battle-canceled": {
+        "dogs/battle/canceled": {
             "answers": [
             ],
             "hook": "dogsCompleteNegociationQuest",
             "mood": "smile",
             "text": "dogs-battle-canceled"
         },
-        "dogs-battle-peacemaking": {
+        "dogs/battle/peacemaking": {
             "answers": [
                 "dogs-battle-peacemaking-convince",
                 "dogs-battle-peacemaking-come",
                 "dogs-battle-peacemaking-exit"
             ],
+            "hook": "",
             "text": "dogs-battle-peacemaking"
         },
-        "dogs-battle-peacemaking-appeased": {
+        "dogs/battle/peacemaking-appeased": {
             "answers": [
             ],
             "text": "dogs-battle-peacemaking-appeased"
         },
-        "dogs-battle-peacemaking-not-appeased": {
+        "dogs/battle/peacemaking-not-appeased": {
             "answers": [
                 "dogs-warpath-trigger"
             ],
             "hook": "",
             "text": "dogs-battle-peacemaking-not-appeased"
         },
-        "dogs-battle-start": {
+        "dogs/battle/start": {
             "answers": [
                 "dogs-battle-join-gladly",
                 "dogs-battle-join-money",
@@ -232,64 +386,193 @@
                 "dogs-battle-peace",
                 "dogs-battle-reject-alt"
             ],
+            "hook": "",
             "text": "dogs-battle-start"
         },
-        "dogs-get-reward": {
+        "dogs/negociations/about-assembly": {
             "answers": [
-            ],
-            "hook": "giveBattleReward",
-            "text": "dogs-get-reward"
-        },
-        "dogs-mediation-entry": {
-            "answers": [
-                "dogs-mediate-trade",
-                "dogs-mediate-zone",
-                "dogs-mediate-war"
-            ],
-            "hook": "onDogMediationEntry",
-            "text": "dogs-mediation-reentry"
-        },
-        "dogs-negociation-accept": {
-            "answers": [
-            ],
-            "hook": "mediationAccepted",
-            "text": "dogs-negociation-accept-trade"
-        },
-        "dogs-negociation-disappeared": {
-            "answers": [
-                "dogs-negociation-trigger-ask-hostage-release"
             ],
             "hook": "",
-            "text": "dogs-negociation-disappeared"
+            "mood": "neutral",
+            "text": "dogs/negociations/about-assembly"
         },
-        "dogs-negociation-failed": {
+        "dogs/negociations/captives-not-freed": {
             "answers": [
-                "dogs-warpath-trigger"
-            ],
-            "text": "dogs-negociation-failed"
-        },
-        "dogs-negociation-hostages": {
-            "answers": [
-                "dogs-negociation-trigger-ask-hostage-release"
             ],
             "hook": "",
-            "text": "dogs-negociation-hostages"
+            "mood": "angry",
+            "text": "dogs/negociations/captives-not-freed"
         },
-        "dogs-negociation-killed": {
+        "dogs/negociations/entry": {
             "answers": [
-                "dogs-warpath-trigger"
-            ],
-            "text": "dogs-negociation-killed"
-        },
-        "dogs-warpath": {
-            "answers": [
-                "dogs-warpath-trigger",
-                "dogs-battle-impossible-all-dead",
-                "dogs-mediate-trade",
-                "dogs-mediate-zone"
+                "tell-dogs-want-to-negociate",
+                "dogs-negociate-cancel"
             ],
             "hook": "",
-            "text": "dogs-warpath"
+            "text": "dogs/negociations/entry"
+        },
+        "dogs/negociations/start-step-1": {
+            "answers": [
+                "negociate-step1-neutral",
+                "negociate-step1-anger",
+                "negociate-step1-convince"
+            ],
+            "hook": "negociationStart",
+            "mood": "dubious",
+            "text": "dogs/negociations/start-step-1"
+        },
+        "dogs/negociations/start-step-2": {
+            "answers": [
+                "negociate-step2-anger",
+                "negociate-step2-neutral",
+                "negociate-step2-convince"
+            ],
+            "text": "dogs/negociations/start-step-2"
+        },
+        "dogs/negociations/start-step-3": {
+            "answers": [
+                "negociate-explain-demands-advanced",
+                "negociate-explain-demands"
+            ],
+            "hook": "",
+            "text": "dogs/negociations/start-step-3"
+        },
+        "dogs/negociations/start-step-3-2": {
+            "answers": [
+                "step-3-anger",
+                "step-3-convince",
+                "step-3-neutral"
+            ],
+            "text": "dogs/negociations/start-step-3-2"
+        },
+        "dogs/negociations/start-step-4": {
+            "answers": [
+                "step-4-convince",
+                "step-4-neutral",
+                "step-4-anger"
+            ],
+            "hook": "",
+            "text": "dogs/negociations/start-step-4"
+        },
+        "dogs/negociations/step-1-angered": {
+            "answers": [
+                "negociate-to-step-2"
+            ],
+            "hook": "negociationDecreasePoints",
+            "mood": "angry",
+            "text": "dogs/negociations/step-1-angered"
+        },
+        "dogs/negociations/step-1-convinced": {
+            "answers": [
+                "negociate-to-step-2"
+            ],
+            "hook": "negociationIncreasePoints",
+            "mood": "smile",
+            "text": "dogs/negociations/step-1-convinced"
+        },
+        "dogs/negociations/step-1-neutral": {
+            "answers": [
+                "negociate-to-step-2"
+            ],
+            "hook": "",
+            "mood": "neutral",
+            "text": "dogs/negociations/step-1-neutral"
+        },
+        "dogs/negociations/step-2-angered": {
+            "answers": [
+                "negociate-to-step-3"
+            ],
+            "hook": "negociationDecreasePoints",
+            "mood": "angry",
+            "text": "dogs/negociations/step-2-angered"
+        },
+        "dogs/negociations/step-2-convinced": {
+            "answers": [
+                "negociate-to-step-3"
+            ],
+            "hook": "negociationIncreasePoints",
+            "mood": "smile",
+            "text": "dogs/negociations/step-2-convinced"
+        },
+        "dogs/negociations/step-2-neutral": {
+            "answers": [
+                "negociate-to-step-3"
+            ],
+            "hook": "",
+            "mood": "neutral",
+            "text": "dogs/negociations/step-2-neutral"
+        },
+        "dogs/negociations/step-3-angered": {
+            "answers": [
+                "negociate-to-step-4"
+            ],
+            "hook": "negociationDecreasePoints",
+            "mood": "angry",
+            "text": "dogs/negociations/step-3-angered"
+        },
+        "dogs/negociations/step-3-convinced": {
+            "answers": [
+                "negociate-to-step-4"
+            ],
+            "hook": "negociationIncreasePoints",
+            "mood": "smile",
+            "text": "dogs/negociations/step-3-convinced"
+        },
+        "dogs/negociations/step-3-neutral": {
+            "answers": [
+                "negociate-to-step-4"
+            ],
+            "hook": "",
+            "mood": "neutral",
+            "text": "dogs/negociations/step-3-neutral"
+        },
+        "dogs/negociations/step-4-angered": {
+            "answers": [
+                "negociate-to-step-5"
+            ],
+            "hook": "negociationDecreasePoints",
+            "mood": "angry",
+            "text": "dogs/negociations/step-4-angered"
+        },
+        "dogs/negociations/step-4-convinced": {
+            "answers": [
+                "negociate-to-step-5"
+            ],
+            "hook": "negociationIncreasePoints",
+            "mood": "smile",
+            "text": "dogs/negociations/step-4-convinced"
+        },
+        "dogs/negociations/step-4-neutral": {
+            "answers": [
+                "negociate-to-step-5"
+            ],
+            "hook": "",
+            "mood": "neutral",
+            "text": "dogs/negociations/step-4-neutral"
+        },
+        "dogs/negociations/step-5-angered": {
+            "answers": [
+                "negociate-to-warpath"
+            ],
+            "mood": "angry",
+            "text": "dogs/negociations/step-5-angered"
+        },
+        "dogs/negociations/step-5-convinced": {
+            "answers": [
+                "leave-ok",
+                "negociation-ask-about-assembly"
+            ],
+            "hook": "",
+            "mood": "smile",
+            "text": "dogs/negociations/step-5-convinced"
+        },
+        "dogs/negociations/step-5-neutral": {
+            "answers": [
+                "leave-ok",
+                "negociation-ask-about-assembly"
+            ],
+            "mood": "neutral",
+            "text": "dogs/negociations/step-5-neutral"
         },
         "entry": {
             "answers": [
@@ -312,30 +595,12 @@
             "hook": "",
             "text": "job-haunted-heap-details"
         },
-        "job-haunted-heap-on-report": {
+        "job-haunted-heap-reward": {
             "answers": [
-                "job-haunted-heap-accept-reward",
-                "job-haunted-heap-reject-reward"
-            ],
-            "hook": "hauntedDumpOnReport",
-            "text": "job-haunted-heap-on-report"
-        },
-        "job-haunted-heap-report": {
-            "answers": [
-                "job-haunted-heap-tell-about-dogs",
-                "job-haunted-heap-tell-about-saved",
-                "nothing-new"
+                "done-asking"
             ],
             "hook": "",
-            "text": "job-haunted-heap-report"
-        },
-        "job-haunted-heap-reporting-dogs": {
-            "answers": [
-                "report-dog-hostages",
-                "report-dog-captives"
-            ],
-            "hook": "reportDisappearedLocation",
-            "text": "job-haunted-heap-reporting-dogs"
+            "text": "job-haunted-heap-reward"
         },
         "jobs": {
             "answers": [
@@ -355,6 +620,90 @@
             ],
             "hook": "",
             "text": "menu"
+        },
+        "scavengers/about-facade": {
+            "answers": [
+                "ok-and-leave"
+            ],
+            "hook": "",
+            "text": "scavengers/about-facade"
+        },
+        "scavengers/convinced-dogs": {
+            "answers": [
+            ],
+            "hook": "",
+            "text": "scavengers/convinced-dogs"
+        },
+        "scavengers/on-death-report": {
+            "answers": [
+                "to-scavenger-war"
+            ],
+            "hook": "",
+            "text": "scavengers/on-death-report"
+        },
+        "scavengers/on-ransom-give-up": {
+            "answers": [
+                "to-scavenger-war"
+            ],
+            "text": "scavengers/on-ransom-give-up"
+        },
+        "scavengers/ransom-convinced": {
+            "answers": [
+                "ask-about-facade",
+                "ok-and-leave"
+            ],
+            "hook": "scavengersRansomConvinced",
+            "text": "scavengers/ransom-convinced"
+        },
+        "scavengers/ransom-intro": {
+            "answers": [
+                "scavenger-convince-ransom-fail",
+                "scavenger-convince-ransom",
+                "scavenger-convince-sarcasm"
+            ],
+            "hook": "",
+            "text": "scavengers/ransom-intro"
+        },
+        "scavengers/ransom-not-convined": {
+            "answers": [
+                "ask-about-facade",
+                "ok-and-leave"
+            ],
+            "hook": "",
+            "text": "scavengers/ransom-not-convined"
+        },
+        "scavengers/ransom-war": {
+            "answers": [
+                "to-scavenger-war"
+            ],
+            "hook": "",
+            "text": "scavengers/ransom-war"
+        },
+        "scavengers/report": {
+            "answers": [
+                "scavengers-saved-convinced",
+                "scavengers-asked-ransom",
+                "scavengers-tell-theyre-dead",
+                "scavenger-report-cancel"
+            ],
+            "hook": "",
+            "text": "scavengers/report"
+        },
+        "scavengers/report-freed": {
+            "answers": [
+                "job-haunted-heap-accept-reward",
+                "job-haunted-heap-reject-reward"
+            ],
+            "hook": "hauntedDumpOnReport",
+            "text": "scavengers/report-freed-with-dead"
+        },
+        "scavengers/report-ransom": {
+            "answers": [
+                "scavenger-ransom-more-time",
+                "scavenger-ransom-give-up"
+            ],
+            "hook": "",
+            "text": "scavengers/report-ransom"
         },
         "town-index": {
             "answers": [

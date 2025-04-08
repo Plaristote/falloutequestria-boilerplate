@@ -169,7 +169,8 @@
     "races": {
         "earth-pony": "Earth pony",
         "pegasus": "Pegasus",
-        "unicorn": "Unicorn"
+        "unicorn": "Unicorn",
+        "diamond-dog": "Diamond dog"
     },
     "reputation": {
         "disliked": "mistrustful",
