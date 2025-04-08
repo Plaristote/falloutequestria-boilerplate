@@ -142,24 +142,6 @@
         "repair-failure": "Tu n'arrive pas à réparer {{target}}.",
         "training": "Tu as entrainé ta compétence {{skill}} et gagné {{amount}} points dans cette compétence."
     },
-    "options": {
-        "title": {
-          "interface": "Interface",
-          "sounds": "Audio",
-          "gameplay": "Options de jeu"
-        },
-        "combatSpeed": "Vitesse des combats",
-        "fullscreen": "Plein écran",
-        "locale": "Langue",
-        "movement": {
-            "alwaysRun": "Toujours courrir",
-            "alwaysWalk": "Toujours marcher",
-            "mixed": "Double-clique pour courrir"
-        },
-        "movementMode": "Mode de déplacement",
-        "musicVolume": "Volume de la musique",
-        "soundEffectsVolume": "Volume des effets sonores"
-    },
     "pipboy": {
         "Archives": "Archives",
         "Automap": "Carte locale",
