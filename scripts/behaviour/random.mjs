@@ -1,5 +1,5 @@
 export function getValueFromRange(from, to) {
-  return from + Math.floor(Math.random() * (to + 1));
+  return from + dices.roll(to - from);
 }
 
 export function isJinxed(character) {
