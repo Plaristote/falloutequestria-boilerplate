@@ -98,7 +98,8 @@ export class RoutineComponent {
   }
 
   isActiveRoutine(name) {
-    return this.getCurrentRoutine().callback === name;
+    const routine = this.getCurrentRoutine();
+    return routine.name ? routine.name === name : routine.callback === name;
   }
 
   scheduleNextRoutineAction() {
@@ -106,9 +107,13 @@ export class RoutineComponent {
     this.model.tasks.addUniqueTask(updateRoutineTaskName, options[0].nextTrigger, 1);
   }
 
+  rescheduleRoutineAction() {
+    this.model.tasks.addTask(updateRoutineTaskName, 1234, 1);
+  }
+
   updateRoutine() {
     if (isBusy(this))
-      this.model.tasks.addUniqueTask(updateRoutineTaskName, 1234, 1);
+      this.rescheduleRoutineAction();
     else
       this.triggerRoutine();
   }
