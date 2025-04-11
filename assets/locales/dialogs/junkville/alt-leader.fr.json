@@ -1,0 +1,39 @@
+{
+    "dialogs": {
+        "junkville/dogs/alt-leader": {
+            "about-hatred": "Vous nous avez jeté là-dessous. Vous nous avez tué à la tâche. Volés nos gemmes. Beaucoup sont morts. Mais nous nous sommes libérés. Nous avons revendiqués ces tunnels, ceux-là même que les votres nous firent creuser. Ce lieu est un memento de ce que les poneys nous ont fait. Et je ne suis pas prête à les laisser roder ici à nouveau.",
+            "about-weak-leader": "Il a libéré les poneys... il te laisser aller et venir à ta guise... nous ne devons rien aux poneys. Et on ne va certainement pas vous garder loin de nos tunnels avec de la faiblesse. Si ça ne tenait qu'a moi, je te tuerais ici et maintenant.",
+            "about-weak-leader-intimidate": "C'est une bonne chose que ça ne tienne pas qu'à toi, finalement. Je t'aurais pliée en deux !",
+            "entry": "Qu'est-ce que tu fais dans mes tunnels, petite créature ? Tu t'es paumé ?",
+            "escape-entry": "Euh... je crois que je vais m'éloigner maintenant... en douceur.",
+            "fight-1on1": "Un duel ? Amusant ! Très bien ! J'espère que tu durera assez longtemps pour que je puisse me dégourdir !<br><i>[Elle crie]</i> Éh tout le monde ! C'est mon combat ! Personne ne s'en mêle !",
+            "fight-all": "Niquez-vous les bâtards !",
+            "fight-ask-1-on-1": "Pas avec tout tes petits potes. Qu'est-ce que tu dis de ça : juste toi et moi, en tête à tête ?",
+            "fight-intro": "Oh, mon petit poulain ! Tu veux qu'on se la donne ? Vas-y, continue à chercher la merde !",
+            "hatred-about-legacy": "Héritage ? Ha ! C'est vraiment un mot de poney, ça ! Les chiens ne laissent rien derrière eux. Ils vivent pour la meute, ils meurent pour la meute, et leurs os pourrissent avec la meute.",
+            "hatred-about-not-here": "Tout ça est plus grand que toi, ça concern les miens et les tiens. On ne peut pas connaître tous les poneys de la création ! Au mieux, on peut vous juger en fonction de ce que nous avons vus de votre espèce. Ambition, violence, tromperie, voilà tout ce que nous avons connus jusque-là. Tu pourrais être le poney le plus mignon de ce monde, et je ne pourrais quand même pas te faire confiance. Je ne veux pas prendre le risque d'avoir à trouver si chaque poney que nous rencontrons nous trahira ou pas.",
+            "hatred-about-stronger-together": "Devenir amis avec les poneys ? Nous serons plus forts ensemble ? Balivernes ! Écoute, petit poney. Il n'existera jamais un \"nous\" qui s'étendra au-delà de la meute, même si je pouvais pardonner ce que votre espèce à fait dans le passé. Nous nous protégeons, d'abord et avant tout. Les poneys en font autant. La famille passe toujours avant tout. Et la meute est ma famille.",
+            "hatred-back-to-index": "Je vois. Je voudrais parler un peu plus des chiens et des poneys.",
+            "hatred-convince": "Je comprends. Mais les poneys viendront malgré tout. Ils crapahutent partout sur la surface. Un jour, il en viendra plus que vous ne pourrez gérer.",
+            "hatred-convince-exit": "Je suis content qu'on ai pu s'entendre. Je vais y aller, maintenant.",
+            "hatred-convince-fail": "Tu commence à me fatiguer. Tes propos sont sans intelligence. Hors de ma vue, je ne veux plus entendre le son de ta voix.",
+            "hatred-convince-legacy": "Et que laissera-tu derrière toi, en vivant ainsi ? Quel héritage produira-tu ?",
+            "hatred-convince-legacy-alt": "Je veux bien le croire... mais je crois que la vie, cherche aussi à se perpéterer. Ne veux-tu pas créer un futur pour tes chiots ? Ne devrais-tu pas chercher l'avenir le plus sûr pour eux ?",
+            "hatred-convince-nice-exit": "Tu peux m'appeler {{name}} ! Je suis content d'avoir été utile ! À plus tard !",
+            "hatred-convince-peace": "Oui, ça marchera, un temps. Fido pense sur le temps long. Il n'y a pas de menace immédiate contre vous. Il est préférable de profiter des temps de paix, afin d'être plus fort et préparés quand viendra la prochaine menace. Fido n'est pas faible. Il est sage.",
+            "hatred-convince-route": "Et alors ? Je devrais arreter de luter, parce qu'un jour je perdrais ? Poney, ne comprends-tu pas ? C'est la vie. Nous vivons comme prédateurs, jusqu'au jour où nous devenons proie.",
+            "hatred-convince-route-2": "Perpétrer la meute est important, oui. Voilà pourquoi nous maintiendrons les poneys à distance aussi longtemps que possible. Pour qu'elle ne devienne jamais esclave ou viande.",
+            "hatred-convinced": "Je vois. Je n'avais pas considéré les choses de ce point de vue. Je suppose que ce vieux clébard fait toujours un bon chef de meute.<br>Merci pour ton avis. M'opposer à Fido ne ferait qu'affaiblir la meute. Tu as été d'une grande aide aux chiens à diamant, poney.",
+            "hatred-covnince-peace-alt": "Continuez de vous battre seuls, et ça vous arrivera maglré tout ! D'un autre côté, il y a des poneys là, dehors, qui n'ont aucune mauvaise intention à votre égard ! Devenez amis, et ensemble vous serez plus fort pour protéger la meute !",
+            "hatred-did-nothing": "Je suis à peu près sûr de pas avoir été là pour ceux. Je me souviendrais. Pourquoi tu généralise tous les poneys avec ceux qui vous ont fait ça ? Nous ne sommes pas tous les mêmes.",
+            "hatred-leave": "S'il n'y a rien que je puisse faire pour te convaincre... je vais y aller.",
+            "hatred-sacrastic": "Ah ! Zut ! C'était nous ! On est désolés, bien sûr ! Si on laissait ces vieilles histoires derrière nous, hein ? Soyons amis !",
+            "on-escape": "C'est ça. Va trotter ailleurs. Tant que tes petites jambes sont encore attachées à ton corps de lâche.",
+            "sarcastic-entry": "Alors, ça se dit pas petit \"paumé\", ça se dit poney. Po-ney. C'était supposé être intimidant ?",
+            "start-fight-sarcastic": "Génial ! Ta fourrure blanche sera du meilleur effet quand je la porterais en soirée !",
+            "start-mediation": "Je suis désolé de vous déranger. Mais je veux savoir. Pourquoi tant de haine envers les poneys ?",
+            "start-mediation-alt": "Mais, pourquoi ? Pourquoi détester tous les poneys ?",
+            "start-mediation-on-captive-released": "Je t'ai entendu traiter Fido de faible, devant tout le monde. Pourquoi as-tu dis ça ?"
+        }
+    }
+}

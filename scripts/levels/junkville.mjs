@@ -1,4 +1,5 @@
 import {LevelBase} from "./base.mjs";
+import {NegociationAssembly} from "../scenes/junkville/negociationAssembly.mjs";
 import {
   findHelpfulRescueRouteState,
   finalizeRescueRoute
@@ -45,11 +46,19 @@ class Level extends LevelBase {
     game.switchToLevel("junkville-underground", "battle-entry");
   }
 
+  get negociationScene() {
+    if (!this._negociationScene)
+      this._negociationScene = new NegociationAssembly(this);
+    return this._negociationScene;
+  }
+
   onLoaded() {
     this.prepareRathian();
     this.prepareCook();
     if (findHelpfulRescueRouteState() == 3)
       finalizeRescueRoute();
+    if (this.negociationScene.active)
+      console.log("Junkville: negociation assembly scene on-going");
   }
 
   onExit() {
@@ -62,6 +71,40 @@ class Level extends LevelBase {
     if (character && !character.hasVariable("disappeared")) {
       character.tasks.removeTask("prepareDisappear");
       character.tasks.addTask("prepareDisappear", 172800 * 1000, 1);
+    }
+  }
+
+  setupNegociationAssembly() {
+    const nextAssemblyEnd = game.timeManager.secondsUntilTime({ hour: 23 });
+    level.setVariable("nextAssemblyEnd", game.timeManager.getTimestamp() + nextAssemblyEnd);
+    level.tasks.addUniqueTask("waitForAssembly", 5 * 1000, 0);
+  }
+
+  waitForAssembly() {
+    if (game.timeManager.hour >= 21) {
+      const actors = this.negociationScene.generateActors();
+      const participants = level.find(character => {
+        return character.type == "Character" && character.statistics.faction === "junkville";
+      });
+
+      for (let i = 0 ; i < participants.length ; ++i) {
+        const participant = participants[i];
+        if (!participant.actionQueue.isEmpty())
+          return ;
+      }
+      if (actors.length >= participants.length - 1 || (game.timeManager.hour >= 21 && game.timeManager.minute >= 2)) {
+        level.tasks.removeTask("waitForAssembly");
+        this.negociationScene.initialize();
+      }
+      return ;
+    }
+    if (level.getVariable("nextAssemblyEnd") < game.timeManager.getTimestamp()) {
+      const participants = level.find(character => {
+        return character.type == "Character" && character.statistics.faction === "junkville";
+      });
+
+      level.tasks.removeTask("waitForAssembly");
+      this.negociationScene.autoConclude(participants);
     }
   }
 }

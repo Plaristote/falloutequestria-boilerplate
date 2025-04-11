@@ -11,6 +11,7 @@ import {
   hasMediationStarted
 } from "../../quests/junkvilleNegociateWithDogs.mjs";
 import {isHelpfulQuestAvailable} from "../../quests/junkville/findHelpful.mjs";
+import {opinionVarName} from "../../scenes/junkville/negociationAssembly.mjs";
 
 class Dialog extends DialogHelper {
   constructor(dialog) {
@@ -18,6 +19,8 @@ class Dialog extends DialogHelper {
   }
 
   getEntryPoint() {
+    if (this.dialog.npc.script.shouldTalkAboutDogDealDecision())
+      return this.negociateDealEntryPoint();
     return "entry";
   }
 
@@ -274,7 +277,8 @@ class Dialog extends DialogHelper {
 
   // NEW VERSION NEGOCIATE
   negociateCanTellDogsWantNegociate() {
-    return hasMediationStarted();
+    const quest = requireQuest("junkvilleNegociateWithDogs");
+    return hasMediationStarted() && !quest.isObjectiveCompleted("pass-on-message");
   }
 
   negociateTellDogsWantToNegociate() {
@@ -301,13 +305,48 @@ class Dialog extends DialogHelper {
     console.log("negociationEnd with", this.negociationPoints, "points.");
     if (this.negociationPoints > 2)
       return "dogs/negociations/step-5-convinced";
-    else if (this.negociationPoints < 1)
+    else if (this.negociationPoints < 0)
       return "dogs/negociations/step-5-angered";
     return "dogs/negociations/step-5-neutral";
   }
 
   negociationStartAssembly() {
-    this.negociationPoints
+    const quest = requireQuest("junkvilleNegociateWithDogs");
+    quest.completeObjective("pass-on-message");
+    this.dialog.npc.setVariable(opinionVarName, this.negociationPoints - 1);
+    level.script.setupNegociationAssembly();
+  }
+
+  negociateBattleCanBeCancelled() {
+    const quest = requireQuest("junkvilleNegociateWithDogs");
+    return !quest.hasVariable("junkvilleDecision");
+  }
+
+  negociatePassOnJunkvilleDecision() {
+    const quest = requireQuest("junkvilleNegociateWithDogs");
+    quest.setVariable("passOnJunkvilleDecision", 1);
+  }
+
+  negociateDealEntryPoint() {
+    const quest = requireQuest("junkvilleNegociateWithDogs");
+
+    switch (quest.getVariable("junkvilleDecision")) {
+      case "accept": return "dogs/deal-accepted";
+      case "reject": return "dogs/deal-rejected";
+      case "war":    return "dogs/deal-war";
+    }
+  }
+
+  onDogsMediationStart() {
+    const quest = requireQuest("junkvilleNegociateWithDogs");
+
+    if (quest.hasVariable("junkvilleDecision")) {
+      const choice = this.negociateDealEntryPoint();
+      if (choice) return choice;
+    }
+    if (quest.isObjectiveCompleted("pass-on-message") && level.tasks.hasTask("waitForAssembly"))
+      return "dogs/negociations/wait-assembly";
+    return "dogs/negociations/entry";
   }
 }
 

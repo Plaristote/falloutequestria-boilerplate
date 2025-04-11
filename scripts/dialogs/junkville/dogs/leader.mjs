@@ -165,6 +165,33 @@ class Dialog {
   negociateOnAccepted() {
     startMediation();
   }
+
+  negociateCanPassOnJunkvilleDecision() {
+    return this.negociateQuest.hasVariable("passOnJunkvilleDecision")
+       && !this.negociateQuest.isObjectiveCompleted("pass-on-assembly-decision");
+  }
+
+  negociatePassOnJunkvilleDecisionText() {
+    switch (this.negociateQuest.getVariable("junkvilleDecision")) {
+      case "accept": return this.dialog.tr("pass-on-junkville-decision-accept");
+      case "reject": return this.dialog.tr("pass-on-junkville-decision-reject");
+    }
+    return "<i>SCRIPT ERROR</i>";
+  }
+
+  negociateOnJunkvilleDecision() {
+    this.negociateQuest.setVariable("passOnJunkvilleDecision", 2);
+    this.negociateQuest.completeObjective("peaceful-resolve");
+    switch (this.negociateQuest.getVariable("junkvilleDecision")) {
+      case "accept":
+        this.dialog.mood = "smile";
+        return this.dialog.tr("negociations/on-junkville-accept");
+      case "reject":
+        this.dialog.mood = "sad";
+        return this.dialog.tr("negociations/on-junkville-reject");
+    }
+    return "<i>SCRIPT ERROR</i>";
+  }
 }
 
 export function create(dialog) {

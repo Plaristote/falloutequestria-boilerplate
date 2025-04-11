@@ -13,6 +13,12 @@ function assemblyRoutine(model) {
   const zone = game.level.getZoneFromName("ekklesia");
   if (zone && !game.level.isInsideZone(zone, model)) {
     model.actionQueue.pushMoveToZone(zone);
+    model.actionQueue.pushScript({
+      onTrigger: function() {},
+      onCancel: function() {
+        model.script.routineComponent.rescheduleRoutineAction();
+      }
+    });
     model.actionQueue.start();
   }
 }
@@ -27,9 +33,9 @@ function nightRoutine(model) {
 }
 
 export const routine = [
-  { hour: "7",  callback: dayRoutine },
-  { hour: "21", callback: assemblyRoutine },
-  { hour: "23", callback: nightRoutine }
+  { hour: "7",  name: "daily",    callback: dayRoutine },
+  { hour: "21", name: "assembly", callback: assemblyRoutine },
+  { hour: "23", name: "nightly",  callback: nightRoutine }
 ];
 
 export function initializeRoutineUser(model) {

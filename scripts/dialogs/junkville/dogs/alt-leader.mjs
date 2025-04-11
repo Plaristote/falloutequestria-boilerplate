@@ -1,4 +1,4 @@
-import {requireQuest} from "../../quests/helpers.mjs";
+import {requireQuest} from "../../../quests/helpers.mjs";
 
 class Dialog {
   constructor(dialog) {

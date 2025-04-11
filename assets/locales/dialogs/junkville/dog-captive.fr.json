@@ -1,0 +1,19 @@
+{
+    "dialogs": {
+        "junkville/dog-captive": {
+            "announce-release": "Vous êtes libres de partir. J'ai parlé au chef des chiens à diamant, et il a accepté de vous laisser partir.",
+            "breakout": "D'accord. On va te faire confiance... allez tous le monde, ce poney va nous sortir d'ici !",
+            "breakout-fail": "De quoi ? Tu rigoles, ils vont nous transformer en charpie !",
+            "dogs-slained": "Les chiens à diamant sont tous morts. Vous pouvez y aller.",
+            "entry": "...",
+            "junkville-mission": "Super ! Je savais que Raggedy Randy finirait par envoyer quelqu'un ! Ce vieux frère ne laisserait jamais ses invités disparaître sans dire au revoir ! Alors, quel est le plan ?",
+            "leave": "Je vais voir ce que je peux faire.",
+            "leave-sarcastic": "Ah merde, c'est con ça. Bon, moi je vais y aller, a plus dans le bus !",
+            "missionned-by-junkville": "Eh bien j'ai de bonnes nouvelles. Randy m'a envoyé pour vous chercher.",
+            "released": "Vraiment ? C'est génial ! Vous avez entendu ça, tout le monde ? Nous sommes libres ! Sortons d'ici et allons fêter ça chez Randy !",
+            "situation": "Ben... on a trouvé ce tunnel, et on s'est demandé si on y trouverait pas des trucs de valeur, alors on est descendu. Pis on est tombé sur les chiens à diamant, qui nous choppés et qui nous ont foutus ici. Ils nous font bosser pour eux, parfois... mais ils veulent pas qu'on parte.",
+            "suggest-breakout": "Je vais vous sortir de cette prison ! Suivez-moi !",
+            "tell-freedom": "J'ai parlé au chef des chiens à diamant. Je suis venu vous dire que vous êtes libres de partir."
+        }
+    }
+}

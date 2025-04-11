@@ -30,6 +30,9 @@
             "hook": "tryToLeave",
             "text": "leave"
         },
+        "leave-alt": {
+            "text": "leave-alt"
+        },
         "motives-followup": {
             "state": "scavengers/motives",
             "text": "motives-followup"
@@ -70,6 +73,12 @@
         "negociation-why-me": {
             "state": "negociations/entry",
             "text": "negociation-why-me"
+        },
+        "pass-on-junkville-decision": {
+            "availableHook": "negociateCanPassOnJunkvilleDecision",
+            "state": "negociations/on-junkville-decision",
+            "text": "pass-on-junkville-decision-reject",
+            "textHook": "negociatePassOnJunkvilleDecisionText"
         },
         "push-to-hide-dolly": {
             "state": "negociations/entry",
@@ -135,6 +144,7 @@
                 "ask-about-dogs",
                 "leave"
             ],
+            "hook": "",
             "text": "entry"
         },
         "first-meeting": {
@@ -171,6 +181,8 @@
         },
         "negociations/entry-alt": {
             "answers": [
+                "pass-on-junkville-decision",
+                "leave-alt"
             ],
             "hook": "",
             "text": "negociations/entry-alt"
@@ -188,6 +200,12 @@
             "hook": "negociateOnAccepted",
             "mood": "smile",
             "text": "negociations/on-accepted"
+        },
+        "negociations/on-junkville-decision": {
+            "answers": [
+            ],
+            "hook": "negociateOnJunkvilleDecision",
+            "text": "negociations/on-junkville-reject"
         },
         "negociations/pushed-to-hide": {
             "answers": [

@@ -21,11 +21,21 @@ export class Cook extends CharacterBehaviour {
   get dialog() {
     if (this.model.tasks.hasTask("headTowardsBattle"))
       return ;
+    if (this.routineComponent.isActiveRoutine("assembly"))
+      return this.shouldTalkAboutDogDealDecision() ? "junkville/cook" : null;
     return "junkville/cook";
   }
 
   get bed() {
     return level.findObject("inn.floor.owner-room.bed");
+  }
+
+  shouldTalkAboutDogDealDecision() {
+    if (this.routineComponent.isActiveRoutine("assembly") && game.quests.hasQuest("junkvilleNegociateWithDogs")) {
+      const quest = requireQuest("junkvilleNegociateWithDogs");
+      return quest.inProgress && quest.hasVariable("junkvilleDecision");
+    }
+    return false;
   }
 
   shouldBeAtJunkville() {

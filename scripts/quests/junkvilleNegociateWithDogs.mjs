@@ -176,6 +176,7 @@ export function internalPackIssueDone() {
 }
 
 export function shouldAltLeaderTakeOver() {
+  return false; // TODO re-write alt leader take over
   return hasQuest() && !internalPackIssueDone() && captiveReleaseAuthorized();
 }
 
@@ -236,6 +237,24 @@ export class JunkvilleNegociateWithDogs extends QuestHelper {
         label: this.tr("solve-pack-unrest"),
         success: this.model.isObjectiveCompleted("alt-leader-convinced") || this.model.isObjectiveCompleted("alt-leader-dead"),
         failure: this.model.isObjectiveCompleted("alt-leader-took-over")
+      });
+    }
+    if (hasMediationStarted()) {
+      objectives.push({
+        label: this.tr("pass-on-message"),
+        success: this.model.isObjectiveCompleted("pass-on-message")
+      });
+    }
+    if (this.model.isObjectiveCompleted("assembly-participate")) {
+      objectives.push({
+        label: this.tr("assembly-participate"),
+        success: true
+      });
+    }
+    if (hasMediationStarted() && this.model.hasVariable("passOnJunkvilleDecision")) {
+      objectives.push({
+        label: this.tr("pass-on-assembly-decision"),
+        success: this.model.getVariable("passOnJunkvilleDecision") == 2
       });
     }
     if (hasMediationStarted()) {
