@@ -21,5 +21,17 @@
   "start-turn":        "combat/start-turn.wav",
   "end-turn":          "combat/end-turn.wav",
   "notification":      "combat/start-turn.wav",
-  "tutorial-show":     "page-flip.wav"
+  "encounter":         "encounter.wav",
+  "tutorial-show":     "page-flip.wav",
+  "pick-up":           "item-pickup.wav",
+  "put-down":          "item-putdown.wav",
+  "ui/button-in":      "ui/button-in.wav",
+  "ui/button-out":     "ui/button-out.wav",
+  "ui/push-button-in": "ui/alt-button-in.wav",
+  "ui/push-button-out":"ui/alt-button-out.wav",
+  "ui/tiny-btn-click": "ui/alt-button-in.wav",
+  "ui/term-btn-click": "ui/light-button-in.wav",
+  "ui/term-btn-in":    "ui/light-button-in.wav",
+  "ui/term-btn-out":   "ui/light-button-out.wav",
+  "ui/int-menu":       "ui/interaction-menu.wav"
 }
