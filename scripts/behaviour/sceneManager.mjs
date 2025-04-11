@@ -113,12 +113,34 @@ export class SceneManager {
     const bubbleDuration = (options.bubbleDuration * 1000) || (options.duration * 1300);
     const color = options.color || "white";
 
-    if (options.target)
-      actions.pushLookAt(options.target);
-    actions.pushSpeak(options.line, bubbleDuration, color);
-    actions.pushWait(options.duration);
-    actions.pushScript(this.triggerNextStep.bind(this));
-    actions.start();
+    if (options.speaker.unconscious) {
+      options.fallback ? options.fallback() : this.triggerNextStep();
+    } else {
+      if (options.target)
+        actions.pushLookAt(options.target);
+      else if (options.towards)
+        actions.pushLookAt(options.towards.x, options.towards.y);
+      actions.pushSpeak(options.line, bubbleDuration, color);
+      actions.pushWait(options.duration);
+      actions.pushScript(this.triggerNextStep.bind(this));
+      actions.start();
+    }
+  }
+
+  openPromptStep(title, options) {
+    const sceneOptions = JSON.parse(JSON.stringify(options));
+    const callback = function (index) {
+      try {
+        options[index].callback();
+      } catch (err) {
+        console.log("SceneManager::openPromptStep: prompt callback crashed:", err);
+      }
+      this.triggerNextStep();
+    };
+
+    for (let i = 0 ; i < options.length ; ++i)
+      sceneOptions[i].callback = callback.bind(this, i);
+    game.openPrompt(title, sceneOptions);
   }
 
   onCombatTurn(character) {
