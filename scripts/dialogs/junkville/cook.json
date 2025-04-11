@@ -60,6 +60,10 @@
             "state": "dogs/battle/ask-reward",
             "text": "battle-reward-negociate"
         },
+        "deal-war-next": {
+            "state": "dogs/battle/start",
+            "text": "negociate-next"
+        },
         "dogs-battle-impossible-all-dead": {
             "availableHook": "dogsAlreadyDead",
             "state": "dogs/battle/canceled",
@@ -78,6 +82,7 @@
             "text": "dogs-battle-join-reward"
         },
         "dogs-battle-peace": {
+            "availableHook": "negociateBattleCanBeCancelled",
             "state": "dogs/battle/peacemaking",
             "text": "dogs-battle-peace"
         },
@@ -118,6 +123,7 @@
         },
         "dogs-mediation-start": {
             "availableHook": "hasDogMediationQuest",
+            "hook": "onDogsMediationStart",
             "state": "dogs/negociations/entry",
             "text": "dogs-mediation-start"
         },
@@ -389,6 +395,28 @@
             "hook": "",
             "text": "dogs-battle-start"
         },
+        "dogs/deal-accepted": {
+            "answers": [
+            ],
+            "hook": "negociatePassOnJunkvilleDecision",
+            "mood": "smile",
+            "text": "dogs/deal-accepted"
+        },
+        "dogs/deal-rejected": {
+            "answers": [
+            ],
+            "hook": "negociatePassOnJunkvilleDecision",
+            "mood": "sad",
+            "text": "dogs/deal-rejected"
+        },
+        "dogs/deal-war": {
+            "answers": [
+                "deal-war-next"
+            ],
+            "hook": "",
+            "mood": "cocky",
+            "text": "dogs/deal-war"
+        },
         "dogs/negociations/about-assembly": {
             "answers": [
             ],
@@ -562,7 +590,7 @@
                 "leave-ok",
                 "negociation-ask-about-assembly"
             ],
-            "hook": "",
+            "hook": "negociationStartAssembly",
             "mood": "smile",
             "text": "dogs/negociations/step-5-convinced"
         },
@@ -571,8 +599,17 @@
                 "leave-ok",
                 "negociation-ask-about-assembly"
             ],
+            "hook": "negociationStartAssembly",
             "mood": "neutral",
             "text": "dogs/negociations/step-5-neutral"
+        },
+        "dogs/negociations/wait-assembly": {
+            "answers": [
+                "leave-ok",
+                "negociation-ask-about-assembly"
+            ],
+            "hook": "",
+            "text": "dogs/negociations/wait-assembly"
         },
         "entry": {
             "answers": [

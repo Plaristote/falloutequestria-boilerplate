@@ -24,6 +24,8 @@ export class HelpfulMom extends CharacterBehaviour {
   }
 
   get dialog() {
+    if (this.routineComponent.isActiveRoutine("assembly"))
+      return ;
     return helpfulHasDisappeared() && !broughtBackHelpful() ? "junkville/helpful-mom-quest" : null;
   }
 

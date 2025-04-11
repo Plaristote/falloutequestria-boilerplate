@@ -9,7 +9,7 @@ export class DogAltLeader extends PackMember {
 
   get dialog() {
     if (!internalPackIssueDone())
-      return "junkville/dog-alt-leader";
+      return "junkville/dogs/alt-leader";
     return null;
   }
 
