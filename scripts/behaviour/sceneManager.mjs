@@ -75,7 +75,6 @@ export class SceneManager {
     });
     this.model.unsetVariable(this.storageScope);
     this.unregisterSceneManager();
-    this.state = null;
   }
 
   registerSceneManager() {

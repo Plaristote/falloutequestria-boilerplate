@@ -40,7 +40,7 @@ export class ItemBehaviour {
   }
 
   getAnimationSteps(target) {
-    return this.getUseAnimation();
+    return this.getUseAnimation(target);
   }
 
   attemptToUseActionPointsOn(target) {

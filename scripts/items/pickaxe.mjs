@@ -12,9 +12,9 @@ export class Pickaxe extends MeleeAttack {
     return this.model.useMode === "hit";
   }
 
-  getAnimationSteps() {
+  getAnimationSteps(target) {
     if (this.model.useMode === "hit")
-      return this.getUseAnimation();
+      return this.getUseAnimation(target);
     return [{ type: "Animation", animation: "use", object: this.user }];
   }
 
