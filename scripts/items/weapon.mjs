@@ -57,7 +57,7 @@ export class WeaponBehaviour extends ItemBehaviour {
 
   triggerDodgeUse(target) {
     return {
-      steps: this.getUseAnimation(),
+      steps: this.getUseAnimation(target),
       callback: this.onDodged.bind(this, target)
     }
   }

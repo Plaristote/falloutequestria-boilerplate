@@ -23,7 +23,7 @@ export class CombatKnife extends WeaponBehaviour {
     return [{ type: "Animation", animation: "slash", object: this.user }];
   }
 
-  getUseAnimation() {
+  getUseAnimation(target) {
     return this.getAnimationSteps(target);
   }
 }
