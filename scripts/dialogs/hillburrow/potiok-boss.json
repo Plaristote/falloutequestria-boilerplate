@@ -109,6 +109,11 @@
         "sabotage-end": {
             "text": "slaves-errand-gift-slaves"
         },
+        "sabotage-mention-dynamite": {
+            "availableHook": "sabotageCanReportDynamite",
+            "state": "sabotage/dynamite-reported",
+            "text": "sabotage-mention-dynamite"
+        },
         "sabotage-start-accusations": {
             "availableHook": "sabotageCanStartAccusations",
             "state": "sabotage/accusations",
@@ -161,7 +166,6 @@
                 "entry-accept-new-quest-for-money",
                 "entry-exit"
             ],
-            "mood": "",
             "text": "entry"
         },
         "give-errand-quest": {
@@ -172,7 +176,6 @@
                 "reject-errand"
             ],
             "hook": "",
-            "mood": "",
             "text": "give-errand-quest"
         },
         "introduction": {
@@ -182,7 +185,6 @@
                 "introduction-rude",
                 "introduction-hostile"
             ],
-            "mood": "",
             "text": "introduction"
         },
         "introduction-chase-away": {
@@ -197,7 +199,6 @@
             "answers": [
                 "ask-about-errand-quest"
             ],
-            "mood": "",
             "text": "introduction-explanations"
         },
         "introduction-give-work": {
@@ -212,7 +213,6 @@
                 "sabotage-accept-reward"
             ],
             "hook": "giveSabotagePayment",
-            "mood": "",
             "text": "sabotage/about-payment"
         },
         "sabotage/accusation/water-carrier/404ed": {
@@ -221,7 +221,6 @@
                 "sabotage-ask-payment"
             ],
             "hook": "",
-            "mood": "",
             "text": "sabotage/accusation/water-carrier/404ed"
         },
         "sabotage/accusation/water-carrier/abou-confession": {
@@ -233,7 +232,6 @@
                 "sabotage-accusation-wc-giveup"
             ],
             "hook": "",
-            "mood": "",
             "text": "sabotage/accusation/water-carrier/abou-confession"
         },
         "sabotage/accusation/water-carrier/about-bibin": {
@@ -242,7 +240,6 @@
                 "sabotage-ask-payment-alt"
             ],
             "hook": "sabotageCompleteQuestWaterCarrierRouteWithBibinWarning",
-            "mood": "",
             "text": "sabotage/accusation/water-carrier/about-bibin"
         },
         "sabotage/accusation/water-carrier/entry": {
@@ -253,7 +250,6 @@
                 "sabotage-accusation-wc-giveup"
             ],
             "hook": "",
-            "mood": "",
             "text": "sabotage/accusation/water-carrier/entry"
         },
         "sabotage/accusation/water-carrier/water-carrier-dead": {
@@ -262,7 +258,6 @@
                 "sabotage-ask-payment"
             ],
             "hook": "sabotageCompleteQuestWaterCarrierRoute",
-            "mood": "",
             "text": "sabotage/accusation/water-carrier/water-carrier-dead"
         },
         "sabotage/accusation/water-carrier/whereabouts": {
@@ -272,7 +267,6 @@
                 "sabotage-water-carrier-fought-back"
             ],
             "hook": "",
-            "mood": "",
             "text": "sabotage/accusation/water-carrier/whereabouts"
         },
         "sabotage/accusations": {
@@ -280,18 +274,23 @@
                 "sabotage-accusation-water-carrier"
             ],
             "hook": "",
-            "mood": "",
             "text": "sabotage/accusations"
+        },
+        "sabotage/dynamite-reported": {
+            "answers": [
+            ],
+            "hook": "",
+            "text": "sabotage/dynamite-reported"
         },
         "sabotage/entry": {
             "answers": [
                 "sabotage-start-accusations",
+                "sabotage-mention-dynamite",
                 "accept-sabotage-quest",
                 "about-sabotage-pointers",
                 "about-sabotage-motives"
             ],
             "hook": "",
-            "mood": "",
             "text": "sabotage/entry"
         },
         "sabotage/more-intel": {
@@ -300,7 +299,6 @@
                 "about-sabotage-motives"
             ],
             "hook": "sabotageQuestPointersGiven",
-            "mood": "",
             "text": "sabotage/more-intel"
         },
         "sabotage/motives": {
@@ -309,7 +307,6 @@
                 "about-sabotage-pointers"
             ],
             "hook": "sabotageQuestMotivesGiven",
-            "mood": "",
             "text": "sabotage/motives"
         },
         "slavers-errand/about-money": {
@@ -319,13 +316,11 @@
                 "reject-errand-flipping",
                 "reject-errand"
             ],
-            "mood": "",
             "text": "slavers-errand/about-money"
         },
         "slavers-errand/exit": {
             "answers": [
             ],
-            "mood": "",
             "text": "slavers-errand/exit"
         },
         "slavers-errand/price-not-upped": {
@@ -333,14 +328,12 @@
                 "accept-errand-quest",
                 "reject-errand"
             ],
-            "mood": "",
             "text": "slavers-errand/price-not-upped"
         },
         "slavers-errand/price-upped": {
             "answers": [
                 "accept-errand-quest"
             ],
-            "mood": "",
             "text": "slavers-errand/price-upped"
         },
         "slavers-errand/refund": {
@@ -349,7 +342,6 @@
                 "slavers-errand-negociate-refund"
             ],
             "hook": "",
-            "mood": "",
             "text": "slavers-errand/refund"
         },
         "slavers-errand/refund-negociation-accepted": {
@@ -357,7 +349,6 @@
                 "slavers-errand-take-refund"
             ],
             "hook": "slaversErrandIncreaseRefund",
-            "mood": "",
             "text": "slavers-errand/refund-negociation-accepted"
         },
         "slavers-errand/refund-negociation-rejected": {
@@ -365,7 +356,6 @@
                 "slavers-errand-take-refund"
             ],
             "hook": "",
-            "mood": "",
             "text": "slavers-errand/refund-negociation-rejected"
         },
         "slavers-errand/waiting-report": {
@@ -374,14 +364,12 @@
                 "ask-slaves-errand-refund"
             ],
             "hook": "slaversErrandReported",
-            "mood": "",
             "text": "slavers-errand/waiting-report"
         },
         "slavers-errand/waiting-slaves": {
             "answers": [
             ],
             "hook": "",
-            "mood": "",
             "text": "slavers-errand/waiting-slaves"
         }
     }

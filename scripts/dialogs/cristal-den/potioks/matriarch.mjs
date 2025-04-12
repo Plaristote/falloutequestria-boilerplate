@@ -53,6 +53,7 @@ class Dialog {
   }
 
   set sneakJobIntroduced(value) {
+    level.setVariable("canAskForWork", value ? 0 : 1);
     this.dialog.npc.setVariable("toldAboutSpyJob", value ? 1 : 0);
   }
 

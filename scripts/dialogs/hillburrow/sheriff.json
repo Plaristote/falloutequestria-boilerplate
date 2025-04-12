@@ -181,7 +181,6 @@
                 "about-crystal-den",
                 "back-to-entry"
             ],
-            "mood": "",
             "text": "about-capital-ruins-"
         },
         "about-crystal-den-": {
@@ -189,7 +188,6 @@
                 "about-capital-ruins",
                 "back-to-entry"
             ],
-            "mood": "",
             "text": "about-crystal-den-"
         },
         "about-daring-do": {
@@ -206,7 +204,6 @@
                 "introduce-player",
                 "back-to-entry"
             ],
-            "mood": "",
             "text": "about-npc"
         },
         "entry": {
@@ -217,21 +214,18 @@
                 "exit-entry"
             ],
             "hook": "",
-            "mood": "",
             "text": "entry"
         },
         "name-already-known": {
             "answers": [
                 "back-to-entry"
             ],
-            "mood": "",
             "text": "name-already-known"
         },
         "no-more-work": {
             "answers": [
                 "back-to-entry"
             ],
-            "mood": "",
             "text": "no-more-work"
         },
         "quest-old-sherif-report/complete": {
@@ -286,7 +280,7 @@
                 "reject-old-sheriff-quest-alt",
                 "reject-old-sheriff-quest"
             ],
-            "mood": "",
+            "hook": "",
             "text": "quest-old-sheriff"
         },
         "quest-old-sheriff-arrestation/after-fight": {
@@ -312,7 +306,6 @@
                 "hobo-after-fight-exit-alt"
             ],
             "hook": "",
-            "mood": "",
             "text": "quest-old-sheriff-arrestation/after-fight-whats-next"
         },
         "quest-old-sheriff-arrestation/already-dead": {
@@ -358,14 +351,12 @@
                 "old-sheriff-closure-give-up"
             ],
             "hook": "",
-            "mood": "",
             "text": "quest-old-sheriff-arrestation/vendetta-start"
         },
         "quest-old-sheriff-arrestation/vengeance-start": {
             "answers": [
             ],
             "hook": "startWaterCarrierAmbush",
-            "mood": "",
             "text": "quest-old-sheriff-arrestation/vengeance-start"
         },
         "quest-old-sheriff-briefing": {
@@ -390,7 +381,6 @@
             "answers": [
                 "quest-old-sheriff-asked-reward-accepted"
             ],
-            "mood": "",
             "text": "quest-old-sheriff-on-negociate-success"
         },
         "quest-old-sheriff-reward-asked": {
