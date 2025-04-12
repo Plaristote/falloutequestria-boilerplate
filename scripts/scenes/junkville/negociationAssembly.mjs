@@ -8,6 +8,7 @@ export default class NegociationAssembly extends SceneManager {
   constructor(parent) {
     super(parent, "negociation-assembly");
     this.generateActors();
+    this.xpStorageScope = this.storageScope + '-xp';
   }
 
   get actors() {
@@ -24,12 +25,25 @@ export default class NegociationAssembly extends SceneManager {
     return this.generateSteps();
   }
 
+  get influenceXp() {
+    return this.model.getVariable(this.xpStorageScope, 0);
+  }
+
+  set influenceXp(value) {
+    this.model.setVariable(this.xpStorageScope, value);
+  }
+
   initialize() {
     super.initialize();
     this.actors.forEach(actor => {
       if (!actor.hasVariable(opinionVarName))
         actor.setVariable(opinionVarName, 0);
     });
+  }
+
+  finalize() {
+    level.setVariable("nextAssemblyEnd", 0);
+    super.finalize();
   }
 
   generateActors() {
@@ -42,6 +56,7 @@ export default class NegociationAssembly extends SceneManager {
     const list = [];
 
     for (let debateStep = 1 ; debateStep < 4 ; ++debateStep) {
+      list.push(this.introduceStepState.bind(this, debateStep));
       this.actors.forEach(actor => {
         list.push(this.debateLineState(debateStep, actor));
       });
@@ -51,6 +66,7 @@ export default class NegociationAssembly extends SceneManager {
       list.push(this.debateLineState(4, actor));
     });
     list.push(this.conclusionState.bind(this));
+    list.push(this.finalize.bind(this));
     return list;
   }
 
@@ -66,6 +82,18 @@ export default class NegociationAssembly extends SceneManager {
       bubbleDuration: duration * 1.8,
       duration:       duration
     });
+  }
+
+  introduceStepState(debateStep) {
+    let mediator = level.findObject("cook");
+    if (!mediator || mediator.unconscious) {
+      mediator = this.actors.filter(character => !character.unconscious)[0];
+    }
+    if (mediator) {
+      this.lineState(mediator, this.line(`step${debateStep}-introduction`), 4)();
+    } else {
+      this.triggerNextStep();
+    }
   }
 
   debateLineState(debateStep, character) {
@@ -100,6 +128,11 @@ export default class NegociationAssembly extends SceneManager {
     quest.setVariable("junkvilleDecision", result);
     if (game.player.isInZone(this.assemblyZone))
       quest.completeObjective("assembly-participate");
+    if (this.influenceXp > 0) {
+      game.playerParty.addExperience(this.influenceXp);
+      game.appendToConsole(this.line("xp-gain", { xp: this.influenceXp }));
+      this.model.unsetVariable(this.xpStorageScope);
+    }
     if (mediator) {
       this.dialogLineStep({
         speaker: mediator,
@@ -160,6 +193,7 @@ export default class NegociationAssembly extends SceneManager {
         console.log("INFLUENCE CHALLENGE: player influenced", actor.displayName);
         actor.setVariable(opinionVarName, opinion + direction);
         game.dataEngine.addReputation("junkville", 5);
+        this.influenceXp += 3;
       } else {
         console.log("INFLUENCE CHALLENGE: player failed to influence", actor.displayName);
         game.dataEngine.addReputation("junkville", -5);

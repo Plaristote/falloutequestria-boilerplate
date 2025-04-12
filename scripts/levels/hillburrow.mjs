@@ -61,8 +61,8 @@ export class Hillburrow extends LevelBase {
   popWaterCarrier(task) {
     const character = game.uniqueCharacterStorage.getCharacter("hillburrow/water-carrier");
 
-    console.log("Popping water carrier in this hillburrow map", level.name);
     if (character && character.isAlive()) {
+      console.log("Popping water carrier in this hillburrow map", level.name);
       const popPosition = waterCarrierPopPositions[task];
       game.uniqueCharacterStorage.loadCharacterToCurrentLevel("hillburrow/water-carrier", popPosition.x, popPosition.y, popPosition.z);
       character.getScriptObject().currentTask = task;

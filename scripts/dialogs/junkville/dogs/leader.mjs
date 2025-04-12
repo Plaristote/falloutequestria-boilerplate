@@ -17,6 +17,7 @@ import {skillCheck} from "../../../cmap/helpers/checks.mjs";
 class Dialog {
   constructor(dialog) {
     this.dialog = dialog;
+    this.dialog.ambiance = "cavern";
   }
 
   getEntryPoint() {
@@ -173,8 +174,8 @@ class Dialog {
 
   negociatePassOnJunkvilleDecisionText() {
     switch (this.negociateQuest.getVariable("junkvilleDecision")) {
-      case "accept": return this.dialog.tr("pass-on-junkville-decision-accept");
-      case "reject": return this.dialog.tr("pass-on-junkville-decision-reject");
+      case "accept": return this.dialog.t("pass-on-junkville-decision-accept");
+      case "reject": return this.dialog.t("pass-on-junkville-decision-reject");
     }
     return "<i>SCRIPT ERROR</i>";
   }
@@ -185,10 +186,10 @@ class Dialog {
     switch (this.negociateQuest.getVariable("junkvilleDecision")) {
       case "accept":
         this.dialog.mood = "smile";
-        return this.dialog.tr("negociations/on-junkville-accept");
+        return this.dialog.t("negociations/on-junkville-accept");
       case "reject":
         this.dialog.mood = "sad";
-        return this.dialog.tr("negociations/on-junkville-reject");
+        return this.dialog.t("negociations/on-junkville-reject");
     }
     return "<i>SCRIPT ERROR</i>";
   }

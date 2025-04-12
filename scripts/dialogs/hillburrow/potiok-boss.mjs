@@ -156,6 +156,10 @@ class Dialog {
     return this.sabotageCanAccuseWaterCarrier();
   }
 
+  sabotageCanReportDynamite() {
+    return this.sabotageQuest.isObjectiveCompleted("findWaterCarrierDynamite");
+  }
+
   sabotageKilledWaterCarrier() {
     return true;
     const waterCarrier = game.getCharacter("hillburrow/water-carrier");

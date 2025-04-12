@@ -1,9 +1,27 @@
 {
     "dialogs": {
         "cristal-den/potioks/steward": {
+            "about-matriarch": "The Matriarch? She's the head of the Potiok family, our guide, our pillar, and my aunt to boot. She's seen more seasons than most ponies ever do. Brilliant, righteous… and as ruthless as she is fair. She's the most respected person in this town.",
+            "about-pat": "The name is Pat. Pat Potiok. Archivist, receptionist, representative of our family, and nephew of the Matriarch.",
+            "about-potioks": "The Potioks are the oldest and most respected family in Crystal Den. We survived the war, the after-war, and every bullshit that came afterwards.",
+            "about-potioks-control": "We rebuild this whole town from its ashes. It belongs to us indeed, and we keep it under our watch.",
+            "about-potioks-rumors": "Of course. The weak always whisper unpleasing comments about those that surpass them. It is not a shame to be powerful.",
+            "ask-about-matriarch": "Who is the Matriarch ?",
+            "ask-about-pat": "And what about you ? Who are you ?",
+            "ask-about-potiok-control": "And you control this city ?",
+            "ask-about-potiok-rumors": "I've heard unflattering rumors about your family...",
+            "ask-about-potioks": "I wanted to know more about the Potioks.",
             "ask-about-work": "I want to work for the Potiok family.",
+            "back-to-main": "Interesting. Let's talk about something else.",
             "exit-entry": "I'm just passing through.",
-            "prompt": "Yes ? What's the motive of your visit ?",
+            "prompt": "Welcome to the Potiok ranch. What's the motive of your visit ?",
+            "recruit-give-up": "I guess I'm not who you're looking for... oh well ! Maybe another time.",
+            "recruit-pitch-caps": "I'm pretty crafty. Give me enough caps, and I can solve any problem.",
+            "recruit-pitch-sneak": "Nobody knows me around here. I can meddle in any crowd.",
+            "recruit-pitch-warrior": "I'm armed, seasoned, and I don't ask pointless questions.",
+            "recruitment/entry": "Hm. It just so happens that the Matriarch is looking for a foreign contractor... but I must first make sure that you are not a mere scavenger.",
+            "recruitment/failure": "Hmm... no, I don't think you match our requirements. Too bad.",
+            "recruitment/success": "That's promising. Get down inside the bunker, and introduce yourself to Daisy. She's The Matriarch secretary.",
             "send-away": "Oh no you're not ! You're not allowed past this room. If you've got nothing to ask me, then scram."
         }
     }

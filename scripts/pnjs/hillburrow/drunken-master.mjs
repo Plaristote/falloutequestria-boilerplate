@@ -10,7 +10,7 @@ export class DrunkenMaster extends CharacterBehaviour {
   constructor(model) {
     super(model);
     this.routineComponent = new RoutineComponent(this, routine);
-    this.routineComponent.interrupted = !this.model.hasVariable("healed");
+    this.routineComponent.interrupted = !this.isHealed;
   }
 
   get isHealed() {

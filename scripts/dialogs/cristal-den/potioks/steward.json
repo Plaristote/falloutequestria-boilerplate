@@ -1,28 +1,131 @@
 {
     "answers": {
+        "ask-about-matriarch": {
+            "state": "about-matriarch",
+            "text": "ask-about-matriarch"
+        },
+        "ask-about-pat": {
+            "state": "about-pat",
+            "text": "ask-about-pat"
+        },
+        "ask-about-potiok-control": {
+            "state": "about-potioks",
+            "text": "ask-about-potiok-control"
+        },
+        "ask-about-potiok-rumors": {
+            "availableHook": "hasHeardPotiokRumors",
+            "state": "about-potioks",
+            "text": "ask-about-potiok-rumors"
+        },
+        "ask-about-potioks": {
+            "state": "about-potioks",
+            "text": "ask-about-potioks"
+        },
         "ask-about-work": {
             "availableHook": "canAskForWork",
+            "state": "recruitment/entry",
             "text": "ask-about-work"
+        },
+        "back-to-main": {
+            "state": "prompt",
+            "text": "back-to-main"
         },
         "exit-entry": {
             "hook": "onPassingThrough",
             "text": "exit-entry"
+        },
+        "recruit-give-up": {
+            "text": "recruit-give-up"
+        },
+        "recruit-pitch-caps": {
+            "hook": "recruitBluff",
+            "state": "recruitment/failure",
+            "text": "recruit-pitch-caps"
+        },
+        "recruit-pitch-sneak": {
+            "state": "recruitment/success",
+            "text": "recruit-pitch-sneak"
+        },
+        "recruit-pitch-warrior": {
+            "state": "recruitment/failure",
+            "text": "recruit-pitch-warrior"
         }
     },
-    "entryPoint": "",
+    "entryPoint": "prompt",
     "states": {
+        "about-matriarch": {
+            "answers": [
+                "back-to-main"
+            ],
+            "text": "about-matriarch"
+        },
+        "about-pat": {
+            "answers": [
+                "ask-about-matriarch",
+                "back-to-main"
+            ],
+            "hook": "",
+            "text": "about-pat"
+        },
+        "about-potioks": {
+            "answers": [
+                "ask-about-pat",
+                "ask-about-potiok-control",
+                "ask-about-potiok-rumors",
+                "back-to-main"
+            ],
+            "hook": "aboutPotioks",
+            "text": "about-potioks"
+        },
+        "about-potioks-control": {
+            "answers": [
+            ],
+            "text": "about-potioks-control"
+        },
+        "about-potioks-rumors": {
+            "answers": [
+            ],
+            "hook": "",
+            "text": "about-potioks-rumors"
+        },
         "prompt": {
             "answers": [
+                "ask-about-potioks",
                 "ask-about-work",
                 "exit-entry"
             ],
-            "mood": "",
+            "hook": "",
             "text": "prompt"
+        },
+        "recruitment/entry": {
+            "answers": [
+                "recruit-pitch-warrior",
+                "recruit-pitch-sneak",
+                "recruit-pitch-caps",
+                "recruit-give-up"
+            ],
+            "hook": "",
+            "mood": "dubious",
+            "text": "recruitment/entry"
+        },
+        "recruitment/failure": {
+            "answers": [
+            ],
+            "hook": "",
+            "mood": "dubious",
+            "text": "recruitment/failure"
+        },
+        "recruitment/success": {
+            "answers": [
+            ],
+            "hook": "recruitTestPassed",
+            "mood": "smile",
+            "text": "recruitment/success"
         },
         "send-away": {
             "answers": [
             ],
-            "mood": "",
+            "hook": "",
             "text": "send-away"
         }
     }

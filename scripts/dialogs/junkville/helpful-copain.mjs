@@ -14,7 +14,7 @@ class Dialog {
   }
 
   joinPlayer() {
-    this.dialog.npc.setScript("companion/helpful-copain.mjs");
+    this.dialog.npc.setScript("companions/helpful-copain.mjs");
     game.playerParty.addCharacter(this.dialog.npc);
   }
 

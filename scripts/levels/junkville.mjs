@@ -57,8 +57,6 @@ class Level extends LevelBase {
     this.prepareCook();
     if (findHelpfulRescueRouteState() == 3)
       finalizeRescueRoute();
-    if (this.negociationScene.active)
-      console.log("Junkville: negociation assembly scene on-going");
   }
 
   onExit() {
@@ -81,7 +79,14 @@ class Level extends LevelBase {
   }
 
   waitForAssembly() {
-    if (game.timeManager.hour >= 21) {
+    if (level.getVariable("nextAssemblyEnd") < game.timeManager.getTimestamp()) {
+      const participants = level.find(character => {
+        return character.type == "Character" && character.statistics.faction === "junkville";
+      });
+
+      level.tasks.removeTask("waitForAssembly");
+      this.negociationScene.autoConclude(participants);
+    } else if (game.timeManager.hour >= 21) {
       const actors = this.negociationScene.generateActors();
       const participants = level.find(character => {
         return character.type == "Character" && character.statistics.faction === "junkville";
@@ -97,14 +102,6 @@ class Level extends LevelBase {
         this.negociationScene.initialize();
       }
       return ;
-    }
-    if (level.getVariable("nextAssemblyEnd") < game.timeManager.getTimestamp()) {
-      const participants = level.find(character => {
-        return character.type == "Character" && character.statistics.faction === "junkville";
-      });
-
-      level.tasks.removeTask("waitForAssembly");
-      this.negociationScene.autoConclude(participants);
     }
   }
 }
