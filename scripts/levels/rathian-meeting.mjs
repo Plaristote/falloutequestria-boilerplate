@@ -1,7 +1,7 @@
 import {LevelBase} from "./base.mjs";
 import {MeetingScene} from "../scenes/rathian-meeting.mjs";
 import {getValueFromRange} from "../behaviour/random.mjs";
-import {rathianTemplate} from "../pnjs/rathian/template.mjs";
+import {rathianTemplate} from "../characters/rathian/template.mjs";
 
 function banditTemplate(type, amount = 1) {
   const items = [];
