@@ -1,4 +1,4 @@
-import {callGuards, AlarmLevel} from "../pnjs/components/alarm.mjs";
+import {callGuards, AlarmLevel} from "../characters/components/alarm.mjs";
 import {RoutineComponent} from "./routine.mjs";
 
 const stealReactions = [
