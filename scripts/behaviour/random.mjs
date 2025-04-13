@@ -1,5 +1,5 @@
-export function getValueFromRange(from, to) {
-  return from + dices.roll(to - from);
+export function getValueFromRange(from, to, roller) {
+  return from + (roller ? roller.dices : dices).roll(to - from);
 }
 
 export function isJinxed(character) {

@@ -17,7 +17,7 @@ export class Medikit extends Item {
     if (target.isAlive()) {
       const stats   = target.statistics;
       const maxHeal = stats.maxHitPoints - stats.hitPoints;
-      var   healed  = getValueFromRange(this.minHeal, this.maxHeal);
+      var   healed  = getValueFromRange(this.minHeal, this.maxHeal, this.user);
 
       healed = healed * this.user.statistics.medicine / 100;
       healed = Math.min(healed, maxHeal);
