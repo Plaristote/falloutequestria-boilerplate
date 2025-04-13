@@ -58,6 +58,7 @@ export class RainyPurple extends Slave {
   }
 
   triggerVendetta() {
+    this.model.isUnique = true;
     game.quests.addQuest("cristal-den/rainy-purple-vendetta").script.goToQuest();
   }
 }
