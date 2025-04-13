@@ -21,6 +21,9 @@ class Dialog {
     if (this.dialog.npc.hasVariable("sabotagePrompt")) {
       this.dialog.npc.unsetVariable("sabotagePrompt");
       entryPoint = "sabotage/entry";
+    } else if (this.dialog.npc.hasVariable("jobPrompt")) {
+      this.dialog.npc.unsetVariable("jobPrompt");
+      entryPoint = "sneak-job/apply/entry";
     } else if (this.dialog.npc.hasVariable("met")) {
       entryPoint = "prompt";
     }
@@ -34,6 +37,10 @@ class Dialog {
 
   wasSentByBitty() {
     return canWarnPotioksAboutBibin();
+  }
+
+  wasSentByPat() {
+    return level.getVariable("sentByPat", 0) == 1 && !hasPotiokSpyQuest();
   }
 
   wasSentByBibin() {

@@ -21,7 +21,7 @@
             "recruit-pitch-warrior": "I'm armed, seasoned, and I don't ask pointless questions.",
             "recruitment/entry": "Hm. It just so happens that the Matriarch is looking for a foreign contractor... but I must first make sure that you are not a mere scavenger.",
             "recruitment/failure": "Hmm... no, I don't think you match our requirements. Too bad.",
-            "recruitment/success": "That's promising. Get down inside the bunker, and introduce yourself to Daisy. She's The Matriarch secretary.",
+            "recruitment/success": "That's promising. Get down inside the bunker, and introduce yourself to Daisy. She's The Matriarch secretary. Tell her you're applying for the intel job.",
             "send-away": "Oh no you're not ! You're not allowed past this room. If you've got nothing to ask me, then scram."
         }
     }

@@ -14,6 +14,10 @@ class Dialog {
     return canWarnPotioksAboutBibin();
   }
 
+  wasSentByPat() {
+    return level.getVariable("sentByPat", 0) == 1 && !hasPotiokSpyQuest();
+  }
+
   matriarchWillReceiveAboutBitty() {
     const result = this.matriarchWillReceiveAboutJob();
 
@@ -28,6 +32,12 @@ class Dialog {
       return "on-matriarch-dead";
     this.dialog.npc.script.accessGranted = true;
     return "on-sent-by-bitty";
+  }
+
+  matriarchWillReceiveAboutApplyingForJob() {
+    if (this.matriach)
+      this.matriarch.setVariable("jobPrompt", 1);
+    return this.matriarchWillReceiveAboutJob();
   }
 
   hasMatriarchQuest() {
