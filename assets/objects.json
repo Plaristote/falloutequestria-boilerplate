@@ -30,8 +30,8 @@
         "icon": "book.png",
         "isGroupable": true,
         "scriptName": "book.mjs",
-        "type": "consommables",
         "sprite": "book",
+        "type": "consommables",
         "value": 45,
         "weight": 3
     },
@@ -42,6 +42,41 @@
         "type": "misc",
         "value": 1,
         "weight": 0
+    },
+    "combat-armor": {
+        "icon": "combat-armor.webp",
+        "isGroupable": true,
+        "scriptName": "armor.mjs",
+        "sprite": "metal-armor",
+        "type": "armor",
+        "value": 2500,
+        "weight": 30
+    },
+    "combat-knife": {
+        "icon": "combat-knife.png",
+        "isGroupable": true,
+        "scriptName": "combat-knife.mjs",
+        "sprite": "knife",
+        "type": "weapon",
+        "value": 95,
+        "weight": 1
+    },
+    "dash": {
+        "icon": "dash.webp",
+        "isGroupable": true,
+        "scriptName": "dash.mjs",
+        "sprite": "misc",
+        "type": "consommables",
+        "value": 150,
+        "weight": 0.5
+    },
+    "doctor-bag": {
+        "icon": "doctors-bag.webp",
+        "isGroupable": true,
+        "sprite": "health-potion",
+        "type": "consommables",
+        "value": 180,
+        "weight": 10
     },
     "dynamite": {
         "icon": "dynamite.png",
@@ -151,6 +186,15 @@
         "value": 850,
         "weight": 15
     },
+    "mint-als": {
+        "icon": "mintals.webp",
+        "isGroupable": true,
+        "scriptName": "mintals.mjs",
+        "sprite": "misc",
+        "type": "consommables",
+        "value": 60,
+        "weight": 0.2
+    },
     "mouthgun": {
         "icon": "littlemacintosh.png",
         "isGroupable": false,
@@ -182,8 +226,8 @@
         "icon": "firstaid-book.png",
         "isGroupable": true,
         "scriptName": "skillbook.mjs",
-        "type": "consommables",
         "sprite": "book",
+        "type": "consommables",
         "value": 190,
         "weight": 3
     },
@@ -191,8 +235,8 @@
         "icon": "survival-book.png",
         "isGroupable": true,
         "scriptName": "skillbook.mjs",
-        "type": "consommables",
         "sprite": "book",
+        "type": "consommables",
         "value": 125,
         "weight": 3
     },
@@ -200,7 +244,6 @@
         "icon": "repair-book.png",
         "isGroupable": true,
         "scriptName": "skillbook.mjs",
-        "type": "consommables",
         "sprite": "book",
         "type": "consommables",
         "value": 275,
@@ -210,8 +253,8 @@
         "icon": "smallguns-book.png",
         "isGroupable": true,
         "scriptName": "skillbook.mjs",
-        "type": "consommables",
         "sprite": "book",
+        "type": "consommables",
         "value": 250,
         "weight": 3
     },
