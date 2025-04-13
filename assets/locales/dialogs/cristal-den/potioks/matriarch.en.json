@@ -7,6 +7,7 @@
             "bitty-appreciation-good": "Seems like a tightly run operation to me. Her workers respect her, and the townfolks fear her.",
             "bitty-appreciation-medium": "She seems to be doing okay. The mine could produce more, and she's trying to improve those results.",
             "bitty-appreciation-reject": "Honestly, I don't think I have enough experience to judge.",
+            "from-sneak-apply-to-entry": "[next]",
             "go-back-to-sneak-job-report": "[...]",
             "hide-bibin-involvement": "We've caught the pony who was planting explosives at the mine.",
             "hide-bibin-involvement-alt": "Eyup. That's all I had to say.",
@@ -81,6 +82,7 @@
             "sneak-job/alreadyFound/died": "Sorry to be the bearer of bad news, but he kicked the bucket.",
             "sneak-job/alreadyFound/escorted": "I helped him escape. I don't know what happened to him afterwards.",
             "sneak-job/alreadyFound/stillCaptive": "As far as I know, Bibin's still holding him captive.",
+            "sneak-job/apply/entry": "So you're the one Pat sent me for our little intelligence operation ? Well. I'm going to trust his judgement and cut right to the chase.",
             "sneak-job/ask-more-reward": "It's a dangerous job. I'm staking my own life there. I think it's worth more than {{sneakJobReward}} caps.",
             "sneak-job/ask-reward": "Sure, I'll do it. How much are you ready to invest in that project ?",
             "sneak-job/done": "Well. This is it then. You've been useful to me, and you completed the job. You've earned your reward.<br/><br/><i>She hoofs over {{sneakJobReward}} caps.</i><br/><br/>Do come back to see me. These are troubled times for the Den. I'm sure I'll eventually find some other job fitting your particular skillset.",
@@ -110,7 +112,8 @@
             "sneak-job/reward-not-increased": "I understand your concern, but I'm working on limited funds... and if you do get caught, it'll cause even more trouble. So how about we both bet you'll come back alive and successful, and get paid a reasonable amount of money for it ?",
             "was-sent-by-bibin": "Bibin sends his regards. <i>[Start fighting]</i>",
             "was-sent-by-bitty": "I've been sent by Bitty Potiok. I have important information to relay.",
-            "was-sent-by-no-one": "But it's true ! I wasn't looking for anything specific... this bunker is cool and I just like to explore !"
+            "was-sent-by-no-one": "But it's true ! I wasn't looking for anything specific... this bunker is cool and I just like to explore !",
+            "was-sent-by-pat": "I'm here to apply for the intel job."
         }
     }
 }

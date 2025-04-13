@@ -24,7 +24,7 @@ class Dialog {
   recruitTestPassed() {
     if (level.getVariable("access", 0) < 2)
       level.setVariable("access", 2);
-    level.setVariable("canAskForWork", 0);
+    level.setVariable("sentByPat", 1);
   }
 
   recruitBluff() {
@@ -41,7 +41,7 @@ class Dialog {
   }
 
   canAskForWork() {
-    return level.getVariable("canAskForWork", 1) === 1;
+    return !level.hasVariable("sentByPat");
   }
 }
 
