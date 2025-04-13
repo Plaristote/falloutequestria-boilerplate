@@ -24,7 +24,8 @@ export class MeetingScene extends SceneManager {
       this.rathianArrival.bind(this),
       this.leaderReaction.bind(this),
       this.rathianResponds.bind(this),
-      this.leaderReaction2.bind(this)
+      this.leaderReaction2.bind(this),
+      this.triggerCombat.bind(this)
     ];
   }
 

@@ -54,7 +54,7 @@ class Level extends LevelBase {
     level.tasks.addTask("startAmbush", 1, 1);
   }
   startAmbush() {
-    game.appendToConsole("Oh boy ! It's a trap !");
+    game.appendToConsole(i18n.t("scenes.rathian-meeting.console-message"));
     this.bandits.insertIntoZone(level, "bandits-entry");
     this.scene.initialize();
   }

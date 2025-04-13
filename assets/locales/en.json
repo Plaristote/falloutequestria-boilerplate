@@ -171,6 +171,7 @@
             "name": "factions.critters.name"
         },
         "diamond-dogs": {
+            "description": "The diamond dogs living under the ground of Junkville and its scrapyard.",
             "name": "Diamond dogs"
         },
         "hillburrow": {
@@ -182,7 +183,7 @@
             "name": "factions.hillburrow-slaves.name"
         },
         "junkville": {
-            "description": "The inhabitants of the small town of Junkville. They're a peaceful bunch of ponies living off the resources of an old pre-war dump.",
+            "description": "A small community living off the plentiful resources of a junkyard.",
             "name": "Junkville"
         },
         "mordino": {
@@ -290,20 +291,6 @@
         "director-at-lunch": "Boss is taking her launch. Come back in a couple hours.",
         "director-not-receiving": "Boss isn't receiving anyone right now. Come back later.",
         "shady-robber": "He looks kinda shady."
-    },
-    "scenes": {
-        "rathian-meeting": {
-            "leaderReaction": "What ? You seem vastly outnumbered, new guy. I suggest you drop the gun and join our pretty little pony over here.",
-            "leaderReaction2#1": "Oh, my ! You almost had me shitting myself just now !",
-            "leaderReaction2#2": "Alright boys. Kill him. I'll take care of our pretty little pony over here.",
-            "playerEscaping": "He's trying to run ! Catch him !",
-            "rathianArrival": "Nopony moves ! Leave this poor fellow alone and nopony gets hurt.",
-            "rathianAttack": "<b>Get behind me ! I'll take care of these evildoers !</b>",
-            "rathianResponds": "Come on... I'm giving you a chance to make it out alive. Leave that pony alone and go away.",
-            "startAmbush#1": "Hello there ! Looks like you're surrounded, friend !",
-            "startAmbush#2": "Oh don't look so distraught, we ain't going to kill you... not unless you do anything stupid.",
-            "startAmbush#3": "You're in luck. Look at you, all dapper and healthy ! You'll fetch us a nice price at the slave market. How about it ?"
-        }
     },
     "spells": {
         "empty-spellbook": "You haven't learned any spells yet.",
