@@ -67,7 +67,7 @@ class Level extends LevelBase {
     }
   }
   onCombatEnded() {
-    if (level.hasVariable("rathianLoaded"))
+    if (level.hasVariable("rathianLoaded") && level.getVariable("rathianTalked", 0) === 0)
       level.tasks.addTask("startDialog", 1500, 1);
   }
   startDialog() {
@@ -75,6 +75,7 @@ class Level extends LevelBase {
     if (npc.isAlive() && game.player.isAlive()) {
       level.cameraFocusRequired(npc);
       level.initializeDialog(npc, "rathian-introduction");
+      level.setVariable("rathianTalked", 1);
     }
   }
   rathianJoinsPlayer() {
