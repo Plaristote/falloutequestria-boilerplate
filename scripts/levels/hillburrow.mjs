@@ -1,5 +1,5 @@
 import {LevelBase} from "./base.mjs";
-import {waterCarrierAppearences, waterCarrierPopPositions} from "../pnjs/hillburrow/water-carrier.mjs";
+import {waterCarrierAppearences, waterCarrierPopPositions} from "../characters/hillburrow/water-carrier.mjs";
 import {saboteurShouldDisappear} from "../quests/hillburrow/sabotage.mjs";
 import {shouldMurdererDisappear} from "../quests/hillburrow/oldSheriffMurder.mjs";
 

@@ -1,4 +1,4 @@
-import {getRathian} from "../../pnjs/rathian/template.mjs";
+import {getRathian} from "../../characters/rathian/template.mjs";
 
 export class StabletechStairs {
   constructor(model) {

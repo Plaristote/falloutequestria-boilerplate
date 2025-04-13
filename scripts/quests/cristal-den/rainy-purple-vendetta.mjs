@@ -1,5 +1,5 @@
 import {QuestHelper, QuestFlags} from "../helpers.mjs";
-import {updateDenSlaversDead} from "../../pnjs/cristal-den/slavers/denSlaversDead.mjs";
+import {updateDenSlaversDead} from "../../characters/cristal-den/slavers/denSlaversDead.mjs";
 
 const questName = "cristal-den/rainy-purple-vendetta";
 

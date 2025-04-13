@@ -1,5 +1,5 @@
 import {DialogHelper} from "../helpers.mjs";
-import {areDenSlaversDead} from "../../pnjs/cristal-den/slavers/denSlaversDead.mjs";
+import {areDenSlaversDead} from "../../characters/cristal-den/slavers/denSlaversDead.mjs";
 
 class Dialog extends DialogHelper {
   getEntryPoint() {

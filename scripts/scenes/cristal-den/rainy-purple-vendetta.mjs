@@ -1,5 +1,5 @@
 import {SceneManager} from "../../behaviour/sceneManager.mjs";
-import {areDenSlaversDead} from "../../pnjs/cristal-den/slavers/denSlaversDead.mjs";
+import {areDenSlaversDead} from "../../characters/cristal-den/slavers/denSlaversDead.mjs";
 import * as Quest from "../../quests/cristal-den/rainy-purple-vendetta.mjs";
 
 function getDoorGuards() {
