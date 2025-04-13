@@ -15,8 +15,8 @@ export function skillContest(attacker, defender, skills, diceType = 100) {
   }
   skill1 = modifiedSkillValue(attacker.character, skill1, defender.character);
   skill2 = modifiedSkillValue(defender.character, skill2, attacker.character);
-  roll1  = diceType > 0 ? getValueFromRange(0, diceType) : 0;
-  roll2  = diceType > 0 ? getValueFromRange(0, diceType) : 0;
+  roll1  = diceType > 0 ? getValueFromRange(0, diceType, attacker.character) : 0;
+  roll2  = diceType > 0 ? getValueFromRange(0, diceType, defender.character) : 0;
   console.log("SkillContest:");
   console.log(` attacker: ${attacker.character.path}, roll: ${roll1}, skill: ${skill1}, bonus: ${attacker.bonus}`);
   console.log(` defender: ${defender.character.path}, roll: ${roll2}, skill: ${skill2}, bonus: ${defender.bonus}`);
@@ -29,7 +29,7 @@ export function skillCheck(user, skill, options = {}) {
   const skillValue = modifiedSkillValue(user, skill);
   const dice       = options.dice ? options.dice : 100;
   const target     = options.target ? options.target : 100;
-  const roll       = getValueFromRange(0, dice);
+  const roll       = getValueFromRange(0, dice, user);
   const critical   = Math.ceil(modifiedSkillValue(user, "criticalChance") / 100 * dice);
   const criticalFail = Math.floor((isJinxed(game.player) ? 15 : 5) / 100 * dice);
   var callback;

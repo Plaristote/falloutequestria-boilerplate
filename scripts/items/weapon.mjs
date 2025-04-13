@@ -79,7 +79,7 @@ export class WeaponBehaviour extends ItemBehaviour {
   }
 
   useOn(target) {
-    var damage = getValueFromRange(...this.getDamageRange());
+    var damage = getValueFromRange(...this.getDamageRange(), this.user);
 
     damage -= target.statistics.damageResistance;
     damage = Math.max(0, damage);
