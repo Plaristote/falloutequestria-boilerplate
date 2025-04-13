@@ -1,0 +1,17 @@
+{
+  "scenes": {
+    "rathian-meeting": {
+      "console-message": "Tu es tombé dans une embuscade !",
+      "startAmbush#1": "Halte, bourgeois des temps modernes !",
+      "startAmbush#2": "Tu sera plus leger point de vue poids quand tu aura cédé tes richesses.",
+      "startAmbush#3": "Hâte-toi ! Ma patience n'a pas son pareil !",
+      "rathianArrival": "Personne ne bouge ! Laissez cet innocent tranquille !",
+      "leaderReaction": "Tiens, qui voilà ? Une nouvelle victime pour mes compères ?",
+      "rathianResponds": "Dernière chance : laissez-nous seuls et partez tranquillement.",
+      "leaderReaction2#1": "J'espère que tu fabule ! As-tu la fabulette bien preste ?",
+      "leaderReaction2#2": "Jeunes gens, au travail ! Occupez-vous du justicier, et j'éduquerai notre poulain de l'année.",
+      "playerEscaping": "Ça essaye de filer ! C'est ça, file, file, file ta laine !",
+      "rathianAttack": "<b>Abrite-toi derrière moi ! Je vais m'occuper de ces brigands !</b>"
+    }
+  }
+}
