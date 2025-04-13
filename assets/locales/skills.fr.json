@@ -1,0 +1,10 @@
+{
+  "medicine-skill": {
+    "target-killed": "{{user}} a dramatiquement échoué son soin sur {{target}} et l'a tué.",
+    "critical-fail": "{{user}} a dramatiquement échoué son soin sur {{target}} et a infligé {{hp}} points de dégât.",
+    "failure": "{{user}} n'a pas réussi a soigner {{target}}.",
+    "used-on": "{{user}} a traité les blessures de {{target}} et soigné {{hp}} points de vie.",
+    "max-use-reached": "{{target}} ne peut plus être soigné pour le moment.",
+    "in-combat": "La compétence médecine n'est pas disponible en combat."
+  }
+}
