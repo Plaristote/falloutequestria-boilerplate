@@ -1,0 +1,10 @@
+{
+  "medicine-skill": {
+    "target-killed": "{{user}} critically failed to heal {{target}} and killed them.",
+    "critical-fail": "{{user}} critically failed to heal {{target}} and dealt {{hp}} points of damage.",
+    "failure": "{{user}} failed to heal {{target}}.",
+    "used-on": "{{user}} used medicine on {{target}} and healed {{hp}} hit points.",
+    "max-use-reached": "{{target}} has cannot receive anymore care for the time being.",
+    "in-combat": "The medicine skill cannot be used during a fight."
+  }
+}
