@@ -1,7 +1,7 @@
 import {ItemBehaviour} from "./item.mjs";
 import {onEvidenceRevealed} from "../quests/hillburrow/oldSheriffMurder.mjs";
 
-class QuestHillburrowMurderEvidence extends ItemBehaviour {
+export default class QuestHillburrowMurderEvidence extends ItemBehaviour {
   constructor(model) {
     super(model);
     this.requiresTarget = this.triggersCombat = false;
