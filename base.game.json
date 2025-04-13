@@ -7,8 +7,8 @@
     "default": "The game",
     "fr": "Le jeu"
   },
-  "path": "./boilerplate",
-  "logo": "./boilerplate/assets/icon.ico",
+  "path": "./",
+  "logo": "./assets/icon.ico",
   "organizationName": "Ile Noire Dev",
   "organizationDomain": "ile-noire.fr"
 }
