@@ -1,0 +1,9 @@
+{
+  "capital": {
+    "laboratory": {
+      "terminal-not-alimented": "This terminal is not operational.",
+      "on-blood-pact": "Ouch ! In retrospect, that might not have been my best decision.",
+      "elevator-needs-power": "The elevator is unresponsive. It needs power."
+    }
+  }
+}
