@@ -22,7 +22,13 @@ export class LockedStorage {
   }
   
   toggleLocked() {
+    this.model.playSound("door-unlock");
     this.model.setVariable("locked", !this.locked);
+  }
+
+  onOpenWithKey(user, item) {
+    this.toggleLocked();
+    this.onLockpickSuccess(user);
   }
   
   onLockpickSuccess(user) {
