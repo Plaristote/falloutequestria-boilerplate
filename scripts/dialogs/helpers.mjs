@@ -46,6 +46,33 @@ export class DialogHelper {
   }
 }
 
+export class BarterAnswer {
+  constructor(dialog, name) {
+    this.dialog = dialog;
+    this.name = name;
+  }
+
+  get passed() { return this.dialog.npc.getVariable(`barterCheck-${this.name}`, 0) === 1; }
+  set passed(value) { return this.dialog.npc.setVariable(`barterCheck-${this.name}`, value ? 1 : 0); }
+  get visibilityCallback() { return this.runVisibilityCheck.bind(this); }
+  get triggerCallback() { return this.runCallback.bind(this); }
+
+  setSkillLimit(value) { this.skillLimit = value; return this; }
+  setXpReward(value) { this.xpReward = value; return this; }
+  setSuccessState(state) { this.successState = state; return this; }
+  setFailureState(state) { this.failureState = state; return this; }
+
+  runVisibilityCheck() { return !this.passed && this.skillLimit ? game.player.statistics.barter >= this.skillLimit : true; }
+  runCallback() {
+    if (this.passed || skillContest(game.player, this.dialog.npc, "barter") === game.player) {
+      this.passed = true;
+      if (this.xpReward)
+      if (this.successState) return this.successState;
+    }
+    return this.failureState ? this.failureState : this.successState;
+  }
+}
+
 export class SkillAnswer {
   static create(dialog, name, option) {
     const skill = typeof option == "string" ? option : "speech";
