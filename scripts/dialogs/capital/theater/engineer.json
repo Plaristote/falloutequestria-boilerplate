@@ -1,0 +1,183 @@
+{
+    "answers": {
+        "accept-find-crystal": {
+            "hook": "onSpinelTakeQuest",
+            "text": "accept-find-crystal"
+        },
+        "ask-about-generator": {
+            "state": "intro/about-generator",
+            "text": "ask-about-generator"
+        },
+        "ask-crystal-replacement": {
+            "state": "intro/help-offered",
+            "text": "ask-crystal-replacement"
+        },
+        "ask-crystal-whereabout-more": {
+            "state": "intro/help-offered",
+            "text": "ask-crystal-whereabout-more"
+        },
+        "ask-crystal-whereabouts": {
+            "state": "intro/crystal-whereabouts",
+            "text": "ask-crystal-whereabouts"
+        },
+        "crystal-prompt-leave": {
+            "text": "crystal-prompt-leave"
+        },
+        "crystal-prompt-not-yet": {
+            "text": "crystal-prompt-not-yet"
+        },
+        "crystal-prompt-success": {
+            "availableHook": "hasElectroMagicSpinel",
+            "state": "crystal/found-crystal",
+            "text": "crystal-prompt-success"
+        },
+        "entry-leave": {
+            "text": "entry-leave"
+        },
+        "exit-about-generator": {
+            "text": "exit-about-generator"
+        },
+        "found-crystal-brag": {
+            "state": "crystal/replace-crystal",
+            "text": "found-crystal-brag"
+        },
+        "found-crystal-evasive": {
+            "state": "crystal/replace-crystal",
+            "text": "found-crystal-evasive"
+        },
+        "found-crystal-trust": {
+            "state": "crystal/replace-crystal",
+            "text": "found-crystal-trust"
+        },
+        "generator-offer-help": {
+            "state": "intro/help-offered",
+            "text": "generator-offer-help"
+        },
+        "help-already-has-cristal": {
+            "availableHook": "hasElectromagicSpinel",
+            "state": "crystal/found-crystal",
+            "text": "help-already-has-cristal"
+        },
+        "introduction-engineer": {
+            "availableHook": "playerUnderstandsGenerator",
+            "state": "intro/engineer",
+            "text": "introduction-engineer"
+        },
+        "introduction-leave": {
+            "text": "introduction-leave"
+        },
+        "replace-crystal-ask-reward": {
+            "state": "crystal/reward",
+            "text": "replace-crystal-ask-reward"
+        },
+        "replace-crystal-happy-to-help": {
+            "state": "crystal/thanks",
+            "text": "replace-crystal-happy-to-help"
+        }
+    },
+    "entryPoint": "introduction",
+    "states": {
+        "crystal/found-crystal": {
+            "answers": [
+                "found-crystal-evasive",
+                "found-crystal-trust",
+                "found-crystal-brag"
+            ],
+            "hook": "",
+            "mood": "laugh",
+            "text": "crystal/found-crystal"
+        },
+        "crystal/prompt": {
+            "answers": [
+                "crystal-prompt-success",
+                "crystal-prompt-not-yet",
+                "crystal-prompt-leave"
+            ],
+            "hook": "",
+            "mood": "dubious",
+            "text": "crystal/prompt"
+        },
+        "crystal/replace-crystal": {
+            "answers": [
+                "replace-crystal-happy-to-help",
+                "replace-crystal-ask-reward"
+            ],
+            "hook": "",
+            "mood": "smile",
+            "text": "crystal/replace-crystal"
+        },
+        "crystal/reward": {
+            "answers": [
+            ],
+            "hook": "onSpinelReward",
+            "mood": "dubious",
+            "text": "crystal/reward"
+        },
+        "crystal/thanks": {
+            "answers": [
+            ],
+            "hook": "onSpinelThanks",
+            "mood": "neutral",
+            "text": "crystal/thanks"
+        },
+        "entry": {
+            "answers": [
+                "entry-leave"
+            ],
+            "hook": "cocky",
+            "text": "entry"
+        },
+        "intro/about-generator": {
+            "answers": [
+                "ask-crystal-replacement",
+                "ask-crystal-whereabouts",
+                "exit-about-generator"
+            ],
+            "hook": "",
+            "mood": "dubious",
+            "text": "intro/about-generator"
+        },
+        "intro/alt": {
+            "answers": [
+            ],
+            "text": "intro/alt"
+        },
+        "intro/crystal-whereabouts": {
+            "answers": [
+                "accept-find-crystal",
+                "ask-crystal-whereabout-more",
+                "exit-about-generator"
+            ],
+            "mood": "dubious",
+            "text": "intro/crystal-whereabouts"
+        },
+        "intro/engineer": {
+            "answers": [
+                "generator-offer-help"
+            ],
+            "mood": "smile",
+            "text": "intro/engineer"
+        },
+        "intro/help-offered": {
+            "answers": [
+                "help-already-has-cristal",
+                "accept-find-crystal",
+                "ask-crystal-whereabouts"
+            ],
+            "hook": "",
+            "mood": "dubious",
+            "text": "intro/help-offered"
+        },
+        "introduction": {
+            "answers": [
+                "introduction-engineer",
+                "ask-about-generator",
+                "generator-offer-help",
+                "introduction-leave"
+            ],
+            "hook": "introduction",
+            "mood": "angry",
+            "text": "introduction"
+        }
+    }
+}

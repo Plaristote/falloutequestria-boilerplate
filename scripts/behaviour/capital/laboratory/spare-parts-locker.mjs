@@ -10,7 +10,7 @@ class SparePartsLocker extends LockedStorage {
 
   onUseItem(user, item) {
     if (item.itemType === "capital-laboratory-locker-key") {
-      this.lockedComponent.toggleLocked();
+      this.onOpenWithKey(user, item);
     }
   }
 }

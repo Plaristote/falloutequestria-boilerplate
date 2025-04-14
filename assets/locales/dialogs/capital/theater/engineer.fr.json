@@ -1,0 +1,37 @@
+{
+    "dialogs": {
+        "capital/theater/engineer": {
+            "accept-find-crystal": "Je vais voir ce que je peux faire.",
+            "ask-about-generator": "C'est quoi, ce truc sur lequel tu travail ?",
+            "ask-crystal-replacement": "Et tu peux pas remplacer ce cristal par autre chose ?",
+            "ask-crystal-whereabout-more": "Il doit bien y avoir un autre moyen ?",
+            "ask-crystal-whereabouts": "Tu sais où en trouver un autre ?",
+            "crystal-prompt-leave": "Je voulais juste voir comment tu allais.",
+            "crystal-prompt-not-yet": "Pas encore, mais je cherche toujours.",
+            "crystal-prompt-success": "<i>Tendre le spinelle :</i> À coeur vaillant rien d'impossible.",
+            "crystal/found-crystal": "Eh bah merde… tu '’as vraiment trouvée ?\n<br><br>\n<i>Il tend le sabot, prenant délicatement la pierre violette et striée d’or. Elle émet une faible pulsation lumineuse.</i>\n<br><br>\nOù est-ce que t’as bien pu… ? Bah, tu sais quoi, j'veux pas savoir. Si t’as du récupérer ça sur une pile de cadavres, je veux pas l'savoir.",
+            "crystal/prompt": "Tiens, te revoilà. Alors, t’as trouvé cette foutue spinelle électromagique, ou t’es juste revenu pour me dire que j'avais raison et que c'est impossible ?",
+            "crystal/replace-crystal": "<i>Rotten Gear insère le cristal dans le réacteur. Un instant de silence… Puis une décharge d’énergie traverse les câbles rafistolés. Les lumières d’Ashaven\ngagnent en intensité, et la vibration du générateur devient plus stable.\n<br><br>\nRotten Gear tapote la machine, satisfait, puis se tourne vers vous.</i>\n<br><br>\nBon sang, ça fonctionne. On a peut-être gagné quelques décennies de plus.\n<br><br>\nT’as l'air de rien, comme ça, mais t'es un putain de héros, en fait.",
+            "crystal/reward": "<i>Rotten Gear soupire et sort une petite bourse qu’il te jette.</i>\n<br><br>\nOuais, ouais. Voilà tes {{crystalReward}} caps. C'est tout ce qu’on peut se permettre ici.\n<br><br>\nMême si, entre nous… ce foutu cristal valait cent fois plus.",
+            "crystal/thanks": "Ouais… c'est rare, les poneys comme toi.\n<br><br>\nÉcoute, je suis pas du genre à faire dans l'émotionnel, mais… j’te revaudrai ça. D’une manière ou d’une autre.",
+            "entry": "Toi encore ? J'espèrais que quelqu'un d'autre serait venu m'emmerder, pour une fois.\n<br><br>\nAlors, qu'est-ce que tu veux ?",
+            "entry-leave": "Je voulais voir si ta mauvaise humeur commence à s'éroder. Je repasserais plus tard !",
+            "exit-about-generator": "Bonne chance avec ça.",
+            "found-crystal-brag": "T'as raison de pas vouloir savoir, crois-moi.",
+            "found-crystal-evasive": "J'ai mes méthodes.",
+            "found-crystal-trust": "Tu devrais me faire plus confiance.",
+            "generator-offer-help": "T'as besoin d'aide ?",
+            "help-already-has-cristal": "<i>Prendre la spinelle de ta poche et prétendre que tu la trouve derrière son oreille :</i> Abracadabra.",
+            "intro/about-generator": "C'est la seule foutue raison pour laquelle Ashaven tient encore debout.\n<br><br>\nUn vieux générateur qu’j’ai bricolé à partir d’un réacteur cristallin d’avant-guerre. Il tourne depuis des décennies… jusqu’à ce que ce foutu cristal\ncommence à s’effriter.\n<br><br>\nSans lui, on est condamnés. Les lumières s'éteindront. Le chauffage tombera en panne. Et à ce moment-là, ce coin deviendra juste un tas d’ruines encore\nplus froides qu’elles ne le sont déjà.",
+            "intro/alt": "Ouais, qu'est-ce qu'il y a, encore ?",
+            "intro/crystal-whereabouts": "Éh ben, tu peux toujours essayer d'en voler une aux Steel Rangers. Bonne chance pour pas finir en tas de cendres fumantes.\n<br><br>\nCes abrutis en gardent quelques-uns dans leur bunker. Mais vu leur amour pour les étrangers, je doute qu'ils te laissent même passer la porte d'entrée.",
+            "intro/engineer": "T'as l'oeil attentif. Ouais, c'est un foutoir de composants d'avant-guerre, de câble en ruine, et un cristal usé jusqu'a la moelle... mais c'est ce qui nous permet d'avoir de la lumière et de pas se gelêr les miches.",
+            "intro/help-offered": "Vraiment ? T'es ingénieur, maintenant ?\n<br><br>\nBah. De toute façon, j’vois pas comment ça pourrait être pire.<br><br>Écoute. Si par miracle, tu trouves un Spinelle Électromagique en état de marche… alors peut-être que j’peux sauver ce générateur.” Mais c’est pas comme si ces trucs poussaient sous les sabots. Alors à moins que tu sois un putain de magicien, c'est foutu.",
+            "introduction": "<i>Tu vois une goule s'affairer sur un générateur. Lorsqu'il t'aperçoit, il se redresse brusquement, se cogne la tête, fait chuter une caisse à outil qui se répend sur le sol.</i>\n<br><br>\nAÏE ! Ca a rien à faire là, ça !\n<br><br>\nToi, j'espère que t'as une bonne raison d'être ici. Je suis occupé. Qu'est-ce que tu veux ?",
+            "introduction-engineer": "Pas mal, ton générateur. T'arrive à stabiliser la charge avec toute cette rustine ?",
+            "introduction-leave": "Laisse tomber, je vais voir ailleurs.",
+            "replace-crystal-ask-reward": "Et ma récompense, alors ?",
+            "replace-crystal-happy-to-help": "Content d'avoir pu aider !"
+        }
+    }
+}
