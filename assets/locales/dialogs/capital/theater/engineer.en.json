@@ -1,0 +1,37 @@
+{
+    "dialogs": {
+        "capital/theater/engineer": {
+            "accept-find-crystal": "I'll see what I can do.",
+            "ask-about-generator": "What's that thing you're working on ?",
+            "ask-crystal-replacement": "Can't you replace the crystal with something else ?",
+            "ask-crystal-whereabout-more": "There has to be another way.",
+            "ask-crystal-whereabouts": "Any idea where to find another one ?",
+            "crystal-prompt-leave": "I just wanted to see if you were doing okay.",
+            "crystal-prompt-not-yet": "Not yet, but I'm working on it !",
+            "crystal-prompt-success": "I'm afraid you were wrong. I have an electromagic spinel, right here.",
+            "crystal/found-crystal": "Shiiiit… you really did find it ?\n<br><br>\n<i>He delicately picks up the purple, gold-striked stone. It radiates a faint pulse of light.</i>\n<br><br>\nWhere could you possibly have… ? Well, you know what, I don't wanna know. If you had to to pick that up on a steaming pile of bodies, I don't wanna know.",
+            "crystal/prompt": "Hey, you're back. So, did you find that darned electromagic spinel, or did you come back to admit that I told you so ?",
+            "crystal/replace-crystal": "<i>Rotten Gear inserts the crystal into the reactor. A moment of silence… then a burst of energy courses through the patched-up cables. The lights of Ashaven\ngain in intensity, and the generator's vibration becomes more stable.\n<br><br>\nRotten Gear pats the machine, satisfied, then turns to you.</i>\n<br><br>\nDamn, it works. We may have bought ourselves a few more decades.\n<br><br>\nYou don't look like much, but you're actually a fucking hero.",
+            "crystal/reward": "<i>Rotten Gear sighs and pulls out a small pouch, tossing it to you.</i>\n<br><br>\nYeah, yeah. Here are your {{crystalReward}} caps. That's all we can afford around here.\n<br><br>\nEven though, just between you and me… that damn crystal was worth a hundred times more.",
+            "crystal/thanks": "Yeah… ponies like you are uncommon.\n<br><br>\nListen, I'm not one for emotional things, but… I'll pay you back. One way or another.",
+            "entry": "You again ? I was hoping maybe somepony else would come bother me, for once !\n<br><br>\nSo, what do you want ?\t\t",
+            "entry-leave": "I just came to see if your bad mood finally wore off. Guess I'll come back later.",
+            "exit-about-generator": "Good luck with that.",
+            "found-crystal-brag": "You're right, you probably don't want to know.",
+            "found-crystal-evasive": "I've got my ways !",
+            "found-crystal-trust": "You should trust me more.",
+            "generator-offer-help": "Do you care for some help ?",
+            "help-already-has-cristal": "<i>Sneakily pick up the spinel and pretend you found something behind his hear:</i> Abracadabra.",
+            "intro/about-generator": "That, that's the only reason Ashaven still holds together.\n<br><br>\nAn old generator I fixed up from a pre-war crystalline reactor. It's been running for decades… until that darned crystal started to crack.\n<br><br>\nWithout the crystal, we're doomed. The lights will go out. The heating as well. And this spot will become just as much as a ruin as anything else around.",
+            "intro/alt": "Yes, what is it this time ?",
+            "intro/crystal-whereabouts": "Well, you can try to steal one from the Steel Rangers. Good luck not ending up in a pile of ash.\n<br><br>\nThese dumbasses keep some in their bunker. But considering their appreciation for strangers, I doubt they'd even let you through the front door.",
+            "intro/engineer": "You got a good eye. Yeah, it's a whole bunch of pre-war components put together, and a sucked up crystal... but it's what makes light at night and warms up our flanks.",
+            "intro/help-offered": "Really ? Are you an engineer now ?\n<br><br>\nWell… I don't see how it could get worse anyway.\n<br><br>\nListen, if by some sort of miracle, you end up walking on a fresh Electromagic Spinel… then maybe I can save that generator. But it's not like that stuff grows on trees, so unless you're a fucking magician, I don't see how you're gonna do it.",
+            "introduction": "<i>You see a ghoul getting busy fixing up a generator. When he sees you, he startles, hit his head on a shelf. A whole toolbox falls and spills on the floor.</i>\n<br><br>\nOUCH ! That shouldn't even have been there !\n<br><br>\nYou better have a damn good reason to be here. I'm BUSY. What do you want ?",
+            "introduction-engineer": "Good stuff, that generator. How do you manage to keep the load balanced with all that patchwork ?",
+            "introduction-leave": "Forget it, I'll get lost.",
+            "replace-crystal-ask-reward": "So, what about my reward ?",
+            "replace-crystal-happy-to-help": "Happy to help !"
+        }
+    }
+}
