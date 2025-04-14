@@ -93,7 +93,7 @@
         "icon": "blueprints.png",
         "isGroupable": false,
         "sprite": "misc",
-        "type": "misc",
+        "type": "quests",
         "value": 0,
         "weight": 1
     },
@@ -101,7 +101,7 @@
         "icon": "celestial-device-arm.png",
         "isGroupable": false,
         "sprite": "misc",
-        "type": "misc",
+        "type": "quests",
         "value": 0,
         "weight": 10
     },
@@ -316,8 +316,16 @@
         "isGroupable": false,
         "scriptName": "quest-hillburrow-murder-evidence.mjs",
         "sprite": "misc",
-        "type": "misc",
+        "type": "quests",
         "value": 125,
+        "weight": 1
+    },
+    "quest-holodisk-founder": {
+        "icon": "holodisk.webp",
+        "isGroupable": false,
+        "sprite": "misc",
+        "type": "quests",
+        "value": 25,
         "weight": 1
     },
     "scribe-armor": {

@@ -1,0 +1,31 @@
+{
+    "dialogs": {
+        "capital/theater/singer": {
+            "about": "If you ask for a little of my time,<br>\nI grant it to you most graciously,<br>\nAsk your questions, young pony,<br>\nI'll be happy to answer them!",
+            "ask-about-love": "Let's talk about the mtters of the heart. Are you saving yours for someone?",
+            "ask-about-self": "Tell me about yourself.",
+            "ask-about-town": "How did you end up in Ashaven ?",
+            "compliment-voice": "Your voice is raspy, but beautiful and deep, it resonates with emotions out of this world!",
+            "disrespected": "So you find it pleasant to insult my singing?<br>\nI pity your ear, with its pitiful taste.<br>\nIf the beauty of the notes is unbearable to you,<br>\nYour ears, like your heart, are pathetic.",
+            "disrespecting": "It's just that your voice made me sick, you really sing like a pot!",
+            "entry": "Well, the stranger is back,<br>no doubt to play a trick on me?",
+            "intro-ask-questions": "I wanted to ask you a few questions.",
+            "introduction": "A stranger here, what a piquant pleasure,<br>\nBut tell me, what is this beginning?<br>\nYou stare at me like this, without a word or a hint,<br>\nTell me then, what are you looking for this day?",
+            "leave": "I have to go. Bye !",
+            "leave-intro": "Sorry, I didn't mean to stare.",
+            "love-compliment": "I personally think you're delightful.",
+            "love-convince": "Silent hearts live on shadows and illusions, they dance in expectation and die without passion.",
+            "love-guess-barmaid": "What if it was... Amber Glow ?",
+            "love-guess-founder": "Could it be... Whispering Ash ?",
+            "love-guess-self": "I sure hope it's me !",
+            "love-press": "So no one finds favor in your eyes ?",
+            "love-quest/convince-failure": "A ghoul's love isn't meant to shine,<br>\nOur hearts, too faded, no longer know how to dream.",
+            "love-quest/convince-success": "A ghoul's love isn't meant to shine,<br>\nBut perhaps a song can reveal all.\n<br><br>\nIn lieu of another song, I will make my confession,<br>\nMay her ears catch the echo of my vows.",
+            "love-quest/guessed": "Amber? What an absurd and insane idea,<br>\nWe're... friends, nothing more to think about.\n<br><br>\nBut how impertinent, to pry into my heart!<br>\nSuch chatter is just rumor.",
+            "love-quest/intro": "A ghoul's heart, is it still a heart?<br>\nOr is it only a vestige, faded and dead?<br>\n<br>\nLove is a specter, it prowls the air,<br>\nBut cursed souls hardly love in the light.",
+            "love-quest/pressed": "Discretion is golden, elegance is a virtue,<br>\nIt is not courteous to expose what is unknown.<br>\nBut perhaps, one day, a being took his place,<br>\nIn my ashen heart, in this world of ice…",
+            "love-stop-guessing": "I understand. I won't bother you any further! See you later!",
+            "love-try-convince": "You love her ! Just own it, it's nothing to be ashamed of."
+        }
+    }
+}
