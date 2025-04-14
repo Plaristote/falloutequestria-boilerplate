@@ -1,0 +1,252 @@
+{
+    "answers": {
+        "ask-about-laboratory": {
+            "availableHook": "canAskAboutOmbrageLab",
+            "state": "laboratory/entry",
+            "text": "ask-about-laboratory"
+        },
+        "ask-about-laboratory-experiments": {
+            "availableHook": "knowsAboutOmbrageExperiments",
+            "state": "experiments/entry",
+            "text": "ask-about-laboratory-experiments"
+        },
+        "ask-about-secret-tunnel-knowledge": {
+            "state": "laboratory/secret-dismissive",
+            "text": "ask-about-secret-tunnel-knowledge"
+        },
+        "ask-about-secret-tunnel-location": {
+            "state": "laboratory/secret-dismissive",
+            "text": "ask-about-secret-tunnel-location"
+        },
+        "ask-cadence-knew-experiments": {
+            "state": "experiments/about-cadence",
+            "text": "ask-cadence-knew-experiments"
+        },
+        "ask-expriments-prisoners": {
+            "state": "experiments/about-prisoners",
+            "text": "ask-expriments-prisoners"
+        },
+        "ask-holodisk-content": {
+            "state": "holodisk/details-rejected",
+            "text": "ask-holodisk-content"
+        },
+        "ask-holodisk-crimes": {
+            "availableHook": "commentedOnBook",
+            "state": "holodisk/story-start",
+            "text": "ask-holodisk-crimes"
+        },
+        "book/dismissive": {
+            "text": "book/dismissive"
+        },
+        "book/talk-about-action": {
+            "text": "book/talk-about-action"
+        },
+        "book/talk-about-crimes": {
+            "text": "book/talk-about-crimes"
+        },
+        "bring-holodisk": {
+            "availableHook": "canGiveHolodisk",
+            "hook": "onHolodiskGiven",
+            "state": "holodisk/entry",
+            "text": "bring-holodisk"
+        },
+        "comment-on-book": {
+            "availableHook": "canCommentOnBook",
+            "hook": "commentOnBook",
+            "state": "book/entry",
+            "text": "comment-on-book"
+        },
+        "entry-leave": {
+            "text": "entry-leave"
+        },
+        "holodisk-story-to1": {
+            "state": "holodisk/story-step1",
+            "text": "next"
+        },
+        "holodisk-story-to2": {
+            "state": "holodisk/story-step2",
+            "text": "next"
+        },
+        "holodisk-story-to3": {
+            "state": "holodisk/story-step3",
+            "text": "next"
+        },
+        "holodisk-story-to4": {
+            "state": "holodisk/story-step4",
+            "text": "next"
+        },
+        "holodisk-story-to5": {
+            "state": "holodisk/story-step5",
+            "text": "next"
+        },
+        "lab-ask-more-details": {
+            "state": "laboratory/more-details",
+            "text": "lab-ask-more-details"
+        },
+        "lab-make-plea": {
+            "hook": "onLabMakePlea",
+            "state": "laboratory/dissuasive",
+            "text": "lab-make-plea"
+        },
+        "lab-secret-tunnel-next": {
+            "state": "laboratory/secret-tunnel#2",
+            "text": "next"
+        },
+        "thanks-about-secret-tunnel": {
+            "state": "laboratory/holodisk-intro",
+            "text": "thanks-about-secret-tunnel"
+        },
+        "topic-move-on": {
+            "state": "introduction",
+            "text": "topic-move-on"
+        }
+    },
+    "entryPoint": "introduction",
+    "states": {
+        "book/entry": {
+            "answers": [
+                "book/talk-about-crimes",
+                "book/talk-about-action",
+                "book/dismissive"
+            ],
+            "mood": "smile",
+            "text": "book/entry"
+        },
+        "experiments/about-cadence": {
+            "answers": [
+                "ask-expriments-prisoners",
+                "topic-move-on"
+            ],
+            "text": "experiments/about-cadence"
+        },
+        "experiments/about-prisoners": {
+            "answers": [
+                "ask-cadence-knew-experiments",
+                "topic-move-on"
+            ],
+            "text": "experiments/about-prisoners"
+        },
+        "experiments/entry": {
+            "answers": [
+                "ask-cadence-knew-experiments",
+                "ask-expriments-prisoners",
+                "topic-move-on"
+            ],
+            "text": "experiments/entry"
+        },
+        "holodisk/details-rejected": {
+            "answers": [
+                "ask-holodisk-crimes"
+            ],
+            "text": "holodisk/details-rejected"
+        },
+        "holodisk/entry": {
+            "answers": [
+                "ask-holodisk-content",
+                "ask-holodisk-crimes"
+            ],
+            "text": "holodisk/entry"
+        },
+        "holodisk/story-start": {
+            "answers": [
+                "holodisk-story-to1"
+            ],
+            "text": "holodisk/story-start"
+        },
+        "holodisk/story-step1": {
+            "answers": [
+                "holodisk-story-to2"
+            ],
+            "mood": "neutral",
+            "text": "holodisk/story-step1"
+        },
+        "holodisk/story-step2": {
+            "answers": [
+                "holodisk-story-to3"
+            ],
+            "mood": "sad",
+            "text": "holodisk/story-step2"
+        },
+        "holodisk/story-step3": {
+            "answers": [
+                "holodisk-story-to4"
+            ],
+            "text": "holodisk/story-step3"
+        },
+        "holodisk/story-step4": {
+            "answers": [
+                "holodisk-story-to5"
+            ],
+            "text": "holodisk/story-step4"
+        },
+        "holodisk/story-step5": {
+            "answers": [
+            ],
+            "text": "holodisk/story-step5"
+        },
+        "introduction": {
+            "answers": [
+                "comment-on-book",
+                "ask-about-laboratory",
+                "ask-about-laboratory-experiments",
+                "bring-holodisk",
+                "entry-leave"
+            ],
+            "text": "introduction"
+        },
+        "laboratory/dissuasive": {
+            "answers": [
+            ],
+            "mood": "cocky",
+            "text": "laboratory/dissuasive"
+        },
+        "laboratory/entry": {
+            "answers": [
+                "lab-ask-more-details",
+                "lab-make-plea"
+            ],
+            "hook": "",
+            "mood": "dubious",
+            "text": "laboratory/entry"
+        },
+        "laboratory/holodisk-intro": {
+            "answers": [
+            ],
+            "hook": "startHolodiskQuest",
+            "mood": "sad",
+            "text": "laboratory/holodisk-intro"
+        },
+        "laboratory/more-details": {
+            "answers": [
+                "lab-make-plea"
+            ],
+            "mood": "sad",
+            "text": "laboratory/more-details"
+        },
+        "laboratory/secret-dismissive": {
+            "answers": [
+                "thanks-about-secret-tunnel"
+            ],
+            "mood": "sad",
+            "text": "laboratory/secret-dismissive"
+        },
+        "laboratory/secret-tunnel": {
+            "answers": [
+                "lab-secret-tunnel-next"
+            ],
+            "hook": "",
+            "mood": "dubious",
+            "text": "laboratory/secret-tunnel"
+        },
+        "laboratory/secret-tunnel#2": {
+            "answers": [
+                "ask-about-secret-tunnel-knowledge",
+                "ask-about-secret-tunnel-location",
+                "thanks-about-secret-tunnel"
+            ],
+            "hook": "openSecretTunnel",
+            "mood": "cocky",
+            "text": "laboratory/secret-tunnel#2"
+        }
+    }
+}
