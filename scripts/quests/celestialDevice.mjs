@@ -10,7 +10,8 @@ export class CelestialDevice extends QuestHelper {
   onItemPicked(item) {
     switch (item.itemType) {
     case "celestial-device-mra":
-      this.model.addObjective("find-arm-module", this.tr("find-arm-module"));
+      if (!this.model.hasObjective("find-arm-module"))
+        this.model.addObjective("find-arm-module", this.tr("find-arm-module"));
       this.model.completeObjective("find-arm-module");
       break ;
     case "celestial-device-blueprints":
