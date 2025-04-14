@@ -4,6 +4,17 @@
             "hook": "onSpinelTakeQuest",
             "text": "accept-find-crystal"
         },
+        "ask-about-celeestial-device-parts": {
+            "availableHook": "canClaimCelestialDeviceParts",
+            "hook": "celestialPartsClaim",
+            "state": "celestial-device/parts-not-ready",
+            "text": "ask-about-celeestial-device-parts"
+        },
+        "ask-about-celestial-device": {
+            "availableHook": "canShowCelestialDevicePlans",
+            "state": "celestial-device/introduction",
+            "text": "ask-about-celestial-device"
+        },
         "ask-about-generator": {
             "state": "intro/about-generator",
             "text": "ask-about-generator"
@@ -19,6 +30,24 @@
         "ask-crystal-whereabouts": {
             "state": "intro/crystal-whereabouts",
             "text": "ask-crystal-whereabouts"
+        },
+        "ask-make-celestial-device-parts": {
+            "hook": "celestialDeviceAskToCraft",
+            "text": "ask-make-celestial-device-parts"
+        },
+        "ask-suggestion-celestial-device-arm": {
+            "state": "celestial-device/introduction",
+            "text": "ask-suggestion-celestial-device-arm"
+        },
+        "ask-to-learn": {
+            "availableHook": "isRepairTrainingAvailable",
+            "state": "repair/entry",
+            "text": "ask-to-learn"
+        },
+        "boast-about-already-having-arm": {
+            "availableHook": "celestialDeviceAlreadyFoundArm",
+            "state": "celestial-device/introduction",
+            "text": "boast-about-already-having-arm"
         },
         "crystal-prompt-leave": {
             "text": "crystal-prompt-leave"
@@ -66,6 +95,34 @@
         "introduction-leave": {
             "text": "introduction-leave"
         },
+        "learn-repair": {
+            "hook": "learnRepair",
+            "text": "exit"
+        },
+        "negociate-celestial-device-price": {
+            "availableHook": "canNegociateCelestialDevicePrice",
+            "hook": "celestialDeviceNegociatePrice",
+            "state": "celestial-device/negociate-craft-parts",
+            "text": "negociate-celestial-device-price"
+        },
+        "negociate-craft-parts-accept": {
+            "availableHook": "celestialDeviceCanPayPrice",
+            "hook": "celestialDevicePayPrice",
+            "state": "celestial-device/accept-craft-parts",
+            "text": "negociate-craft-parts-accept"
+        },
+        "negociate-craft-parts-reject": {
+            "text": "negociate-craft-parts-reject"
+        },
+        "repair-has-no-skills": {
+            "state": "repair/reject-help",
+            "text": "repair-has-no-skills"
+        },
+        "repair-has-skills": {
+            "availableHook": "canTrainRepair",
+            "state": "repair/start-repair",
+            "text": "repair-has-skills"
+        },
         "replace-crystal-ask-reward": {
             "state": "crystal/reward",
             "text": "replace-crystal-ask-reward"
@@ -77,6 +134,69 @@
     },
     "entryPoint": "introduction",
     "states": {
+        "celestial-device/accept-craft-parts": {
+            "answers": [
+            ],
+            "hook": "celestialDeviceStartWorking",
+            "mood": "smile",
+            "text": "celestial-device/accept-craft-parts"
+        },
+        "celestial-device/arm-already-found": {
+            "answers": [
+            ],
+            "hook": "",
+            "text": "celestial-device/arm-already-found"
+        },
+        "celestial-device/arm-location-suggestion": {
+            "answers": [
+            ],
+            "hook": "",
+            "text": "celestial-device/arm-location-suggestion"
+        },
+        "celestial-device/give-parts": {
+            "answers": [
+            ],
+            "hook": "",
+            "mood": "smile",
+            "text": "celestial-device/give-parts"
+        },
+        "celestial-device/introduction": {
+            "answers": [
+                "ask-make-celestial-device-parts",
+                "boast-about-already-having-arm",
+                "ask-suggestion-celestial-device-arm"
+            ],
+            "hook": "celestialDeviceIntroduction",
+            "mood": "dubious",
+            "text": "celestial-device/introduction"
+        },
+        "celestial-device/negociate-craft-part-bartered": {
+            "answers": [
+            ],
+            "hook": "",
+            "mood": "dubious",
+            "text": "celestial-device/negociate-craft-part-bartered"
+        },
+        "celestial-device/negociate-craft-parts": {
+            "answers": [
+                "negociate-craft-parts-accept",
+                "negociate-celestial-device-price",
+                "negociate-craft-parts-reject"
+            ],
+            "hook": "celestialDeviceNegociateCraftParts",
+            "mood": "cocky",
+            "text": "celestial-device/negociate-craft-parts"
+        },
+        "celestial-device/negociate-crat-parts-barter-failed": {
+            "answers": [
+            ],
+            "text": "celestial-device/negociate-crat-parts-barter-failed"
+        },
+        "celestial-device/parts-not-ready": {
+            "answers": [
+            ],
+            "text": "celestial-device/parts-not-ready"
+        },
         "crystal/found-crystal": {
             "answers": [
                 "found-crystal-evasive",
@@ -122,6 +242,9 @@
         },
         "entry": {
             "answers": [
+                "ask-to-learn",
+                "ask-about-celestial-device",
+                "ask-about-celeestial-device-parts",
                 "entry-leave"
             ],
             "hook": "cocky",
@@ -178,6 +301,28 @@
             "hook": "introduction",
             "mood": "angry",
             "text": "introduction"
+        },
+        "repair/entry": {
+            "answers": [
+                "repair-has-skills",
+                "repair-has-no-skills"
+            ],
+            "hook": "",
+            "mood": "dubious",
+            "text": "repair/entry"
+        },
+        "repair/reject-help": {
+            "answers": [
+            ],
+            "mood": "angry",
+            "text": "repair/reject-help"
+        },
+        "repair/start-repair": {
+            "answers": [
+                "learn-repair"
+            ],
+            "mood": "cocky",
+            "text": "repair/start-repair"
         }
     }
 }

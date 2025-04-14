@@ -157,6 +157,7 @@
                 "singer-compliment",
                 "singer-disrespect"
             ],
+            "hook": "",
             "mood": "smile",
             "text": "about-singer"
         },
@@ -249,6 +250,7 @@
         "singer-disrespected": {
             "answers": [
             ],
+            "hook": "",
             "mood": "angry",
             "text": "singer-disrespected"
         }
