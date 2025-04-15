@@ -1,17 +1,17 @@
 {
     "character-names": {
-        "capital/elder-shadow-pony": "Elder Shadow Pony",
-        "capital/shadow-pony": "Shadow Pony",
         "capital/barmaid": "Amber Glow",
+        "capital/elder-shadow-pony": "Elder Shadow Pony",
         "capital/engineer": "Rotten Gear",
         "capital/founder": "Whispering Ash",
         "capital/journalist": "Broken Lens",
+        "capital/shadow-pony": "Shadow Pony",
         "capital/singer": "Wailing Tune",
         "changeling": "Changeling",
         "cristal-den/bibins/guard-A": "Guard",
         "cristal-den/bibins/guard-B": "Guard",
         "cristal-den/bibins/potiok-spy": "Sneaky Snack",
-        "cristal-den/brian-fargo": "Narbie Gofar",
+        "cristal-den/brian-fargo": "Narbie Fargo",
         "cristal-den/weapon-merchant": "Jacob Jake"
     }
 }

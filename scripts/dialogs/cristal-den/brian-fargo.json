@@ -2,6 +2,11 @@
     "answers": {
         "": {
         },
+        "accept-pay-thornhoof-caravan": {
+            "availableHook": "thornhoofCaravanCanPay",
+            "state": "thornhoof-caravan/convinced",
+            "text": "accept-pay-thornhoof-caravan"
+        },
         "accept-work-negociator": {
             "hook": "acceptNegociatorQuest",
             "text": "accept-work-negociator"
@@ -31,6 +36,38 @@
         },
         "reject-work-negociator": {
             "text": "reject-work-negociator"
+        },
+        "start-thornhoof-caravan": {
+            "availableHook": "hasThornhoofCaravanQuest",
+            "text": "start-thornhoof-caravan"
+        },
+        "thornhoof-caravan-barter": {
+            "hook": "thornhoofCaravanConvinceTest",
+            "state": "thornhoof-caravan/convinced-payed",
+            "text": "thornhoof-caravan-barter"
+        },
+        "thornhoof-caravan-seek-escort": {
+            "state": "thornhoof-caravan/about-escort",
+            "text": "thornhoof-caravan-seek-escort"
+        },
+        "thornhoof-convince": {
+            "hook": "thornhoofCaravanConvinceTest",
+            "state": "thornhoof-caravan/on-convince",
+            "text": "thornhoof-convince"
+        },
+        "thornhoof-give-up": {
+            "state": "thornhoof-caravan/on-exit",
+            "text": "thornhoof-give-up"
+        },
+        "thornhoof-join-escort": {
+            "hook": "thornhoofCaravanIntimidateTest",
+            "state": "thornhoof-caravan/on-join-escort",
+            "text": "thornhoof-join-escort"
+        },
+        "thornhoof-join-escort-survival": {
+            "hook": "thornhoofCaravanSurvivalTest",
+            "state": "thornhoof-caravan/on-join-escort-survival",
+            "text": "thornhoof-join-escort-survival"
         },
         "work-caravan-accept": {
             "state": "work-caravan-start",
@@ -67,11 +104,81 @@
     "states": {
         "entry": {
             "answers": [
+                "start-thornhoof-caravan",
                 "ask-for-work",
                 "exit-entry"
             ],
             "mood": "angry",
             "text": "entry"
+        },
+        "thornhoof-caravan/about-escort": {
+            "answers": [
+            ],
+            "text": "thornhoof-caravan/about-escort"
+        },
+        "thornhoof-caravan/convinced": {
+            "answers": [
+                "thornhoof-caravan-seek-escort"
+            ],
+            "hook": "thornhoofCaravanAccepted",
+            "mood": "smile",
+            "text": "thornhoof-caravan/convinced"
+        },
+        "thornhoof-caravan/convinced-payed": {
+            "answers": [
+                "thornhoof-caravan-seek-escort"
+            ],
+            "hook": "thornhoofCaravanAcceptedWithPayment",
+            "mood": "smile",
+            "text": "thornhoof-caravan/convinced-payed"
+        },
+        "thornhoof-caravan/entry": {
+            "answers": [
+                "thornhoof-convince",
+                "thornhoof-join-escort",
+                "thornhoof-join-escort-survival",
+                "thornhoof-give-up"
+            ],
+            "mood": "angry",
+            "text": "thornhoof-caravan/entry"
+        },
+        "thornhoof-caravan/on-convince": {
+            "answers": [
+                "thornhoof-caravan-barter",
+                "accept-pay-thornhoof-caravan",
+                "thornhoof-give-up"
+            ],
+            "mood": "dubious",
+            "text": "thornhoof-caravan/on-convince"
+        },
+        "thornhoof-caravan/on-exit": {
+            "answers": [
+            ],
+            "mood": "angry",
+            "text": "thornhoof-caravan/on-exit"
+        },
+        "thornhoof-caravan/on-join-escort": {
+            "answers": [
+                "accept-pay-thornhoof-caravan",
+                "thornhoof-give-up"
+            ],
+            "mood": "dubious",
+            "text": "thornhoof-caravan/on-join-escort"
+        },
+        "thornhoof-caravan/on-join-escort-survival": {
+            "answers": [
+                "accept-pay-thornhoof-caravan",
+                "thornhoof-give-up"
+            ],
+            "mood": "dubious",
+            "text": "thornhoof-caravan/on-join-escort-survival"
+        },
+        "thornhoof-caravan/on-test-fail": {
+            "answers": [
+                "thornhoof-give-up"
+            ],
+            "mood": "angry",
+            "text": "thornhoof-caravan/on-test-fail"
         },
         "work-answer": {
             "answers": [
@@ -80,7 +187,6 @@
                 "work-skills-wastelander",
                 "work-skills-cancel"
             ],
-            "mood": "",
             "text": "work-answer"
         },
         "work-caravan": {
@@ -89,14 +195,11 @@
                 "work-caravan-accept-reluctantly",
                 "work-caravan-reject"
             ],
-            "hook": "",
-            "mood": "",
             "text": "work-caravan"
         },
         "work-caravan-rejected": {
             "answers": [
             ],
-            "hook": "",
             "mood": "cocky",
             "text": "work-caravan-rejected"
         },
@@ -104,7 +207,6 @@
             "answers": [
             ],
             "hook": "onAcceptedCaravanWork",
-            "mood": "",
             "text": "work-caravan-start"
         },
         "work-negociator": {
@@ -113,15 +215,12 @@
                 "ask-negociator-leads",
                 "reject-work-negociator"
             ],
-            "hook": "",
-            "mood": "",
             "text": "work-negociator"
         },
         "work-negociator-bibin": {
             "answers": [
                 "back-to-work-negociator"
             ],
-            "mood": "",
             "text": "work-negociator-bibin"
         },
         "work-negociator-leads": {
@@ -129,7 +228,6 @@
                 "ask-about-potioks",
                 "back-to-work-negociator"
             ],
-            "mood": "",
             "text": "work-negociator-leads"
         },
         "work-negociator-potioks": {
@@ -137,7 +235,6 @@
                 "ask-about-bibin",
                 "back-to-work-negociator"
             ],
-            "mood": "",
             "text": "work-negociator-potioks"
         }
     }
