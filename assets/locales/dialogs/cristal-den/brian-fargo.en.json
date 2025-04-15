@@ -10,6 +10,8 @@
             "entry": "Yes ? I'm busy, what do you want ? Make it quick.",
             "exit-entry": "Nothing, sorry, bye !",
             "reject-work-negociator": "I don't have time for this...",
+            "start-thornhoof-caravan": "I was sent by the town of Thornhoof. They want you to send a caravan their way.",
+            "thornhoof-caravan/entry": "Une caravane pour Thornhoof ? T'as pris un coup de sabot sur le crâne ou quoi ? On a déjà perdu un convoi là-bas. Et crois-moi, c’est pas moi qui vais en perdre un deuxième pour faire plaisir à un idéaliste de passage.",
             "work-answer": "So you wanna work for us caraveneers ? It's not a job meant for everyone. Traveling the wasteland with your own shitty self and moving valuable goods around aren't the same thing. What makes you think you can work with us ?",
             "work-caravan": "I guess that'll have to do... alright. We'll pay you 200 caps for each mission. You're responsible for buying your own gear and ammo. The caravans leave every monday in the morning. Talk to the caravan leader, they'll show you the ropes.",
             "work-caravan-accept": "Thank you sir, you won't be disappointed !",
@@ -25,7 +27,25 @@
             "work-skills-cancel": "Maybe I'm not suited for the job after all... I'll take my leave.",
             "work-skills-gunner": "I'm good with weapons. Your wares will be safe with me.",
             "work-skills-talker": "I'm good at reading people, and coming up with peaceful solutions. That might not be the best skillset for a caravaneer, but perhaps you need help with something else ?",
-            "work-skills-wastelander": "I've been traveling a lot around the wastes. I can help guide your caravans, and I can spot the best places for an ambush... meaning we'd be ready for whoever might want to get their hooves on your goods."
+            "work-skills-wastelander": "I've been traveling a lot around the wastes. I can help guide your caravans, and I can spot the best places for an ambush... meaning we'd be ready for whoever might want to get their hooves on your goods.",
+
+            "accept-pay-thornhoof-caravan": "All right. I'll pay.",
+            "start-thornhoof-caravan": "I'm sent by the town of Thornhoof. They want you to send them a caravan.",
+            "thornhoof-caravan-barter": "If I pay everything now, I'll take all the risk for you. You'd have no reason to take your share of the profits from this deal. Thornhoof is backed into a corner and has no choice but to buy at full price.",
+            "thornhoof-caravan-seek-escort": "I'll take care of this. Where do we start?",
+            "thornhoof-caravan/about-escort": "Talk to Laurie at the entrance to town. You can't miss her, she's the only griffin around. She's already made journeys no one No one else would have tried, even drunk on rum.\n<br><br>\nShe likes danger, so maybe she'll listen to you.",
+            "thornhoof-caravan/convinced": "Damn it... you've got business sense, I'll give you that.<br>\nOkay, deal: I'm not taking anything now. But my caravan owners will take home all the profit from the sale.\n<br><br>\nNow we just need to find the idiots willing to lead the caravan.",
+            "thornhoof-caravan/convinced-payed": "Good. With this, I can load a caravan without risking going broke.\nBut you can imagine we'll have to find some guys crazy enough to make the trip. I'm not going to appoint them myself, I don't want to have widowers on my back.",
+            "thornhoof-caravan/entry": "A caravan for Thornhoof? Did you get kicked in the head or something? We already lost a convoy there. And believe me, I'm not the one who's going to lose another one to please some passing idealist.",
+            "thornhoof-caravan/on-convince": "Hm. Venture capital, eh? You're not wrong. The gain is there, that's for sure. But the risk, it's mainly for my guys...\n<br><br>\nOkay. Let's admit it. We're moving a caravan. But you'll finance it for me in advance. Every radish, every carrot.",
+            "thornhoof-caravan/on-exit": "That makes more sense. Now, if you have nothing else... I have real clients to deal with.",
+            "thornhoof-caravan/on-join-escort": "You, you'd go into this mess to cover for my guys? Heh... You seem suicidal enough for that. And just tough enough to pull it off.\n<br><br>\nWell, why not. But even with you, I'm not opening my saddlebags if I don't get paid first. I'm going to need {{thornhoofCaravanCost}} caps.",
+            "thornhoof-caravan/on-join-escort-survival": "Did you manage to get past the raider patrols? Seriously? You might be smarter than you look.\n<br><br>\nOkay, fine for the ride. But you pay for the goods. I want {{thornhoofCaravanCost}} caps. Now.",
+            "thornhoof-caravan/on-test-fail": "You can talk all you want, but you're not changing my mind. If you want me to send my people into a hornet's nest, you'll have to pay up. Or give me a solid reason. But not this nonsense.",
+            "thornhoof-convince": "Thornhoof is willing to pay ten times the price for a cargo no one else dares to deliver. You could send ten caravans, and if only two returned, you'd still be ahead of the game.",
+            "thornhoof-give-up": "Forget it, it was a bad idea.",
+            "thornhoof-join-escort": "I'll join the escort. With me, it'll go down smoothly.",
+            "thornhoof-join-escort-survival": "I crossed enemy lines to join Thornhoof. I can do it again."
         }
     }
 }

@@ -1,0 +1,28 @@
+{
+    "dialogs": {
+        "thornhoof/silvertide": {
+            "accept-caravan-quest": "Très bien. Je le ferais.",
+            "ask-about-caravan": "Les caravaniers ?",
+            "ask-whats-going-on": "Quelle est la situation ?",
+            "ask-whats-in-it-for-player": "Qu'est-ce que j'y gagne ?",
+            "ask-youre-silvertide": "Alors, c'est toi Silvertide ?",
+            "came-to-help": "Je ne suis là que pour aider.",
+            "leave": "<i>[Partir]</i>",
+            "meeting/about-reward": "On paiera. En capsules, en respect, en accès à la ville.\n<br><br>\nEt si tu reviens vivant… t'auras gagné ta place ici.\nEt crois-moi, dans ce monde, c'est pas rien.",
+            "meeting/about-risks": "T'as déjà passé les lignes ennemies une fois, non ? Moi je dis que ça te donne une chance sur mille de recommencer. Et c'est mille fois plus que ce qu'on a ici, si rien ne vient perturber le statu-quo.",
+            "meeting/about-situation": "La situation ? Ah, ça fou le camp de partout, la voilà, la situation.\n<br><br>\nLa Golden Herd s'est installé dans les parages il y a quelques mois, après avoir rasé Basalbourg... mais nous étions mieux préparé qu'eux. Nous avons rejeté les demandes de la Golden Herd... des capsules, et des esclaves, et puis quoi encore !\n<br><br>\nDepuis, nous sommes isolés. Thornhoof est bien protégée, et nous avons des sources d'eau et de nourriture qui nous permettent de tenir relativement bien... mais nous devons nous rationner, et les munitions vont finir par manquer.\n<br><br>\nC'est pas la joie, pas vrai ?",
+            "meeting/confirm-identity": "En chair, en os, et un brin fatiguée. J'ai vu trop de poneys mourir pour cette ville. Mais je reste debout. Et aujourd'hui, c'est toi qui va nous sauver la mise.",
+            "meeting/introduce-quest": "Je veux que tu quittes la ville et que tu rejoignes Cristal Den.<br>\nTu vas convaincre les caravaniers de nous envoyer un convoi. Des vivres. Ils devront faire escale chez les Steel Rangers, où ils récupéreront une livraison de munitions que j'ai déjà négociée.\n<br><br>\nJe suis prête à payer dix fois le prix pour ce convoi. Mais personne n'ose sortir. Personne sauf toi.",
+            "meeting/introduction": "Alors c’est toi, l'étranger. Je dois admettre… atteindre nos portes, seul, avec la Golden Herd entre les deux, c’est pas rien.\n<br><br>\nSi t'es un menteur, t'es sacrément convaincant. Et si t'es sincère… alors peut-être qu’on va s'entendre.",
+            "meeting/not-a-hero": "T'as pas besoin d’être un héros. Juste quelqu’un d'assez con pour penser qu’il peut faire la différence. J'ai été ce poney-là. Pourquoi pas toi ? T'as traversé les lignes ennemis comme si de rien. Tu dois pas être si futé que ça !",
+            "meeting/quest-accepted": "Bien. Voici l'holodisque pour les Steel Rangers, il te permettra de récupérer les munitions. Et dis à Laurie, si elle y est encore, que Silvertide lui doit toujours une bouteille de rhum. Elle travaille pour les caravaniers de Cristal Den.\n<br><br>\nBonne chance. On compte sur toi plus que tu ne peux l'imaginer.",
+            "meeting/quest-rejected": "On n’a pas le luxe de l'hésitation ici. Tu veux sauver une ville ? Tu bouges. Sinon… va pas traîner trop longtemps. Le notre est compté.",
+            "meeting/wanted-to-help": "Bien. Parce que moi, je cherche quelqu’un prêt à prendre des risques. Pas pour l’honneur. Pas pour la gloire. Pour la survie.\n<br><br>\nThornhoof tient bon. Mais les munitions, elles s'évaporent. Et les renforts ? Personne ne viendra.\n<br><br>\nIl y a une seule chose qui pourrait changer la donne… les caravaniers.",
+            "not-a-hero-accept": "T'as une drÔle de façon de motiver les troupes... mais ça marche ! Je vais le faire !",
+            "not-a-hero-reject": "Je suis peut-être con, mais pas à ce point là. Si tu permet, je tire ma révérence.",
+            "reject-caravan-quest": "J'y réflechirai.",
+            "say-im-not-a-hero": "Je ne suis pas un héro.",
+            "tell-breaking-siege-risky": "Ca a l'air risqué... très risqué."
+        }
+    }
+}

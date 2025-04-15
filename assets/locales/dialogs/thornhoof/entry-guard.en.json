@@ -1,0 +1,20 @@
+{
+    "dialogs": {
+        "thornhoof/entry-guard": {
+            "about-silvertide": "The commanding officer of this town's milita. The backbone of this town, if you ask me.<br><br>She wants to see you, and believe me, you don't want to leave her expecting. She broke hooves harder than yours.",
+            "about-town": "You've reached Thornhoof. A city of the heights, a stronghold who's been holding against the Golden Herd for many moons.<br>\nAnd if you're still alive... well, that means you either work for them, or you could be useful working for us.",
+            "about-trouble": "Good. We've got enough trouble as it is. And Silvertide wants to see you. Now.",
+            "ask-about-silvertide": "Silvertide ? Who's that ?",
+            "ask-about-town": "What is this place exactly ?",
+            "ask-for-no-trouble": "I'm not looking for trouble.",
+            "ask-whats-happening": "What's going on around here ?",
+            "go-to-meeting": "Alright. Let's go meet Silvertide then.",
+            "introduction": "Well, well, well… the stranger finally got here. We've been monitoring you for a while. You brought the town's focus on yourself, and mayhaps not for the best reasons.\n<br><br>\nFollow me. Silvertide wants to see you.",
+            "no-getting-away": "No. You come with us, and you meet Silvertide. I know it looks like I'm asking, but that's just because I'm polite. Truth is, I'm not asking you, I'm telling you.",
+            "on-go-to-meeting": "Good lad. Lead the way, Silvertide's office is that way.",
+            "run-away": "I heard your plea, and here's my rebuttal: <b>catch me if you can</b> ! <i>[Run away]</i>",
+            "try-to-go-away": "I think I'd rather just go back on my own merry way.",
+            "whats-happening": "Are you for real ? The town is surrounded. Did you just waltz on past our assailants without noticing ?\n<br><br>\nNo more caravans, no reinforcements. Raiders encircling us and yelling day and night, hoping we either starve or surrender.\n<br><br>\nIf Silvertide thinks you've got a role to play, then you're going to listen to her."
+        }
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "dialogs": {
+        "thornhoof/entry-guard": {
+            "about-silvertide": "La commandante de la milice. L'épine dorsale de cette ville.<br><br>Elle veut te parler, et crois-moi, t’as pas envie de la faire attendre.<br>\nElle a brisé des sabots plus durs que les tiens.",
+            "about-town": "T'es à Thornhoof. Une cité perchée, un bastion qui tient tête à la Golden Herd depuis des lunes.\nEt si t'es encore vivant, c’est soit que tu bosse pour eux, soit que tu pourrais nous être utile.",
+            "about-trouble": "Tant mieux. Parce que les ennuis, on en a déjà jusqu’au garrot. Et Silvertide veut te voir. Maintenant.",
+            "ask-about-silvertide": "C'est qui, Silvertide ?",
+            "ask-about-town": "Où est-ce que je suis, au juste ?",
+            "ask-for-no-trouble": "Je ne cherche pas d'ennuis.",
+            "ask-whats-happening": "Qu'est-ce qui se passe, par ici ?",
+            "go-to-meeting": "D'accord, allons voir Silvertide.",
+            "introduction": "Tiens donc… l'étranger s’approche enfin. On te surveille depuis les hauteurs. T'as attiré l’attention de la ville, et pas forcément pour les bonnes raisons.\n<br><br>\nSuis-moi sans faire d'histoires. Silvertide veut te voir.",
+            "no-getting-away": "Non. Tu viens avec nous, et tu vois Silvertide. Je sais qu'on dirait une demande, parce que je suis très poli, mais c'est pas une demande. C'est un ordre.",
+            "on-go-to-meeting": "Sage décision. Allez, passe devant, le bureau de Silvertide est dans cette direction.",
+            "run-away": "Je comprends ton point de vue, et je te propose cette réponse :  <b>attrape-moi si tu peux</b> ! <i>[S'enfuir]</i>",
+            "try-to-go-away": "Je crois que je vais plutôt rebrousser chemin. Ciao !",
+            "whats-happening": "T'es sérieux là ? La ville est encerclée. Ca t'as pas crevé les yeux, en ramenant ta fraise à travers les assiégeants ?\n<br><br>\nPlus de caravanes, plus de renforts. Des pillards hurlants nous encerclent jour et nuit, espérant qu’on crève de faim ou qu’on tente une sortie.\n<br><br>\nAlors si Silvertide pense que t'as un rôle à jouer, t'as intérêt à l’écouter."
+        }
+    }
+}

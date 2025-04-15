@@ -1,0 +1,80 @@
+{
+    "answers": {
+        "ask-about-silvertide": {
+            "state": "introduction",
+            "text": "ask-about-silvertide"
+        },
+        "ask-about-town": {
+            "state": "introduction",
+            "text": "ask-about-town"
+        },
+        "ask-for-no-trouble": {
+            "state": "introduction",
+            "text": "ask-for-no-trouble"
+        },
+        "ask-whats-happening": {
+            "text": "ask-whats-happening"
+        },
+        "go-to-meeting": {
+            "state": "on-go-to-meeting",
+            "text": "go-to-meeting"
+        },
+        "run-away": {
+            "hook": "onRunAway",
+            "text": "run-away"
+        },
+        "try-to-go-away": {
+            "state": "no-getting-away",
+            "text": "try-to-go-away"
+        }
+    },
+    "entryPoint": "introduction",
+    "states": {
+        "about-silvertide": {
+            "answers": [
+            ],
+            "text": "about-silvertide"
+        },
+        "about-town": {
+            "answers": [
+            ],
+            "text": "about-town"
+        },
+        "about-trouble": {
+            "answers": [
+            ],
+            "text": "about-trouble"
+        },
+        "introduction": {
+            "answers": [
+                "go-to-meeting",
+                "ask-for-no-trouble",
+                "ask-about-town",
+                "ask-whats-happening",
+                "ask-about-silvertide",
+                "try-to-go-away"
+            ],
+            "mood": "cocky",
+            "text": "introduction"
+        },
+        "no-getting-away": {
+            "answers": [
+                "go-to-meeting",
+                "run-away"
+            ],
+            "mood": "angry",
+            "text": "no-getting-away"
+        },
+        "on-go-to-meeting": {
+            "answers": [
+            ],
+            "hook": "onGoToMeeting",
+            "text": "on-go-to-meeting"
+        },
+        "whats-happening": {
+            "answers": [
+            ],
+            "text": "whats-happening"
+        }
+    }
+}

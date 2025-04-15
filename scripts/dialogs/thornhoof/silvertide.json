@@ -1,0 +1,132 @@
+{
+    "answers": {
+        "accept-caravan-quest": {
+            "state": "meeting/quest-accepted",
+            "text": "accept-caravan-quest"
+        },
+        "ask-about-caravan": {
+            "state": "meeting/introduce-quest",
+            "text": "ask-about-caravan"
+        },
+        "ask-whats-going-on": {
+            "state": "meeting/about-situation",
+            "text": "ask-whats-going-on"
+        },
+        "ask-whats-in-it-for-player": {
+            "state": "meeting/about-reward",
+            "text": "ask-whats-in-it-for-player"
+        },
+        "ask-youre-silvertide": {
+            "state": "meeting/confirm-identity",
+            "text": "ask-youre-silvertide"
+        },
+        "came-to-help": {
+            "state": "meeting/wanted-to-help",
+            "text": "came-to-help"
+        },
+        "not-a-hero-accept": {
+            "state": "meeting/quest-accepted",
+            "text": "not-a-hero-accept"
+        },
+        "not-a-hero-reject": {
+            "text": "not-a-hero-reject"
+        },
+        "reject-caravan-quest": {
+            "state": "meeting/quest-rejected",
+            "text": "reject-caravan-quest"
+        },
+        "reject-caravan-quest-confirm": {
+            "text": "leave"
+        },
+        "say-im-not-a-hero": {
+            "state": "meeting/not-a-hero",
+            "text": "say-im-not-a-hero"
+        },
+        "tell-breaking-siege-risky": {
+            "state": "meeting/about-risks",
+            "text": "tell-breaking-siege-risky"
+        }
+    },
+    "entryPoint": "meeting/introduction",
+    "states": {
+        "meeting/about-reward": {
+            "answers": [
+                "accept-caravan-quest",
+                "reject-caravan-quest"
+            ],
+            "mood": "cocky",
+            "text": "meeting/about-reward"
+        },
+        "meeting/about-risks": {
+            "answers": [
+                "accept-caravan-quest",
+                "ask-whats-in-it-for-player",
+                "reject-caravan-quest"
+            ],
+            "hook": "cocky",
+            "text": "meeting/about-risks"
+        },
+        "meeting/about-situation": {
+            "answers": [
+                "came-to-help",
+                "ask-youre-silvertide"
+            ],
+            "text": "meeting/about-situation"
+        },
+        "meeting/confirm-identity": {
+            "answers": [
+                "came-to-help",
+                "ask-whats-going-on"
+            ],
+            "text": "meeting/confirm-identity"
+        },
+        "meeting/introduce-quest": {
+            "answers": [
+                "accept-caravan-quest",
+                "ask-whats-in-it-for-player",
+                "tell-breaking-siege-risky"
+            ],
+            "mood": "smile",
+            "text": "meeting/introduce-quest"
+        },
+        "meeting/introduction": {
+            "answers": [
+                "came-to-help",
+                "ask-youre-silvertide",
+                "ask-whats-going-on"
+            ],
+            "text": "meeting/introduction"
+        },
+        "meeting/not-a-hero": {
+            "answers": [
+                "not-a-hero-accept",
+                "not-a-hero-reject"
+            ],
+            "mood": "cocky",
+            "text": "meeting/not-a-hero"
+        },
+        "meeting/quest-accepted": {
+            "answers": [
+            ],
+            "hook": "giveCaravanQuest",
+            "mood": "smile",
+            "text": "meeting/quest-accepted"
+        },
+        "meeting/quest-rejected": {
+            "answers": [
+                "accept-caravan-quest",
+                "say-im-not-a-hero",
+                "reject-caravan-quest-confirm"
+            ],
+            "hook": "rejectCaravanQuest",
+            "mood": "angry",
+            "text": "meeting/quest-rejected"
+        },
+        "meeting/wanted-to-help": {
+            "answers": [
+                "ask-about-caravan"
+            ],
+            "text": "meeting/wanted-to-help"
+        }
+    }
+}

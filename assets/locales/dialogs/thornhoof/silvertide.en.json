@@ -1,0 +1,29 @@
+{
+    "dialogs": {
+        "thornhoof/silvertide": {
+            "accept-caravan-quest": "Alright. I'll do it.",
+            "ask-about-caravan": "The caravaneers ?",
+            "ask-whats-going-on": "What's the situation ?",
+            "ask-whats-in-it-for-player": "What's in it for me ?",
+            "ask-youre-silvertide": "So, you're Silvertide ?",
+            "came-to-help": "I'm only here to help.",
+            "leave": "<i>[Leave]</i>",
+            "meeting/about-reward": "Oh, we'll pay. Caps, respect, and free access to the town.\n<br><br>\nAnd if you come back alive… you'll have earned your place among us.\nAnd believe me, in such a world, that ain't nothing.",
+            "meeting/about-risks": "You already went through the enemy lines once, didn't you ? I say that gives you a chance out of a thousand to do it again. And that's a thousand time more chances we'll have over here, if nothing comes and kick the shit out of that statu-quo.",
+            "meeting/about-situation": "The situation ? All fucked up, is what it is.\n<br><br>\nThe Golden Herd settled around a few months ago, after having destroyed Basalbourg... but we were better prepared. We rejected the demands of the Golden Herd... caps and slaves, like we were ever gonna accept that !\n<br><br>\nSince then, we've been isolated. Thornhoof is well protected, and we have sources of water and food... but we still have to ration, and ammo is going to run out.\n<br><br>\nNot a pretty picture, huh ?",
+            "meeting/confirm-identity": "In the flesh, yes, and also a bit tired. I've seen to many ponies die for this town. But I'm still standing. And today, you may be the one to save our flanks.",
+            "meeting/introduce-quest": "I want you to leave this town and head to Crystal Den.<br>\nThere, you'll convince the caravaneers to send a convoy. Foodstuff. They will have to stop by the Steel Rangers', where they'll pick up a shipping of ammo which I already negociated.\n<br><br>\nI'm ready to pay ten times what's this convoy's worth. But no one dares go outside. No one but you.",
+            "meeting/introduction": "So, you're the outsider. I have to say… reaching our doors, with the Golden Herd paving the way, it ain't nothing.\n<br><br>\nIf you're a liar, you're damn convincing. And if you're truthful… then maybe we'll get along just fine.",
+            "meeting/not-a-hero": "You don't need to be a hero. Just dump enough to think you can make a difference. I've been that pony. Why not you ? You went through the enemy lines like it was nothing. You can't be smart enough to know it's impossible !",
+            "meeting/quest-accepted": "Good. Here's the holodisk for the Steel Rangers, you'll need it to claim the ammo shipment. And tell Laurie, if you see her, that Silvertide still owes her a bottle of rhum. She works for the Crystal Den caravaneers.\n<br><br>\nGood luck. We depend on you more than you can imagine.",
+            "meeting/quest-rejected": "We don't exactly have the luxury of taking our time, over here. You want to save a town ? Move it. Else… don't think for too long. Our time is running out.",
+            "meeting/wanted-to-help": "Good. I'm looking for ponies ready to risk it all. Not for honnor, not for glory. For survival.\n<br><br>\nThornhoof is holding. But the ammo is disappearing fast. And reinforcements ? No one's coming.<br><br>\nOne thing can help us now. The caravaneers.",
+            "not-a-hero-accept": "That was a very insulting pep talk... but you convinced me. Let's do it !",
+            "not-a-hero-reject": "You sure have a weird way of doing pep talk. I'll be on my way.",
+            "reject-caravan-quest": "I'll think about it.",
+            "reject-caravan-quest-confirm": "<i>[Partir]</i>",
+            "say-im-not-a-hero": "Sorry. I'm not a hero.",
+            "tell-breaking-siege-risky": "Sounds risky. Very risky."
+        }
+    }
+}
