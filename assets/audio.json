@@ -33,5 +33,6 @@
   "ui/term-btn-click": "ui/light-button-in.wav",
   "ui/term-btn-in":    "ui/light-button-in.wav",
   "ui/term-btn-out":   "ui/light-button-out.wav",
-  "ui/int-menu":       "ui/interaction-menu.wav"
+  "ui/int-menu":       "ui/interaction-menu.wav",
+  "ui/tab-change":     "ui/alt-button-out.wav"
 }
