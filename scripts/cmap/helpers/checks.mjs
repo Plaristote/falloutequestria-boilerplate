@@ -25,6 +25,16 @@ export function skillContest(attacker, defender, skills, diceType = 100) {
   return defender.character;
 }
 
+export function multipleSkillContest(attacker, defender, skills, diceType = 100) {
+  let wins = 0;
+  const results = skills.map(skill => {
+    return skillContest(attacker, defender, skill, diceType);
+  });
+ results.forEach(result => { if (result === attacker) { wins++; }});
+ console.log("Grouped SkillContest result:", wins,  '/', skills.length);
+ return wins / skills.length;
+}
+
 export function skillCheck(user, skill, options = {}) {
   const skillValue = modifiedSkillValue(user, skill);
   const dice       = options.dice ? options.dice : 100;
