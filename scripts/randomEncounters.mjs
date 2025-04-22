@@ -1,5 +1,8 @@
 import {getValueFromRange} from "behaviour/random.mjs";
 import {skillCheck} from "cmap/helpers/checks.mjs";
+import OutdoorsCheck from "worldmap/outdoorsCheck.mjs";
+import {generateHostileEncounter} from "worldmap/hostileEncounters.mjs";
+import {generateEncounterLevel} from "worldmap/encounterLevels.mjs";
 
 const RandomEncounterChart = {
   None:     0,
@@ -9,39 +12,14 @@ const RandomEncounterChart = {
   Dungeon:  4
 };
 
-class OutdoorsmanCheck {
-  constructor(party, groups) {
-    this.party = party;
-    this.groups = groups;
-    this.success = false;
-    this.character = party.mostSkilledAt("outdoorsman");
-  }
+function encounterTitleForParties(parties) {
+  let title;
 
-  run() {
-    console.log("running OutdoorsmanCheck against", this.groups.length, "groups");
-    for (let i = 0 ; i < this.groups.length ; ++i) {
-      if (this.checkGroup(this.groups[i])) break ;
-    }
+  for (let i = 0 ; i < parties.length ; ++i) {
+    if (i > 0) { title += ", " + parties[i].name; }
+    else { title = parties[i].name; }
   }
-
-  checkGroup(group) {
-    this.success = skillCheck(this.character, "outdoorsman", {
-      target: group.avoidRoll,
-      dice: 20
-    });
-    if (this.success)
-      this.gainExperience(group);
-    return this.success;
-  }
-
-  gainExperience(group) {
-    console.log("DONE. Gaining experience now");
-    const reward = group.avoidRoll / 7;
-    party.addExperience(reward);
-    game.appendToConsole(i18n.t("messages.encounter-avoid-roll-success", {
-      xp: reward
-    }));
-  }
+  return title;
 }
 
 export class RandomEncounterComponent {
@@ -78,44 +56,40 @@ export class RandomEncounterComponent {
 
   randomEncounterCheck() {
     const roll = getValueFromRange(0, 15000);
+    const hostileProbabilities = this.hostileEncounterProbabilities();
 
     console.log("encounter roll", roll);
     if (roll == 42)
       return RandomEncounterChart.Special;
     else if (roll >= 100 && roll <= 115)
       return RandomEncounterChart.Dungeon;
-    else if (roll >= 3200 && roll <= 3350)
+    else if (roll >= hostileProbabilities[0] && roll <= hostileProbabilities[1])
       return RandomEncounterChart.Hostile;
     else if (roll >= 14900)
       return RandomEncounterChart.Friendly;
     return RandomEncounterChart.None;
   }
 
+  hostileEncounterProbabilities() {
+    return [3200, 3315];
+  }
+
   triggerHostileEncounter() {
-    const desertMaps = ["random-desert-1", "random-desert-2", "random-desert-cabin"];
-    const desertEasyEncounters = [
-      function(difficultyRoll) { return { "name": "Rats", "members": [{"sheet": "mutatedRat", "script": "rat.mjs", "avoidRoll": (80 + difficultyRoll / 4), "amount": Math.max(3, Math.floor(4 * (difficultyRoll / 40)))}] }; },
-      function(difficultyRoll) { return { "name": "Scorpions", "members": [{"sheet": "scorpion", "script": "scorpion.mjs", "avoidRoll": (80 + difficultyRoll / 4), "amount": Math.max(3, Math.floor(4 * (difficultyRoll / 40)))}] }; }
-    ];
-    const candidateMaps       = desertMaps;
-    const candidateEncounters = desertEasyEncounters;
-    const mapRoll             = getValueFromRange(0, candidateMaps.length - 1);
-    const encounterRoll       = getValueFromRange(0, candidateEncounters.length - 1);
-    const difficultyRoll      = getValueFromRange(0, 100);
+    const parties = generateHostileEncounter();
 
-    console.log("encounterRoll", encounterRoll);
-    const enemyParty1 = candidateEncounters[encounterRoll](difficultyRoll);
-    enemyParty1.zone = "encounter-zone-1";
-    console.log("encounterRoll", encounterRoll, enemyParty1.name, enemyParty1.members[0].amount);
+    if (parties.length > 0) {
+      const level     = generateEncounterLevel();
+      const avoidable = new OutdoorsCheck(game.playerParty, parties);
 
-    const avoidable = new OutdoorsmanCheck(game.playerParty, [enemyParty1]);
-    avoidable.run();
-
-    game.randomEncounters.prepareEncounter(candidateMaps[mapRoll], {
-      "optional": avoidable.success,
-      "title": "danger",
-      "parties": [enemyParty1]
-    });
+      avoidable.run();
+      game.randomEncounters.prepareEncounter(level, {
+        "optional": avoidable.success,
+        "title":    encounterTitleForParties(parties),
+        "parties":  parties
+      });
+    } else {
+      console.log("RandomEncounters: failed to trigger hostile encounter, could not generate a hostile CharacterParty");
+    }
   }
 
   triggerFriendlyEncounter() {
