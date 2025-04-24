@@ -53,6 +53,7 @@ class Level extends LevelBase {
   }
 
   onLoaded() {
+    super.onLoaded();
     this.prepareRathian();
     this.prepareCook();
     if (findHelpfulRescueRouteState() == 3)

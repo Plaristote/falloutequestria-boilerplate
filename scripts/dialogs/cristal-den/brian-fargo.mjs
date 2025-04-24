@@ -15,7 +15,7 @@ class Dialog {
 
   hasThornhoofCaravanQuest() {
     const quest = game.quests.getQuest("thornhoof/caravan");
-    return quest && quest.isObjectiveCompleted("convince-narbi-fargo");
+    return quest && !quest.isObjectiveCompleted("convince-narbi-fargo");
   }
 
   thornhoofCaravanCost() {

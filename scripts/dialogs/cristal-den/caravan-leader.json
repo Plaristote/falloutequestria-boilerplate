@@ -25,6 +25,60 @@
         },
         "entry-exit": {
             "text": "entry-exit"
+        },
+        "talk-about-thornhoof-caravan": {
+            "availableHook": "thornhoofCaravanCanBringUp",
+            "state": "thornhoof-caravan/entry",
+            "text": "talk-about-thornhoof-caravan"
+        },
+        "thornhoof-1-plea-for-help": {
+            "state": "thornhoof-caravan/pleaded",
+            "text": "thornhoof-1-plea-for-help"
+        },
+        "thornhoof-1-silvertide": {
+            "state": "thornhoof-caravan/silvertide",
+            "text": "thornhoof-1-silvertide"
+        },
+        "thornhoof-2-will-fight": {
+            "hook": "thunderhoofCombatChallenge",
+            "state": "thornhoof-caravan/combat-failed",
+            "text": "thornhoof-2-will-fight"
+        },
+        "thornhoof-4-approved": {
+            "availableHook": "thornhoofWasValidatedByFargo",
+            "state": "thornhoof-caravan/accept-approved",
+            "text": "thornhoof-4-approved"
+        },
+        "thornhoof-accepted-whatever-1": {
+            "state": "thornhoof-caravan/accept-approved",
+            "text": "thornhoof-accepted-whatever-1"
+        },
+        "thornhoof-accepted-whatever-2": {
+            "state": "thornhoof-caravan/accept-approved",
+            "text": "thornhoof-accepted-whatever-2"
+        },
+        "thornhoof-caravan-go-later": {
+            "text": "thornhoof-caravan-go-later"
+        },
+        "thornhoof-caravan-go-now": {
+            "hook": "thornhoofCaravanGoNow",
+            "text": "thornhoof-caravan-go-now"
+        },
+        "thunderhoof-1-provoke": {
+            "state": "thornhoof-caravan/provoked",
+            "text": "thunderhoof-1-provoke"
+        },
+        "thunderhoof-1-who-else": {
+            "state": "thornhoof-caravan/who-else",
+            "text": "thunderhoof-1-who-else"
+        },
+        "thunderhoof-go-see-narbi": {
+            "text": "thunderhoof-go-see-narbi"
+        },
+        "thunderhoof-try-skip-fargo": {
+            "availableHook": "thornhoofCanSkipFargo",
+            "state": "thornhoof-caravan/accept-whatever",
+            "text": "thunderhoof-try-skip-fargo"
         }
     },
     "entryPoint": "entry",
@@ -39,24 +93,21 @@
         "about-joining-answer": {
             "answers": [
             ],
-            "mood": "",
             "text": "about-joining-answer"
         },
         "caravan-later": {
             "answers": [
             ],
-            "mood": "",
             "text": "caravan-later"
         },
         "entry": {
             "answers": [
+                "talk-about-thornhoof-caravan",
                 "ask-join-caravan",
                 "about-caravan",
                 "about-joining",
                 "entry-exit"
             ],
-            "hook": "",
-            "mood": "",
             "text": "entry"
         },
         "join-caravan": {
@@ -64,23 +115,99 @@
                 "caravan-start",
                 "caravan-cancel"
             ],
-            "mood": "",
             "text": "join-caravan"
         },
         "reward": {
             "answers": [
             ],
             "hook": "giveReward",
-            "mood": "",
             "text": "reward"
+        },
+        "thornhoof-caravan/accept-approved": {
+            "answers": [
+                "thornhoof-caravan-go-now",
+                "thornhoof-caravan-go-later"
+            ],
+            "hook": "thornhoofCaravanAccepted",
+            "text": "thornhoof-caravan/accept-approved"
+        },
+        "thornhoof-caravan/accept-whatever": {
+            "answers": [
+                "thornhoof-accepted-whatever-1",
+                "thornhoof-accepted-whatever-2"
+            ],
+            "text": "thornhoof-caravan/accept-whatever"
+        },
+        "thornhoof-caravan/combat-failed": {
+            "answers": [
+                "thornhoof-1-silvertide"
+            ],
+            "mood": "dubious",
+            "text": "thornhoof-caravan/combat-failed"
+        },
+        "thornhoof-caravan/combat-success": {
+            "answers": [
+                "thornhoof-4-approved",
+                "thunderhoof-try-skip-fargo",
+                "thunderhoof-go-see-narbi"
+            ],
+            "mood": "cocky",
+            "text": "thornhoof-caravan/combat-success"
+        },
+        "thornhoof-caravan/entry": {
+            "answers": [
+                "thornhoof-1-plea-for-help",
+                "thunderhoof-1-provoke",
+                "thunderhoof-1-who-else"
+            ],
+            "mood": "cocky",
+            "text": "thornhoof-caravan/entry"
+        },
+        "thornhoof-caravan/pleaded": {
+            "answers": [
+                "thornhoof-2-will-fight",
+                "thornhoof-1-silvertide",
+                "thunderhoof-1-who-else"
+            ],
+            "mood": "dubious",
+            "text": "thornhoof-caravan/pleaded"
+        },
+        "thornhoof-caravan/provoked": {
+            "answers": [
+                "thunderhoof-1-who-else",
+                "thornhoof-1-silvertide"
+            ],
+            "mood": "angry",
+            "text": "thornhoof-caravan/provoked"
+        },
+        "thornhoof-caravan/silvertide": {
+            "answers": [
+                "thornhoof-4-approved",
+                "thunderhoof-try-skip-fargo",
+                "thunderhoof-go-see-narbi"
+            ],
+            "mood": "laugh",
+            "text": "thornhoof-caravan/silvertide"
+        },
+        "thornhoof-caravan/waiting-to-go": {
+            "answers": [
+                "thornhoof-caravan-go-now",
+                "thornhoof-caravan-go-later"
+            ],
+            "text": "thornhoof-caravan/waiting-to-go"
+        },
+        "thornhoof-caravan/who-else": {
+            "answers": [
+                "thornhoof-4-approved",
+                "thornhoof-1-silvertide"
+            ],
+            "text": "thornhoof-caravan/who-else"
         },
         "way-back": {
             "answers": [
                 "caravan-start",
                 "caravan-cancel"
             ],
-            "hook": "",
-            "mood": "",
             "text": "way-back"
         }
     }

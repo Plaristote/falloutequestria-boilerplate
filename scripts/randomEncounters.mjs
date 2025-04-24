@@ -71,12 +71,34 @@ export class RandomEncounterComponent {
   }
 
   hostileEncounterProbabilities() {
-    return [3200, 3315];
+    const zones = game.worldmap.getCurrentZones();
+    if (zones.indexOf("golden-horde-siege") >= 0)
+      return [3200, 5000];
+    else if (zones.indexOf("capital-surroundings") >= 0)
+      return [3200, 4500];
+    return [3200, 4000];
+  }
+
+  hostileEncounterTruceDuration() {
+    const zones = game.worldmap.getCurrentZones();
+    if (zones.indexOf("golden-horde-siege") >= 0)
+      return 60 * 60 * 5;
+    else if (zones.indexOf("capital-surroundings") >= 0)
+      return 60 * 60 * 8;
+    return 60 * 60 * 12;
   }
 
   triggerHostileEncounter() {
     const parties = generateHostileEncounter();
+    const lastTimestamp = game.getVariable("lastHostileEncounter", 0);
 
+    if (game.timeManager.getTimestamp() - lastTimestamp < this.hostileEncounterTruceDuration()) {
+      console.log("RandomEncounters: triggerHostileEncounter has been caught trying to harass the player. Canceled.");
+      return ;
+    } else {
+      console.log("RandomEncounters: allowed:", game.timeManager.getTimestamp(), '-', lastTimestamp, '<', this.hostileEncounterTruceDuration());
+    }
+    game.setVariable("lastHostileEncounter", game.timeManager.getTimestamp());
     if (parties.length > 0) {
       const level     = generateEncounterLevel();
       const avoidable = new OutdoorsCheck(game.playerParty, parties);

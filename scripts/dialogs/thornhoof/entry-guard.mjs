@@ -2,6 +2,7 @@ import {DialogHelper} from "../helpers.mjs";
 
 export default class extends DialogHelper {
   onIntroduction() {
+    this.npcScript.metPlayer = true;
     switch (this.dialog.lastAnswer) {
       case "ask-for-no-trouble": return { textKey: "about-trouble" };
       case "ask-about-silvertide": return { textKey: "about-silvertide" };
@@ -16,7 +17,8 @@ export default class extends DialogHelper {
 
   onGoToMeeting() {
     game.asyncAdvanceTime(3, () => {
-      // TODO
+      level.insertPartyIntoZone(game.playerParty, "silvertide-meeting");
+      level.cameraFocusRequired(game.player);
     });
   }
 }

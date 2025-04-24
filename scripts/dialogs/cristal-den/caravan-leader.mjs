@@ -1,17 +1,22 @@
-class Dialog {
+import ThornhoofCaravanComponent from "./thornhoof-caravan-leader.mjs";
+
+class Dialog extends ThornhoofCaravanComponent {
   constructor(dialog) {
+    super(dialog);
     this.dialog = dialog;
   }
 
   getEntryPoint() {
-    if (this.dialog.npc.script.pendingReward)
+    if (this.thornhoofCaravanShouldOvertakeEntryPoint())
+      return "thornhoof-caravan/waiting-to-go";
+    else if (this.dialog.npc.script.pendingReward)
       return "reward";
-    else if (canJoinCaravanOnTheWayBack)
+    else if (this.canJoinCaravanOnTheWayBack())
       return "way-back";
     return "entry";
   }
 
-  get caravanDestination() {
+  get nextCaravanDestination() {
     return this.dialog.npc.script.nextCaravanDestination;
   }
 

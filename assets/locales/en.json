@@ -199,6 +199,10 @@
         "stable-103": {
             "description": "The inhabitants of Stable 103, your home, your haven, your family.",
             "name": "Stable 103"
+        },
+        "thornhoof": {
+            "description": "Thornhoof is a small walled city.",
+            "name": "Thornhoof"
         }
     },
     "locations": {

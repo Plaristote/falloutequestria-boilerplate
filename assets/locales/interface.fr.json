@@ -83,6 +83,7 @@
         "spell-wear-off": "Les effets du sort « {{spell}} » se sont dissipés.",
         "cannot-sneak": "Tu ne peux pas te cacher.",
         "cannot-use-in-combat": "Ne peux pas être uilisé pendant un combat.",
+        "caravan-completed": "Pour avoir amené la caravane vers {{goingTo}} à bon port, tu gagne {{xp}} points d'expérience.",
         "collected-ore": "Tu as extrait du minerai.",
         "collected-ore-failure": "Il n'y a plus rien à extraire.",
         "damaged": "{{target}} a subit {{damage}} points de dommages.",
