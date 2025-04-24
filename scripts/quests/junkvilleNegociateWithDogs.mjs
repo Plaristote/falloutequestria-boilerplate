@@ -216,6 +216,8 @@ export class JunkvilleNegociateWithDogs extends QuestHelper {
       case "junkville-dog-leader": this.model.setVariable("leaderDead", 1); break ;
       case "junkville-dog-second": this.model.setVariable("altLeaderDead", 1); break ;
     }
+    if (areCaptorsDead())
+      this.model.completed = true;
   }
 
   getObjectives() {

@@ -20,6 +20,7 @@ export class Hillburrow extends LevelBase {
         this.popWaterCarrier(waterCarrierTask);
         break ;
     }
+    super.onLoaded();
   }
 
   get waterCarrier() {

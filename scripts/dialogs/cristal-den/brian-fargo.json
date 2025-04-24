@@ -39,6 +39,7 @@
         },
         "start-thornhoof-caravan": {
             "availableHook": "hasThornhoofCaravanQuest",
+            "state": "thornhoof-caravan/entry",
             "text": "start-thornhoof-caravan"
         },
         "thornhoof-caravan-barter": {

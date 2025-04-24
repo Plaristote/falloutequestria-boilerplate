@@ -1,13 +1,4 @@
 import {CharacterBehaviour} from "../character.mjs";
-import {isJinxed, getValueFromRange} from "../../behaviour/random.mjs";
-
-const maxEncounterCount = 4;
-
-function shouldHaveEncounter() {
-  if (!isJinxed(game.player))
-    return getValueFromRange(0, 10) > game.player.statistics.luck;
-  return true;
-}
 
 export class CaravanLeader extends CharacterBehaviour {
   constructor(model) {
@@ -15,13 +6,20 @@ export class CaravanLeader extends CharacterBehaviour {
   }
 
   get dialog() {
+    if (game.script.caravan.hasCaravan)
+      return null;
     return "cristal-den/caravan-leader";
   }
 
   get nextCaravanDestination() {
-    if (level.name == "cristal-den-entrance")
-      return "junkville"; // TODO
-    return "cristal-den-entrance";
+    if (level.name == "cristal-den-entrance") {
+      const step = Math.floor(game.timeManager.day / 7);
+      const candidates = ["junkville", "hillburrow", "steel-ranger-bunker"];
+      if (game.hasVariable("thornhoofCaravanEnabled"))
+        candidates.push("thornhoof");
+      return candidates[step] || "junkville";
+    }
+    return "cristal-den";
   }
 
   set encounterCounter(value) {
@@ -51,9 +49,10 @@ export class CaravanLeader extends CharacterBehaviour {
   }
 
   startCaravan() {
-    this.encounterCounter = 0;
-    this.startMapPosition = game.worldmap.currentPosition;
-    this.triggerNextCaravanStep();
+    game.script.caravan.startCaravan(
+      game.worldmap.getCurrentCity().name,
+      this.nextCaravanDestination
+    );
   }
 
   triggerNextCaravanStep() {

@@ -48,6 +48,7 @@
         "spell-wear-off": "The effects of the {{spell}} spell wore off.",
         "cannot-sneak": "You cannot sneak in plain sight.",
         "cannot-use-in-combat": "Cannot be used during combat.",
+        "caravan-completed": "For successfully escorting the caravan to {{goingTo}}, you gain {{xp}} experience points.",
         "collected-ore": "You mined some ore.",
         "collected-ore-failure": "There's nothing left to mine.",
         "damaged": "{{target}} took {{damage}} points of damage.",

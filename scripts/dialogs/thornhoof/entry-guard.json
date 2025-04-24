@@ -54,6 +54,7 @@
                 "ask-about-silvertide",
                 "try-to-go-away"
             ],
+            "hook": "onIntroduction",
             "mood": "cocky",
             "text": "introduction"
         },

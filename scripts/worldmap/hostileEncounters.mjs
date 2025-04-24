@@ -4,8 +4,23 @@ function availableEncounters() {
   const zones = game.worldmap.getCurrentZones();
   let array = [];
 
-  array.push(function(difficultyRoll) { return { "name": "Rats",      "avoidRoll": (55 + difficultyRoll / 4), "members": [{"sheet": "mutatedRat", "script": "rat.mjs",      "amount": Math.max(3, Math.floor(4 * (difficultyRoll / 40)))}] }; });
-  array.push(function(difficultyRoll) { return { "name": "Scorpions", "avoidRoll": (65 + difficultyRoll / 4), "members": [{"sheet": "scorpion",   "script": "scorpion.mjs", "amount": Math.max(3, Math.floor(4 * (difficultyRoll / 40)))}] }; });
+  if (zones.indexOf("Mountains#1") >= 0 || zones.indexOf("Mountains#2") >= 0) {
+    // Wolves
+  } else if (zones.indexOf("forest") >= 0) {
+    // Timberwolves
+  } else {
+    // Desert encounters
+    array.push(function(difficultyRoll) { return { "name": "Rats",      "avoidRoll": (55 + difficultyRoll / 4), "members": [{"sheet": "mutatedRat", "script": "rat.mjs",      "amount": Math.max(3, Math.floor(4 * (difficultyRoll / 40)))}] }; });
+    array.push(function(difficultyRoll) { return { "name": "Scorpions", "avoidRoll": (65 + difficultyRoll / 4), "members": [{"sheet": "scorpion",   "script": "scorpion.mjs", "amount": Math.max(3, Math.floor(4 * (difficultyRoll / 40)))}] }; });
+  }
+  if (zones.indexOf("capital-surroundings") >= 0) {
+    // Roaches, feral ghouls, maybe shadow knights ?
+    array.push(function(difficultyRoll) { return { "name": "Roaches",      "avoidRoll": (80 + difficultyRoll / 4), "members": [{"sheet": "roach", "script": "roach.mjs", "amount": 3 + Math.ceil(difficultyRoll / 20)}, {"sheet": "roach-big", "script": "roach.mjs", "amount": Math.ceil(difficultyRoll / 33)}] }; });
+    array.push(function(difficultyRoll) { return { "name": "Feral Ghouls", "avoidRoll": (70 + difficultyRoll / 4), "members": [{"sheet": "capital/feral-ghoul-1", "script": "feral-ghoul.mjs", "amount": 2 + Math.ceil(difficultyRoll / 18)}, {"sheet": "capital/feral-ghoul-1", "script": "feral-ghoul.mjs", "amount": 2 + Math.ceil(difficultyRoll / 18)}] }; });
+  }
+  if (zones.indexOf("golden-horde-siege") >= 0) {
+    // Golden Herd warriors
+  }
   return array;
 }
 
@@ -37,11 +52,15 @@ function appendHostileParty(array) {
 export function generateHostileEncounter() {
   const parties = [];
 
-  appendHostileParty(parties);
-  parties.push(generateHostileParty());
-  if (getValueFromRange(0, 10) > 8)
+  try {
     appendHostileParty(parties);
-  for (let i = 0 ; i < parties.length ; ++i)
-    parties[i].zone = `encounter-zone-${i}`;
+    parties.push(generateHostileParty());
+    if (getValueFromRange(0, 10) > 8)
+      appendHostileParty(parties);
+    for (let i = 0 ; i < parties.length ; ++i)
+      parties[i].zone = `encounter-zone-${i}`;
+  } catch (err) {
+    console.log("generateHostileEncounter crashed:", err);
+  }
   return parties;
 }

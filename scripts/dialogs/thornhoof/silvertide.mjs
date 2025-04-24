@@ -1,6 +1,7 @@
 export default class Dialog {
   constructor(dialog) {
     this.dialog = dialog;
+    this.dialog.npc.script.metPlayer = true;
   }
 
   giveCaravanQuest() {
