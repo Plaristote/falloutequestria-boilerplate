@@ -164,5 +164,14 @@
         "customize": "Modifier",
         "pick": "Choisir",
         "title": "Choisissez votre personnage"
+    },
+    "weekdays": {
+      "1": "LUN",
+      "2": "MAR",
+      "3": "MER",
+      "4": "JEU",
+      "5": "VEN",
+      "6": "SAM",
+      "7": "DIM"
     }
 }
