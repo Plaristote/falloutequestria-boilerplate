@@ -200,6 +200,10 @@
             "description": "The inhabitants of Stable 103, your home, your haven, your family.",
             "name": "Stable 103"
         },
+        "steel-rangers": {
+            "description": "The Steel Rangers are an elite faction of militant, technologically-advanced earth and unicorn ponies clad in steel armor. The last remaining members of the Ministry of Wartime Technology, they were born when it and the Ministry of Arcane Sciences cooperated to create the steel power armor that personifies the Steel Rangers.",
+            "name": "Steel Rangers"
+        },
         "thornhoof": {
             "description": "Thornhoof is a small walled city.",
             "name": "Thornhoof"
