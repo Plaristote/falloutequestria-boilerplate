@@ -12,6 +12,16 @@ export class CaravanLeader extends CharacterBehaviour {
   }
 
   get nextCaravanDestination() {
+    // Thornhoof Caravan Quest handler for the first of the two caravan steps
+    if (level.name == "steel-ranger-bunker") {
+      const thornhoofCaravanQuest = game.quests.getQuest("thornhoof/caravan");
+      if (thornhoofCaravanQuest
+        && thornhoofCaravanQuest.getVariable("started", 0) == 1
+        && thornhoofCaravanQuest.isObjectiveCompleted("lead-caravan"))
+        return "thornhoof";
+    }
+
+    // On departure from Crystal Den
     if (level.name == "cristal-den-entrance") {
       const step = Math.floor(game.timeManager.day / 7);
       const candidates = ["junkville", "hillburrow", "steel-ranger-bunker"];
@@ -19,33 +29,9 @@ export class CaravanLeader extends CharacterBehaviour {
         candidates.push("thornhoof");
       return candidates[step] || "junkville";
     }
+
+    // On departure from anywhere else
     return "cristal-den";
-  }
-
-  set encounterCounter(value) {
-    this.model.setVariable("encounterCounter", value);
-  }
-
-  get encounterCounter() {
-    return this.model.getVariable("encounterCounter", 0);
-  }
-
-  set startMapPosition(value) {
-    const position = game.worldmap.currentPosition;
-    this.model.setVariable("startMapPosition", JSON.stringify([position.x, position.y]));
-  }
-
-  get startMapPosition() {
-    const position = JSON.parse(this.model.getVariable("startMapPosition"));
-    return Qt.point(position[0], position[1]);
-  }
-
-  get pendingReward() {
-    return this.model.getVariable("pending-reward", 0);
-  }
-
-  set pendingReward(value) {
-    this.model.setVariable("pending-reward", value);
   }
 
   startCaravan() {
@@ -53,34 +39,5 @@ export class CaravanLeader extends CharacterBehaviour {
       game.worldmap.getCurrentCity().name,
       this.nextCaravanDestination
     );
-  }
-
-  triggerNextCaravanStep() {
-    game.uniqueCharacterStorage.detachCharacter(this.model);
-    if (this.encounterCounter > maxEncounterCount && shouldHaveEncounter()) {
-      this.encounterCounter++;
-      game.loadLevel(getEncounterLocation(this), "", this.onEncounterLoaded.bind(this));
-    } else {
-      game.loadLevel(this.nextCaravanDestination, "", this.onArrivedAtDestination.bind(this));
-    }
-  }
-
-  loadCaravanToLevel() {
-    game.uniqueCharacterStorage.loadCharacterToZone(this.model.characterSheet, level.getZoneFromName("caravan-entry"));
-  }
-
-  onEncounterLoaded() {
-    this.loadCaravanToLevel();
-    // TODO load allies and enemies
-  }
-
-  onArrivedAtDestination() {
-    this.pendingReward++;
-    if (this.nextCaravanDestination === "cristal-den-entrance") {
-      const city = game.worldmap.getCity(this.nextCaravanDestination);
-      this.loadCaravanToLevel();
-      game.worldmap.setPosition(city.position.x, city.position.y);
-      // Add carts and prepare departure
-    }
   }
 }
