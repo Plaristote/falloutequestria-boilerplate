@@ -13,11 +13,9 @@ export class CaravanLeader extends CharacterBehaviour {
 
   get nextCaravanDestination() {
     // Thornhoof Caravan Quest handler for the first of the two caravan steps
-    if (level.name == "steel-ranger-bunker") {
+    if (level.name == "steel-ranger-entrance") {
       const thornhoofCaravanQuest = game.quests.getQuest("thornhoof/caravan");
-      if (thornhoofCaravanQuest
-        && thornhoofCaravanQuest.getVariable("started", 0) == 1
-        && thornhoofCaravanQuest.isObjectiveCompleted("lead-caravan"))
+      if (thornhoofCaravanQuest?.script?.caravanInProgress)
         return "thornhoof";
     }
 

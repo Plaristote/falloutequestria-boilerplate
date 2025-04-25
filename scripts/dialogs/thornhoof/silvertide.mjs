@@ -7,6 +7,7 @@ export default class Dialog {
   giveCaravanQuest() {
     game.dataEngine.addReputation("thornhoof", 25);
     game.quests.addQuest("thornhoof/caravan");
+    game.player.inventory.addItemOfType("quest-holodisk-hoarfrost");
   }
 
   rejectCaravanQuest() {

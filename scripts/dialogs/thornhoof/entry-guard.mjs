@@ -3,7 +3,7 @@ import {DialogHelper} from "../helpers.mjs";
 export default class extends DialogHelper {
   onIntroduction() {
     this.npcScript.metPlayer = true;
-    switch (this.dialog.lastAnswer) {
+    switch (this.dialog.previousAnswer) {
       case "ask-for-no-trouble": return { textKey: "about-trouble" };
       case "ask-about-silvertide": return { textKey: "about-silvertide" };
       case "ask-about-town": return { textKey: "about-town" };

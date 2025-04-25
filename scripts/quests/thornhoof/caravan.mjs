@@ -5,6 +5,23 @@ export default class extends QuestHelper {
     this.model.location = "thornhoof";
     this.model.addObjective("lead-caravan", this.tr("lead-caravan"));
     this.model.addObjective("convince-narbi-fargo", this.tr("convince-narbi-fargo"));
+    this.model.addObjective("steel-rangers-shipment", this.tr("steel-rangers-shipment"));
+  }
+
+  onCaravanFailure() {
+    if (this.caravanInProgress) {
+      this.model.unsetVariable("started");
+      this.model.failed = true;
+    }
+  }
+
+  get caravanStarted() {
+    return this.model.getVariable("started", 0) == 1;
+
+  }
+
+  get caravanInProgress() {
+    return this.caravanStarted && !this.model.isObjectiveCompleted("lead-caravan");
   }
 
   get playerPaidInAdvance() {
