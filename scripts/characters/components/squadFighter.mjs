@@ -14,7 +14,7 @@ export class SquadFighterComponent {
     overrideOnTurnStart(this.script, this.callSquadToCombat.bind(this));
   }
 
-  get squad() { return this.script.squad || this.model.parent.objects; }
+  get squad() { return this.script.squad || this.model.parent?.objects; }
 
   callSquadToCombat() {
     if (this.squad) {
