@@ -19,7 +19,7 @@ function computeDistance(pointA, pointB) {
 function positionForPathPoint(point) {
   return typeof point == "string"
     ? game.worldmap.getCity(point).position
-    : position;
+    : point;
 }
 
 function distanceFromPath(path) {
@@ -272,6 +272,10 @@ export default class CaravanProcess {
   }
 
   onCaravanFailure() {
+    // Thornhoof Caravan Quest handler
+    if (game.quests.hasQuest("thornhoof/caravan"))
+      game.quests.getQuest("thornhoof/caravan").script.onCaravanFailure();
+
     // TODO implement some consequences for a player abandonning a caravan
     this.goingTo = null;
     this.currentDuration = 0;

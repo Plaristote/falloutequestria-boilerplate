@@ -7,7 +7,7 @@ class Dialog {
   }
 
   aboutPotioks() {
-    switch (this.dialog.lastAnswer) {
+    switch (this.dialog.previousAnswer) {
       case "ask-about-potiok-control":
         this.mood = "cocky";
         return this.tr("about-potioks-control");

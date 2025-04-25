@@ -1,0 +1,34 @@
+{
+    "dialogs": {
+        "steel-rangers/cabbit": {
+            "about-bunker": "Ce bunker ? C'et notre maison. Mieux, notre forteresse !",
+            "about-getting-in": "Oh non non non. Seuls les Rangers ont le droit de franchir cette porte. C'est pas contre toi.\n<br><br>\nMais on a pas beaucoup de compagnie, alors tu peux rester ici et causer autant que tu veux. Sauf si Dural commence à grogner plus fort, ça c'est mauvais signe.",
+            "about-joining": "Tu veux... nous rejoindre ? Alors ça c'est pas banal ! T'entends ça {{otherGuardName}} ?\n<br><br>\nEh bah, euh... attends ici un instant, je vais demander à mes supérieurs.",
+            "about-joining-2": "Eh bien, j'ai parlé aux Anciens, et ils disent qu'on ne peut pas prendre n'importe qui. Ils disent que tu dois, euh, compléter une quête, d'abord.",
+            "about-joining-3": "Tu dois te rendre dans les Ruines de la Capitale, un peu plus au Sud-Ouest d'ici.\n<br><br>\nNous y avons tragiquement perdu une escouade de Rangers, lors d'une mission de récupération. Si tu peux les trouver, et récupérer leur plaques d'identification, ça nous prouvera que tu t'y es rendu et que tu as survécu, et tu sera alors admis parmis nous au grade d'Initié.",
+            "about-joining-accepted": "Tu... vraiment ? Très bien. Nous avons perdus trois rangers, il faudra récupérer chacune de leurs plaques. On se voit à ton retour alors.\n<br><br>\n<i>Tu jurerais avoir entendu {{otherGuardName}} ricaner sous son armure.</i>",
+            "about-joining-unsure": "Ouais, c'est sûrement plus sage. Si tu décide d'essayer, il faut trouver les plaques de chacun des trois Rangers que nous avons perdus là-bas... mais tu sais, si des Rangers équipés et entraînés se sont fait descendre là-bas, ça veut dire que quelque chose de dangereux s'y trame. Pour ta propre sécurité, il vaudrait mieux ne pas t'en mêler.",
+            "about-rangers": "Les Steel Rangers, la dernière ligne de défense entre l'ordre et le chaos. Tu vois un pistolet à plasma tenu par un raider ? C'est une hérésie. Un apprenti dictateur contrôlant son peuple avec des turrets automatiques ? C'est un crime.<br><br>\nNous récupérons la technologie, nous la sécurisons, et nous la stockons. Pour la stabilité, le savoir, et pour le futur.",
+            "about-self": "I'm {{npc}}, porte-parole officieux et garde de la porte très officiel !\n<br><br>\nEt ça, c'est {{otherGuardName}}. Il parle pas, mais parfois il grogne. J'aime à croire que ce sont des grognements d'affection.<br><br>\nNous sommes Initiés des Steel Rangers, assigné à la garde de l'entrée du bunker.",
+            "ask-about-guards": "Peux-tu m'en dire un petit peu à ton sujet ?",
+            "ask-about-join-quest": "Qu'est-ce qu'il faut que je fasse ?",
+            "ask-about-join-quest-enthousiast": "Dis m'en plus ! Je suis prêt à répondre présent à TON défi !",
+            "ask-about-join-quest-sarcastical": "Une quête ? Du genre, trouver les cinq Éléments de l'Harmonie, et péter la gueule à une version mutante de Nightmare Moon fusionnée avec des Radscorpions ?",
+            "ask-about-place": "C'est quoi, cet endroit ?",
+            "ask-about-steel-rangers": "Les Steel Rangers ?",
+            "ask-about-thornhoof-shipment": "Je suis ici pour récupérer un chargement de munitions. Pour Thornhoof.",
+            "ask-to-join": "Vous recrutez ? J'aimerais devenir un Steel Ranger.",
+            "entry": "Bienvenue chez les Steel Rangers. Puis-je te demander ce qui t'amène par ici ?",
+            "entry-alt-leave": "Je vois. Eh bien, je ne faisais que passer, je vais y aller maintenant !",
+            "entry-leave": "Je ne fais que passer.",
+            "join-quest-accept": "Très bien, je vais le faire.",
+            "join-quest-unsure": "Les Ruines de la Capitale ? Ca a l'air dangereux... je vais y réfléchir.",
+            "thornhoof-give-holodisk": "Oui, voilà le holodisque de Scribe Hoarfrost.",
+            "thornhoof-holodisk-disappeared": "J'ai reçu un holodisque du Scribe Hoarfrost, mais je ne l'ai pas sur moi.",
+            "thornhoof-shipment/entry": "Une livraison pour Thornhoof ? J'imagine que c'est Scribe Hoarfrost qui en fait la requête ?\n<br><br>\nTu vas devoir me montrer un papier. Ou un holodisque. Ou un ordre gravé dans la roche, peu importe. Une preuve que c'est bien lui qui t'envoi ici.",
+            "thornhoof-shipment/holodisk-given": "Ah ! Effectivement, ça vient de Scribe Hoarfrost, aucun doute là-dessus.<br><br>\nJe vais amener ça à mes supérieurs. Si tout est en ordre, nous chargerons les munitions dans la caravane. Tu peux attendre ici.",
+            "thornhoof-shipment/no-holodisk": "Tu plaisantes ? T’avais un ordre signé d’un scribe, et tu l’as paumé ? Tu me prendrais pas un peu pour un jambon ?\n<br><br>\nÉcoute, je peux être sympa, mais je peux pas sortir une caisse de munitions juste parce qu’un poney me le demande gentiment. Sans preuve, c’est non. Désolé.",
+            "wait-for-thornhoof-shipment": "Ok, j'attends ici."
+        }
+    }
+}

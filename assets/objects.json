@@ -328,6 +328,14 @@
         "value": 25,
         "weight": 1
     },
+    "quest-holodisk-hoarfrost": {
+        "icon": "holodisk.webp",
+        "isGroupable": false,
+        "sprite": "misc",
+        "type": "quests",
+        "value": 25,
+        "weight": 1
+    },
     "scribe-armor": {
         "icon": "steel-ranger-scribe.png",
         "isGroupable": true,

@@ -44,6 +44,6 @@ export default class extends DialogHelper {
 
   thornhoofCaravanGoNow() {
     this.thornhoofCaravan.setVariable("strated", 1);
-    game.script.caravan.startCaravan("cristal-den", "thornhoof");
+    game.script.caravan.startCaravan("cristal-den", "steel-ranger-bunker");
   }
 }

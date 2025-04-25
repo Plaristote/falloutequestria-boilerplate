@@ -1,0 +1,176 @@
+{
+    "answers": {
+        "about-joining-wait": {
+            "state": "about-joining-2",
+            "text": "exit"
+        },
+        "ask-about-guards": {
+            "state": "entry-alt",
+            "text": "ask-about-guards"
+        },
+        "ask-about-join-quest": {
+            "state": "about-joining-3",
+            "text": "ask-about-join-quest"
+        },
+        "ask-about-join-quest-enthousiast": {
+            "state": "about-joining-3",
+            "text": "ask-about-join-quest-enthousiast"
+        },
+        "ask-about-join-quest-sarcastical": {
+            "state": "about-joining-3",
+            "text": "ask-about-join-quest-sarcastical"
+        },
+        "ask-about-place": {
+            "state": "entry-alt",
+            "text": "ask-about-place"
+        },
+        "ask-about-steel-rangers": {
+            "state": "entry-alt",
+            "text": "ask-about-steel-rangers"
+        },
+        "ask-about-thornhoof-shipment": {
+            "availableHook": "canAskThornhoofShipment",
+            "state": "thornhoof-shipment/entry",
+            "text": "ask-about-thornhoof-shipment"
+        },
+        "ask-to-join": {
+            "availableHook": "canAskToJoin",
+            "state": "about-joining",
+            "text": "ask-to-join"
+        },
+        "entry-alt-leave": {
+            "text": "entry-alt-leave"
+        },
+        "entry-leave": {
+            "text": "entry-leave"
+        },
+        "join-quest-accept": {
+            "state": "about-joining-accepted",
+            "text": "join-quest-accept"
+        },
+        "join-quest-unsure": {
+            "state": "about-joining-unsure",
+            "text": "join-quest-unsure"
+        },
+        "thornhoof-give-holodisk": {
+            "availableHook": "canGiveHoarfrostHolodisk",
+            "state": "thornhoof-shipment/holodisk-given",
+            "text": "thornhoof-give-holodisk"
+        },
+        "thornhoof-holodisk-disappeared": {
+            "state": "thornhoof-shipment/no-holodisk",
+            "text": "thornhoof-holodisk-disappeared"
+        },
+        "wait-for-thornhoof-shipment": {
+            "hook": "waitForThornhoofShipment",
+            "text": "wait-for-thornhoof-shipment"
+        }
+    },
+    "entryPoint": "entry",
+    "states": {
+        "about-bunker": {
+            "answers": [
+            ],
+            "mood": "smile",
+            "text": "about-bunker"
+        },
+        "about-getting-in": {
+            "answers": [
+            ],
+            "mood": "laugh",
+            "text": "about-getting-in"
+        },
+        "about-joining": {
+            "answers": [
+                "about-joining-wait"
+            ],
+            "mood": "shocked",
+            "text": "about-joining"
+        },
+        "about-joining-2": {
+            "answers": [
+                "ask-about-join-quest",
+                "ask-about-join-quest-enthousiast",
+                "ask-about-join-quest-sarcastical"
+            ],
+            "mood": "neutral",
+            "text": "about-joining-2"
+        },
+        "about-joining-3": {
+            "answers": [
+                "join-quest-accept",
+                "join-quest-unsure"
+            ],
+            "hook": "addSteelRangerQuest",
+            "mood": "neutral",
+            "text": "about-joining-3"
+        },
+        "about-joining-accepted": {
+            "answers": [
+            ],
+            "mood": "dubious",
+            "text": "about-joining-accepted"
+        },
+        "about-joining-unsure": {
+            "answers": [
+            ],
+            "mood": "smile",
+            "text": "about-joining-unsure"
+        },
+        "about-rangers": {
+            "answers": [
+            ],
+            "mood": "smile",
+            "text": "about-rangers"
+        },
+        "about-self": {
+            "answers": [
+            ],
+            "mood": "smile",
+            "text": "about-self"
+        },
+        "entry": {
+            "answers": [
+                "ask-about-thornhoof-shipment",
+                "ask-about-guards",
+                "ask-about-place",
+                "ask-about-steel-rangers",
+                "ask-to-join",
+                "entry-leave"
+            ],
+            "text": "entry"
+        },
+        "entry-alt": {
+            "answers": [
+                "ask-about-thornhoof-shipment",
+                "ask-about-guards",
+                "ask-about-place",
+                "ask-about-steel-rangers",
+                "ask-to-join",
+                "entry-alt-leave"
+            ],
+            "hook": "entryAlt",
+            "mood": "smile",
+            "text": "entry-alt"
+        },
+        "thornhoof-shipment/entry": {
+            "answers": [
+                "thornhoof-give-holodisk",
+                "thornhoof-holodisk-disappeared"
+            ],
+            "mood": "dubious",
+            "text": "thornhoof-shipment/entry"
+        },
+        "thornhoof-shipment/holodisk-given": {
+            "answers": [
+                "wait-for-thornhoof-shipment"
+            ],
+            "text": "thornhoof-shipment/holodisk-given"
+        },
+        "thornhoof-shipment/no-holodisk": {
+            "answers": [
+            ],
+            "text": "thornhoof-shipment/no-holodisk"
+        }
+    }
+}
