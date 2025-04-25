@@ -12,7 +12,7 @@
             "entry": "Hey. You here to join the caravan ?",
             "entry-exit": "No, I'm not. Bye.",
             "join-caravan": "Great ! We'll take off anytime now. We're going to {{nextCaravanDestination}}. You're interested ?",
-            "reward": "Hey ! I'm glad you made it out alive ! Here's your reward ! Come back whenever you're ready for some more action !",
+            "reward": "Hey ! I'm glad you made it out alive ! Here's your reward ! Come back whenever you're ready for some more action !\n<br><br>\n<i>She hands you {{pendingReward}} caps.</i>",
             "talk-about-thornhoof-caravan": "I'm here to bring a caravan to Thornhoof. They need help.",
             "thornhoof-1-plea-for-help": "An entire town needs our help. It's worth taking our chances.",
             "thornhoof-1-silvertide": "I met with Silvertide at Thunderhoof. She still owes you a bottle of rhum, doesn't she ?",

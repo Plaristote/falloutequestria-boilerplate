@@ -9,10 +9,10 @@ class Dialog extends ThornhoofCaravanComponent {
   getEntryPoint() {
     if (this.thornhoofCaravanShouldOvertakeEntryPoint())
       return "thornhoof-caravan/waiting-to-go";
-    else if (this.dialog.npc.script.pendingReward)
-      return "reward";
     else if (this.canJoinCaravanOnTheWayBack())
       return "way-back";
+    else if (this.pendingReward)
+      return "reward";
     return "entry";
   }
 
@@ -36,9 +36,13 @@ class Dialog extends ThornhoofCaravanComponent {
     this.dialog.npc.tasks.addTask("startCaravan", 350, 1);
   }
 
+  get pendingReward() {
+    return game.script.caravan.pendingReward > 0;
+  }
+
   giveReward() {
-    game.player.inventory.addItemOfType("bottlecaps", 200 * this.dialog.npc.script.pendingReward);
-    this.dialog.npc.script.pendingReward = 0;
+    game.player.inventory.addItemOfType("bottlecaps", game.script.caravan.pendingReward);
+    game.script.caravan.pendingReward = 0;
   }
 }
 
