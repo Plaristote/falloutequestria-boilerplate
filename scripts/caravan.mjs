@@ -9,9 +9,96 @@ function shouldHaveEncounter() {
   return true;
 }
 
+function computeDistance(pointA, pointB) {
+  return Math.sqrt(
+    Math.pow(pointB.x - pointA.x, 2) +
+    Math.pow(pointB.y - pointA.y, 2)
+  );
+}
+
+function positionForPathPoint(point) {
+  return typeof point == "string"
+    ? game.worldmap.getCity(point).position
+    : position;
+}
+
+function distanceFromPath(path) {
+  let totalDistance = 0;
+
+  for (let i = 0; i < path.length - 1; i++) {
+    const pointA = positionForPathPoint(path[i]);
+    const pointB = positionForPathPoint(path[i + 1]);
+    totalDistance += computeDistance(pointA, pointB);
+  }
+  return totalDistance;
+}
+
+function durationFromPath(path) {
+  const speed = 500 / 1440; // 500 units = 24h
+  const totalDistance = distanceFromPath(path);
+  return totalDistance / speed;
+}
+
+function distanceAtPoint(path, positionIt) {
+  let cumulativeDistance = 0;
+
+  for (let i = 0; i < path.length - 1 && i < positionIt; i++) {
+    const pointA = positionForPathPoint(path[i]);
+    const pointB = positionForPathPoint(path[i + 1]);
+    const segmentDistance = computeDistance(pointA, pointB);
+
+    cumulativeDistance += segmentDistance;
+  }
+  return Math.round(cumulativeDistance);
+}
+
+function findCurrentPathSegment(path, distanceTraveled) {
+  for (let i = 0; i < distanceAtPoint.length - 1; i++) {
+    if (distanceTraveled >= distanceAtPoint(path, i) &&
+        distanceTraveled <= distanceAtPoint(path, i + 1)) {
+      return i;
+    }
+  }
+  return 0;
+}
+
+function reversePath(path) {
+  const reversed = [];
+  for (let i = path.length - 1 ; i >= 0 ; --i)
+    reversed.push(path[i]);
+  return reversed;
+}
+
+function steelRangerBunkerPath() {
+  return [
+    "cristal-den",
+    { x: 1500, y: 640 },
+    "steel-ranger-bunker"
+  ];
+}
+
+function thornhoofPath() {
+  const base = steelRangerBunkerPath();
+  base.push("thornhoof");
+  return base;
+}
+
+// 48h -> 1000
+
 export default class CaravanProcess {
   get hasCaravan() {
     return this.goingTo !== null;
+  }
+
+  get pendingReward() {
+    return game.getVariable("caravanReward", 0);
+  }
+
+  set pendingReward(value) {
+    if (value)
+      game.setVariable("caravanReward", value);
+    else
+      game.unsetVariable("caravanReward");
   }
 
   get duration() {
@@ -58,16 +145,48 @@ export default class CaravanProcess {
       game.unsetVariable("caravanTarget");
   }
 
+  get path() {
+    if (game.hasVariable("caravanPath"))
+      return JSON.parse(game.getVariable("caravanPath"));
+    return null;
+  }
+
+  set path(value) {
+    if (value)
+      game.setVariable("caravanPath", JSON.stringify(value));
+    else
+      game.unsetVariable("caravanPath");
+  }
+
   get hostileEncounterOver() {
     if (this.currentDuration > 0 && typeof level != "undefined")
       return !level.combat;
     return true;
   }
 
-  startCaravan(fromCity, targetCity, duration = 4320) {
-    this.startedAt       = fromCity;
-    this.goingTo         = targetCity;
-    this.duration        = duration;
+  startCaravan(fromCity, targetCity) {
+    let path = [fromCity, targetCity];
+
+    // Thornhoof Caravan Quest handler for the first of the two caravan steps
+    if (fromCity == "steel-ranger-bunker" && targetCity == "thornhoof")
+      return this.startCaravanWithPath(path);
+
+    if (fromCity == "steel-ranger-bunker")
+      path = reversePath(steelRangerBunkerPath());
+    else if (targetCity == "steel-ranger-bunker")
+      path = steelRangerBunkerPath();
+    if (fromCity == "thornhoof")
+      path = reversePath(thornhoofPath());
+    else if (targetCity == "thornhoof")
+      path = thornhoofPath();
+    this.startCaravanWithPath(path);
+  }
+
+  startCaravanWithPath(path) {
+    this.startedAt = path[0];
+    this.goingTo   = path[path.length - 1];
+    this.path      = path;
+    this.duration  = durationFromPath(this.path);
     this.currentDuration = 0;
     console.log("Duration will be", this.duration);
     game.exitLevel(function() {});
@@ -89,7 +208,7 @@ export default class CaravanProcess {
   triggerNextStep() {
     const durationLeft = this.duration - this.currentDuration;
     const randomDuration = function() { return Math.random() * (60 * 20); };
-    const spareDuration = 60 * 14;
+    const spareDuration = 60 * 7;
     let stepDuration = spareDuration;
     let withEncounter = false;
 
@@ -110,16 +229,20 @@ export default class CaravanProcess {
   }
 
   updateWorldmapPosition() {
+    const path = this.path;
     const traveledRatio = this.currentDuration / this.duration;
-    const fromCity = game.worldmap.getCity(this.startedAt);
-    const toCity = game.worldmap.getCity(this.goingTo);
-    const deltaX = fromCity.position.x - toCity.position.x;
-    const deltaY = fromCity.position.y - toCity.position.y;
+    const totalDistance = distanceAtPoint(path, path.length - 1);
+    const distanceTraveled = totalDistance * traveledRatio;
+    const pathIndex = findCurrentPathSegment(path, distanceTraveled);
 
-    // That's no good, we probably need to create a set of points the caravan travels to and from,
-    // so we can know for sure the player won't end up in the middle of impassable terrain.
-    game.worldmap.currentPosition.x -= deltaX * traveledRatio;
-    game.worldmap.currentPosition.y -= deltaY * traveledRatio;
+    const startPoint = positionForPathPoint(path[pathIndex]);
+    const endPoint   = positionForPathPoint(path[pathIndex + 1]);
+
+    const segmentDistance = distanceAtPoint(path, pathIndex + 1) - distanceAtPoint(path, pathIndex);
+    const segmentProgress = (distanceTraveled - distanceAtPoint(path, pathIndex)) / segmentDistance; // will crash if segmentDistance is 0, but that would be absurd in the first place
+
+    game.worldmap.currentPosition.x = startPoint.x + (endPoint.x - startPoint.x) * segmentProgress;
+    game.worldmap.currentPosition.y = startPoint.y + (endPoint.y - startPoint.y) * segmentProgress;
     game.worldmap.targetPosition = game.worldmap.currentPosition;
   }
 
@@ -133,6 +256,7 @@ export default class CaravanProcess {
       xp: this.xpReward,
       goingTo: i18n.t(`locations.${this.goingTo}`)
     }));
+    this.pendingReward += 200; // TODO should vary depending on destination, also should be 0 for the first thornhoof caravan
     this.goingTo = null;
   }
 
