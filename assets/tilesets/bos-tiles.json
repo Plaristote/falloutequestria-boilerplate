@@ -1,0 +1,14 @@
+{ "columns":5,
+ "image":"bos-tiles.png",
+ "imageheight":296,
+ "imagewidth":365,
+ "margin":0,
+ "name":"bos-tiles",
+ "spacing":1,
+ "tilecount":40,
+ "tiledversion":"1.11.2",
+ "tileheight":36,
+ "tilewidth":72,
+ "type":"tileset",
+ "version":1.1
+}
