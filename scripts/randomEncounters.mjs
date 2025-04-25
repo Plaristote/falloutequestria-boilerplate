@@ -81,11 +81,12 @@ export class RandomEncounterComponent {
 
   hostileEncounterTruceDuration() {
     const zones = game.worldmap.getCurrentZones();
+    let hours = 12;
     if (zones.indexOf("golden-horde-siege") >= 0)
-      return 60 * 60 * 5;
+      hours = 5;
     else if (zones.indexOf("capital-surroundings") >= 0)
-      return 60 * 60 * 8;
-    return 60 * 60 * 12;
+      hours = 8;
+    return 60 * 60 * hours;
   }
 
   triggerHostileEncounter() {
