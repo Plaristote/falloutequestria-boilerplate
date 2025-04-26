@@ -1,0 +1,11 @@
+{
+  "quests": {
+    "capital/find-spinel": {
+      "title": "Ghoul Power",
+      "find-spinel": "Find an electromagic spinel",
+      "give-spinel": "Give the electromagic spinel to Rotten Gear",
+      "description": "Rotten Gear, in the ruins of the capital, is having trouble with Ashaven's power generator. He needs to replace a rare mineral with magical properties: an electromagic spinel.",
+      "description-steel-ranger-hint": "According to Rotten Gear, the Steel Rangers should have a few of those in stock... but they religiously keep that stuff for themselves."
+    }
+  }
+}

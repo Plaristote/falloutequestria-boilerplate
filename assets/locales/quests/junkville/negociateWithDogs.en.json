@@ -1,0 +1,16 @@
+{
+  "quests": {
+    "junkvilleNegociateWithDogs": {
+      "title": "The Diamond Dogs of Junkville",
+      "save-yourself-from-the-diamond-dogs": "Survive your first Diamond Dogs encounter",
+      "bring-medical-supplies": "Bring medical supplies to the Diamond Dogs",
+      "win-battle": "Win the battle",
+      "solve-pack-unrest": "Solve the tension between Fido and Dolly",
+      "pass-on-message": "Forward the Diamond Dogs message to Junkville",
+      "assembly-participate": "Take part in Junkville's Assembly",
+      "pass-on-assembly-decision": "Forward Junkville's message to the Diamond Dogs",
+      "peaceful-resolve": "Reach a peaceful settlement",
+      "wipe-out-dogs": "Wipe out the Diamond Dogs"
+    }
+  }
+}

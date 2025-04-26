@@ -49,6 +49,8 @@ class Dialog {
     if (this.hasTalkedAboutDevice())
       return this.dialog.t("about-celestial-device-intro-alt");
     this.dialog.npc.setVariable("talked-about-device", true);
+    game.quests.addQuest("junkvilleStabletechFacility", 2); // hidden quest
+    game.quests.getQuest("junkvilleStabletechFacility").script.learnedFromRathian = true;
     return this.dialog.t("about-celestial-device-intro");
   }
 

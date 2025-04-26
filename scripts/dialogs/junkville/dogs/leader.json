@@ -144,17 +144,14 @@
                 "ask-about-dogs",
                 "leave"
             ],
-            "hook": "",
             "text": "entry"
         },
         "first-meeting": {
             "answers": [
                 "came-seeking-scavengers",
                 "intimidation-free-scavengers",
-                "ask-about-dogs",
                 "leave"
             ],
-            "hook": "",
             "text": "first-meeting"
         },
         "negociations/clarifications": {
@@ -184,13 +181,11 @@
                 "pass-on-junkville-decision",
                 "leave-alt"
             ],
-            "hook": "",
             "text": "negociations/entry-alt"
         },
         "negociations/hiding": {
             "answers": [
             ],
-            "hook": "",
             "mood": "sad",
             "text": "negociations/hiding"
         },
@@ -213,7 +208,6 @@
                 "push-to-hide-further",
                 "push-to-hide-dolly"
             ],
-            "hook": "",
             "mood": "dubious",
             "text": "negociations/pushed-to-hide"
         },
@@ -224,14 +218,12 @@
                 "negociation-suggest-waiting",
                 "negociate-reject-sarcastically"
             ],
-            "hook": "",
             "mood": "smile",
             "text": "negociations/skepticism"
         },
         "negociations/why-dolly-hide": {
             "answers": [
             ],
-            "hook": "",
             "text": "negociations/why-dolly-hide"
         },
         "negociations/why-not-wait": {
@@ -263,7 +255,6 @@
         "scavengers/intimidation-failure": {
             "answers": [
             ],
-            "hook": "",
             "text": "scavengers/intimidation-failure"
         },
         "scavengers/intimidation-success": {
@@ -274,7 +265,6 @@
         "scavengers/introduction": {
             "answers": [
             ],
-            "hook": "",
             "text": "scavengers/introduction"
         },
         "scavengers/motives": {
@@ -291,19 +281,16 @@
         "scavengers/on-dogs-healed": {
             "answers": [
             ],
-            "hook": "",
             "text": "scavengers/on-dogs-healed"
         },
         "scavengers/on-motives-followup": {
             "answers": [
             ],
-            "hook": "",
             "text": "scavengers/on-motives-followup"
         },
         "scavengers/on-ransom-not-yet": {
             "answers": [
             ],
-            "hook": "",
             "text": "scavengers/on-ransom-not-yet"
         },
         "scavengers/on-ransom-received": {
@@ -318,7 +305,6 @@
             "answers": [
                 "ransom-received-next"
             ],
-            "hook": "",
             "text": "scavengers/on-ransom-received-free-scavengers"
         },
         "scavengers/on-ransom-turnedcoat": {
@@ -344,13 +330,11 @@
                 "ransom-entry-turncoat",
                 "ransom-entry-not-yet"
             ],
-            "hook": "",
             "text": "scavengers/ransom-entry"
         },
         "scavengers/why": {
             "answers": [
             ],
-            "hook": "",
             "text": "scavengers/why"
         }
     }

@@ -1,6 +1,6 @@
 import {QuestHelper, QuestFlags} from "../helpers.mjs";
 
-export default class FindSpinel extends QuestHelper {
+export default class FoundersHolodisk extends QuestHelper {
   constructor(model) {
     super(model);
   }
@@ -15,6 +15,18 @@ export default class FindSpinel extends QuestHelper {
     if (game.player.inventory.count("quest-holodisk-founder") > 0)
       this.model.completeObjective("holodisk-ashaven");
     this.model.addObjective("give-holodisk", this.tr("give-holodisk"));
+  }
+
+  getDescription() {
+    let text = this.model.tr("description");
+    if (this.model.isObjectiveCompleted("give-holodisk")) {
+      text += "<br><br>";
+      if (this.model.hasVariable("toldStory"))
+        text += this.model.tr("description-end-disclosed");
+      else
+        text += this.model.tr("description-end");
+    }
+    return text;
   }
 
   onItemPicked(item) {

@@ -1,0 +1,12 @@
+{
+  "quests": {
+    "capital/founders-holodisk": {
+      "title": "Lost Memory",
+      "find-holodisk": "Find the missing holodisk",
+      "give-holodisk": "Bring back the missing holodisk",
+      "description": "Whispering Ash lost a holodisk in the tunnels beneath the capital ruins. He'd like you to bring it back, if possible. It sounds important to him.",
+      "description-end": "You did find the holodisk when exploring the tunnels, and you brought it back the Whispering Ash. He looked distraught, but he was not ready to talk about it.",
+      "description-end-disclosed": "You found the holodisk, and brought it back. You pressed Whispering Ash for the story behind that holodisk, and learned of his past before the war, working as an informant keeping tabs on Princess Cadence. You heard about Cadence's last moments from what was likely the only pony still alive to tell the tale."
+    }
+  }
+}

@@ -4,7 +4,16 @@ const questName = "celestialDevice";
 
 export class CelestialDevice extends QuestHelper {
   initialize() {
-    this.model.location = "stable";
+    this.model.location = "stable-103";
+  }
+
+  getDescription() {
+    let text = this.model.tr("description");
+    if (this.model.isObjectiveCompleted("find-blueprints"))
+      text += "<br><br>" + this.model.tr("description-blueprints");
+    if (this.model.isObjectiveCompleted("find-arm-module"))
+      text += "<br><br>" + this.model.tr("description-arm-module");
+    return text;
   }
 
   onItemPicked(item) {

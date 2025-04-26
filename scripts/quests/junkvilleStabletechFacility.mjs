@@ -43,6 +43,20 @@ export class JunkvilleStabletechFacility extends QuestHelper {
 
   get xpReward() { return 2500; }
 
+  get learnedFromRathian() { return this.model.getVariable("learnedFromRathian", 0) == 1; }
+  set learnedFromRathian(value) { return this.model.setVariable("learnedFromRathian", value ? 1 : 0); }
+
+  getDescription() {
+    let text = "";
+    if (this.learnedFromRathian)
+      text += this.model.tr("description-rathian-intel");
+    else
+      text += this.model.tr("description-no-intel");
+    if (this.model.isObjectiveCompleted("find-blueprints"))
+      text += this.model.tr("description-done");
+    return text;
+  }
+
   onItemPicked(item) {
     if (item.itemType === "celestial-device-blueprints") {
       this.model.completeObjective("explore-facility");

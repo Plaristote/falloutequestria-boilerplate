@@ -1,0 +1,13 @@
+{
+  "quests": {
+    "junkvilleStabletechFacility": {
+      "title": "Explorer le laboratoire Stable-Tech",
+      "enter-facility": "Infiltre-toi dans le laboratoire",
+      "explore-facility": "Explore le laboratoire",
+      "find-blueprints": "Trouve le schéma de l'Appareil Célèste",
+      "description-rathian-intel": "Le scribe Rathian m'a parlé d'un laboratoire de Stable-Tech, qui se trouve dans la décharge de Junkville. Il m'a dit que je pourrais peut-être y trouver des pièces ou des informations sur l'Appareil Célèste que je dois réparer.",
+      "description-no-intel": "J'ai trouvé un laboratoire de Stable-Tech dans la décharge de Junkville. Peut-être pourrais-je y trouver des pièces ou des informations sur l'Appareil Célèste ?",
+      "description-done": "Après avoir exploré les lieux, j'ai effectivement trouvé des schémas qui vont me permettre de savoir exactement de quoi j'ai besoin pour réparer l'appareil."
+    }
+  }
+}

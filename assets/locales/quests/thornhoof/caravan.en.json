@@ -1,0 +1,24 @@
+{
+  "quests": {
+    "thornhoof/caravan": {
+      "title": "Break the siege of Thornhoof",
+      "lead-caravan": "Lead a caravan from Crystal Den to Thornhoof",
+      "convince-narbi-fargo": "Convince Narbi Fargo to send a caravan.",
+      "convince-laurie": "Convince Laurie to lead the caravan.",
+      "steel-rangers-shipment": "Retrieve an ammunition shipment from the Steel Rangers.",
+      "report-to-silvertide": "Report your success to Silvertide.",
+      "description-intro": "Upon arriving to Thornhoof, you were brought to the town's milita leader, Silvertide. She told you about the town's current situation, and how it was besieged by the Golden Herd. She asked you to reach out to the Crystal Den caravaneers, and have them send a caravan to Thornhoof. On the way, the caravan will have to stop by the Steel Rangers' bunker, to pick up a shipment of ammunition. Silvertide provided a holodisk which is supposed to convince the Steel Rangers to hand over the shipment.",
+      "description-narbi-convinced": "At the Crystal Den, you had a talk with Narbi Fargo, and you managed to convince him to send the caravan.",
+      "description-narbi-payed": "At the Crystal Den, you had a talk with Narbi Fargo, but he wouldn't risk his own money on such a dangerous project. He finally accepted to send the caravan, but only if you paid in advance.",
+      "description-laurie-convinced": "You then had to find a team to escort the caravan. Laurie, one of Narbi Fargo's trusted caravan leaders, hearthfully accepted to escort the caravan with you, and took care of rounding up a team for you.",
+      "description-steel-ranger-base": "You completed the caravan first step, arriving at the Steel Rangers' bunker.",
+      "description-steel-ranger-success": "You gave Silvertide's holodisk to the Steel Rangers, and they loaded a shipment of ammunition into the caravan.",
+      "description-steel-ranger-failure": "But you didn't complete your objective. You left the Steel Rangers' bunker without the ammunition Silvertide asked for.",
+      "description-lead-caravan": "Finally, you made your way back to Thornhoof, along with the caravan.",
+      "description-end-no-ammo": "Silvertide noticed the missing ammunition shipment, and she was not happy about it.",
+      "description-end-failure": "She decided you couldn't be trusted, and banned you from Thornhoof.",
+      "description-end-justify": "But you made her believe it wasn't your fault, successfully rejecting the failure to the Steel Rangers.",
+      "description-end-success": "Silvertide decided that you were trustworthy, granting you access to the town, and warning you that the town's council would want to talk to you."
+    }
+  }
+}

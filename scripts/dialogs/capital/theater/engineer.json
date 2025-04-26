@@ -144,19 +144,16 @@
         "celestial-device/arm-already-found": {
             "answers": [
             ],
-            "hook": "",
             "text": "celestial-device/arm-already-found"
         },
         "celestial-device/arm-location-suggestion": {
             "answers": [
             ],
-            "hook": "",
             "text": "celestial-device/arm-location-suggestion"
         },
         "celestial-device/give-parts": {
             "answers": [
             ],
-            "hook": "",
             "mood": "smile",
             "text": "celestial-device/give-parts"
         },
@@ -173,7 +170,6 @@
         "celestial-device/negociate-craft-part-bartered": {
             "answers": [
             ],
-            "hook": "",
             "mood": "dubious",
             "text": "celestial-device/negociate-craft-part-bartered"
         },
@@ -203,7 +199,6 @@
                 "found-crystal-trust",
                 "found-crystal-brag"
             ],
-            "hook": "",
             "mood": "laugh",
             "text": "crystal/found-crystal"
         },
@@ -213,7 +208,6 @@
                 "crystal-prompt-not-yet",
                 "crystal-prompt-leave"
             ],
-            "hook": "",
             "mood": "dubious",
             "text": "crystal/prompt"
         },
@@ -222,7 +216,6 @@
                 "replace-crystal-happy-to-help",
                 "replace-crystal-ask-reward"
             ],
-            "hook": "",
             "mood": "smile",
             "text": "crystal/replace-crystal"
         },
@@ -256,7 +249,6 @@
                 "ask-crystal-whereabouts",
                 "exit-about-generator"
             ],
-            "hook": "",
             "mood": "dubious",
             "text": "intro/about-generator"
         },
@@ -271,6 +263,7 @@
                 "ask-crystal-whereabout-more",
                 "exit-about-generator"
             ],
+            "hook": "onSpinelWhereabouts",
             "mood": "dubious",
             "text": "intro/crystal-whereabouts"
         },
@@ -287,7 +280,6 @@
                 "accept-find-crystal",
                 "ask-crystal-whereabouts"
             ],
-            "hook": "",
             "mood": "dubious",
             "text": "intro/help-offered"
         },
@@ -307,7 +299,6 @@
                 "repair-has-skills",
                 "repair-has-no-skills"
             ],
-            "hook": "",
             "mood": "dubious",
             "text": "repair/entry"
         },

@@ -17,6 +17,16 @@ export default class FindSpinel extends QuestHelper {
     this.model.addObjective("give-spinel", this.tr("give-spinel"));
   }
 
+  getDescription() {
+    let text = this.model.tr("description");
+    if (this.steelRangersHint)
+      text += "<br><br>" + this.model.tr("description-steel-ranger-hint");
+    return text;
+  }
+
+  get steelRangersHint() { return this.model.hasVariable("srHint"); }
+  set steelRangersHint(v) { this.model.setVariable("srHint", v ? 1 : 0); }
+
   onItemPicked(item) {
     if (item.itemType === "electromagic-spinel")
       this.model.completeObjective("find-spinel");

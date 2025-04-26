@@ -1,0 +1,13 @@
+{
+  "quests": {
+    "junkvilleDumpsDisappeared": {
+      "title": "The missing scavengers of Junkville",
+      "find-disappeared": "Find the missing scavengers",
+      "bring-ransom": "Pay up the ransom asked by the Diamond Dogs",
+      "save-all-captives": "Save all the captured scavengers",
+      "save-some-captives": "Save some of the captured scavengers",
+      "report-success": "Report your success to Raggedy Randy"
+    }
+  }
+}
+

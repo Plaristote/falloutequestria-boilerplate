@@ -56,7 +56,7 @@ export function skipScavengerRansom() {
 
 export function dogsExpectingSupplies() {
   const quest = getQuest();
-  return quest.hasVariable("ransom") && !quest.isObjectiveCompleted("bring-ransom");
+  return quest && quest.hasVariable("ransom") && !quest.isObjectiveCompleted("bring-ransom");
 }
 
 export class JunkvilleDumpsDisappeared extends QuestHelper {
