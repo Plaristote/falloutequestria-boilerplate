@@ -1,0 +1,10 @@
+{
+  "quests": {
+    "capital/ghouls-love": {
+      "title": "The voice of love",
+      "description": "It seems like two of the ghouls from Ashaven might be too shy to admit they like each other. Are you going to be the toxic butthole who comes in and force them to confess ?",
+      "investigate": "Seek Wailing Tunes true feelings",
+      "mediate": "Now, kiss !"
+    }
+  }
+}

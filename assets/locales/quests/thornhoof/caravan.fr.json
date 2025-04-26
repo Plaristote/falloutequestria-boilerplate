@@ -1,0 +1,25 @@
+{
+  "quests": {
+    "thornhoof/caravan": {
+      "title": "Préparez-vous pour le fauteuil",
+      "lead-caravan": "Mène une caravane du Havre Cristallin jusqu'à Thronhoof.",
+      "convince-narbi-fargo": "Convaincre Narbi Fargo d'envoyer une caravane.",
+      "convince-laurie": "Convincre Laurie de mener la caravane.",
+      "steel-rangers-shipment": "Récupérer une livraison de munitions des Steel Rangers.",
+      "report-to-silvertide": "Faire votre rapport à Silvertide.",
+      "description-intro": "À ton arrivée à Thornhoof, tu as été amené devant le chef de la milice locale, Silvertide. Elle t'as expliqué la situation de la ville, qui est assiégée par la Meute d'Or. Elle t'as demandé de joindre les caravaniers du Havre Cristallin, afin de les convaincre d'envoyer une caravane vers Thornhoof. Sur le chemin, la caravane devra s'arrêter au bunker des Steel Rangers, afin de récupérer une cargaison de munitions. Silvertide t'as donné un holodisque qui doit servir à convaincre les Steel Rangers de te remettre la cargaison.",
+      "description-narbi-convinced": "Au Havre Cristallin, tu as parlé avec Narbi Fargo, et tu l'as convaincu d'envoyer la caravane.",
+      "description-narbi-payed": "Au Havre Cristallin, tu as parlé avec Narbi Fargo, mais il n'a pas voulu risquer ses propres finances dans un projet si dangereux. Il a finalement accepter d'envoyer une caravane, à la condition que tu la paye d'avance.",
+      "description-laurie-convinced": "Tu as ensuite du trouver une escrote pour la caravane. Laurie, la meilleure conductrice de Narbi Fargo, a accepté de bon coeur d'escorter la caravane avec toi, et s'est occupé de réunir une équipe pour l'escorte.",
+      "description-steel-ranger-base": "Tu as complété la première étape de la caravane, arrivant au bunker des Steel Rangers.",
+      "description-steel-ranger-success": "Tu leur as donné le holodisque que t'avais remis Silvertide, et ils ont chargé la cargaison de munitions dans la caravane.",
+      "description-steel-ranger-failure": "Mais tu n'as pas complété la tâche qui t'avais été assigné. Tu as quitté le bunker sans le chargement de munition demandé par Silvertide.",
+      "description-lead-caravan": "Finalement, tu es arrivé à Thornhoof, avec la caravane.",
+      "description-end-no-ammo": "Silvertide n'a pas manqué de remarquer que les munitions manquaient, et ça ne lui a pas plus du tout.",
+      "description-end-failure": "Elle a décidé que tu n'était pas digne de confiance, et t'as bannis de la ville.",
+      "description-end-justify": "Mais tu as réussi à la berner, rejetant la faute sur les Steel Rangers.",
+      "description-end-success": "Silvertide a décidé que tu étais digne de confiance, t'accordant accès à la ville, et te prévenant que le conseil de la ville désirera te parler."
+    }
+  }
+}
+

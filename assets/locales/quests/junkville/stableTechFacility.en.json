@@ -1,0 +1,14 @@
+{
+  "quests": {
+    "junkvilleStabletechFacility": {
+      "title": "Explore the Stable-Tech facility",
+      "enter-facility": "Get inside the facility",
+      "explore-facility": "Explore the facility",
+      "find-blueprints": "Find the Celestial Device blueprints",
+      "description-rathian-intel": "Scribe Rathian told me about a Stable-Tech facility, located in Junkville's junkyard. He told me I might be able to find parts of intel on the Celestial Device I'm supposed to fix.",
+      "description-no-intel": "I found a Stable-Tech facility in Junkville's junkyard. Maybe I'll find parts or information about the Celestial Device over there ?",
+      "description-done": "After exploring the facility, I did find blueprints which will tell me exactly what I need to do to fix the device."
+    }
+  }
+}
+

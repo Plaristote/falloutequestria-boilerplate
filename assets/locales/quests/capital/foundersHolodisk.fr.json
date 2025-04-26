@@ -1,0 +1,13 @@
+{
+  "quests": {
+    "capital/founders-holodisk": {
+      "title": "Fin de mémoire",
+      "find-holodisk": "Trouver l'holodisque perdu",
+      "give-holodisk": "Rendre l'holodisque",
+      "description": "Whispering Ash a perdu un holodisque dans les tunnels sous les ruines de la capitale. Il voudrait que tu le lui ramène, si possible. Ça semble important pour lui.",
+      "description-end": "Tu as touvé l'holodisque en explorant les tunnels, et tu l'as ramené à Whispering Ash. Il semblait troublé, mais n'était pas prêt à t'en dire plus.",
+      "description-end-disclosed": "Tu as trouvé l'holodisque et rendu à son propriétaire. Quand tu as poussé Whispering Ash à t'expliquer, il t'as raconté son passé, avant-guerre, lorsqu'il travaillait comme informant chargé de surveiller la Princesse Cadence. Tu as entendu le récit des derniers instants de Cadence de ce qui est sans doute le seul poney encore vivant pour le raconter."
+    }
+  }
+}
+

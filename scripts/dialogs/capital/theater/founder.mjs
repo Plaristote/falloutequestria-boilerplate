@@ -58,6 +58,10 @@ class Dialog {
       item.script.unlocked = true;
   }
 
+  onHolodiskStoryStart() {
+    game.quests.getQuest("capital/founders-holodisk").setVariable("toldStory", 1);
+  }
+
   knowsAboutOmbrageExperiments() {
     return false; // TODO
   }

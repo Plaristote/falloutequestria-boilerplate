@@ -1,0 +1,16 @@
+{
+  "quests": {
+    "junkvilleNegociateWithDogs": {
+      "title": "Les Chiens à Diamant de Junkville",
+      "save-yourself-from-the-diamond-dogs": "Survie à ta première rencontre avec les Chiens à Diamant",
+      "bring-medical-supplies": "Apporte du matériel médical aux Chiens à Diamant",
+      "win-battle": "Gagne la bataille",
+      "solve-pack-unrest": "Résoud les tensions entre Fido et Dolly",
+      "pass-on-message": "Fais suivre le message des Chiens à Junkville",
+      "assembly-participate": "Participe à l'Assemblée des citoyens de Junkville",
+      "pass-on-assembly-decision": "Fais suivre le message de Junkville aux Chiens",
+      "peaceful-resolve": "Atteint une solution pacifique",
+      "wipe-out-dogs": "Extermine les Chiens à Diamant"
+    }
+  }
+}

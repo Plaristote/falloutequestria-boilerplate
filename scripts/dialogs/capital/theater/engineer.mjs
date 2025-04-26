@@ -127,6 +127,12 @@ export default class extends DialogHelper {
     return 200;
   }
 
+  onSpinelWhereabouts() {
+    if (!this.spinelQuest)
+      game.quests.addSpinel("capital/find-spinel", 2);
+    this.spinelQuest.steelRangersHint = true;
+  }
+
   onSpinelTakeQuest() {
     if (!this.spinelQuest)
       game.quests.addQuest("capital/find-spinel");

@@ -1,0 +1,12 @@
+{
+  "quests": {
+    "junkvilleDumpsDisappeared": {
+      "title": "Les disparus de Junkville",
+      "find-disappeared": "Trouver les fouilleurs disparus",
+      "bring-ransom": "Payer la rançon demandée par les Chiens à Diamant",
+      "save-all-captives": "Sauver tous les fouilleurs captifs",
+      "save-some-captives": "Sauver une partie des fouilleurs captifs",
+      "report-success": "Annoncer votre succès à Raggedy Randy"
+    }
+  }
+}

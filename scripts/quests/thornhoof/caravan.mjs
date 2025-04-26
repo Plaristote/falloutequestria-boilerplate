@@ -8,6 +8,44 @@ export default class extends QuestHelper {
     this.model.addObjective("steel-rangers-shipment", this.tr("steel-rangers-shipment"));
   }
 
+  getDescription() {
+    let text = this.model.tr("description-intro") + "<br><br>";
+    if (this.model.isObjectiveCompleted("convince-narbi-fargo")) {
+      if (this.playerPaidInAdvance)
+        text += this.model.tr("description-narbi-payed");
+      else
+        text += this.model.tr("description-narbi-convinced");
+      text += "<br><br>";
+    }
+    if (this.model.isObjectiveCompleted("convince-laurie")) {
+      text += this.model.tr("description-laurie-convinced");
+      text += "<br><br>";
+    }
+    if (this.model.isObjectiveCompleted("steel-rangers-shipment") || this.model.isObjectiveCompleted("lead-caravan")) {
+      text += this.model.tr("description-steel-ranger-base") + ' ';
+      if (this.model.isObjectiveCompleted("steel-rangers-shipment"))
+        text += this.model.tr("description-steel-ranger-success");
+      else
+        text += this.model.tr("description-steel-ranger-failure");
+      text += "<br><br>";
+    }
+    if (this.model.isObjectiveCompleted("lead-caravan")) {
+      text += this.model.tr("description-lead-caravan") + ' ';
+      if (this.model.isObjectiveCompleted("steel-rangers-shipment")) {
+        text += this.model.tr("description-end-success");
+      } else {
+        text += this.model.tr("description-end-no-ammo");
+        if (this.model.failed)
+          text += this.model.tr("description-end-failure");
+        else {
+          text += this.model.tr("description-end-justify");
+          text += this.model.tr("description-end-success");
+        }
+      }
+    }
+    return text;
+  }
+
   onCaravanFailure() {
     if (this.caravanInProgress) {
       this.model.unsetVariable("started");
