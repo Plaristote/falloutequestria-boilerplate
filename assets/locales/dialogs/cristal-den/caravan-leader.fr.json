@@ -1,6 +1,13 @@
 {
     "dialogs": {
         "cristal-den/caravan-leader": {
+            "about-caravan-answer": "Ce que nous sommes ? Le sang et les veine du wasteland cristallin, voilà qui on est ! On sécurise les routes commerciales et acheminons les marchandises dans toute les directions !",
+            "caravan-cancel": "Pas tout de suite.",
+            "caravan-later": "La prochaine caravane décolle Lundi. Nous partirons pour  {{nextCaravanDestination}}.",
+            "caravan-start": "Allons-y allonso !",
+            "entry": "Hey ! T'es là pour rejoindre la caravane ?",
+            "join-caravan": "Génial ! Nous allons bientôt décoller, en direction de {{nextCaravanDestination}}. Ca t'intéresse ?",
+            "reward": "Hey ! Je suis content que tu t'en sois sortie ! Voià ta récompense ! Reviens quand tu sera prêt pour plus d'action !\n<br><br>\n<i>Elle te donne {{pendingReward}} capsules.</i>",
             "talk-about-thornhoof-caravan": "Je viens pour ramener un caravane à Thornhoof. Ils ont besion d'aide.",
             "thornhoof-1-plea-for-help": "Une ville entière a besoin de notre aide, ça vaut le coup d'essayer.",
             "thornhoof-1-silvertide": "J'ai vu Silvertide à Thunderhoof. Elle vous doit encore une bouteille de rhum, non ?",
@@ -23,7 +30,8 @@
             "thunderhoof-1-provoke": "Si tu recule pas devant le danger, c'est le moment de nous le prouver.",
             "thunderhoof-1-who-else": "Si on ne s'en charge pas, qui le fera ?",
             "thunderhoof-go-see-narbi": "I understand. I'll go ask at the caravaneers' office.",
-            "thunderhoof-try-skip-fargo": "Eh quoi maintenant ? On a besoin d'un formulaire pour partir à l'aventure et sauver des vies ? T'inquiète par pour les gratte-papiers, on m'a promis une grosse récompese pour cette caravane, ils pourront être que content de toi uand ils verront tout le pognon qu'on va ramener !"
+            "thunderhoof-try-skip-fargo": "Eh quoi maintenant ? On a besoin d'un formulaire pour partir à l'aventure et sauver des vies ? T'inquiète par pour les gratte-papiers, on m'a promis une grosse récompese pour cette caravane, ils pourront être que content de toi uand ils verront tout le pognon qu'on va ramener !",
+            "way-back": "Nous sommes prêt pour le trajet retour. Préviens-moi quand tu veux y aller."
         }
     }
 }

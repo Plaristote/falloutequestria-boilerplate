@@ -17,7 +17,6 @@ export default class extends QuestHelper {
 
   get caravanStarted() {
     return this.model.getVariable("started", 0) == 1;
-
   }
 
   get caravanInProgress() {
@@ -32,10 +31,29 @@ export default class extends QuestHelper {
     return this.model.getVariable("paidInAdvance", 0);
   }
 
+  set playerAdvanceAmount(value) {
+    return this.model.setVariable("paidInAdvance", value);
+  }
+
+  get playerReceivedReward() {
+    return this.model.hasVariable("receivedReward");
+  }
+
+  set playerReceivedReward(value) {
+    value ? this.model.setVariable("receivedReward", 1) : this.model.unsetVariable("receivedReward");
+  }
+
   completeObjective(name) {
     switch (name) {
     case "convince-narbi-fargo":
+    case "convince-laurie":
       this.model.addObjective("convince-laurie", this.tr("convince-laurie"));
+      break ;
+    case "lead-caravan":
+      this.model.addObjective("report", this.tr("report-to-silvertide"));
+      game.dataEngine.addReputation("thornhoof", 75);
+      if (this.model.isObjectiveCompleted("steel-rangers-shipment"))
+        game.dataEngine.addReputation("thornhoof", 100);
       break ;
     }
   }
