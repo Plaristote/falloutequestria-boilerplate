@@ -10,10 +10,6 @@ class Silvertide extends CharacterBehaviour {
     return this.model.getVariable("met", 0) == 1;
   }
 
-  set metPlayer(value) {
-    this.model.setVariable("met", value ? 1 : 0);
-  }
-
   get speakOnDetection() {
     return !this.metPlayer;
   }

@@ -24,6 +24,51 @@
             "state": "meeting/wanted-to-help",
             "text": "came-to-help"
         },
+        "caravan-ask-about-compensation": {
+            "availableHook": "canClaimAdvanceOnCaravan",
+            "state": "caravan-arrival/outro",
+            "text": "caravan-ask-about-compensation"
+        },
+        "caravan-ask-reward": {
+            "state": "caravan-arrival/asked-payment",
+            "text": "caravan-ask-reward"
+        },
+        "caravan-ask-reward-alt": {
+            "availableHook": "canClaimCaravanReward",
+            "state": "caravan-arrival/asked-payment",
+            "text": "caravan-ask-reward-alt"
+        },
+        "caravan-happy-to-help": {
+            "state": "caravan-arrival/on-modesty",
+            "text": "caravan-happy-to-help"
+        },
+        "caravan-looking-forward-for-next-jobs": {
+            "state": "caravan-arrival/outro",
+            "text": "caravan-looking-forward-for-next-jobs"
+        },
+        "caravan-negociate-reward": {
+            "availableHook": "canNegociateCaravanReward",
+            "state": "caravan-arrival/on-reward-negociated",
+            "text": "caravan-negociate-reward"
+        },
+        "caravan-not-looking-forward-for-next-jobs": {
+            "state": "caravan-arrival/outro",
+            "text": "caravan-not-looking-forward-for-next-jobs"
+        },
+        "justify-failure-forgot": {
+            "state": "caravan-arrival/failure-justify-forgotten",
+            "text": "justify-failure-forgot"
+        },
+        "justify-failure-lie-failure": {
+            "availableHook": "cannotLieAboutCaravanAmmoFailure",
+            "state": "caravan-arrival/failure-justify-failure",
+            "text": "justify-failure-lie-failure"
+        },
+        "justify-failure-lie-success": {
+            "availableHook": "canLieAboutCaravanAmmoFailure",
+            "state": "caravan-arrival/failure-justify-success",
+            "text": "justify-failure-lie-success"
+        },
         "not-a-hero-accept": {
             "state": "meeting/quest-accepted",
             "text": "not-a-hero-accept"
@@ -49,6 +94,105 @@
     },
     "entryPoint": "meeting/introduction",
     "states": {
+        "caravan-arrival/asked-payment": {
+            "answers": [
+                "caravan-negociate-reward",
+                "caravan-ask-about-compensation",
+                "caravan-looking-forward-for-next-jobs",
+                "caravan-not-looking-forward-for-next-jobs"
+            ],
+            "hook": "rewardCaravan",
+            "mood": "smile",
+            "text": "caravan-arrival/asked-payment"
+        },
+        "caravan-arrival/failure-entry": {
+            "answers": [
+                "justify-failure-lie-success",
+                "justify-failure-lie-failure",
+                "justify-failure-forgot"
+            ],
+            "mood": "angry",
+            "text": "caravan-arrival/failure-entry"
+        },
+        "caravan-arrival/failure-justify-failure": {
+            "answers": [
+            ],
+            "hook": "caravanQuestFailed",
+            "mood": "angry",
+            "text": "caravan-arrival/failure-justify-failure"
+        },
+        "caravan-arrival/failure-justify-forgotten": {
+            "answers": [
+            ],
+            "hook": "caravanQuestFailed",
+            "mood": "angry",
+            "text": "caravan-arrival/failure-justify-forgotten"
+        },
+        "caravan-arrival/failure-justify-success": {
+            "answers": [
+                "caravan-looking-forward-for-next-jobs",
+                "caravan-not-looking-forward-for-next-jobs",
+                "caravan-ask-reward-alt"
+            ],
+            "hook": "caravanQuestCompleted",
+            "mood": "dubious",
+            "text": "caravan-arrival/failure-justify-success"
+        },
+        "caravan-arrival/on-modesty": {
+            "answers": [
+                "caravan-ask-about-compensation",
+                "caravan-looking-forward-for-next-jobs",
+                "caravan-not-looking-forward-for-next-jobs",
+                "caravan-ask-reward-alt"
+            ],
+            "mood": "smile",
+            "text": "caravan-arrival/on-modesty"
+        },
+        "caravan-arrival/on-reward-negociated": {
+            "answers": [
+                "caravan-ask-about-compensation",
+                "caravan-looking-forward-for-next-jobs",
+                "caravan-not-looking-forward-for-next-jobs"
+            ],
+            "hook": "rewardCaravanNegociated",
+            "mood": "cocky",
+            "text": "caravan-arrival/on-reward-negociated"
+        },
+        "caravan-arrival/outro": {
+            "answers": [
+            ],
+            "text": "caravan-arrival/outro"
+        },
+        "caravan-arrival/refund": {
+            "answers": [
+                "caravan-looking-forward-for-next-jobs",
+                "caravan-not-looking-forward-for-next-jobs",
+                "caravan-ask-reward-alt"
+            ],
+            "hook": "refundCaravan",
+            "mood": "neutral",
+            "text": "caravan-arrival/refund"
+        },
+        "caravan-arrival/success-entry": {
+            "answers": [
+                "caravan-happy-to-help",
+                "caravan-ask-reward",
+                "caravan-ask-reward-alt"
+            ],
+            "hook": "caravanQuestCompleted",
+            "mood": "cocky",
+            "text": "caravan-arrival/success-entry"
+        },
+        "caravan-arrival/success-entry+laurie": {
+            "answers": [
+            ],
+            "text": "caravan-arrival/success-entry+laurie"
+        },
+        "entry": {
+            "answers": [
+            ],
+            "text": "entry"
+        },
         "meeting/about-reward": {
             "answers": [
                 "accept-caravan-quest",
@@ -121,6 +265,15 @@
             "hook": "rejectCaravanQuest",
             "mood": "angry",
             "text": "meeting/quest-rejected"
+        },
+        "meeting/re-entry": {
+            "answers": [
+                "accept-caravan-quest",
+                "ask-whats-in-it-for-player",
+                "reject-caravan-quest"
+            ],
+            "mood": "dubious",
+            "text": "meeting/re-entry"
         },
         "meeting/wanted-to-help": {
             "answers": [
