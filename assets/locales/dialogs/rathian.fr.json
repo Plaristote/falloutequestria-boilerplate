@@ -1,0 +1,59 @@
+{
+  "dialogs": {
+    "rathian-introduction": {
+      "accept-help": "J'aurais bien besoin d'aide. Saurais-tu où je pourrais trouver un Envoûteur Céleste ?",
+      "combat-eval-bad": "Ne le prends pas mal, mais on dirait que tu ne survivras pas longtemps seul...",
+      "combat-eval-good": "Tu t'en es plutôt bien sorti contre ces voyous, mais le désert est généralement plus dangereux que ça...",
+      "accompany": "Eh bien, c'est un plaisir de faire ta connaissance. Tu sais, c'est dangereux dehors. {{combatEval}}... tu devrais aller à Junkville. C'est une petite ville sympathique et accueillante, pas trop loin au sud d'ici. J'y vais tout de suite, je peux t'emmener avec moi, si tu veux.",
+      "accompany-again": "Oh, tu as changé d'avis ? Tu comptes venir à Junkville avec moi ?",
+      "backpedal-help": "Ahah ! Une Étable, opérationnelle, dans le coin ? Je plaisantais, bien sûr ! Ça n'existe pas, et je ne t'emmènerai surtout pas là-bas ! Bon, c'est le moment de partir, à une autre fois !",
+      "come-later": "Peut-être une autre fois. Je suis plutôt occupé en ce moment.",
+      "come-with": "Bien sûr, je te suis. Montre-moi la voie.",
+      "device-answer": "Un Appareil Céleste, tu dis ? Je ne peux pas dire que j'en sois sûr... mais j'ai peut-être une piste pour toi. Il y a un vieux labo de Stable Tech, pas très loin d'ici, dans un endroit appelé Junkville. J'ai bien l'intention d'y entrer moi-même. Les systèmes de sécurité fonctionnent toujours même après toutes ces années, et j'aurais bien besoin d'aide pour passer.<br>Qu'en dis-tu, tu veux venir avec moi à Junkville ?",
+      "exit-come-later": "Vraiment ? Bon, je suppose que c'est un au revoir alors. Si jamais vous venez à Junkville, demandez de mes nouvelles aux habitants. J'y passe beaucoup de temps, je suis généralement dans le coin. À plus tard, et soyez prudents là-dehors !",
+      "exit-come-with": "D'accord ! Je vous ouvre la voie ! Direction Junkville !",
+      "exit-join-party": "D'accord ! Vous ouvrez la voie ! Je vous tiens compagnie jusqu'à la prochaine ville ! En route !",
+      "introduction": "Bonjour ! Je suis le scribe Rathian, des Steel Rangers. Toujours prêt à vous aider. Puis-je vous demander qui vous êtes et ce que vous faites au milieu de nulle part ?",
+      "join-party": "J'ai déjà un autre endroit en tête. Mais je ne me sens pas en sécurité si j'y vais seul. Vous voulez vous joindre à moi ?",
+      "leave-me-alone": "Bon sang, laissez-moi tranquille, harceleur ! Je trace mon propre chemin !",
+      "player-intro-with-details": "Je m'appelle {{name}} et j'ai pour mission importante de sauver mon écurie.",
+      "player-introduction": "Je m'appelle {{name}}, ravi de vous rencontrer.",
+      "player-not-trusting": "Je ne suis pas sûr de pouvoir vous faire confiance... Suis-je libre de partir, ou allez-vous me tuer comme les autres ?",
+      "reject-help": "Merci, mais non merci. La jument m'a fait confiance. Je peux le faire tout seul.",
+      "stable-answer": "En mission pour sauver une écurie ? Alors vous êtes un habitant d'écurie. Je me suis dit... que vous aviez l'air bien propre et en bonne santé pour un voyageur ordinaire... alors vous me dites qu'il y a une écurie dans le coin qui est toujours en activité ? C'est... assez intéressant. Avez-vous besoin d'aide ?",
+      "untrust-answer": "Quoi ? Non ! Écoute, il faut faire attention par ici. Je t'ai repéré, toi et ces bandits, bien avant que vous ne croisiez ton chemin… et à en juger par ton apparence, je me suis dit que tu serais une proie facile pour eux. Je suis juste venu pour aider, je n'attends rien de toi. Alors, qu'en dis-tu ? On peut se présenter correctement maintenant ?"
+    },
+    "rathian-facility-end": {
+      "about-blueprints": "Je pourrais peut-être vous aider à le construire. Avec plaisir, d'ailleurs. Ce n'est pas tous les jours qu'un scientifique comme moi a l'occasion de construire une pièce de technologie d'avant-guerre aussi sophistiquée. Dites-moi : si vous trouvez toutes les pièces nécessaires, venez me voir dans mon hangar à Dépôtville, et je construirai l'appareil.",
+      "about-parts": "Eh bien, les pièces les plus basiques, je pourrai les récupérer dans les décharges de Dépôtville. Mais vous voyez ces pièces ? {{TODO}} Elles ne seront pas faciles à trouver. Avec un peu de chance, vous trouverez des mécaniciens qui en auront à portée de main… mais le mieux est probablement de fouiller dans d'autres salles de stockage de technologie d'avant-guerre. Pour l'instant, je n'en sais pas plus que vous.",
+      "ask-about-parts": "D'accord. Alors, où puis-je trouver toutes ces pièces ?",
+      "entry": "Je n'arrive pas à croire la quantité de choses qui ont été stockées ici pendant si longtemps ! Il va me falloir un certain temps pour séparer les déchets des trésors. Et vous, avez-vous trouvé ce que vous cherchiez ?",
+      "explain-blueprints": "Intéressant... ce sont des plans. Des plans avec toutes les spécifications et instructions utiles pour construire votre propre appareil céleste. Ce n'est pas ce que vous cherchiez, mais je dirais que c'est la meilleure solution.",
+      "explain-blueprints-response": "Ça a l'air bien...",
+      "found-blueprints": "Pas exactement... mais j'ai trouvé ça... quoi que ce soit.",
+      "identified-blueprints": "Plus ou moins. J'ai trouvé des plans pour construire un nouvel appareil céleste.",
+      "leave": "C'est bon à savoir. Je m'en vais, alors."
+    },
+    "rathian-junkville": {
+      "about-celestial-device-go": "Ravi que tu demandes ! On peut y aller tout de suite, si tu veux !",
+      "about-celestial-device-intro": "Un appareil céleste ? Intéressant. Il n'y a pas beaucoup de raisons d'en avoir un. C'est un appareil de technologie stable conçu pour créer un microclimat artificiel dans des espaces clos. Utile pour faire pousser des récoltes abondantes dans des endroits comme des bunkers. Ou, vous savez, des écuries.<br>Je ne sais pas vraiment où en trouver un… mais il y a une installation de technologie stable assez près d'ici, en fait. C'est dans les décharges de Junkville. C'est probablement un bon endroit où chercher. Tu ne pourras pas y aller seul, par contre.",
+      "about-celestial-device-intro-alt": "Ah oui, l'appareil céleste ! Je ne sais pas exactement où le trouver, mais je sais où chercher : le complexe Stable Tech, dans les décharges de Junkville. Vous aurez besoin d'aide pour y entrer. ",
+      "about-celestial-device-why-help": "L'entrée principale est verrouillée et protégée par des défenses automatisées. Il existe un moyen d'y accéder : j'ai la clé d'une arrière-salle équipée d'un terminal permettant d'ouvrir la porte d'entrée. Cependant, la porte ne reste ouverte que très peu de temps ; l'un de nous doit donc la maintenir ouverte pendant que l'autre franchit les défenses. Une fois à l'intérieur, nous pourrons ouvrir tous les accès.",
+      "about-steel-rangers": "Les Steel Rangers ! Nous sommes quasiment les derniers vestiges du gouvernement d'Equestria. La dernière organisation survivante du Ministère des Technologies de Guerre. Nous avons tous prêté serment de protéger Equestria et ses citoyens. Lorsque les mégasorts sont tombés, beaucoup d'entre nous ont survécu, principalement grâce à nos bunkers. Et maintenant que tout est parti en vrille, nous essayons toujours de tenir notre serment. Eh bien… au moins certains d’entre nous essaient.",
+      "ask-about-celestial-device": "Tu m’as dit que tu pouvais m’aider à trouver un appareil céleste. Peux-tu m’en dire plus ?",
+      "ask-about-celestial-device-alt": "Je cherche un appareil céleste. Saurais-tu où en trouver un ?",
+      "ask-nothing": "Je n’ai besoin de rien. Au revoir !",
+      "ask-something-else": "Je voulais te demander autre chose.",
+      "ask-steel-ranger": "Tu as dit que tu étais un Steel Ranger. De quoi s’agit-il ?",
+      "celestial-device-do-later": "Ça ne m’intéresse pas pour le moment. Parlons d'autre chose.",
+      "celestial-device-go": "Très bien, allons-y.",
+      "celestial-device-who-help": "Et si tu m'aidais à entrer ?",
+      "celestial-device-why-done": "Et je suppose que je vais me précipiter à travers les défenses pendant que tu seras en sécurité derrière ton terminal ?",
+      "celestial-device-why-help": "Pourquoi aurais-je besoin d'aide pour entrer ?",
+      "entry": "Salut ! Puis-je t'aider de quelque manière que ce soit ?",
+      "entry-alt": "Salut ! Je suis si content que tu sois venu après tout ! Bienvenue dans mon atelier, où toutes sortes de magie opèrent ! Si tu as un problème technique, un problème à résoudre, viens me voir ! Alors, puis-je t'aider ?",
+      "entry-first-meeting": "Salut ! Je te reconnais ! Tu es ce poney que j'ai sauvé de ces bandits au milieu de nulle part ! Je suis content de voir que tu es arrivé jusqu'ici ! J'étais inquiet de te voir partir seul ! Je m'appelle Rathian, je suis scribe Steel Ranger. Ça veut dire que je suis plutôt doué pour réparer des trucs et concevoir de nouveaux appareils. Alors, est-ce que je peux faire quelque chose pour toi ?",
+      "entry-more": "Bien sûr. Que puis-je faire d'autre pour toi ?"
+    }
+  }
+}
