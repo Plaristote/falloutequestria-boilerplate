@@ -41,6 +41,7 @@
     "controls-dialog": "Contrôles",
     "keyboard": "Clavier",
     "gamepad": "Manette",
+    "save-default-name": "Sauvegarde",
     "controls": {
       "hint": "Pressez F1 pour voir les contrôles.",
       "help": "Ouvre la vue des contrôles",
