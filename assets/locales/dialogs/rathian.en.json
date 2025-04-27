@@ -1,0 +1,59 @@
+{
+  "dialogs": {
+    "rathian-introduction": {
+      "accept-help": "I could use some help, sure. Do you happen to know where I could find a Celestial Caster Device ?",
+      "combat-eval-bad": "Don't take it the wrong way, but you look like you won't survive long on your own...",
+      "combat-eval-good": "You did pretty good against these lowlifes, but the wasteland is usually more dangerous than that...",
+      "accompany": "Well, it's a pleasure to make your aquaintance. You know, it's dangerous out there. {{combatEval}}... you should head for Junkville. It's a nice and friendly little town, not too far south of here. I'm heading there right now, I can take you with me, if you want.",
+      "accompany-again": "Oh, did you change your mind ? Are you going to come to Junkville with me ?",
+      "backpedal-help": "Ahah ! A stable, up and running, around these parts ? I was just kidding of course ! There's no such thing, and I sure as hell ain't taking you there ! Well, that's my cue to leave, see you another time !",
+      "come-later": "Maybe another time. I'm pretty busy right now.",
+      "come-with": "Sure, I'll tag along. Lead the way.",
+      "device-answer": "A Celestial Device, you say ? I can't say that I know for sure... but I may have a lead for you. There's an old Stable Tech lab, not too far from here, in a place called Junkville. I actually intend to get in myself. The security systems still work even after all these years, and I could use some help getting through.<br>What do you say, wanna come with me to Junkville ?",
+      "exit-come-later": "Really ? Well, I guess this is goodbye then. If you ever come to Junkville, ask the townfolks about me. I spend a lot of time over there, I'm usually around. See you later, and be careful out there !",
+      "exit-come-with": "Alright then ! I'll lead the way ! To Junkville !",
+      "exit-join-party": "Alright then ! You lead the way ! I'll keep you company until the next town ! On we go !",
+      "introduction": "Hello there ! I'm scribe Rathian, from the Steel Rangers. Always happy to help. May I ask you who you are and what you're doing in the middle of nowhere ?",
+      "join-party": "I already have someplace else in mind. But I don't feel safe going on my own. Care to join me ?",
+      "leave-me-alone": "Gosh, leave me alone, stalker ! I'm making my own path !",
+      "player-intro-with-details": "I'm {{name}}, and I'm on an important mission to save my stable.",
+      "player-introduction": "I'm {{name}}, nice to meet you.",
+      "player-not-trusting": "I'm not sure I can trust you... am I free to go, or are you about to zap me like the others ?",
+      "reject-help": "Thanks, but no thanks. The overmare trusted me with this. I can do it on my own.",
+      "stable-answer": "On a mission to save a stable ? So you're a stable dweller. I kinda figured... you look mighty clean and healthy for a regular traveler... so you're telling me there's a stable around that's still up and running ? That's... quite interesting. Do you need help ?",
+      "untrust-answer": "What ? No ! Look, you gotta be careful around these parts. I spotted you and those bandits long before you crossed path... and judging by your looks, I figured you'd be an easy prey for them. I just came to help, I don't expect anything from you. So, what do you say ? Can we proprely introduce ourselves now ?"
+    },
+    "rathian-facility-end": {
+      "about-blueprints": "I might be able to help you build it. I'd be glad to, actually. It's not everyday a scientist like me gets to build such a fancy piece of pre-war tech. Tell you what: if you can find all the parts necessary to build this, just find me at my shed at Junkville, and I'll build the device.",
+      "about-parts": "Well, the most basic parts, I'll be able to gather from Junkville's dumps. But see these parts ? {{TODO}} These aren't going to be easy to find. If you're lucky, you'll find some mechanics people who'll have some of these at hoof range... but your best bet is probably to wander through other pre-war tech storage rooms. At this point, I don't know anymore than you.",
+      "ask-about-parts": "Alright. So where can I find all these parts ?",
+      "entry": "I can't believe the amount of stuff that's been stockpiled here for so long ! It's going to take me a while to set apart the junk from the treasures. How about you, have you found what you were looking for ?",
+      "explain-blueprints": "Interesting... these are blueprints. Blueprints featuring all the specifications and instructions useful to build your very own celestial device. This isn't what you were looking for, but I'd say this is the next best thing.",
+      "explain-blueprints-response": "Sounds good...",
+      "found-blueprints": "Not exactly... but I did find this... whatever that is.",
+      "identified-blueprints": "More or less. I found blueprints to build a new celestial device.",
+      "leave": "That's good to know. I'll be on my way, then."
+    },
+    "rathian-junkville": {
+      "about-celestial-device-go": "I'm glad you asked ! We can go right now, if you wish !",
+      "about-celestial-device-intro": "A celestial device ? Interesting. There aren't a ton of reasons why you'd need one. It's a stable tech device designed to create an artificial micro-climate in enclosed spaces. Useful to grow bountiful crops in places like bunkers. Or, you know, stables.<br>I don't really know for sure where to find one... but there's a Stable Tech facility pretty close from here, actually. It's within Junkville's dumps. That's probably a good place to look for. You won't be able to get in there alone though.",
+      "about-celestial-device-intro-alt": "Ah yes, the celestial device ! I don't exactly know where to find, but I know where you can look : the Stable Tech facility within Junkville's dumps. You're going to need help going in though.",
+      "about-celestial-device-why-help": "The main entrance is locked, and guarded by automated defenses. There is a way in: I have the key to a backroom with a terminal that can open the front door. However, the door only stays open for a very short while, so one of us must maintain the door open while the other one rushes in past the defenses. Once inside, we'll be able to open all accesses.",
+      "about-steel-rangers": "The Steel Rangers ! We're pretty much the last remnants of Equestria's government. The last surviving organization of the Ministry of Wartime Technology. We all took an oath to protect Equestria and its citizens. When the megaspells fell, many of us made it through mostly thanks to our bunkers. And now that it all went to hell, we try to uphold our oaths still. Well... at least some of us try.",
+      "ask-about-celestial-device": "You told me you could help me find a celestial device. Can you tell me more ?",
+      "ask-about-celestial-device-alt": "I'm looking for a celestial device. Do you happen to know where to find one ?",
+      "ask-nothing": "I don't need anything. Goodbye !",
+      "ask-something-else": "I wanted to ask about something else.",
+      "ask-steel-ranger": "You said you were a Steel Ranger. What's that about ?",
+      "celestial-device-do-later": "I'm not interested right now. Let's talk about something else.",
+      "celestial-device-go": "Alright, let's go.",
+      "celestial-device-who-help": "So how about you help me get in there ?",
+      "celestial-device-why-done": "And I suppose I'll be rushing past the defenses while you'll be safe behind your terminal ?",
+      "celestial-device-why-help": "Why would I need help to get in ?",
+      "entry": "Hi ! Is there anything I can help you with ?",
+      "entry-alt": "Hi ! I'm so glad you came after all ! Welcome to my workshop, where all sorts of magic happen ! If you have any technical issues, something that needs fixing, just come to me ! So, can I help you with something ?",
+      "entry-first-meeting": "Hi ! I recognize you ! You're that one pony that I rescued from those bandits in the middle of nowhere ! I'm glad to see you've made it this far ! I was worrried, with you running away on your own ! My name's Rathian, I'm a Steel Ranger scribe. That means I'm pretty good at fixing stuff and engineering new devices. So, is there anything I can do for you ?",
+      "entry-more": "Sure. What else can I do for you ?"
+    }
+  }
+}

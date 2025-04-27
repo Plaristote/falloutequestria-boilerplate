@@ -11,6 +11,13 @@ class Dialog {
     return "introduction";
   }
 
+  get combatEval() {
+    const killCount =
+      game.player.statistics.getKillCount("earth-pony") +
+      game.player.statistics.getKillCount("unicorn");
+    return this.dialog.t(`combat-eval-${killCount > 1 ? "good" : "bad"}`);
+  }
+
   onComeWith() {
     console.log("onComeWith called");
     console.log("onComeWith:", level.getScriptObject());
