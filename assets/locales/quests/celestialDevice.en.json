@@ -2,6 +2,7 @@
   "quests": {
     "celestialDevice": {
       "title": "Fix the stable Celestial Device",
+      "explore-junkville-facility": "Explore the Stable-Tech facility near Junkville",
       "description": "The overmare summoned you to tell you that our Stable's Celestial Device was broken. Apparently, you need it to grow our crops underground, and you'll all die of hunger unless something's done soon. On top of that, the Stable has neither the parts, nor even the knowledge required to fix the device. Talk about oversight. She informed you that she had taken the difficult decision of sending you out of the Stable, with a mission to find another Celestial Device, or, at the very least, the parts and knowledge needed to fix it.<br><br>According to the overmare, there has to be other Stables out there, or at the very least, remains of the Stable-Tech labs and factories: you should be able to find the relevant information over there. Good luck. You're all going to need it.",
       "description-blueprints": "When exploring a Stable-Tech facility at Junkville, you actually found blueprints for the Celestial Device. That's going to come in handy. You now know what you're looking for.",
       "description-arm-module": "The ruins of the Capital were ruinous indeed, but as you were exploring some shady kind of laboratory, you found the Atmospheric Regulatory Module, a vital piece of the Celestial Device."
