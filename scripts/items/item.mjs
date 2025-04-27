@@ -98,12 +98,10 @@ export class ItemBehaviour {
   }
 
   evaluateValue(buyer, seller) {
-    const sellerStat = seller.statistics.barter;
-    const buyerStat  = buyer.statistics.barter;
-    const advantage  = Math.max(sellerStat, buyerStat) - Math.min(sellerStat, buyerStat);
-    const ratio      = Math.max(sellerStat + (sellerStat > buyerStat ? advantage : -advantage), 10);
-
-    return Math.floor(this.model.value * (ratio / 100));
+    const skill = seller.statistics.barter;
+    const base = Math.floor(this.model.value * 0.6);
+    const complement = (this.model.value - base) * (skill / 100);
+    return base + complement;
   }
 }
 
