@@ -12,7 +12,7 @@ import {
   hasMediationStarted,
   startMediation
 } from "../../../quests/junkvilleNegociateWithDogs.mjs";
-import {skillCheck} from "../../../cmap/helpers/checks.mjs";
+import {skillCheck, skillContest} from "../../../cmap/helpers/checks.mjs";
 
 class Dialog {
   constructor(dialog) {
@@ -50,13 +50,13 @@ class Dialog {
   }
 
   intimidateIntoFreeingScavengers() {
-    const strongestAlly = game.characterParty.mostSkilledAt("strength");
+    const strongestAlly = game.playerParty.mostSkilledAt("strength");
 
     game.dataEngine.addReputation("diamond-dogs", -50);
-    if (strongestAlly.statistics.strength >= 8)
+    if (strongestAlly.statistics.strength >= 8 && game.player.statistics.level >= 4)
     {
       const success = skillContest(game.player, this.dialog.npc, "charisma", 3)
-                   || skillContest(game.player, this.dialog.npc, "speech", 50);
+                   && skillContest(game.player, this.dialog.npc, "speech", 50);
       if (success) {
         authorizeCaptiveRelease();
         skipScavengerRansom();
@@ -192,6 +192,26 @@ class Dialog {
         return this.dialog.t("negociations/on-junkville-reject");
     }
     return "<i>SCRIPT ERROR</i>";
+  }
+
+  // BEGIN SPINEL QUEST
+  canAskAboutSpinel() {
+    const quest = game.quests.getQuest("capital/find-spinel");
+    return quest && !quest.isObjectiveCompleted("find-spinel");
+  }
+
+  onSpinelAsked() {
+    if (game.dataEngine.getReputation("diamond-dogs") < 100)
+      return "spinel/not-liked-enough";
+  }
+
+  onGiveSpinel() {
+    const chest = level.findObject("chest");
+    const quest = game.quests.getQuest("capital/find-spinel");
+    chest.toggleSneaking(false);
+    chest.inventory.removeItemOfType("electromagic-spinel");
+    game.player.inventory.addItemOfType("electromagic-spinel");
+    quest.completeObjective("find-spinel");
   }
 }
 

@@ -3,6 +3,7 @@
         "junkville/dogs/leader": {
             "accept-scavenger-trade": "Très bien. Je reviendrais avec les ressources dont vous avez besoin.",
             "ask-about-dogs": "Qui êtes-vous, exactement ?",
+            "ask-about-spinel": "Les Chiens à Diamant s'y connaissent en cristaux, non ? Je cherche une spinelle electromagique.",
             "bring-up-negociations": "À propos des négociations avec la surface…",
             "came-seeking-scavengers": "Je ne cherche pas d’ennuis. Je suis venu enquêter sur des disparitions près de la décharge.",
             "first-meeting": "Voilà qui est rare… un poney qui ne court pas ou ne hurle pas. Tu es entré dans notre tanière sans invitation. Parle, maintenant : que\nviens-tu chercher ici, dans les entrailles oubliées ? ",
@@ -58,7 +59,11 @@
             "scavengers/on-reject-trade": "Ah ? Dans ce cas, tu ne nous es d'aucune utilité. Va donc rejoindre les fouilleurs dans leur cellule.<br>\nNous allons simplement devoir attendre que quelqu'un d'autre vienne les chercher, ou te chercher toi. Qu'est-ce que tu en dis ? Ou, si tu n'apprécie pas notre hospitalité, je pourrais aussi mettre fin à ton insolence de manière plus permanente.",
             "scavengers/ransom-entry": "Te revoilà. Alors ? Les poneys ont-ils décidés de faire ce qui est juste ?",
             "scavengers/why": "Parce que le monde de la surface n’a jamais rien offert aux nôtres sauf chaînes et coups.<br> Or, aujourd'hui, nous avons besoin de la surface. Plusieurs  de mes chiens sont blessés et malades. Nous voulons un échange. Et je ne crois pas à la volonté bénévole de ceux qui vivent au-dessus.",
-            "start-fight": "Pas si je te tue le premier !"
+            "spinel/done": "Bien. Tu nous as été sympathique.\n<br><br>\n<i>Tu vois Fido se diriger vers un coffre très bien camouflé, un peu plus profondément dans la caverne. Il fouille, récupère quelque chose, et reviens te voir.</i>\n<br><br>\nPrend la spinelle. Tu l'as mérité.",
+            "spinel/entry": "Des spinelles chargées par une espèce de sort de foudre, oui. Les poneys avaient l'habitude d'en créer à partir des minéraux que nous extrayions ici.\n<br><br>\nIl m'en reste bien une qui traîne par ici. Nous n'en avons pas usage.",
+            "spinel/not-liked-enough": "On dirait que cette spinelle a de la valeur pour toi. Prouve-nous tes intentions. Rends-toi utile. Alors peut-être te cèderais-je la spinelle.",
+            "start-fight": "Pas si je te tue le premier !",
+            "thanks": "Merci."
         }
     }
 }
