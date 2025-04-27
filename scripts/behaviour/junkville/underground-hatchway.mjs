@@ -13,7 +13,7 @@ export class UndergroundHatchway {
   getAvailableInteractions() {
     return ["use", "look"];
   }
-  
+
   onUse() {
     game.switchToLevel("junkville-underground", "entry");
   }

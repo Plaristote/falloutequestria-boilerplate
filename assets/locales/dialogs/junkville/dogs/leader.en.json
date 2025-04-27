@@ -3,6 +3,7 @@
         "junkville/dogs/leader": {
             "accept-scavenger-trade": "Alright. I'll come back with the supplies you need.",
             "ask-about-dogs": "Who are you exactly ?",
+            "ask-about-spinel": "Hey, you Diamond Dogs know your stuff about cristals right ? I'm looking for an electromagic spinel.",
             "bring-up-negociations": "About the negociations with the surface dwellers…",
             "came-seeking-scavengers": "I'm not looking for trouble. I'm investigating the disappearence of ponies near the junkyard.",
             "first-meeting": "Rare sight… a pony who doesn't yell and doesn't run. You barged into our tunnels with no invitation. Speak, now: what is it that you  seek into these forgotten depths ? ",
@@ -62,7 +63,11 @@
             "scavengers/on-reject-trade": "Oh ? Then you are of no use to us. How about you go join the scavengers in their pen ?<br>\nWe'll just have to wait for someone else to come look for them... or you. How do you like that ? Or perhaps you wish to antagonize us further, and I might just kill you right where you stand.",
             "scavengers/ransom-entry": "You're back. So ? Did the ponys decide to do the right thing ?",
             "scavengers/why": "Because the surface dwellers never offered our kind nothing but chains and beatings.<br>\nAnd, today, we need the surface dwellers. Several of my dogs are wounded and sick. We want a trade. I do not believe in the benevolant will of poneys.",
-            "start-fight": "Not if I kill you first !"
+            "spinel/done": "Alright. You've been good to us.\n<br><br>\n<i>You see Fido heading towards a very well hidden chest, slightly deeper in the cavern. He looks into it, picks something up, and comes back to you.</i>\n<br><br>\nTake the spinel. You've earned it.",
+            "spinel/entry": "Spinels charged with some kind of thunder spell, yes. Ponies used to make those out of the minerals we extracted from these tunnels.\n<br><br>\nWe still have one sitting around. We have no use for it.",
+            "spinel/not-liked-enough": "But it seems like this spinel has value to you. Prove yourself to us, make yourself useful, and maybe I'll consider giving it to you.",
+            "start-fight": "Not if I kill you first !",
+            "thanks": "Thank you."
         }
     }
 }

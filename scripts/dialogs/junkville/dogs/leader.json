@@ -7,6 +7,11 @@
             "state": "about-dogs",
             "text": "ask-about-dogs"
         },
+        "ask-about-spinel": {
+            "availableHook": "canAskAboutSpinel",
+            "state": "spinel/entry",
+            "text": "ask-about-spinel"
+        },
         "bring-up-negociations": {
             "availableHook": "negociateCanBringUp",
             "hook": "negociateBringUp",
@@ -126,9 +131,17 @@
             "state": "scavengers/about",
             "text": "scavengers-ask-why-captives"
         },
+        "spinel-intro-next": {
+            "hook": "onSpinelAsked",
+            "state": "spinel/done",
+            "text": "exit"
+        },
         "start-fight": {
             "hook": "startCombat",
             "text": "start-fight"
+        },
+        "thanks": {
+            "text": "thanks"
         }
     },
     "entryPoint": "first-meeting",
@@ -141,6 +154,7 @@
         "entry": {
             "answers": [
                 "bring-up-negociations",
+                "ask-about-spinel",
                 "ask-about-dogs",
                 "leave"
             ],
@@ -255,6 +269,7 @@
         "scavengers/intimidation-failure": {
             "answers": [
             ],
+            "hook": "startCombat",
             "text": "scavengers/intimidation-failure"
         },
         "scavengers/intimidation-success": {
@@ -336,6 +351,24 @@
             "answers": [
             ],
             "text": "scavengers/why"
+        },
+        "spinel/done": {
+            "answers": [
+                "thanks"
+            ],
+            "hook": "onGiveSpinel",
+            "text": "spinel/done"
+        },
+        "spinel/entry": {
+            "answers": [
+                "spinel-intro-next"
+            ],
+            "text": "spinel/entry"
+        },
+        "spinel/not-liked-enough": {
+            "answers": [
+            ],
+            "text": "spinel/not-liked-enough"
         }
     }
 }
