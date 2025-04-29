@@ -3252,363 +3252,363 @@
         "damaged-down": {
             "frameCount": 6,
             "frameInterval": 100,
-            "height": 47,
-            "offsetX": 141,
+            "height": 50,
+            "offsetX": 165,
             "offsetY": 0,
             "repeat": false,
-            "width": 47
+            "width": 55
         },
         "damaged-left": {
             "frameCount": 6,
             "frameInterval": 100,
-            "height": 47,
-            "offsetX": 141,
-            "offsetY": 47,
+            "height": 50,
+            "offsetX": 165,
+            "offsetY": 50,
             "repeat": false,
-            "width": 47
+            "width": 55
         },
         "damaged-right": {
             "frameCount": 6,
             "frameInterval": 100,
-            "height": 47,
-            "offsetX": 141,
-            "offsetY": 94,
+            "height": 50,
+            "offsetX": 165,
+            "offsetY": 100,
             "repeat": false,
-            "width": 47
+            "width": 55
         },
         "damaged-up": {
             "frameCount": 6,
             "frameInterval": 100,
-            "height": 47,
-            "offsetX": 141,
-            "offsetY": 141,
+            "height": 50,
+            "offsetX": 165,
+            "offsetY": 150,
             "repeat": false,
-            "width": 47
+            "width": 55
         },
         "dead-down": {
             "frameCount": 1,
             "frameInterval": 0,
-            "height": 47,
-            "offsetX": 376,
-            "offsetY": 188,
+            "height": 50,
+            "offsetX": 440,
+            "offsetY": 200,
             "repeat": false,
-            "width": 47
+            "width": 55
         },
         "dead-left": {
             "frameCount": 1,
             "frameInterval": 0,
-            "height": 47,
-            "offsetX": 376,
-            "offsetY": 235,
+            "height": 50,
+            "offsetX": 440,
+            "offsetY": 250,
             "repeat": false,
-            "width": 47
+            "width": 55
         },
         "dead-right": {
             "frameCount": 1,
             "frameInterval": 0,
-            "height": 47,
-            "offsetX": 376,
-            "offsetY": 282,
+            "height": 50,
+            "offsetX": 440,
+            "offsetY": 300,
             "repeat": false,
-            "width": 47
+            "width": 55
         },
         "dead-up": {
             "frameCount": 1,
             "frameInterval": 0,
-            "height": 47,
-            "offsetX": 376,
-            "offsetY": 329,
+            "height": 50,
+            "offsetX": 440,
+            "offsetY": 350,
             "repeat": false,
-            "width": 47
+            "width": 55
         },
         "defaultSource": "characters/pony.png",
         "fall-down": {
             "frameCount": 9,
             "frameInterval": 120,
-            "height": 47,
+            "height": 50,
             "offsetX": 0,
-            "offsetY": 188,
+            "offsetY": 200,
             "repeat": false,
-            "width": 47
+            "width": 55
         },
         "fall-left": {
             "frameCount": 9,
             "frameInterval": 120,
-            "height": 47,
+            "height": 50,
             "offsetX": 0,
-            "offsetY": 235,
+            "offsetY": 250,
             "repeat": false,
-            "width": 47
+            "width": 55
         },
         "fall-right": {
             "frameCount": 9,
             "frameInterval": 120,
-            "height": 47,
+            "height": 50,
             "offsetX": 0,
-            "offsetY": 282,
+            "offsetY": 300,
             "repeat": false,
-            "width": 47
+            "width": 55
         },
         "fall-up": {
             "frameCount": 9,
             "frameInterval": 120,
-            "height": 47,
+            "height": 50,
             "offsetX": 0,
-            "offsetY": 329,
+            "offsetY": 350,
             "repeat": false,
-            "width": 47
+            "width": 55
         },
         "get-up-down": {
             "frameCount": 5,
             "frameInterval": 200,
-            "height": 47,
-            "offsetX": 423,
-            "offsetY": 188,
+            "height": 50,
+            "offsetX": 495,
+            "offsetY": 200,
             "repeat": false,
-            "width": 47
+            "width": 55
         },
         "get-up-left": {
             "frameCount": 5,
             "frameInterval": 200,
-            "height": 47,
-            "offsetX": 423,
-            "offsetY": 235,
+            "height": 50,
+            "offsetX": 495,
+            "offsetY": 250,
             "repeat": false,
-            "width": 47
+            "width": 55
         },
         "get-up-right": {
             "frameCount": 5,
             "frameInterval": 200,
-            "height": 47,
-            "offsetX": 423,
-            "offsetY": 282,
+            "height": 50,
+            "offsetX": 495,
+            "offsetY": 300,
             "repeat": false,
-            "width": 47
+            "width": 55
         },
         "get-up-up": {
             "frameCount": 5,
             "frameInterval": 200,
-            "height": 47,
-            "offsetX": 423,
-            "offsetY": 329,
+            "height": 50,
+            "offsetX": 495,
+            "offsetY": 350,
             "repeat": false,
-            "width": 47
+            "width": 55
         },
         "idle-down": {
             "frameCount": 1,
             "frameInterval": 100,
-            "height": 47,
-            "offsetX": 47,
+            "height": 50,
+            "offsetX": 55,
             "offsetY": 0,
             "repeat": false,
-            "width": 47
+            "width": 55
         },
         "idle-left": {
             "frameCount": 1,
             "frameInterval": 100,
-            "height": 47,
-            "offsetX": 47,
-            "offsetY": 48,
+            "height": 50,
+            "offsetX": 55,
+            "offsetY": 50,
             "repeat": false,
-            "width": 47
+            "width": 55
         },
         "idle-right": {
             "frameCount": 1,
             "frameInterval": 100,
-            "height": 47,
-            "offsetX": 47,
-            "offsetY": 94,
+            "height": 50,
+            "offsetX": 55,
+            "offsetY": 100,
             "repeat": false,
-            "width": 47
+            "width": 55
         },
         "idle-up": {
             "frameCount": 1,
             "frameInterval": 100,
-            "height": 47,
-            "offsetX": 47,
-            "offsetY": 141,
+            "height": 50,
+            "offsetX": 55,
+            "offsetY": 150,
             "repeat": false,
-            "width": 47
+            "width": 55
         },
         "melee-down": {
             "frameCount": 9,
             "frameInterval": 65,
-            "height": 47,
+            "height": 50,
             "offsetX": 0,
-            "offsetY": 376,
+            "offsetY": 400,
             "repeat": false,
-            "width": 47
+            "width": 55
         },
         "melee-left": {
             "frameCount": 9,
             "frameInterval": 65,
-            "height": 47,
+            "height": 50,
             "offsetX": 0,
-            "offsetY": 423,
+            "offsetY": 450,
             "repeat": false,
-            "width": 47
+            "width": 55
         },
         "melee-right": {
             "frameCount": 9,
             "frameInterval": 65,
-            "height": 47,
+            "height": 50,
             "offsetX": 0,
-            "offsetY": 470,
+            "offsetY": 500,
             "repeat": false,
-            "width": 47
+            "width": 55
         },
         "melee-up": {
             "frameCount": 9,
             "frameInterval": 65,
-            "height": 47,
+            "height": 50,
             "offsetX": 0,
-            "offsetY": 517,
+            "offsetY": 550,
             "repeat": false,
-            "width": 47
+            "width": 55
         },
         "running-down": {
             "frameCount": 7,
             "frameInterval": 100,
-            "height": 47,
-            "offsetX": 752,
+            "height": 50,
+            "offsetX": 880,
             "offsetY": 0,
             "repeat": true,
-            "width": 47
+            "width": 55
         },
         "running-left": {
             "frameCount": 7,
             "frameInterval": 100,
-            "height": 47,
-            "offsetX": 752,
-            "offsetY": 47,
+            "height": 50,
+            "offsetX": 880,
+            "offsetY": 50,
             "repeat": true,
-            "width": 47
+            "width": 55
         },
         "running-right": {
             "frameCount": 7,
             "frameInterval": 100,
-            "height": 47,
-            "offsetX": 752,
-            "offsetY": 94,
+            "height": 50,
+            "offsetX": 880,
+            "offsetY": 100,
             "repeat": true,
-            "width": 47
+            "width": 55
         },
         "running-up": {
             "frameCount": 7,
             "frameInterval": 100,
-            "height": 47,
-            "offsetX": 752,
-            "offsetY": 141,
+            "height": 50,
+            "offsetX": 880,
+            "offsetY": 150,
             "repeat": true,
-            "width": 47
+            "width": 55
         },
         "slash-bottom": {
             "frameCount": 6,
             "frameInterval": 110,
-            "height": 47,
-            "offsetX": 376,
-            "offsetY": 376,
+            "height": 50,
+            "offsetX": 440,
+            "offsetY": 400,
             "repeat": false,
-            "width": 47
+            "width": 55
         },
         "slash-left": {
             "frameCount": 6,
             "frameInterval": 110,
-            "height": 47,
-            "offsetX": 376,
-            "offsetY": 423,
+            "height": 50,
+            "offsetX": 440,
+            "offsetY": 450,
             "repeat": false,
-            "width": 47
+            "width": 55
         },
         "slash-right": {
             "frameCount": 6,
             "frameInterval": 100,
-            "height": 47,
-            "offsetX": 376,
-            "offsetY": 469,
+            "height": 50,
+            "offsetX": 440,
+            "offsetY": 498.936170212766,
             "repeat": false,
-            "width": 47
+            "width": 55
         },
         "slash-up": {
             "frameCount": 6,
             "frameInterval": 100,
-            "height": 47,
-            "offsetX": 376,
-            "offsetY": 516,
+            "height": 50,
+            "offsetX": 440,
+            "offsetY": 548.936170212766,
             "repeat": false,
-            "width": 47
+            "width": 55
         },
         "use-down": {
             "frameCount": 7,
             "frameInterval": 100,
-            "height": 47,
-            "offsetX": 376,
+            "height": 50,
+            "offsetX": 440,
             "offsetY": 0,
             "repeat": false,
-            "width": 47
+            "width": 55
         },
         "use-left": {
             "frameCount": 7,
             "frameInterval": 100,
-            "height": 47,
-            "offsetX": 376,
-            "offsetY": 47,
+            "height": 50,
+            "offsetX": 440,
+            "offsetY": 50,
             "repeat": false,
-            "width": 47
+            "width": 55
         },
         "use-right": {
             "frameCount": 7,
             "frameInterval": 100,
-            "height": 47,
-            "offsetX": 376,
-            "offsetY": 94,
+            "height": 50,
+            "offsetX": 440,
+            "offsetY": 100,
             "repeat": false,
-            "width": 47
+            "width": 55
         },
         "use-up": {
             "frameCount": 7,
-            "frameInterval": 100,
-            "height": 47,
-            "offsetX": 376,
-            "offsetY": 141,
+            "frameInterval": 75,
+            "height": 50,
+            "offsetX": 440,
+            "offsetY": 150,
             "repeat": false,
-            "width": 47
+            "width": 55
         },
         "walking-down": {
             "frameCount": 3,
             "frameInterval": 250,
-            "height": 47,
+            "height": 50,
             "offsetX": 0,
             "offsetY": 0,
             "repeat": true,
-            "width": 47
+            "width": 55
         },
         "walking-left": {
             "frameCount": 3,
             "frameInterval": 250,
-            "height": 47,
+            "height": 50,
             "offsetX": 0,
-            "offsetY": 47,
+            "offsetY": 50,
             "repeat": true,
-            "width": 47
+            "width": 55
         },
         "walking-right": {
             "frameCount": 3,
             "frameInterval": 250,
-            "height": 47,
+            "height": 50,
             "offsetX": 0,
-            "offsetY": 94,
+            "offsetY": 100,
             "repeat": true,
-            "width": 47
+            "width": 55
         },
         "walking-up": {
             "frameCount": 3,
             "frameInterval": 250,
-            "height": 47,
+            "height": 50,
             "offsetX": 0,
-            "offsetY": 141,
+            "offsetY": 150,
             "repeat": true,
-            "width": 47
+            "width": 55
         }
     },
     "pony-skeleton": {
