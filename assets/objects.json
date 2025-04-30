@@ -1,4 +1,22 @@
 {
+    "223-ammo": {
+        "icon": "223-ammo.png",
+        "isGroupable": false,
+        "scriptName": "ammo.mjs",
+        "sprite": "misc",
+        "type": "ammo",
+        "value": 4,
+        "weight": 0
+    },
+    "40mm-grenade-ammo": {
+        "icon": "40mm-grenade-ammo.png",
+        "isGroupable": false,
+        "scriptName": "ammo.mjs",
+        "sprite": "misc",
+        "type": "ammo",
+        "value": 15,
+        "weight": 1
+    },
     "9mm-ammo": {
         "icon": "9mm-bullets.png",
         "isGroupable": true,
@@ -219,6 +237,15 @@
         "value": 55,
         "weight": 2
     },
+    "grenade-launcher": {
+        "icon": "grenade-launcher.png",
+        "isGroupable": false,
+        "scriptName": "grenade-launcher.mjs",
+        "sprite": "mouthgun",
+        "type": "weapon",
+        "value": 7500,
+        "weight": 15
+    },
     "health-potion": {
         "icon": "healthPotion.webp",
         "isGroupable": true,
@@ -227,6 +254,15 @@
         "type": "consommables",
         "value": 75,
         "weight": 2
+    },
+    "hunting-rifle": {
+        "icon": "hunting-rifle.png",
+        "isGroupable": false,
+        "scriptName": "hunting-rifle.mjs",
+        "sprite": "mouthgun",
+        "type": "weapon",
+        "value": 1000,
+        "weight": 9
     },
     "laser-gun": {
         "icon": "laser-gun.png",
@@ -301,6 +337,15 @@
         "type": "weapon",
         "value": 25,
         "weight": 5
+    },
+    "plasma-rifle": {
+        "icon": "plasma-rifle.png",
+        "isGroupable": false,
+        "scriptName": "plasma-rifle.mjs",
+        "sprite": "mouthgun",
+        "type": "weapon",
+        "value": 10000,
+        "weight": 14
     },
     "power-armor": {
         "icon": "powerarmor.png",

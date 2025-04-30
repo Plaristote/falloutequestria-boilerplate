@@ -1918,6 +1918,16 @@
             "source": "gunshot.png",
             "width": 95
         },
+        "plasma-ball": {
+            "frameCount": 4,
+            "frameInterval": 115,
+            "height": 22,
+            "offsetX": 0,
+            "offsetY": 0,
+            "repeat": true,
+            "source": "projectiles/plasma-ball.png",
+            "width": 22
+        },
         "polymorph-end": {
             "frameCount": 7,
             "frameInterval": 60,
