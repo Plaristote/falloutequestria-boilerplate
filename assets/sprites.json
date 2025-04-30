@@ -5366,6 +5366,78 @@
             "repeat": true,
             "width": 55
         },
+        "shoot-1-down": {
+            "frameCount": 4,
+            "frameInterval": 80,
+            "height": 50,
+            "offsetX": 770,
+            "offsetY": 400,
+            "repeat": false,
+            "width": 55
+        },
+        "shoot-1-left": {
+            "frameCount": 4,
+            "frameInterval": 80,
+            "height": 50,
+            "offsetX": 770,
+            "offsetY": 450,
+            "repeat": false,
+            "width": 55
+        },
+        "shoot-1-right": {
+            "frameCount": 4,
+            "frameInterval": 80,
+            "height": 50,
+            "offsetX": 770,
+            "offsetY": 500,
+            "repeat": false,
+            "width": 55
+        },
+        "shoot-1-up": {
+            "frameCount": 4,
+            "frameInterval": 80,
+            "height": 50,
+            "offsetX": 770,
+            "offsetY": 550,
+            "repeat": false,
+            "width": 55
+        },
+        "shoot-2-down": {
+            "frameCount": 4,
+            "frameInterval": 80,
+            "height": 50,
+            "offsetX": 990,
+            "offsetY": 400,
+            "repeat": false,
+            "width": 55
+        },
+        "shoot-2-left": {
+            "frameCount": 4,
+            "frameInterval": 80,
+            "height": 50,
+            "offsetX": 990,
+            "offsetY": 450,
+            "repeat": false,
+            "width": 55
+        },
+        "shoot-2-right": {
+            "frameCount": 4,
+            "frameInterval": 80,
+            "height": 50,
+            "offsetX": 990,
+            "offsetY": 500,
+            "repeat": false,
+            "width": 55
+        },
+        "shoot-2-up": {
+            "frameCount": 4,
+            "frameInterval": 80,
+            "height": 50,
+            "offsetX": 990,
+            "offsetY": 550,
+            "repeat": false,
+            "width": 55
+        },
         "slash-bottom": {
             "frameCount": 6,
             "frameInterval": 110,
@@ -5389,7 +5461,7 @@
             "frameInterval": 100,
             "height": 50,
             "offsetX": 440,
-            "offsetY": 498.936170212766,
+            "offsetY": 500,
             "repeat": false,
             "width": 55
         },
