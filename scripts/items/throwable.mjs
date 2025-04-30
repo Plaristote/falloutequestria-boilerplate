@@ -1,9 +1,23 @@
 import {ItemBehaviour} from "./item.mjs";
 import {getValueFromRange, randomCheck} from "../behaviour/random.mjs";
 
+export function throwCurve(percentage) {
+  let xDelta = (percentage * (target.x - from.x));
+  let yDelta = (percentage * (target.y - from.y));
+  if (percentage < 0.5)
+    yDelta -= dist * percentage;
+  else
+    yDelta -= dist * (1 - percentage);
+  return {
+    x: from.x + xDelta,
+    y: from.y + yDelta
+  };
+}
+
 export class ThrowableBehaviour extends ItemBehaviour {
   constructor(model) {
     super(model);
+    this.skill = "unarmed";
     this.useModes = ["throw"];
     this.zoneSize = 0;
   }
@@ -45,26 +59,33 @@ export class ThrowableBehaviour extends ItemBehaviour {
     return [x,y];
   }
 
+  onCriticalFailure() {
+    game.appendToConsole(i18n.t("messages.weapons.critical-failure", {
+      user: this.user.statistics.name,
+      item: this.trName
+    }));
+    return [this.user.position.x, this.user.position.y]
+  }
+ 
+
   triggerUseAt(x, y) {
     const successRate = this.getUseAtSuccessRate(x, y);
     const roll = getValueFromRange(0, 100);
+    let dispersedPos;
 
     randomCheck(successRate, {
       criticalFailure: () => {
-        game.appendToConsole(i18n.t("messages.weapons.critical-failure", {
-          user: this.user.statistics.name,
-          item: this.trName
-        }));
-        x = this.user.position.x;
-        y = this.user.position.y;
+        dispersedPos = this.onCriticalFailure();
       },
       failure: () => {
-        const result = this.disperseThrow(x, y);
-
-        x = result[0];  y = result[1];
+        dispersedPos = this.disperseThrow(x, y);
       },
       success: () => {}
     });
+    if (dispersedPos) {
+      x = dispersedPos[0];
+      y = dispersedPos[1];
+    }
     return {
       steps:    this.getThrowAnimationSteps(x, y),
       callback: this.useAt.bind(this, x, y)
@@ -97,18 +118,7 @@ export class ThrowableBehaviour extends ItemBehaviour {
         fromX: from.x, fromY: from.y,
         toX: target.x, toY: target.y,
         speed: 250,
-        position: function(percentage) {
-          let xDelta = (percentage * (target.x - from.x));
-          let yDelta = (percentage * (target.y - from.y));
-          if (percentage < 0.5)
-            yDelta -= dist * percentage;
-          else
-            yDelta -= dist * (1 - percentage);
-          return {
-            x: from.x + xDelta,
-            y: from.y + yDelta
-          };
-        }
+        position: throwCurve
       });
     }
     return steps;
@@ -123,7 +133,7 @@ export class ThrowableBehaviour extends ItemBehaviour {
   }
 
   getUseAtSuccessRate(x, y) {
-    const attackerWeaponSkill = this.user.statistics["unarmed"];
+    const attackerWeaponSkill = this.user.statistics[this.skill];
     const distance = this.user.getDistance(x, y);
     var baseToHit = attackerWeaponSkill;
 
