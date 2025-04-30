@@ -100,6 +100,42 @@ export class CharacterBehaviour extends SceneActorComponent {
     if (character === game.player && this.dialogDetectionHook())
       return ;
   }
+
+  get hasWeaponsLayers() {
+    return true;
+  }
+
+  getSpriteSheetLayers() {
+    let layers = [];
+    if (this.hasWeaponsLayers) {
+      const saddle = this.model.inventory.getEquippedItem("saddle");
+      const use1   = this.model.inventory.getEquippedItem("use-1");
+      const use2   = this.model.inventory.getEquippedItem("use-2");
+      const saddleSpriteSheet = saddle?.script?.spriteSheet;
+      const use1Layers = use1?.script?.getSpriteSheetLayers;
+      const use2Layers = use2?.script?.getSpriteSheetLayers;
+
+      if (saddleSpriteSheet)
+        layers.push(saddleSpriteSheet);
+      if (use1Layers && use2Layers) {
+        const layers1 = use1Layers(1);
+        const layers2 = use2Layers(2);
+        if (layers1[0])
+          layers.push(layers1[0]);
+        if (layers2[0])
+          layers.push(layers2[0]);
+        if (layers1[1])
+          layers.push(layers1[1]);
+        if (layers2[1])
+          layers.push(layers2[1]);
+      } else if (use1Layers) {
+        layers = layers.concat(use1Layers(1));
+      } else if (use2Layers) {
+        layers = layers.concat(use2Layers(2));
+      }
+    }
+    return layers.join('+');
+  }
 }
 
 export function create(model) {
