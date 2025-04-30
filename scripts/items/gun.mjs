@@ -68,6 +68,13 @@ export class Gun extends Weapon {
       game.sounds.play("out-of-ammo");
   }
 
+  onOutOfAmmo() {
+    if (this.user == game.player)
+      game.appendToConsole(i18n.t("Out of ammo !"));
+    this.user.actionPoints += this.getActionPointCost();
+    game.sounds.play("out-of-ammo");
+  }
+
   triggerUseOn(target) {
     console.log("Trigger uze on trez cher", this.model.useMode);
     if (this.model.useMode == "reload")
@@ -78,11 +85,8 @@ export class Gun extends Weapon {
       this.model.ammo -= 1;
       return super.triggerUseOn(target);
     }
-    else {
-      game.appendToConsole("Out of ammo !");
-      this.user.actionPoints += this.getActionPointCost();
-      game.sounds.play("out-of-ammo");
-    }
+    else
+      this.onOutOfAmmo();
     return false;
   }
 
