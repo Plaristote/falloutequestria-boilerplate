@@ -10,9 +10,9 @@ export function randomInterval(min, max) {
   return Math.random() * (max - min) + min;
 }
 
-export function randomCheck(threshold, handlers) {
+export function randomCheck(threshold, handlers, roller = null) {
   const criticalThreshold = isJinxed(level.player) ? 5 : 15;
-  const roll = getValueFromRange(0, 100);
+  const roll = getValueFromRange(0, 100, roller);
 
   if (roll >= (100 - criticalThreshold) && handlers.criticalFailure)
     return handlers.criticalFailure();
