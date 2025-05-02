@@ -101,6 +101,20 @@ export class CharacterBehaviour extends SceneActorComponent {
       return ;
   }
 
+  playReactionSound(reaction) {
+    const stats = this.model.statistics;
+    const soundCats = {
+      "ponies": ["earth-pony", "pegasus", "unicorn"],
+      "ghoul": ["ghoul"]
+    }
+    for (let cat in soundCats) {
+      if (soundCats[cat].indexOf(stats.race) >= 0) {
+        game.sounds.play(this.model, `${cat}/${stats.gender}/${reaction}-1`)
+        return ;
+      }
+    }
+  }
+
   get hasWeaponsLayers() {
     return true;
   }

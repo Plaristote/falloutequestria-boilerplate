@@ -74,7 +74,7 @@ export class WeaponBehaviour extends ItemBehaviour {
         target: target.statistics.name
       })
     );
-    game.sounds.play("dodge");
+    this.playMissSound(target);
     return true;
   }
 
@@ -92,25 +92,36 @@ export class WeaponBehaviour extends ItemBehaviour {
       })
     );
     target.takeDamage(damage, this.user);
-    game.sounds.play(this.hitSound);
+    this.playHitSound(target, damage);
     return true;
   }
 
-  getUseSuccessRate(target) {
+  playMissSound() {
+  }
+
+  playHitSound(target) {
+    game.sounds.play(target, this.hitSound);
+  }
+
+  getUseSuccessRateAt(target, position) {
     const attackerWeaponSkill = this.getUserSkillValue();
     const defenderArmorClass  = this.getTargetArmorClass(target);
     var   baseToHit           = attackerWeaponSkill - defenderArmorClass;
 
     if (this.isRangedWeapon())
     {
-      const distance = this.user.getDistance(target);
+      const distance = target.getDistance(position.x, position.y);
 
       baseToHit -= 25;
       baseToHit += 8 * Math.max(0, this.getUserPerception() - 2);
       baseToHit -= Math.max(0, distance - 1) * 7;
     }
-    console.log(attackerWeaponSkill, defenderArmorClass);
+    //console.log(attackerWeaponSkill, defenderArmorClass);
     return Math.max(0, Math.min(baseToHit, 95));
+  }
+
+  getUseSuccessRate(target) {
+    return this.getUseSuccessRateAt(target, this.user.position);
   }
 
   getUseAtSuccessRate(x, y) {

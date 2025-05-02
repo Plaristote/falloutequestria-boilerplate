@@ -1,5 +1,8 @@
 import {Rat} from "./rat.mjs";
 
-export function create(model) {
-  return new Rat(model);
+export default class extends Rat {
+  playReactionSound(reaction) {
+    if (reaction === "damaged" || reaction === "died")
+      game.sounds.play("critters/scorpion/${reaction}")
+  }
 }

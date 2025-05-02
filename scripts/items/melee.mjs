@@ -1,6 +1,6 @@
 import {Weapon} from "./weapon.mjs";
 
-export class MeleeAttack extends Weapon {
+export default class MeleeAttack extends Weapon {
   constructor(model) {
     super(model);
     this.useModes = ["hit"];
@@ -32,6 +32,10 @@ export class MeleeAttack extends Weapon {
 
   getUseAnimation() {
     return [{ type: "Animation", animation: "melee", object: this.user }];
+  }
+
+  playMissSound(target) {
+    target.script.playReactionSound("dodge", 1);
   }
 };
 
