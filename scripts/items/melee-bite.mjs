@@ -1,9 +1,19 @@
 import {MeleeAttack} from "./melee.mjs";
 
+function biteSoundForCharacter(model) {
+  switch (model.statistics.race) {
+    case "wolf":
+    case "dog":
+    case "timberwolf":
+      return "critters/dog/bite";
+  }
+  return "critters/bite";
+}
+
 class Bite extends MeleeAttack {
   constructor(model) {
     super(model);
-    this.hitSound = "critters/bite";
+    this.hitSound = biteSoundForCharacter(this.user);
   }
 
   getActionPointCost() {
