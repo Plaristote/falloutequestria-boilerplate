@@ -4425,7 +4425,7 @@
             "repeat": false,
             "width": 72
         },
-        "defaultSource": "characters/wolf.png",
+        "defaultSource": "critters/timberwolf.png",
         "fall-down-down": {
             "frameCount": 3,
             "frameInterval": 150,
