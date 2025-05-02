@@ -1,8 +1,13 @@
 export const spriteSheet = "wolf";
 
+export function getDefaultItem(model, slot) {
+  return "melee-bite";
+}
+
 export function onToggled(statistics, toggled) {
   let modifier = toggled ? 1 : -1;
 
+  statistics.specialPoints = toggled ? 0 : 5;
   statistics.strength     += modifier;
   statistics.perception   += (modifier * 2);
   statistics.endurance    -= (modifier * 4);
