@@ -30,7 +30,7 @@ export function generateHostileParty() {
   const candidateEncounters = availableEncounters();
 
   if (candidateEncounters.length) {
-    const encounterRoll       = getValueFromRange(0, candidateEncounters.length - 1);
+    const encounterRoll       = candidateEncounters.length == 1 ? 0 : Math.max(0, getValueFromRange(0, candidateEncounters.length) - 1);
     const difficultyRoll      = getValueFromRange(0, 100);
     return candidateEncounters[encounterRoll](difficultyRoll);
   }
