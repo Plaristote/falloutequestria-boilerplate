@@ -4,7 +4,7 @@ import {randomCheck} from "../behaviour/random.mjs";
 class Stinger extends MeleeAttack {
   constructor(model) {
     super(model);
-    this.hitSound = "critters/bite";
+    this.hitSound = "critters/stinger-hit";
   }
 
   getDamageType() {
@@ -27,6 +27,10 @@ class Stinger extends MeleeAttack {
       return true;
     }
     return false;
+  }
+
+  playMissSound() {
+    game.sounds.play("critters/stinger-miss");
   }
 
   applyPoison(target) {

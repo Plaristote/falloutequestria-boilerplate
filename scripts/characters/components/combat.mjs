@@ -23,6 +23,11 @@ export class CombatComponent extends SkillTargetComponent {
   onDamageTaken(amount, dealer) {
     console.log("on damage taken", amount, dealer);
     this.combatTarget = dealer;
+    this.playReactionSound("damaged", 1);
+  }
+
+  onFell() {
+    this.playReactionSound("fall");
   }
 
   hasCombatTarget() {
