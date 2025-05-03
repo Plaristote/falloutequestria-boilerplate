@@ -9,6 +9,10 @@ export default class PlasmaRifle extends Rifle {
     this.fireAnimationSound = "energy-shot";
   }
 
+  getDamageType() {
+    return "energy";
+  }
+
   getDamageRange() {
     return [30,65];
   }

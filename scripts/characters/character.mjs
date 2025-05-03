@@ -115,6 +115,13 @@ export class CharacterBehaviour extends SceneActorComponent {
     }
   }
 
+  mitigateDamage(damage, type, dealer) {
+    const armor = this.model.inventory.getEquippedItem("armor");
+    if (armor?.script?.mitigateDamage)
+      damage = armor.script.mitigateDamage(damage, type);
+    return damage;
+  }
+
   get hasWeaponsLayers() {
     return true;
   }

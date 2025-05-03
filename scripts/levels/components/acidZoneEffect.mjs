@@ -9,7 +9,7 @@ export class AcidZoneEffect extends ZoneEffectComponent {
       damage = damage * (resistance / 100);
       damage = Math.ceil(damage);
       character.actionQueue.reset();
-      character.takeDamage(damage, null);
+      character.takeMitigableDamage(damage, "poison", null);
       game.appendToConsole(i18n.t("messages.damaged", {
         target: character.statistics.name,
         damage: damage

@@ -16,6 +16,10 @@ export default class PlasmaRifle extends Rifle {
     this.triggerUseAt        = ThrowableBehaviour.prototype['triggerUseAt'].bind(this);
   }
 
+  getDamageType() {
+    return "explosion";
+  }
+
   getDamageRange() {
     return [30,65];
   }

@@ -52,7 +52,7 @@ export class WeaponBehaviour extends ItemBehaviour {
       failure:         this.triggerDodgeUse.bind(this, target),
       criticalFailure: this.triggerCriticalFailure.bind(this, target),
       success:         super.triggerUseOn.bind(this, target)
-    });
+    }, this.user);
   }
 
   triggerDodgeUse(target) {
@@ -83,6 +83,8 @@ export class WeaponBehaviour extends ItemBehaviour {
 
     damage -= target.statistics.damageResistance;
     damage = Math.max(0, damage);
+    if (this.getDamageType)
+      damage = target.script.mitigateDamage(damage, this.getDamageType(), this.user);
     game.appendToConsole(
       i18n.t("messages.weapons.use", {
         user: this.user.statistics.name,
@@ -91,7 +93,7 @@ export class WeaponBehaviour extends ItemBehaviour {
         damage: damage
       })
     );
-    target.takeDamage(damage, this.user);
+    target.takeDamage(damage, this.user); // damage already mitigated
     this.playHitSound(target, damage);
     return true;
   }

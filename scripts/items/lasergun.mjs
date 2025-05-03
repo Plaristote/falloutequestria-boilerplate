@@ -9,6 +9,10 @@ class LaserGun extends Gun {
     this.fireAnimationSound = "energy-shot";
   }
 
+  getDamageType() {
+    return "energy";
+  }
+
   getDamageRange() {
     return [22,33];
   }
