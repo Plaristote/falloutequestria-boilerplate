@@ -35,4 +35,9 @@ export default class Rifle extends Gun {
       { type: "Animation", animation: animation, object: this.user },
     ];
   }
+
+  canEquipInSlotType(slotType) {
+    const saddle = this.user.inventory.getEquippedItem("saddle");
+    return saddle != null || this.user.statistics.race === "unicorn";
+  }
 };
