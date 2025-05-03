@@ -51,17 +51,37 @@
             "state": "entry",
             "text": "end-ask"
         },
+        "give-rathian-parts": {
+            "availableHook": "canGiveRathianParts",
+            "state": "on-give-rathian-parts",
+            "text": "give-rathian-parts"
+        },
         "introduce-player": {
             "hook": "learnPlayerName",
             "state": "about-celestial-device",
             "text": "introduce-player"
         },
         "nothing-needed": {
+            "hook": "onExit",
             "text": "nothing-needed"
         },
         "open-trade": {
             "state": "trade",
             "text": "open-trade"
+        },
+        "rathian-parts-accept-quest": {
+            "text": "rathian-parts-accept-quest"
+        },
+        "rathian-parts-ask-about-scavengers": {
+            "availableHook": "isLookingForScavengerRansom",
+            "state": "scavengers/sub-quest-instant-solve#2",
+            "text": "rathian-parts-ask-about-scavengers"
+        },
+        "rathian-parts-exit": {
+            "text": "rathian-parts-exit"
+        },
+        "rathian-parts-reject-quest": {
+            "text": "rathian-parts-reject-quest"
         },
         "scavenger-negociate-accept": {
             "state": "scavengers/sub-quest",
@@ -70,10 +90,21 @@
         "scavenger-negociate-give-up": {
             "text": "scavenger-negociate-give-up"
         },
+        "scavenger-sub-quest-accept": {
+            "text": "scavenger-sub-quest-accept"
+        },
+        "scavenger-sub-quest-already-done": {
+            "availableHook": "canGiveRathianParts",
+            "text": "scavenger-sub-quest-already-done"
+        },
         "scavengers-negociate-insist": {
             "availableHook": "scavengerCanNegociateInsist",
             "state": "scavengers/accept-ransom",
             "text": "scavengers-negociate-insist"
+        },
+        "sub-quest-instant-solve-continue": {
+            "state": "scavengers/sub-quest-instant-solve#2",
+            "text": "exit"
         }
     },
     "entryPoint": "entry",
@@ -84,7 +115,6 @@
                 "open-trade",
                 "end-ask"
             ],
-            "hook": "",
             "text": "about-celestial-device"
         },
         "about-leader": {
@@ -100,7 +130,6 @@
                 "ask-something-else",
                 "end-ask"
             ],
-            "hook": "",
             "text": "about-safety"
         },
         "about-town": {
@@ -109,11 +138,11 @@
                 "ask-safety",
                 "end-ask"
             ],
-            "hook": "",
             "text": "about-town"
         },
         "entry": {
             "answers": [
+                "give-rathian-parts",
                 "ask-about-scavengers",
                 "ask-scavenger-ransom",
                 "open-trade",
@@ -133,8 +162,25 @@
                 "ask-town",
                 "nothing-needed"
             ],
-            "hook": "",
             "text": "introduction"
+        },
+        "on-give-rathian-parts": {
+            "answers": [
+                "rathian-parts-exit",
+                "rathian-parts-ask-about-scavengers"
+            ],
+            "hook": "giveRathianParts",
+            "mood": "smile",
+            "text": "on-give-rathian-parts"
+        },
+        "rathian-parts-quest": {
+            "answers": [
+                "rathian-parts-accept-quest",
+                "rathian-parts-reject-quest"
+            ],
+            "hook": "startGetRathianPartsAsStandaloneQuest",
+            "mood": "smile",
+            "text": "rathian-parts-quest"
         },
         "scavengers/accept-ransom": {
             "answers": [
@@ -145,7 +191,6 @@
         "scavengers/cannot-accept-ransom": {
             "answers": [
             ],
-            "hook": "",
             "text": "scavengers/cannot-accept-ransom"
         },
         "scavengers/negociate": {
@@ -154,7 +199,6 @@
                 "scavenger-negociate-accept",
                 "scavenger-negociate-give-up"
             ],
-            "hook": "",
             "text": "scavengers/negociate"
         },
         "scavengers/ransom-entry": {
@@ -162,18 +206,34 @@
                 "ask-ransom-for-missing-scavengers-with-cook-approval",
                 "ask-ramsom-for-missing-scavengers"
             ],
-            "hook": "",
             "text": "scavengers/ransom-entry"
         },
         "scavengers/sub-quest": {
             "answers": [
+                "scavenger-sub-quest-already-done",
+                "scavenger-sub-quest-accept",
+                "scavenger-negociate-give-up"
             ],
+            "hook": "startGetRathianPartsAsScavengerSubquest",
             "text": "scavengers/sub-quest"
+        },
+        "scavengers/sub-quest-instant-solve": {
+            "answers": [
+                "sub-quest-instant-solve-continue"
+            ],
+            "hook": "giveRathianParts",
+            "mood": "smile",
+            "text": "on-give-rathian-parts"
+        },
+        "scavengers/sub-quest-instant-solve#2": {
+            "answers": [
+            ],
+            "hook": "scavengerAcceptRansom",
+            "text": "scavengers/sub-quest-instant-solve#2"
         },
         "scavengers/towards-cook": {
             "answers": [
             ],
-            "hook": "",
             "text": "scavengers/towards-cook"
         },
         "trade": {

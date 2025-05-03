@@ -105,7 +105,6 @@ export class FindHelpful extends QuestHelper {
   }
 
   completeObjective(objective) {
-    super.completeObjective(objective);
     switch (objective) {
       case "save-helpful":
       case "tell-parents":

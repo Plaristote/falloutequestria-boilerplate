@@ -22,11 +22,16 @@ class Level extends LevelBase {
 
   prepareRathian() {
     const rathian = game.uniqueCharacterStorage.getCharacter("rathian");
+    const door = level.findObject("smith.door-entrance");
 
     if (rathian && rathian.script.shouldBeAtJunkville) {
       game.uniqueCharacterStorage.loadCharacterToCurrentLevel("rathian", 53, 27, 0);
       rathian.setScript("rathian/junkville.mjs");
       rathian.movementMode = "walking";
+      if (door) door.locked = false;
+    } else if (door && !level.findObject("Rathian#0")) {
+      door.opened = false;
+      door.locked = true;
     }
   }
 

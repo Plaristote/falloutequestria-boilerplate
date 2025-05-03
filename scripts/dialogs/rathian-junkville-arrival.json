@@ -6,19 +6,16 @@
         "arrival": {
             "answers": [
             ],
-            "mood": "",
             "text": "arrival"
         },
         "arrival-at-stable": {
             "answers": [
             ],
-            "mood": "",
             "text": "arrival-at-stable"
         },
         "arrival-elsewhere": {
             "answers": [
             ],
-            "mood": "",
             "text": "arrival-elsewhere"
         }
     }
