@@ -273,6 +273,15 @@
         "value": 600,
         "weight": 5
     },
+    "leather-armor": {
+        "icon": "leather-armor.webp",
+        "isGroupable": true,
+        "scriptName": "leather-armor.mjs",
+        "sprite": "misc",
+        "type": "armor",
+        "value": 250,
+        "weight": 10
+    },
     "melee-bite": {
         "scriptName": "melee-bite.mjs",
         "type": "weapon",
@@ -305,7 +314,7 @@
     "metal-armor": {
         "icon": "metal-armor.png",
         "isGroupable": true,
-        "scriptName": "armor.mjs",
+        "scriptName": "metal-armor.mjs",
         "sprite": "metal-armor",
         "type": "armor",
         "value": 850,
