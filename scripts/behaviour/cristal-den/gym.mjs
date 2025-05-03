@@ -299,7 +299,7 @@ export class Gym {
     const hpLeft = target.statistics.hitPoints;
 
     if (hpLeft > 15)
-      target.takeDamage(character.statistics.meleeDamage + Math.ceil(Math.random() * 3), null);
+      target.takeMitigableDamage(character.statistics.meleeDamage + Math.ceil(Math.random() * 3), "blunt", null);
     else {
       target.addBuff("ko");
       this.model.tasks.removeTask("npcCombatTick");

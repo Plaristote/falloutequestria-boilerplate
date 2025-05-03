@@ -21,12 +21,14 @@ export class Explosion {
     this.position = position;
     this.radius = 0;
     this.damage = 10;
+    this.damageType = "explosion";
     this.sound = "explosion";
   }
 
   withWearer(wearer) { this.wearer = wearer; return this; }
   withSound(sound)   { this.sound  = sound;  return this; }
   withDamage(damage) { this.damage = damage; return this; }
+  withDamageType(t)  { this.damageType = t;  return this;}
   withRadius(radius) { this.radius = radius; return this; }
   withDamageDealer(damageDealer) { this.damageDealer = damageDealer; return this; }
 
@@ -69,6 +71,7 @@ export class Explosion {
       damage *= 2;
     damage -= character.statistics.damageResistance;
     damage = Math.max(0, damage);
+    damage = character.script.mitigateDamage(damage, this.damageType, this.damageDealer);
     game.appendToConsole(i18n.t("messages.damaged", {
       target: character.statistics.name,
       damage: damage

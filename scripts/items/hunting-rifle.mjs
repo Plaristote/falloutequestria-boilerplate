@@ -8,6 +8,10 @@ export default class HuntingRifle extends Rifle {
     this.fireAnimationSound = "gunshot";
   }
 
+  getDamageType() {
+    return "piercing";
+  }
+
   getDamageRange() {
     return [8,20];
   }
