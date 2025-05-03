@@ -398,6 +398,15 @@
         "value": 350,
         "weight": 3
     },
+    "saddle": {
+        "icon": "saddle-basic.png",
+        "isGroupable": true,
+        "scriptName": "basic-saddle.mjs",
+        "sprite": "misc",
+        "type": "armor",
+        "value": 150,
+        "weight": 15
+    },
     "scribe-armor": {
         "icon": "steel-ranger-scribe.png",
         "isGroupable": true,
