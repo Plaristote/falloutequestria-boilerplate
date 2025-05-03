@@ -1,0 +1,10 @@
+{
+  "quests": {
+    "getRathianParts": {
+      "title": "La RAM de Rathian",
+      "description": "Midnight Facade de Junkville t'as demandé de lui ramener des composants informatiques qui se trouvent dans l'atelier de Rathian.",
+      "fetch-parts": "Find the parts",
+      "give-parts": "Give the parts to Midnight Facade"
+    }
+  }
+}

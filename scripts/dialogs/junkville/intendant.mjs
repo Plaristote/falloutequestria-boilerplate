@@ -71,13 +71,55 @@ class Dialog extends DialogHelper {
   }
 
   scavengerCheckRansomAvailability() {
+    // Cannot accept ransom anyway
     if (!this.scavengerCanProvideRansom()) return "scavengers/cannot-accept-ransom";
+
+    // Cannot trade ransom for the sub-quest, since sub-quest is already completed
+    if (game.quests.getQuest("junkville/getRathianPart")?.completed == true) return "scavengers/accept-ransom";
   }
 
   scavengerCanNegociateInsist() {
     return game.player.statistics.speech >= 70;
   }
+
+  startGetRathianPartsAsScavengerSubquest() {
+    game.quests.addQuest("junkville/getRathianParts");
+  }
   // END SCAVENGERS
+
+  canGiveRathianParts() {
+    const quest = game.quests.getQuest("junkville/getRathianParts");
+    return quest
+        && !quest.hidden
+        && game.player.inventory.count("quest-rathian-computer-parts") > 0
+        && !quest.isObjectiveCompleted("giveParts");
+  }
+
+  giveRathianParts() {
+    game.player.inventory.removeItemOfType("quest-rathian-computer-parts");
+    this.dialog.npc.inventory.addItemOfType("quest-rathian-computer-parts");
+    game.quests.getQuest("junkville/getRathianParts").completeObjective("giveParts");
+  }
+
+  rathianPartsOnAskScavengerRansom() {
+    if (!this.scavengerCanProvideRansom())
+      return "scavengers/cannot-accept-ransom";
+  }
+
+  startGetRathianPartsAsStandaloneQuest() {
+    const quest = game.quests.addQuest("junkville/getRathianParts");
+    quest.setVariable("withDiscount", 1);
+  }
+
+  shouldOfferRathianPartsQuest() {
+    return !game.quests.hasQuest("junkville/getRathianParts")
+        && game.dataEngine.getReputation("junkville") > 50;
+  }
+
+  onExit() {
+    if (this.shouldOfferRathianPartsQuest())
+      return "rathian-parts-quest";
+  }
 }
 
 export function create(dialog) {
