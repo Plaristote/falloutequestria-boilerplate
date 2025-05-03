@@ -1,13 +1,11 @@
 import {SkillTargetComponent} from "./skillTarget.mjs";
-
-function evaluatePathfindingOption(target, x, y) {
-  const value = level.getVisionQuality(target.position.x, target.position.y, x, y);
-  return value - 1;
-}
+import EquipmentEquinoid from "./combat/equipment-equinoid.mjs";
+import FightTurnActions from "./combat/actions-fight.mjs";
 
 export class CombatComponent extends SkillTargetComponent {
   constructor(model) {
     super(model);
+    this._combatRunCount = 0;
   }
 
   onTalkTo() {
@@ -38,15 +36,36 @@ export class CombatComponent extends SkillTargetComponent {
     }
   }
 
+  isTargetInRange(target) {
+    const weapon1 = this.model.inventory.getEquippedItem("use-1");
+    const weapon2 = this.model.inventory.getEquippedItem("use-2");
+    return (weapon1 && weapon1.isInRange(target))
+        || (weapon2 && weapon2.isInRange(target));
+  }
+
   defaultCombatTargetLookup() {
     const enemies = this.model.fieldOfView.getEnemies();
+    let candidates = [];
+    let others = [];
 
-    console.log("Detected enemies:", enemies, enemies.length, enemies[0]);
-    return enemies[0];
+    console.log(this.logPrefix, "Detected enemies:", enemies, enemies.length);
+    for (let i = 0 ; i < enemies.length ; ++i) {
+      if (this.isTargetInRange(enemies[i]))
+        candidates.push(enemies[i]);
+      else
+        others.push(enemies[i]);
+    }
+    if (candidates.length == 0)
+      candidates = others;
+    else
+      console.log(this.logPrefix, "No enemy in weapon range");
+    if (candidates.length > 1)
+      return candidates[Math.floor(Math.random() * candidates.length)];
+    return candidates[0];
   }
 
   findCombatTarget() {
-    console.log(this.model, "looking for a combat target");
+    console.log(this.logPrefix, "looking for a combat target");
     let shouldLookForTarget = true;
     try { shouldLookForTarget = !(this.combatTarget && this.combatTarget.isAlive()); } catch (err) {}
     if (shouldLookForTarget) {
@@ -55,7 +74,7 @@ export class CombatComponent extends SkillTargetComponent {
       else
         this.combatTarget = this.defaultCombatTargetLookup();
     }
-    console.log(this.model, "found a combat target", this.combatTarget);
+    console.log(this.logPrefix, "found a combat target", this.combatTarget);
     return this.combatTarget != null;
   }
 
@@ -63,8 +82,13 @@ export class CombatComponent extends SkillTargetComponent {
     return this.combatTarget ? this.combatTarget : (() => { this.findCombatTarget(); return this.combatTarget })();
   }
 
+  get logPrefix() {
+    return `${this.model.displayName}:${this._combatRunCount}:: `;
+  }
+
   onTurnStart() {
-    console.log("on turn start", this.model, this.combatTarget);
+    this._combatRunCount++;
+    console.log(this.logPrefix, "on turn start", this.model, this.combatTarget);
     if (this.findCombatTarget()) {
       const result = this.model.morale > 0 ? this.fightCombatTarget() : this.runAwayFromCombatTarget();
 
@@ -73,52 +97,21 @@ export class CombatComponent extends SkillTargetComponent {
     } else if (typeof this.searchForNextCombatTarget == "function") {
       return this.searchForNextCombatTarget();
     }
-    console.log("- pass turn", this.model);
+    console.log(this.logPrefix, "- pass turn", this.model);
     level.passTurn(this.model);
   }
 
   fightCombatTarget() {
-    const pathEval = evaluatePathfindingOption.bind(this, this.combatTarget);
-    const actions  = this.model.actionQueue;
-    const weapon   = this.model.inventory.getEquippedItem("use-1");
-    const movement = actions.getReachApCost(this.combatTarget, weapon.getRange(), pathEval);
-    let   ap       = this.model.actionPoints;
-    let   itemAp;
+    const equipment = new EquipmentEquinoid(this.model);
+    const turnActions = new FightTurnActions(this);
 
-    weapon.useMode = weapon.defaultUseMode;
-    itemAp = Math.max(1, actions.getItemUseApCost(this.combatTarget, "use-1"));
-    console.log(this.model.statistics.name, "fightCombatTarget", movement, ap, itemAp, weapon.itemType, weapon.useMode);
-    if (movement >= 0) {
-      actions.reset();
-      if (weapon.maxAmmo > 0 && weapon.ammo === 0) {
-        if (weapon.getScriptObject().availableAmmo === 0) {
-          this.model.inventory.unequipItem("use-1");
-          return this.fightCombatTarget();
-        }
-        ap -= 2;
-        weapon.useMode = "reload";
-        actions.pushItemUse(null, "use-1");
-        weapon.useMode = weapon.defaultUseMode;
-      }
-      if (movement > 0) {
-        ap -= Math.min(movement, ap);
-        actions.pushReach(this.combatTarget, weapon.getRange(), pathEval);
-      }
-      while (ap >= itemAp) {
-        actions.pushItemUse(this.combatTarget, "use-1");
-        ap -= itemAp;
-      }
-      console.log(ap, '/', this.model.actionPoints);
-      if (ap != this.model.actionPoints) {
-        console.log("Starting action queue");
-        return actions.start();
-      }
-    }
-    return null;
+    equipment.swapWeapons();
+    turnActions.slotName = equipment.pickBestUseSlotToUseAgainst(this.combatTarget);
+    return turnActions.run();
   }
 
   runAwayFromCombatTarget() {
-    console.log("runAwayFromTarget", this.combatTarget, this.model.actionPoints);
+    console.log(this.logPrefix, "runAwayFromTarget", this.combatTarget, this.model.actionPoints);
     if (this.model.actionPoints > 0) {
       this.model.movementMode = "running";
       this.model.moveAway(this.combatTarget);
@@ -133,7 +126,7 @@ export class CombatComponent extends SkillTargetComponent {
   }
 
   onCombatActionQueueCompleted() {
-    console.log("triggering turn again, action completed");
+    console.log(this.logPrefix, "triggering turn again, action completed");
     if (level.isCharacterTurn(this.model)) this.onTurnStart();
   }
 }
