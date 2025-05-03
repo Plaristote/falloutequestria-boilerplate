@@ -7,9 +7,17 @@ class RoamTask {
   }
 
   prepare(minInterval, maxInterval) {
-    this.model.setVariable("roamX", this.model.position.x);
-    this.model.setVariable("roamY", this.model.position.y);
+    this.preparePosition();
     this.interval(minInterval, maxInterval);
+  }
+
+  preparePosition() {
+    if (this.model.position.x != -1 && this.model.position.y != -1) {
+      this.model.setVariable("roamX", this.model.position.x);
+      this.model.setVariable("roamY", this.model.position.y);
+      return true;
+    }
+    return false;
   }
 
   start() {
@@ -43,9 +51,13 @@ class RoamTask {
     return this.model.hasVariable("roamEnabled");
   }
 
+  prepared() {
+    return this.model.hasVariable("roamX") || this.preparePosition();
+  }
+
   run() {
     if (this.exists()) {
-      if (!level.isInCombat(this.model) && this.model.actionQueue.isEmpty()) {
+      if (!level.isInCombat(this.model) && this.model.actionQueue.isEmpty() && this.prepared()) {
         const range = this.model.getVariable("roamRange");
         const center = {
           x: this.model.getVariable("roamX"),
