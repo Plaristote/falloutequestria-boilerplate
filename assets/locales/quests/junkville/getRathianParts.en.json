@@ -1,6 +1,6 @@
 {
   "quests": {
-    "getRathianParts": {
+    "junkville/getRathianParts": {
       "title": "Rathian's Random Acess Memory",
       "description": "Midnight Facade from Junkville asked you to retrieve some computer parts from Rathian's workshop.",
       "fetch-parts": "Trouver les composants",
