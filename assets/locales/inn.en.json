@@ -1,0 +1,29 @@
+{
+  "innkeep": {
+    "dialog": {
+      "entry": "Room for the night is {{nightRent}} caps.<br>Room for the week is {{weekRent}} caps.",
+      "followup": "You'll be staying in room {{rentedRoomNumber}}. Do I need to show you to your room ?",
+      "alreadyHasRoom": "You're already renting room {{roomNumber}}."
+    },
+    "dialog-choices": {
+      "order-night": "A room for the night.",
+      "order-week": "A room for the week.",
+      "exit-without-room": "Actually, I don't need a room.",
+      "show-room": "Yes, show me to my room.",
+      "dont-show-room": "I'll manage"
+    },
+    "show-room-bubble": "Here we are, your room is right over here.",
+    "not-your-bed": "You can't use that bed right now.",
+    "on-bed-rest": "You had a good rest.",
+    "rest-prompt": "How long do you want to rest ?",
+    "restChoices": {
+      "1h": "Sleep for an hour",
+      "6h": "Sleep for six hours",
+      "9h": "Sleep for nine hours",
+      "12h": "Sleep for half a day",
+      "24h": "Sleep for a day",
+      "suffix": " (until: {{time}})",
+      "exit": "Sleep is for the weak"
+    }
+  }
+}
