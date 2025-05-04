@@ -1,5 +1,5 @@
 {
-  "innkeeep": {
+  "innkeep": {
     "dialog": {
       "entry": "{{nightRent}} caps pour la nuit.<br>{{weekRent}} caps pour la semaine.",
       "followup": "Tu peux rester dans la chambre {{rentedRoomNumber}}. Tu veux que je te montre où elle se trouve ?",
