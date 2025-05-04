@@ -1,0 +1,28 @@
+{
+  "innkeeep": {
+    "dialog": {
+      "entry": "{{nightRent}} caps pour la nuit.<br>{{weekRent}} caps pour la semaine.",
+      "followup": "Tu peux rester dans la chambre {{rentedRoomNumber}}. Tu veux que je te montre où elle se trouve ?",
+      "alreadyHasRoom": "Ta dernière location n'est pas terminée, tu as toujours la chambre {{roomNumber}}."
+    },
+    "dialog-choices": {
+      "order-night": "Une chambre pour la nuit.",
+      "order-week": "Une chambre pour la semaine.",
+      "exit-without-room": "J'ai changé d'avis.",
+      "show-room": "Oui, je veux savoir où est ma chambre.",
+      "dont-show-room": "Je trouverai."
+    },
+    "show-room-bubble": "Voici la chambre.",
+    "not-your-bed": "Tu ne peux pas utiliser ce lit.",
+    "rest-prompt": "Combien de temps ?",
+    "restChoices": {
+      "1h": "Dormir pendant une heure",
+      "6h": "Dormir pendant six heures",
+      "9h": "Dormir pendant neuf heures",
+      "12h": "Dormir pendant une demi-journée",
+      "24h": "Dormir une journée",
+      "suffix": " (jusqu'à {{time}})",
+      "exit": "Tu dormira quand tu sera mort."
+    }
+  }
+}
