@@ -1,7 +1,9 @@
 {
     "dialogs": {
         "hillburrow/inkeeper": {
-            "entry": "Hello ! How can I help you today ?"
+            "ask-room": "I need a room.",
+            "entry": "Hello ! How can I help you today ?",
+            "exit-entry": "Bye."
         }
     }
 }

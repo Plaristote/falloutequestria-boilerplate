@@ -1,4 +1,4 @@
-import {DialogHelper} from "../helpers.mjs";
+import {Innkeeper} from "../innkeeper.mjs";
 import {skillContest} from "../../cmap/helpers/checks.mjs";
 import {requireQuest, QuestFlags} from "../../quests/helpers.mjs";
 import {
@@ -13,7 +13,7 @@ import {
 import {isHelpfulQuestAvailable} from "../../quests/junkville/findHelpful.mjs";
 import {opinionVarName} from "../../scenes/junkville/negociationAssembly.mjs";
 
-class Dialog extends DialogHelper {
+class Dialog extends Innkeeper {
   constructor(dialog) {
     super(dialog);
   }

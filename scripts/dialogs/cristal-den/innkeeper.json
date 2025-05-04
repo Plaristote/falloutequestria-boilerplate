@@ -21,7 +21,7 @@
             "answers": [
             ],
             "hook": "innDialog",
-            "mood": "smile",
+            "mood": "sad",
             "text": "innDialog"
         }
     }

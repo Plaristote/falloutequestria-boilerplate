@@ -30,6 +30,10 @@ export class Cook extends CharacterBehaviour {
     return level.findObject("inn.floor.owner-room.bed");
   }
 
+  get inn() {
+    return level.findGroup("inn");
+  }
+
   shouldTalkAboutDogDealDecision() {
     if (this.routineComponent.isActiveRoutine("assembly") && game.quests.hasQuest("junkvilleNegociateWithDogs")) {
       const quest = requireQuest("junkvilleNegociateWithDogs");

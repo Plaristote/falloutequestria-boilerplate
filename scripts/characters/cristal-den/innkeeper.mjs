@@ -1,9 +1,9 @@
-import {CharacterBehaviour} from "../character.mjs";
+import {CharacterBehaviour} from "./../character.mjs";
 
 class Innkeeper extends CharacterBehaviour {
   constructor(model) {
     super(model);
-    this.dialog = "hillburrow/inkeeper";
+    this.dialog = "cristal-den/innkeeper";
   }
 }
 

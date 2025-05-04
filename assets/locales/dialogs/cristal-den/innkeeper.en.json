@@ -1,0 +1,9 @@
+{
+    "dialogs": {
+        "cristal-den/innkeeper": {
+            "ask-room": "I'd like to rent a room.",
+            "entry": "Hi, welcome to the Cristal Inn, what can I do you for ?",
+            "exit-entry": "Nothing, thanks."
+        }
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "dialogs": {
+        "cristal-den/innkeeper": {
+            "ask-room": "Je voudrais une chambre.",
+            "entry": "Bonjour, bienvenue à l'Auberge de Cristal. Que puis-je faire pour toi ?",
+            "exit-entry": "Rien, merci."
+        }
+    }
+}
