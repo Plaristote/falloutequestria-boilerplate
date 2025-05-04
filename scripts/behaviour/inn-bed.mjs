@@ -11,7 +11,7 @@ function restChoices(secondsAvailable, callback) {
   durations.forEach(function(data) {
     const choice = data[0];
     const duration = data[1];
-    if (duration <= secondsAvailable) {
+    if (secondsAvailable === "infinite" || duration <= secondsAvailable) {
       const time = game.timeManager.toStringAfter(duration, "%w %h:%m");
       choices.push({
         label: i18n.t(`innkeep.restChoices.${choice}`) + "<br>" + i18n.t("innkeep.restChoices.suffix", { time }),
@@ -51,18 +51,23 @@ export default class {
     return this.inn.script.getRentedRoom() == this.room;
   }
 
+  hasInnkeeper() {
+    return this.inn.script.innkeeper && this.inn.script.innkeeper.isAlive();
+  }
+
   sleepFor(seconds) {
     game.player.setVariable("resting", true);
     game.asyncAdvanceTime(seconds / 60, function() {
       game.player.setVariable("resting", false);
       game.appendToConsole(i18n.t("innkeep.on-bed-rest"));
-      // TODO add a Rested buff
+      game.player.addBuff("rested").script.charges = Math.floor(seconds / 60 / 60);
     });
   }
 
   onUse() {
-    if (this.isRentedByPlayer()) {
-      const choices = restChoices(this.inn.script.rentSecondsLeft, this.sleepFor.bind(this));
+    if (this.isRentedByPlayer() || !this.hasInnkeeper()) {
+      const secondsLeft = this.hasInnkeeper() ? this.inn.script.rentSecondsLeft : "infinite";
+      const choices = restChoices(secondsLeft, this.sleepFor.bind(this));
       game.openPrompt(i18n.t("innkeep.rest-prompt"), choices);
       return true;
     } else {
