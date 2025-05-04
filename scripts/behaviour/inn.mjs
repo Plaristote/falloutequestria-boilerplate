@@ -41,6 +41,10 @@ export default class Inn {
     this.lockAllRooms();
   }
 
+  get innkeeper() {
+    return this.model.findObject("innkeeper");
+  }
+
   get rentedRoomNumber() {
     return this.model.getVariable("rentNumber", null);
   }

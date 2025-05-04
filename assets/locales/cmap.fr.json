@@ -42,7 +42,8 @@
             "bleeding": "Hémorragie",
             "drunk": "Ivre",
             "ko": "Inconscient",
-            "poisoned": "Empoisonné"
+            "poisoned": "Empoisonné",
+            "rested": "En forme"
         },
         "carryWeight": "Capacité en poids",
         "charisma": "Charisme",
@@ -61,7 +62,8 @@
             "buffs": {
                 "drunk": "Quel pochard ! Tu as succombé à l'appel de Bacchus. Tu te sens un peu moins intelligent... cela dit, tu ne sens plus grand chose d'autre.",
                 "ko": "Tu es sans connaissance, peut-être à la suite d'un un choc ou d'une intoxication. En fonction de la cause et de ta constitution, tu retrouvera tes esprits dans quelques secondes... ou heures. Il ne te reste plus qu'à attendre.",
-                "poisoned": "Tu as été empoisonné ! Tu subira périodiquement des dommages jusqu'à ce que le poison soit purgé de ton corps (sauf si tu meure avant, bien sûr). Peut-être devrais-tu chercher un antidote."
+                "poisoned": "Tu as été empoisonné ! Tu subira périodiquement des dommages jusqu'à ce que le poison soit purgé de ton corps (sauf si tu meure avant, bien sûr). Peut-être devrais-tu chercher un antidote.",
+                "rested": "Tu as pu t'offrir un bon repos, dernièrement, ce qui a temporairement amélioré tes capacités physiques et ton attention."
             },
             "carryWeight": "La quantité maximale de charge que votre personnage peut porter, en livres.",
             "charisma": "Combinaison d'apparence et de charme. Un haut Charisme est important pour les personnages qui souhaitent influencer par le discours.",
