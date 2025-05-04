@@ -42,6 +42,10 @@
             "state": "job-haunted-heap-reward",
             "text": "ask-payment"
         },
+        "ask-room": {
+            "state": "inn",
+            "text": "ask-room"
+        },
         "ask-something-else": {
             "state": "town-index",
             "text": "ask-something-else"
@@ -369,7 +373,6 @@
                 "dogs-battle-peacemaking-come",
                 "dogs-battle-peacemaking-exit"
             ],
-            "hook": "",
             "text": "dogs-battle-peacemaking"
         },
         "dogs/battle/peacemaking-appeased": {
@@ -381,7 +384,6 @@
             "answers": [
                 "dogs-warpath-trigger"
             ],
-            "hook": "",
             "text": "dogs-battle-peacemaking-not-appeased"
         },
         "dogs/battle/start": {
@@ -392,7 +394,6 @@
                 "dogs-battle-peace",
                 "dogs-battle-reject-alt"
             ],
-            "hook": "",
             "text": "dogs-battle-start"
         },
         "dogs/deal-accepted": {
@@ -413,21 +414,18 @@
             "answers": [
                 "deal-war-next"
             ],
-            "hook": "",
             "mood": "cocky",
             "text": "dogs/deal-war"
         },
         "dogs/negociations/about-assembly": {
             "answers": [
             ],
-            "hook": "",
             "mood": "neutral",
             "text": "dogs/negociations/about-assembly"
         },
         "dogs/negociations/captives-not-freed": {
             "answers": [
             ],
-            "hook": "",
             "mood": "angry",
             "text": "dogs/negociations/captives-not-freed"
         },
@@ -436,7 +434,6 @@
                 "tell-dogs-want-to-negociate",
                 "dogs-negociate-cancel"
             ],
-            "hook": "",
             "text": "dogs/negociations/entry"
         },
         "dogs/negociations/start-step-1": {
@@ -462,7 +459,6 @@
                 "negociate-explain-demands-advanced",
                 "negociate-explain-demands"
             ],
-            "hook": "",
             "text": "dogs/negociations/start-step-3"
         },
         "dogs/negociations/start-step-3-2": {
@@ -479,7 +475,6 @@
                 "step-4-neutral",
                 "step-4-anger"
             ],
-            "hook": "",
             "text": "dogs/negociations/start-step-4"
         },
         "dogs/negociations/step-1-angered": {
@@ -502,7 +497,6 @@
             "answers": [
                 "negociate-to-step-2"
             ],
-            "hook": "",
             "mood": "neutral",
             "text": "dogs/negociations/step-1-neutral"
         },
@@ -526,7 +520,6 @@
             "answers": [
                 "negociate-to-step-3"
             ],
-            "hook": "",
             "mood": "neutral",
             "text": "dogs/negociations/step-2-neutral"
         },
@@ -550,7 +543,6 @@
             "answers": [
                 "negociate-to-step-4"
             ],
-            "hook": "",
             "mood": "neutral",
             "text": "dogs/negociations/step-3-neutral"
         },
@@ -574,7 +566,6 @@
             "answers": [
                 "negociate-to-step-5"
             ],
-            "hook": "",
             "mood": "neutral",
             "text": "dogs/negociations/step-4-neutral"
         },
@@ -608,13 +599,13 @@
                 "leave-ok",
                 "negociation-ask-about-assembly"
             ],
-            "hook": "",
             "text": "dogs/negociations/wait-assembly"
         },
         "entry": {
             "answers": [
                 "get-battle-reward",
                 "ask-meal",
+                "ask-room",
                 "ask-town",
                 "ask-job",
                 "job-haunted-heap-report-trigger",
@@ -624,19 +615,29 @@
             "hook": "introduction",
             "text": "entry"
         },
+        "inn": {
+            "answers": [
+            ],
+            "hook": "innDialog",
+            "mood": "smile",
+            "text": "innDialog"
+        },
+        "innDialog-followup": {
+            "answers": [
+            ],
+            "text": "innDialog-followup"
+        },
         "job-haunted-heap-details": {
             "answers": [
                 "ask-payment",
                 "done-asking"
             ],
-            "hook": "",
             "text": "job-haunted-heap-details"
         },
         "job-haunted-heap-reward": {
             "answers": [
                 "done-asking"
             ],
-            "hook": "",
             "text": "job-haunted-heap-reward"
         },
         "jobs": {
@@ -655,27 +656,23 @@
                 "take-meal-moss-salad",
                 "meal-reject"
             ],
-            "hook": "",
             "text": "menu"
         },
         "scavengers/about-facade": {
             "answers": [
                 "ok-and-leave"
             ],
-            "hook": "",
             "text": "scavengers/about-facade"
         },
         "scavengers/convinced-dogs": {
             "answers": [
             ],
-            "hook": "",
             "text": "scavengers/convinced-dogs"
         },
         "scavengers/on-death-report": {
             "answers": [
                 "to-scavenger-war"
             ],
-            "hook": "",
             "text": "scavengers/on-death-report"
         },
         "scavengers/on-ransom-give-up": {
@@ -698,7 +695,6 @@
                 "scavenger-convince-ransom",
                 "scavenger-convince-sarcasm"
             ],
-            "hook": "",
             "text": "scavengers/ransom-intro"
         },
         "scavengers/ransom-not-convined": {
@@ -706,14 +702,12 @@
                 "ask-about-facade",
                 "ok-and-leave"
             ],
-            "hook": "",
             "text": "scavengers/ransom-not-convined"
         },
         "scavengers/ransom-war": {
             "answers": [
                 "to-scavenger-war"
             ],
-            "hook": "",
             "text": "scavengers/ransom-war"
         },
         "scavengers/report": {
@@ -723,7 +717,6 @@
                 "scavengers-tell-theyre-dead",
                 "scavenger-report-cancel"
             ],
-            "hook": "",
             "text": "scavengers/report"
         },
         "scavengers/report-freed": {
@@ -739,7 +732,6 @@
                 "scavenger-ransom-more-time",
                 "scavenger-ransom-give-up"
             ],
-            "hook": "",
             "text": "scavengers/report-ransom"
         },
         "town-index": {
@@ -748,7 +740,6 @@
                 "ask-about-leader",
                 "done-asking"
             ],
-            "hook": "",
             "text": "town-index"
         },
         "town-leader": {
@@ -763,7 +754,6 @@
             "answers": [
                 "ask-something-else"
             ],
-            "hook": "",
             "text": "town-leader-midnight-hint"
         },
         "town-leader-more": {
@@ -777,7 +767,6 @@
             "answers": [
                 "ask-something-else"
             ],
-            "hook": "",
             "text": "town-story"
         }
     }

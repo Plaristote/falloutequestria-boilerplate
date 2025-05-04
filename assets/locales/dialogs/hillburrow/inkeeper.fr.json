@@ -1,0 +1,8 @@
+{
+    "dialogs": {
+        "hillburrow/inkeeper": {
+            "ask-room": "J'ai besoin d'une chambre.",
+            "exit-entry": "Au revoir."
+        }
+    }
+}
