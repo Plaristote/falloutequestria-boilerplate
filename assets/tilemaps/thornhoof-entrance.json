@@ -222,6 +222,16 @@
                  "opacity":1,
                  "properties":[
                         {
+                         "name":"target",
+                         "type":"string",
+                         "value":"thornhoof-town"
+                        }, 
+                        {
+                         "name":"targetZone",
+                         "type":"string",
+                         "value":"from-entrance"
+                        }, 
+                        {
                          "name":"type",
                          "type":"string",
                          "value":"exit"
