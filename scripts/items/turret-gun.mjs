@@ -23,10 +23,12 @@ class TurretGun extends WeaponBehaviour {
     return 20;
   }
 
-  getAnimationSteps(target) {
+  getUseAnimation() {
     return [
-      { type: "Animation", animation: "fire", object: this.user },
-      { type: "Sound", sound: this.fireAnimationSound, object: this.user }
+      [ // ParallelAnimation
+        { type: "Animation", animation: "fire", object: this.user },
+        { type: "Sound", sound: this.fireAnimationSound, object: this.user }
+      ]
     ]
   }
 }
