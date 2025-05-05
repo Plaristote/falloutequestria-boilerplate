@@ -50,6 +50,7 @@ export class CombatComponent extends SkillTargetComponent {
 
     console.log(this.logPrefix, "Detected enemies:", enemies, enemies.length);
     for (let i = 0 ; i < enemies.length ; ++i) {
+      if (!enemies[i].isAlive()) continue ;
       if (this.isTargetInRange(enemies[i]))
         candidates.push(enemies[i]);
       else
@@ -67,7 +68,8 @@ export class CombatComponent extends SkillTargetComponent {
   findCombatTarget() {
     console.log(this.logPrefix, "looking for a combat target");
     let shouldLookForTarget = true;
-    try { shouldLookForTarget = !(this.combatTarget && this.combatTarget.isAlive()); } catch (err) {}
+    try { shouldLookForTarget = !(this.combatTarget && this.combatTarget.isAlive()); }
+    catch (err) { this.combatTarget = null; }
     if (shouldLookForTarget) {
       if (typeof this.searchForNextCombatTarget == "function")
         this.combatTarget = this.searchForNextCombatTarget();
