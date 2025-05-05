@@ -2763,6 +2763,16 @@
             "source": "items/weapons.png",
             "width": 73
         },
+        "leather-armor": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 33,
+            "offsetX": 0,
+            "offsetY": 0,
+            "repeat": false,
+            "source": "items/metal-armor.png",
+            "width": 49
+        },
         "medikit": {
             "height": 36,
             "source": "medikit.png",
