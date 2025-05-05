@@ -1,7 +1,7 @@
 {
     "223-ammo": {
         "icon": "223-ammo.png",
-        "isGroupable": false,
+        "isGroupable": true,
         "scriptName": "ammo.mjs",
         "sprite": "misc",
         "type": "ammo",
@@ -10,7 +10,7 @@
     },
     "40mm-grenade-ammo": {
         "icon": "40mm-grenade-ammo.png",
-        "isGroupable": false,
+        "isGroupable": true,
         "scriptName": "ammo.mjs",
         "sprite": "misc",
         "type": "ammo",
@@ -197,7 +197,7 @@
         "icon": "leather-armor.webp",
         "isGroupable": true,
         "scriptName": "leather-armor.mjs",
-        "sprite": "misc",
+        "sprite": "leather-armor",
         "type": "armor",
         "value": 250,
         "weight": 10
