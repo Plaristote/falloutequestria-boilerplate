@@ -57,7 +57,7 @@ export class Turret extends CharacterBehaviour {
         actions.pushItemUse(this.combatTarget, "use-1");
         ap -= itemAp;
       }
-      console.log(ap, '/', this.model.actionPoints);
+      console.log(this.logPrefix, ap, '/', this.model.actionPoints);
       if (ap != this.model.actionPoints)
         return actions.start();
     }
