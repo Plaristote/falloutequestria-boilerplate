@@ -103,6 +103,7 @@ class Rathian extends CharacterBehaviour {
 
     if (this.model.getDistance(computer) <= 1) {
       this.state++;
+      level.findObject("stabletech-facility.turret#2").statistics.faction = "stabletech-facility";
       level.addTextBubble(this.model, i18n.t("junkville-stabletech.rathian-first-computer"), 6565);
       computer.setAnimation("monitor-left-on");
       door.getScriptObject().disableAutoclose();
