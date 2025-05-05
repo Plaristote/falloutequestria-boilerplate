@@ -202,14 +202,21 @@ export default class NegociationAssembly extends SceneManager {
   }
 
   debateResult(participants) {
-    let score = 0;
+    let warScore = 0;
+    let neutralScore = 0;
+    let acceptScore = 0;
 
     if (!participants) participants = this.actors;
     participants.forEach(actor => {
       const opinion = actor.getVariable(opinionVarName);
-      if (opinion > 0) score++;
-      else if (opinion < 0) score--;
+      if (opinion > 0) acceptScore++;
+      else if (opinion < 0) warScore++;
+      else neutralScore++;
     });
-    return score > 0 ? 'accept' : (score < 0 ? 'war' : 'reject');
+    if (acceptScore > neutralScore + warScore)
+      return 'accept';
+    if (warScore > neutralScore + warScore)
+      return 'war';
+    return 'reject';
   }
 }
