@@ -75,7 +75,7 @@ class Dialog extends DialogHelper {
     if (!this.scavengerCanProvideRansom()) return "scavengers/cannot-accept-ransom";
 
     // Cannot trade ransom for the sub-quest, since sub-quest is already completed
-    if (game.quests.getQuest("junkville/getRathianPart")?.completed == true) return "scavengers/accept-ransom";
+    if (game.quests.getQuest("junkville/getRathianParts")?.completed == true) return "scavengers/accept-ransom";
   }
 
   scavengerCanNegociateInsist() {

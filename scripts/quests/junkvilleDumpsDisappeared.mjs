@@ -197,6 +197,9 @@ export class JunkvilleDumpsDisappeared extends QuestHelper {
 
   onCompleted() {
     super.onCompleted();
-    game.dataEngine.addReputation("junkville", this.model.failed ? -75 : -100);
+    if (this.model.isObjectiveCompleted("save-all-captives"))
+      game.dataEngine.addReputation("junkville", 100);
+    else
+      game.dataEngine.addReputation("junkville", this.model.failed ? -75 : 50);
   }
 }
