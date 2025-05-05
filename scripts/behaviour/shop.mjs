@@ -122,9 +122,15 @@ export class Shop {
     }
     return false;
   }
+
+  canShopOwnerNoticeMovementOf(object) {
+    return object !== this.shopOwner
+        && this.isUnderSurveillance()
+        && (!object.sneaking || this.shopOwner.fieldOfView.isDetected(object));
+  }
   
   onZoneEntered(object) {
-    if (!level.combat && this.isUnderSurveillance())
+    if (!level.combat && this.canShopOwnerNoticeMovementOf(object))
     {
       if (this.opened)
         displayRandomTextBubble(this.shopOwner, entryReactions);
@@ -134,7 +140,7 @@ export class Shop {
   }
 
   onZoneExited(object) {
-    if (!level.combat && this.isUnderSurveillance() && this.opened)
+    if (!level.combat && this.canShopOwnerNoticeMovementOf(object) && this.opened)
       displayRandomTextBubble(this.shopOwner, exitReactions);
   }
 
