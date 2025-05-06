@@ -125,6 +125,7 @@ export class Shop {
 
   canShopOwnerNoticeMovementOf(object) {
     return object !== this.shopOwner
+        && object.getObjectType() == "Character"
         && this.isUnderSurveillance()
         && (!object.sneaking || this.shopOwner.fieldOfView.isDetected(object));
   }
@@ -156,6 +157,13 @@ export class Shop {
       return false;
     }
     return true;
+  }
+
+  refillShop() {
+    this.shopShelfs.forEach(shelf => {
+      if (shelf.script?.onShopRefill)
+        shelf.script.onShopRefill();
+    });
   }
 }
 
