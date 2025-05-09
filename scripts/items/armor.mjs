@@ -1,6 +1,6 @@
 import {ItemBehaviour} from "./item.mjs";
 
-export class ArmorBehaviour extends ItemBehaviour {
+export default class ArmorBehaviour extends ItemBehaviour {
   constructor(model) {
     super(model);
     this.triggersCombat = false;
