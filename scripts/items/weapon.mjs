@@ -110,15 +110,15 @@ export class WeaponBehaviour extends ItemBehaviour {
   getUseSuccessRateAt(target, position) {
     const attackerWeaponSkill = this.getUserSkillValue();
     const defenderArmorClass  = this.getTargetArmorClass(target);
-    var   baseToHit           = attackerWeaponSkill - defenderArmorClass;
+    let   baseToHit           = 10 + attackerWeaponSkill - defenderArmorClass;
 
-    if (this.isRangedWeapon())
-    {
-      const distance = target.getDistance(position.x, position.y);
+    if (this.isRangedWeapon()) {
+      const distance          = target.getDistance(position.x, position.y);
+      const aggravatingFactor = 12 - this.getUserPerception();
+      const vision            = level.getVisionQuality(target.position.x, target.position.y, position.x, position.y);
 
-      baseToHit -= 25;
-      baseToHit += 8 * Math.max(0, this.getUserPerception() - 2);
-      baseToHit -= Math.max(0, distance - 1) * 7;
+      baseToHit -= aggravatingFactor * Math.max(0, distance - 1);
+      baseToHit *= (vision / 100);
     }
     //console.log(attackerWeaponSkill, defenderArmorClass);
     return Math.max(0, Math.min(baseToHit, 95));
