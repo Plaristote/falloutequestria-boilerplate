@@ -1,4 +1,4 @@
-import {Armor} from "./armor.mjs";
+import Armor from "./armor.mjs";
 
 const mitigation = {
   "blunt": 0.5,
