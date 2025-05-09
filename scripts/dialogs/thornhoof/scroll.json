@@ -1,0 +1,58 @@
+{
+    "answers": {
+        "meeting-heroic-1": {
+            "hook": "onCouncilMeetingEntryResponse",
+            "text": "meeting-heroic-1"
+        },
+        "meeting-mercenary-1": {
+            "hook": "onCouncilMeetingEntryResponse",
+            "text": "meeting-mercenary-1"
+        },
+        "meeting-pacifist-1": {
+            "hook": "onCouncilMeetingEntryResponse",
+            "text": "meeting-pacifist-1"
+        },
+        "meeting-sarcasm-1": {
+            "hook": "onCouncilMeetingEntryResponse",
+            "text": "meeting-sarcasm-1"
+        }
+    },
+    "entryPoint": "",
+    "states": {
+        "councilMeeting/entry": {
+            "answers": [
+                "meeting-heroic-1",
+                "meeting-mercenary-1",
+                "meeting-pacifist-1",
+                "meeting-sarcasm-1"
+            ],
+            "text": "councilMeeting/entry"
+        },
+        "councilMeeting/heroic-reaction": {
+            "answers": [
+            ],
+            "text": "councilMeeting/heroic-reaction"
+        },
+        "councilMeeting/mercenary-reaction": {
+            "answers": [
+            ],
+            "text": "councilMeeting/mercenary-reaction"
+        },
+        "councilMeeting/pacifist-reaction": {
+            "answers": [
+            ],
+            "text": "councilMeeting/pacifist-reaction"
+        },
+        "councilMeeting/quest-intro": {
+            "answers": [
+            ],
+            "hook": "councilMeetingOnQuestIntro",
+            "text": "councilMeeting/quest-intro"
+        },
+        "councilMeeting/sarcasm-reaction": {
+            "answers": [
+            ],
+            "text": "councilMeeting/sarcasm-reaction"
+        }
+    }
+}

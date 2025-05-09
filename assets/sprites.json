@@ -5490,13 +5490,13 @@
             "frameInterval": 100,
             "height": 50,
             "offsetX": 440,
-            "offsetY": 548.936170212766,
+            "offsetY": 550,
             "repeat": false,
             "width": 55
         },
         "use-down": {
             "frameCount": 7,
-            "frameInterval": 100,
+            "frameInterval": 70,
             "height": 50,
             "offsetX": 440,
             "offsetY": 0,
@@ -5505,7 +5505,7 @@
         },
         "use-left": {
             "frameCount": 7,
-            "frameInterval": 100,
+            "frameInterval": 70,
             "height": 50,
             "offsetX": 440,
             "offsetY": 50,
@@ -5514,7 +5514,7 @@
         },
         "use-right": {
             "frameCount": 7,
-            "frameInterval": 100,
+            "frameInterval": 70,
             "height": 50,
             "offsetX": 440,
             "offsetY": 100,
@@ -5523,7 +5523,7 @@
         },
         "use-up": {
             "frameCount": 7,
-            "frameInterval": 75,
+            "frameInterval": 70,
             "height": 50,
             "offsetX": 440,
             "offsetY": 150,

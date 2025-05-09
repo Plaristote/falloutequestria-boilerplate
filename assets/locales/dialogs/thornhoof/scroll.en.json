@@ -1,0 +1,16 @@
+{
+    "dialogs": {
+        "thornhoof/scroll": {
+            "councilMeeting/entry": "We've got a visitor.<br>\nYou're well known around here, by now. And respected.\nTell me, stranger… or should I say, honorary citizen of Thornhoof…\ndid you come to bring us help once again ?",
+            "councilMeeting/heroic-reaction": "It is good to tread with ponies driven by morality. That is a rare and precious sight. I do hope however that your good will shall persist against the trials that we're about to face.",
+            "councilMeeting/mercenary-reaction": "The idealists at this table might not appreciate your pragmatism. But I believe that there is no stronger loyalty bond than money. And our coffers are filled with the riches that the Golden Herd would steal from us.\n<br><br>\nHelp this city in its time of needs, and you will be granted your fair share.",
+            "councilMeeting/pacifist-reaction": "That's… unsettling. The situation doesn't seem morally gray to me. The Golden Herd is waging war against us. We are the ones who are trapped behind walls. They're besieging us, after having destroyed our neighbor's home, Basalburg. The refugees we generously welcomed are proof of that. What is there left to ponder, I wonder…",
+            "councilMeeting/quest-intro": "Very well. Regardless, we need you. Rime Leaf thinks you could help her solve a matter of public security.\n<br><br>\nAnd I too, wish to talk with you. Face to face. These matters shouldn't be discussed publicly. You may meet us later, our offices are upstairs.",
+            "councilMeeting/sarcasm-reaction": "Outsider, this is a serious matter. Hundreds of lives are at stake.",
+            "meeting-heroic-1": "I'm here to help. I won't let you down.",
+            "meeting-mercenary-1": "As long as the reward is worth it, you'll have my support.",
+            "meeting-pacifist-1": "I'm here as an observer. I cannot take a decision right now.",
+            "meeting-sarcasm-1": "As much as I like the \"damsel in distress\" trope, you're not really my type."
+        }
+    }
+}

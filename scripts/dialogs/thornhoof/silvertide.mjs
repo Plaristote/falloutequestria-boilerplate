@@ -79,6 +79,7 @@ export default class extends DialogHelper {
     this.caravanQuest.completeObjective("report");
     this.caravanQuest.completed = true;
     level.findObject("checkpoint.gate#1").locked = false;
+    game.quests.addQuest("thornhoof/besiegedWalls");
   }
 
   caravanQuestFailed() {

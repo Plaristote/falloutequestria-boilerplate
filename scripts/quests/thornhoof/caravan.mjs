@@ -8,6 +8,10 @@ export default class extends QuestHelper {
     this.model.addObjective("steel-rangers-shipment", this.tr("steel-rangers-shipment"));
   }
 
+  get xpReward() {
+    return 2500;
+  }
+
   getDescription() {
     let text = this.model.tr("description-intro") + "<br><br>";
     if (this.model.isObjectiveCompleted("convince-narbi-fargo")) {

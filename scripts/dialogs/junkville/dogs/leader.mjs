@@ -41,6 +41,8 @@ class Dialog {
   //
   get scavengerQuest() { return game.quests.getQuest("junkvilleDumpsDisappeared"); }
 
+  get scavengerHealedWoundedDogs() { return this.scavengerQuest?.isObjectiveCompleted("healWoundedDogs"); }
+
   hasLostScavengerQuest() {
     return isLookingForDisappearedPonies();
   }
@@ -73,6 +75,10 @@ class Dialog {
   scavengerConvincedToRelease() {
     authorizeCaptiveRelease();
     enableScavengerRansom("alt");
+  }
+
+  scavengerWoundedHealed() {
+    authorizeCaptiveRelease();
   }
 
   scavengerAbout() {

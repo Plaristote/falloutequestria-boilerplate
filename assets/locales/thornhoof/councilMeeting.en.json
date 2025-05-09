@@ -1,0 +1,19 @@
+{
+  "scenes": {
+    "council-meeting": {
+      "#1-scroll": "It is not a matter of how, but when. Our milita is exhausted, and despite our recent resupply, the situation hasn't changed.",
+      "#2-silvertide": "We held strong until now. And we'll keep holding. Have faith in us. We don't have to fold, and we don't need the Steel Rangers' \"conditional\" support either.",
+      "#3-hoarfrost": "Miss {{target}}, be reasonable. You possess a technology that's beyond your means to use. We merely offer to exploit it for the good of both our people.",
+      "#4-beryl": "You mean you're offering to confiscate it from us. That battery is at the heart of my synchronized mass teleportation system. If that battery leaves this town, my projects are buried. You know that, Hoarfrost.",
+      "#5-leaf": "Beryl, your projects haven't stopped anything yet. The Golden Herd is at our doors, and we don't know when your project will be done... or if it ever will. Maybe we need to be thinking about this more pragmatically.",
+      "#6-varka": "At last a reasonable voice. My chief are tired of this sterile parody of a battle. Your walls won't protect you forever. Pay the tribute. Submit to the Herd. Your life will be saved, your town will be spared.",
+      "#7-scroll": "That tribute entails that we should provide slaves to you. That is non negociable, and you know that already, emissary Varka. We will not become a den of slaves. Not for you, nor anypony else.",
+      "#8-varka": "Vellum, always so virtuous... or so it seems. Your principles won't be worth anything once the walls are breached. The choice I'm offering you as simple as it is unavoidable.",
+      "#9-hoarfrost": "Varka is elluding the alternative. Give my Steel Rangers comrades what they ask for, and with our logistical and tactical help, you will make short work of this barbarian herd.",
+      "#10-beryl": "You think I'll sacrifice my whole research to your promises ? You think I don't see what you're planning ? You are not really helping us. You're using this opportunity to take us over !",
+      "#11-leaf": "What about you, Beryl ? Do you think we should sacrifice our town and its people, just to continue your crazy experiments ?",
+      "#12-silvertide": "Sweet Luna, just shut the buck up, everpony ! We're already at odds with the herd outside, we shouldn't fight amongst ourselves !",
+      "#13-scroll": "Let's take a moment to cool down. This meeting is adjourned. We'll vote on the matter at the next session. Think carefully."
+    }
+  }
+}

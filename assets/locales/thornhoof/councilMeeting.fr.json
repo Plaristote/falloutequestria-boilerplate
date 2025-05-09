@@ -1,0 +1,19 @@
+{
+  "scenes": {
+    "council-meeting": {
+      "#1-scroll": "Ce n'est plus qu'une question de temps. Notre milice est épuisée, et malgré notre récent ravitaillement, la situation ne change pas.",
+      "#2-silvertide": "Nous avons tenu bon jusque là. Nous continuerons. Gardez foi. Nous n'avons pas à nous soumettre, ni aux envahisseurs, ni aux Steel Rangers et leur support conditionnel.",
+      "#3-hoarfrost": "Madame {{target}}, soyez raisonnable. Vous possédez une technologie au-delà de votre compréhension. Nous vous offrons de l'investir pour le bien de nos deux peuples.",
+      "#4-beryl": "Vous voulez dire nous la confisquer. Cette batterie est au coeur de mon système de téléportation de masse. Et si elle quitte cette ville, mes projets seront enterrés. Vous le savez bien, Hoarfrost.",
+      "#5-leaf": "Beryl, tes projets n'ont rien changés. Le Troupeau d'Or est à nos portes, et nous ne savons quand, ou même si, ta technologie sera prête. Peut-être devrions nous évaluer cela pragmatiquement.",
+      "#6-varka": "Enfin une voie raisonnable. Mes chefs sont fatigués de cette parodie de bataille. Vos murs ne vous protégeront pas éternellement. Payez le tribut. Soumettez-vous. Vos vies seront sauvées, votre ville épargnée.",
+      "#7-scroll": "Un tribut comprenant des esclaves. C'est non négociable, vous le savez bien, émissaire Varka. Nous ne deviendrons pas un nid d'esclave. Ni pour vous, ni pour personne.",
+      "#8-varka": "Vellum, toujours si vertueux... apparemment. Vos principes ne vaudront plus rien quand vos murs seront percés. Je vous offre un choix aussi simple qu'inévitable.",
+      "#9-hoarfrost": "Varka omet l'alternative. Donnez aux Steel Rangers ce que nous vous demandons, et avec notre soutien logistique et tactique, ces barbares fuiront la queue entre les pates.",
+      "#10-beryl": "Vous pensez que je vais sacrifier mes recherches pour vos promesses ? Je vois ce que vous faites. Vous ne nous aidez pas. Vous utilisez l'opportunité pour neutraliser vos concurrents.",
+      "#11-leaf": "Et toi Beryl ? Tu pense donc que nous devrions sacrifier notre ville et ses habitants, pour pouvoir continuer tes expériences ?",
+      "#12-silvertide": "Au nom de Luna, fermez vos gueules une fois pour toute ! Notre ennemi est de l'autre côté de ces murs, gardez votre combativité pour lui !",
+      "#13-scroll": "Prenons un moment pour redescendre. Cette réunion est ajournée. Nous voterons à la prochaine session. Réflechissez-y bien."
+    }
+  }
+}

@@ -100,6 +100,16 @@ export class JunkvilleDumpsDisappeared extends QuestHelper {
     return { "medikit": 1, "healing-potion": 5 };
   }
 
+  get woundedDogs() {
+    return this.model.getVariable("woundedDogs", 3);
+  }
+
+  set woundedDogs(value) {
+    this.model.setVariable("woundedDogs", value);
+    if (value <= 0)
+      this.model.completeObjective("healWoundedDogs");
+  }
+
   canInventoryProvideRequiredSupplies(inventory) {
     return inventory.count("health-potion") >= 5 && inventory.count("doctor-bag") >= 1;
   }
@@ -123,7 +133,11 @@ export class JunkvilleDumpsDisappeared extends QuestHelper {
       success: this.captiveFound()
     });
     if (this.model.isObjectiveCompleted("find-disappeared")) {
-      if (this.ransomActive) {
+      if (this.model.isObjectiveCompleted("healWoundedDogs")) {
+        objectives.push({
+          label: this.tr("heal-wounded-dogs"), success: true
+        });
+      } else if (this.ransomActive) {
         objectives.push({
           label: this.tr("bring-ransom"),
           success: this.captiveAlive() && this.model.isObjectiveCompleted("bring-ransom"),
@@ -192,6 +206,7 @@ export class JunkvilleDumpsDisappeared extends QuestHelper {
     } else if (name === "bring-ransom" && success) {
       const negociateQuest = requireQuest("junkvilleNegociateWithDogs");
       negociateQuest.completeObjective("bring-medical-supplies");
+      level.findGroup("wounded").objects.forEach(dog => dog.script.onHealed());
     }
   }
 

@@ -252,8 +252,8 @@
         },
         "scavengers/about": {
             "answers": [
-                "scavengers-ask-why-captives",
                 "scavengers-ask-demands",
+                "scavengers-ask-why-captives",
                 "intimidation-free-scavengers"
             ],
             "hook": "scavengerAbout",
@@ -296,6 +296,8 @@
         "scavengers/on-dogs-healed": {
             "answers": [
             ],
+            "hook": "scavengerWoundedHealed",
+            "mood": "smile",
             "text": "scavengers/on-dogs-healed"
         },
         "scavengers/on-motives-followup": {
