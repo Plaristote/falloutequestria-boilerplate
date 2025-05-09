@@ -5,18 +5,31 @@
     "summer-wind": "worldmap/SkyBolt - Summer Wind.mp3",
     "menu": "menu.mp3"
   },
-  "eltest": { "desert-wind": "desert-wind.mp3" },
-  "eltest5": { "desert-wind": "desert-wind.mp3" },
   "stable-cavern": { "moribound-world": "moribund-world.mp3" },
   "hillburrow-entrance": { "second-chance": "second-chance.mp3" },
+  "hillburrow-backtown": { "second-chance": "second-chance.mp3" },
+  "hillburrow-source": { "second-chance": "second-chance.mp3" },
   "worldmap": {
     "highwayman": "worldmap.mp3",
     "99-problems": "worldmap/SkyBolt - 99 Problems.mp3",
     "summer-wind": "worldmap/SkyBolt - Summer Wind.mp3"
   },
-  "tutorial": { "moribound-world": "moribund-world.mp3" },
-  "city-sample": { "second-chance": "second-chance.mp3" },
   "random-desert-1": { "desert-wind": "desert-wind.mp3" },
   "random-desert-2": { "desert-wind": "desert-wind.mp3" },
-  "random-desert-cabin": { "desert-wind": "desert-wind.mp3" }
+  "random-desert-cabin": { "desert-wind": "desert-wind.mp3" },
+  "junkville": { "moribund-world": "moribund-world.mp3" },
+  "junkville-dumps": { "moribund-world": "moribund-world.mp3" },
+  "junkville-underground": { "cola": "city-of-lost-angels.opus" },
+  "junkville-southern-cavern": { "cola": "city-of-lost-angels.opus" },
+  "junkville-stabletech-facility": { "industrial-junk": "industrial-junk.opus" },
+  "cristal-den-entrance": { "traders-life": "traders-life.opus", "moribund-world": "moribund-world.mp3" },
+  "cristal-den-center": { "traders-life": "traders-life.opus", "moribund-world": "moribund-world.mp3" },
+  "cristal-den-slums": { "traders-life": "traders-life.opus", "moribund-world": "moribund-world.mp3" },
+  "cristal-den-ranch": { "traders-life": "traders-life.opus", "moribund-world": "moribund-world.mp3" },
+  "capital-laboratory": { "vats-of-goo": "vats-of-goo.opus" },
+  "capital-suburbs": { "cotd": "city-of-the-dead.opus" },
+  "capital-laboratory-entry": { "cotd": "city-of-the-dead.opus" },
+  "capital-theater": { "second-chance": "dream-town.opus" },
+  "capital-tunnels": { "cotd": "city-of-the-dead.opus" },
+  "rathian-meeting": { "khans": "khans.opus" }
 }
