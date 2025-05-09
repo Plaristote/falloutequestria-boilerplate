@@ -5,8 +5,10 @@ export class SceneManager {
     this.parent = parent;
     this.model = parent.model;
     this.id = id;
-    if (this.active)
+    if (this.active) {
+      this.registerSceneManager();
       this.triggerCurrentStep();
+    }
   }
 
   get storageScope() {
@@ -108,11 +110,11 @@ export class SceneManager {
   }
 
   dialogLineStep(options) {
-    const actions = options.speaker.actionQueue;
+    const actions = options.speaker?.actionQueue;
     const bubbleDuration = (options.bubbleDuration * 1000) || (options.duration * 1300);
     const color = options.color || "white";
 
-    if (options.speaker.unconscious) {
+    if (!actions || options.speaker.unconscious) {
       options.fallback ? options.fallback() : this.triggerNextStep();
     } else {
       if (options.target)
