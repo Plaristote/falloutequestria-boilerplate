@@ -101,15 +101,24 @@ export class CharacterBehaviour extends SceneActorComponent {
       return ;
   }
 
+  onDied() {
+    this.playReactionSound("dead");
+    super.onDied();
+  }
+
   playReactionSound(reaction) {
     const stats = this.model.statistics;
     const soundCats = {
       "ponies": ["earth-pony", "pegasus", "unicorn"],
       "ghoul": ["ghoul"]
     }
+    if (["damaged, fall, dodge"])
+      reaction = `${reaction}-${1 + Math.floor(Math.random() * 1.99)}`;
+    else
+      reaction = `${reaction}-1`;
     for (let cat in soundCats) {
       if (soundCats[cat].indexOf(stats.race) >= 0) {
-        game.sounds.play(this.model, `${cat}/${stats.gender}/${reaction}-1`)
+        game.sounds.play(this.model, `${cat}/${stats.gender}/${reaction}`)
         return ;
       }
     }
