@@ -13,6 +13,10 @@ class Silvertide extends CharacterBehaviour {
   get speakOnDetection() {
     return !this.metPlayer;
   }
+
+  get shouldBeAtThornhoofEntrance() {
+    return this.model.isAlive();
+  }
 }
 
 export function create(model) {

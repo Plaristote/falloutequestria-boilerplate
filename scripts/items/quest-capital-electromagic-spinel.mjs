@@ -1,4 +1,4 @@
-import {ItemBehaviour} from "./../item.mjs";
+import {ItemBehaviour} from "./item.mjs";
 
 export default class QuestCapitalElectromagicSpinel extends ItemBehaviour {
   constructor(model) {

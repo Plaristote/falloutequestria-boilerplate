@@ -1,0 +1,16 @@
+{
+    "dialogs": {
+        "thornhoof/scroll": {
+            "councilMeeting/entry": "Eh bien… nous avons un visiteur.<br>\nTu es un visage connu dans ces murs, désormais. Un visage respecté.\nDis-moi, étranger… ou devrais-je dire, citoyen d'honneur de Thornhoof…\nes-tu venu nous aider encore une fois ?",
+            "councilMeeting/heroic-reaction": "Il est bon de traiter avec des poneys animés par une conscience morale. Voilà qui est rare, et précieux. J'espère cependant que ta bonne volonté subsistera aux difficultés que nous allons traverser.",
+            "councilMeeting/mercenary-reaction": "Certains idealistes à cette table n'apprécieront pas ton pragmatisme à sa juste valeur. En ce qui me concerne, je crois que rien en construit la loyauté aussi bien qu'un solde adequat. Et nos coffres sont remplis des richesses que le Troupeau d'Or voudrait nous déroaber.\n<br><br>\nViens au secours de cette ville dans sa plus mauvaise heure, et tu sera jutement récompensé à la hauteur de ce que tu aura sauvé.",
+            "councilMeeting/pacifist-reaction": "Voilà qui est surprenant. La situation ne me semble pourtant pas moralement floue. Le Troupeau d'Or nous attaque. C'est nous, qui sommes enfermés, entre nos murs. Ils nous assiègent, après avoir rasé le foyer de nos voisins de Basalbourgs, comme en témoigneront les réfugiés que nous avons généreusement accueillis. Qu'y a-t-il donc encore à observer, je me le demande…",
+            "councilMeeting/quest-intro": "Soit. Quoiqu'il en soit, nous avons besoin de toi. Rime Leaf pense que tu pourrais l'aider pour une question de sécurité intérieure.\n<br><br>\nEt moi aussi, j’aimerais te parler. Face à face. Ces sujets ne peuvent pas être abordés publiquement. Retrouve-nous dans nos bureaux respectifs, à l'étage.",
+            "councilMeeting/sarcasm-reaction": "Étranger, la situation est sérieuse. Des centaines de vies sont en jeu.",
+            "meeting-heroic-1": "Je suis venu apporter mon aide. Je ne vous laisserai pas tomber.",
+            "meeting-mercenary-1": "Si la paye est bonne, vous pouvez compter sur moi.",
+            "meeting-pacifist-1": "Je suis ici en tant qu'observateur. Je ne peux pas encore prendre parti.",
+            "meeting-sarcasm-1": "J'adore sauver les princesses en détresse, mais je t'es pas vraiment mon type."
+        }
+    }
+}
