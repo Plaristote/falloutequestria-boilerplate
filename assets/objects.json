@@ -365,6 +365,15 @@
         "value": 9000,
         "weight": 50
     },
+    "power-saddle": {
+        "icon": "saddle-basic.png",
+        "isGroupable": true,
+        "scriptName": "powerSaddle.mjs",
+        "sprite": "",
+        "type": "armor",
+        "value": 500,
+        "weight": 25
+    },
     "quest-hillburrow-murder-evidence": {
         "icon": "sherif-star.png",
         "isGroupable": false,
