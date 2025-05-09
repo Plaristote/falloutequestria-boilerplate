@@ -98,7 +98,9 @@ export class WeaponBehaviour extends ItemBehaviour {
     return true;
   }
 
-  playMissSound() {
+  playMissSound(target) {
+    if (target?.script?.playReactionSound)
+      target.script.playReactionSound("dodged");
   }
 
   playHitSound(target) {
