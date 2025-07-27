@@ -1,6 +1,6 @@
 import {CharacterBehaviour} from "./character.mjs";
 
-export class Changeling extends CharacterBehaviour {
+export default class Changeling extends CharacterBehaviour {
   changelingTransform(race, params) {
     const buff = this.model.getBuff("polymorphed");
 

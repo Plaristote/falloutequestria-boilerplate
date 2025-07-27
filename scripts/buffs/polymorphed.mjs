@@ -57,7 +57,7 @@ export class Polymorphed {
 
   startPolymorph() {
     this.applyMorph(this.newMorph);
-    if (this.originalForm.race === "changeling") {
+    if (this.originalForm.race !== "changeling") {
       this.model.tasks.addTask("wearOff", 3600000);
     }
   }
