@@ -41,9 +41,9 @@ function isBusy(routine) {
       || (routine.model.type == "Character" && isBusyCharacter(routine));
 }
 
-function scheduleRoutineRefresh(routine, enabled = true) {
-  routine.model.tasks.addTask(
-    refreshRoutineTaskName,
+function scheduleRoutineRefresh(routine) {
+  routine.model.tasks.addUniqueTask(
+    routine.refreshRoutineTaskName,
     routine.refreshInterval + randomInterval(),
     1
   );
@@ -61,24 +61,33 @@ function refreshRoutine(routine) {
 }
 
 export class RoutineComponent {
-  constructor(parent, routine) {
+  constructor(parent, routine, prefix = "") {
     this.parent = parent;
     this.model = parent.model;
     this.routine = routine;
     this.refreshInterval = 4545;
-    this.parent[updateRoutineTaskName] = this.updateRoutine.bind(this);
-    this.parent[refreshRoutineTaskName] = () => refreshRoutine(this);
-    if (!this.model.tasks.hasTask(updateRoutineTaskName))
-      this.model.tasks.addUniqueTask(updateRoutineTaskName, randomInterval(), 1);
+    this.pefix = prefix;
+    this.parent[this.updateRoutineTaskName] = this.updateRoutine.bind(this);
+    this.parent[this.refreshRoutineTaskName] = () => refreshRoutine(this);
+    if (!this.model.tasks.hasTask(this.updateRoutineTaskName))
+      this.model.tasks.addTask(this.updateRoutineTaskName, randomInterval(), 1);
+  }
+
+  get updateRoutineTaskName() {
+    return `${this.prefix}${updateRoutineTaskName}`;
+  }
+
+  get refreshRoutineTaskName() {
+    return `${this.prefix}${refreshRoutineTaskName}`;
   }
 
   enablePersistentRoutine() {
-    if (!this.model.tasks.hasTask(refreshRoutineTaskName))
+    if (!this.model.tasks.hasTask(this.refreshRoutineTaskName))
       scheduleRoutineRefresh(this);
   }
 
   disablePersistentRoutine() {
-    this.model.tasks.removeTask(refreshRoutineTaskName);
+    this.model.tasks.removeTask(this.refreshRoutineTaskName);
   }
 
   getRoutines() {
@@ -104,11 +113,11 @@ export class RoutineComponent {
 
   scheduleNextRoutineAction() {
     const options = this.getRoutines().sort(soonerFirst);
-    this.model.tasks.addUniqueTask(updateRoutineTaskName, options[0].nextTrigger, 1);
+    this.model.tasks.addTask(this.updateRoutineTaskName, options[0].nextTrigger, 1);
   }
 
   rescheduleRoutineAction() {
-    this.model.tasks.addTask(updateRoutineTaskName, 1234, 1);
+    this.model.tasks.addTask(this.updateRoutineTaskName, 1234, 1);
   }
 
   updateRoutine() {
