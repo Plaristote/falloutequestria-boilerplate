@@ -2789,6 +2789,28 @@
             "width": 65
         }
     },
+    "ladder": {
+        "B-down": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 36,
+            "offsetX": 70,
+            "offsetY": 0,
+            "repeat": false,
+            "source": "ladder.png",
+            "width": 68
+        },
+        "idle": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 109,
+            "offsetX": 0,
+            "offsetY": 0,
+            "repeat": false,
+            "source": "ladder.png",
+            "width": 68
+        }
+    },
     "landmine": {
         "defaultSource": "",
         "off": {
