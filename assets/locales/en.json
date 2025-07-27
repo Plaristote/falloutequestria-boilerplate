@@ -104,9 +104,17 @@
             "description": "A gang located in the Cristal Den's slums, led by the infamous Bibin.",
             "name": "Bibin's Band"
         },
+        "changeling-hive": {
+            "description": "factions.changeling-hive.description",
+            "name": "Changeling Hive"
+        },
         "cristal-den": {
             "description": "The most prosperous town of the crystal wastes, Crystal Den was built by the Potiok family, soon after the destruction of the Crystal Empire. The Crystal Den is home to many farmers, merchants, caravaneers, slavers, and it is also the resting place of many lost souls, who live day by day and try to get by.",
             "name": "Crystal Den"
+        },
+        "cristal-den-brothel": {
+            "description": "factions.cristal-den-brothel.description",
+            "name": "factions.cristal-den-brothel.name"
         },
         "cristal-den-slaves": {
             "description": "factions.cristal-den-slaves.description",

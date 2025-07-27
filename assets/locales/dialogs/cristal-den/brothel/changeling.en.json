@@ -1,0 +1,42 @@
+{
+    "dialogs": {
+        "cristal-den/brothel/changeling": {
+            "about-help": "Fuck no. That’s dangerous. Did you see the waste of emotions and his goons? I just wanted a safe, non-dangerous pencil pusher job, but the queen demands unwilling sacrifices. Just do your job; I’ll do mine job and replace that pony. You’ll get paid, I stay safe, and we’ll all be happy.",
+            "about-help-agan": "No. Kill the guy.",
+            "about-self#1": "What ?",
+            "about-self#2": "I am Petiole, stop that and get to work.\t",
+            "about-target": "Fat scumbag lives in the same establishment he owns to the right of me. He is of the Potiok family, but has been luckily been distanced, making changes in his behavior not as surprising. I’ve seen him asleep around 4:00 to 11:00, at office around 12:00 to 17:00, walking around his establishment ‘encouraging’ his workers from 18:00 to 3:00. Honestly, I can do a much better job than that fat stallion. His office has no organization. If he wasn’t constantly guarded by his goons, one of his workers would have already shanked him.",
+            "accept-help": "Fine, fine. I’ll help. How are we going to do it?",
+            "ask-about": "Who are you, Petiole ?",
+            "ask-about-self-twice": "Who are you, Petiole ?",
+            "ask-for-help": "Aren't you going to help ?",
+            "ask-help-cute": "Pretty please.",
+            "ask-help-giveup": "Nevermind.",
+            "ask-help-insult": "Hey, insect shit, this is supposed to be team effort. Either help or I won’t do it.",
+            "ask-help-intimidate": "You are, going to do what I say… or else.",
+            "ask-help-sexy": "<i>[Move very close to Petiole]</i>\nHow about I give some LOVE in exchange for your help.",
+            "ask-help-speech": "And if I fail? Will you crawl back to your queen because you failed?",
+            "ask-target": "Tell me everything about the target.",
+            "exit-quest-prompt": "I'll get to it.",
+            "help-distraction": "I’m going to distract the guards. And you will take care of the pimp.",
+            "help-explosive": "We could lead Tout to a trap. I’ll tell him he can find you here, and you’ll set up the trap. <i>[Give explosive]</i>",
+            "help-frontal-assault": "We’ll attack straight ahead.",
+            "on-cute": "You’d make a cute personal slave… but no.",
+            "on-help-assault": "You are walking in front of me then, alright!?",
+            "on-help-distraction": "Sounds like a plan. When he’s in his office, get the guard away from his door. I can take care of one fat pony.",
+            "on-help-explosive": "Sounds like a plan. Get him to this alley, near the trash bin; I’ll be away by then. I’ll watch from the other side of the street.",
+            "on-insulted": "I know you want the money. You'll do it.",
+            "quest-exit-queens-route": "Ta reine devrait inculquer plus de respect dans tes miches d'insecte. Estime-toi heureux que je te balance pas directement dans le bureau de Tout.",
+            "start": "You're the guy they sent over to help me ?",
+            "start-ignorance": "Who ?",
+            "start-on-ignorance": "If you don’t know, then you’re not the guy.",
+            "start-quest": "Whatever. Listen here, I really don’t want this job. The queen is paying you, isn’t she? I’m sure you’ll do fine without me. Come back to me when it’s done.",
+            "start-quest-awkward": "<i>She audibly sighs, her pony disguise somehow showing her exhaustion in her eyes.</i>\n<br><br>\nThey brought me a buffoon. Just do the job, okay?",
+            "start-quest-buffoon": "Maaaaybe ? <i>[You wink and wiggle your eyebrow, as if showing off that you have insider information]</i>",
+            "start-quest-irritated": "What is it, pony.",
+            "start-quest-lie": "<i>[Lie]</i> Yup. That's me.",
+            "start-quest-normal": "Are you Petiole ?",
+            "start-quest-reentry": "When will you be done ?"
+        }
+    }
+}
