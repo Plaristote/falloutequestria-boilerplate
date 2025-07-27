@@ -1,0 +1,198 @@
+{
+    "answers": {
+        "ask-about": {
+            "state": "about-self#1",
+            "text": "ask-about"
+        },
+        "ask-about-self-twice": {
+            "state": "start-quest",
+            "text": "ask-about"
+        },
+        "ask-for-help": {
+            "state": "about-help",
+            "text": "ask-for-help"
+        },
+        "ask-help-cute": {
+            "state": "start-quest",
+            "text": "ask-help-cute"
+        },
+        "ask-help-giveup": {
+            "state": "start-quest",
+            "text": "ask-help-giveup"
+        },
+        "ask-help-insult": {
+            "state": "start-quest",
+            "text": "ask-help-insult"
+        },
+        "ask-help-intimidate": {
+            "availableHook": "canIntimidateIntoHelping",
+            "state": "accept-help",
+            "text": "ask-help-intimidate"
+        },
+        "ask-help-sexy": {
+            "availableHook": "canSeduceIntoHelping",
+            "state": "accept-help",
+            "text": "ask-help-sexy"
+        },
+        "ask-help-speech": {
+            "availableHook": "canConvinceToHelp",
+            "state": "accept-help",
+            "text": "ask-help-speech"
+        },
+        "ask-target": {
+            "state": "start-quest",
+            "text": "ask-target"
+        },
+        "exit-quest-prompt": {
+            "text": "exit-quest-prompt"
+        },
+        "help-distraction": {
+            "state": "on-help-distraction",
+            "text": "help-distraction"
+        },
+        "help-explosive": {
+            "availableHook": "canPrepareTrap",
+            "state": "on-help-explosive",
+            "text": "help-explosive"
+        },
+        "help-frontal-assault": {
+            "availableHook": "canConvinceAssault",
+            "state": "on-help-assault",
+            "text": "help-frontal-assault"
+        },
+        "start-ignorance": {
+            "state": "start-on-ignorance",
+            "text": "start-ignorance"
+        },
+        "start-quest-buffoon": {
+            "availableHook": "questPreStarted",
+            "state": "start-quest",
+            "text": "start-quest-buffoon"
+        },
+        "start-quest-lie": {
+            "availableHook": "canStartQuestThroughLie",
+            "state": "start-quest",
+            "text": "start-quest-lie"
+        },
+        "start-quest-normal": {
+            "availableHook": "questPreStarted",
+            "state": "start-quest",
+            "text": "start-quest-normal"
+        }
+    },
+    "entryPoint": "start",
+    "states": {
+        "about-help": {
+            "answers": [
+                "ask-help-speech",
+                "ask-help-intimidate",
+                "ask-help-insult",
+                "ask-help-sexy",
+                "ask-help-cute",
+                "ask-help-giveup"
+            ],
+            "hook": "onAskedHelp",
+            "text": "about-help"
+        },
+        "about-help-agan": {
+            "answers": [
+            ],
+            "text": "about-help-agan"
+        },
+        "about-self#1": {
+            "answers": [
+                "ask-about-self-twice"
+            ],
+            "mood": "dubious",
+            "text": "about-self#1"
+        },
+        "about-self#2": {
+            "answers": [
+            ],
+            "text": "about-self#2"
+        },
+        "about-target": {
+            "answers": [
+            ],
+            "text": "about-target"
+        },
+        "accept-help": {
+            "answers": [
+                "help-explosive",
+                "help-frontal-assault",
+                "help-distraction"
+            ],
+            "text": "accept-help"
+        },
+        "on-cute": {
+            "answers": [
+            ],
+            "text": "on-cute"
+        },
+        "on-help-assault": {
+            "answers": [
+            ],
+            "hook": "startAssault",
+            "text": "on-help-assault"
+        },
+        "on-help-distraction": {
+            "answers": [
+            ],
+            "text": "on-help-distraction"
+        },
+        "on-help-explosive": {
+            "answers": [
+            ],
+            "text": "on-help-explosive"
+        },
+        "on-insulted": {
+            "answers": [
+            ],
+            "text": "on-insulted"
+        },
+        "quest-exit-queens-route": {
+            "answers": [
+            ],
+            "text": "quest-exit-queens-route"
+        },
+        "start": {
+            "answers": [
+                "start-ignorance",
+                "start-quest-lie",
+                "start-quest-normal",
+                "start-quest-buffoon"
+            ],
+            "text": "start"
+        },
+        "start-on-ignorance": {
+            "answers": [
+            ],
+            "text": "start-on-ignorance"
+        },
+        "start-quest": {
+            "answers": [
+                "ask-for-help",
+                "ask-about",
+                "ask-target",
+                "exit-quest-prompt"
+            ],
+            "hook": "onStartQuest",
+            "text": "start-quest"
+        },
+        "start-quest-awkward": {
+            "answers": [
+            ],
+            "text": "start-quest-awkward"
+        },
+        "start-quest-irritated": {
+            "answers": [
+            ],
+            "text": "start-quest-irritated"
+        },
+        "start-quest-reentry": {
+            "answers": [
+            ],
+            "text": "start-quest-reentry"
+        }
+    }
+}

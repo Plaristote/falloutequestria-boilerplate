@@ -1,0 +1,40 @@
+{
+    "dialogs": {
+        "cristal-den/brothel/changeling": {
+            "about-help": "Putain non. C'est dangereux. Tu l'as bien vu, ce gachi d'émotions, avec ses sbires ? Tout ce que je voulais, c'était un taffe tranquille, sans danger, à gratter du papier… mais la reine exige des sacrifices. Fais ta part du boulot; je ferais la mienne en remplaçant ce poney. T'es payé, je reste a l'abri, et tout le monde est content.",
+            "about-help-agan": "Non. Tue-le gonz.",
+            "about-self#1": "Quoi ?",
+            "about-self#2": "Je suis Petiole, arrête ça et met toi au travail.\t",
+            "accept-help": "D'accord, d'accord. Je vais t'aider. Comment est-ce que tu compte t'y prendre ?",
+            "ask-about": "Qui es-tu, Pétiole ?",
+            "ask-about-self-twice": "Qui es-tu, Pétiole ?",
+            "ask-for-help": "Tu va pas vouloir m'aider ?",
+            "ask-help-cute": "S'il te plait ?",
+            "ask-help-insult": "Éh, la merde d'insecte, on est censé bosser ensemble. Soit tu participe, soit je me casse.",
+            "ask-help-intimidate": "Tu va faire ce que je te demande, sinon…",
+            "ask-help-sexy": "<i>[Sussurer dans l'oreille]</i>\nEt si je t'offrais un peu… d'amour, en échange de ton aide ?",
+            "ask-help-speech": "Et si je meurs ? Tu rampera jusqu'à ta reine lui expliquer que tu as échoué ?",
+            "ask-target": "Tell me everything about the target.",
+            "exit-quest-prompt": "Je m'en charge.",
+            "help-distraction": "Je vais attirer l'attention des gardes. Et tu va t'occuper du maqueraud.",
+            "help-explosive": "On pourrait attirer Tout dans un piège. Je vais le leurrer derrière le bâtiment, vers la poubelle. Et tu déclenche le piège. <i>[Donner un explosif]</i>",
+            "help-frontal-assault": "On les attaque, maintenant.",
+            "on-cute": "Tu serais mignon, comme esclave personnel… mais c'est non.",
+            "on-help-assault": "Dans ce cas, c'est toi qui prend les devants, compris ?!",
+            "on-help-distraction": "C'est un plan. Quand il sera dans son bureau, éloigne les gardes de sa porte. Je peux me charger d'un petit poney grasouillet.",
+            "on-help-explosive": "C'est un plan. Ramène-le dans cette allée, dis-lui que je me cache dans la poubelle; je serais déjà loin. Je surveillerais la situation de l'autre côté de la rue.",
+            "on-insulted": "Je sais que tu veux le pognon. Tu va faire le taf.",
+            "quest-exit-queens-route": "Your queen should put some respect your buggy ass. You better appreciate that I won’t throw you into Tout’s office.",
+            "start": "C'est toi qu'on a envoyé pour m'aider ?",
+            "start-ignorance": "De quoi ?",
+            "start-on-ignorance": "Si t'es pas au courant, t'es pas la bonne personne.",
+            "start-quest": "Peu importe. Écoute, j'ai pas envie de ce taf. La reine te paye, non ? Tu t'en sortira très bien sans moi. Reviens me voir quand c'est fait.",
+            "start-quest-awkward": "<i>Elle soupire, visiblement à boût, si l'on en croit ses yeux épuisés.</i>\n<br><br>\nIls me refilent un bouffon. Contente-toi de faire le taf, d'accord ?",
+            "start-quest-buffoon": "Hmmm, ptet ben que oui ? <i>[Tu fais un clin d'oeil pétillant et hausse tes sourils, pour montrer que tu es dans la confidence]</i>",
+            "start-quest-irritated": "Qu'est-ce que tu veux, le poney ?",
+            "start-quest-lie": "<i>[Mentir]</i> Ouais. C'est moi !",
+            "start-quest-normal": "C'est toi, Petiole ?",
+            "start-quest-reentry": "Alors, t'as toujours pas fini ?"
+        }
+    }
+}
