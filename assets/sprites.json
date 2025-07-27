@@ -5418,6 +5418,45 @@
             "width": 105
         }
     },
+    "wooden-desk": {
+        "bottom-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 69,
+            "offsetX": 350,
+            "offsetY": 0,
+            "repeat": false,
+            "width": 85
+        },
+        "bottom-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 69,
+            "offsetX": 523,
+            "offsetY": 0,
+            "repeat": false,
+            "width": 85
+        },
+        "defaultSource": "wood-desk.png",
+        "upper-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 69,
+            "offsetX": 264,
+            "offsetY": 0,
+            "repeat": false,
+            "width": 85
+        },
+        "upper-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 69,
+            "offsetX": 436,
+            "offsetY": 0,
+            "repeat": false,
+            "width": 85
+        }
+    },
     "wooden-door": {
         "close-down": {
             "frameCount": 6,
