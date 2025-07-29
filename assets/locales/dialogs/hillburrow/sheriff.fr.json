@@ -1,0 +1,16 @@
+{
+    "dialogs": {
+        "hillburrow/sheriff": {
+            "about-npc": "Mon nom est {{npc}}. C'est moi qui fait respecter l'ordre dans ce patelin.",
+            "ask-about-npc": "Qui es-tu ?",
+            "ask-about-work": "Je cherche du travail. Il y a quelque chose à faire dans le coin ?",
+            "back-to-entry": "Parlons d'autre chose.",
+            "entry": "'jour. Besoin d'aide ?",
+            "exit-entry": "Non, salut !",
+            "introduce-player": "Enchanté. Je suis {{name}}.",
+            "name-already-known": "Oui. Tu es {{name}}. Je sais. Tu me l'as déjà dit.",
+            "no-more-work": "Je n'ai rien pour toi, en cemoment. C'est un petit village, après tout.",
+            "report-quest-old-sherif": "J'ai de nouvelles informations sur le meurtre de Scratchy Leads."
+        }
+    }
+}
