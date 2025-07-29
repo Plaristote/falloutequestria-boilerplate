@@ -1,0 +1,19 @@
+{
+  "quests": {
+    "cristal-den/pimp-changeling": {
+      "title": "Pimp up mon Changelin",
+      "intro-on-queens-orders": "Vous avez été commissioné par la Reine des Changelins afin de prouver votre valeur. Ils veulent conquérir le quartier rouge du Havre de Cristal. Remplace le maqueraud Tout Spruiker Potiok par le changelin Petiole. Elle patiente aux alentours du Glimmering Tail dans le quartier rouge du Havre de Cristal.",
+      "intro-lied-to-petiole": "Ce drôle de poney t'as dit de tuer ce maqueraud, Tout Potiok. Pourquoi pas ?",
+      "desc-petiole-killed": "Il semble que Pétiole soit morte. Quoiqu'il soit arrivé, c'était probablement de sa faute. Sans elle, la mission est un echec.",
+      "desc-petiole-killed-on-queens-orders": " Fais ton rapport à la Reine, si tu l'ose.",
+      "desc-pimp-killed": "Tout est de l'histoire ancienne, une note qui sera perdue dans les sables du temps. Félicitations. Tu as amené les changelins 0.00001% plus proches de la domination mondiale. Fais ton rapport à la Reine des changelins.",
+      "desc-report-to-mysterious-queen": "Parle à la reine afin d'obtenir ton paiement. Qui est la reine ? À toi de le découvrir.",
+      "talk-to-petiole": "Parler avec Pétiole",
+      "kill-pimp": "Se débarasser de Tout Potiok",
+      "kill-pimp-distraction": "Tu as convaincu Pétiole de t'aider. Tu n'as qu'à t'occuper des gardes, pendant qu'elle se charge discrètement de Tout.",
+      "kill-pimp-backalley": "Amène Tout dans l'allée derrière le Glimmering Tail, où Pétiole a placé un explsoif qui mettra Tout Potiok à la retraite.",
+      "report-to-queen": "Parler avec la Reine",
+      "distract-guards": "Détourne l'attention des gardes"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+    "dialogs": {
+        "cristal-den/brothel/guard": {
+            "accept-bribe": "Très bien, voilà votre argent.",
+            "distract-alcohol": "<i>[Offrir de l'alcool]</i> Tenez. Une récompense pour votre dur labeur !",
+            "distract-bribe": "<i>[Les envoyer chasser le dahu]</i> J'ai besoin d'aide pour éduquer un mauvais bougre. Vous pourriez vous occuper de lui pour moi, en échange d'une récompense ?",
+            "distract-lie": "<i>[Mentir]</i> Une de vos travailleuses se fait attaquer par un rival !",
+            "entry": "Qu'est-ce que tu veux ?",
+            "entry-exit": "Rien, pardon.",
+            "goose-chase-entry": "Ouais. C'est dans nos cordes. Pour {{bribeAmount}} capsules, on peut donner une petite leçon à ton pote.",
+            "goose-chase-negociated": "Tu sais quoi ? T'as pas tort. On fait comme ça.",
+            "negociate-bribe": "Je n'ai pas tant d'argent sur moi, mais c'est un job sans risque, et une occasion de vous défouler. Je suis sur que vous pourriez accepter {{negociatedBribeAmount}}.",
+            "reject-bribe": "On dirait que je ne peux pas me le permettre."
+        }
+    }
+}

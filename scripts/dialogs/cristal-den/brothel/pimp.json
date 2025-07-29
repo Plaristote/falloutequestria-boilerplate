@@ -1,0 +1,60 @@
+{
+    "answers": {
+        "ask-about-activity": {
+            "state": "entry",
+            "text": "ask-about-activity"
+        },
+        "ask-about-him": {
+            "state": "entry",
+            "text": "ask-about-him"
+        },
+        "changeling-quest-attack": {
+            "availableHook": "hasChangelingQuest",
+            "state": "startFight",
+            "text": "changeling-quest-attack"
+        },
+        "changeling-quest-attack-with-petiole": {
+            "availableHook": "canAttackWithPetiole",
+            "state": "startFight",
+            "text": "changeling-quest-attack-with-petiole"
+        },
+        "entry-exit": {
+            "text": "entry-exit"
+        },
+        "talk-about-changeling-quest": {
+            "availableHook": "hasChangelingQuest",
+            "text": "talk-about-changeling-quest"
+        }
+    },
+    "entryPoint": "entry",
+    "states": {
+        "about-activity": {
+            "answers": [
+            ],
+            "text": "about-activity"
+        },
+        "about-self": {
+            "answers": [
+            ],
+            "text": "about-self"
+        },
+        "entry": {
+            "answers": [
+                "ask-about-him",
+                "ask-about-activity",
+                "talk-about-changeling-quest",
+                "changeling-quest-attack-with-petiole",
+                "changeling-quest-attack",
+                "entry-exit"
+            ],
+            "hook": "entry",
+            "text": "entry-alt"
+        },
+        "startFight": {
+            "answers": [
+            ],
+            "hook": "startFight",
+            "text": "startFight"
+        }
+    }
+}

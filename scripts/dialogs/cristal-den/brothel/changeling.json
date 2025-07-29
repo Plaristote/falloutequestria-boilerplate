@@ -4,6 +4,10 @@
             "state": "about-self#1",
             "text": "ask-about"
         },
+        "ask-about-pimping": {
+            "state": "pimping-about",
+            "text": "ask-about-pimping"
+        },
         "ask-about-self-twice": {
             "state": "start-quest",
             "text": "ask-about"
@@ -42,6 +46,9 @@
         "ask-target": {
             "state": "start-quest",
             "text": "ask-target"
+        },
+        "exit-pimping": {
+            "text": "exit-pimping"
         },
         "exit-quest-prompt": {
             "text": "exit-quest-prompt"
@@ -124,6 +131,11 @@
             ],
             "text": "accept-help"
         },
+        "end-quest": {
+            "answers": [
+            ],
+            "text": "end-quest"
+        },
         "on-cute": {
             "answers": [
             ],
@@ -138,6 +150,7 @@
         "on-help-distraction": {
             "answers": [
             ],
+            "hook": "startDistraction",
             "text": "on-help-distraction"
         },
         "on-help-explosive": {
@@ -149,6 +162,21 @@
             "answers": [
             ],
             "text": "on-insulted"
+        },
+        "pimping": {
+            "answers": [
+                "ask-about-pimping",
+                "exit-pimping"
+            ],
+            "text": "pimping"
+        },
+        "pimping-about": {
+            "answers": [
+                "exit-pimping"
+            ],
+            "hook": "aboutPimping",
+            "mood": "smile",
+            "text": "pimping-about"
         },
         "quest-exit-queens-route": {
             "answers": [
@@ -167,6 +195,7 @@
         "start-on-ignorance": {
             "answers": [
             ],
+            "mood": "angry",
             "text": "start-on-ignorance"
         },
         "start-quest": {

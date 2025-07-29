@@ -1,3 +1,7 @@
+function potiokRuleEnded() { // TODO implement this, and do it someplace else
+  return false;
+}
+
 export default class Dialog {
   constructor(dialog) {
     this.dialog = dialog;
@@ -6,6 +10,13 @@ export default class Dialog {
   getEntryPoint() {
     if (!this.questStarted)
       return "start";
+    else if (this.questJustCompleted) {
+      this.dialog.npc.setVariable("talkedAfterQuest", 1);
+      this.dialog.npc.script.quest.script.onTalkedToPetioleAfterQuest();
+      return "end-quest";
+    }
+    else if (this.questCompleted)
+      return "pimping";
     return "start-quest";
   }
 
@@ -31,7 +42,7 @@ export default class Dialog {
         return { textKey: "on-insulted", mood: "angry" };
     }
     if (this.dialog.npc.hasVariable("insulted"))
-      return { textKey: "start-quest-irritated", mood: "dubious" };
+      return { textKey: "start-quest-irritated", mood: "angry" };
     return { textKey: "start-quest-reentry", mood: "dubious" };
   }
 
@@ -43,6 +54,25 @@ export default class Dialog {
       return { textKey: "about-help-agan" };
   }
 
+  startAssault() {
+    const quest = this.dialog.npc.script.quest;
+    quest.script.isWithPetiole = true;
+  }
+
+  startDistraction() {
+    const quest = this.dialog.npc.script.quest;
+    quest.script.startDistractionPlan();
+  }
+
+  aboutPimping() {
+    let text = this.dialog.t("pimping-about") + ' ';
+    if (potiokRuleEnded())
+      text += this.dialog.t("pimping-about-without-potioks");
+    else
+      text += this.dialog.t("pimping-about-with-potioks");
+    return text;
+  }
+
   get questStarted() {
     const quest = this.dialog.npc.script.quest;
     return quest != null && quest.isObjectiveCompleted("talkToPetiole");
@@ -51,6 +81,15 @@ export default class Dialog {
   get questPreStarted() {
     const quest = this.dialog.npc.script.quest;
     return quest != null && quest.script.startedByChangelingQueen;
+  }
+
+  get questCompleted() {
+    const quest = this.dialog.npc.script.quest;
+    return quest != null && quest.isObjectiveCompleted("killPimp");
+  }
+
+  get questJustCompleted() {
+    return this.questCompleted && !this.dialog.npc.hasVariable("talkedAfterQuest");
   }
 
   get canStartQuestThroughLie() {
@@ -66,7 +105,7 @@ export default class Dialog {
   }
 
   get canSeduceIntoHelping() {
-    return true;
+    return game.player.statistics.traits.indexOf("sex-appeal") >= 0;
   }
 
   get canConvinceAssault() {

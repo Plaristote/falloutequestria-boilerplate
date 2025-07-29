@@ -1,0 +1,18 @@
+{
+    "dialogs": {
+        "cristal-den/brothel/guard": {
+            "accept-bribe": "Alright, here you go.",
+            "distract-alcohol": "<i>[Give alcohol]</i> Here. A reward for your hard work.",
+            "distract-bribe": "<i>[Send them on a goose chase]</i> I need help with roughening somepony up. Could you please go and help me out for a little reward?",
+            "distract-lie": "<i>[Lie]</i> One of your workers is getting attacked by a rival !",
+            "entry": "What is it ?",
+            "entry-exit": "Nothing, bye.",
+            "goose-chase-entry": "Maybe we can. You got, say, {{bribeAmount}} caps ?",
+            "goose-chase-negociated": "Right on it, sir/ma’am. Alway happy to help.",
+            "lied": "<i>Sighs</i>\n<br><br>Mates, we gotta go.\n<br><br>\n<i>They leave.</i>",
+            "negociate-bribe": "I don't have that much on me, but hey, it's a fun and riskless job, I'm sure you could do it for {{negociatedBribeAmount}}, right ?",
+            "received-alcohol": "Let’s party, mates!!\n<br><br>\n<i>They leave.</i>",
+            "reject-bribe": "Well, I guess I can't afford it."
+        }
+    }
+}

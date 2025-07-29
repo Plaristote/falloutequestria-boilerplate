@@ -1,0 +1,16 @@
+{
+    "dialogs": {
+        "cristal-den/brothel/pimp": {
+            "about-activity": "Ce que tout bon connaisseur de la chair fait. J'organise, je fais des affaires, et j'encaisse la monnaie.",
+            "ask-about-activity": "Qu'est-ce que vous faites ici, exactement ?",
+            "ask-about-him": "Qui êtes-vous ?",
+            "changeling-quest-attack": "Tu peux me rendre un service et crever.",
+            "changeling-quest-attack-with-petiole": "Nous sommes là pour te régler ton compte !",
+            "entry": "Salutations, qu'est-ce qui vous amène jusqu'à moi, le patron de ce respectable établissement. <i>He’s smoking something. You are unsure what exactly.</i>",
+            "entry-alt": "Que puis-je faire pour un client potential ?",
+            "entry-exit": "Non, rien.",
+            "startFight": "Que - <b>GARDES</b> !",
+            "talk-about-changeling-quest": "Il y a un poney qui vous veut mort."
+        }
+    }
+}

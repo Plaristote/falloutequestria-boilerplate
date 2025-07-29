@@ -1,0 +1,73 @@
+{
+    "answers": {
+        "accept-bribe": {
+            "availableHook": "canAffordBribe",
+            "hook": "onDistractedWithBribe",
+            "text": "accept-bribe"
+        },
+        "distract-alcohol": {
+            "availableHook": "canDistractWithAlcohol",
+            "state": "received-alcohol",
+            "text": "distract-alcohol"
+        },
+        "distract-bribe": {
+            "availableHook": "canDistractWithBribe",
+            "text": "distract-bribe"
+        },
+        "distract-lie": {
+            "availableHook": "canDistractWithLie",
+            "state": "lied",
+            "text": "distract-lie"
+        },
+        "entry-exit": {
+            "text": "entry-exit"
+        },
+        "negociate-bribe": {
+            "availableHook": "canNegociateBribe",
+            "state": "goose-chase-negociated",
+            "text": "negociate-bribe"
+        },
+        "reject-bribe": {
+            "text": "reject-bribe"
+        }
+    },
+    "entryPoint": "entry",
+    "states": {
+        "entry": {
+            "answers": [
+                "distract-lie",
+                "distract-alcohol",
+                "distract-bribe",
+                "entry-exit"
+            ],
+            "mood": "angry",
+            "text": "entry"
+        },
+        "goose-chase-entry": {
+            "answers": [
+                "negociate-bribe",
+                "accept-bribe",
+                "reject-bribe"
+            ],
+            "text": "goose-chase-entry"
+        },
+        "goose-chase-negociated": {
+            "answers": [
+                "accept-bribe"
+            ],
+            "text": "goose-chase-negociated"
+        },
+        "lied": {
+            "answers": [
+            ],
+            "hook": "onDistracted",
+            "text": "lied"
+        },
+        "received-alcohol": {
+            "answers": [
+            ],
+            "hook": "onDistractedWithAlcohol",
+            "text": "received-alcohol"
+        }
+    }
+}

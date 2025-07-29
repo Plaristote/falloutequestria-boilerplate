@@ -141,6 +141,14 @@
         "value": 95,
         "weight": 1
     },
+    "cristal-den-brothel-keys": {
+        "icon": "trial-key-2.png",
+        "isGroupable": false,
+        "sprite": "misc",
+        "type": "keys",
+        "value": 15,
+        "weight": 0
+    },
     "dark-magic-artefact": {
         "icon": "dark-magic-artefact.png",
         "isGroupable": false,

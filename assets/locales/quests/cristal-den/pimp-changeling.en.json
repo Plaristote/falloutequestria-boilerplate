@@ -7,10 +7,13 @@
       "desc-petiole-killed": "It seems Petiole is dead. Whatever it was, it must have been her own fault. Without her the mission is failed.",
       "desc-petiole-killed-on-queens-orders": " Report back to the changeling queen, if you dare.",
       "desc-pimp-killed": "Tout is history, a forgotten note to be lost to the sands of time. Congratulations. You brought the changeling 0.00001% closer to world domination. Report to the Changeling queen.",
+      "desc-report-to-mysterious-queen": "Talk to the queen about your payment. Who is the queen? Find more about it.",
       "talk-to-petiole": "Talk to Petiole",
       "kill-pimp": "Get rid of Tout Potiok somehow",
       "kill-pimp-distraction": "You convinced Petiole to help. You only have to take care of Tout’s guards, while she quietly gets Tout.",
-      "kill-pimp-backalley": "Lead Tout to the alley behind the Glimmering Tail, where she planted an explosive that will bloom into Tout’s death."
+      "kill-pimp-backalley": "Lead Tout to the alley behind the Glimmering Tail, where she planted an explosive that will bloom into Tout’s death.",
+      "report-to-queen": "Report to the queen",
+      "distract-guards": "Distract the guards"
     }
   }
 }
