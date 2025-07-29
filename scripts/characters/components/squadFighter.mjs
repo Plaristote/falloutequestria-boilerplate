@@ -21,11 +21,12 @@ export class SquadFighterComponent {
       const target = this.script.requireCombatTarget();
 
       for (var i = 0 ; i < this.squad.length ; ++i) {
-       if (!level.isInCombat(this.squad[i])) {
-          level.joinCombat(this.squad[i]);
-          this.squad[i].combatTarget = target;
-       }
-     }
+        const character = this.squad[i];
+        if (character.type == "Character" && !level.isInCombat(character)) {
+           level.joinCombat(character);
+           this.squad[i].combatTarget = target;
+        }
+      }
     }
   }
 }
