@@ -1,6 +1,16 @@
 import {CharacterBehaviour} from "./character.mjs";
 
 export default class Changeling extends CharacterBehaviour {
+  changelingImitate(model) {
+    this.changelingTransform(model.statistics.race, {
+      faceColor: model.statistics.faceColor,
+      eyeColor: model.statistics.eyeColor,
+      hairColor: model.statistics.hairColor,
+      hairTheme: model.statistics.hairTheme,
+      faceTheme: model.statistics.faceTheme
+    });
+  }
+
   changelingTransform(race, params) {
     const buff = this.model.getBuff("polymorphed");
 
