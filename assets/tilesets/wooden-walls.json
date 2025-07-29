@@ -6,7 +6,7 @@
  "name":"Wooden Walls",
  "spacing":1,
  "tilecount":40,
- "tiledversion":"1.8.0",
+ "tiledversion":"1.11.2",
  "tileheight":108,
  "tiles":[
         {
@@ -108,8 +108,36 @@
                  "type":"bool",
                  "value":true
                 }]
+        }, 
+        {
+         "id":34,
+         "properties":[
+                {
+                 "name":"cover",
+                 "type":"int",
+                 "value":10
+                }, 
+                {
+                 "name":"doorway",
+                 "type":"bool",
+                 "value":true
+                }]
+        }, 
+        {
+         "id":35,
+         "properties":[
+                {
+                 "name":"cover",
+                 "type":"int",
+                 "value":10
+                }, 
+                {
+                 "name":"doorway",
+                 "type":"bool",
+                 "value":true
+                }]
         }],
  "tilewidth":72,
  "type":"tileset",
- "version":"1.8"
+ "version":"1.11"
 }
