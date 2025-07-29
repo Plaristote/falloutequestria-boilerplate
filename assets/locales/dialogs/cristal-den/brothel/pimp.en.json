@@ -1,0 +1,17 @@
+{
+    "dialogs": {
+        "cristal-den/brothel/pimp": {
+            "about-activity": "What any connoisseur of the flesh does. I manage, I make business and I print money.",
+            "about-self": "What question is that? You walk into this building, this district, and you don’t know who owns it? Let me enlighten you, mare/stallion. I am Tout Spruiker Potiok.",
+            "ask-about-activity": "What exactly do you do here?",
+            "ask-about-him": "Who are you ?",
+            "changeling-quest-attack": "I am going to kill you !",
+            "changeling-quest-attack-with-petiole": "We are going to kill you !",
+            "entry": "Greetings, what brings you to me, the chef of this fine establishment. <i>He’s smoking something. You are unsure what exactly.</i>",
+            "entry-alt": "What can I do for our potential customer?",
+            "entry-exit": "Nevermind.",
+            "startFight": "What – <b>GUARDS</b>!",
+            "talk-about-changeling-quest": "Somepony is trying to kill you."
+        }
+    }
+}

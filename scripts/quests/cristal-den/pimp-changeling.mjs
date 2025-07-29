@@ -23,8 +23,11 @@ export default class PimpChangeling extends QuestHelper {
       text += "</p>";
     }
 
-    if (this.model.isObjectiveCompleted("killPimp"))
+    if (this.model.hasObjective("reportToQueen") && !this.startedByChangelingQueen)
+      text += "<p>" + this.model.tr("desc-report-to-mysterious-queen") + "</p>";
+    else if (this.model.isObjectiveCompleted("killPimp") && this.startedByChangelingQueen)
       text += "<p>" + this.model.tr("desc-pimp-killed") + "</p>";
+
     return text;
   }
 
@@ -42,6 +45,24 @@ export default class PimpChangeling extends QuestHelper {
 
   set petioleKilled(value) {
     this.model.setVariable("petioleKilled", value ? 1 : 0);
+  }
+
+  get isWithPetiole() {
+    return this.model.getVariable("isWithPetiole", 0) == 1;
+  }
+
+  get petiole() {
+    return typeof level != "undefined" ? level.findObject("brothel.petiole") : null;
+  }
+
+  set isWithPetiole(value) {
+    this.model.setVariable("isWithPetiole", value ? 1 : 0);
+    if (this.petiole) {
+      if (value)
+        this.petiole.tasks.addUniqueTask("followingPlayerToKillPimp", 500, 1);
+      else
+        this.petiole.tasks.removeTask("followingPlayerToKillPimp");
+    }
   }
 
   onTalkedToPetiole() {
@@ -62,6 +83,27 @@ export default class PimpChangeling extends QuestHelper {
   }
 
   onPimpKilled() {
+    if (!this.model.hasObjective("killPimp"))
+      this.model.addObjective("killPimp", this.model.tr("kill-pimp"));
     this.model.completeObjective("killPimp");
+    if (this.startedByChangelingQueen)
+      this.model.addObjective("reportToQueen", this.model.tr("report-to-queen"));
+  }
+
+  onTalkedToPetioleAfterQuest() {
+    if (!this.startedByChangelingQueen)
+      this.model.addObjective("reportToQueen", this.model.tr("report-to-queen"));
+  }
+
+  startDistractionPlan() {
+    this.model.addObjective("distractGuards", this.model.tr("distract-guards"));
+  }
+
+  completeObjective(name) {
+    switch (name) {
+      case "distractGuards":
+        this.petiole.script.assassinatePimp();
+        break ;
+    }
   }
 }
