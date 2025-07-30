@@ -1,0 +1,26 @@
+{
+  "dialogs": {
+        "junkville/stabletech-terminal": {
+            "ask-security-report": "Rapport de sécurité.",
+            "ask-unlock-storage": "Ouvrir l'entrepôt.",
+            "back": "Précédent.",
+            "command-entry": "Booting Stable Tech OS 0.4.2...<br>Privilèges administrateur actifs. Formulez votre requête.",
+            "disconnect": "<i>[Quitter]</i",
+            "door-broken": "Ouverture porte...<br>Echec. La porte ne répond pas.",
+            "door-opened": "Ouverture porte...<br>Fait.",
+            "entry": "Booting Stable Tech OS 0.4.2...<br>Formulez votre requête.",
+            "generator-entry": "Booting Stable Tech OS 0.4.2...<br>Formulate votre requête.",
+            "hack-failed": "<i>[Tu n'as pas l'air de savoir ce que tu fais en essayant de hacker ce terminal]</i>",
+            "hack-terminal": "<i>[Essayer de hacker le terminal]</i>",
+            "needs-admin-access": "Ce terminal ne dispose pas des permissions nécessaires pour exécuter cette commande. Veuillez utiliser le terminal situé dans la salle de contrôle.",
+            "power-outage": "Mode sans-echec activé.",
+            "security-disable": "Désactiver les mesures de sécurité.",
+            "security-enable": "Activer les mesures de sécurité.",
+            "security-off": "Mesures de sécurité désactivées.",
+            "security-on": "Mesures de sécurité activées. Les individus étrangers seront éliminés par les sentinelles.<br>Sentinelles en fonction : {{sentinelCount}}.",
+            "terminal-locked": "<i>[Tu es as peu près sûr d'avoir trouvé une faille dans le système. Juste quand tu pense y être arrivé, l'écran se vide et deux lignes de texte apparaissent:]</i><br>Tentative d'instrusion détectée.<br/> Verouillage du terminal. Veuillez demander à un administrateur de le déverouiller.",
+            "terminal-locked-curse": "Merde !",
+            "terminal-unlocked": "<i>[Tu trouve une faille de sécurité dans le terminal et parvient à élever tes privilèges au rang d'administrateur. Ça veut dire que tu viens de pirater le terminal. Félicitations !]</i>"
+        }
+  }
+}

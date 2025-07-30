@@ -9,6 +9,19 @@
       "description-no-intel": "I found a Stable-Tech facility in Junkville's junkyard. Maybe I'll find parts or information about the Celestial Device over there ?",
       "description-done": "After exploring the facility, I did find blueprints which will tell me exactly what I need to do to fix the device."
     }
+  },
+  "junkville-stabletech": {
+    "rathian-first-computer": "Alright. I've opened the other outside door. I must stay here to keep it opeend. You must go through the other door and activate the terminal in the next room. Move quickly, the turrets out there will shoot on sight.",
+    "rathian-head-downstairs": "Well done ! Come on, let's head downstairs !",
+    "rathian-downstairs-arrival": "Outstanding ! Let's look for the storage room. That's where the most valuable parts will be.",
+    "rathian-will-fix-generator": "Great ! We've found the generator ! Let me see if I can get it running !",
+    "rathian-fix-generator#1": "Flick that switch... connect those tubes...",
+    "rathian-fix-generator#2": "Come on you darned thing...",
+    "rathian-fix-generator#3": "I think... yeah, it's working !",
+    "rathian-player-fixed-generator": "Wait, did you do this ? That wasn't half bad, good job !",
+    "rathian-stock-room-intro": "Here we are ! This is the storage room !",
+    "rathian-stock-room-locked": "It won't budge. This is where all the loot is located. We'll have to make our way through.",
+    "rathian-stock-room-reached": "Oh yes ! This is it ! Come on buddy, let's take a peek at all these potential treasures !"
   }
 }
 

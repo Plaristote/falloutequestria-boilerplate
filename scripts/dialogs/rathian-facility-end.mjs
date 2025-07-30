@@ -4,7 +4,7 @@ class Dialog {
   }
 
   canIdentifyBlueprints() {
-    return game.player.statistics.science >= 80;
+    return game.player.statistics.science >= 65;
   }
 }
 
