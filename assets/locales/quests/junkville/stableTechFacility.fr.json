@@ -9,5 +9,18 @@
       "description-no-intel": "J'ai trouvé un laboratoire de Stable-Tech dans la décharge de Junkville. Peut-être pourrais-je y trouver des pièces ou des informations sur l'Appareil Célèste ?",
       "description-done": "Après avoir exploré les lieux, j'ai effectivement trouvé des schémas qui vont me permettre de savoir exactement de quoi j'ai besoin pour réparer l'appareil."
     }
+  },
+  "junkville-stabletech": {
+    "rathian-first-computer": "Bon. J'ai ouvert la porte extérieure. Je dois rester ici pour la maintenir ouverte. Rentre par cette porte et active le terminal dans la pièce adjaçante. Dépêche-toi, le turret tire à vue.",
+    "rathian-head-downstairs": "Bien joué ! Bon ben, y'a plus qu'à descendre.",
+    "rathian-downstairs-arrival": "Merveilleux ! Trouvons l'entrepôt. C'est là que seront les pièces les plus intéressantes.",
+    "rathian-will-fix-generator": "Génial ! Nous avons trouvé le générateur ! Laisse-moi voir si je peux pas le remettre en route !",
+    "rathian-fix-generator#1": "Fermer cet interrupteur... connecter ces cables...",
+    "rathian-fix-generator#2": "Allez, met-toi en route...",
+    "rathian-fix-generator#3": "Je crois... oui, ça fonctionne !",
+    "rathian-player-fixed-generator": "Attends, t'as fait ça ? C'était pas trop mal, bon boulot !",
+    "rathian-stock-room-intro": "Nous y voilà ! La salle de stockage !",
+    "rathian-stock-room-locked": "Ça veut pas bouger. C'est là que tous les trésors sont cachés. Il va falloir trouver un moyen de passer.",
+    "rathian-stock-room-reached": "Oh oui ! Ça y est ! Viens mon pôte, allons jeter un oeil dans cette caverne d'Alibaba !"
   }
 }

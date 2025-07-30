@@ -14,8 +14,6 @@ const States = {
   Done: 1000
 };
 
-// todo fix turret faction issue
-
 function backroomComputer() {
   return level.findObject("stabletech-facility.computer#1");
 }
@@ -172,8 +170,7 @@ class Rathian extends CharacterBehaviour {
 
   // Security room
   onEnteredSecurityRoom() {
-    const levelScript = level.getScriptObject();
-    if (!this.securityWarningGiven && !levelScript.isSecurityEnabled() && levelScript.guards.length > 0) {
+    if (!this.securityWarningGiven && !level.script.isSecurityEnabled() && level.script.guards.length > 0) {
       this.securityWarningGiven = true;
       level.addTextBubble(this.model, i18n.t("junkville-stabletech.rathian-security-room-warning"), 7500);
     }
@@ -186,6 +183,9 @@ class Rathian extends CharacterBehaviour {
     if (!generator.script.running) {
       level.addTextBubble(this.model, i18n.t("junkville-stabletech.rathian-will-fix-generator"), 7500);
       this.state = States.FixingGenerator;
+    } else if (!this.knowsAboutWorkingGenerator) {
+      this.knowsAboutWorkingGenerator = true;
+      level.addTextBubble(this.model, i18n.t("junkville-stabletech.rathian-player-fixed-generator"), 5000, "lightgreen");
     }
   }
 
@@ -218,6 +218,7 @@ class Rathian extends CharacterBehaviour {
       return ;
     this.model.movementMode = "running";
     this.state = States.FollowingPlayerInFacilty;
+    this.knowsAboutWorkingGenerator = true;
   }
 
   // Stock room
@@ -256,6 +257,14 @@ class Rathian extends CharacterBehaviour {
     this.model.actionQueue.pushInteraction(crate, "use");
     this.model.actionQueue.pushWait(2);
     this.model.actionQueue.start();
+  }
+
+  get knowsAboutWorkingGenerator() {
+    return level.getVariable("rathianGeneratorDone", 0);
+  }
+
+  set knowsAboutWorkingGenerator(value) {
+    level.setVariable("rathianGeneratorDone", value ? 1 : 0);
   }
 }
 
