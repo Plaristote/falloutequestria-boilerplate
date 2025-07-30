@@ -5,6 +5,7 @@
             "distract-alcohol": "<i>[Offrir de l'alcool]</i> Tenez. Une récompense pour votre dur labeur !",
             "distract-bribe": "<i>[Les envoyer chasser le dahu]</i> J'ai besoin d'aide pour éduquer un mauvais bougre. Vous pourriez vous occuper de lui pour moi, en échange d'une récompense ?",
             "distract-lie": "<i>[Mentir]</i> Une de vos travailleuses se fait attaquer par un rival !",
+            "distract-wait": "<i>[Attendre que Tout Potiok soit dans son bureau]</i>",
             "entry": "Qu'est-ce que tu veux ?",
             "entry-exit": "Rien, pardon.",
             "goose-chase-entry": "Ouais. C'est dans nos cordes. Pour {{bribeAmount}} capsules, on peut donner une petite leçon à ton pote.",

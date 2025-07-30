@@ -89,7 +89,8 @@ export default class Dialog {
   }
 
   get questJustCompleted() {
-    return this.questCompleted && !this.dialog.npc.hasVariable("talkedAfterQuest");
+    const quest = this.dialog.npc.script.quest;
+    return this.questCompleted && !quest.script.timeHasPassedSincePimpsPassing;
   }
 
   get canStartQuestThroughLie() {

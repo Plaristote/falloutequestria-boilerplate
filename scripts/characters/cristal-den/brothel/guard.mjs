@@ -1,10 +1,12 @@
 import {GuardBehaviour} from "./../../guard.mjs";
+import {GuardComponent} from "./../../components/guard.mjs";
 
 const distractionDuration = 1000 * 60 * 60 * 12;
 
 export default class extends GuardBehaviour {
   constructor(model) {
     super(model);
+    this.guardComponent = new GuardComponent(this);
   }
 
   get dialog() {
@@ -23,6 +25,7 @@ export default class extends GuardBehaviour {
   }
 
   startDistraction() {
+    this.guardComponent.disable();
     this.model.setVariable("distracted", 1);
     this.model.tasks.addUniqueTask("endDistraction", distractionDuration, 1);
     this.model.tasks.addUniqueTask("runDistraction", 6000, 0);
@@ -31,6 +34,7 @@ export default class extends GuardBehaviour {
   }
 
   endDistraction() {
+    this.guardComponent.enable();
     this.model.unsetVariable("distracted");
     this.model.tasks.removeTask("runDistraction");
   }

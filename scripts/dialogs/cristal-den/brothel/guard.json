@@ -5,6 +5,10 @@
             "hook": "onDistractedWithBribe",
             "text": "accept-bribe"
         },
+        "back-to-entry": {
+            "state": "entry",
+            "text": "exit"
+        },
         "distract-alcohol": {
             "availableHook": "canDistractWithAlcohol",
             "state": "received-alcohol",
@@ -12,12 +16,19 @@
         },
         "distract-bribe": {
             "availableHook": "canDistractWithBribe",
+            "state": "goose-chase-entry",
             "text": "distract-bribe"
         },
         "distract-lie": {
             "availableHook": "canDistractWithLie",
             "state": "lied",
             "text": "distract-lie"
+        },
+        "distract-wait": {
+            "availableHook": "needsToWaitForOfficeHour",
+            "hook": "waitForOfficeHour",
+            "state": "waited-for-office-hours",
+            "text": "distract-wait"
         },
         "entry-exit": {
             "text": "entry-exit"
@@ -35,6 +46,7 @@
     "states": {
         "entry": {
             "answers": [
+                "distract-wait",
                 "distract-lie",
                 "distract-alcohol",
                 "distract-bribe",
@@ -68,6 +80,12 @@
             ],
             "hook": "onDistractedWithAlcohol",
             "text": "received-alcohol"
+        },
+        "waited-for-office-hours": {
+            "answers": [
+                "back-to-entry"
+            ],
+            "text": "entry"
         }
     }
 }

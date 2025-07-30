@@ -13,7 +13,9 @@
       "kill-pimp-distraction": "Tu as convaincu Pétiole de t'aider. Tu n'as qu'à t'occuper des gardes, pendant qu'elle se charge discrètement de Tout.",
       "kill-pimp-backalley": "Amène Tout dans l'allée derrière le Glimmering Tail, où Pétiole a placé un explsoif qui mettra Tout Potiok à la retraite.",
       "report-to-queen": "Parler avec la Reine",
-      "distract-guards": "Détourne l'attention des gardes"
+      "distract-guards": "Détourne l'attention des gardes",
+      "inspect-desk-changeling": "Tu vois un bureau. Tout est organisé a un niveau brutalement méticuleux. Rien ne dépasse.",
+      "inspect-desk-pimp": "Tu vois un bureau. Il y a plusieurs piles de papiers et lettres, éparpillées en désorrdre. Un plateau repas à moitié terminé traine."
     }
   }
 }

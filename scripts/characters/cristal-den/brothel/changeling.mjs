@@ -49,8 +49,8 @@ class Changeling extends CharacterBehaviour {
     actions.pushReach(pimp, 1);
     actions.pushScript({
       onTrigger: function() {
-        pimp.takeDamage(pimp.statistics.hitPoints + 1, this.model);
-        this.takeOverPimp();
+        pimp.takeDamage(pimp.statistics.hitPoints + 1, self);
+        self.script.takeOverPimp();
       },
       onCancel: function() {
         self.tasks.addTask("assassinatePimp", 5432, 1);
@@ -74,9 +74,13 @@ class Changeling extends CharacterBehaviour {
   }
 
   onPimpTakenOver() {
+    const quest = requireQuest("cristal-den/pimp-changeling", QuestFlags.HiddenQuest);
+    quest.addObjective("swapPimp", quest.tr("swap-pimp"));
+    quest.completeObjective("swapPimp");
     this.changelingImitate(this.pimp);
     this.pimp.inventory.transferTo(this.model.inventory);
     level.deleteObject(this.pimp);
+    this.model.tasks.removeTask("takeOverPimp");
   }
 
   followingPlayerToKillPimp() {

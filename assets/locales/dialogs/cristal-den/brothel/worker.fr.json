@@ -1,0 +1,14 @@
+{
+  "dialogs": {
+    "cristal-den/brothel": {
+      "worker": {
+        "street-bubble-a": "Tu cherche un peu d'action ? J'habite juste à côté.",
+        "street-bubble-b": "Salut, bébé.",
+        "pimped-bubble-a": "...mon quota.",
+        "pimped-bubble-b": "Le boss pourrait se fâcher s'il te voyait fouiner par ici.",
+        "swapped-bubble-a": "Le boss est bizarre ces temps-ci ; j'me plaint pas, Il est sympa.",
+        "swapped-bubble-b": "J'dois faire un bon travail, le boss m'a pas frappé depuis un moment."
+      }
+    }
+  }
+}
