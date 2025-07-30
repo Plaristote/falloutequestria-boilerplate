@@ -19,6 +19,7 @@ export default class Dialog {
   }
 
   onDistractedWithAlcohol() {
+    // TODO implement alcohol poisonning death
     this.alcoholicBeverages.forEach(item => {
       game.player.inventory.removeItem(item);
       this.guards.forEach(guard => {
@@ -34,7 +35,7 @@ export default class Dialog {
       bribe = this.negociatedBribeAmount;
     game.player.inventory.removeItemOfType("bottlecaps", bribe);
     this.guards.forEach(guard => {
-      guard.inventory.addItemOfType("bottlecaps", bribe / guards.length);
+      guard.inventory.addItemOfType("bottlecaps", bribe / this.guards.length);
     });
     this.onDistracted();
   }
@@ -46,24 +47,35 @@ export default class Dialog {
     });
   }
 
+  waitForOfficeHour() {
+    game.asyncAdvanceToHour(11, 2);
+  }
+
+  get needsToWaitForOfficeHour() {
+    return game.timeManager.secondsUntilTime({ hour: 18 }) > (7 * 60 * 60);
+  }
+
   get alcoholicBeveragesMinCount() {
     return 3;
   }
 
   get canDistractWithAlcohol() {
-    return this.alcoholicBeverages.length >= this.alcoholicBeveragesMinCount;
+    return !this.needsToWaitForOfficeHour && this.alcoholicBeverages.length >= this.alcoholicBeveragesMinCount;
   }
 
   get canDistractWithBribe() {
-    return game.player.inventory.count("bottlecaps") > 1;
+    return !this.needsToWaitForOfficeHour && game.player.inventory.count("bottlecaps") > 1;
   }
 
   get canDistractWithLie() {
-    return game.player.statistics.speech > 65;
+    return !this.needsToWaitForOfficeHour && game.player.statistics.speech > 65;
   }
 
   get canAffordBribe() {
-    return game.player.inventory.count("bottlecaps") >= this.bribeAmount;
+    const bribe = this.dialog.stateReference == "goose-chase-negociated"
+      ? this.negociatedBribeAmount
+      : this.bribeAmount;
+    return game.player.inventory.count("bottlecaps") >= bribe;
   }
 
   get canNegociateBribe() {

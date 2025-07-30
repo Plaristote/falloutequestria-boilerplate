@@ -13,7 +13,9 @@
       "kill-pimp-distraction": "You convinced Petiole to help. You only have to take care of Tout’s guards, while she quietly gets Tout.",
       "kill-pimp-backalley": "Lead Tout to the alley behind the Glimmering Tail, where she planted an explosive that will bloom into Tout’s death.",
       "report-to-queen": "Report to the queen",
-      "distract-guards": "Distract the guards"
+      "distract-guards": "Distract the guards",
+      "inspect-desk-changeling": "You see a desk. Everything is organized to a brutally meticulous level. nothing is askew.",
+      "inspect-desk-pimp": "You see a desk. There are many stacks of paper, records and letters, strewn messily across its surface. a platter of half eaten food lies there."
     }
   }
 }

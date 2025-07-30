@@ -5,6 +5,7 @@
             "distract-alcohol": "<i>[Give alcohol]</i> Here. A reward for your hard work.",
             "distract-bribe": "<i>[Send them on a goose chase]</i> I need help with roughening somepony up. Could you please go and help me out for a little reward?",
             "distract-lie": "<i>[Lie]</i> One of your workers is getting attacked by a rival !",
+            "distract-wait": "<i>[Wait for Tout Potiok to be in his office]</i>",
             "entry": "What is it ?",
             "entry-exit": "Nothing, bye.",
             "goose-chase-entry": "Maybe we can. You got, say, {{bribeAmount}} caps ?",

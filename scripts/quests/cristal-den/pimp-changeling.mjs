@@ -1,6 +1,15 @@
 import {QuestHelper, QuestFlags, requireQuest} from "../helpers.mjs";
 
 export default class PimpChangeling extends QuestHelper {
+  get xpReward() {
+    let total = 1325;
+    if (this.model.isObjectiveCompleted("distractGuards"))
+      total += 250;
+    if (this.model.hasVariable("isWithPetiole"))
+      total += 75;
+    return total;
+  }
+
   initialize() {
     this.model.location = "cristal-den";
     this.model.addObjective("talkToPetiole", this.tr("talk-to-petiole"));
@@ -47,12 +56,12 @@ export default class PimpChangeling extends QuestHelper {
     this.model.setVariable("petioleKilled", value ? 1 : 0);
   }
 
-  get isWithPetiole() {
-    return this.model.getVariable("isWithPetiole", 0) == 1;
-  }
-
   get petiole() {
     return typeof level != "undefined" ? level.findObject("brothel.petiole") : null;
+  }
+
+  get isWithPetiole() {
+    return this.model.getVariable("isWithPetiole", 0) == 1;
   }
 
   set isWithPetiole(value) {
@@ -63,6 +72,12 @@ export default class PimpChangeling extends QuestHelper {
       else
         this.petiole.tasks.removeTask("followingPlayerToKillPimp");
     }
+  }
+
+  get timeHasPassedSincePimpsPassing() {
+    const timestamp = this.model.getVariable("killedPimpAt", 0);
+
+    return timestamp && game.timeManager.getTimestamp() - timestamp > 60*60*24;
   }
 
   onTalkedToPetiole() {
@@ -103,6 +118,12 @@ export default class PimpChangeling extends QuestHelper {
     switch (name) {
       case "distractGuards":
         this.petiole.script.assassinatePimp();
+        break ;
+      case "killPimp":
+        this.model.setVariable("killedPimpAt", game.timeManager.getTimestamp());
+        break ;
+      case "swapPimp":
+        this.model.completed = true;
         break ;
     }
   }
