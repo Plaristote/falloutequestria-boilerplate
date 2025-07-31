@@ -1,10 +1,23 @@
 {
     "dialogs": {
         "rathian-junkville": {
+            "about-celestial-device-go": "Ravi que tu demandes ! On peut y aller tout de suite, si tu veux !",
+            "about-celestial-device-intro": "Un appareil céleste ? Intéressant. Il n'y a pas beaucoup de raisons d'en avoir un. C'est un appareil de technologie stable conçu pour créer un microclimat artificiel dans des espaces clos. Utile pour faire pousser des récoltes abondantes dans des endroits comme des bunkers. Ou, vous savez, des écuries.<br>Je ne sais pas vraiment où en trouver un… mais il y a une installation de technologie stable assez près d'ici, en fait. C'est dans les décharges de Junkville. C'est probablement un bon endroit où chercher. Tu ne pourras pas y aller seul, par contre.",
+            "about-celestial-device-intro-alt": "Ah oui, l'appareil céleste ! Je ne sais pas exactement où le trouver, mais je sais où chercher : le complexe Stable Tech, dans les décharges de Junkville. Vous aurez besoin d'aide pour y entrer. ",
             "about-celestial-device-why-help": "L'entrée principale est verrouillée et protégée par des défenses automatisées. Il existe un moyen d'y accéder : j'ai la clé d'une arrière-salle équipée d'un terminal permettant d'ouvrir la porte d'entrée. Cependant, la porte ne reste ouverte que très peu de temps ; l'un de nous doit donc la maintenir ouverte pendant que l'autre franchit les défenses. Une fois à l'intérieur, nous pourrons ouvrir tous les accès.",
             "about-steel-rangers": "Les Steel Rangers ! Nous sommes quasiment les derniers vestiges du gouvernement d'Equestria. La dernière organisation survivante du Ministère des Technologies de Guerre. Nous avons tous prêté serment de protéger Equestria et ses citoyens. Lorsque les mégasorts sont tombés, beaucoup d'entre nous ont survécu, principalement grâce à nos bunkers. Et maintenant que tout est parti en vrille, nous essayons toujours de tenir notre serment. Eh bien… au moins certains d’entre nous essaient.",
+            "ask-about-celestial-device": "Tu m’as dit que tu pouvais m’aider à trouver un appareil céleste. Peux-tu m’en dire plus ?",
+            "ask-about-celestial-device-alt": "Je cherche un appareil céleste. Saurais-tu où en trouver un ?",
+            "ask-nothing": "Je n’ai besoin de rien. Au revoir !",
+            "ask-something-else": "Je voulais te demander autre chose.",
+            "ask-steel-ranger": "Tu as dit que tu étais un Steel Ranger. De quoi s’agit-il ?",
             "cannot-afford-craft": "Je peux pas dépenser cet argent maintenant.",
             "celestial-device-ask-where-arm": "Où est-ce que je pourrais trouver un Module de Régulation Atmosphérique ?",
+            "celestial-device-do-later": "Ça ne m’intéresse pas pour le moment. Parlons d'autre chose.",
+            "celestial-device-go": "Très bien, allons-y.",
+            "celestial-device-who-help": "Et si tu m'aidais à entrer ?",
+            "celestial-device-why-done": "Et je suppose que je vais me précipiter à travers les défenses pendant que tu seras en sécurité derrière ton terminal ?",
+            "celestial-device-why-help": "Pourquoi aurais-je besoin d'aide pour entrer ?",
             "celestial-device-give-arm": "J'en ai déjà un. Le voilà.",
             "celestial-device/arm-whereabouts": "C'est pas une pièce très commune. Elle était utilisée ans des Étables, mais je suppose que tu es déjà au courant. Elle était également utile pour les centre de recherches scientifiques ou des laboratoires. Fouine assez loin et assez longtemps, et tu finira peut-être par trouver ton Module de Régulation Atmosphérique.",
             "celestial-device/craft": "Ouais, je pourrais te fabriquer ça. Si tu me fourni les pièces manquantes. Ce plan mentionne un Module de Régulation Atmosphérique. Apporte m'en un, et je construis ton Appareil Célèste.",
@@ -15,7 +28,10 @@
             "craft-pay-up": "Ok, voici l'argent.",
             "craft-prompt": "Bien sûr, tant que tu as les plans de ce que tu veux fabriquer. Qu'est-ce qu'on bidouille aujourd'hui ?",
             "craft-refusal": "C'est pas que je puisse pas, mais j'en ai plus tellement envie. Tu es descendu dans cette infrastructure de Stable-Tech, en me laissant dehors. J'ai finalement pu m'y rendre par mes propres moyens, mais ce n'était pas très urbain de ta part. Je ne peux pas valider ce genrre de comportement. Trouve-toi un autre artisan.",
+            "entry": "Salut ! Puis-je t'aider de quelque manière que ce soit ?",
+            "entry-alt": "Salut ! Je suis si content que tu sois venu après tout ! Bienvenue dans mon atelier, où toutes sortes de magie opèrent ! Si tu as un problème technique, un problème à résoudre, viens me voir ! Alors, puis-je t'aider ?",
             "entry-first-meeting": "Salut ! Je te reconnais ! Tu es ce poney que j'ai sauvé de ces bandits au milieu de nulle part ! Je suis content de voir que tu es arrivé jusqu'ici ! J'étais inquiet de te voir partir seul ! Je m'appelle Rathian, je suis scribe Steel Ranger. Ca veut dire que je suis plutôt doué pour réparer des trucs et concevoir de nouveaux appareils. Alors, est-ce que je peux faire quelque chose pour toi ?",
+            "entry-more": "Bien sûr. Que puis-je faire d'autre pour toi ?",
             "exit-without-craft": "Finalement, j'ai changé d'avis."
         }
     }
