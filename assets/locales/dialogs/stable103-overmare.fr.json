@@ -1,0 +1,32 @@
+{
+    "dialogs": {
+        "stable103-overmare": {
+            "blueprints-wait": "<i>[Fais preuve de patience]</i>",
+            "blueprints-wait#2": "<i>[La superviseuse a encore quelque chose à dire]</i>",
+            "entryPoint": "Salut, citoyen. Des progrès à me rapporter sur l'avancement de ta mission ?",
+            "nothing-to-report": "Rien à rapporter, superviseuse.",
+            "rathian-intro-continue": "On dirait qu'il y a un « mais »...",
+            "rathian-intro-continue-2": "De quoi ?",
+            "rathian-intro-continue-3": "Je vois.",
+            "rathian-intro-continue-4": "Ah oui ?",
+            "rathian-intro-continue-5": "Euh... d'accord.",
+            "rathian-quest/intro": "Salut, citoyen. J'espère que tu es bien reposé. La bonne nouvelle d'abord : l'Appareil Celèste a été installé, et il fonctionne. Le jardin est en train de revenir à la vie. Tu as sauvé ce lieu de la famine. Et pour cela, tu as toute ma gratitude.",
+            "rathian-quest/intro-followup": "Quelque chose est arrivé pendant ton sommeil. Tu nous a ramené un Appareil Célèste. Mais quelqu'un t'as suivi jusqu'ìci.",
+            "rathian-quest/intro-followup#2": "Cet étranger a obtenu ce pourquoi il était venu, et s'est volatilisé. Quoique pas complètement. Il a eu besoin d'un PipBuck pour accéder au terminal. Et ce PipBuck a laissé une marque. Mon technicien ici présent me dit que nous pouvons exploiter cela.",
+            "rathian-quest/intro-followup#3": "<p>J'ai besoin que tu le trouve. Rapidement. Si quelqu'un là dehors sait a propos de nous, et peut pirater nos terminaux, alors ce n'est qu'une question de temps avant qu'une bande de sauvage ne s'infiltre ici et nous écrase.</p>\n<p>Trace le signal. Trouve-le. Assure-toi qu'il ne révèle jamais rien sur nous.</p>",
+            "rathian-quest/technician-followup": "<p><i>Il t'attrape par le PipBuck et le bidouille un peu.</i></p>\n<p>Leur PipBuck a laissé une emprunte logicielle qui peut être utilisé pour les traquer sur de longues distance. J'ai ajouté un périphérique sur ton PipBuck qui lui permet de tracer le signal. Même si le signal est faible, il devrait t'indiquer une direction générale.</p>",
+            "rathian-quest/technician-intro": "Les logs du terminal de l'entrée montrent un accès non authorisé, peu après ton arrivée. Quelqu'un a utilisé la console pour siphonier un gros paquet de données privées. On dirait qu'il a trouvé un backdoor dans le système de sécurité... disons juste que celui qui a fait ça savait très bien ce qu'il faisait.",
+            "reportBlueprints": "Oui. J'ai trouvé des plans pour fabriquer un nouvel Appareil Celeste.",
+            "reportCelestialDevice": "J'ai un nouvel Appareil Célèste.",
+            "reportJunkvilleTrail": "J'ai trouvé une ville, près de l'Étable. Elle est construite près d'une décharge, ça grouille de technologie d'avant guerre.",
+            "reportedBlueprints": "Vraiment ? Laisse-moi voir ça !\n<br><br>\n<i>Elle t'arrache les plans et les déploie sur son bureau. Elle les regarde intensément pendant une minute, pousse le bouton de son intercom et dit:</i>\n<br><br>\nIngénieur demandé dans le bureau de la superviseuse. Et que ça saute.",
+            "reportedBlueprints#3": "Bien. Tu l'as entendu comme moi. Il nous faut un Module Régurgiteur Atmosphérique. Tu peux y aller, citoyen. Nous comptons sur toi.",
+            "reportedBueprints#2": "<i>An engineer finally comes up to the office. She quickly inspects the blueprints.</i>\n<br><br>\nEh bien... c'est impressionnant. Je ne sais pas si nous avons les compétences pour construire ça, mais nous pouvons essayer. Cependant, il va nous manquer un élément essentiel. Le Module de Régulation Atmosphérique ne peut pas être fabriqué avec les moyens du bord. Et le notre a grillé, il est complètement irrécupérable. Il va falloir s'en procurer un en état de marche.",
+            "reportedCelestialDevice": "<p>Enfin. L'Appareil Célèste. Tu y es arrivé.</p>\n<p><i>Sans attendre de réponse, elle presse un bouton sur son intercom et appelle tous les ingénieurs disponibles dans son bureau.</i></p>",
+            "reportedCelestialDevice#2": "Tu as fais quelque chose d'important, citoyen. Quelque chose de vital. Nous prenons la situation en charge à partir de maintenant. Va. Repose-toi. Tu l'as bien mérité. Nous t'appelerons quand l'Appareil Célèste aura été installé.",
+            "reportedJunkvilleTrail": "Bien, ça semble un lieu raisonnable pour commencer +a chercher, dans ce cas. Je suggère que tu y retourne et inspecte les lieux minutieusement. Tu peux y aller.",
+            "takeCelestialDeviceRest": "<i>[Rentre chez toi et repose-toi]</i>",
+            "wasteTime": "Alors cesse de me faire perdre mon temps et retourne à travail ! Bon sang, réalise-tu que la déstiné de toute cette Étable repose sur tes épaules ? Ouste, dehos, au travail !"
+        }
+    }
+}
