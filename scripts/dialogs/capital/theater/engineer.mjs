@@ -1,5 +1,6 @@
 import {DialogHelper, SkillAnswer, BarterAnswer} from "../../helpers.mjs";
 import {skillContest} from "../../../cmap/helpers/checks.mjs";
+import CrafterComponent from "../../crafter.mjs";
 
 const defaultCelestialDevicePrice = 500;
 
@@ -11,6 +12,7 @@ export default class extends DialogHelper {
       .setSkillLimit(70).setXpReward(75);
     this.canNegociateCelestialDevicePrice = this.celestialDevicePriceBarter.visibilityCallback;
     this.celestialDeviceNegociatePrice    = this.celestialDevicePriceBarter.triggerCallback;
+    this.crafter = new CrafterComponent(this);
   }
 
   get spinelQuest() {
@@ -25,6 +27,24 @@ export default class extends DialogHelper {
       return "crystal/prompt";
     }
     return "entry";
+  }
+
+  canCraft(itemType) {
+    switch (itemType) {
+      case "celestial-device":
+        return !game.quests.getQuest("celestialDevice").isObjectiveCompleted("craftDevice");
+    }
+    return true;
+  }
+
+  craftAppraise(itemType) {
+    if (itemType == "celestial-device") {
+      const mainQuest = game.quests.getQuest("celestialDevice");
+      if (this.canClaimCelestialDeviceParts())
+        return this.celestialPartsClaim();
+      return "celestial-devie/introduction";
+    }
+    return this.crafter.defaultCraftAppraise();
   }
 
   celestialDeviceIntroduction() {
@@ -43,7 +63,7 @@ export default class extends DialogHelper {
 
   celestialDeviceAlreadyFoundArm() {
     const mainQuest = game.quests.getQuest("celestialDevice");
-    return mainQuest.isObjectiveCompleted("isObjectiveCompleted");
+    return mainQuest.isObjectiveCompleted("find-arm-module");
   }
 
   canShowCelestialDevicePlans() {
@@ -69,8 +89,10 @@ export default class extends DialogHelper {
     console.log("RUNNING CELESTIAL PARTS CLAIM", this.celestialDevicePartsReady());
     if (this.celestialDevicePartsReady()) {
       this.dialog.npc.setVariable("celestialDeviceState", 2);
+      game.quests.getQuest("celestialDevice").script.onCraftedCelestialDevice("with-rotten-gear");
       return "celestial-device/give-parts";
     }
+    return "celestial-device/parts-not-ready";
   }
 
   get celestialDevicePartsPrice() {

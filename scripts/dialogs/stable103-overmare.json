@@ -1,41 +1,171 @@
 {
     "answers": {
         "": {
-            "hook": "",
-            "state": ""
         },
         "Nothing yet.": {
             "text": "Nothing yet."
+        },
+        "blueprints-wait": {
+            "state": "reportedBueprints#2",
+            "text": "blueprints-wait"
+        },
+        "blueprints-wait#2": {
+            "state": "reportedBlueprints#3",
+            "text": "blueprints-wait#2"
+        },
+        "celestial-device-next": {
+            "state": "reportedCelestialDevice#2",
+            "text": "exit"
         },
         "nothing-to-report": {
             "state": "wasteTime",
             "text": "nothing-to-report"
         },
+        "rathian-intro-continue": {
+            "state": "rathian-quest/intro-followup",
+            "text": "rathian-intro-continue"
+        },
+        "rathian-intro-continue-2": {
+            "state": "rathian-quest/technician-intro",
+            "text": "rathian-intro-continue-2"
+        },
+        "rathian-intro-continue-3": {
+            "state": "rathian-quest/intro-followup#2",
+            "text": "rathian-intro-continue-3"
+        },
+        "rathian-intro-continue-4": {
+            "state": "rathian-quest/technician-followup",
+            "text": "rathian-intro-continue-4"
+        },
+        "rathian-intro-continue-5": {
+            "state": "rathian-quest/intro-followup#3",
+            "text": "rathian-intro-continue-5"
+        },
+        "reportBlueprints": {
+            "availableHook": "canReportBlueprints",
+            "state": "reportedBlueprints",
+            "text": "reportBlueprints"
+        },
+        "reportCelestialDevice": {
+            "availableHook": "canReportCelestialDevice",
+            "state": "reportedCelestialDevice",
+            "text": "reportCelestialDevice"
+        },
         "reportJunkvilleTrail": {
             "availableHook": "canReportJunkvilleTrail",
-            "hook": "",
             "state": "reportedJunkvilleTrail",
             "text": "reportJunkvilleTrail"
+        },
+        "takeCelestialDeviceRest": {
+            "hook": "celestialDeviceRest",
+            "text": "takeCelestialDeviceRest"
         }
     },
     "entryPoint": "entryPoint",
     "states": {
         "entryPoint": {
             "answers": [
+                "reportCelestialDevice",
+                "reportBlueprints",
                 "reportJunkvilleTrail",
                 "nothing-to-report"
             ],
+            "mood": "smile",
             "text": "entryPoint"
+        },
+        "rathian-quest/intro": {
+            "answers": [
+                "rathian-intro-continue"
+            ],
+            "mood": "angry",
+            "text": "rathian-quest/intro"
+        },
+        "rathian-quest/intro-followup": {
+            "answers": [
+                "rathian-intro-continue-2"
+            ],
+            "mood": "angry",
+            "text": "rathian-quest/intro-followup"
+        },
+        "rathian-quest/intro-followup#2": {
+            "answers": [
+                "rathian-intro-continue-4"
+            ],
+            "hook": "speakerOvermare",
+            "mood": "angry",
+            "text": "rathian-quest/intro-followup#2"
+        },
+        "rathian-quest/intro-followup#3": {
+            "answers": [
+            ],
+            "hook": "rathianBriefingDone",
+            "mood": "angry",
+            "text": "rathian-quest/intro-followup#3"
+        },
+        "rathian-quest/technician-followup": {
+            "answers": [
+                "rathian-intro-continue-5"
+            ],
+            "hook": "speakerTechnician",
+            "mood": "smile",
+            "text": "rathian-quest/technician-followup"
+        },
+        "rathian-quest/technician-intro": {
+            "answers": [
+                "rathian-intro-continue-3"
+            ],
+            "hook": "speakerTechnician",
+            "mood": "cocky",
+            "text": "rathian-quest/technician-intro"
+        },
+        "reportedBlueprints": {
+            "answers": [
+                "blueprints-wait"
+            ],
+            "hook": "reportBlueprints",
+            "mood": "dubious",
+            "text": "reportedBlueprints"
+        },
+        "reportedBlueprints#3": {
+            "answers": [
+            ],
+            "hook": "reportBlueprintsBackToOvermare",
+            "mood": "cocky",
+            "text": "reportedBlueprints#3"
+        },
+        "reportedBueprints#2": {
+            "answers": [
+                "blueprints-wait#2"
+            ],
+            "hook": "reportBlueprintsEngineer",
+            "mood": "neutral",
+            "text": "reportedBueprints#2"
+        },
+        "reportedCelestialDevice": {
+            "answers": [
+                "celestial-device-next"
+            ],
+            "hook": "reportCelestialDevice",
+            "mood": "smile",
+            "text": "reportedCelestialDevice"
+        },
+        "reportedCelestialDevice#2": {
+            "answers": [
+                "takeCelestialDeviceRest"
+            ],
+            "text": "reportedCelestialDevice#2"
         },
         "reportedJunkvilleTrail": {
             "answers": [
             ],
             "hook": "reportJunkville",
+            "mood": "neutral",
             "text": "reportedJunkvilleTrail"
         },
         "wasteTime": {
             "answers": [
             ],
+            "mood": "angry",
             "text": "wasteTime"
         }
     }

@@ -3,9 +3,16 @@
     "celestialDevice": {
       "title": "Fix the stable Celestial Device",
       "explore-junkville-facility": "Explore the Stable-Tech facility near Junkville",
+      "find-blueprints": "Find blueprints for the Celestial Device",
+      "find-arm-module": "Find an Atmospheric Regulatory Module",
+      "craft-celestial-device": "Build a Celestial Device",
+      "bring-celestial-device": "Bring the Celestial Device to the Overmare",
       "description": "The overmare summoned you to tell you that our Stable's Celestial Device was broken. Apparently, you need it to grow our crops underground, and you'll all die of hunger unless something's done soon. On top of that, the Stable has neither the parts, nor even the knowledge required to fix the device. Talk about oversight. She informed you that she had taken the difficult decision of sending you out of the Stable, with a mission to find another Celestial Device, or, at the very least, the parts and knowledge needed to fix it.<br><br>According to the overmare, there has to be other Stables out there, or at the very least, remains of the Stable-Tech labs and factories: you should be able to find the relevant information over there. Good luck. You're all going to need it.",
       "description-blueprints": "When exploring a Stable-Tech facility at Junkville, you actually found blueprints for the Celestial Device. That's going to come in handy. You now know what you're looking for.",
-      "description-arm-module": "The ruins of the Capital were ruinous indeed, but as you were exploring some shady kind of laboratory, you found the Atmospheric Regulatory Module, a vital piece of the Celestial Device."
+      "description-arm-module": "The ruins of the Capital were ruinous indeed, but as you were exploring some shady kind of laboratory, you found the Atmospheric Regulatory Module, a vital piece of the Celestial Device.",
+      "description-crafted-with-rathian": "You enlisted the help of Rathian, a Steel Ranger scribe, to build the new Celestial Device. With your cooperation, you managed to build a functional Celestial Device.",
+      "description-crafted-with-rotten-gear": "You asked Rotten Gear, one of the ghouls living in the ruins of the old capital, to build a new Celestial Device using the Atmospheric Regulatory Module you found. He reluctantly accepted, but you know he enjoyed working on it.",
+      "description-finished": "Thanks to you, the Celestial Device was delivered in time to save your Stable folk from starvation. The Stable engineers installed the Celestial Device you brought them, and the orchad is slowly regaining its colours. The next harvest will be plentiful."
     }
   }
 }

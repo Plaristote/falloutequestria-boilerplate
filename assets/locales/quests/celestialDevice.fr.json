@@ -3,9 +3,16 @@
     "celestialDevice": {
       "title": "Réparer l'Appareil Célèste",
       "explore-junkville-facility": "Explore le laboratoire Stable-Tech près de Junkville",
+      "find-blueprints": "Trouve des plans d'Appareil Célèste",
+      "find-arm-module": "Trouve un Module de Régulation Atmosphérique",
+      "craft-celestial-device": "Fabrique un Appareil Célèste",
+      "bring-celestial-device": "Amène l'Appareil Célèste à la Superviseuse",
       "description": "La dirigeante de l'Étable t'as convoqué pour te dire que l'Appareil Célèste de votre Étable était foutu. Apparemment, vous en avez besoin pour faire pousser vos récoltes souterraines, et vous allez tous mourrir de faim si rien n'est fait. Par-dessus le marché, l'Étable n'a ni les pièces, ni les connaissances requises pour réparer l'appareil. Il y a pas à dire, Stable-Tech sait s'organiser. Elle t'as informé qu'elle avait pris sur elle, et qu'elle avait décidé de t'envoyer à l'extérieur de l'Étable, avec pour mission de trouver un autre Appareil Célèste, ou au moins, des pièces et les informations néccessaires pour réparer le votre.<br><br>Selon la dirigeante, il doit y avoir d'autres Étables à l'extérieur, ou tout du moins, des restes de l'entreprises Stable-Tech, de ses laboratoires, de ses usines : tu devrais pouvoir trouver des informations là-bas. Bonne chance. Vous allez tous en avoir besoin.",
       "description-blueprints": "En explorant un laboratoire de Stable-Tech à Junkville, tu as trouvé des schémas pour fabriquer un nouveau Appareil Célèste. Ça va sûrement être très utile : tu sais maintenant exactement ce que tu cherche.",
-      "description-arm-module": "Les ruines de la Capitale étaient bien ruinées, en effet, mais alors que tu explorais un sinistre et mystérieux laboratoire, tu as trouvé le Module de Régulation Atmosoherique, une pièce vitale pour l'Appareil Célèste."
+      "description-arm-module": "Les ruines de la Capitale étaient bien ruinées, en effet, mais alors que tu explorais un sinistre et mystérieux laboratoire, tu as trouvé le Module de Régulation Atmosoherique, une pièce vitale pour l'Appareil Célèste.",
+      "description-crafted-with-rathian": "Tu as obtenu l'aide de Rathian, un scribe des Steel Rangers, pour construire un nouvel Appareil Célèste. Avec ton aide, vous avez réussi à fabriquer un Appareil Célèste fonctionnel.",
+      "description-crafted-with-rotten-gear": "Tu as demandé à Rotten Gear, une goule vivant dans les ruines de l'ancienne capitale, de fabriquer un nouvel Appareil Célèste, en utilisant le Module de Régulation Atmosphérique que tu avais trouvé tantôt. Il a un peu râlé, mais il a accepté, et tu sais bien que dans le fond, il a adoré travailler sur ce projet.",
+      "description-finished": "Grâce à toi, l'Appareil Célèste est arrivé à temps pour empêcher une famine. Les ingénieurs de l'Étable ont instalé l'Appareil Célèste que tu leur a amené, et le jardin nourricier reprend lentement ses couleurs d'antan. La prochaine récolte sera riche."
     }
   }
 }

@@ -23,17 +23,6 @@
       "stable-answer": "On a mission to save a stable ? So you're a stable dweller. I kinda figured... you look mighty clean and healthy for a regular traveler... so you're telling me there's a stable around that's still up and running ? That's... quite interesting. Do you need help ?",
       "untrust-answer": "What ? No ! Look, you gotta be careful around these parts. I spotted you and those bandits long before you crossed path... and judging by your looks, I figured you'd be an easy prey for them. I just came to help, I don't expect anything from you. So, what do you say ? Can we proprely introduce ourselves now ?"
     },
-    "rathian-facility-end": {
-      "about-blueprints": "I might be able to help you build it. I'd be glad to, actually. It's not everyday a scientist like me gets to build such a fancy piece of pre-war tech. Tell you what: if you can find all the parts necessary to build this, just find me at my shed at Junkville, and I'll build the device.",
-      "about-parts": "Well, the most basic parts, I'll be able to gather from Junkville's dumps. But see these parts ? {{TODO}} These aren't going to be easy to find. If you're lucky, you'll find some mechanics people who'll have some of these at hoof range... but your best bet is probably to wander through other pre-war tech storage rooms. At this point, I don't know anymore than you.",
-      "ask-about-parts": "Alright. So where can I find all these parts ?",
-      "entry": "I can't believe the amount of stuff that's been stockpiled here for so long ! It's going to take me a while to set apart the junk from the treasures. How about you, have you found what you were looking for ?",
-      "explain-blueprints": "Interesting... these are blueprints. Blueprints featuring all the specifications and instructions useful to build your very own celestial device. This isn't what you were looking for, but I'd say this is the next best thing.",
-      "explain-blueprints-response": "Sounds good...",
-      "found-blueprints": "Not exactly... but I did find this... whatever that is.",
-      "identified-blueprints": "More or less. I found blueprints to build a new celestial device.",
-      "leave": "That's good to know. I'll be on my way, then."
-    },
     "rathian-junkville": {
       "about-celestial-device-go": "I'm glad you asked ! We can go right now, if you wish !",
       "about-celestial-device-intro": "A celestial device ? Interesting. There aren't a ton of reasons why you'd need one. It's a stable tech device designed to create an artificial micro-climate in enclosed spaces. Useful to grow bountiful crops in places like bunkers. Or, you know, stables.<br>I don't really know for sure where to find one... but there's a Stable Tech facility pretty close from here, actually. It's within Junkville's dumps. That's probably a good place to look for. You won't be able to get in there alone though.",

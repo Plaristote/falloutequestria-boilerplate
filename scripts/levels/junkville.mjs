@@ -27,7 +27,10 @@ class Level extends LevelBase {
     if (rathian && rathian.script.shouldBeAtJunkville && rathian.isAlive()) {
       game.uniqueCharacterStorage.loadCharacterToCurrentLevel("rathian", 53, 27, 0);
       rathian.setScript("rathian/junkville.mjs");
+      rathian.attacksOnSight = true;
       rathian.movementMode = "walking";
+      rathian.statistics.faction = "rathian";
+      rathian.tasks.removeTask("autopilot");
       if (door) door.locked = false;
     } else if (door && !level.findObject("Rathian#0")) {
       door.opened = false;

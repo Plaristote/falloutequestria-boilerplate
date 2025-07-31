@@ -1,0 +1,15 @@
+{
+    "dialogs": {
+        "rathian-facility-end": {
+            "about-blueprints": "Je pourrais peut-être vous aider à le construire. Avec plaisir, d'ailleurs. Ce n'est pas tous les jours qu'un scientifique comme moi a l'occasion de construire une pièce de technologie d'avant-guerre aussi sophistiquée. Dites-moi : si vous trouvez toutes les pièces nécessaires, venez me voir dans mon hangar à Dépôtville, et je construirai l'appareil.",
+            "about-parts": "Eh bien, les pièces les plus basiques, je pourrai les récupérer ou fabriuer dans les décharges de Dépôtville. Mais il va vous falloir un Module de Régulation Atmosphérique. Pas facile à trouver. Votre tomberez peut-être dessus, en fouinant dans des infrastructures d'avant-guerre, comme ici. Il en reste peut-être dans un ancien laboratoire.",
+            "ask-about-parts": "D'accord. Alors, où puis-je trouver toutes ces pièces ?",
+            "entry": "Je n'arrive pas à croire la quantité de choses qui ont été stockées ici pendant si longtemps ! Il va me falloir un certain temps pour séparer les déchets des trésors. Et vous, avez-vous trouvé ce que vous cherchiez ?",
+            "explain-blueprints": "Intéressant... ce sont des plans. Des plans avec toutes les spécifications et instructions utiles pour construire votre propre appareil céleste. Ce n'est pas ce que vous cherchiez, mais je dirais que c'est la meilleure solution.",
+            "explain-blueprints-response": "Ça a l'air bien...",
+            "found-blueprints": "Pas exactement... mais j'ai trouvé ça... quoi que ce soit.",
+            "identified-blueprints": "Plus ou moins. J'ai trouvé des plans pour construire un nouvel appareil céleste.",
+            "leave": "C'est bon à savoir. Je m'en vais, alors."
+        }
+    }
+}
