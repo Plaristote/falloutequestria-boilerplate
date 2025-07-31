@@ -9,7 +9,8 @@ export class Turret extends CharacterBehaviour {
   }
 
   popDown() {
-    this.model.actionQueue.pushAnimation("fall-down", "sleep");
+    this.model.actionQueue.pushAnimation("fall-down")
+    this.model.actionQueue.pushAnimation("sleep");
     this.model.actionQueue.start();
   }
 
