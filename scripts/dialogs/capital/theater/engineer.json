@@ -39,6 +39,10 @@
             "state": "celestial-device/introduction",
             "text": "ask-suggestion-celestial-device-arm"
         },
+        "ask-to-craft": {
+            "state": "craft-prompt",
+            "text": "ask-to-craft"
+        },
         "ask-to-learn": {
             "availableHook": "isRepairTrainingAvailable",
             "state": "repair/entry",
@@ -48,6 +52,13 @@
             "availableHook": "celestialDeviceAlreadyFoundArm",
             "state": "celestial-device/introduction",
             "text": "boast-about-already-having-arm"
+        },
+        "cannot-afford-craft": {
+            "state": "entry",
+            "text": "cannot-afford-craft"
+        },
+        "craft-pay-up": {
+            "text": "craft-pay-up"
         },
         "crystal-prompt-leave": {
             "text": "crystal-prompt-leave"
@@ -65,6 +76,10 @@
         },
         "exit-about-generator": {
             "text": "exit-about-generator"
+        },
+        "exit-without-craft": {
+            "state": "entry",
+            "text": "exit-without-craft"
         },
         "found-crystal-brag": {
             "state": "crystal/replace-crystal",
@@ -193,6 +208,21 @@
             ],
             "text": "celestial-device/parts-not-ready"
         },
+        "craft-ended": {
+            "answers": [
+            ],
+            "text": "craft-ended"
+        },
+        "craft-prompt": {
+            "answers": [
+                "craft-pay-up",
+                "cannot-afford-craft",
+                "exit-without-craft"
+            ],
+            "hook": "craftDialog",
+            "mood": "cocky",
+            "text": "craft-item-cash"
+        },
         "crystal/found-crystal": {
             "answers": [
                 "found-crystal-evasive",
@@ -235,6 +265,7 @@
         },
         "entry": {
             "answers": [
+                "ask-to-craft",
                 "ask-to-learn",
                 "ask-about-celestial-device",
                 "ask-about-celeestial-device-parts",

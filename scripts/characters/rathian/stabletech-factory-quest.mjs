@@ -32,6 +32,8 @@ class Rathian extends CharacterBehaviour {
 
   get state() { return this.model.getVariable(`${datastore}-state`); }
   set state(value) { this.model.setVariable(`${datastore}-state`, value); }
+  get endedAt() { return this.model.getVariable(`${datastore}-stateChangedAt`, 0); }
+  updateEndedAt() { this.model.setVariable(`${datastore}-stateChangedAt`, game.timeManager.getTimestamp()); }
 
   get dialog() {
     const quest = requireQuest("junkvilleStabletechFacility");
@@ -41,12 +43,19 @@ class Rathian extends CharacterBehaviour {
     return null;
   }
 
+  get shouldBeAtJunkville() {
+    if (game.hasVariable("playerLeftRathianInDumps"))
+      return true;
+    return this.state >= States.SearchingStockRoom
+        && this.endedAt < game.timeManager.getTimestamp() - (6 * 60 * 60);
+  }
+
   shouldPopAtDumps()    { return this.state === States.GoToDumps; }
   shouldPopAtFacility() { return this.state === States.GoToSurfaceMainRoom; }
 
   autopilot() {
     if (!this.model.actionQueue.isEmpty()) return ;
-    console.log("autopilot", this.state);
+    console.log("Rathian Autopilot", this.state);
     switch (this.state) {
     case States.GoToDumps:
       return this.headTowardsDumps();
@@ -115,7 +124,7 @@ class Rathian extends CharacterBehaviour {
 
       this.state++;
       level.addTextBubble(this.model, i18n.t("junkville-stabletech.rathian-head-downstairs"), 4321);
-      door.getScriptObject().enableAutoclose();
+      door.script.enableAutoclose();
     }
   }
 
@@ -126,8 +135,10 @@ class Rathian extends CharacterBehaviour {
   }
 
   onPlayerGoesDownstairs() {
-    if (this.state === States.GoToSurfaceMainRoom)
+    if (this.state === States.GoToSurfaceMainRoom) {
+      game.unsetVariable("playerLeftRathianInDumps");
       game.setVariable("rathianGoingToStabletechFacility", 1);
+    }
     else
       game.setVariable("playerLeftRathianInDumps", 1);
   }
@@ -141,12 +152,8 @@ class Rathian extends CharacterBehaviour {
   }
 
   onPlayerGoesUpstairs() {
-    if (this.state === States.Done) {
-      this.model.attacksOnSight = true;
-      this.model.movementMode = "walking";
-      this.model.statistics.faction = "rathian";
-      game.setVariable("rathianGoingBackToJunkville", 1);
-    }
+    if (this.state >= States.SearchingStockRoom)
+      this.updateEndedAt();
   }
 
   /*

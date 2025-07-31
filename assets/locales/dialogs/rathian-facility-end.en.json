@@ -1,0 +1,15 @@
+{
+    "dialogs": {
+        "rathian-facility-end": {
+            "about-blueprints": "I might be able to help you build it. I'd be glad to, actually. It's not everyday a scientist like me gets to build such a fancy piece of pre-war tech. Tell you what: if you can find all the parts necessary to build this, just find me at my shed at Junkville, and I'll build the device.",
+            "ask-about-parts": "Alright. So where can I find all these parts ?",
+            "about-parts": "Well, the most basic parts, I'll be able to gather or craft from Junkville's dumps. But you're going to need an Atmospheric Regulation Module. These aren't easy to find. You might come around one, salvaging through pre-war facilities such as this one. There might be some left in an old science lab.",
+            "entry": "I can't believe the amount of stuff that's been stockpiled here for so long ! It's going to take me a while to set apart the junk from the treasures. How about you, have you found what you were looking for ?",
+            "explain-blueprints": "Interesting... these are blueprints. Blueprints featuring all the specifications and instructions useful to build your very own celestial device. This isn't what you were looking for, but I'd say this is the next best thing.",
+            "explain-blueprints-response": "Sounds good...",
+            "found-blueprints": "Not exactly... but I did find this... whatever that is.",
+            "identified-blueprints": "More or less. I found blueprints to build a new celestial device.",
+            "leave": "That's good to know. I'll be on my way, then."
+        }
+    }
+}

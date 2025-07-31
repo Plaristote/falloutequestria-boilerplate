@@ -32,9 +32,9 @@ class Dialog {
 
   accompany() {
     if (this.introduced)
-      return i18n.t("dialogs.rathian-introduction.accompany-again");
+      return { textKey: "accompany-again" };
     this.onJunkvilleDisclosed();
-    return i18n.t("dialogs.rathian-introduction.accompany");
+    return { textKey: "accompany" };
   }
 
   onJunkvilleDisclosed() {

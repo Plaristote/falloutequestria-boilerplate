@@ -1,10 +1,6 @@
 {
     "answers": {
         "": {
-            "availableHook": "",
-            "hook": "",
-            "state": "",
-            "textHook": ""
         },
         "ask-about-celestial-device": {
             "availableHook": "isDeviceQuestAvailable",
@@ -15,11 +11,13 @@
         "ask-about-celestial-device-alt": {
             "availableHook": "canInquireAboutDevice",
             "state": "about-celestial-device-intro",
-            "text": "ask-about-celestial-device-alt",
-            "textHook": ""
+            "text": "ask-about-celestial-device-alt"
+        },
+        "ask-craft": {
+            "state": "craft-prompt",
+            "text": "ask-craft"
         },
         "ask-nothing": {
-            "availableHook": "",
             "text": "ask-nothing"
         },
         "ask-something-else": {
@@ -27,17 +25,32 @@
             "text": "ask-something-else"
         },
         "ask-steel-ranger": {
-            "availableHook": "",
             "state": "about-steel-rangers",
             "text": "ask-steel-ranger"
+        },
+        "cannot-afford-craft": {
+            "state": "entry",
+            "text": "cannot-afford-craft"
+        },
+        "celestial-device-ask-where-arm": {
+            "state": "celestial-device/arm-whereabouts",
+            "text": "celestial-device-ask-where-arm"
+        },
+        "celestial-device-craft-start": {
+            "state": "celestial-device/crafted",
+            "text": "exit"
         },
         "celestial-device-do-later": {
             "state": "entry",
             "text": "celestial-device-do-later"
         },
+        "celestial-device-give-arm": {
+            "availableHook": "hasCelestialdeviceArm",
+            "state": "celestial-device/crafting",
+            "text": "celestial-device-give-arm"
+        },
         "celestial-device-go": {
             "hook": "goToStabletechFacility",
-            "state": "",
             "text": "celestial-device-go"
         },
         "celestial-device-where": {
@@ -54,6 +67,13 @@
         "celestial-device-why-help": {
             "state": "about-celestial-device-why-help",
             "text": "celestial-device-why-help"
+        },
+        "craft-pay-up": {
+            "text": "craft-pay-up"
+        },
+        "exit-without-craft": {
+            "state": "entry",
+            "text": "exit-without-craft"
         }
     },
     "entryPoint": "entry",
@@ -63,7 +83,6 @@
                 "celestial-device-go",
                 "celestial-device-do-later"
             ],
-            "hook": "",
             "text": "about-celestial-device-go"
         },
         "about-celestial-device-intro": {
@@ -78,19 +97,59 @@
             "answers": [
                 "celestial-device-why-done"
             ],
-            "hook": "",
             "text": "about-celestial-device-why-help"
         },
         "about-steel-rangers": {
             "answers": [
                 "ask-something-else"
             ],
-            "hook": "",
             "text": "about-steel-rangers"
+        },
+        "celestial-device/arm-whereabouts": {
+            "answers": [
+            ],
+            "text": "celestial-device/arm-whereabouts"
+        },
+        "celestial-device/craft": {
+            "answers": [
+                "celestial-device-give-arm",
+                "celestial-device-ask-where-arm",
+                "exit-without-craft"
+            ],
+            "text": "celestial-device/craft"
+        },
+        "celestial-device/crafted": {
+            "answers": [
+            ],
+            "hook": "craftCelestialDevice",
+            "text": "celestial-device/crafted"
+        },
+        "celestial-device/crafting": {
+            "answers": [
+                "celestial-device-craft-start"
+            ],
+            "text": "celestial-device/crafting"
+        },
+        "craft-ended": {
+            "answers": [
+            ],
+            "mood": "smile",
+            "text": "craft-ended"
+        },
+        "craft-prompt": {
+            "answers": [
+                "craft-pay-up",
+                "cannot-afford-craft",
+                "exit-without-craft"
+            ],
+            "hook": "craftDialog",
+            "mood": "dubious",
+            "text": "craft-item-cash"
         },
         "entry": {
             "answers": [
                 "ask-about-celestial-device",
+                "ask-craft",
                 "ask-steel-ranger",
                 "ask-nothing"
             ],
@@ -103,7 +162,6 @@
                 "ask-steel-ranger",
                 "ask-nothing"
             ],
-            "hook": "",
             "text": "entry-first-meeting"
         }
     }

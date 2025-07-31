@@ -3,6 +3,10 @@ import {QuestHelper, requireQuest} from "./helpers.mjs";
 const questName = "celestialDevice";
 
 export class CelestialDevice extends QuestHelper {
+  get xpReward() {
+    return 5000;
+  }
+
   initialize() {
     this.model.location = "stable-103";
   }
@@ -10,9 +14,13 @@ export class CelestialDevice extends QuestHelper {
   getDescription() {
     let text = this.model.tr("description");
     if (this.model.isObjectiveCompleted("find-blueprints"))
-      text += "<br><br>" + this.model.tr("description-blueprints");
+      text += "<p" + this.model.tr("description-blueprints") + "</p>";
     if (this.model.isObjectiveCompleted("find-arm-module"))
-      text += "<br><br>" + this.model.tr("description-arm-module");
+      text += "<p>" + this.model.tr("description-arm-module") + "</p>";
+    if (this.model.isObjectiveCompleted("craftDevice"))
+      text += "<p>" + this.model.tr("description-crafted-" + this.model.getVariable("craftingBudddy")) + "</p>";
+    if (this.model.isObjectiveCompleted("bringDevice"))
+      text += "<p>" + this.model.tr("description-finished") + "</p>";
     return text;
   }
 
@@ -26,8 +34,25 @@ export class CelestialDevice extends QuestHelper {
     case "celestial-device-blueprints":
       this.model.addObjective("find-blueprints", this.tr("find-blueprints"));
       this.model.completeObjective("find-blueprints");
-      this.model.completeObjective("explore-junkille-facility");
+      this.model.completeObjective("explore-junkville-facility");
       break ;
     }
+  }
+
+  onCraftedCelestialDevice(withHelperSuffix) {
+    this.model.setVariable("craftingBuddy", withHelperSuffix);
+    game.player.inventory.addItemOfType("celestial-device");
+    if (!this.model.hasObjective("craftDevice"))
+      this.model.addObjective("craftDevice", this.tr("craft-celestial-device"));
+    this.model.completeObjective("craftDevice");
+    this.model.addObjective("bringDevice", this.tr("bring-celestial-device"));
+  }
+
+  onBroughtCelestialDevice() {
+    game.player.inventory.removeItemOfType("celestial-device");
+    if (!this.model.hasObjective("bringDevice"))
+      this.model.addObjective("bringDevice", this.tr("bring-celestial-device"));
+    this.model.completeObjective("bringDevice");
+    this.model.completed = true;
   }
 }

@@ -1,8 +1,6 @@
 {
     "answers": {
         "": {
-            "availableHook": "",
-            "state": ""
         },
         "ask-about-parts": {
             "state": "about-parts",
@@ -22,7 +20,6 @@
             "text": "identified-blueprints"
         },
         "leave": {
-            "state": "",
             "text": "leave"
         }
     },

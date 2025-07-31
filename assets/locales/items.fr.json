@@ -17,6 +17,13 @@
         "use-2": "Utiliser"
     },
     "items": {
+        "apple-cider": "Cidre",
+        "apple-whisky": "Whisky-Pomme",
+        "book": "Livre",
+        "bottlecaps": "Capsules",
+        "celestial-device": "Appareil Célèste",
+        "celestial-device-blueprints": "Plan d'Appareil Célèste",
+        "celestial-device-mra": "Module de Régulation Atmosphérique",
         "dynamite": "Dynamite",
         "health-potion": "Potion de vie",
         "melee-bucking": "Ruade",

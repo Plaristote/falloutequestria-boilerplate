@@ -7,13 +7,17 @@ function hasQuest() { return game.quests.hasQuest(questName); }
 function getQuest() { return game.quests.getQuest(questName); }
 
 export function isFacilityQuestAvailable() {
-  return !hasQuest() || getQuest().getScriptObject().isObjectiveCompleted("enter-facility");
+  return !hasQuest() || !(getQuest().isObjectiveCompleted("enter-facility"));
+}
+
+export function isFacilityQuestComplete() {
+  return hasQuest() && getQuest().completed;
 }
 
 function ifRathianIsInvolved(callback) {
   const rathian = game.uniqueCharacterStorage.getCharacter("rathian");
   if (rathian && rathian.scriptName === rathianScript)
-    callback(rathian.getScriptObject());
+    callback(rathian.script);
 }
 
 const rathianPopPoints = {
@@ -49,11 +53,11 @@ export class JunkvilleStabletechFacility extends QuestHelper {
   getDescription() {
     let text = "";
     if (this.learnedFromRathian)
-      text += this.model.tr("description-rathian-intel");
+      text += `<p>${this.model.tr("description-rathian-intel")}</p>`;
     else
-      text += this.model.tr("description-no-intel");
+      text += `<p>${this.model.tr("description-no-intel")}</p>`;
     if (this.model.isObjectiveCompleted("find-blueprints"))
-      text += this.model.tr("description-done");
+      text += `<p>${this.model.tr("description-done")}</p>`;
     return text;
   }
 

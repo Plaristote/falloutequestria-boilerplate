@@ -1,8 +1,10 @@
-import {isFacilityQuestAvailable} from "../quests/junkvilleStabletechFacility.mjs";
+import {isFacilityQuestAvailable, isFacilityQuestComplete} from "../quests/junkvilleStabletechFacility.mjs";
+import CrafterComponent from "./crafter.mjs"
 
 class Dialog {
   constructor(dialog) {
     this.dialog = dialog;
+    this.crafter = new CrafterComponent(this);
   }
 
   getEntryPoint() {
@@ -23,6 +25,44 @@ class Dialog {
       return this.dialog.t("entry-alt");
     }
     return this.dialog.t("entry");
+  }
+
+  canCraft(itemType) {
+    switch (itemType) {
+      case "celestial-device":
+        return !game.quests.getQuest("celestialDevice").isObjectiveCompleted("craftDevice");
+    }
+    return true; // Rathian can craft ANYTHING, he's the best scribe ever
+  }
+
+  canCraftItems() {
+    return isFacilityQuestComplete();
+  }
+
+  craftDialog() {
+    if (game.hasVariable("playerLeftRathianInDumps")) {
+      return {
+        text: this.dialog.t("craft-refusal"),
+        answers: []
+      };
+    }
+    return this.crafter.defaultCraftDialog();
+  }
+
+  craftAppraise(itemType) {
+    if (itemType == "celestial-device")
+      return "celestial-device/craft";
+    return this.crafter.defaultCraftAppraise();
+  }
+
+  hasCelestialdeviceArm() {
+    return game.player.inventory.count("celestial-device-mra") > 0;
+  }
+
+  craftCelestialDevice() {
+    game.player.inventory.removeItemOfType("celestial-device-mra");
+    game.quests.getQuest("celestialDevice").script.onCraftedCelestialDevice("with-rathian");
+    game.asyncAdvanceTime(42 * 60);
   }
 
   isDeviceQuestAvailable() {

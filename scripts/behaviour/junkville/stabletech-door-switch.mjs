@@ -1,5 +1,3 @@
-import {getRathian} from "../../characters/rathian/template.mjs";
-
 export class StabletechDoorSwitch {
   constructor(model) {
     this.model = model;
@@ -14,13 +12,6 @@ export class StabletechDoorSwitch {
 
     door.locked = false;
     door.open = true;
-    this.moveRathianToNextRoom();
-  }
-
-  moveRathianToNextRoom() {
-    const rathian = getRathian();
-
-    if (rathian)
-      rathian.getScriptObject().onSurfaceMainRoomDoorOpened();
+    door.script.moveRathianToNextRoom();
   }
 }
