@@ -117,7 +117,17 @@ export class RoutineComponent {
   }
 
   rescheduleRoutineAction() {
-    this.model.tasks.addTask(this.updateRoutineTaskName, 1234, 1);
+    const calledAt = Date.now();
+
+    // Use real-time to avoid too frequent rescheduling
+    if (calledAt - this.rescheduleRoutineActionLastCall > 1000) {
+      const timeLeft = this.model.tasks.timeLeft(this.updateRoutineTaskName);
+      const interval = game.fastPassTime ? 43210 : 1234;
+      if (timeLeft === -1 || timeLeft > interval) {
+        this.model.tasks.addTask(this.updateRoutineTaskName, interval, 1);
+        this.rescheduleRoutineActionLastCall = calledAt;
+      }
+    }
   }
 
   updateRoutine() {
