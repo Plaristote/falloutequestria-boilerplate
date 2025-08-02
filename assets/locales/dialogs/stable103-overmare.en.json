@@ -3,6 +3,8 @@
         "stable103-overmare": {
             "blueprints-wait": "<i>[Let's patiently wait]</i>",
             "blueprints-wait#2": "<i>[Overmare still has something to say]</i>",
+            "entryPoint": "Hello, citizen. Any progress on your quest to report ?",
+            "nothing-to-report": "Nothing to report, overmare !",
             "rathian-intro-continue": "It feels like there a \"but\".",
             "rathian-intro-continue-2": "Wait, what ?",
             "rathian-intro-continue-3": "I see.",
@@ -16,12 +18,15 @@
             "rathian-quest/technician-intro": "Entrance terminal logs flagged a breach last night. Somepony accessed the console and siphoned a huge chunk of restricted data. It seems he exploited a backdoor in the security system, and well... let's just say whoever did it knew what they were doing.",
             "reportBlueprints": "Yes. I found blueprints to build a new Celestial Device.",
             "reportCelestialDevice": "I have the Celestial Device.",
+            "reportJunkvilleTrail": "I found a town, near the stable. It's built around a dump site, and it's filled with pre-war devices and scraps.",
             "reportedBlueprints": "Really now ? Let me see that !\n<br><br>\n<i>She grabs the blueprints and sets them on her desk. She looks at them intently for a full minute, pushes a button on her intercom and says:</i>\n<br><br>\nEngineer needed in the overmare office. Move it.",
             "reportedBlueprints#3": "Well. You heard her. We need an Atmospheric Purgatory Nodule. We're counting on you, citizen. You may go.",
             "reportedBueprints#2": "<i>An engineer finally comes up to the office. She quickly inspects the blueprints.</i>\n<br><br>\nThat's... impressive. I don't know that we have the expertise to build this, but we can certainly try. However, we're going to miss a vital component. The Athmospheric Regulatory Module can't be build with what we have on board. And ours is fried, nothing to salvage from it. We'll need to find one that's in working order.",
             "reportedCelestialDevice": "<p>That's it. The Celestial Device. You made it.</p>\n<p><i>She doesn't wait for an answer, presses a button on her intercom and calls for all available engineers.</i></p>",
             "reportedCelestialDevice#2": "You've done something important today. Something vital. We'll take it over from here. Go. Rest. You earned it. You'll be summonned once the installation is complete.",
-            "takeCelestialDeviceRest": "<i>[Go to your room and take a rest]</i>"
+            "reportedJunkvilleTrail": "Well, that sounds like a good place to start looking, then. I suggest you go back there and inspect the premise thorougly. You may go.",
+            "takeCelestialDeviceRest": "<i>[Go to your room and take a rest]</i>",
+            "wasteTime": "Then get back to it and quit goofing around ! Don't you realize the destiny of this entire stable rests within your hooves ? Time is of the essence !"
         }
     }
 }

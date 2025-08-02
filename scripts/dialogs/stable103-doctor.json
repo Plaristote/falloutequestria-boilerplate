@@ -27,11 +27,28 @@
             "state": "entryPoint",
             "text": "main-quest-not-done"
         },
+        "main-quest-progress": {
+            "availableHook": "hasFoundBlueprints",
+            "state": "introductionQuestDone",
+            "text": "main-quest-progress"
+        },
+        "outsideWorldDismissive": {
+            "text": "outsideWorldDismissive"
+        },
+        "outsideWorldReassuredAnswer": {
+            "text": "outsideWorldReassuredAnswer"
+        },
+        "outsideWorldSuggestScouts": {
+            "state": "scoutSuggested",
+            "text": "outsideWorldSuggestScouts"
+        },
         "quest-done-reassuring": {
+            "state": "outsideWorldReassured",
             "text": "quest-done-reassuring"
         },
         "quest-done-worrying": {
             "hook": "onQuestDoneWorrying",
+            "state": "outsideWorldWorrying",
             "text": "quest-done-worrying"
         }
     },
@@ -41,7 +58,6 @@
             "answers": [
             ],
             "hook": "onAngry",
-            "mood": "",
             "text": "aboutWellbeing"
         },
         "entryPoint": {
@@ -51,14 +67,11 @@
                 "ask-nothing"
             ],
             "hook": "entryPoint",
-            "mood": "",
             "text": "entryPoint"
         },
         "healedWounds": {
             "answers": [
             ],
-            "hook": "",
-            "mood": "",
             "text": "healedWounds"
         },
         "introductionQuestDone": {
@@ -66,25 +79,51 @@
                 "quest-done-reassuring",
                 "quest-done-worrying"
             ],
-            "hook": "",
-            "mood": "",
             "text": "introductionQuestDone"
         },
         "mainQuest": {
             "answers": [
                 "main-quest-done",
+                "main-quest-progress",
                 "main-quest-not-done"
             ],
             "hook": "mainQuestQuestion",
-            "mood": "",
             "text": "mainQuest"
+        },
+        "mainQuestThanks": {
+            "answers": [
+                "quest-done-reassuring",
+                "quest-done-worrying"
+            ],
+            "mood": "smile",
+            "text": "mainQuestThanks"
         },
         "nothingToHeal": {
             "answers": [
             ],
             "hook": "onAngry",
-            "mood": "",
+            "mood": "angry",
             "text": "nothingToHeal"
+        },
+        "outsideWorldReassured": {
+            "answers": [
+                "outsideWorldReassuredAnswer"
+            ],
+            "mood": "laugh",
+            "text": "outsideWorldReassured"
+        },
+        "outsideWorldWorrying": {
+            "answers": [
+                "outsideWorldDismissive",
+                "outsideWorldSuggestScouts"
+            ],
+            "mood": "sad",
+            "text": "outsideWorldWorrying"
+        },
+        "scoutSuggested": {
+            "answers": [
+            ],
+            "text": "scoutSuggested"
         }
     }
 }

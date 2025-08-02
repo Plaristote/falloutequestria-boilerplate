@@ -1,0 +1,28 @@
+{
+    "dialogs": {
+        "stable103-doctor": {
+            "aboutWellbeing": "Oh, ça va <i>super</i> ! Vraiment génial ! J'ai passé toute ma vie a étuder la biologie et la chimie, et la superviseuse décide de m'avoir assise dans ce cabinet tout la journée pour m'occuper des rhumes des foins !<br>Désolé...… je voulais pas décharger ça sur toi. Je suis fatiguée. J'ai besoin d'être seule, si ça ne te dérange pas.",
+            "ask-healing": "J'me sens pas très bien doc, tu peux jeter un oeil ?",
+            "ask-nothing": "Je passais juste faire coucou. À plus !",
+            "ask-wellbeing": "Je passais juste voir comment t'allais. La forme ?",
+            "entryPoint": "Bonjour, citoyen {{name}}. Aurais-tu besoin d'assistance  médicale ?",
+            "healedWounds": "Voilà, tu es guéri. Maintenant si tu pouvais être un peu plus prudent la prochaine fois que tu va dehors, je suis pas ton infirmière de service. Et j'ai d'important problèmes scientifiques à résoudre. Scientifiques. Parfaitement. <br>Allez, ouste. Laisse-moi à mon enfer personnel.",
+            "introduction": "Bonjour, citoyen {{name}}. C'est amusant de vous voir ici si tôt. Avez-vous déjà trouvé une solution pour réparer l'Appareil Célèste ?",
+            "introductionQuestDone": "Vraiment ? Éh ben, c'est génial ! Pour tout te dire, j'ai pas cru une seconde que toi, ou qui que ce soit dans cette Étable, serait capable de régler ça. Bien… c'est presque dommage. J'espérais que finalement, la superviseuse nous ferait sortir. Le monde extérieur ne peut pas être si terrible que ça.",
+            "main-quest-done": "Oui, d'ailleurs je suis venu apporter un Appareil Célèste flambant neuf.",
+            "main-quest-not-done": "Non, j'y travaille encore.",
+            "main-quest-progress": "Oui, j'ai trouvé un moyen de  construire un nouvel Appareil Célèste.",
+            "mainQuest": "{{player}} ! J'ai entendu que tu avais fais des progrès à propos de l'Appareil Célèste ?",
+            "mainQuestThanks": "Salut, {{joueur}}. Je t'ai pas encore remercié pour avoir réglé nos problèmes d'Appareil Célèste. Même si j'aurais pas été inquiété à l'idée de s'ouvrir au monde extérieur, c'est toujours rassurant d'avoir un foyer qui puisse nous soutenir. Nous te devons beaucoup. Merci.",
+            "nothingToHeal": "Tu as l'air d'être en pleine forme. S'il te plait, ne vient pas ici si tu n'as pas besoin d'assistance médciale. Mon temps est précieux.<br>Putain… qu'est-ce que je raconte... il se passe jamais rien d'intéressant par ici… écoute, fou moi la paix.",
+            "outsideWorldDismissive": "Ouais… j'ai appris sur le tas.",
+            "outsideWorldReassured": "Ha ! J'attends ça de pieds ferme !\n<br>\nMais… peut-être. Tu lui aurais montré qu'un poney peut partir et revenir sauf. Que le monde extérieur peut apporter des réponses à nos problèmes. Peut-être qu'elle se fera à l'idée. Bien sûr, tout ça dépend de ce que tu revienne toujours en un morceau. J'essayerais de te remettre en état… mais essaye de pas te faire tuer, d'accord ?",
+            "outsideWorldReassuredAnswer": "Je ferais de mon mieux.",
+            "outsideWorldSuggestScouts": "Je pourrais entraîner des scouts pour l'Étable, si la Superviseuse l'approuvait.",
+            "outsideWorldWorrying": "Si chaud que ça, hein ?\n<br>\nTu sais ce qui m'emmerde le lpus ? L'Étable est sauve, ouais, mais seulement aussi longtemps que rien d'irremplaçable ne claque. Et comme on l'a vu… ça arrive.<br>\nC'est peut-être vraiment mieux de rester cachés, mais on devrait au moins être capable d'aller chercher dehors ce dont nous avons besoin. Je voulais pas en parler, mais t'étais vraiment pas préparé pour cette mission. C'était téméraire.",
+            "quest-done-reassuring": "Maintenant qu'on en sait plus sur le monde extérieur, la Superviseuse sera peut-être ouverte à l'idée de s'ouvrir au monde extérieur.",
+            "quest-done-worrying": "Crois moi, tu veux pas vraiment savoir. Le monde extérieur est dangereux. La plupart d'entre vous ne pourraient pas y survivre longtemps.",
+            "scoutSuggested": "T'as surement raison. On a pas besoin d'un corps expéditionnaire non plus. Juste quelques poneys qui savent bivouaquer, soigner une blessure, tirer un flingue, et pas pleurer à la vue du sang.\n<br><br>\nJ'en parlerai avec la Superviseuse. Je pourrais sûrement enseigner les premiers soins."
+        }
+    }
+}

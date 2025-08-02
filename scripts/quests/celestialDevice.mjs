@@ -54,5 +54,6 @@ export class CelestialDevice extends QuestHelper {
       this.model.addObjective("bringDevice", this.tr("bring-celestial-device"));
     this.model.completeObjective("bringDevice");
     this.model.completed = true;
+    game.dataEngine.addReputation("stable-103", 150);
   }
 }

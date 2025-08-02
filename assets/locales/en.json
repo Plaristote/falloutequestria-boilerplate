@@ -63,32 +63,6 @@
             "partyPlanSuggest": "Maybe I can help you with that. I could smuggle some alcohol from the outside.",
             "poured-cider": "One cider, coming up ! Anything else ?",
             "poured-juice": "One apple juice for my favorite customer, here we go ! Anything else ?"
-        },
-        "stable103-doctor": {
-            "aboutWellbeing": "Oh, everything is doing <i>great</i> ! Just great ! I've spent my whole life studying biology and chemistry, and the overmare decided to have me sit in this office all day long to take care of everypony's Celestia's damned sniffles !<br>Sorry... I didn't mean to lash out on you. I'm just tired. I need some alone time, if you don't mind.",
-            "ask-healing": "I'm not feeling so good, doc... can you take a look ?",
-            "ask-nothing": "I just came by to check on you ! See you later !",
-            "ask-wellbeing": "I just came by to check on you ! How are things going ?",
-            "entryPoint": "Hello, citizen {{name}}. Are you perhaps in need of medical assistance ?",
-            "healedWounds": "Here you go, all patched up. Now if you could be more careful next time you head outside, I'm not your personal nurse. And I have important science matters to take care off.<br><i>[Mumbles to herself:] Or at least I wish I had...</i><br>Come on, shoo, leave me alone to my own personal hell !",
-            "introduction": "Hello, citizen {{name}}. Fancy seeing you here so soon. Have you already found a solution to the celestial device issue ?",
-            "introductionQuestDone": "Is that so ? Well, that's amazing ! I'm gonna be honest with you : I didn't think for a second that you, or anyone else in this stable, would be able to fix it. Well... that's too bad. I kinda hoped that in the end, the overmare would have to lead us all to the outside world. I don't care what kind of horrors you've seen out there, I'm just tired of sitting all day in an office.",
-            "introductionQuestNotDone": "Well, maybe you pick up the pace then. So why are you here then ? Are you sick, hurt, do you need me to heal you ?",
-            "introductionQuestReassuring": "Expeditions to the outside world ? That would be fun. Oh, and, you know, useful to our science projects and such. Anyhow, I sure hope you're right about this.<br>So, did you need any healing from me ?",
-            "introductionQuestWorrying": "<i>Us</i> stable dwellers ? Don't you consider yourself as one of us anymore ?<br>Well... you may be right. Maybe we're better off protected by the walls of our beloved prison. That doesn't change the fact that I'm going crazy down here. <i>[she laughs nervously]</i><br>Anyhow, did you need any healing from me ?",
-            "main-quest-done": "Yes, I have a solution to the celestial device issue.",
-            "main-quest-not-done": "No, I'm still working on it.",
-            "mainQuest": "{{name}} ! I've heard you've made progress solving our celestial device issue.",
-            "nothingToHeal": "There doesn't seem to be anything wrong with you. Please, don't come here unless you need medical assistance. My time is precious.<br>Hell... who am I kidding... nobody ever catches anything interesting in this damned stable... look, just leave me alone.",
-            "quest-done-reassuring": "Now that we know what the outside world looks like, maybe the overmare will start sending some expeditions.",
-            "quest-done-worrying": "Trust me, you don't actually want to go out there. The outside world is a dangerous place. Most of you stable dwellers wouldn't last long."
-        },
-        "stable103-overmare": {
-            "entryPoint": "Hello, citizen. Any progress on your quest to report ?",
-            "nothing-to-report": "Nothing to report, overmare !",
-            "reportJunkvilleTrail": "I found a town, near the stable. It's built around a dump site, and it's filled with pre-war devices and scraps.",
-            "reportedJunkvilleTrail": "Well, that sounds like a good place to start looking, then. I suggest you go back there and inspect the premise thorougly. You may go.",
-            "wasteTime": "Then get back to it and quit goofing around ! Don't you realize the destiny of this entire stable rests within your hooves ? Time is of the essence !"
         }
     },
     "factions": {

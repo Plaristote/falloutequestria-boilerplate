@@ -1,0 +1,11 @@
+{
+  "quests": {
+    "stable-103/rathian": {
+      "title": "Here we go again",
+      "desc-called-to-overmare-office": "The overmare summonned you to her office.",
+      "desc-overmare-briefing": "She explained that somepony hacked into the Stable's entrance terminal while you were resting. They might've followed you there as you were bringing the Celestial Device. You've been tasked with tracking the culprit and ensuring the Stable's secrets are safe.",
+      "overmare-briefing": "Speak with the Overmare",
+      "track-culprit": "Find the hacker"
+    }
+  }
+}

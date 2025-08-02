@@ -1,0 +1,28 @@
+{
+    "dialogs": {
+        "stable103-doctor": {
+            "aboutWellbeing": "Oh, everything is doing <i>great</i> ! Just great ! I've spent my whole life studying biology and chemistry, and the overmare decided to have me sit in this office all day long to take care of everypony's Celestia's damned sniffles !<br>Sorry... I didn't mean to lash out on you. I'm just tired. I need some alone time, if you don't mind.",
+            "ask-healing": "I'm not feeling so good, doc... can you take a look ?",
+            "ask-nothing": "I just came by to check on you ! See you later !",
+            "ask-wellbeing": "I just came by to check on you ! How are things going ?",
+            "entryPoint": "Hello, citizen {{name}}. Are you perhaps in need of medical assistance ?",
+            "healedWounds": "Here you go, all patched up. Now if you could be more careful next time you head outside, I'm not your personal nurse. And I have important science matters to take care off. Yes. Science. Indeed.\n<br>Now, be a dear and leave me to my own personal hell.",
+            "introduction": "Hello, citizen {{name}}. Fancy seeing you here so soon. Have you already found a solution to the celestial device issue ?",
+            "introductionQuestDone": "Is that so ? Well, that's amazing ! I'm gonna be honest with you : I didn't think for a second that you, or anyone else in this stable, would be able to fix it. Well... that's too bad. I kinda hoped that in the end, the overmare would have to lead us all to the outside world. The outside world can't be so bad.",
+            "main-quest-done": "Yes, I actually have a new Celestial Device ready to go.",
+            "main-quest-not-done": "No, I'm still working on it.",
+            "main-quest-progress": "Yes, I found a way to build a new Celestial Device.",
+            "mainQuest": "{{name}} ! I've heard you've made progress solving our celestial device issue.",
+            "mainQuestThanks": "Hi, {{name}}. I haven't thanked you yet for fixing up the Celestial Device. Even if I wouldn't have minded us opening up to the outside world, it's still nice to have a home that can provide. We all ow you a great dela. Thanks.",
+            "nothingToHeal": "There doesn't seem to be anything wrong with you. Please, don't come here unless you need medical assistance. My time is precious.<br>Hell... who am I kidding... nobody ever catches anything interesting in this damned stable... look, just leave me alone.",
+            "outsideWorldDismissive": "Yeah well… I learned the hard way.",
+            "outsideWorldReassured": "Ha ! That'll be the day !\n<br>\nBut… maybe. You've shown her that ponies can leave and come back safe. You've shown her that the outside world can be the answer to our problems. Maybe she'll loosen her grip over time. Of course, that depends on whether you keep coming back in one piece. If you don't, I'll patch you up… but don't get yourself killed, alright ?",
+            "outsideWorldReassuredAnswer": "I'll do my best !",
+            "outsideWorldSuggestScouts": "I could train some of us to become scouts for the Stable, if the Overmare agrees.",
+            "outsideWorldWorrying": "That bad, huh ?\n<br>\nStill, you know what bother me the most ? The Stable's safe, yes, but only as long as nothing unfixable breaks. And as we just saw… that happens.<br>\nMaybe it's best to remain hidden, but at the very least, we need to be able to fetch what we need from outside. I wasn't gonna say anything, but you really weren't prepared enough for your mission. It was reckless.",
+            "quest-done-reassuring": "Now that we know what the outside world looks like, maybe the overmare will be open to the idea of interacting with it.",
+            "quest-done-worrying": "Trust me, you don't actually want to go out there. The outside world is a dangerous place. Most of you stable dwellers wouldn't last long.",
+            "scoutSuggested": "Truth is, we probably should. Doesn’t have to be a full expeditionary force. Just a few ponies who know how to patch a wound, fire a gun, and not scream at the sight of a bloodwing.\n<br><br>\nI'll talk about it with the Overmare. I could definitely teach first aid."
+        }
+    }
+}
