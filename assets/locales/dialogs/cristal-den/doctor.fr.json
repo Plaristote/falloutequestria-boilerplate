@@ -1,6 +1,7 @@
 {
     "dialogs": {
         "cristal-den/doctor": {
+            "accept-phony-diagnosis": "Tout bien réfléchi, j'ai peut-être besoin d'aide médicale.",
             "ask-heal-party": "Pouvez-vous vous occuper de moi et de mon équipe ?",
             "ask-heal-payup": "Très bien, voilà vos capsules.",
             "ask-heal-player": "J'ai besoin de soins.",
@@ -8,11 +9,34 @@
             "ask-medical-help": "J'ai besoin d'assistance médicale.",
             "cancel-heal-cash": "Finalement, laissez tomber.",
             "cancel-heal-prompt": "En fait, je n'ai besoin de rien.",
+            "cash-prompt-party": "Un commandant prévenant. Pour vous et vos compagnons, je vais effectuer un diagnostic étendu associé à un traitement sur mesure. Disons… {{cost}} capsules au total.",
             "entry": "Ah ! Un visage neuf ! C'est toujours gratifiant de pouvoir résoudre les tracas d'un nouveau client ! Je suis le Docteur Armor Bid, humble gardien du peu de santé qui reste dans cette ville. Maintenant, dites-moi… quelles sont vos afflictions ?",
             "entry-exit": "Au revoir.",
             "heal-done": "Et voilà. Les teintures ont été absorbées, l'aura corrigée et l'équilibre des humeurs rétabli… ou presque. Y a-t-il autre chose qui vous fait mal, qui suppure ou qui ne vous semble pas à sa place ?",
             "heal-done-exit": "Non, ce sera tout. Merci docteur.",
             "heal-prompt": "Excellente déision. La proactivité est la clef. Alors… de quels soins avez-vous besoin ?",
+            "phone-challenge-cave-2": "Oh… ça a l'air important. Qu'est-ce que je dois faire ?",
+            "phone-challenge-cave-3": "C'est vrai que j'ai eu envie de manger des choses inhabituelles, dernièrement…",
+            "phone-challenge-cave-4": "Par Celestia… d'accord, je reviendrai demain sans faute. Merci, docteur !",
+            "phone-challenge-charisma-exit": "Votre sollicitude me touche, mais je suis déjà suivi par les meilleurs médecins. N'essayez pas de m'ajouter à votre clientèle.",
+            "phone-challenge-int-2": "En voilà, un symptome spécifique ! Vous n'avez rien trouvé de mieux ?",
+            "phone-challenge-int-3": "Ouh, Stage 2 ? Pas si terrible que Stage 3, mais toujours mieux que Stage 1. Vous vous foutez de ma gueule ?",
+            "phone-challenge-int-4": "Tout ça n'est que du charabia pseudo-médical. Vous n'avez enore rien dit de substantiel.",
+            "phone-challenge-medic-2": "Cette maladie n'existe pas, et mes spasmes sont causés par la fatigue.",
+            "phone-challenge-medic-3": "Vous donnez juste un nom inquiétant à de vagues sensations. Ce n'est pas de la médecine.",
+            "phone-challenge-medic-4": "Des régulateurs hormonaux ? Mais vous êtes en roue libre ! Vous racontez n'importe quoi !",
+            "phony-challenge-cave-1": "Ma foi… un petit check-up ne peut pas faire de mal.",
+            "phony-challenge-charisma-4": "Eh ben, quel tunnel de vente ! Merci, mais je prend pas de traitements de la part d'un médecin qui diagnostique avec un vibe check.",
+            "phony-challenge-resist-1": "Je vous dis que je vais bien, docteur.",
+            "phony-diagnosis/charisma-exit": "Vous me blessez. Mais je comprends bien que certains patients ont besion d'abord de souffrir avant d'apprendre. Je serais là quand la leçon sera comprise.\n<br><br>\nEn attendant, je vous souhaite une bonne journée.",
+            "phony-diagnosis/diagnosis-1": "Hmm. C'est bien ce que je pensais. Voyez comme votre oeil a eu un spasme ? C'est un signe typique d'un épuisement métabolique systémique. Rarement détecté, souvent fatal, à moins, bien sûr, d'être traité à temps.",
+            "phony-diagnosis/diagnosis-2": "D'ores et déjà, vous avez peut-être constaté une soif plus importante, des envies curieuses, ou d'inexplicables explosions d'énergie. Ce ne sont pas des signes de bonne santé: c'est votre corps qui sonne l'alarme avant le désastre. Je classifierais cela comme une Disruption Énergétique de Stage 2.",
+            "phony-diagnosis/diagnosis-3": "C'est le mécanisme de défense du métabolisme : il s'accroche à ce qui rentre tout en le dégradant en interne. Mais pas de panique : nous l'avons détecté à temps. Revenez demain, je vous aurai préparé un traitement sur mesure composé de toniques doux et de régulateurs hormonaux.",
+            "phony-diagnosis/diagnosis-caved": "Fantastique. Agir promptement est capital. Reposez-vous, hydratez-vous... et tachez de ne pas trop transpirer : ça accélère le processus.<br><br>\nÀ demain !",
+            "phony-diagnosis/entry": "Bien, vous dites ? Le symptome typique d'une affliction plus profonde et non diagnostiquée. Vous êtes en bonne compagnie: le cimetière déborde de gens qui se sentaient bien.",
+            "phony-diagnosis/prevent-exit": "Allons allons, ne soyez pas si pressés. Une dernière chose avant que vous ne partiez. Vous pensez sans doute être en bonne santé. Mais cette croyance est justement le syptome que je trouve le plus inquiétant.",
+            "phony-diagnosis/resisted": "Vous avez un esprit rare, étonemment fortifié. Très bien. Pas de diagnostique aujourd'hui. Mais quand les symptomes reviendront - et ils reviendront - n'attendez pas. Je serais là.",
+            "reject-phony-diagnosis": "Je crois que ça va aller. Merci quand même.",
             "start-feel-fine": "Euh... je me sens bien, en fait."
         }
     }

@@ -10,6 +10,7 @@
             "text": "ask-heal-player"
         },
         "ask-heal-something-else": {
+            "state": "heal-prompt",
             "text": "ask-heal-something-else"
         },
         "ask-medical-help": {
@@ -17,18 +18,92 @@
             "text": "ask-medical-help"
         },
         "cancel-heal-cash": {
+            "hook": "onAboutToExit",
             "text": "cancel-heal-cash"
         },
         "cancel-heal-prompt": {
+            "hook": "onAboutToExit",
             "text": "cancel-heal-prompt"
         },
         "entry-exit": {
+            "hook": "onAboutToExit",
             "text": "entry-exit"
         },
         "heal-done-exit": {
+            "hook": "onAboutToExit",
             "text": "heal-done-exit"
         },
+        "phone-challenge-cave-2": {
+            "state": "phony-diagnosis/diagnosis-2",
+            "text": "phone-challenge-cave-2"
+        },
+        "phone-challenge-cave-3": {
+            "state": "phony-diagnosis/diagnosis-3",
+            "text": "phone-challenge-cave-3"
+        },
+        "phone-challenge-cave-4": {
+            "state": "phony-diagnosis/diagnosis-caved",
+            "text": "phone-challenge-cave-4"
+        },
+        "phone-challenge-charisma-exit": {
+            "availableHook": "phonyDiagnosisCharismaCheck",
+            "state": "phony-diagnosis/charisma-exit",
+            "text": "phone-challenge-charisma-exit"
+        },
+        "phone-challenge-int-2": {
+            "availableHook": "phonyDiagnosisIntelligenceCheck",
+            "hook": "phonyDiagnosisResisted",
+            "state": "phony-diagnosis/diagnosis-2",
+            "text": "phone-challenge-int-2"
+        },
+        "phone-challenge-int-3": {
+            "availableHook": "phonyDiagnosisIntelligenceCheck",
+            "hook": "phonyDiagnosisResisted",
+            "state": "phony-diagnosis/diagnosis-3",
+            "text": "phone-challenge-int-3"
+        },
+        "phone-challenge-int-4": {
+            "availableHook": "phonyDiagnosisIntelligenceCheckLast",
+            "hook": "phonyDiagnosisResisted",
+            "text": "phone-challenge-int-4"
+        },
+        "phone-challenge-medic-2": {
+            "availableHook": "phonyDiagnosisMedicalCheck",
+            "hook": "phonyDiagnosisResisted",
+            "state": "phony-diagnosis/diagnosis-2",
+            "text": "phone-challenge-medic-2"
+        },
+        "phone-challenge-medic-3": {
+            "availableHook": "phonyDiagnosisMedicalCheck",
+            "hook": "phonyDiagnosisResisted",
+            "state": "phony-diagnosis/diagnosis-3",
+            "text": "phone-challenge-medic-3"
+        },
+        "phone-challenge-medic-4": {
+            "availableHook": "phonyDiagnosisMedicalCheckLast",
+            "hook": "phonyDiagnosisResisted",
+            "text": "phone-challenge-medic-4"
+        },
+        "phony-challenge-cave-1": {
+            "state": "phony-diagnosis/diagnosis-1",
+            "text": "phony-challenge-cave-1"
+        },
+        "phony-challenge-charisma-4": {
+            "availableHook": "phonyDiagnosisCharismaCheck",
+            "state": "phony-diagnosis/charisma-exit",
+            "text": "phony-challenge-charisma-4"
+        },
+        "phony-challenge-resist-1": {
+            "state": "phony-diagnosis/diagnosis-1",
+            "text": "phony-challenge-resist-1"
+        },
+        "reject-phony-diagnosis": {
+            "hook": "onAboutToExit",
+            "text": "reject-phony-diagnosis"
+        },
         "start-feel-fine": {
+            "availableHook": "phonyDiagnosisNotStarted",
+            "state": "phony-diagnosis/entry",
             "text": "start-feel-fine"
         }
     },
@@ -65,6 +140,72 @@
             "hook": "healPrompt",
             "mood": "smile",
             "text": "heal-prompt"
+        },
+        "phony-diagnosis/charisma-exit": {
+            "answers": [
+            ],
+            "mood": "angry",
+            "text": "phony-diagnosis/charisma-exit"
+        },
+        "phony-diagnosis/diagnosis-1": {
+            "answers": [
+                "phone-challenge-cave-2",
+                "phone-challenge-medic-2",
+                "phone-challenge-int-2"
+            ],
+            "hook": "phonyDiagnosisStart",
+            "mood": "cocky",
+            "text": "phony-diagnosis/diagnosis-1"
+        },
+        "phony-diagnosis/diagnosis-2": {
+            "answers": [
+                "phone-challenge-medic-3",
+                "phone-challenge-int-3",
+                "phone-challenge-cave-3"
+            ],
+            "mood": "neutral",
+            "text": "phony-diagnosis/diagnosis-2"
+        },
+        "phony-diagnosis/diagnosis-3": {
+            "answers": [
+                "phony-challenge-charisma-4",
+                "phone-challenge-int-4",
+                "phone-challenge-medic-4",
+                "phone-challenge-cave-4"
+            ],
+            "mood": "smile",
+            "text": "phony-diagnosis/diagnosis-3"
+        },
+        "phony-diagnosis/diagnosis-caved": {
+            "answers": [
+            ],
+            "hook": "phonyDiagnosisCaved",
+            "mood": "smile",
+            "text": "phony-diagnosis/diagnosis-caved"
+        },
+        "phony-diagnosis/entry": {
+            "answers": [
+                "phony-challenge-cave-1",
+                "reject-phony-diagnosis"
+            ],
+            "mood": "laugh",
+            "text": "phony-diagnosis/entry"
+        },
+        "phony-diagnosis/prevent-exit": {
+            "answers": [
+                "phony-challenge-resist-1",
+                "phone-challenge-charisma-exit",
+                "phony-challenge-cave-1"
+            ],
+            "hook": "phonyDiagnosisStart",
+            "mood": "dubious",
+            "text": "phony-diagnosis/prevent-exit"
+        },
+        "phony-diagnosis/resisted": {
+            "answers": [
+            ],
+            "mood": "laugh",
+            "text": "phony-diagnosis/resisted"
         }
     }
 }

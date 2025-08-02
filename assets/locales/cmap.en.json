@@ -90,7 +90,8 @@
             "thief": "The blood of a thief runs through your veins. With the Thief Perk, you get a one-time bonus of +10% to your Sneak, Lockpick, Steal, and Traps skills. A well rounded thief is a live thief.",
             "throwing": "The skill of muscle-propelled ranged weapons, such as throwing knives, spears and grenades.",
             "toughness": "When you are tough, you take less damage. Each level of this Perk will add +10% to your general damage resistance.",
-            "unarmed": "A combination of martial arts, boxing and other hand-to-hand martial arts. Combat with your hands and feet."
+            "unarmed": "A combination of martial arts, boxing and other hand-to-hand martial arts. Combat with your hands and feet.",
+            "armorBidAilments": "Armor Bid diagnosed you with some kind of metabolism disease. You better listen to your doctor, else you might die an early and pointless death. Your metabolism will be greatly reduced until this condition is healed."
         },
         "earlierSequence": "Earlier sequence",
         "endurance": "Endurance",
@@ -152,7 +153,8 @@
         "toughness": "Toughness",
         "traits": "Traits",
         "unarmed": "Unarmed",
-        "very-good": "Very good"
+        "very-good": "Very good",
+        "armorBidAilments": "Energetic Disorder Stage 2"
     },
     "factions": {
         "hillburrow": {

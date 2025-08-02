@@ -109,7 +109,8 @@
 	    "thief": "Le sang du voleur court dans tes veines. Avec l'abilité Voleur, tu obtiens un bonus de 10% a tes compétences Discrétion, Crochetage, Vol et Pièges. A voleur équilibré est un voleur vivant.",
             "throwing": "La compétence à faire atterir les objets que vous lancez là ou vous le désirez. Manipulation des armes de lancer telles que les couteaux de lancer, javelots ou grenades.",
 	    "toughness": "Quand on est dur, on subit moins de dégâts. Chaque niveau de cette Abilité ajoute +10% a ta résistance aux dommages.",
-            "unarmed": "Une combinaison d'art martiaux, de boxe et autres compétences de combat rapproché."
+            "unarmed": "Une combinaison d'art martiaux, de boxe et autres compétences de combat rapproché.",
+            "armorBidAilments": "Armor Bid t'as diagnostiqué un désordre métabolique. Tu ferais mieux d'écouter ton docteur, si tu ne veux pas éviter une mort prématurée et inutile. Ton métabolisme est grandement réduit jusqu'à ce que cette maladie soit purgée."
         },
         "earlierSequence": "Réflexes affutés",
         "endurance": "Endurance",

@@ -1,6 +1,7 @@
 {
     "dialogs": {
         "cristal-den/doctor": {
+            "accept-phony-diagnosis": "All things considered, maybe I do need medical assistance.",
             "ask-heal-cancel": "Nevermind.",
             "ask-heal-party": "Can you check out our whole party ?",
             "ask-heal-payup": "Alright, here are the caps.",
@@ -16,6 +17,28 @@
             "heal-done": "There we are. The tinctures have been absorbed, the aura corrected, and the balance of humors restored... or close enough. Is there anything else that aches, festers, or feels out of place?",
             "heal-done-exit": "No, that'll do. Thanks, doctor.",
             "heal-prompt": "Excellent decision. Proactivity is key. Now... what do you need my help with ?",
+            "phone-challenge-cave-2": "That… sounds bad. What should I do ?",
+            "phone-challenge-cave-3": "I have been craving strange food lately…",
+            "phone-challenge-cave-4": "Oh my Celestia… okay, I'll come back tomorrow. Thank you, doctor !",
+            "phone-challenge-charisma-exit": "I appreciate the concern, but the finest doctors are already checking up on me regularly. Don't even try making me one of your regulars.",
+            "phone-challenge-int-2": "That's a non-specific symptom. You're fishing.",
+            "phone-challenge-int-3": "Stage Two huh ? Obviously not as bad as Stage Three, but not as good as no Energetic Disruption. The more you talk, the less convinced I am.",
+            "phone-challenge-int-4": "That's just medical sounding nonsense. You've said nothing substantive.",
+            "phone-challenge-medic-2": "There's no such condition, and twitching is caused by fatigue.",
+            "phone-challenge-medic-3": "You're just labelling vague sensations with scary names. That's not a diagnosis.",
+            "phone-challenge-medic-4": "Hormone regulateurs ? You're officially unhinged, \"doctor\" ! What is wrong with you !",
+            "phony-challenge-cave-1": "You're probably right… I guess a check-up won't hurt.",
+            "phony-challenge-charisma-4": "That’s quite the pitch. But I don’t take tonics from doctors who diagnose based on vibes.",
+            "phony-challenge-resist-1": "I said I'm fine, doctor.",
+            "phony-diagnosis/charisma-exit": "You wound me. But I understand some patients must first suffer before they learn. I'll be here when the lesson lands.\n<br><br>\nUntil then, goodbye.",
+            "phony-diagnosis/diagnosis-1": "Mm. Just as I suspected. See the way your eyelid twitched? That's a classic early sign of systemic metabolic exhaustion. Rarely detected, often fatal — unless addressed early.",
+            "phony-diagnosis/diagnosis-2": "Already, you may be experiencing increased thirst, odd cravings, or bursts of unexplained energy. These aren't signs of health: they're your body screaming before the crash. I would classify this as Stage Two Energetic Disruption.",
+            "phony-diagnosis/diagnosis-3": "That's the metabolism's defense mechanism: it clings to input while breaking down internally. But don’t panic: we’ve caught it in time. Come back tomorrow, and I'll have prepared a tailored course of mild tonics and hormone regulators for you.",
+            "phony-diagnosis/diagnosis-caved": "Splendid. Early action is everything. Rest well, hydrate... and do try not to sweat too much. That accelerates the decay.<br><br>\nUntil tomorrow !",
+            "phony-diagnosis/entry": "Fine, you say ? The classic symptom of deeper, undiagnosed ailments: a false sense of well-being. You're in good company: most of the graveyard used to say the same.",
+            "phony-diagnosis/prevent-exit": "Now, now, don't be so hasty. One last thing before you go. You may believe you’re in good health. But that belief is the very symptom I find most concerning.",
+            "phony-diagnosis/resisted": "You have a rare mind, uncommonly fortified. Very well. No diagnosis today. But when the symptoms return - and they will - don’t delay. I’ll be here, clipboard in hoof.",
+            "reject-phony-diagnosis": "I still think I'm okay. Thanks anyway.",
             "start-feel-fine": "Uh, I feel fine, actually."
         }
     }
