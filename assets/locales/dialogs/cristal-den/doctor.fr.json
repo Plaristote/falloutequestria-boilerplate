@@ -1,0 +1,19 @@
+{
+    "dialogs": {
+        "cristal-den/doctor": {
+            "ask-heal-party": "Pouvez-vous vous occuper de moi et de mon équipe ?",
+            "ask-heal-payup": "Très bien, voilà vos capsules.",
+            "ask-heal-player": "J'ai besoin de soins.",
+            "ask-heal-something-else": "En fait, j'ai besoin d'autre chose.",
+            "ask-medical-help": "J'ai besoin d'assistance médicale.",
+            "cancel-heal-cash": "Finalement, laissez tomber.",
+            "cancel-heal-prompt": "En fait, je n'ai besoin de rien.",
+            "entry": "Ah ! Un visage neuf ! C'est toujours gratifiant de pouvoir résoudre les tracas d'un nouveau client ! Je suis le Docteur Armor Bid, humble gardien du peu de santé qui reste dans cette ville. Maintenant, dites-moi… quelles sont vos afflictions ?",
+            "entry-exit": "Au revoir.",
+            "heal-done": "Et voilà. Les teintures ont été absorbées, l'aura corrigée et l'équilibre des humeurs rétabli… ou presque. Y a-t-il autre chose qui vous fait mal, qui suppure ou qui ne vous semble pas à sa place ?",
+            "heal-done-exit": "Non, ce sera tout. Merci docteur.",
+            "heal-prompt": "Excellente déision. La proactivité est la clef. Alors… de quels soins avez-vous besoin ?",
+            "start-feel-fine": "Euh... je me sens bien, en fait."
+        }
+    }
+}

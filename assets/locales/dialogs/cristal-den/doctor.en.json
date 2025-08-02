@@ -1,0 +1,22 @@
+{
+    "dialogs": {
+        "cristal-den/doctor": {
+            "ask-heal-cancel": "Nevermind.",
+            "ask-heal-party": "Can you check out our whole party ?",
+            "ask-heal-payup": "Alright, here are the caps.",
+            "ask-heal-player": "I need healing.",
+            "ask-heal-something-else": "Actually, I need something else.",
+            "ask-medical-help": "I'm looking for medical help.",
+            "cancel-heal-cash": "On second thought, I'll pass.",
+            "cancel-heal-prompt": "Nevermind.",
+            "cash-prompt": "A wise investment in your future. Based on your complexion, pulse, and... general aura, I’d recommend a full somatic recalibration. {{cost}} caps.",
+            "cash-prompt-party": "A considerate leader. For you and your companions, I’ll perform a diagnostic sweep and tailored treatment. Let's say… {{cost}} caps total.",
+            "entry": "Ah! A new face ! It's so rewarding to care for the needs of a new customer ! I am Doctor Armor Bid, the humble guardian of what little health remains in this forsaken town. Now, tell me... what are your afflictions?",
+            "entry-exit": "Goodbye.",
+            "heal-done": "There we are. The tinctures have been absorbed, the aura corrected, and the balance of humors restored... or close enough. Is there anything else that aches, festers, or feels out of place?",
+            "heal-done-exit": "No, that'll do. Thanks, doctor.",
+            "heal-prompt": "Excellent decision. Proactivity is key. Now... what do you need my help with ?",
+            "start-feel-fine": "Uh, I feel fine, actually."
+        }
+    }
+}

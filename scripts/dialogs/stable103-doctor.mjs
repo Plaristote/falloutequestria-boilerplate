@@ -1,22 +1,36 @@
+import HealerComponent from "./healer.mjs";
+
 class Dialog {
   constructor(dialog) {
     this.dialog = dialog;
+    this.healer = new HealerComponent(this);
+  }
+
+  get celestialDeviceQuest() {
+    return game.quests.getQuest("celestialDevice");
   }
   
   getEntryPoint() {
-    if (!this.dialog.npc.hasVariable("met")) {
-      this.dialog.npc.setVariable("met", true);
-      this.introduction = true;
-      return "mainQuest";
+    if (this.celestialDeviceQuest.completed && !this.dialog.npc.hasVariable("met2")) {
+      this.dialog.npc.setVariable("met2", 1);
+      this.dialog.npc.setVariable("met", 1);
+      return "mainQuestThanks";
     }
-    if (!this.dialog.npc.hasVariable("mainQuestDone") && game.getScriptObject().isMainQuestDone()) {
+    if (!this.dialog.npc.hasVariable("met")) {
+      const elapsedTime = game.timeManager.getTimestamp() - game.getVariable("startedAt");
+      this.dialog.npc.setVariable("met", true);
+      this.introduction = elapsedTime < 20 * 24 * 60 * 60;
       return "mainQuest";
     }
     return "entryPoint";
   }
 
+  hasFoundBlueprints() {
+    return this.celestialDeviceQuest.isObjectiveCompleted("find-blueprints");
+  }
+
   hasCelestialDevice() {
-    return false;
+    return game.player.inventory.count("celestial-device");
   }
 
   entryPoint() {
@@ -50,11 +64,8 @@ class Dialog {
   }
   
   heal() {
-    if (game.player.statistics.hitPoints < game.player.statistics.maxHitPoints) {
-      game.asyncAdvanceTime(60);
-      game.player.statistics.hitPoints = game.player.statistics.maxHitPoints;
+    if (this.healer.heal(game.player))
       return "healedWounds";
-    }
     return "nothingToHeal";
   }
 }

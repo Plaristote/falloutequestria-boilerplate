@@ -1,0 +1,11 @@
+{
+  "quests": {
+    "stable-103/rathian": {
+      "title": "C'est que le début, d'accord, d'accord…",
+      "desc-called-to-overmare-office": "La superviseuse t'as convoqué dans son bureau.",
+      "desc-overmare-briefing": "Elle t'as expliqué que quelqu'un avait piraté le terminal à l'extérieur de l'Étable pendant ton court repos. Le coupable t'aura probablement suivi jusqu''ici. C'est toi ici qui connait le mieux le monde extérieur. C'est à toi que revient la tâche de traquer le coupable, et d'assurer que les secrets de l'Étable soient en sécurité.",
+      "overmare-briefing": "Parler avec la Superviseuse",
+      "track-culprit": "Trouver le hacker"
+    }
+  }
+}

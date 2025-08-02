@@ -18,15 +18,15 @@ class Dialog {
   }
 
   speakerTechnician() {
-    this.dialog.swapNpc(level.findObjet("pipbuck-dude"));
+    this.dialog.swapNpc(level.findObject("pipbuck-dude"));
   }
 
   speakerEngineer() {
-    this.dialog.swapNpc(level.findObjet("engineer"));
+    this.dialog.swapNpc(level.findObject("engineer"));
   }
 
   speakerOvermare() {
-    this.dialog.swapNpc(level.findObjet("overmare"));
+    this.dialog.swapNpc(level.findObject("overmare"));
   }
 
   canReportJunkvilleTrail() {

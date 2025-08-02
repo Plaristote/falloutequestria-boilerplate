@@ -1,1 +1,70 @@
-{"states":{},"answers":{}}
+{
+    "answers": {
+        "ask-heal-party": {
+            "text": "ask-heal-party"
+        },
+        "ask-heal-payup": {
+            "text": "ask-heal-payup"
+        },
+        "ask-heal-player": {
+            "text": "ask-heal-player"
+        },
+        "ask-heal-something-else": {
+            "text": "ask-heal-something-else"
+        },
+        "ask-medical-help": {
+            "state": "heal-prompt",
+            "text": "ask-medical-help"
+        },
+        "cancel-heal-cash": {
+            "text": "cancel-heal-cash"
+        },
+        "cancel-heal-prompt": {
+            "text": "cancel-heal-prompt"
+        },
+        "entry-exit": {
+            "text": "entry-exit"
+        },
+        "heal-done-exit": {
+            "text": "heal-done-exit"
+        },
+        "start-feel-fine": {
+            "text": "start-feel-fine"
+        }
+    },
+    "entryPoint": "entry",
+    "states": {
+        "entry": {
+            "answers": [
+                "start-feel-fine",
+                "ask-medical-help",
+                "entry-exit"
+            ],
+            "text": "entry"
+        },
+        "heal-cash-prompt": {
+            "answers": [
+                "ask-heal-payup",
+                "ask-heal-something-else",
+                "cancel-heal-cash"
+            ],
+            "text": "cash-prompt-party"
+        },
+        "heal-done": {
+            "answers": [
+                "heal-done-exit"
+            ],
+            "text": "heal-done"
+        },
+        "heal-prompt": {
+            "answers": [
+                "ask-heal-player",
+                "ask-heal-party",
+                "cancel-heal-prompt"
+            ],
+            "hook": "healPrompt",
+            "mood": "smile",
+            "text": "heal-prompt"
+        }
+    }
+}
