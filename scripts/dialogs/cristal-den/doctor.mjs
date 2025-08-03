@@ -11,6 +11,14 @@ class Dialog {
     }
   }
 
+  entry() {
+    if (this.phonyDiagnosisNotStarted())
+      return { textKey: "entry" };
+    else if (this.dialog.npc.getVariable("phonyDiagnosticResist", 0) > 1)
+      return { textKey: "entry-unliked" };
+    return { textKey: "entry-liked" };
+  }
+
   healPrompt() {
     return this.healer.healPrompt();
   }
@@ -63,6 +71,28 @@ class Dialog {
   phonyDiagnosisCaved() {
     game.player.statistics.togglePerk("armorBidAilments", true);
     this.dialog.npc.setVariable("phonyDiagnostic", 2);
+    this.dialog.npc.setVariable("lastAilmentsTreatmentBoughtAt", game.timeManager.getTimestamp());
+  }
+
+  phonyDiagnosisPickable() {
+    const lastBought = this.dialog.npc.getVariable("lastAilmentsTreatmentBoughtAt");
+    return game.player.statistics.perks.indexOf("armorBidAilments") >= 0
+        && game.timeManager.getTimestamp() - lastBought >= 24 * 60 * 60;
+  }
+
+  phonyDiagnosisTreatmentBought() {
+    this.dialog.npc.setVariable("lastAilmentsTreatmentBoughtAt", game.timeManager.getTimestamp());
+    this.dialog.npc.inventory.addItemOfType("bottlecaps", this.phonyDiagnosisTreatmentCost);
+    game.player.inventory.removeItemOfType("bottlecaps", this.phonyDiagnosisTreatmentCost);
+    game.player.inventory.addItemOfType("armor-bid-ailments-treatment");
+  }
+
+  get phonyDiagnosisTreatmentCost() {
+    return 30;
+  }
+
+  get canPayPhonyDiagnosisTreatment() {
+    return game.player.inventory.count("bottlecaps") >= this.phonyDiagnosisTreatmentCost;
   }
   // END Phony Diagnosis
 }

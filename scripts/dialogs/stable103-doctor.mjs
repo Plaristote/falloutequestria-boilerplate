@@ -9,7 +9,7 @@ class Dialog {
   get celestialDeviceQuest() {
     return game.quests.getQuest("celestialDevice");
   }
-  
+
   getEntryPoint() {
     if (this.celestialDeviceQuest.completed && !this.dialog.npc.hasVariable("met2")) {
       this.dialog.npc.setVariable("met2", 1);
@@ -33,16 +33,27 @@ class Dialog {
     return game.player.inventory.count("celestial-device");
   }
 
+  hasArmorBidAilments() {
+    return game.player.statistics.perks.indexOf("armorBidAilments") >= 0
+        || game.player.statistics.buffs.indexOf("armor-bid-treatment") >= 0;
+  }
+
+  cureArmorBidAilments() {
+    const buff = game.player.getBuff("armor-bid-treatment");
+    if (buff) buff.remove();
+    game.player.statistics.togglePerk("armorBidAilments", false);
+  }
+
   entryPoint() {
     if (this.introductionAnswer)
       return this.dialog.t(this.introductionAnswer);
   }
-  
+
   mainQuestQuestion() {
     if (this.introduction)
       return this.dialog.t("introduction");
   }
-  
+
   onAngry() {
     this.dialog.mood = "angry";
   }
@@ -50,7 +61,7 @@ class Dialog {
   onMainQuestDone() {
     this.dialog.npc.setVariable("mainQuestDone", true);
   }
-  
+
   onQuestDoneReassuring() {
     this.introductionAnswer = "introductionQuestReassuring";
   }
@@ -58,11 +69,11 @@ class Dialog {
   onQuestDoneWorrying() {
     this.introductionAnswer = "introductionQuestWorrying";
   }
-  
+
   onMainQuestNotDone() {
     this.introductionAnswer = "introductionQuestNotDone";
   }
-  
+
   heal() {
     if (this.healer.heal(game.player))
       return "healedWounds";

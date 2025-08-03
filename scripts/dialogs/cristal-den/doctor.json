@@ -97,6 +97,19 @@
             "state": "phony-diagnosis/diagnosis-1",
             "text": "phony-challenge-resist-1"
         },
+        "phony-diagnosis-pick-up": {
+            "availableHook": "phonyDiagnosisPickable",
+            "state": "phony-diagnosis/pick-up",
+            "text": "phony-diagnosis-pick-up"
+        },
+        "phonyDiagnosisTreatmentCantPay": {
+            "text": "phonyDiagnosisTreatmentCantPay"
+        },
+        "phonyDiagnosisTreatmentPay": {
+            "availableHook": "canPayPhonyDiagnosisTreatment",
+            "state": "phony-diagnosis/picked-up",
+            "text": "phonyDiagnosisTreatmentPay"
+        },
         "reject-phony-diagnosis": {
             "hook": "onAboutToExit",
             "text": "reject-phony-diagnosis"
@@ -112,9 +125,11 @@
         "entry": {
             "answers": [
                 "start-feel-fine",
+                "phony-diagnosis-pick-up",
                 "ask-medical-help",
                 "entry-exit"
             ],
+            "hook": "entry",
             "text": "entry"
         },
         "heal-cash-prompt": {
@@ -140,6 +155,11 @@
             "hook": "healPrompt",
             "mood": "smile",
             "text": "heal-prompt"
+        },
+        "phony-diagnosis/cant-pay": {
+            "answers": [
+            ],
+            "text": "phony-diagnosis/cant-pay"
         },
         "phony-diagnosis/charisma-exit": {
             "answers": [
@@ -190,6 +210,21 @@
             ],
             "mood": "laugh",
             "text": "phony-diagnosis/entry"
+        },
+        "phony-diagnosis/pick-up": {
+            "answers": [
+                "phonyDiagnosisTreatmentPay",
+                "phonyDiagnosisTreatmentCantPay"
+            ],
+            "mood": "smile",
+            "text": "phony-diagnosis/pick-up"
+        },
+        "phony-diagnosis/picked-up": {
+            "answers": [
+            ],
+            "hook": "phonyDiagnosisTreatmentBought",
+            "mood": "laugh",
+            "text": "phony-diagnosis/picked-up"
         },
         "phony-diagnosis/prevent-exit": {
             "answers": [

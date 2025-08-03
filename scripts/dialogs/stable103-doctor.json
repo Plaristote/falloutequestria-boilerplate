@@ -5,6 +5,19 @@
         "I'm not feeling so good, doc... can you take care of me ?": {
             "text": "I'm not feeling so good, doc... can you take care of me ?"
         },
+        "armorBidAilmentPlayerResponse1": {
+            "state": "armorBidAilmentsCure2",
+            "text": "armorBidAilmentPlayerResponse1"
+        },
+        "armorBidAilmentsPlayerResponse2": {
+            "state": "armorBidAilmentsCure3",
+            "text": "armorBidAilmentsPlayerResponse2"
+        },
+        "ask-heal-armorBidAilment": {
+            "availableHook": "hasArmorBidAilments",
+            "state": "armorBidAilmentsCure",
+            "text": "ask-heal-armorBidAilment"
+        },
         "ask-healing": {
             "hook": "heal",
             "text": "ask-healing"
@@ -60,8 +73,27 @@
             "hook": "onAngry",
             "text": "aboutWellbeing"
         },
+        "armorBidAilmentsCure": {
+            "answers": [
+                "armorBidAilmentPlayerResponse1"
+            ],
+            "text": "armorBidAilmentsCure"
+        },
+        "armorBidAilmentsCure2": {
+            "answers": [
+                "armorBidAilmentsPlayerResponse2"
+            ],
+            "text": "armorBidAilmentsCure2"
+        },
+        "armorBidAilmentsCure3": {
+            "answers": [
+            ],
+            "hook": "cureArmorBidAilments",
+            "text": "armorBidAilmentsCure3"
+        },
         "entryPoint": {
             "answers": [
+                "ask-heal-armorBidAilment",
                 "ask-healing",
                 "ask-wellbeing",
                 "ask-nothing"

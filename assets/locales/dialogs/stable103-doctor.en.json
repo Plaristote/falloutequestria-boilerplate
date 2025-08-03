@@ -2,6 +2,12 @@
     "dialogs": {
         "stable103-doctor": {
             "aboutWellbeing": "Oh, everything is doing <i>great</i> ! Just great ! I've spent my whole life studying biology and chemistry, and the overmare decided to have me sit in this office all day long to take care of everypony's Celestia's damned sniffles !<br>Sorry... I didn't mean to lash out on you. I'm just tired. I need some alone time, if you don't mind.",
+            "armorBidAilmentPlayerResponse1": "Yeah, he did mention something was wrong with my aura.",
+            "armorBidAilmentsCure": "Energetic… what ?<br>\nWho the fuck \"diagnosed\" you with whatever that is ? Do they heal it with chants and dances, maybe ? I'm guessing they also tlaked to you about your cloudy aura ?",
+            "armorBidAilmentsCure2": "Oh, dear… I wasn't being serious, but you're clearly dumber than you look. Listen, I've spent my life practicing and learning about medicine from the best material available in this Celestia-forsaken world. There's no such thing as... Energetic Refraction or whatever.",
+            "armorBidAilmentsCure3": "Oh, I'm sure he was. You know what else people are often sure of ? That Spakle-Cola and smoking is healthy ! They're not, but there used to be lots of ponies who benefitted from guillible people like you believing it was.<br><br>\nYou're not sick. Just guillible. Not to worry, it's not terminal. Just maybe don't trust every quack in a blouse and come to me when in doubt.",
+            "armorBidAilmentsPlayerResponse2": "Disruption. I don't know, he seemed pretty sure of it…",
+            "ask-heal-armorBidAilment": "I've been diagnosed with Energetic Disruption. Can you do something about it ?",
             "ask-healing": "I'm not feeling so good, doc... can you take a look ?",
             "ask-nothing": "I just came by to check on you ! See you later !",
             "ask-wellbeing": "I just came by to check on you ! How are things going ?",

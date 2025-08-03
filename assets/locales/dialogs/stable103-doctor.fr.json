@@ -2,6 +2,12 @@
     "dialogs": {
         "stable103-doctor": {
             "aboutWellbeing": "Oh, ça va <i>super</i> ! Vraiment génial ! J'ai passé toute ma vie a étuder la biologie et la chimie, et la superviseuse décide de m'avoir assise dans ce cabinet tout la journée pour m'occuper des rhumes des foins !<br>Désolé...… je voulais pas décharger ça sur toi. Je suis fatiguée. J'ai besoin d'être seule, si ça ne te dérange pas.",
+            "armorBidAilmentPlayerResponse1": "Je crois bien qu'il a mentionné mon aura, oui.",
+            "armorBidAilmentsCure": "Disrup… quoi ?<br>\nQuel connard t'as « diagnostiqué » ce machin ?Et ça se soigne comment, avec des chants et de la méditation ? Je suppose qu'on t'aura aussi parlé de ton problème d'aura ?",
+            "armorBidAilmentsCure2": "Oh… je plaisantais, mais il faut croire que tu es plus bête que tu n'en as l'air. Écoute-moi, j'ai investis toute ma vie à pratiquer la médecine et à l'étudier d'après les ouvrages les plus avancés qui aient jamais existés sur cette planète. La Réfraction Énergétique, ça n'existe pas.",
+            "armorBidAilmentsCure3": "Oh, ça j'en doute pas. Tu sais à quelle genre d'autres conneries on croit souvent ? Que la clope, c'est bon pour les poumons ! C'est de la connerie, mais certains poneys bénéficiaient beaucoup de la naïveté des couillons qui y croyaient.<br><br>\nT'es pas malade. Juste naïf. C'est pas mortel, le plus souvent. Évite juste de te fier au premier charlot en blouse que tu croise, et en cas de doute, vient me voir quand tu as besoin d'assistance médicale.",
+            "armorBidAilmentsPlayerResponse2": "Disruption. Je sais pas, il semblait si sur de lui.",
+            "ask-heal-armorBidAilment": "J'ai été diagnostiqué d'une Disruption Énergétique. Tu peux m'aider ?",
             "ask-healing": "J'me sens pas très bien doc, tu peux jeter un oeil ?",
             "ask-nothing": "Je passais juste faire coucou. À plus !",
             "ask-wellbeing": "Je passais juste voir comment t'allais. La forme ?",
