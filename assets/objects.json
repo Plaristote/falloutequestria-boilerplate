@@ -299,6 +299,15 @@
         "value": 250,
         "weight": 10
     },
+    "med-x": {
+        "icon": "medx.png",
+        "isGroupable": true,
+        "scriptName": "medx.mjs",
+        "sprite": "health-potion",
+        "type": "consommables",
+        "value": 100,
+        "weight": 0
+    },
     "melee-bite": {
         "scriptName": "melee-bite.mjs",
         "type": "weapon",
