@@ -81,8 +81,6 @@ export class WeaponBehaviour extends ItemBehaviour {
   useOn(target) {
     var damage = getValueFromRange(...this.getDamageRange(), this.user);
 
-    damage -= target.statistics.damageResistance;
-    damage = Math.max(0, damage);
     if (this.getDamageType)
       damage = target.script.mitigateDamage(damage, this.getDamageType(), this.user);
     game.appendToConsole(
