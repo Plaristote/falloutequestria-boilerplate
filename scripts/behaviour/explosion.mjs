@@ -69,8 +69,6 @@ export class Explosion {
 
     if (character === this.wearer)
       damage *= 2;
-    damage -= character.statistics.damageResistance;
-    damage = Math.max(0, damage);
     damage = character.script.mitigateDamage(damage, this.damageType, this.damageDealer);
     game.appendToConsole(i18n.t("messages.damaged", {
       target: character.statistics.name,
