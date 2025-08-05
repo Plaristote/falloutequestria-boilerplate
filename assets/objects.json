@@ -355,6 +355,15 @@
         "value": 375,
         "weight": 5
     },
+    "party-time-mint-als": {
+        "icon": "mintals-partytime.webp",
+        "isGroupable": true,
+        "scriptName": "mintals-partytime.mjs",
+        "sprite": "health-potion",
+        "type": "consommables",
+        "value": 250,
+        "weight": 1
+    },
     "pickaxe": {
         "icon": "pickaxe.png",
         "isGroupable": true,
