@@ -1,0 +1,10 @@
+{
+    "dialogs": {
+        "cristal-den/chemlab/owner": {
+            "entry": "Bievenue au Flacon Fuchsia. Besoin d'un petit remontant ?",
+            "exit-entry": "Non merci. Au revoir.",
+            "start-trade": "Montre-moi ce que tu as.",
+            "trade-starting": "Voilà ma séléction. Nos produits sont préparés sur place, leur pureté est inégalable."
+        }
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "answers": {
+        "exit-entry": {
+            "text": "exit-entry"
+        },
+        "start-trade": {
+            "state": "trade-starting",
+            "text": "start-trade"
+        }
+    },
+    "entryPoint": "entry",
+    "states": {
+        "entry": {
+            "answers": [
+                "start-trade",
+                "exit-entry"
+            ],
+            "mood": "smile",
+            "text": "entry"
+        },
+        "trade-starting": {
+            "answers": [
+            ],
+            "hook": "barter",
+            "text": "trade-starting"
+        }
+    }
+}

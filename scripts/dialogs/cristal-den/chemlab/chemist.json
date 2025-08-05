@@ -1,0 +1,282 @@
+{
+    "answers": {
+        "about-exit": {
+            "hook": "aboutToExit",
+            "text": "about-exit"
+        },
+        "ask-about-new-compound": {
+            "availableHook": "canStartPartyTimeQuest",
+            "state": "party-mintals/intro",
+            "text": "ask-about-new-compound"
+        },
+        "ask-about-potiok-more": {
+            "state": "about-potiok-control",
+            "text": "ask-about-potiok-more"
+        },
+        "ask-about-potiok-policies": {
+            "state": "about-potioks",
+            "text": "ask-about-potiok-policies"
+        },
+        "back-to-about-lab": {
+            "state": "about-lab",
+            "text": "back-to-about-lab"
+        },
+        "batch-ready-continue": {
+            "state": "party-mintals/testing-start",
+            "text": "exit"
+        },
+        "meeting-exit": {
+            "hook": "aboutToExit",
+            "text": "meeting-exit"
+        },
+        "meeting-hostile": {
+            "state": "hostility",
+            "text": "meeting-hostile"
+        },
+        "meeting-just-curious": {
+            "state": "about-lab",
+            "text": "meeting-just-curious"
+        },
+        "meeting-sciene": {
+            "availableHook": "canTalkAboutChemistry",
+            "state": "meeting-science",
+            "text": "meeting-sciene"
+        },
+        "party-mintals-accept-quest": {
+            "state": "party-mintals/quest-accepted",
+            "text": "party-mintals-accept-quest"
+        },
+        "party-mintals-ask-about-lab": {
+            "state": "about-lab",
+            "text": "party-mintals-ask-about-lab"
+        },
+        "party-mintals-ask-about-reward": {
+            "state": "party-mintals/about-reward",
+            "text": "party-mintals-ask-about-reward"
+        },
+        "party-mintals-give-sample": {
+            "availableHook": "partyMintalsHasSample",
+            "state": "party-mintals/received-sample",
+            "text": "party-mintals-give-sample"
+        },
+        "party-mintals-help-for-batch": {
+            "availableHook": "canTalkAboutChemistry",
+            "state": "party-mintals/suggested-help",
+            "text": "party-mintals-help-for-batch"
+        },
+        "party-mintals-interrupt-continue": {
+            "state": "party-mintals/intro",
+            "text": "exit"
+        },
+        "party-mintals-pass-science-check": {
+            "availableHook": "canHelpWithChemistry",
+            "state": "party-mintals/accepted-help",
+            "text": "party-mintals-pass-science-check"
+        },
+        "party-mintals-reject-quest": {
+            "state": "party-mintals/quest-accepted-alt",
+            "text": "party-mintals-reject-quest"
+        },
+        "party-mintals-start-batch-together": {
+            "hook": "partyMintalsStartBatchWithPlayer",
+            "state": "party-mintals/batch-prepared-together",
+            "text": "exit"
+        },
+        "party-mintals-still-looking": {
+            "text": "party-mintals-still-looking"
+        },
+        "party-mintals-test-nodrugs": {
+            "state": "party-mintals/testing-on-other",
+            "text": "party-mintals-test-nodrugs"
+        },
+        "party-mintals-test-other": {
+            "state": "party-mintals/testing-on-other",
+            "text": "party-mintals-test-other"
+        },
+        "party-mintals-test-self": {
+            "state": "party-mintals/testing-on-self",
+            "text": "party-mintals-test-self"
+        },
+        "party-mintals-wait-for-batch": {
+            "hook": "partyMintalsStartBatch",
+            "text": "party-mintals-wait-for-batch"
+        },
+        "testing-on-self-continue": {
+            "hook": "partyMintalsTestStartWithPlayer",
+            "state": "party-mintals/testing-ready",
+            "text": "exit"
+        }
+    },
+    "entryPoint": "meeting",
+    "states": {
+        "about-lab": {
+            "answers": [
+                "ask-about-potiok-policies",
+                "meeting-sciene",
+                "about-exit"
+            ],
+            "mood": "neutral",
+            "text": "about-lab"
+        },
+        "about-potiok-control": {
+            "answers": [
+                "back-to-about-lab",
+                "about-exit"
+            ],
+            "mood": "cocky",
+            "text": "about-potiok-control"
+        },
+        "about-potioks": {
+            "answers": [
+                "ask-about-potiok-more",
+                "back-to-about-lab",
+                "about-exit"
+            ],
+            "mood": "angry",
+            "text": "about-potioks"
+        },
+        "hostility": {
+            "answers": [
+            ],
+            "mood": "angry",
+            "text": "hostility"
+        },
+        "meeting": {
+            "answers": [
+                "meeting-just-curious",
+                "meeting-sciene",
+                "meeting-hostile",
+                "meeting-exit"
+            ],
+            "mood": "angry",
+            "text": "meeting"
+        },
+        "meeting-science": {
+            "answers": [
+                "ask-about-new-compound",
+                "back-to-about-lab",
+                "about-exit"
+            ],
+            "mood": "dubious",
+            "text": "meeting-science"
+        },
+        "party-mintals/about-reward": {
+            "answers": [
+                "party-mintals-accept-quest",
+                "party-mintals-reject-quest"
+            ],
+            "mood": "smile",
+            "text": "party-mintals/about-reward"
+        },
+        "party-mintals/accepted-help": {
+            "answers": [
+                "party-mintals-start-batch-together"
+            ],
+            "text": "party-mintals/accepted-help"
+        },
+        "party-mintals/batch-not-ready": {
+            "answers": [
+            ],
+            "text": "party-mintals/batch-not-ready"
+        },
+        "party-mintals/batch-prepared-together": {
+            "answers": [
+                "batch-ready-continue"
+            ],
+            "text": "party-mintals/batch-prepared-together"
+        },
+        "party-mintals/batch-ready": {
+            "answers": [
+                "batch-ready-continue"
+            ],
+            "text": "party-mintals/batch-ready"
+        },
+        "party-mintals/interrupt": {
+            "answers": [
+                "party-mintals-interrupt-continue"
+            ],
+            "mood": "angry",
+            "text": "party-mintals/interrupt"
+        },
+        "party-mintals/intro": {
+            "answers": [
+                "party-mintals-accept-quest",
+                "party-mintals-ask-about-reward",
+                "party-mintals-reject-quest"
+            ],
+            "hook": "startHappyPillsQuest",
+            "mood": "dubious",
+            "text": "party-mintals/intro"
+        },
+        "party-mintals/quest-accepted": {
+            "answers": [
+            ],
+            "mood": "smile",
+            "text": "party-mintals/quest-accepted"
+        },
+        "party-mintals/quest-accepted-alt": {
+            "answers": [
+            ],
+            "mood": "neutral",
+            "text": "party-mintals/quest-accepted-alt"
+        },
+        "party-mintals/received-sample": {
+            "answers": [
+                "party-mintals-help-for-batch",
+                "party-mintals-wait-for-batch"
+            ],
+            "hook": "partyMintalsReceiveSample",
+            "mood": "laugh",
+            "text": "party-mintals/received-sample"
+        },
+        "party-mintals/reentry": {
+            "answers": [
+                "party-mintals-give-sample",
+                "party-mintals-ask-about-lab",
+                "party-mintals-still-looking"
+            ],
+            "mood": "smile",
+            "text": "party-mintals/reentry"
+        },
+        "party-mintals/suggested-help": {
+            "answers": [
+                "party-mintals-pass-science-check",
+                "party-mintals-wait-for-batch"
+            ],
+            "text": "party-mintals/suggested-help"
+        },
+        "party-mintals/testing-not-ready": {
+            "answers": [
+            ],
+            "text": "party-mintals/testing-not-ready"
+        },
+        "party-mintals/testing-on-other": {
+            "answers": [
+            ],
+            "hook": "partyMintalsTestStart",
+            "text": "party-mintals/testing-on-other"
+        },
+        "party-mintals/testing-on-self": {
+            "answers": [
+                "testing-on-self-continue"
+            ],
+            "mood": "laugh",
+            "text": "party-mintals/testing-on-self"
+        },
+        "party-mintals/testing-ready": {
+            "answers": [
+            ],
+            "hook": "partyMintalsTestOver",
+            "text": "party-mintals/testing-ready"
+        },
+        "party-mintals/testing-start": {
+            "answers": [
+                "party-mintals-test-self",
+                "party-mintals-test-other",
+                "party-mintals-test-nodrugs"
+            ],
+            "mood": "smile",
+            "text": "party-mintals/testing-start"
+        }
+    }
+}

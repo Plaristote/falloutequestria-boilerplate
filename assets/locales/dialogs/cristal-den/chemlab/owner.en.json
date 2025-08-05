@@ -1,0 +1,10 @@
+{
+    "dialogs": {
+        "cristal-den/chemlab/owner": {
+            "entry": "Welcome to the Violet Vial. You need a little pick-me-up ?",
+            "exit-entry": "No, goodbye.",
+            "start-trade": "Show me what you've got.",
+            "trade-starting": "Here's my selection. We cook everything ourselves, the product's purity is guaranteed."
+        }
+    }
+}
