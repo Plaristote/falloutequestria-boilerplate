@@ -52,11 +52,11 @@ export default class CrafterComponent {
   appraiseCraft(itemType) {
     const skill = this.dialog.npc.statistics.barter;
     const contestantSkill = game.player.statistics.barter;
+    const diff = skill - contestantSkill;
     const value = itemLibrary.getValue(itemType);
     const base = Math.floor(value * 0.8);
-    const complement = (value - base) * (skill / 100);
-    const adjustedBase = base - base * (contestantSkill / 100 - 15);
-    return Math.max(10, adjustedBase + complement);
+    const complement = (value * 0.4) * (diff / 100);
+    return Math.floor(base + Math.max(-base / 2, complement));
   }
 
   appraiseCraftTime(itemType, cost) {

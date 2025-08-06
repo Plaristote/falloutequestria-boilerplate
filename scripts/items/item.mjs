@@ -99,9 +99,11 @@ export class ItemBehaviour {
 
   evaluateValue(buyer, seller) {
     const skill = seller.statistics.barter;
-    const base = Math.floor(this.model.value * 0.6);
-    const complement = (this.model.value - base) * (skill / 100);
-    return base + complement;
+    const contestantSkill = buyer.statistics.barter;
+    const diff = skill - contestantSkill;
+    const base = this.model.value;
+    const complement = (this.model.value * 0.4) * (diff / 100);
+    return Math.floor(base + Math.max(-base / 2, complement));
   }
 }
 
