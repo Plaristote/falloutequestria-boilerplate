@@ -33,10 +33,6 @@
         "steal-warning-4": "Guards ! We got a shoplifter over here"
     },
     "dialogs": {
-        "overmare": {
-            "entryPoint": "Hello {{name}}. Do you have something new to report ?",
-            "nothing-to-report": "Nothing yet."
-        },
         "slotMachine": {
             "bet10": "10 caps",
             "bet100": "100 caps",
