@@ -50,6 +50,15 @@ class Dialog {
     game.asyncAdvanceTime(15, completeDrunkenQuest);
     return "heal-success";
   }
+
+  negociatingAttempt() {
+    game.dataEngine.addReputation("hillburrow", -15);
+    if (game.player.statistics.barter >= 61) {
+      game.player.inventory.addItemOfType("bottlecaps", 50);
+      return { textKey: "negociate-doctor-bag-success" };
+    }
+    return { textKey: "negociate-doctor-bag-failure" };
+  }
 }
 
 export function create(dialog) {

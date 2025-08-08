@@ -3,6 +3,7 @@
         "hillburrow/doctor-drunk-quest": {
             "about-steward": "What ? Sure, doctor's bag, coming right up ! Wait, where can I find the steward again ?",
             "complete": "I have a doctor's bag right here.",
+            "continue-negociating": "And it would just take you chipping in some caps for make me care. Easy choice, if you ask me.",
             "discuss-doctor-bag": "Alright ! That's exactly what I needed ! Hoof it over, no time to waste !",
             "entry": "<i>You come into a clinic. Somepony is laying on the floor, a wooden stake sticking out of his stomach. A stressed out doctor is tending to his wound. As you step into the room, the doctor raises her head and yells at you:</i><br/><br/>Who are you and what are you doing standing there like an idiot ? Can't you see this pony is bleeding out ? I need a doctor's bag ASAP ! Make yourself useful and go get one from the steward !",
             "entry-alt": "You're back ! And not a minute too soon ! Do you have the doctor bag I asked you for ?",
@@ -17,6 +18,9 @@
             "medical-give-up": "Em, yeah, I don't really know. I'll get you that doctor's bag ! I'll be right back !",
             "medical-route": "Hang on, let me take a look, I might be able to help him right away. Will you let me take a look ?",
             "medical-route-cocky": "There's a new doctor in town, baby ! Hoofs off my patient, I'll take care of this.",
+            "negociate-doctor-bag": "Wha… are you really doing this right now ? Somepony's about to die !",
+            "negociate-doctor-bag-failure": "I can think of a few other ways to make you care, dickwad. Now give me that doctor bag, else there's soon gonna be two assholes bleeding out on my floor !",
+            "negociate-doctor-bag-success": "Oh my… ok you fucking asshole, here's 50 caps, it's literally all I can afford to pay. Give me that doctor bag, before I get mean.",
             "on-heal-prompt": "Sounds good to me. Proceed. I'll watch you closely... looks like I could learn a thing or two from you.",
             "on-medical-check-fail": "Yeah, and then the patient dies from internal bleeding. Good job, \"doctor\" ! Get the buck out of here !",
             "on-medical-check-success": "Alright, you do have a clue about what we're doing here. And how are you gonna close the internal wound without a doctor's bag then ?",

@@ -1,0 +1,34 @@
+{
+    "dialogs": {
+        "hillburrow/doctor-drunk-quest": {
+            "about-steward": "Quoi ? Bien sûr, la trousse du docteur arrive tout de suite ! Attendez, où puis-je trouver l'intendant déjà ?",
+            "complete": "J'ai une trousse du docteur juste là.",
+            "continue-negociating": "Et il suffirait que vous mettiez quelques dollars pour que ça soit mon problème. Un choix facile, à mon avis.",
+            "discuss-doctor-bag": "D'accord ! C'est exactement ce qu'il me fallait ! Allez-y, pas de temps à perdre !",
+            "entry": "<i>Vous entrez dans une clinique. Un poney est allongé par terre, un pieu en bois planté dans son ventre. Un médecin stressé soigne sa blessure. Alors que vous entrez dans la pièce, le médecin lève la tête et vous crie :</i><br/><br/>Qui êtes-vous et que faites-vous à rester planté là comme un idiot ? Vous ne voyez pas Ce poney se vide de son sang ? J'ai besoin d'une mallette de médecin au plus vite ! Rendez-vous utile et allez en chercher une auprès de l'intendant !",
+            "entry-alt": "Vous êtes de retour ! Et pas une minute trop tôt ! Avez-vous la mallette de médecin que je vous ai demandée ?",
+            "find-steward": "L'intendant, bon sang ! C'est littéralement le premier bâtiment en arrivant en ville, sur votre droite en sortant de cette clinique ! Faites vite !",
+            "hand-doctor-bag": "Voilà.",
+            "heal-success": "<i>Vous passez environ 15 minutes à soigner le poney blessé. Après une opération minutieuse, vous êtes sûr que votre patient s'en sortira très bien.</i><br/><br/>Eh bien, je serais damné. J'avais quelques choses à apprendre de vous. Bon travail, mon cher collègue. Si vous avez besoin de quoi que ce soit, n'hésitez pas à revenir. Il y a bien plus de brutes que de guérisseurs dans ce monde. Nous, les médecins, avons besoin On se soutient mutuellement. Merci.",
+            "medical-check": "Je suis aussi médecin et je connais ce genre de blessures. D'après ce que je vois, le pieu a probablement transpercé l'estomac du patient. Si on retire le pieu maintenant, je suis sûr de pouvoir soigner l'organe avant que le patient ne se vide de son sang. Ensuite, il aura juste besoin de points de suture, d'antibiotiques et de repos.",
+            "medical-check-2-fail": "Oh. Je n'y avais pas pensé. Tu as raison, on a besoin d'une mallette de médecin. Je reviens tout de suite avec.",
+            "medical-check-2-success": "Je connais un sort qui permet de refermer les plaies. C'est un peu délicat à utiliser sur une plaie interne, mais je suis sûr d'y arriver.",
+            "medical-check-fail": "Bien sûr que je sais ce que je fais ! Je vais retirer le pieu en bois et cautériser la plaie. Je m'en occupe.",
+            "medical-dont-care": "Je plaisante, je m'en fiche complètement. Ça ne me regarde pas. Je reviendrai quand j'aurai besoin de toi.",
+            "medical-give-up": "Euh, ouais, je ne sais pas vraiment. Je vais te chercher cette mallette de docteur ! Je reviens tout de suite !",
+            "medical-route": "Attends, laisse-moi jeter un œil, je pourrais peut-être l'aider tout de suite. Tu me laisses jeter un œil ?",
+            "medical-route-cocky": "Il y a un nouveau docteur en ville, ma puce ! Dégage mon patient, je m'en occupe.",
+            "negociate-doctor-bag": "Quoi… tu fais vraiment ça maintenant ? Quelqu'un va mourir !",
+            "negociate-doctor-bag-failure": "J'ai d'autres moyens d'en faire ton problème, connard. Maintenant, passe-moi cette mallette de docteur, sinon il va bientôt y avoir deux connards en train de se vider de leur sang chez moi !",
+            "negociate-doctor-bag-success": "Oh là là… ok, espèce de connard, voilà 50 capsules, c'est tout ce que je peux me permettre de payer. File-moi cette mallette de docteur, avant que je devienne méchant.",
+            "on-heal-prompt": "Ça me va. Allez-y. Je vais vous surveiller de près... on dirait que j'ai une leçon à vous apprendre.",
+            "on-medical-check-fail": "Ouais, et puis le patient meurt d'une hémorragie interne. Bravo, « docteur » ! Dégagez-moi !",
+            "on-medical-check-success": "Bon, vous avez une idée de ce qu'on fait là. Et comment allez-vous refermer la plaie interne sans mallette de docteur ?",
+            "on-try-to-help": "Où diable vous prenez-vous ? C'est ma clinique, et ce patient a besoin d'aide médicale, pas d'un numéro de cirque, espèce de connard Bozo. Sors ce chevreuil. La prochaine fois que je te vois, tu ferais mieux d'avoir une mallette de médecin pour moi, sinon ce type ne sera pas le seul à mourir aujourd'hui. Qu'est-ce que tu y connais en matière de guérison d'une blessure profonde, de toute façon ?",
+            "perform-heal": "Commençons.",
+            "reject": "Euh... Je suis déjà pas mal occupé, je crois que je vais y aller. Salut !",
+            "start-negociating": "Waouh ! Ces trucs ne sont pas gratuits, tu sais ! Dis-moi, combien vaut la vie de ce poney pour toi ?",
+            "success": "<i>Le docteur ouvre la trousse et commence à manipuler la chair du poney blessé. Après 15 minutes de ce spectacle un peu macabre, elle réveille violemment le poney d'une énorme tape sur le museau.</i><br/><br/>Très bien mon pote ! Tu es guéri, grâce à ce poney qui se tenait dans l'embrasure de la porte. Ils ont même pris le temps d'assister à toute l'opération, me surveillant tout du long. Quel salaud, n'est-ce pas ? De toute façon, tu ne rajeunis pas. Je ne veux plus jamais refaire ça, alors fais-moi plaisir et évite les bagarres de bar à partir de maintenant, d'accord ? D'accord. Tu devrais pouvoir sortir d'ici en boitant sans encombre. Du vent !"
+        }
+    }
+}
