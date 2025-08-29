@@ -1,7 +1,15 @@
 {
     "answers": {
+        "ask-bid-shipment": {
+            "availableHook": "canAskBidShipment",
+            "state": "doctor-shipment/entry",
+            "text": "ask-bid-shipment"
+        },
         "exit-entry": {
             "text": "exit-entry"
+        },
+        "picked-shipment-okaay": {
+            "text": "picked-shipment-okaay"
         },
         "start-trade": {
             "state": "trade-starting",
@@ -10,8 +18,17 @@
     },
     "entryPoint": "entry",
     "states": {
+        "doctor-shipment/entry": {
+            "answers": [
+                "picked-shipment-okaay"
+            ],
+            "hook": "pickUpBidShipment",
+            "mood": "dubious",
+            "text": "doctor-shipment/entry"
+        },
         "entry": {
             "answers": [
+                "ask-bid-shipment",
                 "start-trade",
                 "exit-entry"
             ],

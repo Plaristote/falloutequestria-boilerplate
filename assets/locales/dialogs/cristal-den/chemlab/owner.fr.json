@@ -1,8 +1,11 @@
 {
     "dialogs": {
         "cristal-den/chemlab/owner": {
+            "ask-bid-shipment": "Je suis censé récupérer une livraison pour Armor Bid.",
+            "doctor-shipment/entry": "Ah, oui, les… euh… préparations. J'attendais que quelqu'un vienne les cherchais. Les voilà.",
             "entry": "Bievenue au Flacon Fuchsia. Besoin d'un petit remontant ?",
             "exit-entry": "Non merci. Au revoir.",
+            "picked-shipment-okaay": "Merci, la bonne journée !",
             "start-trade": "Montre-moi ce que tu as.",
             "trade-starting": "Voilà ma séléction. Nos produits sont préparés sur place, leur pureté est inégalable."
         }

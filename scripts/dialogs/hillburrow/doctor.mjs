@@ -48,6 +48,17 @@ class Dialog extends DialogHelper {
       suffix = this.dialog.t("old-sheriff-without-drunken");
     return this.dialog.t("old-sheriff-suspicions") + ' ' + suffix;
   }
+
+  hasArmorBidAilments() {
+    return game.player.statistics.perks.indexOf("armorBidAilments") >= 0
+        || game.player.statistics.buffs.indexOf("armor-bid-treatment") >= 0;
+  }
+
+  cureArmorBidAilments() {
+    const buff = game.player.getBuff("armor-bid-treatment");
+    if (buff) buff.remove();
+    game.player.statistics.togglePerk("armorBidAilments", false);
+  }
 }
 
 export function create(dialog) {

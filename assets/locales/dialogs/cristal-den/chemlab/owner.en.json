@@ -1,8 +1,11 @@
 {
     "dialogs": {
         "cristal-den/chemlab/owner": {
+            "ask-bid-shipment": "I'm supposed to pick up a shipment for Armor Bid.",
+            "doctor-shipment/entry": "Ah, yes, the… er… preparations. I was waiting for somepony to come pick them up. Here you go.",
             "entry": "Welcome to the Violet Vial. You need a little pick-me-up ?",
             "exit-entry": "No, goodbye.",
+            "picked-shipment-okaay": "Thanks, have a good day !",
             "start-trade": "Show me what you've got.",
             "trade-starting": "Here's my selection. We cook everything ourselves, the product's purity is guaranteed."
         }

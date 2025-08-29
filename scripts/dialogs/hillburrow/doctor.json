@@ -13,6 +13,10 @@
             "state": "about-npc-den",
             "text": "about-npc-leaving-den-alt"
         },
+        "armorBidAilemtn-player-response-1": {
+            "state": "armorbidAilment-cure-2",
+            "text": "armorBidAilemtn-player-response-1"
+        },
         "ask-about-den-doc": {
             "state": "about-den-doc",
             "text": "ask-about-den-doc"
@@ -34,6 +38,11 @@
         "ask-about-potioks": {
             "state": "about-potioks",
             "text": "ask-about-potioks"
+        },
+        "ask-heal-armorBidAilment": {
+            "availableHook": "hasArmorBidAilments",
+            "state": "armorBidAilment-cure",
+            "text": "ask-heal-armorBidAilment"
         },
         "ask-more-about-npc": {
             "state": "about-npc-more",
@@ -77,14 +86,12 @@
                 "ask-about-den-doc-treatment",
                 "back-to-entry"
             ],
-            "mood": "",
             "text": "about-den-doc"
         },
         "about-den-doc-treatment": {
             "answers": [
                 "back-to-entry"
             ],
-            "mood": "",
             "text": "about-den-doc-treatment"
         },
         "about-npc": {
@@ -92,7 +99,6 @@
                 "ask-more-about-npc",
                 "back-to-entry"
             ],
-            "mood": "",
             "text": "about-npc"
         },
         "about-npc-den": {
@@ -101,7 +107,6 @@
                 "ask-about-den-doc",
                 "back-to-entry"
             ],
-            "mood": "",
             "text": "about-npc-den"
         },
         "about-npc-more": {
@@ -110,7 +115,6 @@
                 "about-npc-leaving-den-alt",
                 "back-to-entry"
             ],
-            "mood": "",
             "text": "about-npc-more"
         },
         "about-old-sheriff": {
@@ -119,8 +123,6 @@
                 "ask-more-about-sheriff",
                 "back-to-entry"
             ],
-            "hook": "",
-            "mood": "",
             "text": "about-old-sheriff"
         },
         "about-potioks": {
@@ -128,34 +130,44 @@
                 "ask-more-about-potioks",
                 "back-to-entry"
             ],
-            "hook": "",
-            "mood": "",
             "text": "about-potioks"
         },
         "about-potioks-more": {
             "answers": [
                 "back-to-entry"
             ],
-            "mood": "",
             "text": "about-potioks-more"
+        },
+        "armorBidAilment-cure": {
+            "answers": [
+                "armorBidAilemtn-player-response-1"
+            ],
+            "mood": "dubious",
+            "text": "armorBidAilment-cure"
+        },
+        "armorbidAilment-cure-2": {
+            "answers": [
+            ],
+            "hook": "cureArmorBidAilments",
+            "mood": "cocky",
+            "text": "armorbidAilment-cure-2"
         },
         "barter": {
             "answers": [
                 "back-to-entry",
                 "exit-barter"
             ],
-            "mood": "",
             "text": "barter"
         },
         "entry": {
             "answers": [
+                "ask-heal-armorBidAilment",
                 "trade",
                 "ask-about-old-sheriff",
                 "ask-about-npc",
                 "exit-entry"
             ],
             "hook": "entryLine",
-            "mood": "",
             "text": "entry"
         },
         "old-sheriff-suspicions": {
@@ -164,7 +176,6 @@
                 "back-to-entry"
             ],
             "hook": "suspicionsAboutOldSheriffMurder",
-            "mood": "",
             "text": "old-sheriff-suspicions"
         },
         "old-sheriff-tell-more": {
@@ -172,8 +183,6 @@
                 "ask-suspicion-about-sheriff",
                 "back-to-entry"
             ],
-            "hook": "",
-            "mood": "",
             "text": "old-sheriff-tell-more"
         }
     }

@@ -25,6 +25,11 @@
             "hook": "onAboutToExit",
             "text": "cancel-heal-prompt"
         },
+        "end-errand": {
+            "availableHook": "canEndChemistryErrand",
+            "state": "errand/end",
+            "text": "end-errand"
+        },
         "entry-exit": {
             "hook": "onAboutToExit",
             "text": "entry-exit"
@@ -103,6 +108,8 @@
             "text": "phony-diagnosis-pick-up"
         },
         "phonyDiagnosisTreatmentCantPay": {
+            "hook": "phonyDiagnosisTreatmentCantPay",
+            "state": "phony-diagnosis/cannot-pay",
             "text": "phonyDiagnosisTreatmentCantPay"
         },
         "phonyDiagnosisTreatmentPay": {
@@ -124,6 +131,7 @@
     "states": {
         "entry": {
             "answers": [
+                "end-errand",
                 "start-feel-fine",
                 "phony-diagnosis-pick-up",
                 "ask-medical-help",
@@ -131,6 +139,13 @@
             ],
             "hook": "entry",
             "text": "entry"
+        },
+        "errand/end": {
+            "answers": [
+            ],
+            "hook": "endChemistryErrand",
+            "mood": "smile",
+            "text": "errand/end"
         },
         "heal-cash-prompt": {
             "answers": [
@@ -155,6 +170,12 @@
             "hook": "healPrompt",
             "mood": "smile",
             "text": "heal-prompt"
+        },
+        "phony-diagnosis/cannot-pay": {
+            "answers": [
+            ],
+            "mood": "sad",
+            "text": "phony-diagnosis/cannot-pay"
         },
         "phony-diagnosis/cant-pay": {
             "answers": [
@@ -241,6 +262,13 @@
             ],
             "mood": "laugh",
             "text": "phony-diagnosis/resisted"
+        },
+        "phony-diagnosis/start-errand": {
+            "answers": [
+            ],
+            "hook": "phonyDiagnosisOnStartErrand",
+            "mood": "smile",
+            "text": "phony-diagnosis/start-errand"
         }
     }
 }

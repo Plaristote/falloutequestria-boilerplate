@@ -94,7 +94,37 @@ class Dialog {
   get canPayPhonyDiagnosisTreatment() {
     return game.player.inventory.count("bottlecaps") >= this.phonyDiagnosisTreatmentCost;
   }
+
+  get canSendOnPhonyDiagnosisErrand() {
+    return !this.dialog.npc.hasVariable("sentOnMedsErrand");
+  }
+
+  phonyDiagnosisTreatmentCantPay() {
+    if (this.canSendOnPhonyDiagnosisErrand)
+      return "phony-diagnosis/start-errand";
+    return "phony-diagnosis/cannot-pay";
+  }
+
+  phonyDiagnosisOnStartErrand() {
+    this.dialog.npc.setVariable("lastAilmentsTreatmentBoughtAt", game.timeManager.getTimestamp());
+    game.player.inventory.addItemOfType("armor-bid-ailments-treatment");
+    this.startChemistryErrand();
+  }
   // END Phony Diagnosis
+
+  startChemistryErrand() {
+    this.dialog.npc.setVariable("sentOnMedsErrand", 1);
+    game.setVariable("armorBidErrandEnabled", 1);
+  }
+
+  canEndChemistryErrand() {
+    return this.dialog.npc.getVariable("sentOnMedsErrand", 0) == 1
+        && game.player.inventory.count("armor-bid-shipment") > 0;
+  }
+
+  endChemistryErrand() {
+    game.player.inventory.removeItemOfType("armor-bid-shipment");
+  }
 }
 
 export function create(dialog) {
