@@ -117,6 +117,8 @@ export class WeaponBehaviour extends ItemBehaviour {
 
       baseToHit -= aggravatingFactor * Math.max(0, distance - 1);
       baseToHit *= (vision / 100);
+    } else if (target.unconscious) {
+      baseToHit = Math.max(100, attackerWeaponSkill) - defenderArmorClass / 2;
     }
     //console.log(attackerWeaponSkill, defenderArmorClass);
     return Math.max(0, Math.min(baseToHit, 95));
