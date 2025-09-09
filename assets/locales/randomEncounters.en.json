@@ -1,0 +1,13 @@
+{
+  "randomEncounters": {
+    "and": " and ",
+    "names": {
+      "Wolves": "wolves",
+      "Timberwolves": "timberwolves",
+      "Rats": "rats",
+      "Scorpions": "scorpions",
+      "Roaches": "roaches",
+      "Feral Ghouls": "feral ghouls"
+    }
+  }
+}

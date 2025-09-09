@@ -9,7 +9,7 @@ function availableEncounters() {
     array.push(function(difficultyRoll) { return { "name": "Wolves", "avoidRoll": (75 + difficultyRoll / 4), "members": [{"sheet": "wolf", "script": "dog.mjs", "amount": Math.max(4, Math.floor(5 * difficultyRoll / 40))}, {"sheet": "wolf-alpha", "script": "dog.mjs", "amount": 1} ]}});
   } else if (zones.indexOf("forest") >= 0) {
     // Timberwolves
-    array.push(function(difficultyRoll) { return { "name": "Wolves", "avoidRoll": (75 + difficultyRoll / 4), "members": [{"sheet": "timberwolf", "script": "dog.mjs", "amount": Math.max(4, Math.floor(5 * difficultyRoll / 40))} ]}});
+    array.push(function(difficultyRoll) { return { "name": "Timberwolves", "avoidRoll": (75 + difficultyRoll / 4), "members": [{"sheet": "timberwolf", "script": "dog.mjs", "amount": Math.max(4, Math.floor(5 * difficultyRoll / 40))} ]}});
   } else {
     // Desert encounters
     array.push(function(difficultyRoll) { return { "name": "Rats",      "avoidRoll": (55 + difficultyRoll / 4), "members": [{"sheet": "mutatedRat", "script": "rat.mjs",      "amount": Math.max(3, Math.floor(4 * (difficultyRoll / 40)))}] }; });
@@ -56,7 +56,6 @@ export function generateHostileEncounter() {
 
   try {
     appendHostileParty(parties);
-    parties.push(generateHostileParty());
     if (getValueFromRange(0, 10) > 8)
       appendHostileParty(parties);
     for (let i = 0 ; i < parties.length ; ++i)
