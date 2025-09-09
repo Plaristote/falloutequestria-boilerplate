@@ -10,10 +10,10 @@ export class Food extends Consumable {
     stats.hitPoints += healed;
     game.appendToConsole(
       i18n.t("messages.use", {
-        user: this.user.statistics.name, item: i18n.t("items." + this.model.itemType)
+        user: this.user.displayName, item: i18n.t("items." + this.model.itemType)
       }) + ' ' +
       i18n.t("messages.healed", {
-        target: target.statistics.name, hp: healed
+        target: target.displayName, hp: healed
       })
     );
   }

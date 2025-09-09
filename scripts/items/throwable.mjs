@@ -61,7 +61,7 @@ export class ThrowableBehaviour extends ItemBehaviour {
 
   onCriticalFailure() {
     game.appendToConsole(i18n.t("messages.weapons.critical-failure", {
-      user: this.user.statistics.name,
+      user: this.user.displayName,
       item: this.trName
     }));
     return [this.user.position.x, this.user.position.y]

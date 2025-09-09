@@ -23,7 +23,7 @@ function defaultFailure(character) {
   const damage = getValueFromRange(3, 8);
 
   game.appendToConsole(i18n.t("messages.spellcast-fail", {
-    character: character.statistics.name,
+    character: character.displayName,
     damage: damage
   }));
   character.takeDamage(damage, null);
@@ -33,7 +33,7 @@ export function spellCast(difficulty, character, callbacks) {
   const malus = exhaustion(character);
   var callback;
 
-  console.log("spellCast attempt by", character.statistics.name, "difficulty", difficulty, "malus", malus);
+  console.log("spellCast attempt by", character.displayName, "difficulty", difficulty, "malus", malus);
   if (typeof callbacks == "function")
     callbacks = { success: callbacks };
   if (!callbacks.failure)
