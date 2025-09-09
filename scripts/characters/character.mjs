@@ -129,7 +129,7 @@ export class CharacterBehaviour extends SceneActorComponent {
 
     if (armor?.script?.mitigateDamage)
       damage = armor.script.mitigateDamage(damage, type);
-    damage = Math.ceil(damage * this.model.statistics.damageResistance / 100);
+    damage -= Math.ceil(damage * this.model.statistics.damageResistance / 100);
     return damage;
   }
 
