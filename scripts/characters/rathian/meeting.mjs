@@ -71,8 +71,10 @@ class Rathian extends CharacterBehaviour {
 
   switchScript() {
     console.log("TRIGGER WITCHCRIPT");
-    if (this.talkedOnArrival)
+    if (this.talkedOnArrival) {
+      this.model.tasks.addTask("moveToHome", 10000, 0);
       this.model.setScript("rathian/junkville.mjs");
+    }
     else
       this.model.tasks.addTask("switchScript", 1500, 1);
   }

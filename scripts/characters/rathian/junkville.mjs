@@ -19,6 +19,13 @@ class Rathian extends CharacterBehaviour {
       return "rathian-junkville";
     return null;
   }
+
+  moveToHome() {
+    if (this.model.actionQueue.isEmpty()) {
+      this.model.actionQueue.pushMovement(53, 27);
+      this.model.actionQueue.start();
+    }
+  }
 }
 
 export function create(model) {
