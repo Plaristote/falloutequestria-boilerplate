@@ -20,7 +20,7 @@ export class SkillTargetComponent extends DialogComponent {
     else if (level.isInCombat(user))
       game.appendToConsole(i18n.t("medicine-skill.in-combat"));
     else if (useCount + 1 > maxUseCount)
-      game.appendToConsole(i18n.t("medicine-skill.max-use-reached", {target: this.model.statistics.name}));
+      game.appendToConsole(i18n.t("medicine-skill.max-use-reached", {target: this.model.displayName}));
     else {
       const target   = this.model;
       const stats    = target.statistics;
@@ -44,7 +44,7 @@ export class SkillTargetComponent extends DialogComponent {
       healed = Math.min(healed, maxHeal);
       game.asyncAdvanceTime(duration, function() {
         const vars = {
-          user:   user.statistics.name,
+          user:   user.displayName,
           target: stats.name,
           hp:     Math.abs(healed)
         }

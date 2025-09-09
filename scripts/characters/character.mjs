@@ -43,7 +43,7 @@ export class CharacterBehaviour extends SceneActorComponent {
   getHint() {
     if (game.player.statistics.perks.indexOf("awareness") >= 0)
       return awarenessHint(this.model);
-    return this.model.statistics.name;
+    return this.model.displayName;
   }
 
   getAvailableInteractions() {
@@ -62,7 +62,7 @@ export class CharacterBehaviour extends SceneActorComponent {
   }
 
   onLook() {
-    var message = i18n.t("inspection.character", {target: this.model.statistics.name});
+    var message = i18n.t("inspection.character", {target: this.model.displayName});
     const hpPercentage = this.model.statistics.hpPercentage;
     const gender = this.model.statistics.gender;
     const states = {

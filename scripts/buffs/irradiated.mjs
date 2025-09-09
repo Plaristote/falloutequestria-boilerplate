@@ -42,7 +42,7 @@ class Irradiated {
     damage = Math.ceil(damage);
     this.target.takeDamage(damage, null);
     this.consoleMessage(i18n.t("messages.damaged", {
-      target: this.target.statistics.name,
+      target: this.target.displayName,
       damage: damage
     }));
   }

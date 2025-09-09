@@ -70,8 +70,8 @@ export class WeaponBehaviour extends ItemBehaviour {
     target.attackedBy(this.user);
     game.appendToConsole(
       i18n.t("messages.weapons.dodge", {
-        user: this.user.statistics.name,
-        target: target.statistics.name
+        user: this.user.displayName,
+        target: target.displayName
       })
     );
     this.playMissSound(target);

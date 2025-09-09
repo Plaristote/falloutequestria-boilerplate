@@ -38,7 +38,7 @@ export class Grenade extends WeaponBehaviour {
     randomCheck(successRate, {
       criticalFailure: () => {
         game.appendToConsole(i18n.t("messages.weapons.critical-failure", {
-          user: this.user.statistics.name,
+          user: this.user.displayName,
           item: this.trName
         }));
         x = this.user.position.x;

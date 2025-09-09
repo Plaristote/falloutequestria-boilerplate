@@ -17,7 +17,7 @@ export function use(character, x, y) {
 
 export function triggerUse(character, x, y) {
   game.appendToConsole(i18n.t("messages.spellcast-success", {
-    character: character.statistics.name,
+    character: character.displayName,
     spell: i18n.t("spells.teleport")
   }));
   level.setCharacterPosition(character, x, y);
