@@ -13,11 +13,16 @@ const RandomEncounterChart = {
 };
 
 function encounterTitleForParties(parties) {
-  let title;
+  let title = '';
 
   for (let i = 0 ; i < parties.length ; ++i) {
-    if (i > 0) { title += ", " + parties[i].name; }
-    else { title = parties[i].name; }
+    if (i > 0) {
+      if (i + 1 >= parties.length)
+        title += i18n.t("randomEncounters.and")
+      else
+        title += ", ";
+    }
+    title += i18n.t(`randomEncounters.names.${parties[i].name}`);
   }
   return title;
 }

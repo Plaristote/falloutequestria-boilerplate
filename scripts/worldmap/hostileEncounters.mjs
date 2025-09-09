@@ -43,7 +43,12 @@ export function generateHostileEncounter() {
   parties.push(generateHostileParty());
   if (getValueFromRange(0, 10) > 8)
     appendHostileParty(parties);
-  for (let i = 0 ; i < parties.length ; ++i)
-    parties[i].zone = `encounter-zone-${i}`;
+    if (getValueFromRange(0, 10) > 8)
+      appendHostileParty(parties);
+    for (let i = 0 ; i < parties.length ; ++i)
+      parties[i].zone = `encounter-zone-${i}`;
+  } catch (err) {
+    console.log("generateHostileEncounter crashed:", err);
+  }
   return parties;
 }
