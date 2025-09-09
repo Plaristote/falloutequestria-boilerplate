@@ -125,7 +125,7 @@ export class Gym {
   generateCheer() {
     const fighters = this.ringFighters;
     const fighter = fighters[Math.floor(Math.random() * 2)];
-    const name = fighter == game.player ? this.ringName : fighter.statistics.name;
+    const name = fighter == game.player ? this.ringName : fighter.displayName;
     const cheerIt = Math.floor(Math.random() * 7);
 
     return [i18n.t(`cristal-den.ring.cheers-${cheerIt}`, {name: name}), 4500, "beige"];
@@ -210,7 +210,7 @@ export class Gym {
     const opponent = this.playerCurrentOpponent;
     const actions = this.referee.actionQueue;
     const self = this;
-    const winnerName = this.combatWinner == game.player ? this.ringName : this.combatWinner.statistics.name;
+    const winnerName = this.combatWinner == game.player ? this.ringName : this.combatWinner.displayName;
 
     this.unstashPlayerInventory();
     game.player.script.invulnerable = false;
@@ -254,7 +254,7 @@ export class Gym {
   fighterName(character) {
     if (character == game.player)
       return this.ringName;
-    return character.statistics.name;
+    return character.displayName;
   }
 
   combatPresentation(characterA, characterB) {
@@ -315,7 +315,7 @@ export class Gym {
     actions.pushReach(this.combatWinner);
     actions.pushSpeak(i18n.t("cristal-den.ring.combat-ending-part-0"), 5000, "white");
     actions.pushWait(5);
-    actions.pushSpeak(i18n.t("cristal-den.ring.combat-ending-part-1", {name: this.combatWinner.statistics.name}), 5000, "white");
+    actions.pushSpeak(i18n.t("cristal-den.ring.combat-ending-part-1", {name: this.combatWinner.displayName}), 5000, "white");
     actions.pushWait(5);
     actions.pushScript({
       onTrigger: this.finalizeCombat.bind(this),

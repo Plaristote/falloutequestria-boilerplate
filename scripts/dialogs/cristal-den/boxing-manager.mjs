@@ -32,7 +32,7 @@ class Dialog {
   }
 
   get currentOpponentName() {
-    return this.gym.script.playerCurrentOpponent.statistics.name;
+    return this.gym.script.playerCurrentOpponent.displayName;
   }
 
   getEntryPoint() {
@@ -71,10 +71,10 @@ class Dialog {
     const self = this;
 
     return {
-      text: this.dialog.t("bets", { name1: fighters[0].statistics.name, name2: fighters[1].statistics.name }),
+      text: this.dialog.t("bets", { name1: fighters[0].displayName, name2: fighters[1].displayName }),
       answers: [
-        { symbol: "betOnA", textHook: () => { return this.dialog.t("placeBet", { name: fighters[0].statistics.name }); }, hook: this.onPlaceBet.bind(this, fighters[0]) },
-        { symbol: "betOnB", textHook: () => { return this.dialog.t("placeBet", { name: fighters[1].statistics.name }); }, hook: this.onPlaceBet.bind(this, fighters[1]) },
+        { symbol: "betOnA", textHook: () => { return this.dialog.t("placeBet", { name: fighters[0].displayName }); }, hook: this.onPlaceBet.bind(this, fighters[0]) },
+        { symbol: "betOnB", textHook: () => { return this.dialog.t("placeBet", { name: fighters[1].displayName }); }, hook: this.onPlaceBet.bind(this, fighters[1]) },
         "exit-bets"
       ]
     };
@@ -106,7 +106,7 @@ class Dialog {
   }
 
   get selectedFighterName() {
-    return this.selectedFighter.statistics.name;
+    return this.selectedFighter.displayName;
   }
 
   get betPotentialGains() {
@@ -145,7 +145,7 @@ class Dialog {
     const winCount = this.gym.script.playerWinCount;
 
     if (winCount > 0)
-        return this.dialog.t(`fight-${winCount}`, {opponent: opponent.statistics.name});
+        return this.dialog.t(`fight-${winCount}`, {opponent: opponent.displayName});
     return null;
   }
 
