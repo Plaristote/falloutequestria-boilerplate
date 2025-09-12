@@ -56,4 +56,15 @@ export class CelestialDevice extends QuestHelper {
     this.model.completed = true;
     game.dataEngine.addReputation("stable-103", 150);
   }
+
+  onQuestFollowup() {
+    const rathian = game.getCharacter("rathian");
+    if (rathian.isAlive()) {
+      game.asyncAdvanceTime(11 * 60 + Math.ceil(Math.random() * 60), function() {
+        game.quests.addQuest("stable-103/rathian");
+      });
+    } else {
+      game.gameFinished();
+    }
+  }
 }

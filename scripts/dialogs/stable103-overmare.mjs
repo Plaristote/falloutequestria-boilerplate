@@ -74,11 +74,10 @@ class Dialog {
   }
 
   celestialDeviceRest() {
+    const quest = game.quests.getQuest("celestialDevice");
     const room = level.findGroup("level#1.rooms.room#8");
     game.playerParty.insertIntoZone(level, room.controlZone);
-    game.asyncAdvanceTime(11 * 60 + Math.ceil(Math.random() * 60), function() {
-      game.quests.addQuest("stable-103/rathian");
-    });
+    quest.script.onQuestFollowup();
   }
 
   rathianBriefingDone() {
