@@ -244,7 +244,7 @@ class Dialog extends Innkeeper {
     if (this.hasFreedScavengers()) {
       this.junkvilleDumpsDisappeared.completeObjective("report-success");
       return "scavengers/report-freed";
-    } else if (requireQuest("junkvilleDumpsDisappeared").hasVariable("reportedScavengerFound")) {
+    } else if (requireQuest("junkvilleDumpsDisappeared").getVariable("reportedScavengerFound") == 2) {
       return "scavengers/report-ransom"
     }
     return "scavengers/report";
@@ -272,7 +272,7 @@ class Dialog extends Innkeeper {
   }
 
   reportMissingScavengers() {
-    requireQuest("junkvilleDumpsDisappeared").setVariable("reportedScavengerFound", 1);
+    requireQuest("junkvilleDumpsDisappeared").setVariable("reportedScavengerFound", 2);
   }
 
   // NEW VERSION NEGOCIATE

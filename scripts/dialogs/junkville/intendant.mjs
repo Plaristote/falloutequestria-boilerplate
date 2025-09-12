@@ -13,7 +13,7 @@ class Dialog extends DialogHelper {
   get shop() {
     return this.dialog.npc.script.shop;
   }
-  
+
   getEntryPoint() {
     if (!this.dialog.npc.hasVariable("met")) {
       this.dialog.npc.setVariable("met", true);
@@ -41,11 +41,11 @@ class Dialog extends DialogHelper {
   get scavengerQuest() { return game.quests.getQuest("junkvilleDumpsDisappeared"); }
 
   canWarnAboutMissingScavengers() {
-    return hasFoundDisappearedPonies() && !this.scavengerQuest.hasVariable("reportedScavengerFound");
+    return hasFoundDisappearedPonies() && !this.scavengerQuest.completed && !this.scavengerQuest.hasVariable("reportedScavengerFound");
   }
 
   reportMissingScavengers() {
-    //this.scavengerQuest.setVariable("reportedScavengerFound", 1);
+    this.scavengerQuest.setVariable("reportedScavengerFound", 1);
   }
 
   isLookingForScavengerRansom() {
