@@ -1,0 +1,79 @@
+{
+    "answers": {
+        "ask-about": {
+            "state": "about",
+            "text": "ask-about"
+        },
+        "ask-about-town": {
+            "state": "mark-map",
+            "text": "ask-about-town"
+        },
+        "exit-about": {
+            "text": "exit-about"
+        },
+        "exit-entry": {
+            "text": "exit-entry"
+        },
+        "exit-mark": {
+            "text": "exit-mark"
+        },
+        "intimidated-exit": {
+            "text": "intimidated-exit"
+        },
+        "intimidated-fight": {
+            "hook": "startFight",
+            "text": "intimidated-fight"
+        },
+        "look-for-trouble": {
+            "availableHook": "canIntimidate",
+            "hook": "tryToIntimidate",
+            "state": "provoked",
+            "text": "look-for-trouble"
+        },
+        "provoked-exit": {
+            "text": "provoked-exit"
+        }
+    },
+    "entryPoint": "greetings",
+    "states": {
+        "about": {
+            "answers": [
+                "ask-about-town",
+                "look-for-trouble",
+                "exit-about"
+            ],
+            "text": "about"
+        },
+        "greetings": {
+            "answers": [
+                "ask-about",
+                "exit-entry"
+            ],
+            "text": "greetings"
+        },
+        "intimidated": {
+            "answers": [
+                "intimidated-exit",
+                "intimidated-fight"
+            ],
+            "mood": "sad",
+            "text": "intimidated"
+        },
+        "mark-map": {
+            "answers": [
+                "exit-mark"
+            ],
+            "hook": "markMap",
+            "mood": "smile",
+            "text": "mark-map"
+        },
+        "provoked": {
+            "answers": [
+                "provoked-exit",
+                "intimidated-fight"
+            ],
+            "mood": "angry",
+            "text": "provoked"
+        }
+    }
+}

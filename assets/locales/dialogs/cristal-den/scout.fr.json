@@ -1,0 +1,20 @@
+{
+    "dialogs": {
+        "cristal-den/scout": {
+            "about": "On patrouille autour du Havre Cristallin. C'est nous qui la protegeons des fauteurs de troubles qui cherchent les ennuis.",
+            "ask-about": "Qu'est-ce que vous faites là ?",
+            "ask-about-town": "Le Havre Cristallin ? C'est quoi ?",
+            "exit-about": "Oh, ok. Bonne continuation.",
+            "exit-entry": "Yo.",
+            "exit-mark": "Merci.",
+            "greetings": "Yo.",
+            "intimidated": "S'il te plait... je cherche pas la bagarre, je veux juste faire mon travail et toucher ma paie. Si tu nous descend, tout le Havre Cristallin sera ton ennemi. On te laisse passer, tu nous laisse partir, d'accord ?",
+            "intimidated-exit": "T'en a, de la chance. Je suis de bonne humeur. A plus tard, et garde la pêche !",
+            "intimidated-fight": "J'en ai rien à foutre, du Havre Cristallin. Je suis venu pour botter des culs. Vos gueules feront l'affaire.",
+            "look-for-trouble": "Mouais. Avec vos dégaines de crève-la-faim, vous avez même pas l'air de pouvoir chasser mon ennui.",
+            "mark-map": "Le Havre Cristallin. La plus grande ville des terres désolées de l'ancine Empire Cristallin, mon pôte. Un lieu qui gagne a être connu. Montre moi ta carte, je vais te marquer la position de la ville.",
+            "provoked": "Très mauvais choix de mots. Le Havre Cristallin peut se passer des vauriens dans ton genre. Tire-toi avant qu'on ne tire sur toi.",
+            "provoked-exit": "Ok, je me tire."
+        }
+    }
+}

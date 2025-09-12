@@ -1,0 +1,26 @@
+{
+    "dialogs": {
+        "steel-rangers/scout": {
+            "about": "We're the Steel Rangers. Chapter of the Crystal Empire. What's left of it anyway. We're still doing our duty, regardless.",
+            "armor": "You don't.",
+            "armor#2": "We get used to it.",
+            "ask-about": "Who are you guys ?",
+            "ask-armor": "How do I get my hooves in one of those shiny armor ?",
+            "ask-more-armor": "How do you manage not to suffocate inside all that metal ?",
+            "bubbles": {
+                "banter": "Looking for trouble, pipsqueak ?",
+                "greetBrother": "Greetings, brother.",
+                "greetSister": "Greetings, sister.",
+                "moveAlong": "Move along, civilian.",
+                "rangerLament#1": "When will the elders give us something interesting to shoot at...",
+                "talkToSarge": "Don't talk to me. If you want social interaction, go bother the sergeant."
+            },
+            "entry-exit": "Just going through.",
+            "exit": "I see. Bye, then.",
+            "exit-alt": "I see. Bye, then.",
+            "inspect": {
+                "sergeant": "You see a sergeant of the Steel Ranger."
+            }
+        }
+    }
+}

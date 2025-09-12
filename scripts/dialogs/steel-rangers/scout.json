@@ -1,0 +1,55 @@
+{
+    "answers": {
+        "ask-about": {
+            "state": "about",
+            "text": "ask-about"
+        },
+        "ask-armor": {
+            "state": "armor",
+            "text": "ask-armor"
+        },
+        "ask-more-armor": {
+            "state": "armor#2",
+            "text": "ask-more-armor"
+        },
+        "entry-exit": {
+            "text": "entry-exit"
+        },
+        "exit-alt": {
+            "text": "exit-alt"
+        }
+    },
+    "entryPoint": "entry",
+    "states": {
+        "about": {
+            "answers": [
+                "ask-armor",
+                "exit-alt"
+            ],
+            "text": "about"
+        },
+        "armor": {
+            "answers": [
+                "ask-more-armor",
+                "ask-about",
+                "exit-alt"
+            ],
+            "text": "armor"
+        },
+        "armor#2": {
+            "answers": [
+                "ask-about",
+                "exit-alt"
+            ],
+            "text": "armor#2"
+        },
+        "entry": {
+            "answers": [
+                "ask-about",
+                "ask-armor",
+                "entry-exit"
+            ],
+            "text": "bubbles.moveAlong"
+        }
+    }
+}

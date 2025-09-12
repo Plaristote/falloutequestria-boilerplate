@@ -1,0 +1,26 @@
+{
+    "dialogs": {
+        "steel-rangers/scout": {
+            "about": "Nous sommes les Steel Rangers. Chapitre de l'Empire Cristallin. Enfin, ce qu'il en reste. Nous continuons néanmoins d'accomplir notre devoir.",
+            "armor": "Tu peux pas.",
+            "armor#2": "On s'y habitue.",
+            "ask-about": "Qui êtes-vous ?",
+            "ask-armor": "Comment je pourrais mettre les pates sur une de ces sublimes armures ?",
+            "ask-more-armor": "Et vous arrivez à vous respirer dans tout ce métal ?",
+            "bubbles": {
+                "banter": "Attention où tu pose les sabots, bonhomme.",
+                "greetBrother": "Salut, frère.",
+                "greetSister": "Salut, soeur.",
+                "moveAlong": "Circule, citoyen.",
+                "rangerLament#1": "Quand est-ce que les anciens vont nous donner une mission importante...",
+                "talkToSarge": "Me parle pas. Si tu veux de l'interaction sociale, va plutôt emmerder le sergent."
+            },
+            "entry-exit": "Je ne fais que passer.",
+            "exit": "Je vois. Je vais y aller.",
+            "exit-alt": "Je vois. Bon ben, j'y vais, hein.",
+            "inspect": {
+                "sergeant": "Tu vois un sergent des Steel Rangers."
+            }
+        }
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "dialogs": {
+        "cristal-den/scout": {
+            "about": "Just patrolling around Crystal Den, keeping it safe from outsiders looking for trouble.",
+            "ask-about": "What's going on here ?",
+            "ask-about-town": "Crystal Den ? What's that ?",
+            "exit-about": "Oh, I see. Well... keep up the good work, then.",
+            "exit-entry": "Hey.",
+            "exit-mark": "Thanks.",
+            "greetings": "Hey.",
+            "intimidated": "Please... I don't want to fight, I just want to do my job and get my paycheck. If you kill us here, the whole Crystal Den will come after you. Let's just each walk our way, alright ?",
+            "intimidated-exit": "It's your lucky day. I'm in a good mood. See you around.",
+            "intimidated-fight": "I don't give two shit about Crystal Den. I hope you made peace with your goddesses. Your time is up, scum.",
+            "look-for-trouble": "Hard to believe such as scrawny bunch of clowns could manage any trouble at all.",
+            "mark-map": "The Cyrstal Den. Biggest town of the Crystal wasteland, buddy. You should head there. Show me your map, I'll mark the town's position for you.",
+            "provoked": "Poor decision making. Crytal Den doesn't need your type. Go away, or else.",
+            "provoked-exit": "Alright, I'm going away."
+        }
+    }
+}

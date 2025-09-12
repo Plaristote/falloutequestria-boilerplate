@@ -1,4 +1,7 @@
 import {getValueFromRange} from "../behaviour/random.mjs";
+import goldenHerdScoutParty from "./goldenHerdScouts.mjs";
+import steelRangerScoutParty from "./steelRangerScouts.mjs";
+import crystalDenScoutParty from "./crystalDenScouts.mjs";
 
 function availableEncounters() {
   const zones = game.worldmap.getCurrentZones();
@@ -21,8 +24,18 @@ function availableEncounters() {
     array.push(function(difficultyRoll) { return { "name": "Feral Ghouls", "avoidRoll": (70 + difficultyRoll / 4), "members": [{"sheet": "capital/feral-ghoul-1", "script": "feral-ghoul.mjs", "amount": 2 + Math.ceil(difficultyRoll / 18)}, {"sheet": "capital/feral-ghoul-1", "script": "feral-ghoul.mjs", "amount": 2 + Math.ceil(difficultyRoll / 18)}] }; });
   }
   if (zones.indexOf("golden-horde-siege") >= 0) {
-    // Golden Herd warriors
+    for (let i = 0 ; i < 6 ; ++i)
+      array.push(goldenHerdScoutParty);
   }
+  if (zones.indexOf("steel-rangers-surroundings") >= 0) {
+    for (let i = 0 ; i < 3 ; ++i)
+      array.push(steelRangerScoutParty);
+  }
+  if (zones.indexOf("crystal-den-surroundings") >= 0) {
+    for (let i = 0 ; i < 2 ; ++i)
+       array.push(crystalDenScoutParty);
+  }
+  console.log("RANDOM ENCOUNTERS CURRENT ZONES", zones);
   return array;
 }
 
@@ -59,7 +72,7 @@ export function generateHostileEncounter() {
     if (getValueFromRange(0, 10) > 8)
       appendHostileParty(parties);
     for (let i = 0 ; i < parties.length ; ++i)
-      parties[i].zone = `encounter-zone-${i}`;
+      parties[i].zone = `encounter-zone-${i + 1}`;
   } catch (err) {
     console.log("generateHostileEncounter crashed:", err);
   }
