@@ -47,24 +47,53 @@
         }
     },
     "factions": {
-        "critters": {
-            "description": "Créatures diverses.",
-            "name": "Faune sauvage"
+        "ash-aven": {
+            "description": "Au beau milieu des ruines polluées de l'autrefois resplandissante capitale de l'Empire Cristallin, un improbable village a pris forme. Havre de paix pour ceux que personne n'accepteraient parmi eux : les goules. Ses habitants décidèrent de le nomme Cendresauves.",
+            "name": "Cendresauves"
+        },
+        "bibins-band": {
+            "description": "Un gang installé dans le bidonville du Havre Cristallin, dirigé par le mystérieux poney providentiel Bibin.",
+            "title": "Bande à Bibin"
+        },
+        "changeling-hive": {
+            "description": "factions.changeling-hive.description",
+            "title": "Ruche Changeline"
+        },
+        "cristal-den": {
+            "description": "Ville la plus prospère des terres désolées de cristal, le Havre Cristallin fut construit par la famille Potiok, peu après la destruction de l'Empire Cristallin. Le Havre Cristallin est le foyer de nombreux fermiers, marchands, caravaniers, esclavagistes, et c'est aussi un lieu de répis pour bien des âmes perdues, qui vivent au jour le jour et tâchent de s'en sortir tant bien que mal.",
+            "title": "Havre Cristallin"
         },
         "diamond-dogs": {
-            "description": "factions.diamond-dogs.description",
-            "name": "Diamond dogs"
+            "description": "Les chiens à diamant vivent sous le sol de Junkville et de sa décharge.",
+            "name": "Chiens à diamant"
         },
-        "feral-ghouls": {
-            "description": "factions.feral-ghouls.description",
-            "name": "factions.feral-ghouls.name"
+        "golden-herd": {
+            "description": "Le Troupeau d'Or est une alliance de tribu nomades se regroupant pour constituer une force écrasante à travers le nombre. Guerriers, fiers de leur puissance, ils survivent en exploitant le faible, demandant le tribut aux villes qui se dressent sur leur route, pillant et ravageant celles qui refusent de se soumettre à leur pouvoir.",
+            "title": "Troupeau d'Or"
         },
-        "mordino": {
-            "description": "factions.mordino.description",
-            "name": "Famille Mordino"
+        "hillburrow": {
+            "description": "Un petit et paisible village bâtit au sommet d'une colline, dans la plus calme contrée des terres désolées de cristal. Tandis que les villageois jouissent d'une vie d'éleveurs calme, la vieille mine de charbon attire les convoitises de poneys plus ambitieux.",
+            "title": "Percécol"
         },
-        "sample-city": {
-            "name": "Expoville"
+        "junkville": {
+            "description": "Une petite communité soudée, vivant des abondantes ressources d'une ancienne déchèterie.",
+            "title": "Déchèville"
+        },
+        "potioks": {
+            "description": "Les Potioks sont les maîtres du Havre Cristallin, et leur influence s'étend loin dans les terres désolées de cistal. Ils sont une famille soudée, du moins, en apparence.",
+            "title": "Famille Potiok"
+        },
+        "stable-103": {
+            "description": "Les habitants de l'Étable 103, ta maison, ton foyer, ta famille.",
+            "title": "Étable 103"
+        },
+        "steel-rangers": {
+            "description": "Les Steel Rangers sont une faction d'élite militante, technologiquement avancée, constituée de poneys et de licornes parés d'armures métalliques. Derniers membres restants de Ministère de la Technologie de Guerre, ils naquirent lorsque ce dernier, ainsi que le Ministère des Sciences Arcaniques, coopérèrent pour créer la super armure emblématique des Steel Rangers.",
+            "title": "Steel Rangers"
+        },
+        "thornhoof": {
+            "description": "Sabairain est une petite citée enclavée, récemment victime des raides du Troupeau d'Or. La ville est constituée en république, instituée afin de récompenser les plus méritants, et déléguer le pouvoir à une élite de scientifiques, ingénieurs et guerriers.",
+            "title": "Sabairain"
         }
     },
     "item-descriptions": {

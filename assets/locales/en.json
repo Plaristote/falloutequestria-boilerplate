@@ -63,15 +63,11 @@
     },
     "factions": {
         "ash-aven": {
-            "description": "Amidst the polluted ruins of the once beautiful capital of the Crystal Empire, an unlikely village took shape. A haven for those that no one else would accept among them : the ghouls. Its inhabitants decided to name it Ash-Aven.",
+            "description": "Amidst the polluted ruins of the once beautiful capital of the Crystal Empire, an unlikely village took shape. A haven for those that no one else would accept among them: the ghouls. Its inhabitants decided to name it Ash-Aven.",
             "name": "Ash-Aven"
         },
-        "bandits": {
-            "description": "factions.bandits.description",
-            "name": "factions.bandits.name"
-        },
         "bibins-band": {
-            "description": "A gang located in the Cristal Den's slums, led by the infamous Bibin.",
+            "description": "A gang located in the Cristal Den's slums, led by the mysterious and providencial Bibin.",
             "name": "Bibin's Band"
         },
         "changeling-hive": {
@@ -79,61 +75,39 @@
             "name": "Changeling Hive"
         },
         "cristal-den": {
-            "description": "The most prosperous town of the crystal wastes, Crystal Den was built by the Potiok family, soon after the destruction of the Crystal Empire. The Crystal Den is home to many farmers, merchants, caravaneers, slavers, and it is also the resting place of many lost souls, who live day by day and try to get by.",
+            "description": "The most prosperous town of the crystal wastes, Crystal Den was built by the Potiok family, soon after the destruction of the Crystal Empire. The Crystal Den is home to many farmers, merchants, caravaneers, slavers, and it is also the place of respite for many lost souls, who live day by day and try to get by.",
             "name": "Crystal Den"
-        },
-        "cristal-den-brothel": {
-            "description": "factions.cristal-den-brothel.description",
-            "name": "factions.cristal-den-brothel.name"
-        },
-        "cristal-den-slaves": {
-            "description": "factions.cristal-den-slaves.description",
-            "name": "factions.cristal-den-slaves.name"
-        },
-        "critters": {
-            "description": "factions.critters.description",
-            "name": "factions.critters.name"
         },
         "diamond-dogs": {
             "description": "The diamond dogs living under the ground of Junkville and its scrapyard.",
             "name": "Diamond dogs"
         },
-        "hillburrow": {
-            "description": "Hillburrow is a small mining community, who built their home atop a high hill, near to the coal mine that guarantee their livelihood. The original inhabitants of the town were mostly chased away by the Potiok, who took control of the mine, and repopulated the town with the rejects or otherwise undesirable people from the Crystal Den.",
-            "name": "Hillburrow"
+        "golden-herd": {
+            "description": "The Golden Herd is a bunch of nomadic tribe herding together to find strength in numbers. Warriors, proud of their strength, they sustain themselves by exploiting the weak, demanding tribute from the towns they pass by, ransacking and pillaging whoever refuses to submit to their might.",
+            "name": "Golden Herd"
         },
-        "hillburrow-slaves": {
-            "description": "factions.hillburrow-slaves.description",
-            "name": "factions.hillburrow-slaves.name"
+        "hillburrow": {
+            "description": "A small and peaceful village built on top of a hill, in the calmest parts of the Crystal Wasteland. While the townfolk enjoy a mostly uneventful life of pasture, the old coal mine may attract the appetites of more ambitious ponies.",
+            "name": "Hillburrow"
         },
         "junkville": {
             "description": "A small community living off the plentiful resources of a junkyard.",
             "name": "Junkville"
         },
-        "mordino": {
-            "name": "Mordino Family "
-        },
         "potioks": {
             "description": "The Potioks are the ruler of Cristal Den, and their influence extends further into the cristal wastes. They're a tight family, or so it seems to the outsiders.",
             "name": "Potiok Family"
         },
-        "sample-city": {
-            "name": "Sample Town"
-        },
         "stable-103": {
             "description": "The inhabitants of Stable 103, your home, your haven, your family.",
             "name": "Stable 103"
-        },
-        "stabletech-facility": {
-            "description": "factions.stabletech-facility.description",
-            "name": "factions.stabletech-facility.name"
         },
         "steel-rangers": {
             "description": "The Steel Rangers are an elite faction of militant, technologically-advanced earth and unicorn ponies clad in steel armor. The last remaining members of the Ministry of Wartime Technology, they were born when it and the Ministry of Arcane Sciences cooperated to create the steel power armor that personifies the Steel Rangers.",
             "name": "Steel Rangers"
         },
         "thornhoof": {
-            "description": "Thornhoof is a small walled city.",
+            "description": "Thornhoof is a small walled city, which recently fell prey to the raids of the Golden Herd. The city is ruled by a republic, designed to reward the most deserving, and to delegate the power to an elite of scientists, engineers and warriors.",
             "name": "Thornhoof"
         }
     },
