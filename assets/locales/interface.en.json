@@ -10,6 +10,8 @@
     "Use": "Use",
     "Weight": "Weight",
     "are-you-sure": "Are you sure ?",
+    "quicksave": "Quicksave",
+    "autosave": "Autosave",
     "save-default-name": "Saved game",
     "controls": {
         "centerCamera": "Center the camera on the player",
@@ -28,7 +30,9 @@
         "passTurn": "Pass your turn in combat",
         "pipboy": "Open the PipBuck",
         "useMode1": "Activate item in slot 1",
-        "useMode2": "Activate item in slot 2"
+        "useMode2": "Activate item in slot 2",
+        "nextTarget": "Move cursor to the next target",
+        "previousTarget": "Move cursor to the previous target"
     },
     "controls-dialog": "Contrôles",
     "gamepad": "Gamepad",
@@ -87,6 +91,8 @@
         "player-ko": "You passed out.",
         "poison-damage": "You take {{damage}} points of damage from the poisoning.",
         "quest-complete": "You completed {{title}} and earned {{xp}} experience points.",
+        "quicksave": "Quick save performed.",
+        "quicksave-disabled": "Cannot quick save right now.",
         "radiation-begin": "You've been irradiated by magical waste.",
         "radiation-over": "You are no longer irradiated.",
         "read-book": "You read a book.",
