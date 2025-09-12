@@ -40,6 +40,8 @@
     "controls-dialog": "Contrôles",
     "keyboard": "Clavier",
     "gamepad": "Manette",
+    "quicksave": "Sauvegarde rapide",
+    "autosave": "Sauverage automatique",
     "save-default-name": "Sauvegarde",
     "controls": {
       "hint": "Pressez F1 pour voir les contrôles.",
@@ -60,7 +62,9 @@
       "inventory": "Ouvre l'inventaire",
       "openSkilldex": "Ouvre le paneau de compétences",
       "pipboy": "Ouvre le PipBuck",
-      "debugConsole": "Ouvre la console de débogage"
+      "debugConsole": "Ouvre la console de débogage",
+      "nextTarget": "Déplacer le curseur sur la pochaine cible",
+      "previousTarget": "Déplacer le curseur sur la cible précédente"
     },
     "hud": {
         "AC": "CA",
@@ -123,6 +127,8 @@
         "out-of-range": "Hors de portee.",
         "poison-damage": "Tu subis {{damage}} points de dommages dus aux effets du poison.",
         "quest-complete": "Tu as terminé la quête {{title}} et gagné {{xp}} points d'experience.",
+        "quicksave": "Sauvegarde rapide.",
+        "quicksave-disabled": "Sauvegarde rapide indisponible pour le moment.",
         "radiation-begin": "Tu subit les effets des déchêts magiques.",
         "radiation-over": "Tu n'es plus irradié.",
         "read-book": "Tu lis un livre.",
