@@ -35,6 +35,10 @@ class Level extends LevelBase {
     this.model = model;
     console.log("BUILD rathian-meeting");
   }
+
+  get rathian() {
+    return game.getCharacter("rathian");
+  }
 	
   initialize() {
     level.tasks.addTask("delayedInitialize", 1, 1);
@@ -45,12 +49,12 @@ class Level extends LevelBase {
       name: "bandits",
       members: [banditTemplate("B"), banditTemplate("A"), banditTemplate("A"), banditTemplate("C")]
     });
-    this.rathian = level.createNpcGroup({
+    this.rathianParty = level.createNpcGroup({
       name: "Rathian",
       members: [rathianTemplate]
     });
-    this.rathian.list[0].isUnique = true;
-    this.scene = new MeetingScene(this, this.bandits, this.rathian);
+    this.rathianParty.list[0].isUnique = true;
+    this.scene = new MeetingScene(this, this.bandits, this.rathianParty);
     level.tasks.addTask("startAmbush", 1, 1);
   }
   startAmbush() {
@@ -71,7 +75,7 @@ class Level extends LevelBase {
       level.tasks.addTask("startDialog", 1500, 1);
   }
   startDialog() {
-    const npc = this.rathian.list[0];
+    const npc = this.rathian;
     if (npc.isAlive() && game.player.isAlive()) {
       level.cameraFocusRequired(npc);
       level.initializeDialog(npc, "rathian-introduction");
@@ -79,8 +83,9 @@ class Level extends LevelBase {
     }
   }
   rathianJoinsPlayer() {
-    const npc = this.rathian.list[0];
-    this.rathian.removeCharacter(npc);
+    const npc = this.rathian;
+    if (this.rathianParty)
+      this.rathianParty.removeCharacter(npc);
     game.playerParty.addCharacter(npc);
   }
   playerJoinsRathian() {
