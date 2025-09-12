@@ -124,6 +124,7 @@ class Dialog {
 
   endChemistryErrand() {
     game.player.inventory.removeItemOfType("armor-bid-shipment");
+    game.dataEngine.addReputation("cristal-den", 7);
   }
 }
 
