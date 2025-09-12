@@ -16,14 +16,13 @@ export class MetabolismComponent extends MovementComponent {
 
   updateMetabolism(count) {
     if (this.model.isAlive()) {
-      console.log("Update metabolism", count);
       const periodicity  = this.isResting ? 2 : 24;
       const ticks        = Math.floor((count + this.metabolismState) / periodicity);
       const remains      = (count + this.metabolismState) % periodicity;
       const maxHitPoints = this.model.statistics.maxHitPoints;
       const healingRate  = this.model.statistics.healingRate;
       const currentHp    = this.model.statistics.hitPoints;
-      
+
       this.metabolismState = remains;
       this.model.statistics.hitPoints = Math.min(currentHp + (healingRate * ticks), maxHitPoints);
       return true;
