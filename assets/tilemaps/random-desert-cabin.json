@@ -378,6 +378,12 @@
                  "id":13,
                  "name":"encounter-zone-2",
                  "opacity":1,
+                 "properties":[
+                        {
+                         "name":"type",
+                         "type":"string",
+                         "value":"entry"
+                        }],
                  "type":"tilelayer",
                  "visible":true,
                  "width":40,
@@ -458,6 +464,6 @@
         }],
  "tilewidth":72,
  "type":"map",
- "version":"1.11",
+ "version":"1.10",
  "width":40
 }
