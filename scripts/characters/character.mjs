@@ -61,8 +61,8 @@ export class CharacterBehaviour extends SceneActorComponent {
     return ["use", "look"];
   }
 
-  onLook() {
-    var message = i18n.t("inspection.character", {target: this.model.displayName});
+  characterStateInspectionText() {
+    let message = "";
     const hpPercentage = this.model.statistics.hpPercentage;
     const gender = this.model.statistics.gender;
     const states = {
@@ -73,7 +73,6 @@ export class CharacterBehaviour extends SceneActorComponent {
       "min":    function (value) { return value >= 0; }
     }
 
-    message += ' ';
     if (this.model.isAlive()) {
       for (var key in states) {
         if (states[key](hpPercentage)) {
@@ -84,6 +83,13 @@ export class CharacterBehaviour extends SceneActorComponent {
     }
     else
       message += i18n.t(`inspection.character-dead-${gender}`);
+    return message;
+  }
+
+  onLook() {
+    let message = i18n.t("inspection.character", {target: this.model.displayName});
+
+    message += ' ' + this.characterStateInspectionText();
     game.appendToConsole(message);
     return true;
   }
