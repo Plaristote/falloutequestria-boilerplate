@@ -1,7 +1,7 @@
 {
     "dialogs": {
         "stable103-doctor": {
-            "aboutWellbeing": "Oh, ça va <i>super</i> ! Vraiment génial ! J'ai passé toute ma vie a étuder la biologie et la chimie, et la superviseuse décide de m'avoir assise dans ce cabinet tout la journée pour m'occuper des rhumes des foins !<br>Désolé...… je voulais pas décharger ça sur toi. Je suis fatiguée. J'ai besoin d'être seule, si ça ne te dérange pas.",
+            "aboutWellbeing": "Oh, ça va <i>super</i> ! Vraiment génial ! J'ai passé toute ma vie a étuder la biologie et la chimie, et la superviseuse décide de m'avoir assise dans ce cabinet tout la journée pour m'occuper des rhumes des foins !<br>Désolé…… je voulais pas décharger ça sur toi. Je suis fatiguée. J'ai besoin d'être seule, si ça ne te dérange pas.",
             "armorBidAilmentPlayerResponse1": "Je crois bien qu'il a mentionné mon aura, oui.",
             "armorBidAilmentsCure": "Disrup… quoi ?<br>\nQuel connard t'as « diagnostiqué » ce machin ?Et ça se soigne comment, avec des chants et de la méditation ? Je suppose qu'on t'aura aussi parlé de ton problème d'aura ?",
             "armorBidAilmentsCure2": "Oh… je plaisantais, mais il faut croire que tu es plus bête que tu n'en as l'air. Écoute-moi, j'ai investis toute ma vie à pratiquer la médecine et à l'étudier d'après les ouvrages les plus avancés qui aient jamais existés sur cette planète. La Réfraction Énergétique, ça n'existe pas.",
@@ -20,7 +20,7 @@
             "main-quest-progress": "Oui, j'ai trouvé un moyen de  construire un nouvel Appareil Célèste.",
             "mainQuest": "{{player}} ! J'ai entendu que tu avais fais des progrès à propos de l'Appareil Célèste ?",
             "mainQuestThanks": "Salut, {{joueur}}. Je t'ai pas encore remercié pour avoir réglé nos problèmes d'Appareil Célèste. Même si j'aurais pas été inquiété à l'idée de s'ouvrir au monde extérieur, c'est toujours rassurant d'avoir un foyer qui puisse nous soutenir. Nous te devons beaucoup. Merci.",
-            "nothingToHeal": "Tu as l'air d'être en pleine forme. S'il te plait, ne vient pas ici si tu n'as pas besoin d'assistance médciale. Mon temps est précieux.<br>Putain… qu'est-ce que je raconte... il se passe jamais rien d'intéressant par ici… écoute, fou moi la paix.",
+            "nothingToHeal": "Tu as l'air d'être en pleine forme. S'il te plait, ne vient pas ici si tu n'as pas besoin d'assistance médciale. Mon temps est précieux.<br>Putain… qu'est-ce que je raconte… il se passe jamais rien d'intéressant par ici… écoute, fou moi la paix.",
             "outsideWorldDismissive": "Ouais… j'ai appris sur le tas.",
             "outsideWorldReassured": "Ha ! J'attends ça de pieds ferme !\n<br>\nMais… peut-être. Tu lui aurais montré qu'un poney peut partir et revenir sauf. Que le monde extérieur peut apporter des réponses à nos problèmes. Peut-être qu'elle se fera à l'idée. Bien sûr, tout ça dépend de ce que tu revienne toujours en un morceau. J'essayerais de te remettre en état… mais essaye de pas te faire tuer, d'accord ?",
             "outsideWorldReassuredAnswer": "Je ferais de mon mieux.",

@@ -3,9 +3,9 @@
         "cristal-den/slavers/lieutnant": {
             "about-slavers-errand": "If it's Potiok related, then the boss will want to take care of it himself. His office is just right there. The guard will let you through.",
             "about/clients": "Are you kidding me ? Slave labor is booming right now. The Potioks buy most of our stock: they need the workforce to staff their fields and their mines. Independant merchants buy them to help them carry their load accross the wastes. Anytime you need something hard or dangerous needs to be done, we have a whole bunch of slaves who will do it for you.",
-            "about/entry": "Huh... I figured the name was self-explanatory... but if you really need to know: we capture and sell slaves.",
-            "about/evil": "Oh, so you're one of these moral high-ground people... look, this isn't the old Equestria anymore. Nobody cares about your old ideas of what's right or wrong. Nopony's willing to sacrifice themselves to rebuild civilization... so yeah, we enslave people, and we force them to do the work, whether they like it or not. You call it evil. We call it progress.",
-            "about/getting-slaves": "We patrol the wastes around the Den, and we pick up vagrants and such... the generic waste scum. We discipline them, and we trade them to people who need them.",
+            "about/entry": "Huh… I figured the name was self-explanatory… but if you really need to know: we capture and sell slaves.",
+            "about/evil": "Oh, so you're one of these moral high-ground people… look, this isn't the old Equestria anymore. Nobody cares about your old ideas of what's right or wrong. Nopony's willing to sacrifice themselves to rebuild civilization… so yeah, we enslave people, and we force them to do the work, whether they like it or not. You call it evil. We call it progress.",
+            "about/getting-slaves": "We patrol the wastes around the Den, and we pick up vagrants and such… the generic waste scum. We discipline them, and we trade them to people who need them.",
             "ask-about-clients": "Who the hell would buy people ?",
             "ask-about-slave-sources": "Where do you get the slaves ?",
             "ask-about-slavers": "The slavers' guild ? What do you guys do ?",
@@ -13,7 +13,7 @@
             "back-to-entry": "Let's talk about something else.",
             "entry": "Welcome to the slavers' guild ! Are you here to purhcase some of our products ?",
             "exit-from-entry": "I don't need anything. Goodbye.",
-            "tell-slavery-is-wrong": "You capture and sell people ? But... that's evil !"
+            "tell-slavery-is-wrong": "You capture and sell people ? But… that's evil !"
         }
     }
 }

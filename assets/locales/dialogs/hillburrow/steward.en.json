@@ -2,11 +2,11 @@
     "dialogs": {
         "hillburrow/steward": {
             "about-steward": "Who are you ?",
-            "about-steward-answer": "I'm {{npc}}, and you're in the town's warehouse. I'm in charge of managing our stocks, and acquiring goods or currencies from merchants... or travelers like you. You interested in some trading ?",
+            "about-steward-answer": "I'm {{npc}}, and you're in the town's warehouse. I'm in charge of managing our stocks, and acquiring goods or currencies from merchants… or travelers like you. You interested in some trading ?",
             "drunken-quest": "I have a doctor's bag right here for you. That'll be {{doctorBagCost}} bottlecaps.",
             "drunken-quest-about-potioks": "The Potioks and their goons. They're a gang from the Den, and they rule over this town. They're not exactly the benevolent ruler kind. See, most of us aren't from here. The Potioks were interested in the coal mine, located in the nearby hills. The locals weren't compliant enough for them. So they got rid of the previous inhabitants, took over the town, and run it with an iron hoof. They don't care about the people here: most of us are just poor lads and vagrants from the Den, brought here to run the basic services required for the coal mine to run smoothly. We're non-essentials and easy to replace. It keeps us in check.",
             "drunken-quest-ask-about-potioks": "Who the buck are \"they\" and why would they murder you over a doctor's bag ?",
-            "drunken-quest-cantpay": "I don't have that kind of money... guess the doctor's patient will die then !",
+            "drunken-quest-cantpay": "I don't have that kind of money… guess the doctor's patient will die then !",
             "drunken-quest-lower-price": "I understand your predicament. But perhaps you may be able to lower your margins in order to save a life ?",
             "drunken-quest-on-cantpay": "Well, this isn't a charity, you know. I'm sorry, but you'll have to make do without a doctor's bag.",
             "drunken-quest-on-negociate": "Look, I would love to make a generous gesture, especially if it can save somepony's life. But my ass is on the line. I don't own anything in this place, I'm just managing it for the higher ups. Everything that goes in or out gets written down. If anything goes missing, I might as well be already dead. So, will you pay the price ?",

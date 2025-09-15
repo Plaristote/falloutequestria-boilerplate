@@ -2,7 +2,7 @@
     "dialogs": {
         "rathian-junkville-arrival": {
             "arrival": "Well, here we are, Junkville ! You're in safe hooves now, just head to the cantina up ahead and find a place to sleep.<br>You're welcome to visit me in my workshop later. It's just a little bit south of the cantina. Come by anytime, I'd very much like to have a talk with you.",
-            "arrival-at-stable": "A cave in the mountains... fitting hiding place for a stable, I suppose. Well, I've escorted you someplace safe. And I can't believe your comrades would appreciate you leading a stranger to their safe place. I'm taking my leave. See you later in Junkville, I hope.",
+            "arrival-at-stable": "A cave in the mountains… fitting hiding place for a stable, I suppose. Well, I've escorted you someplace safe. And I can't believe your comrades would appreciate you leading a stranger to their safe place. I'm taking my leave. See you later in Junkville, I hope.",
             "arrival-elsewhere": "Well. I've escorted you someplace safe. It's time for me to take my leave. If you want to see me again, I spend most of my time in Junkville. I'll see you there, I hope !"
         }
     }

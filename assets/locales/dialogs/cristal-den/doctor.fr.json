@@ -38,7 +38,7 @@
             "phony-diagnosis/diagnosis-1": "Hmm. C'est bien ce que je pensais. Voyez comme votre oeil a eu un spasme ? C'est un signe typique d'un épuisement métabolique systémique. Rarement détecté, souvent fatal, à moins, bien sûr, d'être traité à temps.",
             "phony-diagnosis/diagnosis-2": "D'ores et déjà, vous avez peut-être constaté une soif plus importante, des envies curieuses, ou d'inexplicables explosions d'énergie. Ce ne sont pas des signes de bonne santé: c'est votre corps qui sonne l'alarme avant le désastre. Je classifierais cela comme une Disruption Énergétique de Stage 2.",
             "phony-diagnosis/diagnosis-3": "C'est le mécanisme de défense du métabolisme : il s'accroche à ce qui rentre tout en le dégradant en interne. Mais pas de panique : nous l'avons détecté à temps. Revenez demain, je vous aurai préparé un traitement sur mesure composé de toniques doux et de régulateurs hormonaux.",
-            "phony-diagnosis/diagnosis-caved": "Fantastique. Agir promptement est capital. Reposez-vous, hydratez-vous... et tachez de ne pas trop transpirer : ça accélère le processus.<br><br>\nÀ demain !",
+            "phony-diagnosis/diagnosis-caved": "Fantastique. Agir promptement est capital. Reposez-vous, hydratez-vous… et tachez de ne pas trop transpirer : ça accélère le processus.<br><br>\nÀ demain !",
             "phony-diagnosis/entry": "Bien, vous dites ? Le symptome typique d'une affliction plus profonde et non diagnostiquée. Vous êtes en bonne compagnie: le cimetière déborde de gens qui se sentaient bien.",
             "phony-diagnosis/pick-up": "Ah, juste à temps ! Cette légère fatigue qu'on décèle dans vos yeux en dit long. Vous êtes en trian de subir les effets typiques de votre affliction. Heureusement, j'ai préparé un soin parfaitement approprié. Cette solution m'a pris des heures de travail, mais pour seulement {{phonyDiagnosisTreatmentCost}}, vous retrouverez toute vos couleurs. Peut-être même plus !",
             "phony-diagnosis/picked-up": "Sage décision. La santé, une fois achetée, est deux fois préservée. Prenez mon traitement avec de l'eau, de l'optimisme, et surtout, sans introspection.",
@@ -48,7 +48,7 @@
             "phonyDiagnosisTreatmentCantPay": "Je ne peux pas me le permettre pour le moment.",
             "phonyDiagnosisTreatmentPay": "Voilà vos {{phonyDiagnosisTreatmentCost}} capsules.",
             "reject-phony-diagnosis": "Je crois que ça va aller. Merci quand même.",
-            "start-feel-fine": "Euh... je me sens bien, en fait."
+            "start-feel-fine": "Euh… je me sens bien, en fait."
         }
     }
 }

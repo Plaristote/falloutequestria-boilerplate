@@ -2,14 +2,14 @@
   "dialogs": {
     "rathian-introduction": {
       "accept-help": "I could use some help, sure. Do you happen to know where I could find a Celestial Caster Device ?",
-      "combat-eval-bad": "Don't take it the wrong way, but you look like you won't survive long on your own...",
-      "combat-eval-good": "You did pretty good against these lowlifes, but the wasteland is usually more dangerous than that...",
-      "accompany": "Well, it's a pleasure to make your aquaintance. You know, it's dangerous out there. {{combatEval}}... you should head for Junkville. It's a nice and friendly little town, not too far south of here. I'm heading there right now, I can take you with me, if you want.",
+      "combat-eval-bad": "Don't take it the wrong way, but you look like you won't survive long on your own…",
+      "combat-eval-good": "You did pretty good against these lowlifes, but the wasteland is usually more dangerous than that…",
+      "accompany": "Well, it's a pleasure to make your aquaintance. You know, it's dangerous out there. {{combatEval}}… you should head for Junkville. It's a nice and friendly little town, not too far south of here. I'm heading there right now, I can take you with me, if you want.",
       "accompany-again": "Oh, did you change your mind ? Are you going to come to Junkville with me ?",
       "backpedal-help": "Ahah ! A stable, up and running, around these parts ? I was just kidding of course ! There's no such thing, and I sure as hell ain't taking you there ! Well, that's my cue to leave, see you another time !",
       "come-later": "Maybe another time. I'm pretty busy right now.",
       "come-with": "Sure, I'll tag along. Lead the way.",
-      "device-answer": "A Celestial Device, you say ? I can't say that I know for sure... but I may have a lead for you. There's an old Stable Tech lab, not too far from here, in a place called Junkville. I actually intend to get in myself. The security systems still work even after all these years, and I could use some help getting through.<br>What do you say, wanna come with me to Junkville ?",
+      "device-answer": "A Celestial Device, you say ? I can't say that I know for sure… but I may have a lead for you. There's an old Stable Tech lab, not too far from here, in a place called Junkville. I actually intend to get in myself. The security systems still work even after all these years, and I could use some help getting through.<br>What do you say, wanna come with me to Junkville ?",
       "exit-come-later": "Really ? Well, I guess this is goodbye then. If you ever come to Junkville, ask the townfolks about me. I spend a lot of time over there, I'm usually around. See you later, and be careful out there !",
       "exit-come-with": "Alright then ! I'll lead the way ! To Junkville !",
       "exit-join-party": "Alright then ! You lead the way ! I'll keep you company until the next town ! On we go !",
@@ -18,10 +18,10 @@
       "leave-me-alone": "Gosh, leave me alone, stalker ! I'm making my own path !",
       "player-intro-with-details": "I'm {{name}}, and I'm on an important mission to save my stable.",
       "player-introduction": "I'm {{name}}, nice to meet you.",
-      "player-not-trusting": "I'm not sure I can trust you... am I free to go, or are you about to zap me like the others ?",
+      "player-not-trusting": "I'm not sure I can trust you… am I free to go, or are you about to zap me like the others ?",
       "reject-help": "Thanks, but no thanks. The overmare trusted me with this. I can do it on my own.",
-      "stable-answer": "On a mission to save a stable ? So you're a stable dweller. I kinda figured... you look mighty clean and healthy for a regular traveler... so you're telling me there's a stable around that's still up and running ? That's... quite interesting. Do you need help ?",
-      "untrust-answer": "What ? No ! Look, you gotta be careful around these parts. I spotted you and those bandits long before you crossed path... and judging by your looks, I figured you'd be an easy prey for them. I just came to help, I don't expect anything from you. So, what do you say ? Can we proprely introduce ourselves now ?"
+      "stable-answer": "On a mission to save a stable ? So you're a stable dweller. I kinda figured… you look mighty clean and healthy for a regular traveler… so you're telling me there's a stable around that's still up and running ? That's… quite interesting. Do you need help ?",
+      "untrust-answer": "What ? No ! Look, you gotta be careful around these parts. I spotted you and those bandits long before you crossed path… and judging by your looks, I figured you'd be an easy prey for them. I just came to help, I don't expect anything from you. So, what do you say ? Can we proprely introduce ourselves now ?"
     }
   }
 }

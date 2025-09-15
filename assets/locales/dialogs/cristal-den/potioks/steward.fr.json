@@ -15,12 +15,12 @@
             "back-to-main": "Intéressant. Parlons d'autre chose.",
             "exit-entry": "Je passais juste dans le coin.",
             "prompt": "Bienvenue au Ranch des Potioks. Quelle est la nature de votre visite ?",
-            "recruit-give-up": "Je ne correspond sans doute pas à ce que vous cherchez... tant pis ! Une autre fois peut-être.",
+            "recruit-give-up": "Je ne correspond sans doute pas à ce que vous cherchez… tant pis ! Une autre fois peut-être.",
             "recruit-pitch-caps": "Je suis très débrouillard. Pour le bon prix, je résoudrai n'importe quel problème.",
             "recruit-pitch-sneak": "Je ne suis connu de personne ici. Je peux me fondre dans n'importe quel groupe.",
             "recruit-pitch-warrior": "Je suis armé, experimenté, et je pose pas de questions inutiles.",
-            "recruitment/entry": "Hm. Il se trouve que la Matriarche cherche justement à recruter un étranger... mais je dois m'assurer que vous n'êtes pas un vulgaire fouilleur de ruines.",
-            "recruitment/failure": "Hmm... non, je ne pense pas que vous correspondez au profil. Dommage.",
+            "recruitment/entry": "Hm. Il se trouve que la Matriarche cherche justement à recruter un étranger… mais je dois m'assurer que vous n'êtes pas un vulgaire fouilleur de ruines.",
+            "recruitment/failure": "Hmm… non, je ne pense pas que vous correspondez au profil. Dommage.",
             "recruitment/success": "Voilà qui est prometteur. Decendez dans le bunker. Cherchez Daisy. C'est la secrétaire de la Matriarche. Dis-lui que tu postule pour le renseignement.",
             "send-away": "Certainement pas ! Vous n'êtes pas autorisé au-delà de cette pièce. Si vous n'avez rien à me demander, alors foutez-moi le camp."
         }

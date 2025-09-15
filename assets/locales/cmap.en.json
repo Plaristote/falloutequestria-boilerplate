@@ -39,7 +39,7 @@
             "bruiser": "A little slower, but a little bigger. You may not hit as often, but they will feel it when you do! Your total action points are lowered, but your Strength is increased.",
             "buffs": {
                 "drunk": "You have succumbed to Bacchus' call. You don't feel as sharp as usual. Actually, you don't feel much of anything, right now.",
-                "ko": "You lost consciousness, possibly due to a shock or an intoxication. Depending on the cause and on your own constitution, you may wake up in a matter of seconds... or hours. The waiting game begins.",
+                "ko": "You lost consciousness, possibly due to a shock or an intoxication. Depending on the cause and on your own constitution, you may wake up in a matter of seconds… or hours. The waiting game begins.",
                 "poisoned": "You've been poisoned ! You will periodically take damage until the poison is drained from your body (unless you die before that happens). You may want to find an antidote.",
                 "rested": "You've had a nice rest not too long ago, increasing your general health and acuteness."
             },

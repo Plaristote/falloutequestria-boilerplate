@@ -2,7 +2,7 @@
     "dialogs": {
         "rathian-junkville-arrival": {
             "arrival": "Nous y sommes ! Junkville ! Tu sera en sécurité ici, tu as juste à aller à l'auberge, là devant, et tu trouvera un lieu où dormir.<br>\nSi tu veux, tu pourra me retrouver dans mon atelier, plus tard. C'est à côté de l'auberge. Viens me voir quand tu voudra, j'aimerais beaucoup te parler un peu plus.",
-            "arrival-at-stable": "Une caverne perdue dans les montagnes... le lieu parfait pour cacher une Étable, je suppose. Eh bien, je t'ai escorté jusqu'à un lieu sûr. Et je doute que tes camarades apprécient que tu ai amené un étranger chez eux. Je vais y aller. On se retrouvera peut-être à Junkville, je l'espère.",
+            "arrival-at-stable": "Une caverne perdue dans les montagnes… le lieu parfait pour cacher une Étable, je suppose. Eh bien, je t'ai escorté jusqu'à un lieu sûr. Et je doute que tes camarades apprécient que tu ai amené un étranger chez eux. Je vais y aller. On se retrouvera peut-être à Junkville, je l'espère.",
             "arrival-elsewhere": "Bon. Je t'ai escorté jusqu'à un lieu sûr. Il est temps pour moi de m'en aller. Si tu veux me revoir, je suis généralement à Junkville. J'espère qu'on s'y verra bientôt !"
         }
     }

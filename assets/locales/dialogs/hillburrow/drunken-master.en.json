@@ -1,8 +1,8 @@
 {
     "dialogs": {
         "hillburrow/drunken-master": {
-            "about-brawl": "That's a long story... well, actually no, it's pretty short. I got in a brawl with one of those stinky Potiok mercenaries. I was a pretty popular competitive fighter in my youth, you see, so I was pretty sure I could kick his flank. He proved me otherwise. He broke a stool on my face. Next thing I know, I woke up in the clinic with a patched up whole in my belly.",
-            "about-mercenaries": "The Potioks run the coal mine, in the northren parts of town. The have a bunch of slaves mining it... it's more efficient than caring for the well-being of your miners, apparently. The mercenaries keep the slaves in check. And when the sun comes down, they get shit-faced with us at the tavern. There's not much more to say about it.",
+            "about-brawl": "That's a long story… well, actually no, it's pretty short. I got in a brawl with one of those stinky Potiok mercenaries. I was a pretty popular competitive fighter in my youth, you see, so I was pretty sure I could kick his flank. He proved me otherwise. He broke a stool on my face. Next thing I know, I woke up in the clinic with a patched up whole in my belly.",
+            "about-mercenaries": "The Potioks run the coal mine, in the northren parts of town. The have a bunch of slaves mining it… it's more efficient than caring for the well-being of your miners, apparently. The mercenaries keep the slaves in check. And when the sun comes down, they get shit-faced with us at the tavern. There's not much more to say about it.",
             "ask-about-brawl": "Tell me, what did you do to end up with that huge splinter sticking out your belly anyway ?",
             "ask-about-mercenaries": "What's the deal with those mercenaries ?",
             "ask-about-sheriff-murder": "I'm investigating sheriff Scratchy Lead's murder. Would you care answering some of my questions ?",
@@ -10,7 +10,7 @@
             "end-training-no-beer": "Maybe another time ! Thanks for the lesson !",
             "end-training-with-beer": "Sure thing pal, we've earned it !",
             "entry": "Hi there, friend ! How's your day so far ?",
-            "entry-alt": "Hey ! Good to see you again ! I haven't thanked you yet for saving my life, back in the clinic ! So... thank you ! If there's anything I can do for you, don't hesitate ! So, how are you doing today ?",
+            "entry-alt": "Hey ! Good to see you again ! I haven't thanked you yet for saving my life, back in the clinic ! So… thank you ! If there's anything I can do for you, don't hesitate ! So, how are you doing today ?",
             "exit-about-brawl": "I see. That's all I wanted to know. Bye.",
             "exit-entry": "Nothing much. See you around !",
             "exit-teaching": "Actually, I've got some urgent business going on. Maybe another time.",
@@ -22,8 +22,8 @@
             "quest-sheriff-exit": "I'm done with my questions. Thank you for your patience.",
             "quest-sheriff-murder": "Oh. Yeah, sure. I don't know that I know anything that can help, but sure, go ahead.",
             "quest-sheriff-murder-night": "The night he got killed ? I guess I was around here. I come here every night. I don't have anything better to do. Plus, I love this place, and it loves me back. I was in this same spot, sipping my beer, like I always do. Ask anypony.",
-            "quest-sheriff-murder-night-suspicions": "Er... look, I can tell you one thing I probably remember correctly from that night. I was drunk, alright ? You might wanna ask somepony who doesn't drink as much as I can. I'm the kind of pony you make memories with: not the kind of pony who remembers those !",
-            "quest-sheriff-relationship": "My relationship with Scratchy Lead ? I knew who he is, is what our relationship is. Or well... used to be, since... you know...<br/>He sometimes came to this place for a late drink. He didn't get involved with other people too much though. He'd just ask for something strong and brood in a corner for a while. Then he'd get up and leave.",
+            "quest-sheriff-murder-night-suspicions": "Er… look, I can tell you one thing I probably remember correctly from that night. I was drunk, alright ? You might wanna ask somepony who doesn't drink as much as I can. I'm the kind of pony you make memories with: not the kind of pony who remembers those !",
+            "quest-sheriff-relationship": "My relationship with Scratchy Lead ? I knew who he is, is what our relationship is. Or well… used to be, since… you know…<br/>He sometimes came to this place for a late drink. He didn't get involved with other people too much though. He'd just ask for something strong and brood in a corner for a while. Then he'd get up and leave.",
             "quest-sheriff-suspects": "Well, he didn't get much involved with us, and I don't know that anypony else in town would have a grudge against him.",
             "start-fighting": "Let's go already !",
             "teach-fighting": "Alright. This is probably going to hurt some, but nothing worth it ever comes easy, right ? Get ready to rumble !",

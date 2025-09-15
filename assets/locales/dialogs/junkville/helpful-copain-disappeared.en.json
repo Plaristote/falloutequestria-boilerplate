@@ -3,8 +3,8 @@
         "junkville/helpful-copain-disappeared": {
             "ask-story": "What happened to you ?",
             "build-slint": "<i>Craft a slint</i>",
-            "cannot-come": "But I can't get up... my legs don't work no more ! I think I need a medic !",
-            "come": "Okay... help me get up. I'll follow you.",
+            "cannot-come": "But I can't get up… my legs don't work no more ! I think I need a medic !",
+            "come": "Okay… help me get up. I'll follow you.",
             "come-with-me": "Come with me if you want to live.",
             "entry": "Please, help me !",
             "entry-with-name": "{{name}} ! You came to save me !",
@@ -18,7 +18,7 @@
             "introduction-poke": "<i>Poke him.</i>",
             "look-for-wounds": "<i>Look for wounds.</i>",
             "slint-crafted": "<i>You successfully crafted a slint for the kid. You feel confident he's gonna be able to walk home with this.</i>",
-            "story": "I was playing around the house... I don't remember much. I think I fell into the old well. I woke up here later. I tried to call, but nobody heard me. I tried to crawl, but my leg hurts so bad, I could barely move at all... I'm so glad you're here ! You'll take me out of here, right ?",
+            "story": "I was playing around the house… I don't remember much. I think I fell into the old well. I woke up here later. I tried to call, but nobody heard me. I tried to crawl, but my leg hurts so bad, I could barely move at all… I'm so glad you're here ! You'll take me out of here, right ?",
             "wake-up": "Hey ! Wake up !",
             "wounds-get-help": "Hang on, kid ! I'm gonna get some help !",
             "wounds-give-up": "Welp. I guess there's nothing I can do. Good luck, kid !"

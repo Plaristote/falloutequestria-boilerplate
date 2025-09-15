@@ -1,7 +1,7 @@
 {
     "dialogs": {
         "junkville/helpful-copain": {
-            "about": "Just hanging around... my parents don't want me to get too far from home. It's so dumb... there's so much to see in this world, and I'm stuck in this stupid town...",
+            "about": "Just hanging around… my parents don't want me to get too far from home. It's so dumb… there's so much to see in this world, and I'm stuck in this stupid town…",
             "about-adventure": "An adventure ? Wow ! So where are you going ? What are you gonna do ?",
             "about-leave": "Your parents want what's best for you. You should listen to them.",
             "about-stable": "Wow ! Awesome ! So you're going to travel the world looking for stuff to save your folks ? That's so awesome !",
@@ -10,20 +10,20 @@
             "adventure-fable": "I'm on a very important mission. I've been tasked with the spreading of love and tolerance everywhere. And I'm gonna do it by tracking baddys and kicking their flanks until I can hear the love and tolerance in the sound of their bones breaking !",
             "adventure-lie": "I've been sent by a secret society to infiltrate pony societies and infect nosy little foals with a disease that make their head explode when they sneeze.",
             "adventure-stable": "I'm on a mission to save my Stable. I need to find a device that'll keep it going for ages to come. I have no idea where to go, and what I should do. But I know two things: I'll get there, and I'll do it !",
-            "ask-to-join": "You know... I'm pretty good at looking for stuff. And I know a lot about the outside world... my parents lock me up in here, but I've talked with every stranger who came in Junkville, I know everything there is to know about the towns miles around ! And I'm tired of hearing about it... I want to go out there ! Would you mind... taking me with you ?",
+            "ask-to-join": "You know… I'm pretty good at looking for stuff. And I know a lot about the outside world… my parents lock me up in here, but I've talked with every stranger who came in Junkville, I know everything there is to know about the towns miles around ! And I'm tired of hearing about it… I want to go out there ! Would you mind… taking me with you ?",
             "entry": "Hi ! I'm Helpful ! What's your name ?",
             "greet-ask-about": "Hi kiddo ! The name's {{name}} ! What are you up to ? Nothing good, I hope ?",
             "greet-hostile": "You're helpful ? Oh wait, that's your name ? You're Helpful ! Wow ! That's a pretty stupid name !",
             "greet-with-name": "I'm {{name}}. Nice to meet you.",
             "hostile-give-up": "<i>Walk away.</i>",
-            "hostile-response": "Oh ! Um... yeah, well, your face is stupid ! Bleh !<br/><i>He blasts away.</i>",
+            "hostile-response": "Oh ! Um… yeah, well, your face is stupid ! Bleh !<br/><i>He blasts away.</i>",
             "hostile-yell": "<i>Yell:</i> Yeah, you better run, you little shit !",
             "introducing": "So, I've never seen you around here ! Where do you come from ? What's going on over there ? Come on, tell me, tell me, tell me !",
-            "introducing-evasive": "Oh you know... I'm from nowhere in particular, doing nothing special. But what about you ? What's going on here ?",
+            "introducing-evasive": "Oh you know… I'm from nowhere in particular, doing nothing special. But what about you ? What's going on here ?",
             "introducing-exit": "I'm sorry kid, I don't have time to answer. Maybe another time.",
             "introducing-hostile-exit": "Well, you know what they say: there are no stupid questions. Just stupid people. Asking questions which they make stupid. I don't think I've made myself clear enough: you're a stupid foal.",
             "join-accept": "Sure thing kiddo ! Come along ! I'm gonna show you the world !",
-            "join-ask-about-parents": "I mean... I wouldn't mind. But what about your parents ?",
+            "join-ask-about-parents": "I mean… I wouldn't mind. But what about your parents ?",
             "join-hostile": "What ? Of course not ! Why would I bother with a kid ?",
             "join-parents": "Oh don't worry, they don't really care, they won't even notice I'm gone !",
             "join-reject": "Sorry, Helpful. That just doesn't sound very reasonable. It's dangerous out there.",
@@ -32,11 +32,11 @@
             "parents-accept-sly": "I know you're shitting me, but for some reason, I still want to take you with me ! Follow me, kiddo !",
             "parents-reject": "I strongly doubt that. If I took you with me, they would probably chase me to the end of the earth and turn me into mashed pony. I don't what that to happen. You'll have to stick around at least until they don't get a say in it no more.",
             "parents-reject-sly": "Oh, you'll need to lie better than that, if you want to join my band. Sorry, maybe another time ! Bye-bye !",
-            "reaction-adventure-fable": "Okay, you've got a sense of humor, I got it ! So I guess you're not going to give me what I want ? Come on... just tell me about you !",
-            "reaction-adventure-lie": "Come on... I'm fourteen years old, you can't frighten me with this ! Give me your story, I want to hear it !",
-            "reaction-told-to-stay": "Yeah, yeah... I already have everyone else around here to give me these speeches... I don't need you to add on that. I don't wanna talk about it no more. Bye.",
-            "tell-stuck-at-home": "I know what it is to grow up in an enclosed space ! Sure, the world is vast... but home is where you can be safe, and surrounded with loved ones. You should treasure that.",
-            "tell-stuck-at-home-alt": "I know what it is to grow up in an enclosed space ! It's so frustrating being constantly surrounded with the same old stuff, day after day... it's been driving me crazy for years. Then I was given an opportunity to depart on an adventure... and I took it !"
+            "reaction-adventure-fable": "Okay, you've got a sense of humor, I got it ! So I guess you're not going to give me what I want ? Come on… just tell me about you !",
+            "reaction-adventure-lie": "Come on… I'm fourteen years old, you can't frighten me with this ! Give me your story, I want to hear it !",
+            "reaction-told-to-stay": "Yeah, yeah… I already have everyone else around here to give me these speeches… I don't need you to add on that. I don't wanna talk about it no more. Bye.",
+            "tell-stuck-at-home": "I know what it is to grow up in an enclosed space ! Sure, the world is vast… but home is where you can be safe, and surrounded with loved ones. You should treasure that.",
+            "tell-stuck-at-home-alt": "I know what it is to grow up in an enclosed space ! It's so frustrating being constantly surrounded with the same old stuff, day after day… it's been driving me crazy for years. Then I was given an opportunity to depart on an adventure… and I took it !"
         }
     }
 }

@@ -21,12 +21,12 @@
             "negociate-doctor-bag": "Quoi… tu fais vraiment ça maintenant ? Quelqu'un va mourir !",
             "negociate-doctor-bag-failure": "J'ai d'autres moyens d'en faire ton problème, connard. Maintenant, passe-moi cette mallette de docteur, sinon il va bientôt y avoir deux connards en train de se vider de leur sang chez moi !",
             "negociate-doctor-bag-success": "Oh là là… ok, espèce de connard, voilà 50 capsules, c'est tout ce que je peux me permettre de payer. File-moi cette mallette de docteur, avant que je devienne méchant.",
-            "on-heal-prompt": "Ça me va. Allez-y. Je vais vous surveiller de près... on dirait que j'ai une leçon à vous apprendre.",
+            "on-heal-prompt": "Ça me va. Allez-y. Je vais vous surveiller de près… on dirait que j'ai une leçon à vous apprendre.",
             "on-medical-check-fail": "Ouais, et puis le patient meurt d'une hémorragie interne. Bravo, « docteur » ! Dégagez-moi !",
             "on-medical-check-success": "Bon, vous avez une idée de ce qu'on fait là. Et comment allez-vous refermer la plaie interne sans mallette de docteur ?",
             "on-try-to-help": "Où diable vous prenez-vous ? C'est ma clinique, et ce patient a besoin d'aide médicale, pas d'un numéro de cirque, espèce de connard Bozo. Sors ce chevreuil. La prochaine fois que je te vois, tu ferais mieux d'avoir une mallette de médecin pour moi, sinon ce type ne sera pas le seul à mourir aujourd'hui. Qu'est-ce que tu y connais en matière de guérison d'une blessure profonde, de toute façon ?",
             "perform-heal": "Commençons.",
-            "reject": "Euh... Je suis déjà pas mal occupé, je crois que je vais y aller. Salut !",
+            "reject": "Euh… Je suis déjà pas mal occupé, je crois que je vais y aller. Salut !",
             "start-negociating": "Waouh ! Ces trucs ne sont pas gratuits, tu sais ! Dis-moi, combien vaut la vie de ce poney pour toi ?",
             "success": "<i>Le docteur ouvre la trousse et commence à manipuler la chair du poney blessé. Après 15 minutes de ce spectacle un peu macabre, elle réveille violemment le poney d'une énorme tape sur le museau.</i><br/><br/>Très bien mon pote ! Tu es guéri, grâce à ce poney qui se tenait dans l'embrasure de la porte. Ils ont même pris le temps d'assister à toute l'opération, me surveillant tout du long. Quel salaud, n'est-ce pas ? De toute façon, tu ne rajeunis pas. Je ne veux plus jamais refaire ça, alors fais-moi plaisir et évite les bagarres de bar à partir de maintenant, d'accord ? D'accord. Tu devrais pouvoir sortir d'ici en boitant sans encombre. Du vent !"
         }

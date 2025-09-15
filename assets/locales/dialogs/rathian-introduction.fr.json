@@ -2,14 +2,14 @@
     "dialogs": {
         "rathian-introduction": {
             "accept-help": "J'aurais bien besoin d'aide. Saurais-tu où je pourrais trouver un Envoûteur Céleste ?",
-            "combat-eval-bad": "Ne le prends pas mal, mais on dirait que tu ne survivras pas longtemps seul...",
-            "combat-eval-good": "Tu t'en es plutôt bien sorti contre ces voyous, mais le désert est généralement plus dangereux que ça...",
-            "accompany": "Eh bien, c'est un plaisir de faire ta connaissance. Tu sais, c'est dangereux dehors. {{combatEval}}... tu devrais aller à Junkville. C'est une petite ville sympathique et accueillante, pas trop loin au sud d'ici. J'y vais tout de suite, je peux t'emmener avec moi, si tu veux.",
+            "combat-eval-bad": "Ne le prends pas mal, mais on dirait que tu ne survivras pas longtemps seul…",
+            "combat-eval-good": "Tu t'en es plutôt bien sorti contre ces voyous, mais le désert est généralement plus dangereux que ça…",
+            "accompany": "Eh bien, c'est un plaisir de faire ta connaissance. Tu sais, c'est dangereux dehors. {{combatEval}}… tu devrais aller à Junkville. C'est une petite ville sympathique et accueillante, pas trop loin au sud d'ici. J'y vais tout de suite, je peux t'emmener avec moi, si tu veux.",
             "accompany-again": "Oh, tu as changé d'avis ? Tu comptes venir à Junkville avec moi ?",
             "backpedal-help": "Ahah ! Une Étable, opérationnelle, dans le coin ? Je plaisantais, bien sûr ! Ça n'existe pas, et je ne t'emmènerai surtout pas là-bas ! Bon, c'est le moment de partir, à une autre fois !",
             "come-later": "Peut-être une autre fois. Je suis plutôt occupé en ce moment.",
             "come-with": "Bien sûr, je te suis. Montre-moi la voie.",
-            "device-answer": "Un Appareil Céleste, tu dis ? Je ne peux pas dire que j'en sois sûr... mais j'ai peut-être une piste pour toi. Il y a un vieux labo de Stable Tech, pas très loin d'ici, dans un endroit appelé Junkville. J'ai bien l'intention d'y entrer moi-même. Les systèmes de sécurité fonctionnent toujours même après toutes ces années, et j'aurais bien besoin d'aide pour passer.<br>Qu'en dis-tu, tu veux venir avec moi à Junkville ?",
+            "device-answer": "Un Appareil Céleste, tu dis ? Je ne peux pas dire que j'en sois sûr… mais j'ai peut-être une piste pour toi. Il y a un vieux labo de Stable Tech, pas très loin d'ici, dans un endroit appelé Junkville. J'ai bien l'intention d'y entrer moi-même. Les systèmes de sécurité fonctionnent toujours même après toutes ces années, et j'aurais bien besoin d'aide pour passer.<br>Qu'en dis-tu, tu veux venir avec moi à Junkville ?",
             "exit-come-later": "Vraiment ? Bon, je suppose que c'est un au revoir alors. Si jamais vous venez à Junkville, demandez de mes nouvelles aux habitants. J'y passe beaucoup de temps, je suis généralement dans le coin. À plus tard, et soyez prudents là-dehors !",
             "exit-come-with": "D'accord ! Je vous ouvre la voie ! Direction Junkville !",
             "exit-join-party": "D'accord ! Vous ouvrez la voie ! Je vous tiens compagnie jusqu'à la prochaine ville ! En route !",
@@ -18,9 +18,9 @@
             "leave-me-alone": "Bon sang, laissez-moi tranquille, harceleur ! Je trace mon propre chemin !",
             "player-intro-with-details": "Je m'appelle {{name}} et j'ai pour mission importante de sauver mon écurie.",
             "player-introduction": "Je m'appelle {{name}}, ravi de vous rencontrer.",
-            "player-not-trusting": "Je ne suis pas sûr de pouvoir vous faire confiance... Suis-je libre de partir, ou allez-vous me tuer comme les autres ?",
+            "player-not-trusting": "Je ne suis pas sûr de pouvoir vous faire confiance… Suis-je libre de partir, ou allez-vous me tuer comme les autres ?",
             "reject-help": "Merci, mais non merci. La jument m'a fait confiance. Je peux le faire tout seul.",
-            "stable-answer": "En mission pour sauver une écurie ? Alors vous êtes un habitant d'écurie. Je me suis dit... que vous aviez l'air bien propre et en bonne santé pour un voyageur ordinaire... alors vous me dites qu'il y a une écurie dans le coin qui est toujours en activité ? C'est... assez intéressant. Avez-vous besoin d'aide ?",
+            "stable-answer": "En mission pour sauver une écurie ? Alors vous êtes un habitant d'écurie. Je me suis dit… que vous aviez l'air bien propre et en bonne santé pour un voyageur ordinaire… alors vous me dites qu'il y a une écurie dans le coin qui est toujours en activité ? C'est… assez intéressant. Avez-vous besoin d'aide ?",
             "untrust-answer": "Quoi ? Non ! Écoute, il faut faire attention par ici. Je t'ai repéré, toi et ces bandits, bien avant que vous ne croisiez ton chemin… et à en juger par ton apparence, je me suis dit que tu serais une proie facile pour eux. Je suis juste venu pour aider, je n'attends rien de toi. Alors, qu'en dis-tu ? On peut se présenter correctement maintenant ?"
         }
     }

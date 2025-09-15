@@ -5,7 +5,12 @@
       "desc-called-to-overmare-office": "The overmare summonned you to her office.",
       "desc-overmare-briefing": "She explained that somepony hacked into the Stable's entrance terminal while you were resting. They might've followed you there as you were bringing the Celestial Device. You've been tasked with tracking the culprit and ensuring the Stable's secrets are safe.",
       "overmare-briefing": "Speak with the Overmare",
-      "track-culprit": "Find the hacker"
+      "desc-signal-intro": "Peeking at your trusty PipBuck, the signal was weak, but the culprit seemed to be heading towards the capital city.",
+      "desc-signal-followup": "After reaching the capital, you checked the signal again: your target was now heading South-East. The track was not over yet.",
+      "found-signal": "As you followed your only hint towards your objective, you noticed the signal stopped moving. Whoever you were following apparently had reached a destination.",
+      "found-rathian": "",
+      "track-culprit": "Find the hacker",
+      "deal-with-rathian": "Deal with the scribe"
     }
   }
 }

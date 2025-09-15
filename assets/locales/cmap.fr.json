@@ -60,8 +60,8 @@
             "bookworm": "Tu es un grand lecteur, et la pléthore de livres que tu as lu t'as conféré un large vocabulaire, ainsi que des connaissances générales étendues. Tu obtiens un bonus de +15% à ta compétence Discours.",
             "bruiser": "Un peu plus lent, un peu plus large. Tu ne touche pas aussi souvent, mais ils le sentent quand tu les atteint ! Tu as moins de points d'actions, mais ta force est améliorée.",
             "buffs": {
-                "drunk": "Quel pochard ! Tu as succombé à l'appel de Bacchus. Tu te sens un peu moins intelligent... cela dit, tu ne sens plus grand chose d'autre.",
-                "ko": "Tu es sans connaissance, peut-être à la suite d'un un choc ou d'une intoxication. En fonction de la cause et de ta constitution, tu retrouvera tes esprits dans quelques secondes... ou heures. Il ne te reste plus qu'à attendre.",
+                "drunk": "Quel pochard ! Tu as succombé à l'appel de Bacchus. Tu te sens un peu moins intelligent… cela dit, tu ne sens plus grand chose d'autre.",
+                "ko": "Tu es sans connaissance, peut-être à la suite d'un un choc ou d'une intoxication. En fonction de la cause et de ta constitution, tu retrouvera tes esprits dans quelques secondes… ou heures. Il ne te reste plus qu'à attendre.",
                 "poisoned": "Tu as été empoisonné ! Tu subira périodiquement des dommages jusqu'à ce que le poison soit purgé de ton corps (sauf si tu meure avant, bien sûr). Peut-être devrais-tu chercher un antidote.",
                 "rested": "Tu as pu t'offrir un bon repos, dernièrement, ce qui a temporairement amélioré tes capacités physiques et ton attention."
             },
@@ -81,10 +81,10 @@
             "heavy-handed": "Tu frappe plus fort, pas mieux. Tes attaques sont très brutales, mais manquent de finesse. Tes coups critiques sont moins puissants, mais tu fais toujours plus de dommages en mélée.",
             "hitPoints": "La quantité de dommages que votre personnage peut subir avant de mourrir. Si vos points de vie atteignent 0 ou moins, vous êtes mort.",
             "intelligence": "Savoir, sagesse, et la capacité à penser rapidement. Une haute intelligence est important pour tous les personnages.",
-            "jinxed": "Le bon point, c'est que tout le monde autour de toi semblent avoir la poisse. Le problème... c'est que toi aussi.",
+            "jinxed": "Le bon point, c'est que tout le monde autour de toi semblent avoir la poisse. Le problème… c'est que toi aussi.",
             "kamikaze": "En fonçant tête baissée, tu peut agir beaucoup plus vite dans un tour. Cela diminue ta Classe d'Armure, mais tu intervient plus tôt dans un tour de combat.",
             "lockpick": "La capacité à ouvrir des serrures sans la bonne clef. L'utilisation de kits de crochetages améliorera grandement cette compétence.",
-            "luck": "Destin. Karma. Une chance très élevée affectera le personnage... d'une manière ou d'une autre. Le cours des événements sera influencé par la chance (ou malchance) de votre personnage.",
+            "luck": "Destin. Karma. Une chance très élevée affectera le personnage… d'une manière ou d'une autre. Le cours des événements sera influencé par la chance (ou malchance) de votre personnage.",
             "medicine": "Connaissances médicales, capacité à traiter les blessures grâve, guérir les maladies, et appliquer les premier soins.",
             "meleeDamage": "Le montant de dommage bonus que ce personnage inflige au corps à corps.",
             "meleeWeapons": "Utilisation des armes de mêlée : couteaux, marteaux, lances, et ainsi de suite.",

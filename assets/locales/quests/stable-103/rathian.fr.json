@@ -5,7 +5,12 @@
       "desc-called-to-overmare-office": "La superviseuse t'as convoqué dans son bureau.",
       "desc-overmare-briefing": "Elle t'as expliqué que quelqu'un avait piraté le terminal à l'extérieur de l'Étable pendant ton court repos. Le coupable t'aura probablement suivi jusqu''ici. C'est toi ici qui connait le mieux le monde extérieur. C'est à toi que revient la tâche de traquer le coupable, et d'assurer que les secrets de l'Étable soient en sécurité.",
       "overmare-briefing": "Parler avec la Superviseuse",
-      "track-culprit": "Trouver le hacker"
+      "desc-signal-intro": "Jetant un oeil à ton fidèle PipBuck, le signal était faible, mais le coupable semblait se diriger vers les ruines de la capitale.",
+      "desc-signal-followup": "Une fois la capitale atteinte, tu jeta un oeil au signal à nouveau: ta cible se dirige maintenat au Sud-Est. La traque n'est pas encore finie.",
+      "found-signal": "Suivant toujours le seul indice jusqu'à ton objectif, tu remarque que le signal a cessé de se déplacer. elui que tu pourchasse a apparemment atteint sa destination.",
+      "found-rathian": "",
+      "track-culprit": "Trouver le hacker",
+      "deal-with-rathian": "Décide que faire du scribe"
     }
   }
 }

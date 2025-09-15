@@ -1,8 +1,8 @@
 {
   "dialogs": {
         "junkville/guard-dog": {
-            "detected": "<i>[A huge bipedal dog stands before you. Upon seeing you, he sighs heavily and says:]</i><br>Yet another one that found their way in here... ponies really like to stick their hooves everywhere... you're such a pawful. Follow me, pony. I'm taking you to Fido. He'll know what to do with you.",
-            "detected-come-with": "Huh, I have no idea what's going on, but sure, okay, let's go talk to Fido... whoever that is.",
+            "detected": "<i>[A huge bipedal dog stands before you. Upon seeing you, he sighs heavily and says:]</i><br>Yet another one that found their way in here… ponies really like to stick their hooves everywhere… you're such a pawful. Follow me, pony. I'm taking you to Fido. He'll know what to do with you.",
+            "detected-come-with": "Huh, I have no idea what's going on, but sure, okay, let's go talk to Fido… whoever that is.",
             "detected-details": "You're in my tunnel, and Fido is the leader of my pack. Nopony gets in my tunnel. Now you come with me and Fido will know what to do.",
             "detected-question": "What's happening ? Where am I, and who is Fido ?",
             "detected-refuse-to-come": "Are you gonna make me follow you ? I'd like to see you try !",
