@@ -16,6 +16,7 @@ export default class ArmorBehaviour extends ItemBehaviour {
       user.statistics.armorClass += this.armorClass;
     else
       user.statistics.armorClass -= this.armorClass;
+    super.onEquipped(user, on);
   }
 
   mitigateDamage(damage, damageType) {
