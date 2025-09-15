@@ -1,6 +1,6 @@
 import {skillContest} from "../../cmap/helpers/checks.mjs";
 
-class Dialog {
+export default class Scout {
   constructor(dialog) {
     this.dialog = dialog;
   }
@@ -11,15 +11,15 @@ class Dialog {
 
   tryToIntimidate() {
     const success = game.player.statistics.level > this.dialog.npc.statistics.level
-                 && skillContest(game.player, this.dialog.npc, "charisma", 3)
-                 && skillContest(game.player, this.dialog.npc, "strength", 3);
+                 && skillContest(game.player, this.dialog.npc, "charisma", 3) == game.player
+                 && skillContest(game.player, this.dialog.npc, "strength", 3) == game.player;
 
     game.dataEngine.addReputation("cristal-den", -10 * (success ? 1 : 2));
     if (success) {
       level.setVariable("intimiated", 1);
       game.player.statistics.addExperience(15);
     }
-    return success ? "intimiated" : "provoked";
+    return success ? "intimidated" : "provoked";
   }
 
   markMap() {
@@ -29,8 +29,4 @@ class Dialog {
   startFight() {
     game.diplomacy.setAsEnemy(true, "player", "cristal-den");
   }
-}
-
-export function create(dialog) {
-  return new Dialog(dialog);
 }
