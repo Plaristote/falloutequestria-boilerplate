@@ -24,7 +24,11 @@ export class ItemBehaviour {
     return true;
   }
 
+  onLoadedAsEquipped(character) {
+  }
+
   onEquipped(character, on) {
+    this.onLoadedAsEquipped(character);
   }
 
   getActionPointCost() {
