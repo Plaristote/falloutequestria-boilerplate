@@ -1,11 +1,6 @@
-import {CharacterBehaviour} from "../character.mjs";
+import Base from "./base.mjs";
 
-class Rathian extends CharacterBehaviour {
-  constructor(model) {
-    super(model);
-    this.shouldBeAtJunkville = true;
-  }
-
+class Rathian extends Base {
   isInWorkshop() {
     if (typeof level !== "undefined" && level.name === "junkville") {
       const zone = level.findGroup("smith").controlZone;

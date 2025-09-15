@@ -14,8 +14,12 @@ export default class extends RandomEncounterComponent {
 
   get rathianIntroduced() { return game.hasVariable("rathianIntroduced"); }
   set rathianIntroduced(value) { game.setVariable("rathianIntroduced", value); }
+  get rathianTrack() { return game.hasVariable("rathianTrack"); }
+  set rathianTrack(value) { game.setVariable("rathianTrack", value); }
 
   outdoorsTick(minute) {
+    if (this.rathianTrack)
+      game.quests.getQuest("stable-103/rathian").script.updateRathianTrack();
     if (this.caravan.hasCaravan)
       return ;
     super.outdoorsTick(minute);

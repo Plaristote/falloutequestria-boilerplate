@@ -7,8 +7,13 @@
       "overmare-briefing": "Parler avec la Superviseuse",
       "desc-signal-intro": "Jetant un oeil à ton fidèle PipBuck, le signal était faible, mais le coupable semblait se diriger vers les ruines de la capitale.",
       "desc-signal-followup": "Une fois la capitale atteinte, tu jeta un oeil au signal à nouveau: ta cible se dirige maintenat au Sud-Est. La traque n'est pas encore finie.",
-      "found-signal": "Suivant toujours le seul indice jusqu'à ton objectif, tu remarque que le signal a cessé de se déplacer. elui que tu pourchasse a apparemment atteint sa destination.",
-      "found-rathian": "",
+      "signal-update": "Le traceur de signal de ton PipBuck a été mis à jour. Regarde ton journal de quêtes pour plus d'informations.",
+      "desc-found-signal": "Suivant toujours le seul indice jusqu'à ton objectif, tu remarque que le signal a cessé de se déplacer. elui que tu pourchasse a apparemment atteint sa destination.",
+      "desc-found-rathian": "Tu trouva finalement celui que tu traquais, pourrissant dans une cellule, capturé par le Troupeau d'Or. C'était quelqu'un que tu connaissais déjà. Le poney qui était venu à ton aide, lorsque des bandits t'ont attaqué, juste après avoir quitté ton Étable. Quels événements avaient bien pû l'amener jusqu'ici ?",
+      "desc-learned-about-sentinel": "Tu as décidé de parler à Rathian avant de décider que faire de lui. Il t'as parlé de quelque chose que la superviseuse de l'Étable avait omit de te dire. Les secrets de l'Étable que Rathian a volé concernent un projet d'avant-guerre, nommé Sentinelle. Ce dernier donne à la superviseuse le pouvoir de réveiller une intelligence artificielle, commandant une armée de robots, capable de sécuriser un futur plus vaste pour les habitants de l'Étable. Pourquoi ne l'a-t-elle pas déjà utilisé ?",
+      "desc-learned-about-lab": "Les confessions de Rathian ne s'arrêtèrent pas là. Il te révèla avoir été attrapé par le Troupeau d'Or, alors qu'il essayait de s'infiltrer dans Sabairain, à la recherche d'un laboratoire d'avant-guerre. Ce dernier disposerait du matériel nécessaire pour falsifier les méthodes d'autentification du projet Sentinelle. Ça permettrait à Rathian, où potentiellement n'importe qui, de prendre le contrôle de la Sentinelle. Ça vaut peut-être le coup d'aller y jeter un oeil.",
+      "desc-rathian-died": "Finalement, Rathian n'a pas survéu. Il mourut. Cela devrait au moins satisfaire la superviseuse.",
+      "desc-rathian-murdered": "Finalement, tu as tué Rathian. Après tout, il représentait un danger bien trop grand.",
       "track-culprit": "Trouver le hacker",
       "deal-with-rathian": "Décide que faire du scribe"
     }

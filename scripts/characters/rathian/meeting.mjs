@@ -1,14 +1,10 @@
-import {CharacterBehaviour} from "../character.mjs";
+import Base from "./base.mjs";
 
 function isDropOffLevel() {
   return worldmap.getCurrentCity() !== null;
 }
 
-class Rathian extends CharacterBehaviour {
-  constructor(model) {
-    super(model);
-  }
-
+class Rathian extends Base {
   get dialog() {
     if (level.name === "rathian-meeting")
       return "rathian-introduction";
@@ -19,10 +15,6 @@ class Rathian extends CharacterBehaviour {
     return [
       {content: "Hi !", duration: 1500, color: "lightgreen"}
     ];
-  }
-
-  get shouldBeAtJunkville() {
-    return this.model.isAlive();
   }
 
   isInPlayerParty() {

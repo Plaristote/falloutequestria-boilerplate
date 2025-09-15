@@ -8,6 +8,7 @@ class Dialog {
     case "junkville":
       return "arrival";
     case "stable-103":
+      this.dialog.npc.setVariable("playerLedToStable", 1);
       game.setVariable("rathian-knows-stable-location", true);
       return "arrival-at-stable";
     default:

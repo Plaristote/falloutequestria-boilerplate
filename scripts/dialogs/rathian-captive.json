@@ -1,0 +1,740 @@
+{
+    "answers": {
+        "alternative-convinced-help": {
+            "hook": "helpRathianLeave",
+            "text": "alternative-convinced-help"
+        },
+        "alternative-convinced-leave": {
+            "state": "decision/deal-with-rathian/intro",
+            "text": "alternative-convinced-leave"
+        },
+        "ask-about-rathian-owning-sentinel": {
+            "state": "laboratory/in-charge",
+            "text": "ask-about-rathian-owning-sentinel"
+        },
+        "ask-about-sentinel": {
+            "availableHook": "knowsAboutSentinel",
+            "state": "sentinel/intro",
+            "text": "ask-about-sentinel"
+        },
+        "ask-about-stable-knowledge": {
+            "hook": "askAboutStableKnowldege",
+            "text": "ask-about-stable-knowledge"
+        },
+        "ask-about-stable-location": {
+            "availableHook": "canAskAboutStableLocation",
+            "state": "stable-location/intro",
+            "text": "ask-about-stable-location"
+        },
+        "ask-about-stable-prior-interest": {
+            "hook": "askAboutStableInterest",
+            "state": "stable-location/stable-interest-sentinel-unknown",
+            "text": "ask-about-stable-prior-interest"
+        },
+        "ask-about-why-player-here": {
+            "availableHook": "canTellAboutQuest",
+            "state": "laboratory/learn-quest",
+            "text": "ask-about-why-player-here"
+        },
+        "ask-capture-story": {
+            "state": "capture-story",
+            "text": "ask-capture-story"
+        },
+        "ask-more-questions": {
+            "state": "question-hub",
+            "text": "ask-more-questions"
+        },
+        "ask-sentinel-ai-trust": {
+            "state": "sentinel/ai-mistrust",
+            "text": "ask-sentinel-ai-trust"
+        },
+        "ask-sentinel-capabilities": {
+            "state": "sentinel/capabilities",
+            "text": "ask-sentinel-capabilities"
+        },
+        "ask-sentinel-to-lab": {
+            "state": "laboratory/intro",
+            "text": "ask-sentinel-to-lab"
+        },
+        "ask-what-do-if-freed": {
+            "hook": "dealWithRathianIfFreed",
+            "state": "decision/deal-with-rathian/if-freed",
+            "text": "ask-what-do-if-freed"
+        },
+        "ask-why-circling-thornhoof": {
+            "availableHook": "knowsAboutLaboratory",
+            "hook": "askAboutLaboratory",
+            "state": "laboratory/evasive",
+            "text": "ask-why-circling-thornhoof"
+        },
+        "ask-why-not-killed-on-capture": {
+            "state": "capture-story#3",
+            "text": "ask-why-not-killed-on-capture"
+        },
+        "ask-why-overmare-secret": {
+            "state": "sentinel/overmare-secret",
+            "text": "ask-why-overmare-secret"
+        },
+        "ask-why-use-sentinal-alt#2": {
+            "state": "laboratory/use-sentinel/intro",
+            "text": "ask-why-use-sentinal-alt#2"
+        },
+        "ask-why-use-sentinel": {
+            "state": "laboratory/use-sentinel/intro",
+            "text": "ask-why-use-sentinel"
+        },
+        "ask-why-use-sentinel-alt": {
+            "state": "laboratory/use-sentinel/intro",
+            "text": "ask-why-use-sentinel-alt"
+        },
+        "capture-story-next": {
+            "state": "capture-story#2",
+            "text": "capture-story-next"
+        },
+        "debate-alternative-agreeable": {
+            "state": "decision-hub",
+            "text": "debate-alternative-agreeable"
+        },
+        "debate-alternative-convincing": {
+            "availableHook": "debateAlternativeCanConvince",
+            "state": "laboratory/use-sentinel/debate-alternative-convinced",
+            "text": "debate-alternative-convincing"
+        },
+        "debate-alternative-giveup": {
+            "state": "decision-hub",
+            "text": "debate-alternative-giveup"
+        },
+        "debate-alternative-unconvincing": {
+            "state": "laboratory/use-sentinel/debate-alternative-unconvinced",
+            "text": "debate-alternative-unconvincing"
+        },
+        "debate-freedom#1-agreeable": {
+            "state": "laboratory/use-sentinel/debate-freedom#1-agreed",
+            "text": "debate-freedom#1-agreeable"
+        },
+        "debate-freedom#1-convincing": {
+            "availableHook": "debateFreedomCanConvince1",
+            "state": "laboratory/use-sentinel/debate-freedom#1-convinced",
+            "text": "debate-freedom#1-convincing"
+        },
+        "debate-freedom#1-convincing-fail": {
+            "availableHook": "!debateFreedomCanConvince1",
+            "state": "laboratory/use-sentinel/debate-freemdom#1-unconvinced",
+            "text": "debate-freedom#1-convincing-fail"
+        },
+        "debate-freedom#1-unconvincing": {
+            "state": "laboratory/use-sentinel/debate-freemdom#1-unconvinced",
+            "text": "debate-freedom#1-unconvincing"
+        },
+        "debate-freedom#2-agreeable": {
+            "state": "decision-hub",
+            "text": "debate-freedom#2-agreeable"
+        },
+        "debate-freedom#3-convincing": {
+            "availableHook": "debateFreedomCanConvince2",
+            "state": "laboratory/use-sentinel/debate-alternative",
+            "text": "debate-freedom#3-convincing"
+        },
+        "debate-order#1-agreeable": {
+            "state": "laboratory/use-sentinel/debate-order#1-agreed",
+            "text": "debate-order#1-agreeable"
+        },
+        "debate-order#1-convincing": {
+            "availableHook": "debateOrderCanConvince1",
+            "state": "laboratory/use-sentinel/debate-order#1-convinced",
+            "text": "debate-order#1-convincing"
+        },
+        "debate-order#1-convincing-fail": {
+            "availableHook": "!debateOrderCanConvince1",
+            "state": "laboratory/use-sentinel/debate-order#1-unconvinced",
+            "text": "debate-order#1-convincing-fail"
+        },
+        "debate-order#1-unconvincing": {
+            "state": "laboratory/use-sentinel/debate-order#1-unconvinced",
+            "text": "debate-order#1-unconvincing"
+        },
+        "debate-order#2-agreeable": {
+            "state": "laboratory/use-sentinel/debate-order#2-agreed",
+            "text": "debate-order#2-agreeable"
+        },
+        "debate-order#2-convincing": {
+            "availableHook": "debateOrderCanConvince2",
+            "state": "laboratory/use-sentinel/debate-order#2-convinced",
+            "text": "debate-order#2-convincing"
+        },
+        "debate-order#2-convincing-fail": {
+            "availableHook": "!debateOrderCanConvince2",
+            "state": "laboratory/use-sentinel/debate-order#2-unconvinced",
+            "text": "debate-order#2-convincing-fail"
+        },
+        "debate-order#2-unconvincing": {
+            "state": "laboratory/use-sentinel/debate-freedom-intro",
+            "text": "debate-order#2-unconvincing"
+        },
+        "debate-order#3-agreeable": {
+            "state": "laboratory/use-sentinel/debate-order#2-agreed",
+            "text": "debate-order#3-agreeable"
+        },
+        "debate-order#3-convincing": {
+            "availableHook": "debateOrderCanConvince2",
+            "state": "laboratory/use-sentinel/debate-order#2-convinced",
+            "text": "debate-order#3-convincing"
+        },
+        "debate-order#3-unconvincing": {
+            "state": "laboratory/use-sentinel/debate-order#2-unconvinced",
+            "text": "debate-order#3-unconvincing"
+        },
+        "debate-order#4-agreeable": {
+            "state": "laboratory/use-sentinel/debate-order#2-agreed",
+            "text": "debate-order#4-agreeable"
+        },
+        "debate-order#4-convincing": {
+            "state": "laboratory/use-sentinel/debate-order#2-convinced",
+            "text": "debate-order#4-convincing"
+        },
+        "debate-order#4-unconvincing": {
+            "state": "laboratory/use-sentinel/debate-order#2-unconvinced",
+            "text": "debate-order#4-unconvincing"
+        },
+        "debate-order#5-agreeable": {
+            "state": "laboratory/use-sentinel/debate-freedom-intro",
+            "text": "debate-order#5-agreeable"
+        },
+        "debate-order#5-convincing": {
+            "state": "laboratory/use-sentinel/debate-freedom-intro",
+            "text": "debate-order#5-convincing"
+        },
+        "debate-order#5-critical": {
+            "state": "laboratory/use-sentinel/debate-freedom-intro",
+            "text": "debate-order#5-critical"
+        },
+        "debate-order#6-agreeable": {
+            "state": "laboratory/use-sentinel/debate-freedom-intro",
+            "text": "debate-order#6-agreeable"
+        },
+        "debate-order#6-convincing": {
+            "state": "laboratory/use-sentinel/debate-freedom-intro",
+            "text": "debate-order#6-convincing"
+        },
+        "debate-order#6-unconvincing": {
+            "state": "laboratory/use-sentinel/debate-freedom-intro",
+            "text": "debate-order#6-unconvincing"
+        },
+        "debate-order#7-agreeable": {
+            "state": "laboratory/use-sentinel/debate-freedom-intro",
+            "text": "debate-order#7-agreeable"
+        },
+        "debate-order#7-unconvincing": {
+            "state": "laboratory/use-sentinel/debate-freedom-intro",
+            "text": "debate-order#7-unconvincing"
+        },
+        "decision-help-door-opened": {
+            "availableHook": "!isDoorLocked",
+            "hook": "letsGoAlready",
+            "text": "decision-help-door-opened"
+        },
+        "decision-help-open-door": {
+            "availableHook": "isDoorLocked",
+            "text": "decision-help-open-door"
+        },
+        "decision-kill-rathian": {
+            "hook": "startFight",
+            "text": "decision-kill-rathian"
+        },
+        "decision-leave-rathian": {
+            "state": "decision/deal-with-rathian/intro",
+            "text": "decision-leave-rathian"
+        },
+        "decision-sentinel-help": {
+            "state": "decision/help/intro",
+            "text": "decision-sentinel-help"
+        },
+        "decision-sentinel-imprint-skillcheck": {
+            "availableHook": "knowsAboutArcanicRituals",
+            "state": "decision/self/arcanic-science",
+            "text": "decision-sentinel-imprint-skillcheck"
+        },
+        "decision-sentinel-imprint-skillcheck#2": {
+            "availableHook": "knowsAboutArcanicScience",
+            "state": "decision/deal-with-rathian/intro",
+            "text": "decision-sentinel-imprint-skillcheck#2"
+        },
+        "decision-sentinel-self": {
+            "state": "decision/self/intro",
+            "text": "decision-sentinel-self"
+        },
+        "decision-sentinel-self-kill": {
+            "hook": "startFight",
+            "text": "decision-sentinel-self-kill"
+        },
+        "decision-sentinel-self-push": {
+            "state": "decision/deal-with-rathian/intro",
+            "text": "decision-sentinel-self-push"
+        },
+        "free-rathian": {
+            "availableHook": "isDoorLocked",
+            "hook": "leaveRathianBehind",
+            "text": "free-rathian"
+        },
+        "laboratory-evasive-call-lie": {
+            "availableHook": "canCallLaboratoryLie",
+            "state": "laboratory/learn-quest",
+            "text": "laboratory-evasive-call-lie"
+        },
+        "laboratory-evasive-push": {
+            "state": "laboratory/evasive#2",
+            "text": "laboratory-evasive-push"
+        },
+        "learn-quest-ask-questions": {
+            "state": "question-hub",
+            "text": "learn-quest-ask-questions"
+        },
+        "leave-questions": {
+            "text": "leave-questions"
+        },
+        "leave-rathian-behind": {
+            "hook": "leaveRathianBehind",
+            "text": "leave-rathian-behind"
+        },
+        "on-duty-ask": {
+            "state": "sentinel/intro",
+            "text": "on-duty-ask"
+        },
+        "on-duty-tell-bluff": {
+            "hook": "startFight",
+            "text": "on-duty-tell-bluff"
+        },
+        "rathian-already-free": {
+            "availableHook": "!isDoorLocked",
+            "hook": "leaveRathianBehind",
+            "text": "rathian-already-free"
+        },
+        "rathian-in-charge-sarcasm": {
+            "availableHook": "canUseSarcasm",
+            "state": "laboratory/in-charge-sarcasm",
+            "text": "rathian-in-charge-sarcasm"
+        },
+        "startFight-no-choices": {
+            "hook": "startFight",
+            "text": "startFight-no-choices"
+        },
+        "startFight-pointless": {
+            "hook": "startFight",
+            "text": "startFight-pointless"
+        },
+        "tell-duty": {
+            "state": "on-duty",
+            "text": "tell-duty"
+        },
+        "tell-quest": {
+            "state": "learn-quest",
+            "text": "tell-quest"
+        },
+        "tell-quest-evasive": {
+            "state": "question-hub",
+            "text": "tell-quest-evasive"
+        },
+        "tell-quest-lie": {
+            "state": "question-hub",
+            "text": "tell-quest-lie"
+        }
+    },
+    "entryPoint": "entry",
+    "states": {
+        "capture-story": {
+            "answers": [
+                "capture-story-next",
+                "ask-why-circling-thornhoof",
+                "ask-more-questions",
+                "leave-questions"
+            ],
+            "hook": "captureStory",
+            "text": "capture-story"
+        },
+        "capture-story#2": {
+            "answers": [
+                "ask-why-not-killed-on-capture",
+                "ask-why-circling-thornhoof",
+                "ask-more-questions",
+                "leave-questions"
+            ],
+            "text": "capture-story#2"
+        },
+        "capture-story#3": {
+            "answers": [
+                "ask-more-questions",
+                "leave-questions"
+            ],
+            "text": "capture-story#3"
+        },
+        "decision-hub": {
+            "answers": [
+                "decision-sentinel-help",
+                "decision-sentinel-self",
+                "decision-kill-rathian",
+                "decision-leave-rathian"
+            ],
+            "mood": "neutral",
+            "text": "decision-hub"
+        },
+        "decision/deal-with-rathian/if-convinced": {
+            "answers": [
+                "free-rathian",
+                "rathian-already-free",
+                "startFight-pointless"
+            ],
+            "mood": "smile",
+            "text": "decision/deal-with-rathian/if-convinced"
+        },
+        "decision/deal-with-rathian/if-freed": {
+            "answers": [
+                "rathian-already-free",
+                "free-rathian",
+                "startFight-no-choices"
+            ],
+            "mood": "sad",
+            "text": "decision/deal-with-rathian/if-freed"
+        },
+        "decision/deal-with-rathian/intro": {
+            "answers": [
+                "ask-what-do-if-freed",
+                "rathian-already-free",
+                "free-rathian",
+                "leave-rathian-behind"
+            ],
+            "mood": "sad",
+            "text": "decision/deal-with-rathian/intro"
+        },
+        "decision/help/entry": {
+            "answers": [
+                "decision-help-door-opened",
+                "decision-help-open-door"
+            ],
+            "mood": "smile",
+            "text": "decision/help/entry"
+        },
+        "decision/help/intro": {
+            "answers": [
+                "decision-help-door-opened",
+                "decision-help-open-door"
+            ],
+            "hook": "decisionHelp",
+            "mood": "smile",
+            "text": "decision/help/intro"
+        },
+        "decision/self/arcanic-science": {
+            "answers": [
+                "decision-sentinel-imprint-skillcheck#2",
+                "decision-sentinel-self-push",
+                "decision-sentinel-help",
+                "decision-sentinel-self-kill"
+            ],
+            "mood": "cocky",
+            "text": "decision/self/arcanic-science"
+        },
+        "decision/self/intro": {
+            "answers": [
+                "decision-sentinel-imprint-skillcheck",
+                "decision-sentinel-help",
+                "decision-sentinel-self-push",
+                "decision-sentinel-self-kill"
+            ],
+            "mood": "dubious",
+            "text": "decision/self/intro"
+        },
+        "entry": {
+            "answers": [
+                "tell-quest",
+                "tell-quest-lie"
+            ],
+            "mood": "smile",
+            "text": "entry"
+        },
+        "entry-first-meeting": {
+            "answers": [
+                "tell-quest",
+                "tell-quest-evasive"
+            ],
+            "text": "entry-first-meeting"
+        },
+        "laboratory/evasive": {
+            "answers": [
+                "laboratory-evasive-call-lie",
+                "laboratory-evasive-push",
+                "ask-more-questions",
+                "leave-questions"
+            ],
+            "mood": "smile",
+            "text": "laboratory/evasive"
+        },
+        "laboratory/evasive#2": {
+            "answers": [
+                "laboratory-evasive-call-lie",
+                "ask-more-questions",
+                "leave-questions"
+            ],
+            "text": "laboratory/evasive#2"
+        },
+        "laboratory/in-charge": {
+            "answers": [
+                "rathian-in-charge-sarcasm",
+                "ask-why-use-sentinel-alt"
+            ],
+            "text": "laboratory/in-charge"
+        },
+        "laboratory/in-charge-sarcasm": {
+            "answers": [
+                "ask-why-use-sentinal-alt#2"
+            ],
+            "mood": "angry",
+            "text": "laboratory/in-charge-sarcasm"
+        },
+        "laboratory/intro": {
+            "answers": [
+                "ask-why-use-sentinel",
+                "ask-about-rathian-owning-sentinel"
+            ],
+            "hook": "laboratoryIntro",
+            "text": "laboratory/intro"
+        },
+        "laboratory/learn-quest": {
+            "answers": [
+                "on-duty-ask",
+                "on-duty-tell-bluff"
+            ],
+            "hook": "laboratoryLearnQuest",
+            "mood": "cocky",
+            "text": "laboratory/learn-quest"
+        },
+        "laboratory/sentinel-required": {
+            "answers": [
+                "on-duty-ask",
+                "on-duty-tell-bluff"
+            ],
+            "text": "laboratory/sentinel-required"
+        },
+        "laboratory/use-sentinel/debate-alternative": {
+            "answers": [
+                "debate-alternative-agreeable",
+                "debate-alternative-unconvincing",
+                "debate-alternative-convincing"
+            ],
+            "mood": "smile",
+            "text": "laboratory/use-sentinel/debate-alternative"
+        },
+        "laboratory/use-sentinel/debate-alternative-convinced": {
+            "answers": [
+                "alternative-convinced-help",
+                "alternative-convinced-leave"
+            ],
+            "hook": "alternativeConvinced",
+            "mood": "sad",
+            "text": "laboratory/use-sentinel/debate-alternative-convinced"
+        },
+        "laboratory/use-sentinel/debate-alternative-unconvinced": {
+            "answers": [
+                "debate-alternative-giveup",
+                "debate-alternative-agreeable"
+            ],
+            "text": "laboratory/use-sentinel/debate-alternative-unconvinced"
+        },
+        "laboratory/use-sentinel/debate-freedom#1-agreed": {
+            "answers": [
+                "debate-freedom#2-agreeable"
+            ],
+            "text": "laboratory/use-sentinel/debate-freedom#1-agreed"
+        },
+        "laboratory/use-sentinel/debate-freedom#1-convinced": {
+            "answers": [
+                "debate-freedom#3-convincing",
+                "debate-freedom#2-agreeable"
+            ],
+            "text": "laboratory/use-sentinel/debate-freedom#1-convinced"
+        },
+        "laboratory/use-sentinel/debate-freedom-intro": {
+            "answers": [
+                "debate-freedom#1-unconvincing",
+                "debate-freedom#1-agreeable",
+                "debate-freedom#1-convincing-fail",
+                "debate-freedom#1-convincing"
+            ],
+            "text": "laboratory/use-sentinel/debate-freedom-intro"
+        },
+        "laboratory/use-sentinel/debate-freemdom#1-unconvinced": {
+            "answers": [
+                "debate-freedom#1-convincing",
+                "debate-freedom#1-agreeable"
+            ],
+            "text": "laboratory/use-sentinel/debate-freemdom#1-unconvinced"
+        },
+        "laboratory/use-sentinel/debate-order#1-agreed": {
+            "answers": [
+                "debate-order#3-agreeable",
+                "debate-order#3-unconvincing",
+                "debate-order#3-convincing"
+            ],
+            "text": "laboratory/use-sentinel/debate-order#1-agreed"
+        },
+        "laboratory/use-sentinel/debate-order#1-convinced": {
+            "answers": [
+                "debate-order#2-convincing",
+                "debate-order#2-convincing-fail",
+                "debate-order#2-unconvincing",
+                "debate-order#2-agreeable"
+            ],
+            "text": "laboratory/use-sentinel/debate-order#1-convinced"
+        },
+        "laboratory/use-sentinel/debate-order#1-unconvinced": {
+            "answers": [
+                "debate-order#4-agreeable",
+                "debate-order#4-unconvincing",
+                "debate-order#4-convincing"
+            ],
+            "text": "laboratory/use-sentinel/debate-order#1-unconvinced"
+        },
+        "laboratory/use-sentinel/debate-order#2-agreed": {
+            "answers": [
+                "debate-order#7-agreeable",
+                "debate-order#7-unconvincing"
+            ],
+            "text": "laboratory/use-sentinel/debate-order#2-agreed"
+        },
+        "laboratory/use-sentinel/debate-order#2-convinced": {
+            "answers": [
+                "debate-order#5-critical",
+                "debate-order#5-convincing",
+                "debate-order#5-agreeable"
+            ],
+            "text": "laboratory/use-sentinel/debate-order#2-convinced"
+        },
+        "laboratory/use-sentinel/debate-order#2-unconvinced": {
+            "answers": [
+                "debate-order#6-unconvincing",
+                "debate-order#6-convincing",
+                "debate-order#6-agreeable"
+            ],
+            "text": "laboratory/use-sentinel/debate-order#2-unconvinced"
+        },
+        "laboratory/use-sentinel/intro": {
+            "answers": [
+                "debate-order#1-unconvincing",
+                "debate-order#1-convincing",
+                "debate-order#1-convincing-fail",
+                "debate-order#1-agreeable"
+            ],
+            "text": "laboratory/use-sentinel/intro"
+        },
+        "learn-quest": {
+            "answers": [
+                "tell-duty",
+                "learn-quest-ask-questions",
+                "leave-questions"
+            ],
+            "hook": "learnQuest",
+            "mood": "sad",
+            "text": "learn-quest"
+        },
+        "on-duty": {
+            "answers": [
+                "on-duty-tell-bluff",
+                "on-duty-ask"
+            ],
+            "mood": "cocky",
+            "text": "on-duty"
+        },
+        "question-hub": {
+            "answers": [
+                "ask-capture-story",
+                "ask-why-circling-thornhoof",
+                "ask-about-why-player-here",
+                "ask-about-stable-location",
+                "ask-about-sentinel",
+                "leave-questions"
+            ],
+            "text": "question-hub"
+        },
+        "sentinel/ai-mistrust": {
+            "answers": [
+                "ask-sentinel-to-lab",
+                "ask-more-questions",
+                "leave-questions"
+            ],
+            "text": "sentinel/ai-mistrust"
+        },
+        "sentinel/capabilities": {
+            "answers": [
+                "ask-sentinel-ai-trust",
+                "ask-why-overmare-secret",
+                "ask-sentinel-to-lab",
+                "ask-more-questions",
+                "leave-questions"
+            ],
+            "text": "sentinel/capabilities"
+        },
+        "sentinel/intro": {
+            "answers": [
+                "ask-sentinel-capabilities",
+                "ask-why-overmare-secret",
+                "ask-sentinel-to-lab",
+                "ask-more-questions",
+                "leave-questions"
+            ],
+            "hook": "sentinelIntro",
+            "text": "sentinel/intro"
+        },
+        "sentinel/overmare-secret": {
+            "answers": [
+                "ask-sentinel-capabilities",
+                "ask-sentinel-to-lab",
+                "ask-more-questions",
+                "leave-questions"
+            ],
+            "text": "sentinel/overmare-secret"
+        },
+        "stable-location/intro": {
+            "answers": [
+                "ask-about-stable-knowledge",
+                "ask-more-questions",
+                "leave-questions"
+            ],
+            "text": "stable-location/intro"
+        },
+        "stable-location/led-to-stable": {
+            "answers": [
+                "ask-more-questions",
+                "leave-questions"
+            ],
+            "text": "stable-location/led-to-stable"
+        },
+        "stable-location/prior-knowledge": {
+            "answers": [
+                "ask-about-stable-prior-interest",
+                "ask-more-questions",
+                "leave-questions"
+            ],
+            "text": "stable-location/prior-knowledge"
+        },
+        "stable-location/stable-interest-sentinel-known": {
+            "answers": [
+                "ask-more-questions",
+                "leave-questions"
+            ],
+            "text": "stable-location/stable-interest-sentinel-known"
+        },
+        "stable-location/stable-interest-sentinel-unknown": {
+            "answers": [
+                "on-duty-ask",
+                "ask-more-questions",
+                "leave-questions"
+            ],
+            "text": "stable-location/stable-interest-sentinel-unknown"
+        },
+        "stable-location/told-before": {
+            "answers": [
+                "ask-more-questions",
+                "leave-questions"
+            ],
+            "text": "stable-location/told-before"
+        }
+    }
+}

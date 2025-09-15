@@ -7,8 +7,13 @@
       "overmare-briefing": "Speak with the Overmare",
       "desc-signal-intro": "Peeking at your trusty PipBuck, the signal was weak, but the culprit seemed to be heading towards the capital city.",
       "desc-signal-followup": "After reaching the capital, you checked the signal again: your target was now heading South-East. The track was not over yet.",
-      "found-signal": "As you followed your only hint towards your objective, you noticed the signal stopped moving. Whoever you were following apparently had reached a destination.",
-      "found-rathian": "",
+      "signal-update": "Your PipBuck signal tracker is showing you an update. Check your quest log for more details.",
+      "desc-found-signal": "As you followed your only hint towards your objective, you noticed the signal stopped moving. Whoever you were following apparently had reached a destination.",
+      "desc-found-rathian": "You finally found the pony who were tracking, rotting in a cell, captured by the Golden Herd. And you already knew him. He was the one who came to your help when you first got ambushed after leaving the Stable. What was he doing here ?",
+      "desc-learned-about-sentinel": "You decided to talk to Rathian, before doing anything rash. He taught you something the Overmare apparently forgot to mention: the Stable's secret Rathian stole were about a pre-war project, called Sentinel, which gave the Overmare the possibility of waking up an artificial intelligence, leading an army of robot, into the outside world, securing a wider future for the people of the Stable. Why did she never use it ?",
+      "desc-learned-about-lab": "Rathian confessions didn't end there. He revealed he got caught by the Golden Herd as he was trying to get into Thornhoof, looking for a pre-war laboratory. That laboratory allegedly has the technology to falsify the authentication measures for Sentinel. That would allow him, or anypony, to take over Sentinel. Maybe it's worth going there and taking a look.",
+      "desc-rathian-died": "In the end, Rathian didn't make it. He was dead. That, at least, would please the Overmare.",
+      "desc-rathian-murdered": "Ultimately, you killed Rathian. He was too dangerous, after all.",
       "track-culprit": "Find the hacker",
       "deal-with-rathian": "Deal with the scribe"
     }
