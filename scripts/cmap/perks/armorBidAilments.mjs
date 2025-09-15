@@ -1,3 +1,7 @@
+export function isAvailableFor(characterSheet) {
+  return false;
+}
+
 export function onToggled(characterSheet, toggled) {
   let removed = game.getVariable("armorBidAilmentsRemoved", 0);
 

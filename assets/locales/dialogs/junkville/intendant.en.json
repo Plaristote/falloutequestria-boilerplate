@@ -2,8 +2,8 @@
     "dialogs": {
         "junkville/intendant": {
             "ask-about-scavengers": "Hey ! I found a group of scavengers stuck in the tunnels below the junkyard !",
-            "ask-ramsom-for-missing-scavengers": "C'est pour des fouilleurs disparus. Je les ai trouvés, mais ils sont tenus captifs par des chiens à diamant. Ils exigent des soins en échange.",
-            "ask-ransom-for-missing-scavengers-with-cook-approval": "C'est pour les fouilleurs disparus. Ils sont vivants, mais tenus captis. Raggedy Randy pense qu'il faut payer la rançon.",
+            "ask-ramsom-for-missing-scavengers": "It's for the missing scavengers. I found them, but they're held captive by diamond dogs. They demand healing supplies in exchange.",
+            "ask-ransom-for-missing-scavengers-with-cook-approval": "It's for the missing scavengers. They're alive, but captive. Raggedy Randy pense thinks we should pay the ransom.",
             "ask-scavenger-ransom": "I need supplies. A medical kit and 5 health potions. Can you help ?",
             "give-rathian-parts": "Hey, I've got the parts you wanted from Rathian's.",
             "on-give-rathian-parts": "Awesome ! It's crazy how well they're preserved. These \"scribe\" sure know their craft.\n<br><br>\nThanks for the help !",
