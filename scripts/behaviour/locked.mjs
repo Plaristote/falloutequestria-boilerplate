@@ -43,7 +43,7 @@ export class LockedComponent {
   onUseLockpick(user, defaultBonus = 0) {
     if (!this.isBroken()) {
       const item  = getEquippedLockpickToolsFor(user);
-      const itemBonus = item ? (item.script.lockpickBonus || 0) : 0;
+      const itemBonus = item ? (item.script?.lockpickBonus || 0) : 0;
       const bonus = Math.max(itemBonus, defaultBonus);
 
       console.log("Target=", 65, '+', this.lockpickLevel, '*', 25, '-', bonus);

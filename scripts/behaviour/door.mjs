@@ -56,7 +56,7 @@ export class Door {
 
   onUseItem(user, item) {
     if (!this.isBroken()) {
-      if (item.objectName === this.model.keyName)
+      if (item.objectName === this.model.keyName || item.itemType === this.model.keyName)
       {
         this.model.locked = !this.model.locked;
         if (user === level.player)
@@ -65,6 +65,8 @@ export class Door {
             : i18n.t("messages.door-unlocked")
           );
       }
+      else if (item.itemType.startsWith("lockpicking-kit"))
+        return this.onUseLockpick(user);
       else if (user === level.player)
         game.appendToConsole(i18n.t("messages.nothing-happens"));
     }

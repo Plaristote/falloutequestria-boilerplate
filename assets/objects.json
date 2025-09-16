@@ -202,6 +202,33 @@
         "value": 250,
         "weight": 10
     },
+    "lockpicking-kit": {
+        "icon": "lockpick-kit.png",
+        "isGroupable": true,
+        "scriptName": "lockpicking-kit.mjs",
+        "sprite": "misc",
+        "type": "misc",
+        "value": 175,
+        "weight": 3
+    },
+    "lockpicking-kit-v2": {
+        "icon": "lockpick-kit-v2.png",
+        "isGroupable": true,
+        "scriptName": "lockpicking-kit.mjs",
+        "sprite": "misc",
+        "type": "misc",
+        "value": 350,
+        "weight": 5
+    },
+    "med-x": {
+        "icon": "medx.png",
+        "isGroupable": true,
+        "scriptName": "medx.mjs",
+        "sprite": "health-potion",
+        "type": "consommables",
+        "value": 100,
+        "weight": 0
+    },
     "melee-bite": {
         "scriptName": "melee-bite.mjs",
         "type": "weapon",
