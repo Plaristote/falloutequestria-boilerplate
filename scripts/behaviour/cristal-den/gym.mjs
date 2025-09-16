@@ -230,10 +230,13 @@ export class Gym {
           self.playerWinCount++;
         opponent.statistics.faction = "cristal-den";
         opponent.setAsFriendly(game.player);
+        game.player.wakeUp();
         level.moveCharacterToZone(game.player, self.ringExitZone);
         self.finalizeCombat();
       },
-      onCancel: function() { self.model.tasks.addTask("onPlayerCombatEnds", 1515, 1); }
+      onCancel: function() {
+        self.model.tasks.addTask("onPlayerCombatEnds", 1515, 1);
+      }
     });
     actions.start();
   }
@@ -331,6 +334,7 @@ export class Gym {
   finalizeCombat() {
     level.setCharacterPosition(this.referee, 9, 21, 2);
     this.ringCharacters.forEach(character => {
+      character.wakeUp();
       level.moveCharacterToZone(character, this.ringExitZone);
     });
     this.combatOngoing = false;

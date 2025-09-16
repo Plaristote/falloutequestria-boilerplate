@@ -23,11 +23,14 @@ class Player extends CharacterBehaviour {
   get invulnerable() { return this.model.getVariable("godmode", 0) == 1; }
   set invulnerable(value) { this.model.setVariable("godmode", value ? 1 : 0); }
 
-  mitigateDamage(damage, dealer) {
+  mitigateDamage(damage, type, dealer) {
     if (dealer && this.invulnerable && damage >= this.model.statistics.hitPoints) {
-      this.model.addBuff("ko");
-      if (typeof dealer.script.onPlayerBeaten == "function")
+      if (typeof dealer.script.onPlayerBeaten == "function") {
         dealer.script.onPlayerBeaten();
+        this.model.fallUnconscious();
+      } else {
+        this.model.addBuff("ko");
+      }
       return 0;
     }
     return damage;

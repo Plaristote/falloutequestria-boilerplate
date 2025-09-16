@@ -22,7 +22,7 @@ export class Boxer extends CharacterBehaviour {
     return this.gym.script.trainingAppliances[it];
   }
 
-  mitigateDamage(damage, dealer) {
+  mitigateDamage(damage, type, dealer) {
     if (dealer == game.player && this.isFightingInRing) {
       if (this.model.statistics.hitPoints <= damage) {
         this.shouldTriggerPlayerVictory = true;
@@ -36,7 +36,7 @@ export class Boxer extends CharacterBehaviour {
     super.onDamageTaken(damage, dealer);
     if (this.shouldTriggerPlayerVictory) {
       this.shouldTriggerPlayerVictory = false;
-      this.model.addBuff("ko");
+      this.model.fallUnconscious();
       this.gym.script.onPlayerWinsCombat();
     }
   }
