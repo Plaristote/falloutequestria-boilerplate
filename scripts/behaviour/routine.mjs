@@ -66,7 +66,7 @@ export class RoutineComponent {
     this.model = parent.model;
     this.routine = routine;
     this.refreshInterval = 4545;
-    this.pefix = prefix;
+    this.prefix = prefix;
     this.parent[this.updateRoutineTaskName] = this.updateRoutine.bind(this);
     this.parent[this.refreshRoutineTaskName] = () => refreshRoutine(this);
     if (!this.model.tasks.hasTask(this.updateRoutineTaskName))
