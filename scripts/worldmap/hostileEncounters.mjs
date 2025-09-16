@@ -9,7 +9,7 @@ function availableEncounters() {
 
   if (zones.indexOf("Mountains#1") >= 0 || zones.indexOf("Mountains#2") >= 0) {
     // Wolves
-    array.push(function(difficultyRoll) { return { "name": "Wolves", "avoidRoll": (75 + difficultyRoll / 4), "members": [{"sheet": "wolf", "script": "dog.mjs", "amount": Math.max(4, Math.floor(5 * difficultyRoll / 40))}, {"sheet": "wolf-alpha", "script": "dog.mjs", "amount": 1} ]}});
+    array.push(function(difficultyRoll) { return { "name": "Wolves", "avoidRoll": (75 + difficultyRoll / 4), "members": [{"sheet": "wolf", "script": "dog.mjs", "amount": Math.max(4, Math.floor(2 * difficultyRoll / 40))}, {"sheet": "wolf-alpha", "script": "dog.mjs", "amount": 1} ]}});
   } else if (zones.indexOf("forest") >= 0) {
     // Timberwolves
     array.push(function(difficultyRoll) { return { "name": "Timberwolves", "avoidRoll": (75 + difficultyRoll / 4), "members": [{"sheet": "timberwolf", "script": "dog.mjs", "amount": Math.max(4, Math.floor(5 * difficultyRoll / 40))} ]}});
