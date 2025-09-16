@@ -1,0 +1,11 @@
+{
+  "quests": {
+    "cristal-den/bibins-sabotage-delivery": {
+      "title": "Bibin's Personal Pony Express",
+      "description": "<p>Bibin asked you to deliver a suitcase to Mighty Hobo, the water carrier of Hillburrow. As tempting as it may be, he insisted you should not open the suitcase.</p>",
+      "password": "Get the password from Mighty Hobo",
+      "delivery": "Deliver the suitcase",
+      "report": "Report back to Bibin"
+    }
+  }
+}

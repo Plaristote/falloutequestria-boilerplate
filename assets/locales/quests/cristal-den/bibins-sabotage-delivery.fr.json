@@ -1,0 +1,12 @@
+{
+  "quests": {
+    "cristal-den/bibins-sabotage-delivery": {
+      "title": "Le Poney Express à Bibin",
+      "description": "<p>Bibin t'as demandé de livrer une malette à Mighty Hobo, le porteur d'eau de Hillburrow. Aussi tentant que ça puisse être, il a fortement insisté pour que tu n'ouvre pas la malette.</p>",
+      "password": "Demande le mot de passe à Mighty Hobo",
+      "delivery": "Livre la malette",
+      "report": "Retourne voir Bibin"
+    }
+  }
+}
+

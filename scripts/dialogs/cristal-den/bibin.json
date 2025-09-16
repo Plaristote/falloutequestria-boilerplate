@@ -179,7 +179,6 @@
                 "necessary-action-moral-objection",
                 "necessary-action-doubts"
             ],
-            "mood": "",
             "text": "about-necessary-actions"
         },
         "entry/caught-attention": {
@@ -187,7 +186,6 @@
                 "caught-attention-ask-who",
                 "caught-attention-answer-surprised"
             ],
-            "mood": "",
             "text": "entry/caught-attention"
         },
         "entry/default": {
@@ -196,14 +194,12 @@
                 "ask-about-job",
                 "entry-exit"
             ],
-            "mood": "",
             "text": "entry/default"
         },
         "entry/introduction": {
             "answers": [
                 "caught-attention-curious"
             ],
-            "mood": "",
             "text": "entry/introduction"
         },
         "entry/intruder/intro": {
@@ -219,7 +215,6 @@
                 "intruding-friendly-sneak",
                 "intruding-murder-intent"
             ],
-            "mood": "",
             "text": "entry/intruding"
         },
         "job-proposal": {
@@ -228,7 +223,6 @@
                 "accept-to-work-for-price",
                 "refuse-to-work"
             ],
-            "mood": "",
             "text": "job-proposal"
         },
         "job-proposal-return": {
@@ -262,7 +256,6 @@
                 "necessary-action-moral-objection",
                 "necessary-action-doubts"
             ],
-            "mood": "",
             "text": "necessary-actions/ends-and-means"
         },
         "necessary-actions/objected-morale": {
@@ -270,7 +263,6 @@
                 "necessary-action-exit",
                 "necessary-action-doubts"
             ],
-            "mood": "",
             "text": "necessary-actions/objected-morale"
         },
         "sabotage/about-payment": {
@@ -279,8 +271,6 @@
                 "saboteur-ask-money",
                 "sabotage-reject-job"
             ],
-            "hook": "",
-            "mood": "",
             "text": "sabotage/about-payment"
         },
         "sabotage/about-suitcase-contents": {
@@ -288,7 +278,6 @@
                 "saboteur-accept-job",
                 "sabotage-ask-payment"
             ],
-            "mood": "",
             "text": "sabotage/about-suitcase-contents"
         },
         "sabotage/accept-more-payment": {
@@ -296,7 +285,6 @@
                 "saboteur-accept-job",
                 "sabotage-reject-job"
             ],
-            "mood": "",
             "text": "sabotage/accept-more-payment"
         },
         "sabotage/accept-payment": {
@@ -305,8 +293,6 @@
                 "sabotage-ask-more-payment",
                 "sabotage-reject-job"
             ],
-            "hook": "",
-            "mood": "",
             "text": "sabotage/accept-payment"
         },
         "sabotage/intro": {
@@ -317,15 +303,12 @@
                 "sabotage-ask-suitcase-contents",
                 "sabotage-reject-job"
             ],
-            "hook": "",
-            "mood": "",
             "text": "sabotage/intro"
         },
         "sabotage/on-job-accepted": {
             "answers": [
             ],
             "hook": "onSaboteurQuestAccepted",
-            "mood": "",
             "text": "sabotage/on-job-accepted"
         },
         "sabotage/reject-more-payment": {
@@ -334,14 +317,12 @@
                 "sabotage-ask-more-payment-again",
                 "sabotage-reject-job"
             ],
-            "mood": "",
             "text": "sabotage/reject-more-payment"
         },
         "sabotage/reporting": {
             "answers": [
                 "sabotage-report-confirm-delivery"
             ],
-            "mood": "",
             "text": "sabotage/reporting"
         },
         "sabotage/reporting-confirm-complete": {
@@ -349,8 +330,8 @@
                 "sabotage-report-ask-reward",
                 "sabotage-report-exit"
             ],
-            "hook": "",
-            "mood": "",
+            "hook": "onCompletedSabotageReport",
+            "mood": "smile",
             "text": "sabotage/reporting-confirm-complete"
         },
         "sabotage/reporting-confirm-entry": {
@@ -358,7 +339,7 @@
                 "sabotage-report-give-password",
                 "sabotage-report-no-password"
             ],
-            "mood": "smile",
+            "mood": "cocky",
             "text": "sabotage/reporting-confirm-entry"
         },
         "sabotage/reporting-no-password": {
@@ -389,7 +370,6 @@
             "answers": [
                 "water-carrier-death-explained-cocky"
             ],
-            "hook": "",
             "mood": "angry",
             "text": "sabotage/water-carrier-death-by-player"
         },
@@ -399,7 +379,6 @@
                 "water-carrier-death/evasiv/confess",
                 "water-carrier-death/evasive/joke"
             ],
-            "hook": "",
             "mood": "dubious",
             "text": "sabotage/water-carrier-death-evasive"
         },
@@ -413,7 +392,6 @@
         "sabotage/water-carrier-death-peaceful-end": {
             "answers": [
             ],
-            "mood": "",
             "text": "sabotage/water-carrier-death-peaceful-end"
         }
     }
