@@ -9,6 +9,8 @@
         "use": "Utiliser"
     },
     "item-descriptions": {
+        "lockpicking-kit": "Des outils de crochetages basiques, facilitant les tâches consistant à crocheter des verrous.",
+        "lockpicking-kit-v2": "Un kit complet d'outils de crochetages, avec une grande variété de crochets."
     },
     "item-slots": {
         "armor": "Armure",
@@ -19,6 +21,8 @@
     "items": {
         "dynamite": "Dynamite",
         "health-potion": "Potion de vie",
+        "lockpicking-kit-v2": "Kit de crochetage avancé",
+        "lockpicking-kit": "Kit de crochetage",
         "melee-bucking": "Ruade",
         "melee-hoofercut": "Coup de sabot",
 	"stable-suit": "Uniforme",
