@@ -82,6 +82,13 @@ export class OldSheriffMurder extends QuestHelper {
     return value;
   }
 
+  getDescription() {
+    let text = this.tr("description");
+
+    text += this.tr("desc-autopsy");
+    return text;
+  }
+
   onCharacterKilled(character, killer) {
     if (character.characterSheet == "hillburrow/water-carrier" && isVengeanceOngoing()) {
       this.model.completeObjective("avenged");

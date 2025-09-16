@@ -1,0 +1,11 @@
+{
+  "quests": {
+    "hillburrow/saveDrunkenMaster": {
+      "title": "Sauver le poney bourré",
+      "description": "<p>En t'introduisant dans la clinique de Hillburrow, le docteur t'as immédiatement requisitionné, te confiance la tâche de ramener l'équipement nécessaire pour sauver la vie de son patient. Elle a besoin d'une malette médicale, et dit que tu pourra en trouver une dans le magasin juste à côté.</p>",
+      "findDoctorBag": "Ramener une malette médicale",
+      "saveDrunkenMaster": "Sauver le patient du docteur"
+    }
+  }
+}
+

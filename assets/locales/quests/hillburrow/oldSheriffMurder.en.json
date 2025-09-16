@@ -1,0 +1,12 @@
+{
+  "quests": {
+    "hillburrow/oldSheriffMurder": {
+      "title": "Sherlock Pones and the dead Sheriff",
+      "description": "<p>At Hillburrow, the current officer of the law, Itchy Powder, wants you to help her elucidate the murder of the previous Sheriff, Scratchy Lead.</p>",
+      "desc-autopsy": "<p>Itchy Powder suggested you check with the town's doctor who performed Scratchy Lead's autopsy.</p>",
+      "find-murderer": "Find the murderer",
+      "solve-murder": "Find the motive",
+      "talk-to-doctor": "Ask Hillburrow's doctor"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "quests": {
+    "cristal-den/bibins-meeting": {
+      "title": "Notice me, Bibin-senpai",
+      "description": "<p>Bibin is an influential pony in Crystal Den. But he doesn't take visitors. Would be nice to pay him a visit though.</p>",
+      "catchBibinAttention": "Attract Bibin's attention",
+      "talkToBibin": "Have a chat with Bibin"
+    }
+  }
+}

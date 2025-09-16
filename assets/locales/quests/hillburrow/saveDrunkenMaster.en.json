@@ -1,0 +1,10 @@
+{
+  "quests": {
+    "hillburrow/saveDrunkenMaster": {
+      "title": "From brawler to downer",
+      "description": "<p>When you came into Hillburrow's clinic, the doctor immediately tasked you with fetching medical supplies needed to save a patient's life. She needs a doctor bag, and says you can find one at the nearby shop.</p>",
+      "findDoctorBag": "Fetch a doctor bag",
+      "saveDrunkenMaster": "Save the doctor's patient"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "quests": {
+    "cristal-den/potioks-spy": {
+      "title": "Disappeared Potiok spy",
+      "description": "<p>The Matriarch, leader of the Potiok family, asked you to find out what happened to the spy she sent to keep an eye on Bibin, in the slums.</p>",
+      "findSpy": "Find the spy",
+      "learnAboutSavageConnection": "Get an important information out of the spy",
+      "solveSpy": "Deal with the spy"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "quests": {
+    "hillburrow/oldSheriffMurder": {
+      "title": "Mais qui a tué Scratchy Lead ?",
+      "description": "<p>À Hillburrow, le représentant de la loi, Itchy Powder, t'as demandé de l'aider à résoudre le meurtre de l'ancien Sheriff, Scratchy Lead.</p>",
+      "desc-autopsy": "<p>Itchy Powder t'as suggéré d'aller voir le docteur qui a mené l'autopsie de Scratchy Lead, dans la clinique de Hillburrow.</p>",
+      "find-murderer": "Trouver le meurtrier",
+      "solve-murder": "Trouver le mobile du crime",
+      "talk-to-doctor": "Parler au docteur de Hillburrow"
+    }
+  }
+}

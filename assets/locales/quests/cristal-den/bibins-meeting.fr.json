@@ -1,0 +1,10 @@
+{
+  "quests": {
+    "cristal-den/bibins-meeting": {
+      "title": "RDV avec Bibin",
+      "description": "<p>Bibin est un poney influent dans le Havre Cristallin. Mais il ne reçoit pas de visiteurs. Ce serait pourtant sympa de lui payer une visite.</p>",
+      "catchBibinAttention": "Attirer l'attention de Bibin",
+      "talkToBibin": "Parler avec Bibin"
+    }
+  }
+}

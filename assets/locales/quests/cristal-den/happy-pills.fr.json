@@ -1,0 +1,9 @@
+{
+  "quests": {
+    "cristal-den/happy-pills": {
+      "title": "Sans Mint-Al, la fête est triviale",
+      "description": "<p>Blue Flask prépare des composants chimiques au Flacon Fuchsia, un établissement situé dans le Quartier Rouge du Havre Cristallin.</p><p>Elle éprouve des difficultés dans la conception de sa nouvelle recette de Mint-Als améliorés. Elle aimerait que tu lui apporte un échantillon des mythiques <i>Party-Time Mint-Als</i>, afin de pouvoir analyser leur composition. Les Party-Time Mint-Als existent-ils seulement, où ne sont-ils que le fantasme d'une bande de drogués ?",
+      "fetch-sample": "Trouver un échantillon de Party-Time Mint-Als"
+    }
+  }
+}

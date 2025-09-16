@@ -1,0 +1,9 @@
+{
+  "quests": {
+    "cristal-den/happy-pills": {
+      "title": "TThhEe PPaRRtYY-Time Mint-Als",
+      "description": "<p>Blue Flask cooks chemicals at the Violet Vial, an establishment located in the Red Light District of Crystal Den.</p><p>She's struggling on her improved recipe for Mint-Als. She'd like you to bring her a sample of the fabled <i>Party-Time Mint-Als</i>, so she can figure out how it was made. Do Party-Time Mint-Als even exist, or are they just a junkie's fever dream ?",
+      "fetch-sample": "Find a sample of Party-Time Mint-Als"
+    }
+  }
+}

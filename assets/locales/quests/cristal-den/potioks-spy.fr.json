@@ -1,0 +1,11 @@
+{
+  "quests": {
+    "cristal-den/potioks-spy": {
+      "title": "L'espion disparu des Potioks",
+      "description": "<p>La Matriarche, cheffe de la famille Potiok, t'as demadé de trouver ce qui est arrivé à l'espion qu'elle a envoyé pour surveiller Bibin, dans le bidonville.</p>",
+      "findSpy": "Trouver l'espion",
+      "learnAboutSavageConnection": "Extraire une information importante de l'espion",
+      "solveSpy": "S'occuper de l'espion"
+    }
+  }
+}
