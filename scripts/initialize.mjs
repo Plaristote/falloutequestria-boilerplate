@@ -11,13 +11,13 @@ function initializePlayerInventory() {
     game.player.inventory.addItemOfType("combat-knife");
   }
   if (proficiencies.indexOf("lockpick") >= 0) {
-    // TODO add lockpick-kit
+    game.player.inventory.addItemOfType("lockpicking-kit");
   }
   if (proficiencies.indexOf("medicine") >= 0) {
-    game.player.inventory.addItemOfType("health-potion", 1);
+    game.player.inventory.addItemOfType("health-potion", 2);
   }
   if (proficiencies.indexOf("speech") >= 0) {
-    game.player.inventory.addItemOfType("mint-als");
+    game.player.inventory.addItemOfType("mint-als", 2);
   }
 }
 
