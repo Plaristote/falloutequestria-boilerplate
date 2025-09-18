@@ -290,7 +290,7 @@ export class JunkvilleNegociateWithDogs extends QuestHelper {
         this.model.completed = true;
         break ;
       case "lose-battle":
-        this.model.completed = this.model.failed = true;
+        this.model.failed = true;
         break ;
     }
   }
