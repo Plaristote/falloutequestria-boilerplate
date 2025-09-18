@@ -14,7 +14,7 @@ class HealthPotion extends Consumable {
     var   healed  = getValueFromRange(this.minHeal, this.maxHeal);
 
     healed = healed * this.user.statistics.medicine / 100;
-    healed = Math.min(healed, maxHeal);
+    healed = Math.min(Math.max(healed, this.minHeal), maxHeal);
     healed = Math.floor(healed);
     stats.hitPoints += healed;
     game.appendToConsole(i18n.t("messages.use", {
