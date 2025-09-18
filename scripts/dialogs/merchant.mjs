@@ -9,7 +9,7 @@ export function makeOrderChoice(self, item, options) {
   };
 }
 
-export class MerchantHelper extends DialogHelper {
+export default class MerchantHelper extends DialogHelper {
   constructor(dialog) {
     super(dialog);
     if (this.shop)
