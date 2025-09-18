@@ -54,11 +54,12 @@ export class Generator {
   }
 
   onUseRepair(user) {
-    return skillCheck(user, "repair", {
+    skillCheck(user, "repair", {
       target: 65 + this.repairLevel * 25,
       success: this.onRepaired.bind(this, user),
       failure: this.onRepairFailure.bind(this, user)
     });
+    return true;
   }
 
   onLook() {
