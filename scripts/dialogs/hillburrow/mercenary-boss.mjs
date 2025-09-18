@@ -22,6 +22,7 @@ class Dialog {
   onToldAboutSabotage() {
     const sheriffQuest  = requireQuest("hillburrow/oldSheriffMurder");
     sheriffQuest.setVariable("leadsSabotage", 1);
+    sheriffQuest.script.pushEvent("mercenaryToldAboutSabotage");
   }
 
   onSpokeAboutSheriffMurder() {

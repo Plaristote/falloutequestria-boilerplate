@@ -1,9 +1,28 @@
 import {QuestFlags, requireQuest} from "../../quests/helpers.mjs";
 import * as Checks from "../../cmap/helpers/checks.mjs";
 
+function triggerWaterCarrierLeadInSheriffQuest(self) {
+  const quest    = self.sheriffMurderQuest;
+  const event    = "talkedWithWaterCarrier";
+  const eventAlt = "talkedWithWaterCarrierAlt";
+  if (quest && self.dialog.npc.hasVariable("identity-known")) {
+
+    if (quest.script.hasEvent("foundSheriffStarAlt")) {
+      if (!quest.script.hasEvent(eventAlt)) quest.script.pushEvent(eventAlt);
+      return ;
+    }
+
+    if (quest.script.hasEvent("doctorsAdvice")) {
+      if (!quest.script.hasEvent(event)) quest.script.pushEvent(event);
+      return ;
+    }
+  }
+}
+
 class Dialog {
   constructor(dialog) {
     this.dialog = dialog;
+    triggerWaterCarrierLeadInSheriffQuest(this);
   }
 
   get sabotageQuest() {
@@ -14,12 +33,17 @@ class Dialog {
     return game.quests.getQuest("cristal-den/bibins-sabotage-delivery");
   }
 
+  get sheriffMurderQuest() {
+    return game.quests.getQuest("hillburrow/oldSheriffMurder");
+  }
+
   get identityKnown() {
     return this.dialog.npc.hasVariable("identity-known");
   }
 
   onLearnedIdentity() {
     this.dialog.npc.setVariable("identity-known", 1);
+    triggerWaterCarrierLeadInSheriffQuest(this);
   }
 
   dynamiteHasBeenFound() {

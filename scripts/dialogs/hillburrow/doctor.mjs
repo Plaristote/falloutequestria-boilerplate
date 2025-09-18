@@ -39,13 +39,17 @@ class Dialog extends DialogHelper {
     var suffix;
     const quest = game.quests.getQuest("hillburrow/oldSheriffMurder");
 
+    quest.script.pushEvent("doctorsAdvice");
     quest.setVariable("leadsMercenaries", 1);
     if (drunkenQuestSucceeded()) {
       quest.setVariable("leadsDrunken", 1);
+      quest.script.pushEvent("doctorsLeadsWithDrunken");
       suffix = this.dialog.t("old-sheriff-with-drunken");
     }
-    else
+    else {
+      quest.script.pushEvent("doctorsLeadsWithoutDrunken");
       suffix = this.dialog.t("old-sheriff-without-drunken");
+    }
     return this.dialog.t("old-sheriff-suspicions") + ' ' + suffix;
   }
 

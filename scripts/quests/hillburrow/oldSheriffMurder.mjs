@@ -17,6 +17,10 @@ export function hasActiveOldSheriffMurderQuest() {
 export function onEvidenceRevealed() {
   const quest = game.quests.addQuest(questName, QuestFlags.HiddenQuest);
   quest.completeObjective("findMurderer");
+  if (quest.script.hasEvent("talkedWithWaterCarrier"))
+    quest.script.events.push("foundSheriffStar");
+  else
+    quest.script.events.push("foundSheriffStarAlt");
 }
 
 export function startWaterCarrierScene() {
@@ -86,6 +90,9 @@ export class OldSheriffMurder extends QuestHelper {
     let text = this.tr("description");
 
     text += this.tr("desc-autopsy");
+    this.events.forEach(event => {
+      text += this.tr(`desc-${event}`);
+    });
     return text;
   }
 
