@@ -382,6 +382,15 @@
         "value": 375,
         "weight": 5
     },
+    "mutated-fruit": {
+        "icon": "apple.png",
+        "isGroupable": true,
+        "scriptName": "food.mjs",
+        "sprite": "misc",
+        "type": "consommables",
+        "value": 5,
+        "weight": 0
+    },
     "party-time-mint-als": {
         "icon": "mintals-partytime.webp",
         "isGroupable": true,
@@ -538,6 +547,15 @@
         "sprite": "misc",
         "type": "misc",
         "value": 0,
+        "weight": 0
+    },
+    "sugar-bombs": {
+        "icon": "sugar-bombs.png",
+        "isGroupable": true,
+        "scriptName": "food.mjs",
+        "sprite": "misc",
+        "type": "consommables",
+        "value": 8,
         "weight": 0
     },
     "surgeon-coat": {
