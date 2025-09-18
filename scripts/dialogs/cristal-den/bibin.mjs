@@ -33,7 +33,7 @@ class Dialog {
 
   isSaboteurDead() {
     const saboteur = game.getCharacter("hillburrow/water-carrier");
-    return saboteur && saboteur.isAlive();
+    return !(saboteur && saboteur.isAlive());
   }
 
   onAcceptedSabotageJob() {

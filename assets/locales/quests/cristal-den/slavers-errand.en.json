@@ -1,0 +1,15 @@
+{
+  "quests": {
+    "cristal-den/slavers-errand": {
+      "title": "Running an errand for Bitty Potiok",
+      "description": "<p>Hillburrow's coal mine is powered by the work of slaves. Bitty Potiok, who manages the mine, needs more slave, and tasked you with acquiring them from the slaver's guild at Crystal Den.</p>",
+      "desc-negociated-potiok": "<p>When you asked for the money needed to buy the slaves, Bitty wanted you to advance the money. She will pay you {{potiokSlavePrice}} per slave.",
+      "desc-negociated-slaver": "<p>At Crystal Den, you met with Leberwurst, the master of the slavers guild, with whom you negociated a price of {{slaverSlavePrie}} per slave.",
+      "desc-slaves-acquired": "<p>You sealed the deal with Leberwurst, and the slaves got sent to Hillburrow. Only thing left was to get back there and get your money back.</p>",
+      "desc-report-deficit": "<p>In the end, Bitty Potiok was stingy, and you didn't make any money. You even lost {{amount}} caps. What insane world do you live in that even slavery doesn't pay ?</p>",
+      "desc-report-benefit": "<p>Thanks to your negociating skills, you managed to make a profit of {{amount}} caps. Dirty money still is money.</p>",
+      "fetchSlaves": "Acquire slaves",
+      "reportToBittyPotiok": "Go back to Bitty Potiok"
+    }
+  }
+}

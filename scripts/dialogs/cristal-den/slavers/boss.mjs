@@ -16,7 +16,7 @@ class Dialog {
   }
 
   slaversErrandCanNegociate() {
-    return game.player.statistics.barter >= 72 && this.slaversErrandUnitPrice > 150;
+    return game.player.statistics.barter >= 72 && this.slaversErrandUnitPrice > 25;
   }
 
   slaversErrandCanNegociateFurther() {
@@ -32,16 +32,16 @@ class Dialog {
   }
 
   get slaversErrandUnitPrice() {
-    return this.slaversErrand.getVariable("slavePrice", 500);
+    return this.slaversErrand.script.slaverSlavePrice;
   }
 
-  get slaversErrandNegociatedPrice_1() { return 400; }
-  get slaversErrandNegociatedPrice_2() { return 200; }
-  get slaversErrandNegociatedPrice_3() { return 150; }
-  get slaversErrandNegociatedPrice_4() { return 100; }
+  get slaversErrandNegociatedPrice_1() { return 75; }
+  get slaversErrandNegociatedPrice_2() { return 50; }
+  get slaversErrandNegociatedPrice_3() { return 40; }
+  get slaversErrandNegociatedPrice_4() { return 25; }
 
   set slaversErrandUnitPrice(value) {
-    this.slaversErrand.setVariable("slavePrice", value);
+    this.slaversErrand.script.slaverSlavePrice = value;
   }
 
   onNegociate() {
@@ -67,6 +67,7 @@ class Dialog {
 
   onSlavesBought() {
     game.player.inventory.removeItemOfType("bottlecaps", this.slaversErrandPrice);
+    this.slaversErrand.script.spent += this.slaversErrandPrice;
     this.slaversErrand.completeObjective("fetchSlaves");
   }
 }

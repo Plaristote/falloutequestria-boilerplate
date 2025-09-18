@@ -1,0 +1,15 @@
+{
+  "quests": {
+    "cristal-den/slavers-errand": {
+      "title": "Faire une course pour Bitty Potiok",
+      "description": "<p>La mine de charbon de Hillburrow est opérée par le travail d'esclaves. Bitty Potiok, qui est en charge de la mine, a besoin de plus d'esclaves, et t'as donné pour mission de les acquérir aurpès de la guilde des esclavagistes du Havre Cristallin.</p>",
+      "desc-negociated-potiok": "<p>Quand tu lui as posé la question de l'argent nécessaire pour acheter des esclaves, Bitty as refusé de te confier de l'argent. Elle promet en revanche de te payer {{potiokSlavePrice}} par esclave.",
+      "desc-negociated-slaver": "<p>Une fois au Havre Cristallin, tu as rencontré Leberwurst, le maître de la guilde des esclavagistes, avec qui tu as négocié un prix de {{slaverSlavePrie}} par esclave.",
+      "desc-slaves-acquired": "<p>Tu as conclus le marché avec Leberwurst, et les esclaves furent envoyés vers Hillburrow. Ta dernière tâche consistait alors à y retourner afin d'être remboursé.</p>",
+      "desc-report-deficit": "<p>Finalement, Bitty Potiok est bien trop pingre, et tu n'as pas profité de l'opération. Tu as même perdu {{amount}} capsules. Dans quel monde cynique vis-tu où même l'esclavage ne paie pas ?</p>",
+      "desc-report-benefit": "<p>Grâce à tes talents de négociation, tu as réussi à obtenir un profit de {{amount}} capsules. L'argent n'a pas d'odeur !</p>",
+      "fetchSlaves": "Achète des esclaves",
+      "reportToBittyPotiok": "Retourne voir Bitty Potiok"
+    }
+  }
+}

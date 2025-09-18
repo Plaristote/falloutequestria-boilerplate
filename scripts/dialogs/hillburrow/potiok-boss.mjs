@@ -73,11 +73,11 @@ class Dialog {
 
     if (winner == game.player) {
       if (game.player.statistics.barter > 110)
-        this.slaversErrandSlaveCost = 200;
+        this.slaversErrandSlaveCost = 90;
       else if (game.player.statistics.barter > 100)
-        this.slaversErrandSlaveCost = 175;
+        this.slaversErrandSlaveCost = 80;
       else
-        this.slaversErrandSlaveCost = 150;
+        this.slaversErrandSlaveCost = 70;
       return "slavers-errand/price-upped";
     }
     return "slavers-errand/price-not-upped";
@@ -101,20 +101,23 @@ class Dialog {
     if (this.withRefundBonus)
       amount += 100;
     game.player.inventory.addItemOfType("bottlecaps", amount);
+    this.slaversErrand.script.spent -= amount;
+  }
+
+  slaversErrandAboutMoney() {
+    this.slaversErrand.script.talkedMoney = true;
   }
 
   get slaversErrandSlaveCost() {
-    if (this.dialog.npc.hasVariable("potiokSlavePrice"))
-      return this.dialog.npc.getVariable("potiokSlavePrice");
-    return 50;
+    return this.slaversErrand.script.potiokSlavePrice;
   }
 
   set slaversErrandSlaveCost(value) {
-    this.dialog.npc.setVariable("potiokSlavePrice", value);
+    this.slaversErrand.script.potiokSlavePrice = value;
   }
 
   get slaversErrandTargetSlaveCost() {
-    return 300;
+    return 150;
   }
 
   get slaversErrandRefundAmount() {
