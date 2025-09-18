@@ -1,6 +1,15 @@
 import {DialogHelper} from "./helpers.mjs";
 
-export class MerchantHelper extends DialogHelper {
+export function makeOrderChoice(self, item, options) {
+  return {
+    symbol:        `order-${options.type}-${item.name}`,
+    textHook:      options.textHook,
+    availableHook: self.canOrderItem.bind(self, item),
+    hook:          options.hook.bind(self, item)
+  };
+}
+
+export default class MerchantHelper extends DialogHelper {
   constructor(dialog) {
     super(dialog);
     if (this.shop)
