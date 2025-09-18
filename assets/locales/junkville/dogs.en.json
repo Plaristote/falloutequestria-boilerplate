@@ -1,0 +1,10 @@
+{
+  "junkville": {
+    "dogs": {
+      "leaderReactToDuelDefeat": "Dolly… she would've made a fierce leader for the dogs… but today, she met her match.",
+      "dogA-reactToDuelDefeat": "The puny pony killed Dolly !",
+      "dogB-reactToDuelDefeat": "It was a fair fight. Leave the pony be."
+    },
+    "escape-from-dogs-success": "You got out of the diamond dogs tunnels safely and gained {{xp}} experience points."
+  }
+}

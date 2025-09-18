@@ -1,0 +1,11 @@
+{
+  "junkville": {
+    "dogs": {
+      "leaderReactToDuelDefeat": "Dolly… elle eut été une ardente cheftaine pour les chiens… le destin en a décidé autrement.",
+      "dogA-reactToDuelDefeat": "Le petit poney a tué Dolly !",
+      "dogB-reactToDuelDefeat": "C'était un combat loyal. Laisse-le partir."
+    },
+    "escape-from-dogs-success": "Tu es sorti sain et sauf des galeries des chiens à diamant. Tu gagne {{xp}} points d'experience."
+  }
+}
+

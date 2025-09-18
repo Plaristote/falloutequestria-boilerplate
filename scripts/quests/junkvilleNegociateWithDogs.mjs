@@ -282,7 +282,7 @@ export class JunkvilleNegociateWithDogs extends QuestHelper {
     if (!success) return ;
     switch (objective) {
       case "safe":
-        game.appendToConsole(i18n.t("junkville.escape-from-dogs-success"));
+        game.appendToConsole(i18n.t("junkville.escape-from-dogs-success", { xp: 100 }));
         game.player.statistics.addExperience(100);
         break ;
       case "peaceful-resolve":

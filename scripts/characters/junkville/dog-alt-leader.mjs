@@ -25,5 +25,8 @@ export class DogAltLeader extends PackMember {
   onDied() {
     super.onDied();
     requireQuest("junkvilleNegociateWithDogs").completeObjective("alt-leader-dead");
+    if (this.model.statistics.faction == "_duelist") {
+      level.script.reactToAltLeaderDuelDefeat();
+    }
   }
 }

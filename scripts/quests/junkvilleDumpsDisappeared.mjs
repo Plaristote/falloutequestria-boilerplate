@@ -167,7 +167,7 @@ export class JunkvilleDumpsDisappeared extends QuestHelper {
   onCaptiveKilled() {
     this.killedCaptiveCount++;
     if (this.captiveAllDead())
-      this.model.completed = this.model.failed = true;
+      this.model.failed = true;
   }
 
   setDiamondDogsAsHostiles(value) {
@@ -201,8 +201,10 @@ export class JunkvilleDumpsDisappeared extends QuestHelper {
   completeObjective(name, success) {
     console.log("JUNKVILLEDUMPSDISAPPEARED COMPLETEOBJECTIVE", name, success);
     if (name === "save-captives") {
-      this.model.completed = true;
-      this.model.failed = !success;
+      if (success)
+        this.model.completed = true;
+      else
+        this.model.failed = true;
     } else if (name === "bring-ransom" && success) {
       const negociateQuest = requireQuest("junkvilleNegociateWithDogs");
       negociateQuest.completeObjective("bring-medical-supplies");

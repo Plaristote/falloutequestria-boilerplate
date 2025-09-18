@@ -105,6 +105,12 @@ export class JunkvilleUnderground extends LevelBase {
     return result;
   }
 
+  closestDogs(target) {
+    return this.liveDiamondDogs.sort(function(a, b) {
+      return a.getDistance(target) - b.getDistance(target);
+    });
+  }
+
   sendCaptivesToExit() {
     if (captiveReleaseAuthorized()) {
       level.setVariable("captive-released", true);
@@ -173,5 +179,26 @@ export class JunkvilleUnderground extends LevelBase {
     this.liveCaptives.forEach(captive => {
       captive.takeDamage(9999, null);
     });
+  }
+
+  reactToAltLeaderDuelDefeat() {
+    console.log("reactToAltLeaderDuelDefeat");
+    const altLeader = level.findObject("dog-alt-leader");
+    const leader = level.findObject("dog-leader");
+    const nearbyDogs = this.closestDogs(altLeader).filter(dog => dog != leader);
+
+    if (nearbyDogs.length >= 2) {
+      nearbyDogs[0].actionQueue.pushWait(1);
+      nearbyDogs[0].actionQueue.pushSpeak(i18n.t("junkville.dogs.dogA-reactToDuelDefeat"), 3200, "red");
+      nearbyDogs[1].actionQueue.pushWait(2);
+      nearbyDogs[1].actionQueue.pushSpeak(i18n.t("junkville.dogs.dogB-reactToDuelDefeat"), 3800, "yellow");
+      nearbyDogs[0].actionQueue.start();
+      nearbyDogs[1].actionQueue.start();
+      leader.actionQueue.pushWait(3);
+    } else {
+      leader.actionQueue.pushWait(1);
+    }
+    leader.actionQueue.pushSpeak(i18n.t("junkville.dogs.leaderReactToDuelDefeat"), 8000, "lightblue");
+    leader.actionQueue.start();
   }
 }
