@@ -12,6 +12,8 @@ export function requireQuest(name, flags) {
   return quest;
 }
 
+const eventStorageKey = "_events";
+
 export class QuestHelper {
   constructor(model) {
     this.model = model;
@@ -19,6 +21,20 @@ export class QuestHelper {
 
   tr(name, options = {}) {
     return i18n.t(`quests.${this.model.name}.${name}`, options);
+  }
+
+  get events() {
+    return JSON.parse(this.model.getVariable(eventStorageKey, "[]"));
+  }
+
+  pushEvent(event) {
+    const events = this.events;
+    events.push(event);
+    this.model.setVariable(eventStorageKey, JSON.stringify(events));
+  }
+
+  hasEvent(event) {
+    return this.events.indexOf(event) >= 0;
   }
 
   onCompleted() {
