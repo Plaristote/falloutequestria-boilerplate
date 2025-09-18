@@ -3,16 +3,16 @@
         "bye": {
             "text": "bye"
         },
-        "startTrade": {
+        "startShopping": {
             "state": "trade",
-            "text": "startTrade"
+            "text": "startShopping"
         }
     },
     "entryPoint": "entry",
     "states": {
         "entry": {
             "answers": [
-                "startTrade",
+                "startShopping",
                 "bye"
             ],
             "text": "entry"
@@ -20,7 +20,7 @@
         "trade": {
             "answers": [
             ],
-            "mood": "barter",
+            "hook": "barter",
             "text": "trade"
         }
     }

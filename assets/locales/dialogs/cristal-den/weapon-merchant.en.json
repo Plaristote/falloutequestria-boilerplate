@@ -1,7 +1,10 @@
 {
     "dialogs": {
         "cristal-den/weapon-merchant": {
-            "entry": "Howdy ! What can {{npc}} do you for on this good day ?"
+            "bye": "Nothing, bye.",
+            "entry": "Howdy ! What can {{npc}} do you for on this good day ?",
+            "startTrade": "I'm looking for weapons and ammo.",
+            "trade": "I've got all kind of calibers. If it can be killed, then my stuff will do the job lickity split."
         }
     }
 }

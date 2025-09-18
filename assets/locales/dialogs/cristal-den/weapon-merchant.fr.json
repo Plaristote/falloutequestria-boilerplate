@@ -1,0 +1,10 @@
+{
+    "dialogs": {
+        "cristal-den/weapon-merchant": {
+            "bye": "Rien, à plus !",
+            "entry": "Yo ! Qu'est-ce que {{npc}} peut faire pour toi en cette belle journée ?",
+            "startTrade": "J'ai besoin d'armement.",
+            "trade": "Je vend toute sorte de callibre. Pense à quelque chose que tu peux tuer : mes armes le descendront mieux que n'importe quelles autres !"
+        }
+    }
+}

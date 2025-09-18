@@ -1,0 +1,10 @@
+{
+    "dialogs": {
+        "cristal-den/general-store-owner": {
+            "bye": "Bye.",
+            "entry": "Hey.",
+            "startShopping": "Show me what you have on those shelves.",
+            "trade": "Sure thing. Here you go. Thank you for shopping at the General Store."
+        }
+    }
+}
