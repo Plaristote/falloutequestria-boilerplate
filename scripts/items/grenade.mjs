@@ -11,10 +11,12 @@ export class Grenade extends WeaponBehaviour {
   }
 
   attemptToUseAt(x, y) {
-    if (this.user.useActionPoints(this.getActionPointCost()))
-      return this.triggerUseAt(x, y);
-    else
+    if (!this.user.hasLineOfSight(x, y))
+      this.logFailure(i18n.t("messages.no-line-of-sight"));
+    else if (!this.user.useActionPoints(this.getActionPointCost()))
       this.logFailure(i18n.t("messages.not-enough-ap"));
+    else
+      return this.triggerUseAt(x, y);
     return false;
   }
 
@@ -67,7 +69,7 @@ export class Grenade extends WeaponBehaviour {
       null,
       this.user
     );
-    this.model.remove(1);
+    this.onConsumed();
     return true;
   }
 

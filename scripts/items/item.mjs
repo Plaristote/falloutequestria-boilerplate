@@ -31,6 +31,26 @@ export class ItemBehaviour {
     this.onLoadedAsEquipped(character);
   }
 
+  onConsumed() {
+    if (this.user.inventory.isEquippedItem(this.model)) {
+      const stock = this.user.inventory.findOne(candidate => {
+        return this.model.isGroupable(candidate);
+      });
+
+      if (this.model.quantity > 1)
+        this.model.remove(1);
+      else if (stock && stock.quantity > 1)
+        stock.remove(1);
+      else if (stock)
+        this.user.inventory.removeItem(stock);
+      else
+        this.user.inventory.removeItem(this.model);
+    }
+    else {
+      this.model.remove(1) || this.user.inventory.removeItem(this.model);
+    }
+  }
+
   getActionPointCost() {
     return 2;
   }
