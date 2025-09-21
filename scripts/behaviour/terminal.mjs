@@ -50,7 +50,7 @@ export default class {
   }
 
   onUseScience(user) {
-    if (this.enabled) {
+    if (this.enabled && this.hackable && !this.hacked) {
       const xpReward = this.xpReward;
       if (this.hackTerminal(user))
         game.appendToConsole(i18n.t("messages.hacked-terminal", {xp: xpReward}));
