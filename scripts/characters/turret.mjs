@@ -1,4 +1,5 @@
 import {CharacterBehaviour} from "./character.mjs";
+import {skillCheck} from "../cmap/helpers/checks.mjs";
 
 export class Turret extends CharacterBehaviour {
   constructor(model) {
@@ -21,6 +22,32 @@ export class Turret extends CharacterBehaviour {
 
   isAsleep() {
     return this.model.getAnimation().startsWith("sleep") || this.model.getAnimation().startsWith("fall-down");
+  }
+
+  onUseScience(user) {
+    if (user.statistics.faction != this.model.statistics.faction) {
+      skillCheck(user, "science", {
+        target: 55 + this.model.statistics.level * 18,
+        success: () => {
+          const xpReward = this.model.statistics.level * 12;
+          this.model.statistics.faction = user.statistics.faction;
+          user.statistics.addExperience(xpReward);
+          if (user == game.player)
+            game.appendToConsole(i18n.t("messages.hacked-turret", { xp: xpReward }));
+        },
+        failure: () => {
+          if (user == game.player)
+            game.appendToConsole(i18n.t("messages.hacked-turret-fail"));
+        },
+        criticalFailure: () => {
+          this.model.statistics.faction = "critters";
+          if (user == game.player)
+            game.appendToConsole(i18n.t("messages.hacked-turret-critical-fail"));
+        }
+      });
+      return true;
+    }
+    return false;
   }
 
   onTurnStart() {
