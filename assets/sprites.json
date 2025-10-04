@@ -10134,6 +10134,10 @@
             "width": 56
         }
     },
+    "sand-stairs": {
+        "cloneOf": "wooden-stairs",
+        "defaultSource": "stairs/sand.png"
+    },
     "wooden-stairs": {
         "A-down": {
             "frameCount": 1,
