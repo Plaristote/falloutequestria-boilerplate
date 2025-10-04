@@ -86,7 +86,29 @@ export default class Rathian extends Base {
 
   escapeWithPlayer() {
     game.playerParty.addCharacter(this.model);
-    this.model.tasks.addUniqueTask("followPlayer", 2323, 0);
+    this.retrieveItems(() => {
+      this.model.tasks.addUniqueTask("followPlayer", 2323, 0);
+    });
+  }
+
+  retrieveItems(callback) {
+    const actions = this.model.actionQueue;
+    const shelf = level.findObject("police-station.cells.storage-chest");
+    if (actions.isEmpty() && shelf) {
+      actions.pushWait(1);
+      actions.pushReach(shelf);
+      actions.pushLookAt(shelf);
+      actions.pushAnimation("use");
+      actions.pushScript({
+        onTrigger: () => {
+          shelf.inventory.transferTo(this.model.inventory);
+          callback();
+        },
+        onCancel: () => {
+          this.model.tasks.addUniqueTask("retrieveItems", 500, 1);
+        }
+      });
+    }
   }
 
   get cellDoor() {

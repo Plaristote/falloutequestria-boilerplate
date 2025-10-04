@@ -9,7 +9,7 @@ export default class extends LevelBase {
     const rathian = game.uniqueCharacterStorage.getCharacter("rathian");
 
     if (rathian && rathian.script.shouldBeAtGoldenHerd && rathian.isAlive()) {
-      const shelf = level.findObject("police-station.cells.storage");
+      const shelf = level.findObject("police-station.cells.storage-chest");
       game.uniqueCharacterStorage.loadCharacterToCurrentLevel("rathian", 17, 5, 0);
       game.diplomacy.setAsEnemy(false, "rathian", "player");
       rathian.setScript("rathian/captive.mjs");
