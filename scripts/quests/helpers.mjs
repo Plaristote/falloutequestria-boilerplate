@@ -67,3 +67,31 @@ export class QuestHelper {
     game.appendToConsole(this.failedMessage());
   }
 }
+
+export class Flag {
+  constructor(model, attribute = "flags") {
+    this.model = model;
+    this.attribute = attribute;
+  }
+
+  get value() {
+    return this.model.getVariable(this.attribute, 0);
+  }
+
+  set value(val) {
+    this.model.setVariable(this.attribute, val);
+  }
+
+  add(flag) {
+    this.value = flag | this.value;
+  }
+
+  remove(flag) {
+    if (this.has(flag))
+      this.value -= flag;
+  }
+
+  has(flag) {
+    return (this.value & flag) > 0;
+  }
+}
