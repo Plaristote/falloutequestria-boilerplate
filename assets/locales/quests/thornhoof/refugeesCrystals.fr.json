@@ -1,0 +1,12 @@
+{
+    "quests": {
+        "thornhoof/refugeesCrystals": {
+            "title": "Pierre Sacrificielle",
+            "description": "Leaf, du Conseil des Gardiens de Thornhoof, t'as poliement offert un travail. Il veut que tu vérifie si les réfugiés de Basalbourg ont encore des cristaux à leur disposition. La ville de Thornhoof a besoin de cristaux pour fabriquer armes et munitions. Si tu découvre que les réfugiés ont des cristaux, assure-toi que ces cristaux soient amenés au Conseil.",
+            "investigate-refugees": "Trouve si les réfugiés cachent des cristaux",
+            "talkToShaman": "Parler avec la chamane",
+            "report-leaf": "Parler avec le conseiller Leaf"
+        }
+    }
+}
+

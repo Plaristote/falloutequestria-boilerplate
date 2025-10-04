@@ -3,7 +3,7 @@ import {QuestHelper} from "../helpers.mjs";
 export default class extends QuestHelper {
   initialize() {
     this.model.location = "thornhoof";
-    this.model.addObective("meet-council", this.tr("go-to-council-room"));
+    this.model.addObjective("meet-council", this.tr("go-to-council-room"));
   }
 
   startGroupedQuest() {

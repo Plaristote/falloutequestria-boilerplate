@@ -158,6 +158,14 @@
         "value": 15,
         "weight": 0
     },
+    "crystal-companion": {
+        "icon": "crystal-charged.webp",
+        "isGroupable": true,
+        "sprite": "",
+        "type": "quests",
+        "value": 10,
+        "weight": 2
+    },
     "dark-magic-artefact": {
         "icon": "dark-magic-artefact.png",
         "isGroupable": false,

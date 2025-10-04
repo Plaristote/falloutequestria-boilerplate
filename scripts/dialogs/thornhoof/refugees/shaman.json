@@ -1,0 +1,343 @@
+{
+    "answers": {
+        "about-crystals-spellcasting": {
+            "state": "about-self/about-spellcasting",
+            "text": "about-crystals-spellcasting"
+        },
+        "about-crystals/argue-town-survival": {
+            "state": "about-crystals/debate/argued",
+            "text": "about-crystals/argue-town-survival"
+        },
+        "about-crystals/convince-town-survival": {
+            "state": "about-crystals/debate/argued-2",
+            "text": "about-crystals/convince-town-survival"
+        },
+        "about-crystals/debate/answer001": {
+            "state": "about-crystals/debate/argued-2",
+            "text": "about-crystals/debate/answer001"
+        },
+        "about-crystals/debate/answer002": {
+            "state": "about-crystals/debate/lore",
+            "text": "about-crystals/debate/answer002"
+        },
+        "about-crystals/debate/answer003": {
+            "state": "about-crystals/debate/argued-2",
+            "text": "about-crystals/debate/answer003"
+        },
+        "about-crystals/debate/answer004": {
+            "state": "about-crystals/debate/healing",
+            "text": "about-crystals/debate/answer004"
+        },
+        "about-crystals/debate/answer005": {
+            "state": "about-crystals/debate/convinced",
+            "text": "about-crystals/debate/answer005"
+        },
+        "about-crystals/debate/answer006": {
+            "availableHook": "canConvinceCrystalsTalk",
+            "state": "about-crystals/debate/convince",
+            "text": "about-crystals/debate/answer006"
+        },
+        "about-crystals/debate/answer007": {
+            "state": "about-crystals/debate/contrarian",
+            "text": "about-crystals/debate/answer007"
+        },
+        "about-crystals/debate/answer008": {
+            "state": "about-crystals/debate/healing-alt",
+            "text": "about-crystals/debate/answer008"
+        },
+        "about-crystals/debate/answer009": {
+            "availableHook": "canConvinceCrystalsTalk",
+            "state": "about-crystals/debate/convince",
+            "text": "about-crystals/debate/answer009"
+        },
+        "about-crystals/debate/answer010": {
+            "availableHook": "canConvinceCrystalsTalk",
+            "state": "about-crystals/debate/convince-alt",
+            "text": "about-crystals/debate/answer010"
+        },
+        "about-crystals/intimidate": {
+            "state": "about-crystals/intimidated",
+            "text": "about-crystals/intimidate"
+        },
+        "about-crystals/intimidated/answer001": {
+            "hook": "crystalsQuestIntimidateCheck",
+            "state": "about-crystals/intimidation/failure",
+            "text": "about-crystals/intimidated/answer001"
+        },
+        "about-crystals/intimidated/answer002": {
+            "hook": "crystalsQuestIntimidateSpeechCheck",
+            "state": "about-crystals/intimidation/speech-failure",
+            "text": "about-crystals/intimidated/answer002",
+            "textHook": "crystalsQuestIntimidateSpeechText"
+        },
+        "about-crystals/intimidated/answer003": {
+            "text": "about-crystals/intimidated/answer003"
+        },
+        "about-crystals/intimidation/failure-answer001": {
+            "text": "about-crystals/intimidation/failure-answer001"
+        },
+        "about-crystals/intimidation/failure-answer002": {
+            "text": "about-crystals/intimidation/failure-answer002"
+        },
+        "about-crystals/intimidation/success-answer001": {
+            "text": "about-crystals/intimidation/success-answer001"
+        },
+        "about-crystals/intimidation/success-answer003": {
+            "text": "about-crystals/intimidation/success-answer003"
+        },
+        "about-crystals/mention-rumors": {
+            "state": "about-crystals/rumors/entry",
+            "text": "about-crystals/mention-rumors"
+        },
+        "about-self/ask-about-crystals": {
+            "state": "about-self/about-crystals",
+            "text": "about-self/ask-about-crystals"
+        },
+        "about-self/ask-demo": {
+            "state": "about-self/demo/entry",
+            "text": "about-self/ask-demo"
+        },
+        "about-self/ask-healing": {
+            "state": "about-self/about-healing",
+            "text": "about-self/ask-healing"
+        },
+        "about-self/ask-lesson": {
+            "state": "about-self/lesson/failure",
+            "text": "about-self/ask-lesson"
+        },
+        "ask-about-crystals": {
+            "availableHook": "canStartCrystalsTalk",
+            "state": "about-crystals/entry",
+            "text": "ask-about-crystals"
+        },
+        "ask-about-her": {
+            "state": "about-self/entry",
+            "text": "ask-about-her"
+        },
+        "back-to-entry": {
+            "state": "entry",
+            "text": "back-to-entry"
+        },
+        "give-crystal-companion": {
+            "availableHook": "hasCrystalCompanion",
+            "state": "about-self/demo/stolen-crystal",
+            "text": "give-crystal-companion"
+        },
+        "leave-entry": {
+            "text": "leave-entry"
+        }
+    },
+    "entryPoint": "entry",
+    "states": {
+        "about-crystals/debate/argued": {
+            "answers": [
+                "about-crystals/debate/answer001",
+                "about-crystals/debate/answer003",
+                "about-crystals/debate/answer002"
+            ],
+            "mood": "sad",
+            "text": "about-crystals/debate/argued"
+        },
+        "about-crystals/debate/argued-2": {
+            "answers": [
+                "about-crystals/debate/answer009",
+                "about-crystals/debate/answer008",
+                "about-crystals/debate/answer007"
+            ],
+            "mood": "dubious",
+            "text": "about-crystals/debate/argued-2"
+        },
+        "about-crystals/debate/contrarian": {
+            "answers": [
+                "about-crystals/intimidate"
+            ],
+            "mood": "angry",
+            "text": "about-crystals/debate/contrarian"
+        },
+        "about-crystals/debate/convince": {
+            "answers": [
+            ],
+            "hook": "crystalsQuestConvince",
+            "mood": "sad",
+            "text": "about-crystals/debate/convince"
+        },
+        "about-crystals/debate/convince-alt": {
+            "answers": [
+            ],
+            "hook": "crystalsQuestCooperate",
+            "mood": "neutral",
+            "text": "about-crystals/debate/convince-alt"
+        },
+        "about-crystals/debate/convinced": {
+            "answers": [
+            ],
+            "hook": "crystalsQuestConvinced",
+            "mood": "smile",
+            "text": "about-crystals/debate/convinced"
+        },
+        "about-crystals/debate/healing": {
+            "answers": [
+                "about-crystals/debate/answer010",
+                "about-crystals/debate/answer005",
+                "about-crystals/debate/answer007"
+            ],
+            "hook": "learnedAboutCrystalsHealing",
+            "mood": "smile",
+            "text": "about-crystals/debate/healing"
+        },
+        "about-crystals/debate/healing-alt": {
+            "answers": [
+                "about-crystals/debate/answer002"
+            ],
+            "mood": "cocky",
+            "text": "about-crystals/debate/healing-alt"
+        },
+        "about-crystals/debate/lore": {
+            "answers": [
+                "about-crystals/debate/answer006",
+                "about-crystals/debate/answer003",
+                "about-crystals/debate/answer004",
+                "about-crystals/debate/answer005"
+            ],
+            "mood": "smile",
+            "text": "about-crystals/debate/lore"
+        },
+        "about-crystals/entry": {
+            "answers": [
+                "about-crystals/mention-rumors",
+                "back-to-entry"
+            ],
+            "text": "about-crystals/entry"
+        },
+        "about-crystals/intimidated": {
+            "answers": [
+                "about-crystals/intimidated/answer001",
+                "about-crystals/intimidated/answer002",
+                "about-crystals/intimidated/answer003"
+            ],
+            "mood": "angry",
+            "text": "about-crystals/intimidated"
+        },
+        "about-crystals/intimidation/failure": {
+            "answers": [
+                "about-crystals/intimidation/failure-answer001",
+                "about-crystals/intimidation/failure-answer002"
+            ],
+            "hook": "crystalsQuestRefusal",
+            "mood": "angry",
+            "text": "about-crystals/intimidation/failure"
+        },
+        "about-crystals/intimidation/speech-failure": {
+            "answers": [
+                "about-crystals/intimidation/failure-answer001",
+                "about-crystals/intimidation/failure-answer002"
+            ],
+            "hook": "crystalsQuestRefusal",
+            "mood": "angry",
+            "text": "about-crystals/intimidation/speech-failure"
+        },
+        "about-crystals/intimidation/speech-success": {
+            "answers": [
+                "about-crystals/intimidation/success-answer001",
+                "about-crystals/intimidation/success-answer003"
+            ],
+            "hook": "crystalsQuestConvince",
+            "mood": "sad",
+            "text": "about-crystals/intimidation/speech-success"
+        },
+        "about-crystals/intimidation/success": {
+            "answers": [
+                "about-crystals/intimidation/success-answer001",
+                "about-crystals/intimidation/success-answer003"
+            ],
+            "hook": "crystalsQuestConvince",
+            "mood": "angry",
+            "text": "about-crystals/intimidation/success"
+        },
+        "about-crystals/rumors/entry": {
+            "answers": [
+                "about-crystals/argue-town-survival",
+                "about-crystals/convince-town-survival",
+                "about-crystals/intimidate",
+                "back-to-entry"
+            ],
+            "hook": "crystalsQuestTalked",
+            "text": "about-crystals/rumors/entry"
+        },
+        "about-self/about-crystals": {
+            "answers": [
+                "about-self/ask-healing",
+                "about-self/ask-demo",
+                "back-to-entry"
+            ],
+            "mood": "cocky",
+            "text": "about-self/about-crystals"
+        },
+        "about-self/about-healing": {
+            "answers": [
+                "about-self/ask-demo",
+                "back-to-entry"
+            ],
+            "hook": "learnedAboutCrystalsHealing",
+            "text": "about-self/about-healing"
+        },
+        "about-self/about-spellcasting": {
+            "answers": [
+                "about-self/ask-lesson",
+                "about-self/ask-demo",
+                "back-to-entry"
+            ],
+            "mood": "smile",
+            "text": "about-self/about-spellcasting"
+        },
+        "about-self/demo/entry": {
+            "answers": [
+                "give-crystal-companion",
+                "back-to-entry"
+            ],
+            "text": "about-self/demo/entry"
+        },
+        "about-self/demo/stolen-crystal": {
+            "answers": [
+            ],
+            "hook": "gaveStolenCrystalForDemo",
+            "mood": "angry",
+            "text": "about-self/demo/stolen-crystal"
+        },
+        "about-self/entry": {
+            "answers": [
+                "about-crystals-spellcasting",
+                "about-self/ask-about-crystals",
+                "back-to-entry"
+            ],
+            "text": "about-self/entry"
+        },
+        "about-self/lesson/failure": {
+            "answers": [
+            ],
+            "mood": "dubious",
+            "text": "about-self/lesson/failure"
+        },
+        "about-self/lesson/reentry": {
+            "answers": [
+            ],
+            "mood": "smile",
+            "text": "about-self/lesson/reentry"
+        },
+        "about-self/lesson/success": {
+            "answers": [
+            ],
+            "mood": "smile",
+            "text": "about-self/lesson/success"
+        },
+        "entry": {
+            "answers": [
+                "ask-about-her",
+                "ask-about-crystals",
+                "leave-entry"
+            ],
+            "mood": "smile",
+            "text": "entry"
+        }
+    }
+}

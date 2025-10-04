@@ -1,0 +1,11 @@
+{
+    "quests": {
+        "thornhoof/refugeesCrystals": {
+            "title": "Sacrificial Stone",
+            "description": "Leaf, from Thornhoof's Council of Guardians, politely offered you a job. He wants you to check on the refugees from Basalburg, and figure out whether they still have crystals at their disposal. The town of Thornhoof needs crystals to build weapon and ammunition. If you find that the refugees have crystals to spare, make sure the crystals are brought to the council.",
+            "investigate-refugees": "Find out if the refugees are hoarding more crystals",
+            "talkToShaman": "Talk with the shaman",
+            "report-leaf": "Report to counsellor Leaf"
+        }
+    }
+}
