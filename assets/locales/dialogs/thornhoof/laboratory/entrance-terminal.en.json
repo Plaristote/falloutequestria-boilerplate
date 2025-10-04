@@ -1,0 +1,10 @@
+{
+    "dialogs": {
+        "thornhoof/laboratory/entrance-terminal": {
+            "access": "Facility locking management",
+            "ask-access": "Manage door locks",
+            "entry": "Welcome to the Thornhoof Ministry of Arcane Science facility.<br>",
+            "leave": "Exit"
+        }
+    }
+}

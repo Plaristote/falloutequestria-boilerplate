@@ -1,0 +1,30 @@
+{
+    "answers": {
+        "looting": {
+            "state": "fight",
+            "text": "looting"
+        }
+    },
+    "entryPoint": "entry",
+    "states": {
+        "entry": {
+            "answers": [
+            ],
+            "text": "entry"
+        },
+        "fight": {
+            "answers": [
+            ],
+            "hook": "startFight",
+            "mood": "angry",
+            "text": "fight"
+        },
+        "intercept": {
+            "answers": [
+                "looting"
+            ],
+            "mood": "angry",
+            "text": "intercept"
+        }
+    }
+}

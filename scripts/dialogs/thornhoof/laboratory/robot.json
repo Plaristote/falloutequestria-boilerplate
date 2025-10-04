@@ -1,0 +1,40 @@
+{
+    "answers": {
+        "ask-to-follow": {
+            "availableHook": "!isFollowing",
+            "state": "follow",
+            "text": "ask-to-follow"
+        },
+        "ask-to-stay": {
+            "availableHook": "isFollowing",
+            "state": "stay",
+            "text": "ask-to-stay"
+        },
+        "leave": {
+            "text": "leave"
+        }
+    },
+    "entryPoint": "entry",
+    "states": {
+        "entry": {
+            "answers": [
+                "ask-to-follow",
+                "ask-to-stay",
+                "leave"
+            ],
+            "text": "entry"
+        },
+        "follow": {
+            "answers": [
+            ],
+            "hook": "startFollow",
+            "text": "follow"
+        },
+        "stay": {
+            "answers": [
+            ],
+            "hook": "stopFollow",
+            "text": "stay"
+        }
+    }
+}

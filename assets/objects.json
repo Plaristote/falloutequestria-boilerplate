@@ -575,6 +575,14 @@
         "value": 150,
         "weight": 3
     },
+    "thornhoof-laboratory-key": {
+        "icon": "access-card-blue.png",
+        "isGroupable": true,
+        "sprite": "misc",
+        "type": "keys",
+        "value": 5,
+        "weight": 0
+    },
     "trialKey": {
         "icon": "trial-key.png",
         "isGroupable": false,

@@ -1,0 +1,9 @@
+{
+    "dialogs": {
+        "thornhoof/laboratory/laboratory-terminal": {
+            "entry": "MAS OS - Ready.<br>\nWhat are your commands ?",
+            "leave": "Exit",
+            "lookup-sentinel-imprint": "Look up Sentinel magical imprint process"
+        }
+    }
+}

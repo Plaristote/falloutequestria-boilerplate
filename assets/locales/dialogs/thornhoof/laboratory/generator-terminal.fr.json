@@ -1,0 +1,19 @@
+{
+    "dialogs": {
+        "thornhoof/laboratory/generator-terminal": {
+            "entry": "MAS OS - Prêt.<br>\nCommandes : ",
+            "hack": "Pirater le terminal",
+            "hack-failure": "<i>En dépit de tes meilleurs efforts, le terminal demeure vérouillé.</i>",
+            "leave": "Quitter",
+            "locked": "MAS OS - Vérouillé<br>\nVeuillez ouvrir une session.",
+            "main-menu-option": "Menu principal",
+            "register-new-users": "Inscrire ded nouveaux utilisateurs",
+            "remove-staff": "Supprimer les accès existants",
+            "saff-registered": "Nouveaux utilisateurs enregistrés.<br>\nAccès autorisé.",
+            "security-disable": "Désactiver",
+            "security-menu": "Configuration dde la sécurité.<br>\nStatut : {{securityStatus}}<br>\nCommandes :",
+            "staff-menu": "Gestion du personnel.<br>\nCommandes :",
+            "staff-removed": "Permissions d'accès remises à zéro."
+        }
+    }
+}

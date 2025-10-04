@@ -1,0 +1,48 @@
+{
+    "answers": {
+        "ask-access": {
+            "state": "access",
+            "text": "ask-access"
+        },
+        "leave": {
+            "text": "leave"
+        },
+        "toggle-entry-lock": {
+            "hook": "toggleEntryLock",
+            "state": "access",
+            "text": "toggle-entry-lock",
+            "textHook": "labelToggleEntryLock"
+        },
+        "toggle-hallway-lock": {
+            "hook": "toggleHallwayLock",
+            "state": "access",
+            "text": "toggle-hallway-lock",
+            "textHook": "labelToggleHallwayLock"
+        },
+        "toggle-laboratory-lock": {
+            "hook": "toggleLaboratoryLock",
+            "state": "access",
+            "text": "toggle-laboratory-lock",
+            "textHook": "labelToggleLaboratoryLock"
+        }
+    },
+    "entryPoint": "entry",
+    "states": {
+        "access": {
+            "answers": [
+                "toggle-laboratory-lock",
+                "toggle-hallway-lock",
+                "toggle-entry-lock",
+                "leave"
+            ],
+            "text": "access"
+        },
+        "entry": {
+            "answers": [
+                "ask-access",
+                "leave"
+            ],
+            "text": "entry"
+        }
+    }
+}

@@ -1,0 +1,120 @@
+{
+    "answers": {
+        "hack": {
+            "hook": "hackTerminal",
+            "text": "hack"
+        },
+        "laboratory-turret": {
+            "state": "laboratory-turret-turned",
+            "text": "laboratory-turret"
+        },
+        "leave": {
+            "text": "leave"
+        },
+        "main-menu-option": {
+            "state": "entry",
+            "text": "main-menu-option"
+        },
+        "register-new-users": {
+            "state": "saff-registered",
+            "text": "register-new-users"
+        },
+        "remove-staff": {
+            "state": "staff-removed",
+            "text": "remove-staff"
+        },
+        "security-disable": {
+            "availableHook": "isSecurityEnabled",
+            "hook": "toggleSecurity",
+            "state": "security-menu",
+            "text": "security-disable"
+        },
+        "security-enable": {
+            "availableHook": "!isSecurityEnabled",
+            "hook": "toggleSecurity",
+            "state": "security-menu",
+            "text": "security-enable"
+        },
+        "security-menu": {
+            "state": "security-menu",
+            "text": "security-menu-option"
+        },
+        "staff-menu": {
+            "state": "staff-menu",
+            "text": "staff-menu-option"
+        }
+    },
+    "entryPoint": "entry",
+    "states": {
+        "entry": {
+            "answers": [
+                "security-menu",
+                "staff-menu",
+                "leave"
+            ],
+            "text": "entry"
+        },
+        "entry-laboratory": {
+            "answers": [
+                "laboratory-turret",
+                "leave"
+            ],
+            "text": "entry"
+        },
+        "hack-failure": {
+            "answers": [
+                "hack",
+                "leave"
+            ],
+            "text": "hack-failure"
+        },
+        "laboratory-turret-turned": {
+            "answers": [
+                "leave"
+            ],
+            "hook": "toggleLaboratoryTurret",
+            "text": "laboratory-turret-turned"
+        },
+        "locked": {
+            "answers": [
+                "hack",
+                "leave"
+            ],
+            "text": "locked"
+        },
+        "saff-registered": {
+            "answers": [
+                "main-menu-option",
+                "leave"
+            ],
+            "hook": "onStaffRegistered",
+            "text": "saff-registered"
+        },
+        "security-menu": {
+            "answers": [
+                "security-enable",
+                "security-disable",
+                "main-menu-option",
+                "leave"
+            ],
+            "text": "security-menu"
+        },
+        "staff-menu": {
+            "answers": [
+                "register-new-users",
+                "remove-staff",
+                "main-menu-option",
+                "leave"
+            ],
+            "text": "staff-menu"
+        },
+        "staff-removed": {
+            "answers": [
+                "main-menu-option",
+                "leave"
+            ],
+            "hook": "onRemoveStaffRegistration",
+            "text": "staff-removed"
+        }
+    }
+}

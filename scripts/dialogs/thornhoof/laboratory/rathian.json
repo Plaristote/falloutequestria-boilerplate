@@ -1,0 +1,67 @@
+{
+    "answers": {
+        "ask-come-with": {
+            "availableHook": "isWaiting",
+            "hook": "letsGo",
+            "text": "ask-come-with"
+        },
+        "ask-wait": {
+            "availableHook": "!isWaiting",
+            "hook": "waitHere",
+            "text": "ask-wait"
+        },
+        "convince-waiting": {
+            "availableHook": "canConvinceToWait",
+            "state": "about-waiting/convinced",
+            "text": "convince-waiting"
+        },
+        "giveup-waiting": {
+            "text": "giveup-waiting"
+        },
+        "leave-entry": {
+            "text": "leave-entry"
+        },
+        "unconvincing-waiting": {
+            "state": "about-waiting/unconvinced",
+            "text": "unconvincing-waiting"
+        }
+    },
+    "entryPoint": "entry",
+    "states": {
+        "about-waiting/convinced": {
+            "answers": [
+            ],
+            "hook": "onConvincedToWait",
+            "mood": "smile",
+            "text": "about-waiting/convinced"
+        },
+        "about-waiting/entry": {
+            "answers": [
+                "convince-waiting",
+                "unconvincing-waiting",
+                "giveup-waiting"
+            ],
+            "mood": "dubious",
+            "text": "about-waiting/entry"
+        },
+        "about-waiting/unconvinced": {
+            "answers": [
+            ],
+            "mood": "cocky",
+            "text": "about-waiting/unconvinced"
+        },
+        "entry": {
+            "answers": [
+                "ask-come-with",
+                "ask-wait",
+                "leave-entry"
+            ],
+            "text": "entry"
+        },
+        "first-time": {
+            "answers": [
+            ],
+            "text": "first-time"
+        }
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "dialogs": {
+        "thornhoof/laboratory/entrance-guard": {
+            "fight": "Oh no. Not on my watch.<br>\n<i>The guard is reaching for his gun.</i>",
+            "intercept": "Hey ! What are you doing here ? How did you even get in ?",
+            "looting": "Well, it looked like an interesting place to loot."
+        }
+    }
+}

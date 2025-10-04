@@ -1,0 +1,27 @@
+{
+    "answers": {
+        "leave": {
+            "text": "leave"
+        },
+        "lookup-sentinel-imprint": {
+            "availableHook": "canLookUpSentinel",
+            "state": "sentinel-lookup/entry",
+            "text": "lookup-sentinel-imprint"
+        }
+    },
+    "entryPoint": "",
+    "states": {
+        "entry": {
+            "answers": [
+                "lookup-sentinel-imprint",
+                "leave"
+            ],
+            "text": "entry"
+        },
+        "sentinel-lookup/entry": {
+            "answers": [
+            ],
+            "text": "sentinel-lookup/entry"
+        }
+    }
+}

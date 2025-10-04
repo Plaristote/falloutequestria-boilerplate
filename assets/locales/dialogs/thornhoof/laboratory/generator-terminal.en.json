@@ -1,0 +1,24 @@
+{
+    "dialogs": {
+        "thornhoof/laboratory/generator-terminal": {
+            "entry": "MAS OS - Ready.<br>\nCommands:<br>",
+            "hack": "Hack the terminal",
+            "hack-failure": "<i>Despite your best efforts, the terminal remains locked.</i>",
+            "laboratory-turret": "Activate laboratory turret",
+            "laboratory-turret-turned": "Laboratory turret activated.<br>",
+            "leave": "Exit",
+            "locked": "MAS OS - Locked<br>\nPlease log in.",
+            "main-menu-option": "Main menu",
+            "register-new-users": "Register new staff",
+            "remove-staff": "Wipe staff access permissions",
+            "saff-registered": "New staff members registered.<br>\nAccess granted.",
+            "security-disable": "Disable.",
+            "security-enable": "Enable",
+            "security-menu": "Security settings.<br>\nStatus: {{securityStatus}}<br>\nCommands:",
+            "security-menu-option": "Security",
+            "staff-menu": "Staff management.<br>\nCommands:",
+            "staff-menu-option": "Staff",
+            "staff-removed": "Access permission wiped out."
+        }
+    }
+}

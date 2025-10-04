@@ -1,0 +1,22 @@
+{
+    "dialogs": {
+        "thornhoof/laboratory/rathian": {
+            "about-waiting/convinced": "I guess you're right. Come back safely.",
+            "about-waiting/entry": "I'm not sure I should. I'd rather stick with you until we find what we're looking for.",
+            "about-waiting/unconvinced": "Well, I can take care of myself just fine. Carry on.",
+            "ask-come-with": "Let's go.",
+            "ask-wait": "Wait here.",
+            "bubbles": {
+                "hacked-generator-terminal": "I got us admin privileges on that terminal.",
+                "lets-hack-turret": "I'm gonna take over the turret !",
+                "lets-repair-generator": "Let's fix the generator first."
+            },
+            "convince-waiting": "The path up ahead is dangerous. I must get you there in one piece, else this will all have been for nothing.",
+            "entry": "What's up ?",
+            "first-time": "The Ministry of Arcane Science laboratory. We should look for the control room. It's probably further underground. It might not be a bad idea to turn the power on too.",
+            "giveup-waiting": "Alright, do as you want.",
+            "leave-entry": "Nothing.",
+            "unconvincing-waiting": "I'm not trying to screw you Rathian, I'm just trying to avoid you dying a stupid death !"
+        }
+    }
+}

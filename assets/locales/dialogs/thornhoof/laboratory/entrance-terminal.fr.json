@@ -1,0 +1,9 @@
+{
+    "dialogs": {
+        "thornhoof/laboratory/entrance-terminal": {
+            "ask-access": "Verouillage des portes",
+            "entry": "Bienvenu dans le Centre du Ministère des Sciences Arcaniques de Thornhoof.",
+            "leave": "Quitter"
+        }
+    }
+}
