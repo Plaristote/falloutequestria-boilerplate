@@ -6,7 +6,7 @@ export class Turret extends CharacterBehaviour {
     super(model);
     this.canPush = false;
     if (this.model.isAlive() && !level.combat)
-      this.model.tasks.addTask("popDown", 100, 1);
+      this.model.tasks.addUniqueTask("popDown", 100, 1);
   }
 
   popDown() {
