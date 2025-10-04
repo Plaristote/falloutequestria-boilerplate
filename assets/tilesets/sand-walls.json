@@ -1,0 +1,14 @@
+{ "columns":8,
+ "image":"sand-walls.png",
+ "imageheight":327,
+ "imagewidth":584,
+ "margin":0,
+ "name":"Sand Walls",
+ "spacing":1,
+ "tilecount":24,
+ "tiledversion":"1.11.2",
+ "tileheight":108,
+ "tilewidth":72,
+ "type":"tileset",
+ "version":"1.10"
+}
