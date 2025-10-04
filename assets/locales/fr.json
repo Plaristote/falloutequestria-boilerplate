@@ -29,12 +29,6 @@
         "steal-warning-4": "Gardes ! Au voleur !"
     },
     "dialogs": {
-        "ratKing": {
-            "cool": "Cool story bro.",
-            "crap": "Oh crap !",
-            "die": "Okay, you die now.",
-            "intro": "Haha ! It is I, the king of the rats !"
-        },
         "slotMachine": {
             "bet10": "10 caps",
             "bet100": "100 caps",
@@ -119,10 +113,6 @@
         "trialStartKey": "Une vieille clef rouillée, ramassée au fin fond de la caverne des épreuves.",
         "tuxedo": "Un costume élégant."
     },
-    "locations": {
-        "city-sample": "Expoville",
-        "tutorial": "Caverne des Épreuves"
-    },
     "medicine-skill": {
         "in-combat": "Impossible d'utiliser cette compétence pendant un combat.",
         "used-on": "{{user}} a utilise medecine sur {{target}} et l'a soigne pour {{hp}} points de vie"
@@ -143,68 +133,11 @@
         "stool": "un tabouret"
     },
     "quests": {
-        "catch-robber": {
-            "bring-robber": "Amène le voleur a Mordino.",
-            "description": "Le directeur de l'hotel vous a demandé de lui amener le voleur qui fait les poches des clients chez lui.",
-            "director-scene": {
-                "part1": "Ah, quel plaisir d'enfin pouvoir faire votre connaissance ! Nous allons pouvoir mettre fin à cette regrettable situation.",
-                "part1-1": "Hmpf",
-                "part10": "Oh, non, pas de ça ici. Bobo ?",
-                "part11": "Aaargh",
-                "part12": "Dernière chance. Je n'aime vraiment pas te voir dans cet état. J'aimerais que tu me donne une bonne raison de te laisser vivre.",
-                "part13": "Ferme-là et fini le travail...",
-                "part14": "Quelle pitié. Très bien. Bobo, ayez l'amabilité de me débarasser de cette nuisance.",
-                "part2": "Mes hommes m'ont dit que tu avais dérobé un pactole considérable. Je vais aller droit au but.",
-                "part3": "Qu'est-ce que tu as fait de tes gains, et comment compte-tu me rembourser ?",
-                "part4": "[Crache par terre] Je n'ai rien à te dire. Fais ce que tu as à faire.",
-                "part5": "Très bien. Bobo, c'est à toi de jouer.",
-                "part6": "Argh",
-                "part7": "Urgh",
-                "part8": "Comment allons-nous ? Ta langue va-t-elle se délier ?",
-                "part9": "Va te faire mettre, fumier !"
-            },
-            "find-robber": "Interpelle le voleur.",
-            "help-escape": "Aide le voleur à s'enfuir.",
-            "kill": "Le voleur est décédé",
-            "title": "Attraper un voleur"
-        },
         "completed": "Complétée",
         "description": "Description",
         "failed": "Échouée",
-        "fetchGemstones": {
-            "description": "Dans tes tribulations cavernales, tu as croisé le chemin d'un diamond dog. Il t'as demandé de l'aider à obtenir des gemmes, et tu as accepté. Il t'as aussi donné les outils nécessaires pour accomplir ses désirs. Prend cette pioche et commence à casser du caillou !",
-            "objective-give": "Rapporte les gemmes a ton nouvel ami diamond dog.",
-            "objective-mine": "Utilise une pioche pour extraires des gemmes dans la caverne.",
-            "title": "Trouver des gemmes pour le diamond dog"
-        },
         "objectives": "Objectifs",
-        "ongoing": "En cours",
-        "sampleTownButter": {
-            "description": "Le boulanger a besoin de beurre pour créer des pâtisseries. Il parait que la cuisine de l'hôtel se procure toute sorte de denrées alimentaire.",
-            "find-butter": "Trouver du beurre pour le boulanger",
-            "give-butter": "Tu as donné du beurre au boulanger.",
-            "got-reward": "Tu as obtenu une délicieuse récompense.",
-            "title": "Du boulot pour le boulanger"
-        },
-        "tutorial": {
-            "description": "<p>Vous vous retrouvez perdu et enfermé au fin fond d'une obscure caverne. Assailli par un mal de crâne carabiné, vous n'avez aucun souvenir de votre arrivée ici.</p><p>L'air humide et enfermé est assez désagréable à vos narines... pourquoi ne pas chercher une sortie, et retrouver la chaleur du soleil de Celestia ?</p>",
-            "description-completed": "<p>Vous avez vaincu Trial Blister, d'une manière ou d'une autre, et l'accès au monde extérieur s'est ouvert à vous.</p>",
-            "description-with-trial": "<p>Dans votre recherche de la sortie, vous avez rencontré Trial Blister. Il semblerait que vous ayez été jeté dans cette caverne afin de tester votre capacité à survivre dans les terres désolées d'Equestria. Trial Blister est la dernière épreuve se dressant entre vous et le monde extérieur.",
-            "exit-cavern": "Quitter cette caverne.",
-            "exit-cavern-success": "Pour avoir complété le tutorial, vous gagnez {{xp}} points d'expérience.",
-            "last-trial-success": "Pour avoir survécu à toute les épreuves du tutoriel, vous gagnez {{xp}} points d'expérience",
-            "leave-first-room": "Trouver un moyen de passer la porte",
-            "leave-first-room-success": "Pour avoir réussi à sortir de la première salle, vous gagnez {{xp}} points d'expérience.",
-            "pass-last-trial": "Passer la dernière épreuve",
-            "title": "Tutoriel",
-            "win-first-fight": "Remporter votre premier combat",
-            "win-first-fight-success": "Pour avoir remporté votre premier combat, vous gagnez {{xp}} points d'expérience"
-        }
-    },
-    "sample-city": {
-        "director-at-launch": "Le patron prend son dejeuner. Revient dans une heure ou deux.",
-        "director-not-receiving": "Le patron ne reçoit personne à cette heure-ci. Revient plus tard.",
-        "shady-robber": "Il a l'air suspect."
+        "ongoing": "En cours"
     },
     "spells": {
         "empty-spellbook": "Tu n'as pas encore appris de sorts",
