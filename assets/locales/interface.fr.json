@@ -125,6 +125,7 @@
         "ko": "{{target}} a perdu connaissance.",
         "player-ko": "Tu as perdu connaissance.",
         "lock-is-broken": "Le verrou est casse.",
+        "no-line-of-sight": "Pas de ligne de vue.",
         "no-path": "Pas de chemin libre pour aller là-bas.",
         "not-enough-ap": "Pas assez de points d'action.",
         "not-available-in-combat": "Indisponible pendant un combat.",

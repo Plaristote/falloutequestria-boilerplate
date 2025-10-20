@@ -89,6 +89,7 @@
         "killed": "You killed {{victimName}} and earned {{xp}} experience points.",
         "ko": "{{target}} passed out.",
         "lock-is-broken": "The lock is broken",
+        "no-line-of-sight": "No line of sight.",
         "no-path": "Can't reach.",
         "not-enough-ap": "Not enough action points.",
         "not-available-in-combat": "Not available during combat.",
