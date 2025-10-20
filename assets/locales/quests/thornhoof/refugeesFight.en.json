@@ -1,0 +1,14 @@
+{
+  "quests": {
+    "thornhoof/refugeesFight": {
+      "woundedCharacter": {
+        "displayName": "Wounded pony",
+        "matchDescription": "Red mane, silver fur, and bedridden. This wounded pony looks suspiciously like the description you were given of the refugees who ran away after the bar fight.",
+        "suspicious": ""
+      },
+      "description": "Counsellor Leaf, from Thornhoof's Council of so-called Guardians, asked you to find a bunch of ponies involved in a bar fight, which saw the death of one the town's citizen. The ponies you're looking for are refugees, and Leaf would like you not to solve the issue without adding up on the already existing tensions.",
+      "desc-wounded-refugee": "You learned that one of the refugees involved in the fight got shot as they were running away. It's not easy to hide such a wound.",
+      "desc-wounded-refugee-desc": "You also know that they have a red mane and silver fur."
+    }
+  }
+}

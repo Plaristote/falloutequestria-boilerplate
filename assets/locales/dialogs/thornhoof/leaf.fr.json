@@ -2,6 +2,9 @@
     "dialogs": {
         "thornhoof/leaf": {
             "ask-about-crystals-quest": "À propos des réfugiés et de leurs cristaux…",
+            "ask-about-fighting-quest": "À propos des réfugiés fugitifs…",
+            "ask-about-shadow-quest": "À propos des incidents que je devais investiguer…",
+            "ask-about-work": "Vous aviez dit avoir plus de travail pour moi.",
             "crystal-quest-entry-accept": "D'accord.",
             "crystal-quest-entry-reject": "Une autre fois, je n'ai pas le temps.",
             "crystal-quests-about-reward": "Je ne travaille pas gratuitement. Combien vous m'offrez ?",
@@ -50,6 +53,13 @@
             "crystals-quest/start-stolen": "J'ai récupéré les cristaux des réfugiés. <i>[Donner les cristaux]</i>",
             "crystals-quests-negociate-more": "Mais vous n'avez justement pas accès au marché. Vous avez vraiment besoin de ces cristaux, et j'ai vraiment besoin d'argent. Faites un effort, pour moi ?",
             "entry": "Oui, qu'est-ce que c'est ?",
+            "fight-quest-accept": "Je ferais mon possible.",
+            "fight-quest-if-reward": "Si ça paye, je suis votre poney.",
+            "fight-quest-intro-continue": "Je vois.",
+            "fight-quest-reject": "Je n'ai pas le temps pour le moment.",
+            "fight-quest/intro": "J'ai de nouveau besoin que tu enquête discrètement pour moi.<br>\nIl y a peu, une altercation est survenue dans le bar. Un des locaux est décédé, et les réfugiés incriminés ont disparus.",
+            "fight-quest/part2": "Silvertide, la cheffe de la milice, est responsable de la recherche des coupables. Sans succès jusque là. Je suppose qu'elle manque de ressources.<br>\nBien que ce ne soit pas une priorité pour elle, nous avons besoin d'appaiser les tensions entre réfugiés et locaux. Puis-je compter sur toi ?",
+            "fight-quest/prompt": "Oui ? Avez-vous trouvé de nouveaux indices à leur propos ?",
             "housing-agree": "Je suppose que je vois.",
             "housing-exit-cool-off": "Je n'ai plus très envie de vous parler, là.",
             "housing-exit-furious": "Me rafraîchir les idées ?! Ok ! Celestia sait ce que je pourrais te faire sinon… connard condescendant.",

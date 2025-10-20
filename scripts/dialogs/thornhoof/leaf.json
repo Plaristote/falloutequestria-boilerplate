@@ -1,0 +1,433 @@
+{
+    "answers": {
+        "ask-about-crystals-quest": {
+            "availableHook": "canTalkAboutCrystalsQuest",
+            "state": "crystals-quest/prompt",
+            "text": "ask-about-crystals-quest"
+        },
+        "ask-about-fighting-quest": {
+            "availableHook": "canTalkAboutFightQuest",
+            "state": "fight-quest/prompt",
+            "text": "ask-about-fighting-quest"
+        },
+        "ask-about-work": {
+            "availableHook": "hasMoreQuests",
+            "hook": "introduceNextQuest",
+            "text": "ask-about-work"
+        },
+        "crystal-quest-entry-accept": {
+            "state": "crystals-quest/quest-intro",
+            "text": "crystal-quest-entry-accept"
+        },
+        "crystal-quest-entry-reject": {
+            "text": "crystal-quest-entry-reject"
+        },
+        "crystal-quests-about-reward": {
+            "state": "crystals-quest/intro/about-reward",
+            "text": "crystal-quests-about-reward"
+        },
+        "crystal-quests/report/evasive": {
+            "state": "crystals-quest/report-player-convinced/closing",
+            "text": "crystal-quests/report/evasive"
+        },
+        "crystal-quests/report/gave-up-magic": {
+            "availableHook": "crystalsQuestTalkedAboutCrystalMagic",
+            "state": "crystals-quest/report-player-convinced/about-crystal-magic",
+            "text": "crystal-quests/report/gave-up-magic"
+        },
+        "crystal-quests/report/give-up-moral": {
+            "state": "crystals-quest/report-player-convinced/closing",
+            "text": "crystal-quests/report/give-up-moral"
+        },
+        "crystals-quest-accept": {
+            "text": "crystals-quest-accept"
+        },
+        "crystals-quest-reject": {
+            "text": "crystals-quest-reject"
+        },
+        "crystals-quest/report/answer-convinced": {
+            "state": "crystals-quest/report-shaman-convinced/convinced",
+            "text": "crystals-quest/report/answer-convinced"
+        },
+        "crystals-quest/report/answer-evasive": {
+            "state": "crystals-quest/report-shaman-convinced/evasive",
+            "text": "crystals-quest/report/answer-evasive"
+        },
+        "crystals-quest/report/answer-evasive-push": {
+            "availableHook": "crystalsQuestCanBeEvasive",
+            "state": "crystals-quest/report-shaman-convinced/evasive-success",
+            "text": "crystals-quest/report/answer-evasive-push"
+        },
+        "crystals-quest/report/answer-intimidated": {
+            "state": "crystals-quest/report-shaman-convinced/intimidated",
+            "text": "crystals-quest/report/answer-intimidated"
+        },
+        "crystals-quest/report/crystal-magic-answer-dismiss": {
+            "state": "crystals-quest/report-player-convinced/closing",
+            "text": "crystals-quest/report/crystal-magic-answer-dismiss"
+        },
+        "crystals-quest/report/crystal-magic-answer-spellcast": {
+            "availableHook": "crystalQuestsKnowsAboutCrystalMagic",
+            "state": "crystals-quest/report-player-convinced/about-crystal-magic#2",
+            "text": "crystals-quest/report/crystal-magic-answer-spellcast"
+        },
+        "crystals-quest/report/stolen-answer-001": {
+            "state": "crystals-quest/report-robbed/intimidated",
+            "text": "crystals-quest/report/stolen-answer-001"
+        },
+        "crystals-quest/report/stolen-answer-002": {
+            "state": "crystals-quest/report-robbed/robbed",
+            "text": "crystals-quest/report/stolen-answer-002"
+        },
+        "crystals-quest/report/stolen-answer-evasive": {
+            "state": "crystals-quest/report-robbed/evasive",
+            "text": "crystals-quest/report/stolen-answer-evasive"
+        },
+        "crystals-quest/report/to-shaman-convinced-closing": {
+            "state": "crystals-quest/report-shaman-convinced/closing",
+            "text": "exit"
+        },
+        "crystals-quest/start-cooperation": {
+            "availableHook": "crystalsQuestWasShamanCooperative",
+            "state": "crystals-quest/report-compromise/entry",
+            "text": "crystals-quest/start-cooperation"
+        },
+        "crystals-quest/start-player-convinced": {
+            "availableHook": "crystalsQuestWasPlayerConvinced",
+            "state": "crystals-quest/report-player-convinced/entry",
+            "text": "crystals-quest/start-player-convinced"
+        },
+        "crystals-quest/start-shaman-convinced": {
+            "availableHook": "crystalsQuestWasShamanConvinced",
+            "state": "crystals-quest/report-shaman-convinced/entry",
+            "text": "crystals-quest/start-shaman-convinced"
+        },
+        "crystals-quest/start-stolen": {
+            "availableHook": "crystalsQuestHasStolenCrystals",
+            "state": "crystals-quest/report-robbed/entry",
+            "text": "crystals-quest/start-stolen"
+        },
+        "crystals-quests-negociate-more": {
+            "availableHook": "crystalsQuestCanNegociateReward",
+            "state": "crystals-quest/intro/reward-negociated",
+            "text": "crystals-quests-negociate-more"
+        },
+        "fight-quest-accept": {
+            "state": "fight-quest/accepted",
+            "text": "fight-quest-accept"
+        },
+        "fight-quest-if-reward": {
+            "state": "fight-quest/accepted",
+            "text": "fight-quest-if-reward"
+        },
+        "fight-quest-intro-continue": {
+            "state": "fight-quest/part2",
+            "text": "fight-quest-intro-continue"
+        },
+        "fight-quest-reject": {
+            "text": "fight-quest-reject"
+        },
+        "housing-agree": {
+            "hook": "housingDebateExit",
+            "text": "housing-agree"
+        },
+        "housing-exit-cool-off": {
+            "text": "housing-exit-cool-off"
+        },
+        "housing-exit-furious": {
+            "text": "housing-exit-furious"
+        },
+        "housing-finish": {
+            "hook": "housingDebateExit",
+            "text": "housing-finish"
+        },
+        "housing-fuck-off": {
+            "state": "crystals-quest/intro/housing-outburst",
+            "text": "housing-fuck-off"
+        },
+        "housing-press": {
+            "state": "crystals-quest/intro/housing-tensions",
+            "text": "housing-press"
+        },
+        "housing-press-more": {
+            "state": "crystals-quest/intro/housing-tensios-2",
+            "text": "housing-press-more"
+        },
+        "housing-solution": {
+            "availableHook": "canSolveRefugeeHousingProblem",
+            "state": "crystals-quest/intro/housing-solutions",
+            "text": "housing-solution"
+        },
+        "housing-solved": {
+            "hook": "housingDebateExit",
+            "text": "housing-solved"
+        },
+        "leave-entry": {
+            "text": "leave-entry"
+        },
+        "prompt-leave": {
+            "text": "prompt-leave"
+        },
+        "quest-intro-continue": {
+            "hook": "crystalsQuestIntroContinue",
+            "state": "crystals-quest/intro/part3",
+            "text": "quest-intro-continue"
+        },
+        "quest-intro-question-housing": {
+            "state": "crystals-quest/intro/housing",
+            "text": "quest-intro-question-housing"
+        }
+    },
+    "entryPoint": "entry",
+    "states": {
+        "crystals-quest/entry": {
+            "answers": [
+                "crystal-quest-entry-accept",
+                "crystal-quest-entry-reject"
+            ],
+            "text": "crystals-quest/entry"
+        },
+        "crystals-quest/intro/about-reward": {
+            "answers": [
+                "crystals-quest-accept",
+                "crystals-quests-negociate-more"
+            ],
+            "text": "crystals-quest/intro/about-reward"
+        },
+        "crystals-quest/intro/accepted": {
+            "answers": [
+            ],
+            "text": "crystals-quest/intro/accepted"
+        },
+        "crystals-quest/intro/housing": {
+            "answers": [
+                "housing-agree",
+                "housing-solution",
+                "housing-press"
+            ],
+            "hook": "housingDebateStart",
+            "mood": "dubious",
+            "text": "crystals-quest/intro/housing"
+        },
+        "crystals-quest/intro/housing-outburst": {
+            "answers": [
+                "housing-finish",
+                "housing-exit-furious",
+                "housing-exit-cool-off"
+            ],
+            "mood": "neutral",
+            "text": "crystals-quest/intro/housing-outburst"
+        },
+        "crystals-quest/intro/housing-solutions": {
+            "answers": [
+                "housing-solved"
+            ],
+            "hook": "solveHousingRefugeesProblem",
+            "mood": "smile",
+            "text": "crystals-quest/intro/housing-solutions"
+        },
+        "crystals-quest/intro/housing-tensions": {
+            "answers": [
+                "housing-agree",
+                "housing-press-more"
+            ],
+            "mood": "dubious",
+            "text": "crystals-quest/intro/housing-tensions"
+        },
+        "crystals-quest/intro/housing-tensios-2": {
+            "answers": [
+                "housing-agree",
+                "housing-fuck-off"
+            ],
+            "mood": "smile",
+            "text": "crystals-quest/intro/housing-tensios-2"
+        },
+        "crystals-quest/intro/part2": {
+            "answers": [
+                "quest-intro-continue"
+            ],
+            "text": "crystals-quest/intro/part2"
+        },
+        "crystals-quest/intro/part3": {
+            "answers": [
+                "crystals-quest-accept",
+                "crystal-quests-about-reward",
+                "crystals-quest-reject"
+            ],
+            "hook": "crystalsQuestIntroduced",
+            "mood": "neutral",
+            "text": "crystals-quest/intro/part3"
+        },
+        "crystals-quest/intro/reward-negociated": {
+            "answers": [
+                "crystals-quest-accept"
+            ],
+            "hook": "negociatedReward",
+            "text": "crystals-quest/intro/reward-negociated"
+        },
+        "crystals-quest/prompt": {
+            "answers": [
+                "crystals-quest/start-stolen",
+                "crystals-quest/start-player-convinced",
+                "crystals-quest/start-shaman-convinced",
+                "crystals-quest/start-cooperation",
+                "prompt-leave"
+            ],
+            "mood": "smile",
+            "text": "shadow-quest/prompt"
+        },
+        "crystals-quest/quest-intro": {
+            "answers": [
+                "quest-intro-continue",
+                "quest-intro-question-housing"
+            ],
+            "text": "crystals-quest/quest-intro"
+        },
+        "crystals-quest/quest-intro/housing": {
+            "answers": [
+            ],
+            "text": "crystals-quest/quest-intro/housing"
+        },
+        "crystals-quest/report-compromise/entry": {
+            "answers": [
+                "crystals-quest/report/to-shaman-convinced-closing"
+            ],
+            "text": "crystals-quest/report-compromise/entry"
+        },
+        "crystals-quest/report-player-convinced/about-crystal-magic": {
+            "answers": [
+                "crystals-quest/report/crystal-magic-answer-spellcast",
+                "crystals-quest/report/crystal-magic-answer-dismiss"
+            ],
+            "text": "crystals-quest/report-player-convinced/about-crystal-magic"
+        },
+        "crystals-quest/report-player-convinced/about-crystal-magic#2": {
+            "answers": [
+                "crystal-quests/report/give-up-moral"
+            ],
+            "hook": "crystalsQuestToldAboutCrystalMagic",
+            "text": "crystals-quest/report-player-convinced/about-crystal-magic#2"
+        },
+        "crystals-quest/report-player-convinced/closing": {
+            "answers": [
+            ],
+            "hook": "crystalsQuestFinish",
+            "text": "crystals-quest/report-player-convinced/closing"
+        },
+        "crystals-quest/report-player-convinced/entry": {
+            "answers": [
+                "crystal-quests/report/gave-up-magic",
+                "crystal-quests/report/give-up-moral",
+                "crystal-quests/report/evasive"
+            ],
+            "text": "crystals-quest/report-player-convinced/entry"
+        },
+        "crystals-quest/report-robbed/entry": {
+            "answers": [
+                "crystals-quest/report/stolen-answer-001",
+                "crystals-quest/report/stolen-answer-002",
+                "crystals-quest/report/stolen-answer-evasive"
+            ],
+            "hook": "crystalsQuestStolenCrystals",
+            "mood": "smile",
+            "text": "crystals-quest/report-robbed/entry"
+        },
+        "crystals-quest/report-robbed/evasive": {
+            "answers": [
+                "crystals-quest/report/answer-evasive-push",
+                "crystals-quest/report/stolen-answer-001",
+                "crystals-quest/report/stolen-answer-002"
+            ],
+            "mood": "dubious",
+            "text": "crystals-quest/report-shaman-convinced/evasive"
+        },
+        "crystals-quest/report-robbed/intimidated": {
+            "answers": [
+                "crystals-quest/report/to-shaman-convinced-closing"
+            ],
+            "mood": "smile",
+            "text": "crystals-quest/report-robbed/intimidated"
+        },
+        "crystals-quest/report-robbed/robbed": {
+            "answers": [
+                "crystals-quest/report/to-shaman-convinced-closing"
+            ],
+            "mood": "dubious",
+            "text": "crystals-quest/report-robbed/robbed"
+        },
+        "crystals-quest/report-shaman-convinced/closing": {
+            "answers": [
+            ],
+            "hook": "crystalsQuestFinish",
+            "text": "crystals-quest/report-shaman-convinced/closing"
+        },
+        "crystals-quest/report-shaman-convinced/convinced": {
+            "answers": [
+                "crystals-quest/report/to-shaman-convinced-closing"
+            ],
+            "text": "crystals-quest/report-shaman-convinced/convinced"
+        },
+        "crystals-quest/report-shaman-convinced/entry": {
+            "answers": [
+                "crystals-quest/report/answer-intimidated",
+                "crystals-quest/report/answer-convinced",
+                "crystals-quest/report/answer-evasive"
+            ],
+            "text": "crystals-quest/report-shaman-convinced/entry"
+        },
+        "crystals-quest/report-shaman-convinced/evasive": {
+            "answers": [
+                "crystals-quest/report/answer-evasive-push",
+                "crystals-quest/report/answer-intimidated",
+                "crystals-quest/report/answer-convinced"
+            ],
+            "text": "crystals-quest/report-shaman-convinced/evasive"
+        },
+        "crystals-quest/report-shaman-convinced/evasive-success": {
+            "answers": [
+                "crystals-quest/report/to-shaman-convinced-closing"
+            ],
+            "text": "crystals-quest/report-shaman-convinced/evasive-success"
+        },
+        "crystals-quest/report-shaman-convinced/intimidated": {
+            "answers": [
+                "crystals-quest/report/to-shaman-convinced-closing"
+            ],
+            "text": "crystals-quest/report-shaman-convinced/intimidated"
+        },
+        "entry": {
+            "answers": [
+                "ask-about-work",
+                "ask-about-crystals-quest",
+                "ask-about-fighting-quest",
+                "leave-entry"
+            ],
+            "text": "entry"
+        },
+        "fight-quest/accepted": {
+            "answers": [
+            ],
+            "hook": "fightingQuestIntroduced",
+            "text": "fight-quest/accepted"
+        },
+        "fight-quest/intro": {
+            "answers": [
+                "fight-quest-intro-continue"
+            ],
+            "text": "fight-quest/intro"
+        },
+        "fight-quest/part2": {
+            "answers": [
+                "fight-quest-accept",
+                "fight-quest-if-reward",
+                "fight-quest-reject"
+            ],
+            "text": "fight-quest/part2"
+        },
+        "fight-quest/prompt": {
+            "answers": [
+            ],
+            "text": "fight-quest/prompt"
+        }
+    }
+}

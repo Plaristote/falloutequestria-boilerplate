@@ -1,0 +1,141 @@
+{
+    "answers": {
+        "ask-about-refugees": {
+            "availableHook": "canAskAboutRefugees",
+            "state": "refugees/prompt",
+            "text": "ask-about-refugees"
+        },
+        "ask-refugee-fight": {
+            "availableHook": "canAskAboutRefugeeFight",
+            "state": "refugees/fight/entry",
+            "text": "ask-refugee-fight"
+        },
+        "ask-refugee-opinion": {
+            "state": "refugees/opinion/neutral",
+            "text": "ask-refugee-opinion"
+        },
+        "leave": {
+            "text": "leave"
+        },
+        "refugees/back-to-prompt": {
+            "state": "refugees/prompt",
+            "text": "refugees/back-to-prompt"
+        },
+        "refugees/fight/answer-ask-culprits": {
+            "state": "refugees/fight/about-culprits",
+            "text": "refugees/fight/answer-ask-culprits"
+        },
+        "refugees/fight/answer-ask-fight": {
+            "state": "refugees/fight/about-fight",
+            "text": "refugees/fight/answer-ask-fight"
+        },
+        "refugees/fight/answer-ask-fight-alt": {
+            "state": "refugees/fight/about-fight",
+            "text": "refugees/fight/answer-ask-fight-alt"
+        },
+        "refugees/fight/answer-ask-insults": {
+            "state": "refugees/fight/about-insults",
+            "text": "refugees/fight/answer-ask-insults"
+        },
+        "refugees/fight/answer-ask-wounded": {
+            "availableHook": "canAskAboutRefugeeWound",
+            "state": "refugees/fight/about-wounded-refugee",
+            "text": "refugees/fight/answer-ask-wounded"
+        },
+        "refugees/fight/answer-fight-followup#1": {
+            "availableHook": "canAskFightFollowUp1",
+            "state": "refugees/fight/about-fight",
+            "text": "refugees/fight/answer-fight-followup#1"
+        },
+        "refugees/fight/answer-fight-followup#2": {
+            "availableHook": "canAskFightFollowUp2",
+            "state": "refugees/fight/about-fight",
+            "text": "refugees/fight/answer-fight-followup#2"
+        },
+        "refugees/fight/exit": {
+            "text": "refugees/fight/exit"
+        }
+    },
+    "entryPoint": "entry",
+    "states": {
+        "entry": {
+            "answers": [
+                "ask-about-refugees",
+                "leave"
+            ],
+            "text": "entry"
+        },
+        "refugees/fight/about-culprits": {
+            "answers": [
+                "refugees/fight/answer-ask-wounded",
+                "refugees/fight/answer-ask-fight-alt",
+                "refugees/back-to-prompt",
+                "refugees/fight/exit"
+            ],
+            "mood": "dubious",
+            "text": "refugees/fight/about-culprits"
+        },
+        "refugees/fight/about-fight": {
+            "answers": [
+                "refugees/fight/answer-fight-followup#1",
+                "refugees/fight/answer-fight-followup#2",
+                "refugees/fight/answer-ask-wounded",
+                "refugees/fight/answer-ask-culprits",
+                "refugees/fight/exit"
+            ],
+            "hook": "refugeesFightAboutFight",
+            "mood": "sad",
+            "text": "refugees/fight/about-fight"
+        },
+        "refugees/fight/about-flee": {
+            "answers": [
+            ],
+            "text": "refugees/fight/about-flee"
+        },
+        "refugees/fight/about-following": {
+            "answers": [
+            ],
+            "text": "refugees/fight/about-following"
+        },
+        "refugees/fight/about-insults": {
+            "answers": [
+                "refugees/fight/answer-ask-fight",
+                "refugees/fight/answer-ask-culprits"
+            ],
+            "text": "refugees/fight/about-insults"
+        },
+        "refugees/fight/about-wounded-refugee": {
+            "answers": [
+                "refugees/fight/exit",
+                "refugees/back-to-prompt"
+            ],
+            "hook": "refugeesFightAboutWoundedRefugee",
+            "text": "refugees/fight/about-wounded-refugee"
+        },
+        "refugees/fight/entry": {
+            "answers": [
+                "refugees/fight/answer-ask-fight",
+                "refugees/fight/answer-ask-insults",
+                "refugees/fight/answer-ask-culprits",
+                "refugees/back-to-prompt",
+                "refugees/fight/exit"
+            ],
+            "text": "refugees/fight/entry"
+        },
+        "refugees/opinion/neutral": {
+            "answers": [
+                "refugees/back-to-prompt",
+                "leave"
+            ],
+            "text": "refugees/opinion/neutral"
+        },
+        "refugees/prompt": {
+            "answers": [
+                "ask-refugee-fight",
+                "ask-refugee-opinion",
+                "leave"
+            ],
+            "text": "refugees/prompt"
+        }
+    }
+}
