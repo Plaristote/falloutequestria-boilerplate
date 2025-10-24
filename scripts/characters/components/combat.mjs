@@ -90,6 +90,7 @@ export class CombatComponent extends SkillTargetComponent {
 
   onTurnStart() {
     this._combatRunCount++;
+    this._combatRunAP = this.model.actionPoints;
     console.log(this.logPrefix, "on turn start", this.model, this.combatTarget);
     if (this.findCombatTarget()) {
       const result = this.model.morale > 0 ? this.fightCombatTarget() : this.runAwayFromCombatTarget();
@@ -129,6 +130,8 @@ export class CombatComponent extends SkillTargetComponent {
 
   onCombatActionQueueCompleted() {
     console.log(this.logPrefix, "triggering turn again, action completed");
-    if (level.isCharacterTurn(this.model)) this.onTurnStart();
+    if (level.isCharacterTurn(this.model) && this._combatRunAP != this.model.actionPoints) {
+      this.onTurnStart();
+    }
   }
 }
