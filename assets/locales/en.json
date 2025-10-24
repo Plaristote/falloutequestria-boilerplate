@@ -109,6 +109,10 @@
         "thornhoof": {
             "description": "Thornhoof is a small walled city, which recently fell prey to the raids of the Golden Herd. The city is ruled by a republic, designed to reward the most deserving, and to delegate the power to an elite of scientists, engineers and warriors.",
             "name": "Thornhoof"
+        },
+        "thornhoof-refugees": {
+            "description": "The town of Basalburg was attacked, pillaged and destroyed by the Golden Herd. The few survivors who managed to escape found refuge in the town of Thornhoof.  They've managed to survive there since then, waiting for better days.",
+            "name": "Basalburg Refugees"
         }
     },
     "locations": {

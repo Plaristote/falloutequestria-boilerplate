@@ -83,11 +83,17 @@
         },
         "steel-rangers": {
             "description": "Les Steel Rangers sont une faction d'élite militante, technologiquement avancée, constituée de poneys et de licornes parés d'armures métalliques. Derniers membres restants de Ministère de la Technologie de Guerre, ils naquirent lorsque ce dernier, ainsi que le Ministère des Sciences Arcaniques, coopérèrent pour créer la super armure emblématique des Steel Rangers.",
+            "name": "Steel Rangers",
             "title": "Steel Rangers"
         },
         "thornhoof": {
             "description": "Sabairain est une petite citée enclavée, récemment victime des raides du Troupeau d'Or. La ville est constituée en république, instituée afin de récompenser les plus méritants, et déléguer le pouvoir à une élite de scientifiques, ingénieurs et guerriers.",
+            "name": "Sabairain",
             "title": "Sabairain"
+        },
+        "thornhoof-refugees": {
+            "description": "La ville de Basalburg a été attaqué, pillé, et détruite par le Troupeau d'Or. Les rares survivants ayant échappé au massacre se sont réfugiés dans la ville de Sabairain. Ils y survivent tant bien que mal, dans l'attente de jours meilleurs.",
+            "name": "Réfugiés de Basalburg"
         }
     },
     "item-descriptions": {

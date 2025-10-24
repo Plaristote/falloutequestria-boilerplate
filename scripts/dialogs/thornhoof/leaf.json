@@ -116,6 +116,21 @@
             "state": "fight-quest/accepted",
             "text": "fight-quest-accept"
         },
+        "fight-quest-found-hideout": {
+            "availableHook": "fightQuestCanReportHideout",
+            "state": "fight-quest/on-found-hideout",
+            "text": "fight-quest-found-hideout"
+        },
+        "fight-quest-found-killed": {
+            "availableHook": "fightQuestCanReportKilled",
+            "state": "fight-quest/on-found-dead",
+            "text": "fight-quest-found-killed"
+        },
+        "fight-quest-found-wounded": {
+            "availableHook": "fightQuestCanReportWounded",
+            "state": "fight-quest/on-found-wounded",
+            "text": "fight-quest-found-wounded"
+        },
         "fight-quest-if-reward": {
             "state": "fight-quest/accepted",
             "text": "fight-quest-if-reward"
@@ -126,6 +141,71 @@
         },
         "fight-quest-reject": {
             "text": "fight-quest-reject"
+        },
+        "fight-quest/accept-reward": {
+            "text": "fight-quest/accept-reward"
+        },
+        "fight-quest/increase-reward": {
+            "availableHook": "fightQuestCanIncreaseReward",
+            "state": "fight-quest/reward/negociate-success",
+            "text": "fight-quest/increase-reward"
+        },
+        "fight-quest/terminate-no-reward": {
+            "text": "fight-quest/terminate-no-reward"
+        },
+        "fight-quest/terminate-reward": {
+            "state": "fight-quest/reward/entry",
+            "text": "fight-quest/terminate-reward"
+        },
+        "fight-quest/to-hideout-grab": {
+            "hook": "fightQuestHideoutGrab",
+            "state": "fight-quest/hideout-grabbed",
+            "text": "exit"
+        },
+        "fight-quest/trial-alt-1": {
+            "state": "fight-quest/judgement/alt-1",
+            "text": "fight-quest/trial-alt-1"
+        },
+        "fight-quest/trial-alt-2": {
+            "state": "fight-quest/judgement/alt-2",
+            "text": "fight-quest/trial-alt-2"
+        },
+        "fight-quest/trial-alt-3": {
+            "state": "fight-quest/judgement/alt-2",
+            "text": "fight-quest/trial-alt-3"
+        },
+        "fight-quest/trial-death-1": {
+            "state": "fight-quest/judgement/death-1",
+            "text": "fight-quest/trial-death-1"
+        },
+        "fight-quest/trial-death-2": {
+            "state": "fight-quest/judgement/death-1",
+            "text": "fight-quest/trial-death-2"
+        },
+        "fight-quest/trial-death-3": {
+            "state": "fight-quest/judgement/death-1",
+            "text": "fight-quest/trial-death-3"
+        },
+        "fight-quest/trial-death-4": {
+            "state": "fight-quest/judgement/death-2",
+            "text": "fight-quest/trial-death-4"
+        },
+        "fight-quest/trial-death-5": {
+            "state": "fight-quest/judgement/death-2",
+            "text": "fight-quest/trial-death-5"
+        },
+        "fight-quest/trial-mercy-1": {
+            "state": "fight-quest/judgement/mercy-1",
+            "text": "fight-quest/trial-mercy-1"
+        },
+        "fight-quest/trial-mercy-2": {
+            "hook": "fightQuestTrialMercy2",
+            "state": "fight-quest/judgement/mercy-2-success",
+            "text": "fight-quest/trial-mercy-2"
+        },
+        "go-to-judgement": {
+            "state": "fight-quest/judgement/entry",
+            "text": "exit"
         },
         "housing-agree": {
             "hook": "housingDebateExit",
@@ -410,11 +490,129 @@
             "hook": "fightingQuestIntroduced",
             "text": "fight-quest/accepted"
         },
+        "fight-quest/hideout-brought": {
+            "answers": [
+                "go-to-judgement"
+            ],
+            "mood": "smile",
+            "text": "fight-quest/hideout-brought"
+        },
+        "fight-quest/hideout-cleared": {
+            "answers": [
+                "fight-quest/terminate-no-reward",
+                "fight-quest/terminate-reward"
+            ],
+            "mood": "sad",
+            "text": "fight-quest/hideout-cleared"
+        },
+        "fight-quest/hideout-grabbed": {
+            "answers": [
+                "go-to-judgement"
+            ],
+            "mood": "smile",
+            "text": "fight-quest/hideout-grabbed"
+        },
         "fight-quest/intro": {
             "answers": [
                 "fight-quest-intro-continue"
             ],
             "text": "fight-quest/intro"
+        },
+        "fight-quest/judgement/alt-1": {
+            "answers": [
+                "fight-quest/trial-alt-3",
+                "fight-quest/trial-death-2"
+            ],
+            "text": "fight-quest/judgement/alt-1"
+        },
+        "fight-quest/judgement/alt-2": {
+            "answers": [
+                "fight-quest/terminate-no-reward",
+                "fight-quest/terminate-reward"
+            ],
+            "hook": "fightQuestTrialLaborEnd",
+            "mood": "smile",
+            "text": "fight-quest/judgement/alt-2"
+        },
+        "fight-quest/judgement/death-1": {
+            "answers": [
+                "fight-quest/trial-death-5",
+                "fight-quest/trial-death-4"
+            ],
+            "text": "fight-quest/judgement/death-1"
+        },
+        "fight-quest/judgement/death-2": {
+            "answers": [
+                "fight-quest/terminate-no-reward",
+                "fight-quest/terminate-reward"
+            ],
+            "hook": "fightQuestTrialDeathEnd",
+            "mood": "angry",
+            "text": "fight-quest/judgement/death-2"
+        },
+        "fight-quest/judgement/entry": {
+            "answers": [
+                "fight-quest/trial-mercy-1",
+                "fight-quest/trial-death-1",
+                "fight-quest/trial-alt-1"
+            ],
+            "mood": "neutral",
+            "text": "fight-quest/judgement/entry"
+        },
+        "fight-quest/judgement/mercy-1": {
+            "answers": [
+                "fight-quest/trial-mercy-2",
+                "fight-quest/trial-alt-2",
+                "fight-quest/trial-death-3"
+            ],
+            "text": "fight-quest/judgement/mercy-1"
+        },
+        "fight-quest/judgement/mercy-2-fail": {
+            "answers": [
+                "fight-quest/trial-alt-3",
+                "fight-quest/trial-death-3"
+            ],
+            "mood": "dubious",
+            "text": "fight-quest/judgement/mercy-2-fail"
+        },
+        "fight-quest/judgement/mercy-2-fail-alt": {
+            "answers": [
+                "fight-quest/trial-alt-3",
+                "fight-quest/trial-death-3"
+            ],
+            "mood": "dubious",
+            "text": "fight-quest/judgement/mercy-2-fail-alt"
+        },
+        "fight-quest/judgement/mercy-2-success": {
+            "answers": [
+                "fight-quest/terminate-no-reward",
+                "fight-quest/terminate-reward"
+            ],
+            "hook": "fightQuestTrialMercyEnd",
+            "mood": "smile",
+            "text": "fight-quest/judgement/mercy-2-success"
+        },
+        "fight-quest/on-found-dead": {
+            "answers": [
+                "fight-quest/terminate-no-reward",
+                "fight-quest/terminate-reward"
+            ],
+            "hook": "fightQuestReportDeath",
+            "mood": "sad",
+            "text": "fight-quest/on-found-dead"
+        },
+        "fight-quest/on-found-hideout": {
+            "answers": [
+                "fight-quest/to-hideout-grab"
+            ],
+            "mood": "smile",
+            "text": "fight-quest/on-found-hideout"
+        },
+        "fight-quest/on-found-wounded": {
+            "answers": [
+            ],
+            "mood": "smile",
+            "text": "fight-quest/on-found-wounded"
         },
         "fight-quest/part2": {
             "answers": [
@@ -426,8 +624,28 @@
         },
         "fight-quest/prompt": {
             "answers": [
+                "fight-quest-found-killed",
+                "fight-quest-found-hideout",
+                "fight-quest-found-wounded",
+                "prompt-leave"
             ],
             "text": "fight-quest/prompt"
+        },
+        "fight-quest/reward/entry": {
+            "answers": [
+                "fight-quest/accept-reward",
+                "fight-quest/increase-reward"
+            ],
+            "mood": "smile",
+            "text": "fight-quest/reward/entry"
+        },
+        "fight-quest/reward/negociate-success": {
+            "answers": [
+                "fight-quest/accept-reward"
+            ],
+            "hook": "fightQuestIncreaseReward",
+            "mood": "sad",
+            "text": "fight-quest/reward/negociate-success"
         }
     }
 }

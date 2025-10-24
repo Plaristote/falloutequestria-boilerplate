@@ -10,6 +10,7 @@ function tryToStartShadowQuest() {
 class Dialog {
   constructor(dialog) {
     this.dialog = dialog;
+    this.fightQuestReward = 200;
   }
 
   getEntryPoint() {
@@ -132,6 +133,64 @@ class Dialog {
 
   get crystalsQuestReward() {
     return this.crystalsQuest.script.fullReward;
+  }
+
+  fightQuestCanReportKilled() {
+    return !level.script.hiddenRefugees.areAlive;
+  }
+
+  fightQuestCanReportHideout() {
+    const fugitiveAlive = !this.fightQuestCanReportKilled();
+    const knowsHideout =
+      this.brawlQuest.isObjectiveCompleted("find-refugees")
+   || this.brawlQuest.script.learnAboutHideout;
+   return knowsHideout && fugitiveAlive;
+  }
+
+  fightQuestCanReportWounded() {
+    return this.brawlQuest.isObjectiveCompleted("find-wounded-refugee");
+  }
+
+  fightQuestHideoutGrab() {
+    if (this.brawlQuest.script.hideoutWeaponsRemoved) {
+      this.brawlQuest.script.onHideoutGrabbed();
+      return "fight-quest/hideout-grabbed";
+    } else {
+      this.brawlQuest.script.onHideoutCleared();
+      return "fight-quest/hideout-cleared";
+    }
+  }
+
+  fightQuestTrialMercy2() {
+    if (!this.crystalsQuestWasShamanConvinced())
+      return "fight-quest/judgement/mercy-2-fail";
+    if (!this.brawlQuest.getVariable("refugeesArrested", 0) == 1)
+      return "fight-quest/judgement/mercy-2-fail-alt";
+    return "fight-quest/judgement/mercy-2-success";
+  }
+
+  fightQuestTrialMercyEnd() {
+    this.brawlQuest.script.onTrialEnded("mercy");
+  }
+
+  fightQuestTrialLaborEnd() {
+    this.brawlQuest.script.onTrialEnded("labor");
+  }
+
+  fightQuestTrialDeathEnd() {
+    this.brawlQuest.script.onTrialEnded("death");
+  }
+
+  fightQuestReportDeath() {
+    this.brawlQuest.script.onReportDeadRefugees();
+  }
+
+  fightQuestCanIncreaseReward() {
+    return game.player.statistics.barter > 70;
+  }
+
+  fightQuestIncreaseReward() {
+    this.fightQuestReward = 350;
   }
 
   notLastAnswer(answer) {

@@ -1,0 +1,40 @@
+{
+    "dialogs": {
+        "thornhoof/refugees/stitch": {
+            "R1A1": "Peut-être pas. Mais vous planquer ne vous rend que plus suspicieux. Venez avez moi, et je m'assurerais que vous soyez traité justement.",
+            "R1A2": "Tu as sans doute raison. Je suppose que je vais devoir arranger ça moi-même.",
+            "ask-about-cristal": "Vous savez quelque chose à propos d'un cristal de stockage disparu ?",
+            "ask-about-fire": "Alors, comment s'est produit l'incendie à l'entrepôt ?",
+            "ask-about-guns": "C'est vous qui avez volé des armes ?",
+            "cave-meeting-accept-to-tell-nothing": "Je comprends. Je ne dirai rien. Mais je veux savoir ce qui s'est passé.",
+            "cave-meeting-ask-confusion": "Qu'est-ce qui se passe ici ? Qu'est-ce que vous foutez là ?",
+            "cave-meeting-ask-negociate-confession": "Vous ne pouvez pas vous cacher éternellement. Racontez-moi. Je plaiderais pour vous.",
+            "cave-meeting-ask-understand": "Attendez ! Je ne vous veux aucun mal, je veux juste comprendre !",
+            "cave-meeting-attack": "<i>[Attaquer en premier]</i>",
+            "cave-meeting-attack-alt": "Dans ce cas, je ferais mieux de m'occuper de vous moi-même. <i>[Attaquer en premier]</i>",
+            "cave-meeting-shaman": "Attendez ! C'est votre chaman qui m'a envoyé ici. Je veux juste parler.",
+            "cave-meeting-tell-random": "Je ne faisais que passer par là… j'explorais.",
+            "cave-meeting-tell-shadow-quest": "Je suis mandaté par le Conseil pour enquêter sur plusieurs vols, et un départ d'incendie dans l'entrepôt.",
+            "cave-meeting/confusion": "C'est pas toi qui pose les questions. Qu'est-ce que toi, tu fou ici ?",
+            "cave-meeting/cristal-explanation": "Rain Peel s'est blessée gravement quand elle est tombée dans l'entrepôt. La chamane avait besoin d'aide pour la guérir.\n<br><br>\nEt il se trouve que les terminaux d'ici utilisent des cristaux pour le stockage de données. On en a chopé un par l'intermédiaire d'un vendeur à la sauvette. Peut-être que c'est celui que tu cherche. La chamane doit toujours l'avoir.",
+            "cave-meeting/entry": "Halte.<br>\nUn pas de plus et je t'egorge.",
+            "cave-meeting/explanation-0": "… si tu nous dénonce, la milice viendra nous chercher. Le sang coulera. Et pas juste le notre.",
+            "cave-meeting/explanation-1": "Nous n'avons rien fait de mal. On nous a attaqué, et nous nous sommes défendus. Une espèce de pochtron nous a insulté. Au début, on répondait pas. Après, il est devenu violent, et j'ai dû l'arrêter. Plus tard, on a appris qu'il était mort, alors on s'est caché.",
+            "cave-meeting/explanation-fail": "Je ne te crois pas. Tu va nous dénoncer. Je ne peux pas te laisser faire ça.\n<br><br>\n<i>Elle t'attaque.</i>",
+            "cave-meeting/fire-explanation": "On récupérait de la nourriture pour les réfugiés. C'est difficile pour nous d'être nourris correctement… on connait personne, ici. Les rations distribués par le Conseil ne sont pas suffisantes.\n<br><br>\nMais Rain Peel s'est pétée la gueule en escaladant une étagère. Elle s'est salement amochée, et a renversé notre lampe dans une caisse de fourrage.\n<br><br>\nEn sortant, on a croisé Dust Lock. Il a toujours été sympa avec nous. Il a accepté de nous cacher sans poser de question, et le lendemain, il a amené Peel à la chamane, au centre-ville, pour qu'elle s'occupe d'elle.",
+            "cave-meeting/go-to-council/entry": "Expliquer au conseil ? Ils nous auront pendu avant qu'un son ne sorte de nos gueules. Tu ne sais pas comme ils sont.",
+            "cave-meeting/go-to-council/mistrust": "Tu crois que ta parole représente quelque chose pour eux ? Tu crois qu'elle représente quoique ce soit pour nous ? Je ne te fais pas confiance. Désolé, mais je ne peux pas te laisser sortir d'ici vivant.",
+            "cave-meeting/go-to-council/mistrust-defended": "La sureté de mes amis est ma priorité. S'il faut que je devienne un meurtrier, ainsi soit-il.",
+            "cave-meeting/go-to-council/mistrust-defended-successfully": "Oui, c'est pas faux. T'as du bagou, toi. Je vais compter sur toi.",
+            "cave-meeting/go-to-council/on-your-own": "Ceci dit, devrais-je vraiment te laisser partir ? Qu'est-ce qui me prouve que tu ne va pas nous dénoncer ?",
+            "cave-meeting/go-to-council/trust": "Tu prendrais vraiment notre défense ? D'accord. Nous avons entendu ce que tu as fait pour nos semblables. On te suit.",
+            "cave-meeting/gun-explanation": "On a pris des flingues, ouais. Quand la milice voudra nous jeter hors de ces murs, nous serons prêt à nous défendre.",
+            "cave-meeting/justified-council": "Je craignais que ce soit le cas… dans ce cas, je ne peux vraiment pas te laisser partir.",
+            "cave-meeting/justified-random": "Tu explorais, et tu t'es retrouvé dans la cave de Dust Lock ? Je crois pas qu'il t'ai laissé rentrer volontairement. Mais maintenant que tu es ici, plus question de sortir.\n<br><br>\n<i>Elle t'attaque.</i>",
+            "explanation-exit": "Je comprends.",
+            "mistrust-defense": "Non ! Tu n'es pas encore un meurtrier, mais si tu me tue maintenant, tu va le devenir.",
+            "mistrust-defense-2": "Tu va devoir me faire confiance. Je pense que tu n'as pas vraiment le choix. Tue moi, et c'est retour à la case départ : vous restez des fugitifs, indéfiniement.",
+            "mistrust-defense-3": "Tu va devoir me faire confiance. Tu ne va quand même pas me tuer sur une suspicion ?"
+        }
+    }
+}

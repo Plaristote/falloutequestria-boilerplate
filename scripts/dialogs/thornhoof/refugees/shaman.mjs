@@ -20,6 +20,9 @@ class Dialog {
     return game.player.inventory.count("crystal-companion") > 0;
   }
 
+  /*
+   * Refugees Crystal Quest
+   */
   get crystalsQuest() {
     return game.quests.getQuest("thornhoof/refugeesCrystals");
   }
@@ -93,6 +96,71 @@ class Dialog {
       "about-crystals/intimidated/answer002" +
       (this.crystalsQuestIntimidateSpeechSuccess ? "" : "-fail")
     );
+  }
+
+  get crystalsQuestHelpedRefugees() {
+    return this.crystalsQuest.script.flags.has(this.crystalsQuestFlags.PlayerConvinced);
+  }
+
+  /*
+   * Refugees Fight Quest
+   */
+  get fightQuest() {
+    return game.quests.getQuest("thornhoof/refugeesFight");
+  }
+
+  canStartWoundedPonyTalk() {
+    if (this.fightQuest.isObjectiveCompleted("interrogate-shaman"))
+      return false;
+    return this.fightQuest.script.woundedDetected > 0;
+  }
+
+  woundedPonyAlreadyDetected() {
+    return this.fightQuest.script.woundedDetected > 1;
+  }
+
+  woundedPonyCanSkipConvincing() {
+    return game.player.statistics.speech >= 80;
+  }
+
+  woundedPonyLearnAboutFriends() {
+    this.fightQuest.script.learnAboutHideout = "shaman";
+  }
+
+  woundedPonyLearnAboutWounded() {
+    this.fightQuest.script.woundedDetected = 2;
+  }
+
+  woundedPonyStart() {
+    this.fightQuest.completeObjective("interrogate-shaman");
+  }
+
+  woundedPonyTryConvinceTellOnWounded() {
+    if (this.crystalsQuestHelpedRefugees)
+      return "about-wounded/path-1#2-success";
+    return "about-wounded/path-1#2-failure-alt";
+  }
+
+  woundedPonyTryConvinceTellOnWoundedAlt() {
+    let threshold = 80;
+
+    if (this.crystalsQuestHelpedRefugees)
+      threshold = 50;
+    return game.player.statistics.speech >= threshold
+      ? "about-wounded/path-1#2-success-alt"
+      : "about-wounded/path-1#2-failure-alt";
+  }
+
+  woundedPonyTriConvinceTellOnWoudedAlt2() {
+    if (this.crystalsQuestHelpedRefugees)
+      return "about-wounded/path-1#2-success";
+    return "about-wounded/P1A8-failure";
+  }
+
+  woundedPonyTryConvinceFairTrial() {
+    if (this.crystalsQuestHelpedRefugees)
+      return "about-wounded/convinced";
+    return "about-wounded/thornhoof-justice-fail";
   }
 }
 

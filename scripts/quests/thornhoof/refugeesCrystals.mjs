@@ -140,4 +140,21 @@ export default class extends QuestHelper {
         break ;
     }
   }
+
+  onSuccess() {
+    super.onSuccess();
+    if (this.flags.has(Flags.PlayerConvinced)) {
+      game.dataEngine.addReputation("thornhoof-refugees", 30);
+      game.dataEngine.addReputation("thornhoof", -15);
+    } else if (this.flags.has(Flags.ShamanConvinced)) {
+      game.dataEngine.addReputation("thornhoof-refugees", -15);
+      game.dataEngine.addReputation("thornhoof", 20);
+    } else if (this.flags.has(Flags.ShamanCooperating)) {
+      game.dataEngine.addReputation("thornhoof-refugees", 5);
+      game.dataEngine.addReputation("thornhoof", 5);
+    } else {
+      game.dataEngine.addReputation("thornhoof-refugees", -20);
+      game.dataEngine.addReputation("thornhoof", 20);
+    }
+  }
 }

@@ -1,0 +1,202 @@
+{
+    "answers": {
+        "R1A": {
+            "state": "cave-meeting/go-to-council/entry",
+            "text": "R1A"
+        },
+        "R1A1": {
+            "hook": "caveMeetingGoToCouncilConvince",
+            "state": "cave-meeting/go-to-council/mistrust",
+            "text": "R1A1"
+        },
+        "R1A2": {
+            "state": "cave-meeting/go-to-council/on-your-own",
+            "text": "R1A2"
+        },
+        "R1B": {
+            "hook": "caveMeetingGoToCouncilConvince",
+            "text": "R1B"
+        },
+        "R1C": {
+            "state": "cave-meeting/surrender/entry",
+            "text": "R1C"
+        },
+        "cave-meeting-accept-to-tell-nothing": {
+            "hook": "caveMeetingConvinceAttempt",
+            "state": "cave-meeting/explanation-1",
+            "text": "cave-meeting-accept-to-tell-nothing"
+        },
+        "cave-meeting-ask-confusion": {
+            "state": "cave-meeting/confusion",
+            "text": "cave-meeting-ask-confusion"
+        },
+        "cave-meeting-ask-negociate-confession": {
+            "hook": "caveMeetingConvinceAttempt",
+            "state": "cave-meeting/explanation-1",
+            "text": "cave-meeting-ask-negociate-confession"
+        },
+        "cave-meeting-ask-understand": {
+            "hook": "caveMeetingConvinceAttempt",
+            "state": "cave-meeting/explanation-0",
+            "text": "cave-meeting-ask-understand"
+        },
+        "cave-meeting-attack": {
+            "hook": "startFight",
+            "text": "cave-meeting-attack"
+        },
+        "cave-meeting-attack-alt": {
+            "hook": "startFight",
+            "text": "cave-meeting-attack-alt"
+        },
+        "cave-meeting-shaman": {
+            "availableHook": "caveHideoutLearnedFromShaman",
+            "state": "cave-meeting/sent-by-shaman",
+            "text": "cave-meeting-shaman"
+        },
+        "cave-meeting-tell-random": {
+            "state": "cave-meeting/justified-random",
+            "text": "cave-meeting-tell-random"
+        },
+        "cave-meeting-tell-shadow-quest": {
+            "availableHook": "hasShadowQuest",
+            "state": "cave-meeting/justified-council",
+            "text": "cave-meeting-tell-shadow-quest"
+        },
+        "go-to-council": {
+            "hook": "goToConfrontCouncil",
+            "text": "go-to-council"
+        },
+        "mistrust-defense": {
+            "state": "cave-meeting/go-to-council/mistrust-defended",
+            "text": "mistrust-defense"
+        },
+        "mistrust-defense-2": {
+            "availableHook": "caveMeetingGoToCouncilCanConvinceToSpare",
+            "state": "cave-meeting/go-to-council/mistrust-defended-successfully",
+            "text": "mistrust-defense-2"
+        },
+        "mistrust-defense-3": {
+            "availableHook": "!caveMeetingGoToCouncilCanConvinceToSpare",
+            "hook": "caveMeetingGoToCouncilConvinceToSpare",
+            "state": "cave-meeting/go-to-council/mistrust-defended",
+            "text": "mistrust-defense-3"
+        }
+    },
+    "entryPoint": "cave-meeting/entry",
+    "states": {
+        "cave-meeting/confusion": {
+            "answers": [
+                "cave-meeting-tell-shadow-quest",
+                "cave-meeting-tell-random",
+                "cave-meeting-attack"
+            ],
+            "text": "cave-meeting/confusion"
+        },
+        "cave-meeting/entry": {
+            "answers": [
+                "cave-meeting-shaman",
+                "cave-meeting-ask-confusion",
+                "cave-meeting-attack"
+            ],
+            "hook": "caveMeeting",
+            "mood": "angry",
+            "text": "cave-meeting/entry"
+        },
+        "cave-meeting/explanation-0": {
+            "answers": [
+                "cave-meeting-accept-to-tell-nothing",
+                "cave-meeting-ask-negociate-confession",
+                "cave-meeting-attack-alt"
+            ],
+            "mood": "cocky",
+            "text": "cave-meeting/explanation-0"
+        },
+        "cave-meeting/explanation-1": {
+            "answers": [
+                "R1A",
+                "R1B",
+                "R1C"
+            ],
+            "hook": "caveMeetingExplanationPrompt",
+            "mood": "angry",
+            "text": "cave-meeting/explanation-1"
+        },
+        "cave-meeting/explanation-fail": {
+            "answers": [
+            ],
+            "hook": "npcStartsFight",
+            "text": "cave-meeting/explanation-fail"
+        },
+        "cave-meeting/go-to-council/entry": {
+            "answers": [
+                "R1A1",
+                "R1A2"
+            ],
+            "mood": "dubious",
+            "text": "cave-meeting/go-to-council/entry"
+        },
+        "cave-meeting/go-to-council/mistrust": {
+            "answers": [
+                "mistrust-defense",
+                "cave-meeting-attack"
+            ],
+            "mood": "angry",
+            "text": "cave-meeting/go-to-council/mistrust"
+        },
+        "cave-meeting/go-to-council/mistrust-defended": {
+            "answers": [
+            ],
+            "hook": "startFight",
+            "mood": "angry",
+            "text": "cave-meeting/go-to-council/mistrust-defended"
+        },
+        "cave-meeting/go-to-council/mistrust-defended-successfully": {
+            "answers": [
+            ],
+            "mood": "cocky",
+            "text": "cave-meeting/go-to-council/mistrust-defended-successfully"
+        },
+        "cave-meeting/go-to-council/on-your-own": {
+            "answers": [
+                "mistrust-defense-3",
+                "mistrust-defense-2",
+                "cave-meeting-attack"
+            ],
+            "mood": "dubious",
+            "text": "cave-meeting/go-to-council/on-your-own"
+        },
+        "cave-meeting/go-to-council/trust": {
+            "answers": [
+                "go-to-council"
+            ],
+            "mood": "smile",
+            "text": "cave-meeting/go-to-council/trust"
+        },
+        "cave-meeting/justified-council": {
+            "answers": [
+                "cave-meeting-ask-understand",
+                "cave-meeting-attack"
+            ],
+            "text": "cave-meeting/justified-council"
+        },
+        "cave-meeting/justified-random": {
+            "answers": [
+            ],
+            "hook": "npcStartsFight",
+            "text": "cave-meeting/justified-random"
+        },
+        "cave-meeting/sent-by-shaman": {
+            "answers": [
+                "cave-meeting-ask-negociate-confession"
+            ],
+            "hook": "caveMeetingSentByShaman",
+            "mood": "dubious",
+            "text": "cave-meeting/sent-by-shaman"
+        },
+        "cave-meeting/surrender/entry": {
+            "answers": [
+            ],
+            "text": "cave-meeting/surrender/entry"
+        }
+    }
+}

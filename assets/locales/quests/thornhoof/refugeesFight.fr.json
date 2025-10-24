@@ -1,0 +1,30 @@
+{
+  "quests": {
+    "thornhoof/refugeesFight": {
+      "woundedCharacter": {
+        "displayName": "Blessé",
+        "matchDescription": "Crinière rouge, fourrure d'argent, et cloué au lit. Ce convalescent ressemble trait pour trait à la description qu'on t'a donné du réfugié ayant été blessé lors de sa fuite.",
+        "suspicious": "Un poney très fatigué se repose ici. Il te semble qu'il a été blessé aux côtes, et qu'il lutte contre une infection."
+      },
+      "title": "Les fugitifs fous de Sabairain",
+      "ask-shaman-about-wounded": "Parle à la chamane du blessé sous sa tente",
+      "ask-silvertide": "Demande des informations à Silvertide",
+      "find-refugees": "Trouve les réfugiés fugitifs",
+      "find-wounded-refugee": "Trouve le fugitif blessé",
+      "description": "Conseiller Leaf, du Conseil des Gardiens de Sabairain, t'as demandé de trouver une bande de poneys impliqués dans une bagarre, dans un bar, qui a provoquée la mort d'un citoyen. Les poneys que tu cherche sont des réfugiés, et Leaf voudrait que tu t'occupe du problème sans ajouter aux tensions qui existent déjà.",
+      "desc-wounded-refugee": "Tu as appris qu'un des réfugiés impliqué dans la bagarrre s'est fait tiré dessus tandis qu'ils prenaient la fuite. Ce ne sera pas facile de cacher une telle blessure.",
+      "desc-wounded-refugee-desc": "Tu sais aussi que le suspect en question a une crinière rouge et une fourrure d'argent.",
+      "desc-wounded-detected-1": "Dans la tente de la chamane des réfugiés, tu as trouvé un poney récupérant d'une blessure.",
+      "desc-wounded-detected-2": "Une inspection plus précise te révèle, sans l'ombre d'un doute, qu'il s'agit du poney qui a été blessé en s'échappant du bar.",
+      "desc-milita-intro": "Ayant appris la situation de la cachette des fugitifs, tu as sagement décidé de cafter.",
+      "desc-milita-raid": "Cependant, il se trouve que les réfugiés étaient armés. Ils ont résisté à leur arrestation, et ont été tué jusqu'au dernier. Éh béh.",
+      "desc-milita-arrest": "Comme tu avais prudemment subtilisé les armes qui se trouvaient dans leur cachette, les fugitifs n'ont pas pu résister à leur arrestation, et furent présentés devant le Conseiller Leaf.",
+      "desc-refugees-brought": "Grâce au pouvoir de ta parôle d'argent, tu as convaincu les fugitifs de se rendre, et tu es allé avec eux expliquer leur situation au Conseiller Leaf.",
+      "desc-refugees-killed": "Il se trouve que tu as liquidé les fugitifs. Je suppose que ça règle le problème !",
+      "desc-trial-intro": "Leaf t'as demandé de déliberer avec lui à propos du sort que les fugitifs méritaient.",
+      "desc-trial-mercy": "Tu l'as convaincu de les laisser partir en paix. Tout est bien qui fini bien. Sauf pour le poney raciste décédé.",
+      "desc-trial-labor": "Finalement, vous avez décidé qu'il était pour le mieux que les accusés servent une sentence de travaux forcés. Cela devrait montrer à tout le monde qu'il existe une justice à Sabairain.",
+      "desc-trial-death": "Tu ne t'es pas fait un très bon avocat de la clémence. Leaf a décidé de tous les executer. C'est une façon de résoudre le problème !"
+    }
+  }
+}

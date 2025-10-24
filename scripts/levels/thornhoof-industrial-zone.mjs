@@ -26,6 +26,11 @@ export default class extends LevelBase {
     if (isDustlockArrested()) removeDustlock();
   }
 
+  onExit() {
+    super.onExit();
+    this.hiddenRefugees.onLevelExited("thornhoof-industrial-zone");
+  }
+
   onZoneEntered(zoneName, character) {
     this.laboratory.onZoneEntered(zoneName, character);
   }

@@ -4,11 +4,27 @@
       "woundedCharacter": {
         "displayName": "Wounded pony",
         "matchDescription": "Red mane, silver fur, and bedridden. This wounded pony looks suspiciously like the description you were given of the refugees who ran away after the bar fight.",
-        "suspicious": ""
+        "suspicious": "A very tired pony is resting here. It seems he's been wounded on his flank, and is fighting off an infection."
       },
+      "title": "Thornhoof's Fugitive Fools",
+      "ask-shaman-about-wounded": "Ask the shaman about the wounded in her tent",
+      "ask-silvertide": "Ask Silvertide about what happened",
+      "find-refugees": "Locate the fugitive refugees",
+      "find-wounded-refugee": "Find the wounded refugee",
       "description": "Counsellor Leaf, from Thornhoof's Council of so-called Guardians, asked you to find a bunch of ponies involved in a bar fight, which saw the death of one the town's citizen. The ponies you're looking for are refugees, and Leaf would like you not to solve the issue without adding up on the already existing tensions.",
       "desc-wounded-refugee": "You learned that one of the refugees involved in the fight got shot as they were running away. It's not easy to hide such a wound.",
-      "desc-wounded-refugee-desc": "You also know that they have a red mane and silver fur."
+      "desc-wounded-refugee-desc": "You also know that they have a red mane and silver fur.",
+      "desc-wounded-detected-1": "Inside the tent of the refugees medicine-pony, you found a resting pony, recovering from a wound.",
+      "desc-wounded-detected-2": "Upon closer inspection, there is no doubt about it: this is the pony that got shot as he was fleeing the commotion at the bar.",
+      "desc-milita-intro": "Having learned the location of the fugitives' hideout, you wisely decided to snitch on them.",
+      "desc-milita-raid": "However, it turned out that the refugees were armed. They resisted arrest, and were all killed in the process. Damn.",
+      "desc-milita-arrest": "As you had carefuly removed the weapons from their hideout, the refugees didn't try anything stupid, and were brought before Counsellor Leaf.",
+      "desc-refugees-brought": "Through the power of your silver tongue, you convinced the fugitives to surrender themselves, and come with you to explain their situation to Counsellor Leaf.",
+      "desc-refugees-killed": "It turns out you mercilessly murdered the fugitive. I guess that takes care of that !",
+      "desc-trial-intro": "Leaf had you deliberate with him about what he should do with them.",
+      "desc-trial-mercy": "You convinced him to let the refugees go free. All's well that ends well. Except for the dead racist drunkard.",
+      "desc-trial-labor": "In the end, you decided it would be best for the accused party to serve a sentence in forced labor. This should show everypony that there's a justicce in Thornhoof.",
+      "desc-trial-death": "You were a poor advocate for peaceful measures. Leaf decided to execute them all. That's one way of taking care of it."
     }
   }
 }

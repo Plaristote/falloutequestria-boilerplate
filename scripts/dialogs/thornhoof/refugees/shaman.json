@@ -1,5 +1,8 @@
 {
     "answers": {
+        "P3A1": {
+            "text": "P3A1"
+        },
         "about-crystals-spellcasting": {
             "state": "about-self/about-spellcasting",
             "text": "about-crystals-spellcasting"
@@ -105,6 +108,62 @@
             "state": "about-self/lesson/failure",
             "text": "about-self/ask-lesson"
         },
+        "about-wounded/P1A1": {
+            "state": "about-wounded/path-1#2",
+            "text": "about-wounded/P1A1"
+        },
+        "about-wounded/P1A10": {
+            "text": "about-wounded/P1A10"
+        },
+        "about-wounded/P1A2": {
+            "state": "about-wounded/account",
+            "text": "about-wounded/P1A2"
+        },
+        "about-wounded/P1A3": {
+            "hook": "woundedPonyTryConvinceTellOnWounded",
+            "state": "about-wounded/path-1#2-failure-alt",
+            "text": "about-wounded/P1A3"
+        },
+        "about-wounded/P1A4": {
+            "hook": "woundedPonyTryConvinceTellOnWoundedAlt",
+            "text": "about-wounded/P1A4"
+        },
+        "about-wounded/P1A5": {
+            "state": "about-wounded/path-1#2-failure",
+            "text": "about-wounded/P1A5"
+        },
+        "about-wounded/P1A6": {
+            "hook": "woundedPonyTryConvinceTellOnWoundedAlt",
+            "state": "about-wounded/path-1#2-failure-alt",
+            "text": "about-wounded/P1A6"
+        },
+        "about-wounded/P1A8": {
+            "hook": "woundedPonyTriConvinceTellOnWoudedAlt2",
+            "state": "about-wounded/P1A8-failure",
+            "text": "about-wounded/P1A8"
+        },
+        "about-wounded/P4A1": {
+            "hook": "woundedPonyTryConvinceFairTrial",
+            "state": "about-wounded/thornhoof-justice-fail",
+            "text": "about-wounded/P4A1"
+        },
+        "about-wounded/P4A2": {
+            "state": "about-wounded/thornhoof-justice-fail",
+            "text": "about-wounded/P4A2"
+        },
+        "about-wounded/S1A1": {
+            "state": "about-wounded/path-1",
+            "text": "about-wounded/S1A1"
+        },
+        "about-wounded/S1A2": {
+            "availableHook": "woundedPonyAlreadyDetected",
+            "state": "about-wounded/path-2",
+            "text": "about-wounded/S1A2"
+        },
+        "about-wouned/P1A9": {
+            "state": "about-wounded/convinced-alt",
+            "text": "about-wouned/P1A9"
+        },
         "ask-about-crystals": {
             "availableHook": "canStartCrystalsTalk",
             "state": "about-crystals/entry",
@@ -113,6 +172,11 @@
         "ask-about-her": {
             "state": "about-self/entry",
             "text": "ask-about-her"
+        },
+        "ask-about-wounded-refugee": {
+            "availableHook": "canStartWoundedPonyTalk",
+            "state": "about-wounded/entry",
+            "text": "ask-about-wounded-refugee"
         },
         "back-to-entry": {
             "state": "entry",
@@ -125,6 +189,24 @@
         },
         "leave-entry": {
             "text": "leave-entry"
+        },
+        "wounded-pony/S1A3": {
+            "availableHook": "woundedPonyAlreadyDetected",
+            "state": "about-wounded/path-3",
+            "text": "wounded-pony/S1A3"
+        },
+        "wounded-pony/S2A1": {
+            "state": "about-wounded/thornhoof-justice",
+            "text": "wounded-pony/S2A1"
+        },
+        "wounded-pony/S2A2": {
+            "availableHook": "woundedPonyCanSkipConvincing",
+            "state": "about-wounded/convinced",
+            "text": "wounded-pony/S2A2"
+        },
+        "wounded-pony/S2A3": {
+            "state": "about-wounded/thornhoof-justice-fail",
+            "text": "wounded-pony/S2A3"
         }
     },
     "entryPoint": "entry",
@@ -330,10 +412,125 @@
             "mood": "smile",
             "text": "about-self/lesson/success"
         },
+        "about-wounded/P1A8-failure": {
+            "answers": [
+            ],
+            "mood": "angry",
+            "text": "about-wounded/P1A8-failure"
+        },
+        "about-wounded/account": {
+            "answers": [
+                "about-wounded/P1A8",
+                "about-wounded/P1A6"
+            ],
+            "mood": "cocky",
+            "text": "about-wounded/account"
+        },
+        "about-wounded/convinced": {
+            "answers": [
+            ],
+            "hook": "woundedPonyLearnAboutFriends",
+            "mood": "sad",
+            "text": "about-wounded/convinced"
+        },
+        "about-wounded/convinced-alt": {
+            "answers": [
+            ],
+            "hook": "woundedPonyLearnAboutFriends",
+            "mood": "sad",
+            "text": "about-wounded/convinced-alt"
+        },
+        "about-wounded/entry": {
+            "answers": [
+                "about-wounded/S1A1",
+                "about-wounded/S1A2",
+                "wounded-pony/S1A3",
+                "back-to-entry"
+            ],
+            "mood": "dubious",
+            "text": "about-wounded/entry"
+        },
+        "about-wounded/path-1": {
+            "answers": [
+                "about-wounded/P1A1",
+                "about-wounded/P1A2",
+                "about-wounded/S1A2"
+            ],
+            "hook": "woundedPonyStart",
+            "mood": "cocky",
+            "text": "about-wounded/path-1"
+        },
+        "about-wounded/path-1#2": {
+            "answers": [
+                "about-wounded/P1A3",
+                "about-wounded/P1A4",
+                "about-wounded/P1A5"
+            ],
+            "text": "about-wounded/path-1#2"
+        },
+        "about-wounded/path-1#2-failure": {
+            "answers": [
+            ],
+            "text": "about-wounded/path-1#2-failure"
+        },
+        "about-wounded/path-1#2-failure-alt": {
+            "answers": [
+            ],
+            "mood": "angry",
+            "text": "about-wounded/path-1#2-failure-alt"
+        },
+        "about-wounded/path-1#2-success": {
+            "answers": [
+                "about-wounded/P1A10",
+                "about-wouned/P1A9"
+            ],
+            "mood": "sad",
+            "text": "about-wounded/path-1#2-success"
+        },
+        "about-wounded/path-1#2-success-alt": {
+            "answers": [
+                "about-wouned/P1A9"
+            ],
+            "mood": "sad",
+            "text": "about-wounded/path-1#2-success-alt"
+        },
+        "about-wounded/path-2": {
+            "answers": [
+                "wounded-pony/S2A1",
+                "wounded-pony/S2A2",
+                "wounded-pony/S2A3"
+            ],
+            "hook": "woundedPonyStart",
+            "mood": "angry",
+            "text": "about-wounded/path-2"
+        },
+        "about-wounded/path-3": {
+            "answers": [
+                "wounded-pony/S2A2",
+                "P3A1"
+            ],
+            "hook": "woundedPonyStart",
+            "mood": "smile",
+            "text": "about-wounded/path-3"
+        },
+        "about-wounded/thornhoof-justice": {
+            "answers": [
+                "about-wounded/P4A1",
+                "about-wounded/P4A2"
+            ],
+            "mood": "angry",
+            "text": "about-wounded/thornhoof-justice"
+        },
+        "about-wounded/thornhoof-justice-fail": {
+            "answers": [
+            ],
+            "text": "about-wounded/thornhoof-justice-fail"
+        },
         "entry": {
             "answers": [
                 "ask-about-her",
                 "ask-about-crystals",
+                "ask-about-wounded-refugee",
                 "leave-entry"
             ],
             "mood": "smile",

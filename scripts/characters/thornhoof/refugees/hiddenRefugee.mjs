@@ -12,6 +12,7 @@ export default class extends CharacterBehaviour {
       this.model.inventory.addItem(gun);
       if (shelf.inventory.removeItemOfType("energy-cell", 8))
         this.model.inventory.addItemOfType("energy-cell", 8);
+      shelf.setVariable("refugeesPickedWeapons", 1);
     }
   }
 }
