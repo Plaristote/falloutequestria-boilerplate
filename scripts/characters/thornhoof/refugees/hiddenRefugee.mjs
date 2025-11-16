@@ -1,6 +1,10 @@
 import {CharacterBehaviour} from "./../../character.mjs";
 
 export default class extends CharacterBehaviour {
+  get quest() {
+    return game.quests.getQuest("thornhoof/refugeesFight");
+  }
+
   pickUpGunFromCellarShelf() {
     const shelf = level.findObject("dustlock-home.cellar.table");
     const gun = shelf.inventory.getItemOfType("laser-gun");

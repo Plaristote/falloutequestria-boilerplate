@@ -16,6 +16,8 @@ class Dialog {
   getEntryPoint() {
     if (!this.crystalsQuest)
       return "crystals-quest/entry";
+    if (this.dialog.npc.script.hasHiddenRefugeesInOffice)
+      return "fight-quest/hideout-brought";
   }
 
   hasMoreQuests() {
@@ -45,11 +47,11 @@ class Dialog {
   }
 
   canTalkAboutCrystalsQuest() {
-    return this.crystalsQuest.inProgress;
+    return this.crystalsQuest?.inProgress;
   }
 
   canTalkAboutFightQuest() {
-    return this.brawlQuest.inProgress;
+    return this.brawlQuest?.inProgress;
   }
 
   fightingQuestIntroduced() {

@@ -6,14 +6,15 @@ export default class Stitch extends HiddenRefugee {
   }
 
   get dialog() {
-    if (this.speakOnDetection)
-      return "thornhoof/refugees/stitch";
-    return null;
+    return "thornhoof/refugees/stitch";
+  }
+
+  get isInCave() {
+    return level.name == "thornhoof-industrial-zone"
+        && this.model.floor != 0;
   }
 
   get speakOnDetection() {
-    return !this.model.hasVariable("met")
-        && level.name == "thornhoof-industrial-zone"
-        && this.model.floor != 0;
+    return this.isInCave;
   }
 }

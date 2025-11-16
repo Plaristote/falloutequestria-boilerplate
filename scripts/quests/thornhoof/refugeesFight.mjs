@@ -46,6 +46,11 @@ export default class extends QuestHelper {
     this.model.setVariable("weaponsRemoved", value ? 1 : 0);
   }
 
+  get refugeesDisappeared() {
+    return this.model.getVariable("refugeesArrested", 0) == 1
+        || this.model.getVariable("refugeesKilledByMilita", 0) == 1;
+  }
+
   onHideoutGrabbed() {
     this.model.completeObjective("find-refugees");
     this.model.setVariable("refugeesArrested", 1);
@@ -53,13 +58,17 @@ export default class extends QuestHelper {
 
   onHideoutCleared() {
     this.model.completeObjective("find-refugees");
-    this.model.setVariable("refugeesArrested", 1);
     this.model.setVariable("refugeesKilledByMilita", 1);
     this.model.completed = true;
   }
 
   onConfrontLeafWithRefugees() {
+    game.switchToLevel("thornhoof-town", "leaf-office-entrance", function() {
+      const leaf = level.findObject("thornhoof-leaf");
 
+      level.script.hiddenRefugees.goToLeaf();
+      level.setCharacterPosition(leaf, 29, 3, 1);
+    });
   }
 
   onReportDeadRefugees() {
@@ -69,13 +78,16 @@ export default class extends QuestHelper {
   }
 
   onTrialEnded(solution) {
+    this.model.unsetVariable("refugeesArrested");
     this.model.setVariable("trialOutcome", solution);
     switch (solution) {
       case "mercy":
+        this.model.setVariable("refugeesSaved", 1);
         game.dataEngine.addReputation("thornhoof-refugees", 100);
         game.dataEngine.addReputation("thornhoof", -15);
         break ;
       case "labor":
+        this.model.setVariable("refugeesWork", 1);
         game.dataEngine.addReputation("thornhoof-refugees", 15);
         game.dataEngine.addReputation("thornhoof", 15);
         level.script.hiddenRefugees.disappearCharacters();
@@ -83,11 +95,14 @@ export default class extends QuestHelper {
       case "death":
         game.dataEngine.addReputation("thornhoof-refugees", -100);
         game.dataEngine.addReputation("thornhoof", 15);
-        level.script.hiddenRefugees.disappearCharacters();
+        level.script.hiddenRefugees.executeCharacters();
         break ;
     }
     this.model.completed = true;
   }
+
+  get refugeesSaved() { return this.model.getVariable("refugeesSaved", 0) == 1; }
+  get refugeesWork() { return this.model.getVariable("refugeesWork", 0) == 1; }
 
   getDescription() {
     let text = this.model.tr("description");

@@ -31,7 +31,13 @@
             "cave-meeting/gun-explanation": "On a pris des flingues, ouais. Quand la milice voudra nous jeter hors de ces murs, nous serons prêt à nous défendre.",
             "cave-meeting/justified-council": "Je craignais que ce soit le cas… dans ce cas, je ne peux vraiment pas te laisser partir.",
             "cave-meeting/justified-random": "Tu explorais, et tu t'es retrouvé dans la cave de Dust Lock ? Je crois pas qu'il t'ai laissé rentrer volontairement. Mais maintenant que tu es ici, plus question de sortir.\n<br><br>\n<i>Elle t'attaque.</i>",
+            "engage-start": "J'ai bien peur que ça doive tomber sur toi. Je sais qui vous êtes, toi et tes amis. Le conseil m'envoit vous chercher.",
             "explanation-exit": "Je comprends.",
+            "leave": "<i>[Partir]</i>",
+            "meeting/engage/entry": "Vraiment ? T'aurais peut-être dû le garder pour toi. Je dois protéger mes amis, je peux pas te laisser partir et raconter partout ce que tu sais.",
+            "meeting/engage/send-to-council": "On est pas obligé d'en arriver là. Suis-moi jusqu'au conseil de la ville, et personne ne sera blessé.",
+            "meeting/engage/start-fight": "Éh merde… je ne réagis pas très bien aux menaces. J'espère que vous manquerez à personne, les morveux.",
+            "meeting/entry": "Va emmerder quelqu'un d'autre.",
             "mistrust-defense": "Non ! Tu n'es pas encore un meurtrier, mais si tu me tue maintenant, tu va le devenir.",
             "mistrust-defense-2": "Tu va devoir me faire confiance. Je pense que tu n'as pas vraiment le choix. Tue moi, et c'est retour à la case départ : vous restez des fugitifs, indéfiniement.",
             "mistrust-defense-3": "Tu va devoir me faire confiance. Tu ne va quand même pas me tuer sur une suspicion ?"

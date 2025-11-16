@@ -110,7 +110,7 @@ class Dialog {
   }
 
   canStartWoundedPonyTalk() {
-    if (this.fightQuest.isObjectiveCompleted("interrogate-shaman"))
+    if (this.fightQuest && this.fightQuest.isObjectiveCompleted("interrogate-shaman"))
       return false;
     return this.fightQuest.script.woundedDetected > 0;
   }

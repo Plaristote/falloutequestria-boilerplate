@@ -36,10 +36,20 @@
             "cave-meeting/justified-random": "Exploring, and you ended up in Dust Lock's cellar ? I doubt he just agreed to let you in. But now that you're here, you're not getting out.\n<br><br>\n<i>She attacks you.</i>",
             "cave-meeting/sent-by-shaman": "She did ? Then I guess we can trust you. Why did you come here ?",
             "cave-meeting/surrender/entry": "Face what ? A mob screaming for our blood ? I won't face the justice of a mob.",
+            "council-letsgo": "Let's go.",
+            "engage-start": "No, it has to be you. I know who you and your friends are. I've been sent to bring you to the council.",
             "explanation-exit": "I understand.",
+            "finished/saved/entry": "Oh… it's you. Thank you for all you've done to help us.",
+            "finished/work/entry": "… didn't expect you to come see us. Guess you want to make sure we're not dead yet ?",
             "go-to-council": "Good. Let's go.",
+            "leave": "<i>[Leave]</i>",
+            "meeting/engage/entry": "Is that so ? Maybe you should've kept this to yourself. For the satefy of my friends, I can't let you go and tell everypony about us.",
+            "meeting/engage/send-to-council": "It doesn't have to go down that road. You can just come with me to the town's council, and nobody will get hurt.",
+            "meeting/engage/start-fight": "I don't react well to threats. I hope nopony will miss you when you're dead, kiddos.",
+            "meeting/entry": "Go bother somepony else.",
             "mistrust-defense": "Wait ! You're not a murderer yet, but if you kill me now, you'll become one.",
-            "mistrust-defense-2": "You'll have to trust me. I don't think you have much of a choice. Kill me, and you're back to square one: stuck down here, indefinitely."
+            "mistrust-defense-2": "You'll have to trust me. I don't think you have much of a choice. Kill me, and you're back to square one: stuck down here, indefinitely.",
+            "mistrust-defense-3": "You'll have to trust me. Or just kill me on a hunch."
         }
     }
 }

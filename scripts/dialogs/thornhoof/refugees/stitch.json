@@ -62,9 +62,29 @@
             "state": "cave-meeting/justified-council",
             "text": "cave-meeting-tell-shadow-quest"
         },
+        "council-letsgo": {
+            "hook": "goToConfrontCouncil",
+            "text": "council-letsgo"
+        },
+        "engage-start": {
+            "availableHook": "canFindRefugeesOnRandomMeeting",
+            "state": "meeting/engage/entry",
+            "text": "engage-start"
+        },
         "go-to-council": {
             "hook": "goToConfrontCouncil",
             "text": "go-to-council"
+        },
+        "leave": {
+            "text": "leave"
+        },
+        "meeting/engage/send-to-council": {
+            "state": "cave-meeting/go-to-council/entry",
+            "text": "meeting/engage/send-to-council"
+        },
+        "meeting/engage/start-fight": {
+            "hook": "npcStartFight",
+            "text": "meeting/engage/start-fight"
         },
         "mistrust-defense": {
             "state": "cave-meeting/go-to-council/mistrust-defended",
@@ -152,6 +172,7 @@
         },
         "cave-meeting/go-to-council/mistrust-defended-successfully": {
             "answers": [
+                "council-letsgo"
             ],
             "mood": "cocky",
             "text": "cave-meeting/go-to-council/mistrust-defended-successfully"
@@ -196,7 +217,35 @@
         "cave-meeting/surrender/entry": {
             "answers": [
             ],
+            "hook": "npcStartsFight",
             "text": "cave-meeting/surrender/entry"
+        },
+        "finished/saved/entry": {
+            "answers": [
+            ],
+            "mood": "smile",
+            "text": "finished/saved/entry"
+        },
+        "finished/work/entry": {
+            "answers": [
+            ],
+            "mood": "sad",
+            "text": "finished/work/entry"
+        },
+        "meeting/engage/entry": {
+            "answers": [
+                "meeting/engage/send-to-council",
+                "meeting/engage/start-fight"
+            ],
+            "text": "meeting/engage/entry"
+        },
+        "meeting/entry": {
+            "answers": [
+                "engage-start",
+                "leave"
+            ],
+            "mood": "angry",
+            "text": "meeting/entry"
         }
     }
 }

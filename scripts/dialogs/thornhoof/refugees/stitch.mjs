@@ -9,15 +9,21 @@ class Dialog {
 
   getEntryPoint() {
     const fightQuest = requireQuest("thornhoof/refugeesFight", QuestFlags.HiddenQuest);
-    if (fightQuest.isObjectiveCompleted("find-refugees")) {
-      // TODO re-entry dialogs
-    } else {
-      fightQuest.completeObjective("find-refugees");
-      if (level.name == "thornhoof-industrial-zone")
+    const foundRefugees = fightQuest.isObjectiveCompleted("find-refugees");
+
+    if (fightQuest.script.refugeesSaved)
+      return "finished/saved/entry";
+    if (fightQuest.script.refugeesWork)
+      return "finished/work/entry";
+    if (!foundRefugees) {
+      if (this.dialog.npc.script.isInCave) {
+        fightQuest.completeObjective("find-refugees");
         return "cave-meeting/entry";
-      // TODO this should not be happening
-      return "cave-meeting/entry";
+      } else {
+        return "meeting/entry";
+      }
     }
+    return "quest/entry";
   }
 
   get fightQuest() {
@@ -83,8 +89,12 @@ class Dialog {
     return game.player.statistics.speech >= 75;
   }
 
+  canFindRefugeesOnRandomMeeting() {
+    return this.fightQuest && this.fightQuest.isObjectiveCompleted("interrogate-shaman");
+  }
+
   goToConfrontCouncil() {
-    // TODO
+    this.fightQuest.script.onConfrontLeafWithRefugees();
   }
 }
 

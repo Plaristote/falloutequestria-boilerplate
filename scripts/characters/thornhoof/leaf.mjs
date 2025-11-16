@@ -35,6 +35,15 @@ class Leaf extends CharacterBehaviour {
     this.routineComponent.interrupted = value ? false : true;
   }
 
+  get hasHiddenRefugeesInOffice() {
+    const quest = game.quests.getQuest("thornhoof/refugeesFight");
+    return quest && quest.inProgress && level.script.hiddenRefugees.areIntoLeafOffice();
+  }
+
+  get speakOnDetection() {
+    return this.hasHiddenRefugeesInOffice;
+  }
+
   runDailyRoutine() {
     if (!level.isInsideZone(this.office.controlZone, this.model)) {
       const actions = this.model.actionQueue;
