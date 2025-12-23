@@ -3,6 +3,7 @@ import {LockedComponent} from "./locked.mjs";
 
 const racesOpeningDoors = [
   'diamond-dog', 'earth-pony', 'gator-pony', 'griffon', 'pegasus', 'unicorn',
+  'ghoul-earth-pony', 'ghoul-unicorn',
   'mr-hoofy'
 ];
 
