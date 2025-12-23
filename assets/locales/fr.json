@@ -55,6 +55,7 @@
         },
         "cristal-den": {
             "description": "Ville la plus prospère des terres désolées de cristal, le Havre Cristallin fut construit par la famille Potiok, peu après la destruction de l'Empire Cristallin. Le Havre Cristallin est le foyer de nombreux fermiers, marchands, caravaniers, esclavagistes, et c'est aussi un lieu de répis pour bien des âmes perdues, qui vivent au jour le jour et tâchent de s'en sortir tant bien que mal.",
+            "name": "Le Havre Cristallin",
             "title": "Havre Cristallin"
         },
         "diamond-dogs": {
@@ -63,6 +64,7 @@
         },
         "golden-herd": {
             "description": "Le Troupeau d'Or est une alliance de tribu nomades se regroupant pour constituer une force écrasante à travers le nombre. Guerriers, fiers de leur puissance, ils survivent en exploitant le faible, demandant le tribut aux villes qui se dressent sur leur route, pillant et ravageant celles qui refusent de se soumettre à leur pouvoir.",
+            "name": "Troupeau d'Or",
             "title": "Troupeau d'Or"
         },
         "hillburrow": {
@@ -71,10 +73,12 @@
         },
         "junkville": {
             "description": "Une petite communité soudée, vivant des abondantes ressources d'une ancienne déchèterie.",
+            "name": "Déchêville",
             "title": "Déchèville"
         },
         "potioks": {
             "description": "Les Potioks sont les maîtres du Havre Cristallin, et leur influence s'étend loin dans les terres désolées de cistal. Ils sont une famille soudée, du moins, en apparence.",
+            "name": "Potioks",
             "title": "Famille Potiok"
         },
         "stable-103": {
