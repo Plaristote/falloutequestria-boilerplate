@@ -2,7 +2,7 @@ import {CombatComponent} from "./combat.mjs";
 
 export class SceneActorComponent extends CombatComponent {
   isInActiveScene() {
-    return this.sceneManager && this.sceneManager.isActive;
+    return this.sceneManager && this.sceneManager.active;
   }
 
   canTalk() {
