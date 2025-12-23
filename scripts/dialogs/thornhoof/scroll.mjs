@@ -1,3 +1,5 @@
+import {requireQuest, QuestFlags} from "../../quests/helpers.mjs";
+
 class Dialog {
   constructor(dialog) {
     this.dialog = dialog;
@@ -9,6 +11,8 @@ class Dialog {
       this.dialog.npc.unsetVariable("dialogEntry");
       return value;
     }
+    if (this.dialog.npc.script.isInOffice)
+      return "officeMeeting/entry";
   }
 
   onCouncilMeetingEntryResponse() {
@@ -37,6 +41,11 @@ class Dialog {
       mood = "angry";
       break ;
     }
+    if (level.hasVariable("councilMeetingInteractionWait")) {
+      level.unsetVariable("councilMeetingInteractionWait");
+      level.findGroup("townhall.council-room").script.meetingScene.triggerNextStep();
+    }
+    level.setVariable("councilMeetingInteractedWith", 1);
     return this.councilMeetingEntryResponseReaction(text, mood);
   }
 
@@ -56,6 +65,58 @@ class Dialog {
 
   councilMeetingOnQuestIntro() {
     game.quests.getQuest("thornhoof/besiegedWalls").script.startGroupedQuest();
+    ["thornhoof-scroll", "thornhoof-leaf", "thornhoof-beryl", "thornhoof-varka", "hoarfrost"].forEach(name => {
+      const script = level.findObject(name)?.script;
+      if (script) script.shouldRunRoutine = true;
+    });
+  }
+
+  get labQuest() {
+    return requireQuest("thornhoof/scrollQuest", QuestFlags.HiddenQuest);
+  }
+
+  labQuestCanAsk() {
+    return this.labQuest.hidden;
+  }
+
+  labQuestTryToStart() {
+    const crystalQuest = game.quests.getQuest("thornhoof/crystalsQuest");
+    const fightQuest = game.quests.getQuest("thornhoof/refugeesFight");
+
+    if (fightQuest && fightQuest.completed)
+      return "officeMeeting/lab-quest/intro";
+    return "officeMeeting/not-ready";
+  }
+
+  labQuestTellAboutDangers() {
+    this.labQuest.setVariable("toldAboutGhouls", 1);
+  }
+
+  labQuestTellAboutPastInIntro() {
+    this.labQuest.setVariable("confessedInIntro", 1);
+  }
+
+  labQuestCanPress() {
+    return game.player.statistics.intelligence >= 8 || game.player.statistics.speech >= 105;
+  }
+
+  labQuestCanPressFurther() {
+    return this.labQuest.hasVariable("toldAboutGhouls") && game.player.statistics.intelligence >= 5;
+  }
+
+  labQuestAccepted() {
+    const key = this.dialog.npc.inventory.getItemOfType("thornhoof-laboratory-key");
+
+    this.labQuest.hidden = false;
+    if (key) {
+      this.dialog.npc.inventory.removeItem(key);
+      game.player.inventory.addItem(key);
+    }
+    game.player.inventory.addItemOfType("thornhoof-lab-quest-holodisk");
+  }
+
+  labQuestCanReport() {
+    return this.labQuest.inProgress && this.labQuest.isObjectiveCompleted("battery");
   }
 }
 

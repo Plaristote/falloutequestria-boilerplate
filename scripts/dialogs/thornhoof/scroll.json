@@ -1,5 +1,82 @@
 {
     "answers": {
+        "ask-about-job": {
+            "availableHook": "labQuestCanAsk",
+            "hook": "labQuestTryToStart",
+            "state": "officeMeeting/lab-quest/intro",
+            "text": "ask-about-job"
+        },
+        "lab-quest/A1": {
+            "state": "officeMeeting/lab-quest/intro-explain-choice",
+            "text": "lab-quest/A1"
+        },
+        "lab-quest/A2": {
+            "state": "officeMeeting/lab-quest/intro-explain-device",
+            "text": "lab-quest/A2"
+        },
+        "lab-quest/A3": {
+            "state": "officeMeeting/lab-quest/intro-explain-maos",
+            "text": "lab-quest/A3"
+        },
+        "lab-quest/A4": {
+            "state": "officeMeeting/lab-quest/intro-explain-dangers",
+            "text": "lab-quest/A4"
+        },
+        "lab-quest/accept": {
+            "state": "officeMeeting/lab-quest/accepted",
+            "text": "lab-quest/accept"
+        },
+        "lab-quest/accept-extra-A1": {
+            "state": "officeMeeting/lab-quest/intro-end",
+            "text": "lab-quest/accept-extra-A1"
+        },
+        "lab-quest/accept-extra-A2": {
+            "text": "lab-quest/accept-extra-A2"
+        },
+        "lab-quest/accept-extra-A3": {
+            "state": "officeMeeting/lab-quest/intro-end",
+            "text": "lab-quest/accept-extra-A3"
+        },
+        "lab-quest/accept-extra-A4": {
+            "state": "officeMeeting/lab-quest/extra/intro-confess-2",
+            "text": "lab-quest/accept-extra-A4"
+        },
+        "lab-quest/accept-extra-A5": {
+            "state": "officeMeeting/lab-quest/intro-end",
+            "text": "lab-quest/accept-extra-A5"
+        },
+        "lab-quest/accept-next": {
+            "state": "officeMeeting/lab-quest/intro-extra",
+            "text": "exit"
+        },
+        "lab-quest/extra-task-ask": {
+            "state": "officeMeeting/lab-quest/intro-extra",
+            "text": "lab-quest/extra-task-ask"
+        },
+        "lab-quest/negociate": {
+            "text": "lab-quest/negociate"
+        },
+        "lab-quest/question-extra-A1": {
+            "state": "officeMeeting/lab-quest/extra/intro-explain",
+            "text": "lab-quest/question-extra-A1"
+        },
+        "lab-quest/question-extra-A2": {
+            "availableHook": "labQuestCanPress",
+            "state": "officeMeeting/lab-quest/extra/intro-pressed",
+            "text": "lab-quest/question-extra-A2"
+        },
+        "lab-quest/question-extra-A3": {
+            "state": "officeMeeting/lab-quest/extra/intro-council",
+            "text": "lab-quest/question-extra-A3"
+        },
+        "lab-quest/question-extra-A4": {
+            "availableHook": "labQuestCanPressFurther",
+            "state": "officeMeeting/lab-quest/extra/intro-confess-1",
+            "text": "lab-quest/question-extra-A4"
+        },
+        "lab-quest/reject": {
+            "text": "lab-quest/reject"
+        },
         "meeting-heroic-1": {
             "hook": "onCouncilMeetingEntryResponse",
             "text": "meeting-heroic-1"
@@ -15,6 +92,13 @@
         "meeting-sarcasm-1": {
             "hook": "onCouncilMeetingEntryResponse",
             "text": "meeting-sarcasm-1"
+        },
+        "office-exit-entry": {
+            "text": "office-exit-entry"
+        },
+        "report-lab-quest": {
+            "availableHook": "labQuestCanReport",
+            "text": "report-lab-quest"
         }
     },
     "entryPoint": "",
@@ -53,6 +137,128 @@
             "answers": [
             ],
             "text": "councilMeeting/sarcasm-reaction"
+        },
+        "officeMeeting/entry": {
+            "answers": [
+                "report-lab-quest",
+                "ask-about-job",
+                "office-exit-entry"
+            ],
+            "text": "officeMeeting/entry"
+        },
+        "officeMeeting/lab-quest/accepted": {
+            "answers": [
+                "lab-quest/accept-next"
+            ],
+            "hook": "labQuestAccepted",
+            "mood": "smile",
+            "text": "officeMeeting/lab-quest/accepted"
+        },
+        "officeMeeting/lab-quest/extra/intro": {
+            "answers": [
+                "lab-quest/accept-extra-A1",
+                "lab-quest/question-extra-A1"
+            ],
+            "text": "officeMeeting/lab-quest/extra/intro"
+        },
+        "officeMeeting/lab-quest/extra/intro-confess-1": {
+            "answers": [
+                "lab-quest/accept-extra-A3",
+                "lab-quest/accept-extra-A4"
+            ],
+            "hook": "labQuestTellAboutPastInIntro",
+            "mood": "angry",
+            "text": "officeMeeting/lab-quest/extra/intro-confess-1"
+        },
+        "officeMeeting/lab-quest/extra/intro-confess-2": {
+            "answers": [
+                "lab-quest/accept-extra-A5"
+            ],
+            "mood": "cocky",
+            "text": "officeMeeting/lab-quest/extra/intro-confess-2"
+        },
+        "officeMeeting/lab-quest/extra/intro-council": {
+            "answers": [
+                "lab-quest/accept-extra-A2"
+            ],
+            "text": "officeMeeting/lab-quest/extra/intro-council"
+        },
+        "officeMeeting/lab-quest/extra/intro-explain": {
+            "answers": [
+                "lab-quest/accept-extra-A2",
+                "lab-quest/question-extra-A2",
+                "lab-quest/question-extra-A3"
+            ],
+            "mood": "sad",
+            "text": "officeMeeting/lab-quest/extra/intro-explain"
+        },
+        "officeMeeting/lab-quest/extra/intro-pressed": {
+            "answers": [
+                "lab-quest/accept-extra-A2",
+                "lab-quest/question-extra-A4"
+            ],
+            "text": "officeMeeting/lab-quest/extra/intro-pressed"
+        },
+        "officeMeeting/lab-quest/intro": {
+            "answers": [
+                "lab-quest/A2",
+                "lab-quest/A1",
+                "lab-quest/A3"
+            ],
+            "mood": "neutral",
+            "text": "officeMeeting/lab-quest/intro"
+        },
+        "officeMeeting/lab-quest/intro-end": {
+            "answers": [
+            ],
+            "mood": "smile",
+            "text": "officeMeeting/lab-quest/intro-end"
+        },
+        "officeMeeting/lab-quest/intro-explain-choice": {
+            "answers": [
+                "lab-quest/A2",
+                "lab-quest/A4"
+            ],
+            "mood": "cocky",
+            "text": "officeMeeting/lab-quest/intro-explain-choice"
+        },
+        "officeMeeting/lab-quest/intro-explain-dangers": {
+            "answers": [
+                "lab-quest/A2"
+            ],
+            "hook": "labQuestTellAboutDangers",
+            "mood": "sad",
+            "text": "officeMeeting/lab-quest/intro-explain-dangers"
+        },
+        "officeMeeting/lab-quest/intro-explain-device": {
+            "answers": [
+                "lab-quest/accept",
+                "lab-quest/negociate",
+                "lab-quest/reject"
+            ],
+            "mood": "neutral",
+            "text": "officeMeeting/lab-quest/intro-explain-device"
+        },
+        "officeMeeting/lab-quest/intro-explain-maos": {
+            "answers": [
+                "lab-quest/A2",
+                "lab-quest/A1"
+            ],
+            "text": "officeMeeting/lab-quest/intro-explain-maos"
+        },
+        "officeMeeting/lab-quest/intro-extra": {
+            "answers": [
+                "lab-quest/accept-extra-A1",
+                "lab-quest/extra-task-ask"
+            ],
+            "mood": "troubled",
+            "text": "officeMeeting/lab-quest/intro-extra"
+        },
+        "officeMeeting/not-ready": {
+            "answers": [
+            ],
+            "mood": "smile",
+            "text": "officeMeeting/not-ready"
         }
     }
 }

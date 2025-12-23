@@ -87,6 +87,7 @@
             "fight-quest/on-found-wounded": "Really ? We need all of them, but that's good news. They're young, and probably not pragmatic enough to lay low over comforting their friends. I bet they're going to visit him soon. You just have to wait for them.",
             "fight-quest/part2": "Silvertide, the milita's leader, is in charge of finding the refugees. But she hasn't been succesful so far. I suspect her resources are stretched enough as it is.<br>\nWhile this is not a priority to her, we do need to appease the tension between refugees and the locals. Can I count on you ?",
             "fight-quest/prompt": "Yes ? Did you find out anything about them ?",
+            "fight-quest/refugees-present": "Ah ! Outstanding ! I see you have found our fugitives.",
             "fight-quest/reward/entry": "Absolutely. Your help is precious to us. I believe {{fightQuestReward}} caps will make an appropriate compensation for your continued efforts.",
             "fight-quest/reward/negociate-success": "Indeed. But as you are aware of our current situation, I'm sure you understand I can't afford much more. How about {{fightQuestReward}} caps ?",
             "fight-quest/terminate-no-reward": "Pleasure to help.",

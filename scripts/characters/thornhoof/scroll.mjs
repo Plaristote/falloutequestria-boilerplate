@@ -32,10 +32,15 @@ class Scroll extends CharacterBehaviour {
     this.routineComponent.interrupted = value ? false : true;
   }
 
+  get isInOffice() {
+    return level.isInsideZone(this.office.controlZone, this.model);
+  }
+
   runDailyRoutine() {
-    if (!level.isInsideZone(this.office.controlZone, this.model)) {
+    if (!this.isInOffice) {
       const actions = this.model.actionQueue;
       actions.pushMovement(34, 3, 1);
+      actions.pushScript({ onCancel: this.refreshRoutine });
       actions.start();
     }
   }
@@ -44,6 +49,7 @@ class Scroll extends CharacterBehaviour {
     if (!level.isInsideZone(this.home.controlZone, this.model)) {
       const actions = this.model.actionQueue;
       actions.pushMovement(5, 3, 2);
+      actions.pushScript({ onCancel: this.refreshRoutine });
       actions.start();
     }
   }

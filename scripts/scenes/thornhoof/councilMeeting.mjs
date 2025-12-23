@@ -20,6 +20,7 @@ export default class CouncilMeeting extends SceneManager {
     const array = [];
     for (let i = 1 ; i <= 13 ; ++i)
       array.push(this[`state${i}`].bind(this));
+    array.push(this.waitForPlayerInteraction.bind(this));
     return array;
   };
 
@@ -160,5 +161,16 @@ export default class CouncilMeeting extends SceneManager {
       duration: 5,
       towards: { x: 38, y: 5 }
     });
+  }
+
+  get waitingForInteraction() {
+    return level.hasVariable("councilMeetingInteractionWait");
+  }
+
+  waitForPlayerInteraction() {
+    if (level.hasVariable("councilMeetingInteractedWith"))
+      this.triggerNextStep();
+    else
+      level.setVariable("councilMeetingInteractionWait", 1);
   }
 }

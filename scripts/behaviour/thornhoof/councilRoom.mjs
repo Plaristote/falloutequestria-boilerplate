@@ -18,7 +18,7 @@ export default class CouncilRoom {
   }
 
   vellumScrollIntro() {
-    if (!this.meetingScene.active && !this.model.hasVariable("vellumScrollIntro")) {
+    if (this.meetingScene.waitingForInteraction && !this.model.hasVariable("vellumScrollIntro")) {
       const vellumScroll = level.findObject("thornhoof-scroll");
       const participants = [vellumScroll, game.player];
       const occupants = this.model.findControlZoneOccupants(occupant => participants.indexOf(occupant) >= 0);

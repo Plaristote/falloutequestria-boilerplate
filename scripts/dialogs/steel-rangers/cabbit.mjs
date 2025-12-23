@@ -9,7 +9,8 @@ export default class Dialog {
 
   get canAskThornhoofShipment() {
     return game.quests.hasQuest("thornhoof/caravan") &&
-           game.quests.getQuest("thornhoof/caravan").script.caravanInProgress;
+           game.quests.getQuest("thornhoof/caravan").script.caravanInProgress &&
+           !game.quests.getQuest("thornhoof/caravan").isObjectiveCompleted("steel-rangers-shipment");
   }
 
   get canGiveHoarfrostHolodisk() {
