@@ -74,6 +74,8 @@ export class SceneManager {
       this.saveLocked = false;
     this.actors.forEach(actor => {
       toggleRoutine(actor, true);
+      if (typeof actor.script?.refreshRoutine == "function")
+        actor.script.refreshRoutine();
     });
     this.model.unsetVariable(this.storageScope);
     this.unregisterSceneManager();

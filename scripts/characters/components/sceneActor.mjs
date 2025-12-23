@@ -1,6 +1,14 @@
 import {CombatComponent} from "./combat.mjs";
 
 export class SceneActorComponent extends CombatComponent {
+  isInActiveScene() {
+    return this.sceneManager && this.sceneManager.active;
+  }
+
+  canTalk() {
+    return super.canTalk() && !this.isInActiveScene();
+  }
+
   onTurnStart() {
     super.onTurnStart();
     if (this.sceneManager && this.sceneManager.active)
