@@ -81,7 +81,7 @@ export class WeaponBehaviour extends ItemBehaviour {
   useOn(target) {
     var damage = getValueFromRange(...this.getDamageRange(), this.user);
 
-    if (this.getDamageType)
+    if (this.getDamageType && typeof target.script?.mitigateDamage == "function")
       damage = target.script.mitigateDamage(damage, this.getDamageType(), this.user);
     game.appendToConsole(
       i18n.t("messages.weapons.use", {

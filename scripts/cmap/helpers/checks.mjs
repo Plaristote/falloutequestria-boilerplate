@@ -36,7 +36,7 @@ export function multipleSkillContest(attacker, defender, skills, diceType = 100)
 }
 
 export function skillCheck(user, skill, options = {}) {
-  const skillValue = modifiedSkillValue(user, skill);
+  const skillValue = modifiedSkillValue(user, skill) + (options.bonus || 0);
   const dice       = options.dice ? options.dice : 100;
   const target     = options.target ? options.target : 100;
   const roll       = getValueFromRange(0, dice, user);
@@ -59,6 +59,15 @@ export function skillCheck(user, skill, options = {}) {
   if (callback)
     callback();
   return success;
+}
+
+export function multipleSkillCheck(user, skills, options = {}) {
+  let wins = 0;
+  skills.forEach(function(skill) {
+    if (skillCheck(user, skill, options))
+      wins++;
+  });
+  return wins / skills.length;
 }
 
 export function modifiedSkillValue(user, skill, target) {
