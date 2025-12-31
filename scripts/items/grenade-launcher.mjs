@@ -73,7 +73,7 @@ export default class PlasmaRifle extends Rifle {
     const damage = getValueFromRange(...this.getDamageRange());
 
     explode(
-      { x: x, y: y },
+      { x: x, y: y, z: this.user.floor },
       this.zoneSize,
       damage,
       null,
