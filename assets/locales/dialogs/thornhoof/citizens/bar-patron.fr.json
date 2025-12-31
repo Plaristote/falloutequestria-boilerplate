@@ -1,0 +1,29 @@
+{
+    "dialogs": {
+        "thornhoof/citizens/bar-patron": {
+            "ask-about-refugees": "J'aimerais parler des réfugiés.",
+            "ask-refugee-fight": "J'ai entendu dire qu'il y avait eu une bagarre ici, entre eux et des locaux.",
+            "ask-refugee-opinion": "Quelle est ton opinion à leur sujet ?",
+            "entry": "Bonjour.",
+            "leave": "Au revoir.",
+            "refugees/back-to-prompt": "J'ai d'autres questions à propos de réfugiés.",
+            "refugees/fight/about-culprits": "Les connaître ? Pas vraiment. Ils venaient souvent traîner ici depuis qu'ils sont arrivés. Des gamins surtout, têtes brûlées. Pas méchants, mais... un peu trop fiers.",
+            "refugees/fight/about-fight": "Un des réfugiés s'est levé et lui a collé une ruade dans la gueule. Après c'était la foire. Quelqu'un a essayé de les séparer, mais un des réfugié l'a planté. Il est mort peu de temps après… les enfoirés…",
+            "refugees/fight/about-flee": "La proprio a sortit son flingue et a tiré sur eux. Elle en a touché un, et ils se sont enfuis.",
+            "refugees/fight/about-following": "Nous étions comme qui dirait préoccupés. Il y avait des blessés à gérer. Personne ne les a suivi. C'est pas comme s'ils pouvaient juste quitter la ville.",
+            "refugees/fight/about-insults": "Il leur a dit que leur cristaux, c'étaient de la camelote. Que si leur magie était vraiment utile, ils seraient pas ici à mendier l'aumone des braves gens, et qu'ils se seraient pas fait botter le cul à Basalbourg.",
+            "refugees/fight/about-wounded-refugee": "Ouais, je dois pouvoir faire ça. C'est un poney gris avec une crinière rouge. Il s'est pris une balle dans les cotes, ça pourrait avoir mal tourné pour lui.",
+            "refugees/fight/answer-ask-culprits": "Parle-moi des réfugiés. Qui étaient-ils ? Vous les connaissiez ?",
+            "refugees/fight/answer-ask-fight": "Que s'est-il passé ?",
+            "refugees/fight/answer-ask-fight-alt": "Parle moi de la bagarre avec Barlow.",
+            "refugees/fight/answer-ask-insults": "Qu'est-ce que ce Barlow leur a dit ?",
+            "refugees/fight/answer-ask-wounded": "Le réfugié qui a été blessé, à quoi ressemblait-il ?",
+            "refugees/fight/answer-fight-followup#1": "Mes condoléances. Qu'ont fait les réfugiés ensuite ?",
+            "refugees/fight/answer-fight-followup#2": "Donc ils ont pris la fuite. Est-ce que quelqu'un a tenté de les suivre ?",
+            "refugees/fight/entry": "Ah, cette fichue histoire… ouais, c’est parti d'un mot de trop, comme souvent. Ces types-là parlaient entre eux. Puis Barlow s'est mêlé de la conversation, a voulu les remettre à leur place.",
+            "refugees/fight/exit": "Je vois. Merci de votre témoignage.",
+            "refugees/opinion/neutral": "Bah. Disons qu'ils prennent de la place. On s'est plié en quatre pour les accueillir, et que donnent-ils en échange ? Rien.",
+            "refugees/prompt": "Encore eux. Qu'est-ce que t'as besoin de savoir ?"
+        }
+    }
+}

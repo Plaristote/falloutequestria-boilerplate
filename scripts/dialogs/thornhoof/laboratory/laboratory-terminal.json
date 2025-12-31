@@ -1,5 +1,10 @@
 {
     "answers": {
+        "go-to-scroll-logs": {
+            "availableHook": "canOpenScrollLogs",
+            "state": "scroll-logs/searched",
+            "text": "go-to-scroll-logs"
+        },
         "leave": {
             "text": "leave"
         },
@@ -7,21 +12,75 @@
             "availableHook": "canLookUpSentinel",
             "state": "sentinel-lookup/entry",
             "text": "lookup-sentinel-imprint"
+        },
+        "search-computer": {
+            "hook": "searchComputer",
+            "state": "search-failure",
+            "text": "search-computer"
+        },
+        "search-give-up": {
+            "state": "entry",
+            "text": "search-give-up"
+        },
+        "search-try-again": {
+            "hook": "searchComputer",
+            "text": "search-try-again"
+        },
+        "use-scroll-holodisk": {
+            "availableHook": "canUseScrollHolodisk",
+            "state": "scroll-logs/holodisk-entry",
+            "text": "use-scroll-holodisk"
         }
     },
-    "entryPoint": "",
+    "entryPoint": "entry",
     "states": {
         "entry": {
             "answers": [
+                "search-computer",
                 "lookup-sentinel-imprint",
+                "go-to-scroll-logs",
+                "use-scroll-holodisk",
                 "leave"
             ],
             "text": "entry"
+        },
+        "scroll-logs/holodisk-entry": {
+            "answers": [
+                "search-give-up",
+                "leave"
+            ],
+            "hook": "useScrollHolodisk",
+            "text": "scroll-logs/holodisk-entry"
+        },
+        "scroll-logs/searched": {
+            "answers": [
+            ],
+            "text": "scroll-logs/searched"
+        },
+        "search-failure": {
+            "answers": [
+                "search-try-again",
+                "search-give-up",
+                "leave"
+            ],
+            "text": "search-failure"
+        },
+        "search-over": {
+            "answers": [
+                "search-give-up",
+                "leave"
+            ],
+            "text": "search-over"
         },
         "sentinel-lookup/entry": {
             "answers": [
             ],
             "text": "sentinel-lookup/entry"
+        },
+        "sentinel-lookup/searched": {
+            "answers": [
+            ],
+            "text": "sentinel-lookup/searched"
         }
     }
 }

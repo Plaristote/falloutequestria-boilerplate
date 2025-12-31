@@ -104,6 +104,42 @@ class Dialog {
     return this.labQuest.hasVariable("toldAboutGhouls") && game.player.statistics.intelligence >= 5;
   }
 
+  labQuestCanNegociateExtra() {
+    return this.labQuest.hasVariable("askedReward");
+  }
+
+  labQuestAskReward() {
+    this.labQuest.setVariable("askedReward", 1);
+  }
+
+  get labQuestExtraPayment() {
+    return 200;
+  }
+
+  get labQuestUpfrontPayment() {
+    return 300;
+  }
+
+  get labQuestPayment() {
+    return this.labQuest.script.capsReward;
+  }
+
+  labQuestCanBarterReward() {
+    return game.player.statistics.barter > 74;
+  }
+
+  labQuestBarterReward() {
+    game.player.inventory.addItemOfType("bottlecaps", this.labQuestUpfrontPayment);
+  }
+
+  labQuestAddExtraPayment() {
+    this.labQuest.script.capsReward += this.labQuestExtraPayment;
+  }
+
+  labQuestAskedAboutReward() {
+    this.labQuest.setVariable("askedReward", 1)
+  }
+
   labQuestAccepted() {
     const key = this.dialog.npc.inventory.getItemOfType("thornhoof-laboratory-key");
 
@@ -116,7 +152,37 @@ class Dialog {
   }
 
   labQuestCanReport() {
-    return this.labQuest.inProgress && this.labQuest.isObjectiveCompleted("battery");
+    return this.labQuest.inProgress && game.player.inventory.count("thornhoof-laboratory-device");
+  }
+
+  labQuestPayReward() {
+    game.player.inventory.addItemOfType("bottlecaps", this.labQuestPayment);
+  }
+
+  labQuestConfirmed() {
+    game.player.inventory.removeItemOfType("thornhoof-laboratory-device");
+    this.labQuest.completeObjective("report")
+  }
+
+  labQuestAskRewardText() {
+    return this.dialog.t(
+      this.labQuest.hasVariable("askedReward")
+        ? "lab-quest/ask-reward-alt"
+        : "lab-quest/ask-reward"
+      );
+  }
+
+  get labQuestCanConfirmHolodiskTask() {
+    return this.labQuest.isObjectiveCompleted("holodisk");
+  }
+
+  labQuestCanRejectHolodisk() {
+    return !this.labQuest.isObjectiveCompleted("holodisk")
+        && this.labQuest.hasVariable("foundScrollLogs"); // TODO maybe something else checking the logs were actually read
+  }
+
+  labQuestRejectHolodisk() {
+    this.labQuest.setVariable("holodiskStatus", 1);
   }
 }
 

@@ -1,0 +1,19 @@
+{
+    "dialogs": {
+        "thornhoof/laboratory/laboratory-terminal": {
+            "entry": "MAS OS - Opérationnel.<br>\nInsérez une commande.",
+            "go-to-scroll-logs": "Chercher les logs personnels de Vellum Scroll",
+            "leave": "Quitter",
+            "lookup-sentinel-imprint": "Chercher le processus d'emprunte magique de Sentinelle",
+            "scroll-logs/holodisk-entry": "MA OS - Le programme s'est executé avec succès.\n<br><br>\n2 fichiers modifiés<br>\n387 fichiers supprimés",
+            "scroll-logs/searched": "<i>Tu réussi a obtenir l'accès aux logs de <b>Vellum Scroll</b>.</i>",
+            "search-computer": "Faire une recherche générale",
+            "search-failure": "<i>Des fichiers cachés ont attiré ton attention, mais leur accès est protégé, et tu n'as pas réussi à les lire.</i>",
+            "search-give-up": "Retourner au menu principal",
+            "search-over": "<i>Tu regarde parmi les fichiers, mais tu ne vois rien qui attire ton attention.</i>",
+            "search-try-again": "Essayer à nouveau",
+            "sentinel-lookup/searched": "<i>Tu hacke le terminal et obtiens l'accès à des fichiers protégés. Ce sont des spécifications pour un projet sensible, nommé <b>Sentinelle</b>.",
+            "use-scroll-holodisk": "Insérer l'holodisque de Vellum Scroll"
+        }
+    }
+}

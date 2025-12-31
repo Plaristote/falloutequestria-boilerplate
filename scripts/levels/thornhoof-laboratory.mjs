@@ -1,5 +1,6 @@
 import {LevelBase} from "./base.mjs";
-import laboratoryElevatorPrompt from "./components/thornhoofLaboratory.mjs";
+import {laboratoryElevatorPrompt} from "./components/thornhoofLaboratory.mjs";
+import {requireQuest, QuestFlags} from "../quests/helpers.mjs";
 
 const faction = "thornhoof-laboratory-security";
 const ghoulFaction = "thornhoof-laboratory-ghouls";
@@ -19,6 +20,7 @@ export default class extends LevelBase {
   }
 
   initialize() {
+    requireQuest("thornhoof/scrollQuest", QuestFlags.HiddenQuest);
     game.diplomacy.addFaction(faction);
     game.diplomacy.addFaction(ghoulFaction);
     game.diplomacy.setAsEnemy(true, ghoulFaction, "player");
@@ -139,6 +141,7 @@ export default class extends LevelBase {
     list.push(level.findObject("2.laboratory.terminal"));
     list.push(level.findObject("2.laboratory.terminal#1"));
     list.push(level.findObject("2.laboratory.terminal#2"));
+    list.push(level.findObject("2.annex#2.terminal"));
     return list;
   }
 }

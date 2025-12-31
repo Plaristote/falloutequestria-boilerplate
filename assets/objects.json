@@ -583,6 +583,14 @@
         "value": 12,
         "weight": 1
     },
+    "thornhoof-laboratory-device": {
+        "icon": "mana-battery.webp",
+        "isGroupable": false,
+        "sprite": "misc",
+        "type": "quests",
+        "value": 8000,
+        "weight": 15
+    },
     "thornhoof-laboratory-key": {
         "icon": "access-card-blue.png",
         "isGroupable": true,

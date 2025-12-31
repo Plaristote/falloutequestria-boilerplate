@@ -3,7 +3,16 @@
         "thornhoof/laboratory/entrance-guard": {
             "fight": "Oh no. Not on my watch.<br>\n<i>The guard is reaching for his gun.</i>",
             "intercept": "Hey ! What are you doing here ? How did you even get in ?",
-            "looting": "Well, it looked like an interesting place to loot."
+            "lab-quest/give-name": "I've been sent by Vellum Scroll.",
+            "lab-quest/intercept": "Oh. I wasn't warned about this. I should've been notified. Who gave you the affectation ?",
+            "lab-quest/leave": "I'll see myself out.",
+            "lab-quest/on-name-given": "Really ? Hm. I guess you can go on, then. Move along.",
+            "lab-quest/on-science-lie": "Shit, I guess I've been feeling a bit under the weather lately. That sounds serious. You better get to it then ! Off you go !",
+            "lab-quest/refuse-to-give-name": "I'm not supposed to give names.",
+            "lab-quest/refused-to-give-name": "What ? Look, this building's access is restricted. I can't let you pass if you're not supposed to be there. Either you give me a valid reason for being here, or you bug off.",
+            "lab-quest/science-lie": "Yeah, I guess everypony's getting overwhelmed. The ventilation systems in these buildings are getting old, and some people have been getting sick. They're sending maintenance crews left and right. Better safe than sorry.",
+            "looting": "Well, it looked like an interesting place to loot.",
+            "start-scroll-quest": "I'm on cleaning duty. I came in with the access card that was issued to me."
         }
     }
 }

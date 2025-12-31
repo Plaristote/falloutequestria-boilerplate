@@ -42,14 +42,33 @@
         "staff-menu": {
             "state": "staff-menu",
             "text": "staff-menu-option"
+        },
+        "unlock-annex": {
+            "availableHook": "canUnlockAnnex",
+            "state": "annex-unlocked",
+            "text": "unlock-annex"
         }
     },
     "entryPoint": "entry",
     "states": {
+        "annex-unlocked": {
+            "answers": [
+                "leave"
+            ],
+            "hook": "unlockAnnex",
+            "text": "annex-unlocked"
+        },
         "entry": {
             "answers": [
                 "security-menu",
                 "staff-menu",
+                "leave"
+            ],
+            "text": "entry"
+        },
+        "entry-annex": {
+            "answers": [
+                "unlock-annex",
                 "leave"
             ],
             "text": "entry"

@@ -31,6 +31,7 @@
             "text": "lab-quest/accept-extra-A1"
         },
         "lab-quest/accept-extra-A2": {
+            "state": "officeMeeting/lab-quest/extra/intro",
             "text": "lab-quest/accept-extra-A2"
         },
         "lab-quest/accept-extra-A3": {
@@ -49,12 +50,50 @@
             "state": "officeMeeting/lab-quest/intro-extra",
             "text": "exit"
         },
+        "lab-quest/ask-reward": {
+            "state": "officeMeeting/lab-quest/report/give-reward",
+            "text": "lab-quest/ask-reward",
+            "textHook": "labQuestAskRewardText"
+        },
+        "lab-quest/confirm-holodisk-task": {
+            "availableHook": "labQuestCanConfirmHolodiskTask",
+            "state": "officeMeeting/lab-quest/report/done",
+            "text": "lab-quest/confirm-holodisk-task"
+        },
         "lab-quest/extra-task-ask": {
-            "state": "officeMeeting/lab-quest/intro-extra",
+            "state": "officeMeeting/lab-quest/extra/intro",
             "text": "lab-quest/extra-task-ask"
         },
+        "lab-quest/happy-to-help": {
+            "text": "lab-quest/happy-to-help"
+        },
+        "lab-quest/holodisk-task-not-done": {
+            "state": "officeMeeting/lab-quest/report/undone-main-terminal",
+            "text": "lab-quest/holodisk-task-not-done"
+        },
+        "lab-quest/holodisk-task-refuse": {
+            "availableHook": "labQuestCanRejectHolodisk",
+            "state": "officeMeeting/lab-quest/report/reject-holodisk",
+            "text": "lab-quest/holodisk-task-refuse"
+        },
+        "lab-quest/lie-holodisk-task": {
+            "availableHook": "!labQuestCanConfirmHolodiskTask",
+            "state": "officeMeeting/lab-quest/report/done",
+            "text": "lab-quest/lie-holodisk-task"
+        },
         "lab-quest/negociate": {
+            "state": "officeMeeting/lab-quest/intro-reward",
             "text": "lab-quest/negociate"
+        },
+        "lab-quest/negociate-barter": {
+            "availableHook": "labQuestCanBarterReward",
+            "state": "officeMeeting/lab-quest/intro-reward-bonus",
+            "text": "lab-quest/negociate-barter"
+        },
+        "lab-quest/negociate-extra": {
+            "availableHook": "labQuestCanNegociateExtra",
+            "state": "officeMeeting/lab-quest/extra/negociated",
+            "text": "lab-quest/negociate-extra"
         },
         "lab-quest/question-extra-A1": {
             "state": "officeMeeting/lab-quest/extra/intro-explain",
@@ -98,6 +137,7 @@
         },
         "report-lab-quest": {
             "availableHook": "labQuestCanReport",
+            "state": "officeMeeting/lab-quest/report/entry",
             "text": "report-lab-quest"
         }
     },
@@ -157,6 +197,7 @@
         "officeMeeting/lab-quest/extra/intro": {
             "answers": [
                 "lab-quest/accept-extra-A1",
+                "lab-quest/negociate-extra",
                 "lab-quest/question-extra-A1"
             ],
             "text": "officeMeeting/lab-quest/extra/intro"
@@ -198,6 +239,12 @@
                 "lab-quest/question-extra-A4"
             ],
             "text": "officeMeeting/lab-quest/extra/intro-pressed"
+        },
+        "officeMeeting/lab-quest/extra/negociated": {
+            "answers": [
+            ],
+            "hook": "labQuestAddExtraPayment",
+            "text": "officeMeeting/lab-quest/extra/negociated"
         },
         "officeMeeting/lab-quest/intro": {
             "answers": [
@@ -249,10 +296,65 @@
         "officeMeeting/lab-quest/intro-extra": {
             "answers": [
                 "lab-quest/accept-extra-A1",
+                "lab-quest/negociate-extra",
                 "lab-quest/extra-task-ask"
             ],
             "mood": "troubled",
             "text": "officeMeeting/lab-quest/intro-extra"
+        },
+        "officeMeeting/lab-quest/intro-reward": {
+            "answers": [
+                "lab-quest/negociate-barter",
+                "lab-quest/accept"
+            ],
+            "text": "officeMeeting/lab-quest/intro-reward"
+        },
+        "officeMeeting/lab-quest/intro-reward-bonus": {
+            "answers": [
+                "lab-quest/accept"
+            ],
+            "hook": "labQuestBarterReward",
+            "mood": "smile",
+            "text": "officeMeeting/lab-quest/intro-reward-bonus"
+        },
+        "officeMeeting/lab-quest/report/done": {
+            "answers": [
+                "lab-quest/ask-reward",
+                "lab-quest/happy-to-help"
+            ],
+            "hook": "labQuestConfirmed",
+            "mood": "smile",
+            "text": "officeMeeting/lab-quest/report/done"
+        },
+        "officeMeeting/lab-quest/report/entry": {
+            "answers": [
+                "lab-quest/confirm-holodisk-task",
+                "lab-quest/lie-holodisk-task",
+                "lab-quest/holodisk-task-not-done",
+                "lab-quest/holodisk-task-refuse"
+            ],
+            "mood": "smile",
+            "text": "officeMeeting/lab-quest/report/entry"
+        },
+        "officeMeeting/lab-quest/report/give-reward": {
+            "answers": [
+            ],
+            "hook": "labQuestPayReward",
+            "mood": "neutral",
+            "text": "officeMeeting/lab-quest/report/give-reward"
+        },
+        "officeMeeting/lab-quest/report/reject-holodisk": {
+            "answers": [
+            ],
+            "hook": "labQuestRejectHolodisk",
+            "mood": "angry",
+            "text": "officeMeeting/lab-quest/report/reject-holodisk"
+        },
+        "officeMeeting/lab-quest/report/undone-main-terminal": {
+            "answers": [
+            ],
+            "mood": "angry",
+            "text": "officeMeeting/lab-quest/report/undone-main-terminal"
         },
         "officeMeeting/not-ready": {
             "answers": [

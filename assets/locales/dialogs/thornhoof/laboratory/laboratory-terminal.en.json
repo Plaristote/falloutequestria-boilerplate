@@ -2,8 +2,18 @@
     "dialogs": {
         "thornhoof/laboratory/laboratory-terminal": {
             "entry": "MAS OS - Ready.<br>\nWhat are your commands ?",
+            "go-to-scroll-logs": "Look up Vellum Scroll's personal log",
             "leave": "Exit",
-            "lookup-sentinel-imprint": "Look up Sentinel magical imprint process"
+            "lookup-sentinel-imprint": "Look up Sentinel magical imprint process",
+            "scroll-logs/holodisk-entry": "MA OS - The program executed successfully.\n<br><br>\n2 files modified<br>\n387 files destroyed<br>",
+            "scroll-logs/searched": "<i>You successfully gained access to <b>Vellum Scroll</b>'s personal logs.</i>",
+            "search-computer": "Search the computer for anything interesting",
+            "search-failure": "<i>Some hidden file has caught your attention, but it's access protected, and you just couldn't manage to read them.</i>",
+            "search-give-up": "Back to the main menu.",
+            "search-over": "<i>You look upon the files, and see nothing that catch your interest.</i>",
+            "search-try-again": "Try again.",
+            "sentinel-lookup/searched": "<i>You hacked your way into some suspicious encrypted files. They are design documents for a sensible project called <b>Sentinel</b>.</i>",
+            "use-scroll-holodisk": "Insert Vellum Scroll's holodisk"
         }
     }
 }

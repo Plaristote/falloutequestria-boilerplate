@@ -1,8 +1,29 @@
 {
     "answers": {
+        "lab-quest/give-name": {
+            "state": "lab-quest/on-name-given",
+            "text": "lab-quest/give-name"
+        },
+        "lab-quest/leave": {
+            "hook": "leaveLaboratory",
+            "text": "lab-quest/leave"
+        },
+        "lab-quest/refuse-to-give-name": {
+            "state": "lab-quest/refused-to-give-name",
+            "text": "lab-quest/refuse-to-give-name"
+        },
+        "lab-quest/science-lie": {
+            "availableHook": "scrollQuestCanScienceLie",
+            "text": "lab-quest/science-lie"
+        },
         "looting": {
             "state": "fight",
             "text": "looting"
+        },
+        "start-scroll-quest": {
+            "availableHook": "canJustifyIntercept",
+            "state": "lab-quest/intercept",
+            "text": "start-scroll-quest"
         }
     },
     "entryPoint": "entry",
@@ -21,10 +42,37 @@
         },
         "intercept": {
             "answers": [
+                "start-scroll-quest",
                 "looting"
             ],
             "mood": "angry",
             "text": "intercept"
+        },
+        "lab-quest/intercept": {
+            "answers": [
+                "lab-quest/give-name",
+                "lab-quest/science-lie",
+                "lab-quest/refuse-to-give-name"
+            ],
+            "text": "lab-quest/intercept"
+        },
+        "lab-quest/on-name-given": {
+            "answers": [
+            ],
+            "text": "lab-quest/on-name-given"
+        },
+        "lab-quest/on-science-lie": {
+            "answers": [
+            ],
+            "text": "lab-quest/on-science-lie"
+        },
+        "lab-quest/refused-to-give-name": {
+            "answers": [
+                "lab-quest/give-name",
+                "lab-quest/science-lie",
+                "lab-quest/leave"
+            ],
+            "text": "lab-quest/refused-to-give-name"
         }
     }
 }

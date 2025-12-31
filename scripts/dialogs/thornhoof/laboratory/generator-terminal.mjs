@@ -12,6 +12,7 @@ class Dialog {
   customEntryPoint() {
     switch (this.dialog.npc.path) {
       case "2.laboratory.terminal": return "entry-laboratory";
+      case "2.annex#2.terminal": return "entry-annex";
     }
     return "entry";
   }
@@ -42,6 +43,18 @@ class Dialog {
     const turret = level.script.laboratoryTurret;
     turret.script.popUp();
     turret.statistics.faction = "player";
+  }
+
+  get annexDoor() {
+    return level.findObject("2.annex#2.door#2");
+  }
+
+  canUnlockAnnex() {
+    return this.annexDoor.locked;
+  }
+
+  unlockAnnex() {
+    this.annexDoor.locked = false;
   }
 }
 

@@ -1,0 +1,18 @@
+{
+  "quests": {
+    "thornhoof/scrollQuest": {
+      "title": "Sous la surface de Sabairain",
+      "fetch-battery": "Récupère une Batterie à Flux Inversé",
+      "wipe-data": "Exécute l'holodisque de Vellum Scroll sur le terminal principal",
+      "report": "Retourner voir Vellum Scroll",
+      "description": "Vellum Scroll, une figure importante du Conseil des Gardiens de Sabairain, t'as demandé de trouver une Batterie à Flux Inversé, dans un laboratoire d'avant-guerre situé sous le sol de Sabairain. Il veut aussi que tu exécute un holodisque dans le terminal principal du laboratoire, pour une raison obscure. Le laboratoire est situé dans la ville de Sabairain, au sud-ouest.",
+      "desc-threats": "Le laboratoire est infesté de goules, selon Vellum Scroll.",
+      "desc-confessed-in-intro": "Pendant votre entretien, Vellum Scroll t'as confié que l'holodisque qu'il t'as confié dois purger des données indésirables du système informatique du laboratoire. Cela, afin d'empêcher que la science sans conscience menée avant l'apocalypse ne refasse surface, et soit utilisée pour créer des armes trop dangereuses pour ce monde.",
+      "desc-found-scroll-logs": "Tandis que tu fouinais sur le terminal principal, tu as trouvé des logs écrits par Vellum Scroll. Avant de devenir une goule, il travaillait dans ce laboratoire, en temps que scientifique. Il travaillait sur un projet visant à stocker des sorts de soins massif dans des appareils portatifs. Il ne parvint jamais au succès, et l'une de ses expérience transforma l'intégralité du personnel du laboratoire, lui inclu, en goules. Voilà peut-être ce que Vellum Scroll cherchait à cacher.",
+      "desc-report-battery": "Tu as rapporté la Batterie à Flux Inversé et l'as donné à Vellum Scroll, contribuant ainsi à la sécurité de Sabairain.",
+      "desc-report-holodisk-wipe": "Tu as utilisé l'holodisque de Vellum Scroll sur le terminal principal du laboratoire, effaçant de l'Histoire tout ce que Vellum Scroll voulait effacer.",
+      "desc-report-holodisk-lie": "Tu as mentis à Vellum Scroll, prétendant avoir utilisé son holodisque sur le terminal principal du laboratoire. Qui sait quelles conséquences cela aura ?",
+      "desc-report-holodisk-reject": "Tu as refusé d'utiliser l'holodisque de Vellum Scroll."
+    }
+  }
+}

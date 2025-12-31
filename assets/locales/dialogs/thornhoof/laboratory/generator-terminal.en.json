@@ -1,6 +1,7 @@
 {
     "dialogs": {
         "thornhoof/laboratory/generator-terminal": {
+            "annex-unlocked": "Annex unlocked.",
             "entry": "MAS OS - Ready.<br>\nCommands:<br>",
             "hack": "Hack the terminal",
             "hack-failure": "<i>Despite your best efforts, the terminal remains locked.</i>",
@@ -18,7 +19,8 @@
             "security-menu-option": "Security",
             "staff-menu": "Staff management.<br>\nCommands:",
             "staff-menu-option": "Staff",
-            "staff-removed": "Access permission wiped out."
+            "staff-removed": "Access permission wiped out.",
+            "unlock-annex": "Unlock storage room"
         }
     }
 }

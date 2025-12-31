@@ -1,0 +1,18 @@
+{
+  "quests": {
+    "thornhoof/scrollQuest": {
+      "title": "Thornhoof's underground",
+      "fetch-battery": "Retrieve an Inverted Flux Battery",
+      "wipe-data": "Run Vellum Scroll's holodisk on the mainframe terminal",
+      "report": "Get back to Vellum Scroll",
+      "description": "Vellum Scroll, important figure of Thornhoof's Council of Guardians, tasked you with retrieving an Inverted Flux Battery that you should find in the underground of a pre-war laboratory located in the undergrounds of Thornhoof. He also wants you to run a holodisk on the laboratory's mainframe, for some reason. The laboratory is located in the south-west parts of Thornhoof.",
+      "desc-threats": "According to Vellum Scroll, the laboratory is infested with feral ghouls.",
+      "desc-confessed-in-intro": "During your interview, Vellum Scroll confessed the holodisk he entrusted to you is designed to purge dangerous data from the laboratory computer system, avoiding that some of the toxic knowledge of the pre-war world might be used, once again, to create weapons too powerful for ponykind to wield.",
+      "desc-found-scroll-logs": "When you were interacting with the laboratory's mainframe, you found logs belonging to Vellum Scroll. Before becoming a ghoul, he used to work in this laboratory, as a scientist. The project he was working on was designed to store mass healing spells in portable devices. Unfortunately, he never got it to work, and accidentally turned all the laboratory staff, including himself, into ghouls. That's probably what he's trying to wipe off from memory.",
+      "desc-report-battery": "You found the Inverted Flux Battery and gave it to Vellum Scroll, contributing to the safety of Thornhoof.",
+      "desc-report-holodisk-wipe": "You used Vellum Scroll's holodisk on the laboratory's mainframe, deleting anything Vellum Scroll wanted to delete from history.",
+      "desc-report-holodisk-lie": "You lied to Vellum Scroll about using the holodisk on the laboratory's mainframe. Who knows what the consequences will be ?",
+      "desc-report-holodisk-reject": "You didn't use Vellum Scroll's holodisk, and decided to tell him that you wouldn't do it."
+    }
+  }
+}

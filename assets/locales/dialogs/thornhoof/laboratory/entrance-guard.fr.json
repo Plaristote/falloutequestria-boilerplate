@@ -1,0 +1,17 @@
+{
+    "dialogs": {
+        "thornhoof/laboratory/entrance-guard": {
+            "fight": "Ah, ça non ! Pas pendant mon tour de garde !<br><i>Le garde sort son flingue</i>",
+            "intercept": "Hé ! Qu'est-ce que vous foutez là ? Comment vous êtes rentrés ?",
+            "lab-quest/give-name": "C'est Vellum Scroll en personne qui m'envoit.",
+            "lab-quest/intercept": "Ah ? J'étais pas au courant. On aurait du me notifier. Qui t'as donné cette affectation ?",
+            "lab-quest/leave": "Bien, je m'en vais.",
+            "lab-quest/on-name-given": "Vraiment ? Hm. Eh beh tu peux passer du coup. Allez, file.",
+            "lab-quest/on-science-lie": "Merde, c'est vrai que je me sens un peu malade, ces temps-ci. Ca a l'air sérieux, tu ferais mieux de t'en occuper ! Allez, grouille-toi !",
+            "lab-quest/refuse-to-give-name": "Je ne suis pas censé donner de nom.",
+            "lab-quest/refused-to-give-name": "Quoi ? Écoute, ce bâtiment n'est pas ouvert au public. Je ne peux pas te laisser passer si t'es pas censé \nêtre là. Alors explique moi ce que tu fous ici, ou fous le camp d'ici.",
+            "lab-quest/science-lie": "Oui, tout le monde est un peu débordé, en ce moment. Les systèmes de ventilation de ces vieux bâtiments se font vétustes, et il y a eu des malades. Toute les équipes d'entretien sont en branles-bas de combat. Mieux vaut être prudent. ",
+            "lab-quest/speech-lie": "La notification n'est probablement pas encore partie."
+        }
+    }
+}

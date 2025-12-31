@@ -1,0 +1,28 @@
+{
+    "dialogs": {
+        "thornhoof/citizens/bar-patron": {
+            "ask-about-refugees": "I'd like to speak about the refugees.",
+            "ask-refugee-fight": "I heard there was a fight, right here, between them and locals.",
+            "ask-refugee-opinion": "What's your opinion about them ?",
+            "entry": "Hello.",
+            "leave": "Bye.",
+            "refugees/back-to-prompt": "I have something else to ask about refugees.",
+            "refugees/fight/about-culprits": "If I knew them ? Not really. They've been coming here often since they arrived. Kids, hot headed, but didn't meddle with us much.",
+            "refugees/fight/about-fight": "One of the refugee got up and kicked his face. Then it got hectic. We were going to throw them out of the bar. Then somepony noticed: the one they struck was bleeding out on the ground. He died on us pretty quick. Those damned ponies…",
+            "refugees/fight/about-flee": "The owner picked up her gun and fired at them. She hit one of them, and they ran away.",
+            "refugees/fight/about-following": "We were a little busy at the time, dealing with our own wounded. Nopony went after them. It's not like they're gong to leave town anway.",
+            "refugees/fight/about-insults": "He told them their crystals were worthless. That if their magic was of any use, they wouldn't be here, leeching off us, after getting their butts kicked at Basalburg.",
+            "refugees/fight/about-wounded-refugee": "Yeah, I guess I could. He's a silver earth pony with red hair. He took a bullet to his sides. Might've gotten nasty.",
+            "refugees/fight/answer-ask-culprits": "Tell me about the refugees. Who are they ? Did you know who they were ?",
+            "refugees/fight/answer-ask-fight": "What happened ?",
+            "refugees/fight/answer-ask-fight-alt": "Tell me about their fight against Barlow.",
+            "refugees/fight/answer-ask-insults": "What did this \"Barlow\" person say ?",
+            "refugees/fight/answer-ask-wounded": "What about the refugee who got wounded ? What did they look like ?",
+            "refugees/fight/answer-fight-followup#1": "I'm sorry for your loss. What did the refugees do next ?",
+            "refugees/fight/answer-fight-followup#2": "So the refugees ran for it. Did anypony run after them ?",
+            "refugees/fight/entry": "Oh, that damn story… yeah, it took off with some heated words, as usual. They were talking among themselves. Then Barlow got himself into the conversation, he wanted to remind them their place.",
+            "refugees/fight/exit": "I see. Thank you for your answers.",
+            "refugees/prompt": "That again. What do you want to know ?"
+        }
+    }
+}
