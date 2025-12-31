@@ -47,6 +47,7 @@ export default class {
       else
         game.appendToConsole(i18n.t("messages.nothing-happens"));
     }
+    return true;
   }
 
   onUseScience(user) {
