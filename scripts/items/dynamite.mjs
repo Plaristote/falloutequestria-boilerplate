@@ -100,7 +100,11 @@ export class Dynamite extends ThrowableBehaviour {
 
   triggered() {
     const wearer    = this.model.getOwner();
-    const position  = wearer ? wearer.position : this.model.position;
+    const position  = {
+      x: wearer ? wearer.position.x : this.model.position.x,
+      y: wearer ? wearer.position.y : this.model.position.y,
+      z: wearer ? wearer.floor : this.model.floor
+    };
     const explosion = new Explosion(position);
 
     explosion.withRadius(2)

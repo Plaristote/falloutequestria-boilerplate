@@ -51,7 +51,7 @@ export class Trap {
   }
 
   triggered() {
-    const explosion = new Explosion(this.model.position);
+    const explosion = new Explosion({ x: this.model.position.x, y: this.model.position.y, z: this.model.floor });
 
     explosion.withRadius(1)
              .withDamage(getValueFromRange(20, 50))

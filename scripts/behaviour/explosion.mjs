@@ -38,9 +38,10 @@ export class Explosion {
 
     for (var x = fromPos[0] ; x <= toPos[0] ; ++x) {
       for (var y = fromPos[1] ; y <= toPos[1] ; ++y) {
-        const objects = level.getDynamicObjectsAt(x, y);
+        const objects = level.getDynamicObjectsAt(x, y, this.position.z);
 
-        level.addAnimationSequence({ steps: [makeExplosionAnimationAt(x, y)] });
+        if (this.position.z === level.currentFloor)
+          level.addAnimationSequence({ steps: [makeExplosionAnimationAt(x, y)] });
         objects.forEach(this.triggeredOnObject.bind(this));
       }
     }
