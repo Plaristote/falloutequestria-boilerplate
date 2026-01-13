@@ -1,0 +1,18 @@
+{
+    "dialogs": {
+        "unhaus/restaurant-owner": {
+            "about-hallway": "Il y a plein de passage. C'est bon pour les affaires.",
+            "about-insects": "<i>Elle sourit.</i>\n<br><br>\nNan. Ca doit sûrement pas être très savoureux.",
+            "ask-about-insects": "As-tu entendu parler de poney insectoïdes ?",
+            "ask-about-restaurant-location": "Pourquoi ce restaurant est situé au milieu d'un couloir ?",
+            "ask-about-wares": "Tu vends d'autres choses ?",
+            "ask-reveal-changeling": "Tu serais pas un changelin ?",
+            "entry": "Bienvenue dans mon magasin de distribution de sustenance.",
+            "fix-restaurant-formulation": "Tu veux dire « restaurant » ?",
+            "other-wares": "Absolument. Je ne serais pas un bon restaurateur si je ne vendais pas des gros flingues. Comme dans la restauration d'avant-guerre; ils avaient des machines « à la carte » qui te coupaient en petites pièces: de la crème fraîche, une arme plasma liquéfiante, ou des “sautés”, des lance-flammes très extrêmement puissants. C'était trop dangereux pour les terres désolées, et elles ont été détruites. C'est pour ça qu'il n'y en a plus aux alentours.",
+            "prompt-leave": "Au revoir.",
+            "restaurant-fix": "Absolument. C'est exactement ce que je voulais dire.",
+            "revealed": "Absolument. Mais ne dis à personne que tu m'as découvert si facilement : je serais l'objet de tous les quolibets. T'es un des poneys de la reine, pas vrai ? Elle veut sûrement te voir réussir, je peux te faire une belle réduction en échange de ton silence."
+        }
+    }
+}

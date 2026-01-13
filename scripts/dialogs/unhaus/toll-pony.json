@@ -1,0 +1,122 @@
+{
+    "answers": {
+        "ask-about-location": {
+            "state": "prompt",
+            "text": "ask-about-location"
+        },
+        "ask-about-npc": {
+            "state": "prompt",
+            "text": "ask-about-npc"
+        },
+        "ask-about-town-shape": {
+            "state": "prompt",
+            "text": "ask-about-town-shape"
+        },
+        "changeling-ans-danger": {
+            "state": "prompt",
+            "text": "changeling-ans-danger"
+        },
+        "changeling-ans-evasive": {
+            "state": "prompt",
+            "text": "changeling-ans-evasive"
+        },
+        "changeling-ans-explain": {
+            "state": "about-changelings#2",
+            "text": "changeling-ans-explain"
+        },
+        "changeling-ans-safe": {
+            "state": "prompt",
+            "text": "changeling-ans-safe"
+        },
+        "changeling-yell": {
+            "availableHook": "knowsAboutInsectUnderground",
+            "state": "about-changelings",
+            "text": "changeling-yell"
+        },
+        "leave-prompt": {
+            "text": "leave-prompt"
+        },
+        "meeting-ans-quest": {
+            "availableHook": "knowsAboutInsectPony",
+            "state": "meeting-quest",
+            "text": "meeting-ans-quest"
+        },
+        "meeting-ans-standoffish": {
+            "state": "prompt",
+            "text": "meeting-ans-standoffish"
+        },
+        "meeting-ans-visiting": {
+            "state": "prompt",
+            "text": "meeting-ans-visiting"
+        },
+        "meeting-quest-ans-insects": {
+            "state": "prompt",
+            "text": "meeting-quest-ans-insects"
+        },
+        "meeting-quest-ans-secret": {
+            "state": "prompt",
+            "text": "meeting-quest-ans-secret"
+        }
+    },
+    "entryPoint": "prompt",
+    "states": {
+        "about-changelings": {
+            "answers": [
+                "changeling-ans-evasive",
+                "changeling-ans-explain"
+            ],
+            "mood": "dubious",
+            "text": "about-changelings"
+        },
+        "about-changelings#2": {
+            "answers": [
+                "changeling-ans-danger",
+                "changeling-ans-safe"
+            ],
+            "mood": "neutral",
+            "text": "about-changelings#2"
+        },
+        "about-location": {
+            "answers": [
+            ],
+            "text": "about-location"
+        },
+        "about-self": {
+            "answers": [
+            ],
+            "text": "about-self"
+        },
+        "about-town-shape": {
+            "answers": [
+            ],
+            "text": "about-town-shape"
+        },
+        "meeting": {
+            "answers": [
+                "meeting-ans-visiting",
+                "meeting-ans-quest",
+                "meeting-ans-standoffish"
+            ],
+            "text": "meeting"
+        },
+        "meeting-quest": {
+            "answers": [
+                "meeting-quest-ans-secret",
+                "meeting-quest-ans-insects"
+            ],
+            "mood": "smile",
+            "text": "meeting-quest"
+        },
+        "prompt": {
+            "answers": [
+                "ask-about-location",
+                "ask-about-npc",
+                "ask-about-town-shape",
+                "changeling-yell",
+                "leave-prompt"
+            ],
+            "hook": "prompt",
+            "text": "prompt"
+        }
+    }
+}

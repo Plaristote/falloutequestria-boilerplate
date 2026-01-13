@@ -1,0 +1,70 @@
+{
+    "answers": {
+        "ask-about-insects": {
+            "availableHook": "canAskAboutInsectPony",
+            "state": "entry",
+            "text": "ask-about-insects"
+        },
+        "ask-about-restaurant-location": {
+            "state": "entry",
+            "text": "ask-about-restaurant-location"
+        },
+        "ask-about-wares": {
+            "state": "entry",
+            "text": "ask-about-wares"
+        },
+        "ask-reveal-changeling": {
+            "availableHook": "canRevealChangeling",
+            "state": "entry",
+            "text": "ask-reveal-changeling"
+        },
+        "fix-restaurant-formulation": {
+            "state": "entry",
+            "text": "fix-restaurant-formulation"
+        },
+        "prompt-leave": {
+            "text": "prompt-leave"
+        }
+    },
+    "entryPoint": "entry",
+    "states": {
+        "about-hallway": {
+            "answers": [
+            ],
+            "text": "about-hallway"
+        },
+        "about-insects": {
+            "answers": [
+            ],
+            "text": "about-insects"
+        },
+        "entry": {
+            "answers": [
+                "ask-about-insects",
+                "fix-restaurant-formulation",
+                "ask-about-restaurant-location",
+                "ask-reveal-changeling",
+                "ask-about-wares",
+                "prompt-leave"
+            ],
+            "hook": "prompt",
+            "mood": "neutral",
+            "text": "entry"
+        },
+        "other-wares": {
+            "answers": [
+            ],
+            "text": "other-wares"
+        },
+        "restaurant-fix": {
+            "answers": [
+            ],
+            "text": "restaurant-fix"
+        },
+        "revealed": {
+            "answers": [
+            ],
+            "text": "revealed"
+        }
+    }
+}

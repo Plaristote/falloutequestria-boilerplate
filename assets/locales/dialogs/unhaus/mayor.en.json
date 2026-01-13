@@ -1,0 +1,36 @@
+{
+    "dialogs": {
+        "unhaus/mayor": {
+            "about-insect": "No, good ma’am/sir. This town has no cryptids in its walls. Though it is in this town’s laws for you to look.",
+            "about-insect-fight": "<i>She’s clearly not prepared for this situation. She panics.</i>\n<br><br>\nGuards!",
+            "about-insect-fight-fight": "<i>[Stand your ground]</i>",
+            "about-insect-fight-surrender": "<i>[Yield]</i>",
+            "about-insect-perception": "<i>Her eyes widen.</i>",
+            "about-insect-press#2": "I – You, a smooth talker, shouldn’t pick up on what our town does willy-nilly.",
+            "about-insect-press#2-magic": "Your magic can stay wrong. Winds occur from many spots. You hold misinformation.",
+            "about-jobs": "Nay, still, I ask for you to chill out at our visitor’s room.",
+            "about-self": "A fool I am to drop a mind of introduction. I am Consulting Mar. This mayor of this charming domain.",
+            "about-speech": "I just do. Is it not amazing to sin with your articulation?!",
+            "about-town": "Unhaus, a town of plain purport; to inhabit all within and conduct out hazard. Much to any kind of any town. Youth may grow and absorb atoms, functioning to mystic according ability to an adult’s in harmony. You stand much in favor of staying, if you vow to ditto this harmony.",
+            "after-capture": "Oh. You look similar to a pony. You, doing a pact with our bug lords, to bring about your own survival?",
+            "after-capture-animosity": "Our mutual patrons wouldn’t support that. I catch your animosity.",
+            "answer-seeing-around": "I'm seeing around. What's going up in this place ?",
+            "ask-about-insects": "Have you heard of any insect pony ?",
+            "ask-about-npc": "Who are you ?",
+            "ask-about-place": "What can you tell of this place ?",
+            "ask-about-speech": "Why are you talking so strange ?",
+            "ask-for-job": "Is there any job available ?",
+            "capture-A1": "I'm really sick of that mouth of yours !",
+            "capture-A2": "<i>Sigh.</i> Yeah.",
+            "capture-A3": "I got capture because of you!",
+            "insect-press-fighting-words": "Bullshit. You’re hiding something!",
+            "insect-press-giveup": "Maybe you're right.",
+            "insect-press-speech": "I understand, this may be a whole big secret. But, surely you can make one single exception. I know something is going up in this place.",
+            "insect-press-spellcast": "I am not blind. The magic here is <b>different</b> !",
+            "meeting": "Howdy. You, an unfamiliar pony, in a waltz, put its own into my room.\n<br><br>\n<i>A look of suspicion hits you.</i>\n<br><br>\nMay I aid you?",
+            "press-about-insects": "Strange since I have seen multiple imprints of quadrupedal creatures that aren’t ponies.",
+            "prompt": "Us adjoin again.",
+            "prompt-exit": "I'll be on my way. Bye."
+        }
+    }
+}

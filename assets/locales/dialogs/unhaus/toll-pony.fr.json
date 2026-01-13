@@ -1,0 +1,35 @@
+{
+    "dialogs": {
+        "unhaus/toll-pony": {
+            "about-changeling-on-danger": "Ah oui ? J'ai l'impression qu'ils font plutôt du bon boulot. Ca me va.",
+            "about-changeling-on-evasive": "<i>Il te regarde d'un air inquiet.</i>",
+            "about-changeling-on-safe": "Bon, ben il n'y a pas de problème, alors.",
+            "about-changelings": "Ah oui ? C'est quoi un changelin ?",
+            "about-changelings#2": "En fait, je crois que j'en ai déjà vu quelques-uns. Est-ce qu'ils sont nuisibles ?",
+            "about-location": "T'es à Unhaus. C'est ma ville – un gros bâtiment. On est en sécurité, on a de la bouffe, une communauté, tout ce dont t'as besoin. Les étrangers disent que c'est bizarre ici. Je saurais pas dire, moi, je suis né ici. Il y avait des rangées de cadavres de raiders exposés autour de la ville, quand j'étais poulain, pour intimider ceux qui voudraient se frotter à nous. Mais le maire voulait être plus accueillant pour les caravanes. C'est probablement pour ça que les étrangers trouvent l'ambiance un peu glauque. Leurs esprits èrent peut-être encore.",
+            "about-self": "Je suis Summer Intention. Moi et mes gars ici présent, nous collectons une petite taxe sur les marchandises qui circulent, et on leur garantie sauf conduit sur quelques kilomètres. Pleins de caravanes passent, et peu d'entre elles restent, alors on se fait quelques capsules.",
+            "about-town-shape": "Je suppose que les poneys aiment juste vivre à proximité de leurs semblables. Ce monde est dangereux, après tout. On construit juste nos maisons les unes au-dessus des autres.",
+            "ask-about-location": "C'est quoi, cet endroit ?",
+            "ask-about-npc": "Qui es-tu ?",
+            "ask-about-town-shape": "Pourquoi cette ville est toute entassée comme ça ?",
+            "changeling-ans-danger": "Oui. Ils contrôlent la ville !",
+            "changeling-ans-evasive": "Oublie ça, je ne t'ai rien dit.",
+            "changeling-ans-explain": "Ce sont des créature moitié-poney, moitié-insecte. Ils peuvent changer d'apparence à volonté, et ils se sustentent en dévorant l'amour !",
+            "changeling-ans-safe": "Non, je ne pense pas.",
+            "changeling-yell": "IL Y A DES CHANGELINS DANS LES SOUS-SOLS !",
+            "leave-prompt": "À plus tard.",
+            "meeting": "De passage ? Ici pour vendre ? Pour visiter ?\n<br><br>\n<i>Ton arrivée l'a sortie de ses rêveries.</i>",
+            "meeting-ans-quest": "Je suis ici pour investiguer certaines rumeurs.",
+            "meeting-ans-standoffish": "Qu'est-ce que ça peut te foutre, t'es de la police ?",
+            "meeting-ans-visiting": "Je suis ici pour visiter.",
+            "meeting-quest": "Vraiment ?\n<br><br>\n<i>Il semble apprécié cette nouvelle brisant la monotonie de son travail.</i>\n<br><br>\nQu'est-ce que c'est ?",
+            "meeting-quest-ans-insects": "Je cherche des poneys insectoïdes.",
+            "meeting-quest-ans-secret": "C'est un secret.",
+            "meeting-quest-insects": "<i>Il cherche sa mémoire.</i>\n<br><br>\nJe crois que j'en ai déjà vu un, une fois. Mais c'était il y a longtemps, je me souviens plus trop. Je peux pas t'aider.",
+            "meeting-quest-secrecy": "<i>Il semble deçu.</i>\n<br><br>\nBon ben, bonne chance alors.",
+            "prompt": "De retour ?",
+            "prompt-standoffish": "Éh, pas besoin de jouer les durs. Je fais juste mon travail.",
+            "prompt-visiting": "Curieux, il n'y a pas beaucoup de poneys qui viennent dans le coin sans y être obligés."
+        }
+    }
+}

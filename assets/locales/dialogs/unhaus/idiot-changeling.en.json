@@ -1,0 +1,41 @@
+{
+    "dialogs": {
+        "unhaus/idiot-changeling": {
+            "about-closet": "My friends dared me to go in this spooky closet. They then locked me in… they’re just silly ‘lings. Said something about me not going outside without a disguise.",
+            "about-queen": "She’s mean.",
+            "about-race": "Uhm. I’m a changeling? Did I answer right?",
+            "about-race-ans-friends": "Friends?",
+            "about-race-ans-hive": "Hive?",
+            "about-race-extended": "Oooh. You want to know more about changelings? I love helping out. I love helping friends even more. Maybe I can show you our hive. It’s very cool.",
+            "about-race-friends": "Of course. You helped me out. That means we’re friends!",
+            "about-race-hive": "Yes! Hive! It’s under the town. Very secret, shh, so don’t tell anyone.",
+            "about-self": "I'm Caput, your new changeling friend !",
+            "about-self-extended": "I am Caput! My fellow hivelings and queen said I’m only useful for menial labor. That means I must be the best menial drone around.",
+            "after-insult": "That’s not very nice.",
+            "ask-about-closet": "Why were you stuck in the closet?",
+            "ask-about-npc": "Who are you?",
+            "ask-about-queen": "What do you think of the queen?",
+            "ask-about-race": "What exactly are you?",
+            "ask-to-show-hive": "If we are friends, then you can surely help me out to get into your hive.",
+            "hive-meeting": "Hi there, friend. Hey can you tell me how it is outside there?",
+            "hive-meeting-ans-alright": "It's alright.",
+            "hive-meeting-ans-bad": "Bad.",
+            "hive-meeting-ans-danger": "Dangerous.",
+            "hive-meeting-ans-dead": "Dead.",
+            "hive-meeting-ans-horrible": "Horrible.",
+            "hive-meeting-ans-sad": "Sad.",
+            "hive-prompt": "Hi, friend!",
+            "hive-prompt-outside-bad": "That doesn’t sound nice. It’s fun that we’re right here, two friends safe in the hive instead!",
+            "hive-prompt-outside-good": "I hope it gets funner then. But it’s fun enough with us two friends safe in the hive.",
+            "leave-prompt": "Bye !",
+            "meeting": "Thanks for helping me out. I was kinda stuck in here.",
+            "meeting-ans-curiosity": "Who and what are you ?",
+            "meeting-ans-insect": "Are you one of those insect ponies ?",
+            "meeting-ans-insulting": "Damn, are you ugly.",
+            "prompt": "Hi there. It's so nice seeing you again.",
+            "show-hive": "Of course! Just, don’t tell anyling. Follow me!",
+            "show-hive-ans-accept": "Alright.",
+            "show-hive-ans-later": "Not right now."
+        }
+    }
+}

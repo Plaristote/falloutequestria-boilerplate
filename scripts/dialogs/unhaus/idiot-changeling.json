@@ -1,0 +1,195 @@
+{
+    "answers": {
+        "about-race-ans-followup": {
+            "state": "about-race-extended",
+            "text": "exit"
+        },
+        "about-race-ans-friends": {
+            "state": "about-race-extended",
+            "text": "about-race-ans-friends"
+        },
+        "about-race-ans-hive": {
+            "state": "about-race-extended",
+            "text": "about-race-ans-hive"
+        },
+        "ask-about-closet": {
+            "text": "ask-about-closet"
+        },
+        "ask-about-npc": {
+            "state": "prompt",
+            "text": "ask-about-npc"
+        },
+        "ask-about-queen": {
+            "state": "hive-prompt",
+            "text": "ask-about-queen"
+        },
+        "ask-about-race": {
+            "state": "about-race",
+            "text": "ask-about-race"
+        },
+        "ask-to-show-hive": {
+            "state": "show-hive",
+            "text": "ask-to-show-hive"
+        },
+        "hive-meeting-ans-alright": {
+            "state": "hive-prompt",
+            "text": "hive-meeting-ans-alright"
+        },
+        "hive-meeting-ans-bad": {
+            "state": "hive-prompt",
+            "text": "hive-meeting-ans-bad"
+        },
+        "hive-meeting-ans-danger": {
+            "state": "hive-prompt",
+            "text": "hive-meeting-ans-danger"
+        },
+        "hive-meeting-ans-dead": {
+            "text": "hive-meeting-ans-dead"
+        },
+        "hive-meeting-ans-horrible": {
+            "state": "hive-prompt",
+            "text": "hive-meeting-ans-horrible"
+        },
+        "hive-meeting-ans-sad": {
+            "state": "hive-prompt",
+            "text": "hive-meeting-ans-sad"
+        },
+        "leave-prompt": {
+            "text": "leave-prompt"
+        },
+        "meeting-ans-curiosity": {
+            "text": "meeting-ans-curiosity"
+        },
+        "meeting-ans-insect": {
+            "availableHook": "knowsAboutInsectPony",
+            "state": "prompt",
+            "text": "meeting-ans-insect"
+        },
+        "meeting-ans-insulting": {
+            "state": "prompt",
+            "text": "meeting-ans-insulting"
+        },
+        "show-hive-ans-accept": {
+            "hook": "goToHiveEntrance",
+            "text": "show-hive-ans-accept"
+        },
+        "show-hive-ans-later": {
+            "text": "show-hive-ans-later"
+        }
+    },
+    "entryPoint": "",
+    "states": {
+        "about-closet": {
+            "answers": [
+            ],
+            "text": "about-closet"
+        },
+        "about-queen": {
+            "answers": [
+            ],
+            "text": "about-queen"
+        },
+        "about-race": {
+            "answers": [
+                "about-race-ans-followup"
+            ],
+            "mood": "dubious",
+            "text": "about-race"
+        },
+        "about-race-extended": {
+            "answers": [
+                "about-race-ans-hive",
+                "about-race-ans-friends",
+                "ask-to-show-hive",
+                "leave-prompt"
+            ],
+            "hook": "aboutRace",
+            "mood": "smile",
+            "text": "about-race-extended"
+        },
+        "about-race-friends": {
+            "answers": [
+            ],
+            "text": "about-race-friends"
+        },
+        "about-race-hive": {
+            "answers": [
+            ],
+            "text": "about-race-hive"
+        },
+        "about-self": {
+            "answers": [
+            ],
+            "text": "about-self"
+        },
+        "about-self-extended": {
+            "answers": [
+            ],
+            "text": "about-self-extended"
+        },
+        "after-insult": {
+            "answers": [
+            ],
+            "text": "after-insult"
+        },
+        "hive-meeting": {
+            "answers": [
+                "hive-meeting-ans-bad",
+                "hive-meeting-ans-horrible",
+                "hive-meeting-ans-danger",
+                "hive-meeting-ans-dead",
+                "hive-meeting-ans-sad",
+                "hive-meeting-ans-alright"
+            ],
+            "hook": "hiveMeeting",
+            "mood": "smile",
+            "text": "hive-meeting"
+        },
+        "hive-prompt": {
+            "answers": [
+                "ask-about-queen",
+                "leave-prompt"
+            ],
+            "hook": "hivePrompt",
+            "mood": "smile",
+            "text": "hive-prompt"
+        },
+        "hive-prompt-outside-bad": {
+            "answers": [
+            ],
+            "text": "hive-prompt-outside-bad"
+        },
+        "hive-prompt-outside-good": {
+            "answers": [
+            ],
+            "text": "hive-prompt-outside-good"
+        },
+        "meeting": {
+            "answers": [
+                "meeting-ans-insect",
+                "meeting-ans-insulting",
+                "meeting-ans-curiosity"
+            ],
+            "mood": "smile",
+            "text": "meeting"
+        },
+        "prompt": {
+            "answers": [
+                "ask-about-closet",
+                "ask-about-npc",
+                "ask-about-race",
+                "leave-prompt"
+            ],
+            "hook": "prompt",
+            "mood": "smile",
+            "text": "prompt"
+        },
+        "show-hive": {
+            "answers": [
+                "show-hive-ans-accept",
+                "show-hive-ans-later"
+            ],
+            "text": "show-hive"
+        }
+    }
+}

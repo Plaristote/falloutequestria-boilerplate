@@ -1,0 +1,160 @@
+{
+    "answers": {
+        "about-insect-fight-fight": {
+            "hook": "startFight",
+            "text": "about-insect-fight-fight"
+        },
+        "about-insect-fight-surrender": {
+            "hook": "startSurrender",
+            "text": "about-insect-fight-surrender"
+        },
+        "answer-seeing-around": {
+            "state": "prompt",
+            "text": "answer-seeing-around"
+        },
+        "ask-about-insects": {
+            "availableHook": "canAskAboutInsectPony",
+            "state": "prompt",
+            "text": "ask-about-insects"
+        },
+        "ask-about-npc": {
+            "state": "prompt",
+            "text": "ask-about-npc"
+        },
+        "ask-about-place": {
+            "state": "prompt",
+            "text": "ask-about-place"
+        },
+        "ask-about-speech": {
+            "state": "prompt",
+            "text": "ask-about-speech"
+        },
+        "ask-for-job": {
+            "state": "prompt",
+            "text": "ask-for-job"
+        },
+        "capture-A1": {
+            "text": "capture-A1"
+        },
+        "capture-A2": {
+            "text": "capture-A2"
+        },
+        "capture-A3": {
+            "text": "capture-A3"
+        },
+        "insect-press-fighting-words": {
+            "state": "about-insect-fight",
+            "text": "insect-press-fighting-words"
+        },
+        "insect-press-giveup": {
+            "state": "prompt",
+            "text": "insect-press-giveup"
+        },
+        "insect-press-speech": {
+            "availableHook": "canPressUsingSpeech",
+            "state": "about-insect-press#2",
+            "text": "insect-press-speech"
+        },
+        "insect-press-spellcast": {
+            "availableHook": "canPressUsingMagic",
+            "state": "about-insect-press#2",
+            "text": "insect-press-spellcast"
+        },
+        "press-about-insects": {
+            "availableHook": "canPressAboutInsectPony",
+            "state": "about-insect-press",
+            "text": "press-about-insects"
+        },
+        "prompt-exit": {
+            "text": "prompt-exit"
+        }
+    },
+    "entryPoint": "prompt",
+    "states": {
+        "about-insect": {
+            "answers": [
+            ],
+            "text": "about-insect"
+        },
+        "about-insect-fight": {
+            "answers": [
+                "about-insect-fight-fight",
+                "about-insect-fight-surrender"
+            ],
+            "mood": "angry",
+            "text": "about-insect-fight"
+        },
+        "about-insect-press": {
+            "answers": [
+                "insect-press-speech",
+                "insect-press-spellcast",
+                "insect-press-giveup"
+            ],
+            "mood": "neutral",
+            "text": "about-insect-press"
+        },
+        "about-insect-press#2": {
+            "answers": [
+                "insect-press-fighting-words",
+                "insect-press-giveup"
+            ],
+            "hook": "aboutInsectPress2",
+            "mood": "sad",
+            "text": "about-insect-press#2-magic"
+        },
+        "about-jobs": {
+            "answers": [
+            ],
+            "text": "about-jobs"
+        },
+        "about-self": {
+            "answers": [
+            ],
+            "text": "about-self"
+        },
+        "about-speech": {
+            "answers": [
+            ],
+            "text": "about-speech"
+        },
+        "about-town": {
+            "answers": [
+            ],
+            "text": "about-town"
+        },
+        "after-capture": {
+            "answers": [
+                "capture-A3",
+                "capture-A2",
+                "capture-A1"
+            ],
+            "text": "after-capture"
+        },
+        "after-capture-animosity": {
+            "answers": [
+            ],
+            "text": "after-capture-animosity"
+        },
+        "meeting": {
+            "answers": [
+                "ask-about-insects",
+                "answer-seeing-around"
+            ],
+            "text": "meeting"
+        },
+        "prompt": {
+            "answers": [
+                "press-about-insects",
+                "ask-about-insects",
+                "ask-about-npc",
+                "ask-about-place",
+                "ask-for-job",
+                "ask-about-speech",
+                "prompt-exit"
+            ],
+            "hook": "prompt",
+            "mood": "smile",
+            "text": "prompt"
+        }
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "dialogs": {
+        "unhaus/restaurant-owner": {
+            "about-hallway": "Great business traffic.",
+            "about-insects": "<i>She smiles.</i>\n<br><br>\nNope. Probably wouldn’t taste great either.",
+            "ask-about-insects": "Have you heard of any insect ponies?",
+            "ask-about-restaurant-location": "Why is your restaurant in the hallway?",
+            "ask-about-wares": "Do you sell other stuff?",
+            "ask-reveal-changeling": "Are you a changeling?",
+            "entry": "Welcome to my food distribution place.",
+            "fix-restaurant-formulation": "You mean a restaurant?",
+            "other-wares": "Of course. I wouldn’t be a good restaurant if I didn’t have heavy weaponry. Just like the old world restaurants; they had “à la cart”, machines  that can cut you into tiny pieces,“crème fraîche”, liquifying plasma weapons, and “sautés”, great flame-throwing weapons. They were too powerful for the wasteland and were destroyed. That’s why none of them are still around.",
+            "prompt-leave": "Bye.",
+            "restaurant-fix": "Yup, that’s exactly what I meant.",
+            "revealed": "Don’t tell anyling you figure me out so easily. I’ll be laughingstock. You’re one of the queen’s ponies’, aren’t you? She probably wants you to succeed, I’ll give you some backroom deals."
+        }
+    }
+}

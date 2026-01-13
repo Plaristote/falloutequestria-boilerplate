@@ -1,0 +1,37 @@
+{
+    "dialogs": {
+        "unhaus/mayor": {
+            "about-insect": "Non, bon compagnon ! Mon bourg n'a aucun animal nuisant dans son clos. Mais la loi du bourg octroi droit à la suspicion.",
+            "about-insect-fight": "<i>Elle n'était visiblement pas prête pour cette situation. Elle panique.</i>\n<br><br>\nÀ moi, soldats !",
+            "about-insect-fight-fight": "<i>[Résister]</i>",
+            "about-insect-fight-surrender": "<i>[Se rendre]</i>",
+            "about-insect-perception": "<i>Ses yeux s'ecarquillent.</i>",
+            "about-insect-press": "<i>Elle devient nerveuse.</i>\n<br><br>\nBah ! Un animal avec la proportion d'un canasson ? Plus d'un animal original naquît par la pollution. Pas anormal.",
+            "about-insect-press#2": "J – Toi, un roi du baratin, aux obscurs faits du bourg, n'y doit saisir oualou !",
+            "about-insect-press#2-magic": "Ton grand art fut trompant. Un parfum occultant aura moult couffins. Ton information fait du cornard.",
+            "about-jobs": "Aucun. Mais tu as l'autorisation pour un campo dans le dortoir.",
+            "about-self": "Un idiot, car j'oublis l'introduction ! Voici mon nom : Consulting Mar. Mon occupation : magistrat du bourg.",
+            "about-speech": "Pourquoi pas ? J'ai tant plaisir à la phonation du sabir.",
+            "about-town": "Unhaus, un bourg à vocation d'offrir pain puis logis pour tous. Nourrir le bambin, polir sa maturation. A l'instar du bourg commun. Tu aura bon logis ici, si tu ploit à la paix.",
+            "after-capture": "Ah. Tu m'as tout l'air d'un canasson normal. Tu as donc conlut un accord avec nos lords aux minois fluctuants, garantissant ainsi ta continuation ?",
+            "after-capture-animosity": "Nos patrons communs [désapprouveraient]. J'ai perçu ton [hostilité].",
+            "answer-seeing-around": "Je visite. Qu'est-ce qui se passe dans le coin ?",
+            "ask-about-insects": "Auriez-vous entendu parler de poney insectoïdes ?",
+            "ask-about-npc": "Qui es-tu ?",
+            "ask-about-place": "Que peux-tu dire de cet endroit ?",
+            "ask-about-speech": "Pourquoi tu parles comme ça ?",
+            "ask-for-job": "Il y a des boulots à faire par ici ?",
+            "capture-A1": "J'en ai plein le cul de ta sale gueule !",
+            "capture-A2": "<i>Soupir.</i> Ouais.",
+            "capture-A3": "Ils m'ont capturé, par ta faute !",
+            "insect-press-fighting-words": "Conneries ! Tu cache quelque chose.",
+            "insect-press-giveup": "Tu as peut-être raison.",
+            "insect-press-speech": "Je comprends, ça doit être un secret important. Mais tu peux surement faire une exception, juste pour moi. Je sais déjà que quelque chose cloche, ici.",
+            "insect-press-spellcast": "Je ne suis pas aveugle. La magie dans ce lieu est <b> distinctivement différente</b> !",
+            "meeting": "Salutations. Toi, un canasson inconnu, dans un tango, s'invita dans mon habitation ?<br><br>\n<i>Un regard suspicieux se pose sur toi.</i><br><br>\nOui ?",
+            "press-about-insects": "C'est curieux, parce que j'ai remarqué de nombreuses empruntes de quadrupèdes qui ne semblent pas être des poneys.",
+            "prompt": "À nouveau, tu joins toi à nous !",
+            "prompt-exit": "Je dois y aller. A plus tard."
+        }
+    }
+}

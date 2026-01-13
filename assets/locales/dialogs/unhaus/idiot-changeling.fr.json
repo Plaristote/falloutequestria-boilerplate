@@ -1,0 +1,41 @@
+{
+    "dialogs": {
+        "unhaus/idiot-changeling": {
+            "about-closet": "Mes amis m'ont dit que je serais pas cap' d'entrer dans ce placard sinistre. J'y suis allé… et ils m'ont enfermés. C'est juste des changelin' bêtes. Ils m'ont aussi dit quelque chose, à propos de pas sortir sans déguisement.",
+            "about-queen": "Elle est pas gentille.",
+            "about-race": "Euh. Je suis un changelin ? J'ai bien répondu ?",
+            "about-race-ans-friends": "Amis ?",
+            "about-race-ans-hive": "Ruche ?",
+            "about-race-extended": "Oooh. Tu veux en savoir plus sur les changelins ? J'adore aider ! J'adore aider mes amis encore plus ! Je peux te montrer notre ruche. Elle est super cool.",
+            "about-race-friends": "Bien sûr ! Tu m'as aidé ! Ca veut dire qu'on est amis !",
+            "about-race-hive": "Oui ! La ruche ! Elle est sous la ville ! C'est très secret, alors chut, n'en parle à personne !",
+            "about-self": "Je suis Caput, ton nouveau copain changelin !",
+            "about-self-extended": "Mon nom est Caput ! Mes camarades de la ruche, et notre reine, disent que je suis seulement utile pour les travaux subalternes. Ca veut dire que je dois être le meilleur subalterne du coin.",
+            "after-insult": "C'est pas très gentil, ça.",
+            "ask-about-closet": "Pourquoi étais-tu piégé dans ce placard ?",
+            "ask-about-npc": "Qui es-tu ?",
+            "ask-about-queen": "Qu'est-ce que tu pense de la reine ?",
+            "ask-about-race": "T'es quoi, exactement ?",
+            "ask-to-show-hive": "Puisque nous sommes amis, tu peux sûrement m'aider à rentrer dans ta ruche ?",
+            "hive-meeting": "Salut, mon ami. Dis-moi, comment sont les choses à l'extérieur ?",
+            "hive-meeting-ans-alright": "C'est pas si mal.",
+            "hive-meeting-ans-bad": "Pas ouf.",
+            "hive-meeting-ans-danger": "Dangereux.",
+            "hive-meeting-ans-dead": "Dead.",
+            "hive-meeting-ans-horrible": "Horrible.",
+            "hive-meeting-ans-sad": "Triste.",
+            "hive-prompt": "Salut, mon ami !",
+            "hive-prompt-outside-bad": "Ca a pas l'air sympa. C'est cool qu'on soit plutôt juste là, deux amis, bien au chaud dans la ruche.",
+            "hive-prompt-outside-good": "J'espère que ça va aller encore mieux. Mais c'est déjà sympa, avec nous deux, meilleurs amis, en sécurité dans la ruche !",
+            "leave-prompt": "J'y vais, salut !",
+            "meeting": "Merci du coup de main. J'étais un peu à l'étroit là-dedans.",
+            "meeting-ans-curiosity": "Qui, et surtout qu'est-ce que tu es ?",
+            "meeting-ans-insect": "Tu serais pas un de ces poneys insectoïdes ?",
+            "meeting-ans-insulting": "Oh putain, mais t'es dégueulasse !",
+            "prompt": "Salut ! Je suis content de te revoir !",
+            "show-hive": "Bien sûr ! Mais ne le dis à personne ! Suis-moi !",
+            "show-hive-ans-accept": "D'accord.",
+            "show-hive-ans-later": "Pas maintenant."
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+  "quests": {
+    "changelingQuest": {
+      "title": "Un Affront contre la Nature",
+      "description": "DES PONEY INSECTES ?! BEARK ! Tu as combattu toute sorte d'insectes mutants et bizarres dans les terres désolées. Mais aucune qui soit si proche d'un poney normal. Tu devrais enquêter. Quelqu'un doit savoir quelque chose à propos de ça. Ça pourrait être dangereux.",
+      "desc-found-corpse": "Tu as trouvé le corps d'un insecte équin. C'est une créature intelligente. Peut-être en apprendras-tu plus en cherchant bien, ou en posant des questions.",
+      "desc-found-others": "Tu as entendu parler d'insectes à forme équine. Peut-être en apprendras-tu plus en demandant à quelqu'un, ou en regardant autour de toi.",
+      "desc-unhaus-from-changeling": "Tu as rencontré un de ces poney-insecte. Un qui parle, de surcroît. Pour en savoir plus, tu devra aller à Unhaus.",
+      "desc-unhaus-from-talking": "{{unhausRevealerName}} t'as orienté vers Unhaus, un lieu qui sert d'étape aux caravanes sur leurs routes.",
+      "desc-unhaus-others": "Il y a des poneys insectoïdes dans la ville d'Unhaus. Tu dois approfondir l'enquête.",
+      "desc-found-secret-entrance": "Tu as trouvé un chemin menant sous la colline de la ville. Qu'est-ce qui peut bien s'y trouver ?",
+      "desc-kidnapped": "Cette saleté de ville et son saleté de maire t'ont kidnappé. Tu dois t'échapper et en savoir plus sur ceux qui t'ont piégé.",
+      "desc-queen-proposal": "La reine désire employer tes services comme collaborateur de ses changelins. Oú est-ce que tout ça va te mener ?",
+      "findAboutUnhaus": "Apprendre où se trouvent les poneys insectoïdes"
+    }
+  }
+}

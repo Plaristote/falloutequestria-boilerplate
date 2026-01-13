@@ -1,0 +1,17 @@
+{
+  "quests": {
+    "changelingQuest": {
+      "title": "The Affront to Nature",
+      "description": "INSECT PONIES?! EWW?! You have fought many strange mutated insect creatures in the wasteland. But not one that is so close to a normal pony. You should investigate. Somepony has to know something. It could be threat.",
+      "desc-found-corpse": "You found an insect pony-like corpse. It’s intelligent too. Maybe you will find out more by asking somepony or looking around.",
+      "desc-found-others": "You heard mentions of insect pony-like creatures. Maybe you will find out more by asking somepony or looking around.",
+      "desc-unhaus-from-changeling": "You just met one of these insect ponies. A talking one too. The direction to figure out more points to Unhaus.",
+      "desc-unhaus-from-talking": "{{unhausRevealerName}} pointed you to the direction of Unhaus, which functions as a waystation for caravan routes.",
+      "desc-unhaus-others": "There are insect ponies in the town Unhaus. You have to go in deeper.",
+      "desc-found-secret-entrance": "You found a way into the hill of the town. What is in there?",
+      "desc-kidnapped": "That damn Town and their damn mayor just got you kidnapped. You have to get out and learn more about these kidanppers.",
+      "desc-queen-proposal": "The queen desires to employ you as a collaborator to these changelings. Where will this lead you?",
+      "findAboutUnhaus": "Learn about the insect ponies location"
+    }
+  }
+}

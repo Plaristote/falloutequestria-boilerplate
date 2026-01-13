@@ -1,0 +1,35 @@
+{
+    "dialogs": {
+        "unhaus/toll-pony": {
+            "about-changeling-on-danger": "They do? Seems like they’re doing a pretty good job. Fair by me.",
+            "about-changeling-on-evasive": "<i>He looks at you worried.</i>",
+            "about-changeling-on-safe": "Then there’s no problem.",
+            "about-changelings": "Oh. Really… what is a changeling?",
+            "about-changelings#2": "I think I saw a few of them actually. Are they evil?",
+            "about-location": "It’s Unhaus. It’s my town – a large building. It’s safe, got food, got community, everything you’d need. Visitors say it’s strange. I wouldn’t know, I grew up here. We had rows of hanged raiders around here back when I was a foal, to scare off raiders. But the mayor wanted to be more open to caravans. So, that’s probably why ponies find it spooky. Their spirits linger.",
+            "about-self": "I’m Summer Intention. Me and my guys there collect a some small fee from traders and give them safe passage for a few miles. Many caravans pass through and not many stay, so we make some caps.",
+            "about-town-shape": "I guess ponies are scared to live separated. It’s unsafe after all. We just build on top each other.",
+            "ask-about-location": "What is this place.",
+            "ask-about-npc": "Who are you?",
+            "ask-about-town-shape": "Why is the town one large building?",
+            "changeling-ans-danger": "Yes. They control the town!",
+            "changeling-ans-evasive": "Forget I said anything.",
+            "changeling-ans-explain": "They are insect ponies, that take the appearance of ponies, and they eat love.",
+            "changeling-ans-safe": "No, they aren’t.",
+            "changeling-yell": "THERE ARE CHANGELINGS UNDERGROUND!",
+            "leave-prompt": "See you later.",
+            "meeting": "Passing by? Here To sell? Or visiting?\n<br><br>\n<i>Your appearance woke him up from his daydream.</i>",
+            "meeting-ans-quest": "I'm here to look into some rumors.",
+            "meeting-ans-standoffish": "What is it to you?",
+            "meeting-ans-visiting": "I'm visiting.",
+            "meeting-quest": "You are?\n<br><br>\n<i>He seems excited from the break of his monotony of his work.</i>\n<br><br>\nWhat is it.",
+            "meeting-quest-ans-insects": "I’m looking for insect ponies.",
+            "meeting-quest-ans-secret": "It’s a secret.",
+            "meeting-quest-insects": "<i>He’s trying to remember something</i>\n<br><br>\nI think I saw one once before. But it’s few and far between. Can’t help you.",
+            "meeting-quest-secrecy": "<i>He looks dissappointed.</i>\n<br><br>\nThen good luck finding it.",
+            "prompt": "Back again?",
+            "prompt-standoffish": "Hey. No reason to be standoffish. I’m just doing my job.",
+            "prompt-visiting": "Strange, not many ponies bother to come here on purpose."
+        }
+    }
+}
