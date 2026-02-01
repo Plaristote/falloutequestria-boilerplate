@@ -33,6 +33,10 @@
             "state": "thornhoof-shipment/entry",
             "text": "ask-about-thornhoof-shipment"
         },
+        "ask-thornhoof-device-payment": {
+            "state": "thornhoof-device/payment-asked",
+            "text": "ask-thornhoof-device-payment"
+        },
         "ask-to-join": {
             "availableHook": "canAskToJoin",
             "state": "about-joining",
@@ -44,6 +48,10 @@
         "entry-leave": {
             "text": "entry-leave"
         },
+        "give-thornhoof-device": {
+            "state": "thornhoof-device/delivered",
+            "text": "give-thornhoof-device"
+        },
         "join-quest-accept": {
             "state": "about-joining-accepted",
             "text": "join-quest-accept"
@@ -51,6 +59,24 @@
         "join-quest-unsure": {
             "state": "about-joining-unsure",
             "text": "join-quest-unsure"
+        },
+        "negociate-thornhoof-device-payment": {
+            "availableHook": "canAskThornhoofDeviceReward",
+            "state": "thornhoof-device/payment-accepted",
+            "text": "negociate-thornhoof-device-payment"
+        },
+        "report-thornhoof-device": {
+            "availableHook": "canGiveThornhoofDevice",
+            "state": "thornhoof-device/entry",
+            "text": "report-thornhoof-device"
+        },
+        "thornhoof-device-ask-payment#2": {
+            "availableHook": "askedThornhoofDeviceReward",
+            "state": "thornhoof-device/reward",
+            "text": "thornhoof-device-ask-payment#2"
+        },
+        "thornhoof-device-leave": {
+            "text": "thornhoof-device-leave"
         },
         "thornhoof-give-holodisk": {
             "availableHook": "canGiveHoarfrostHolodisk",
@@ -131,6 +157,7 @@
         },
         "entry": {
             "answers": [
+                "report-thornhoof-device",
                 "ask-about-thornhoof-shipment",
                 "ask-about-guards",
                 "ask-about-place",
@@ -152,6 +179,45 @@
             "hook": "entryAlt",
             "mood": "smile",
             "text": "entry-alt"
+        },
+        "thornhoof-device/delivered": {
+            "answers": [
+                "thornhoof-device-leave",
+                "thornhoof-device-ask-payment#2"
+            ],
+            "hook": "waitForThornhoofDeviceForward",
+            "mood": "smile",
+            "text": "thornhoof-device/delivered"
+        },
+        "thornhoof-device/entry": {
+            "answers": [
+                "give-thornhoof-device",
+                "ask-thornhoof-device-payment"
+            ],
+            "mood": "smile",
+            "text": "thornhoof-device/entry"
+        },
+        "thornhoof-device/payment-accepted": {
+            "answers": [
+                "give-thornhoof-device"
+            ],
+            "hook": "onAskedThornhoofDeviceReward",
+            "mood": "cocky",
+            "text": "thornhoof-device/payment-accepted"
+        },
+        "thornhoof-device/payment-asked": {
+            "answers": [
+                "give-thornhoof-device",
+                "negociate-thornhoof-device-payment"
+            ],
+            "mood": "angry",
+            "text": "thornhoof-device/payment-asked"
+        },
+        "thornhoof-device/reward": {
+            "answers": [
+            ],
+            "mood": "cocky",
+            "text": "thornhoof-device/reward"
         },
         "thornhoof-shipment/entry": {
             "answers": [

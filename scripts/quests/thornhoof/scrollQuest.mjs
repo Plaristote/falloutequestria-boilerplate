@@ -1,10 +1,14 @@
-import {QuestHelper} from "../helpers.mjs";
+import {QuestHelper, QuestFlags, requireQuest} from "../helpers.mjs";
+
+const itemId = "thornhoof-laboratory-device";
 
 export default class extends QuestHelper {
   initialize() {
     this.model.location = "thornhoof";
     this.model.addObjective("battery", this.tr("fetch-battery"));
     this.model.addObjective("holodisk", this.tr("wipe-data"));
+    if (game.player.inventory.getItemOfType(itemId))
+      this.model.completeObjective("battery");
   }
 
   getDescription() {
@@ -29,11 +33,8 @@ export default class extends QuestHelper {
   }
 
   onItemPicked(item) {
-    switch (item.itemType) {
-    case "thornhoof-laboratory-device":
+    if (item.itemType == itemId)
       this.model.completeObjective("battery");
-      break ;
-    }
   }
 
   completeObjective(name) {
@@ -49,8 +50,20 @@ export default class extends QuestHelper {
     }
   }
 
+  onSuccess() {
+    super.onSuccess();
+    this.oppositeQuest.failed = true;
+    game.dataEngine.addReputation("thornhoof", 25);
+  }
+
+  get oppositeQuest() {
+    return requireQuest("steel-rangers/hoarfrostQuest", QuestFlags.HiddenQuest);
+  }
+
   get xpReward() {
     let total = 2950;
+    if (this.model.isObjectiveFailed("give-battery"))
+      total -= 1000;
     if (this.model.hasVariable("confessedInIntro"))
       total += 150;
     if (this.model.hasVariable("foundScrollLogs"))

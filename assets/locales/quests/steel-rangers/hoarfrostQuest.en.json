@@ -1,0 +1,12 @@
+{
+  "quests": {
+    "steel-rangers/hoarfrostQuest": {
+      "title": "Steeled Tomb Raiders",
+      "report": "Get back to Scribe Hoarfrost",
+      "delivery": "Bring the Battery to the Steel Ranger bunker",
+      "description": "Hoarfrost, Scribe of the Steel Rangers, is currently serving in a diplomatic mission at the town of Thornhoof. His mission is to retrieve, one way or the other, an Inverted Flux Battery stored in a pre-war laboratory located in the undergrounds of Thornhoof. Unfortunately, the town's council would rather keep the device for themselves... although, as of now, no expedition has been sent to brave the dangers of the underground laboratory and fetch the device. Maybe you'd make some friends if you could take care of it ?",
+      "desc-report": "After a carful exploration of the laboratory, you acquired the Inverted Flux Battery, and went back to tell the good news to Scribe Hoarfrost. He was pleased with your announcement, and asked you to bring the device to the Steel Ranger bunker.",
+      "desc-delivery": "You delivered the Inverted Flux Battery to the Steel Rangers. The order's Elders were very pleased with your cooperation. Look at that. You did make some friends along the way. Good job, you."
+    }
+  }
+}

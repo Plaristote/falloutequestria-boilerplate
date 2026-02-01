@@ -1,0 +1,31 @@
+{
+    "dialogs": {
+        "thornhoof/steel-ranger-agent": {
+            "about-steel-rangers": "<p>Les Steel Rangers sont les gardiens de ce que l'Ancien Monde a laissé derrière lui… et de ce qu'il n'aurait jamais dû créer.</p>\n<p>Avant la chute, nous faisions partie du Ministère des Technologies de Guerre. Nous étions ceux qui comprenaient vraiment la magie militaire, ses limites, et surtout ses conséquences. Quand les mégasorts ont réduit Equestria en cendres, ce savoir n'a pas disparu avec les villes. Il est resté, enfoui, instable… dangereux.</p>\n<p>Notre ordre existe pour une seule raison : empêcher que cette technologie ne condamne une seconde fois le monde. Nous cataloguons, nous étudions, nous confinons. Et lorsque c'est nécessaire, nous détruisons. Trop de sorts ont été conçus sans jamais penser à ce qui se passerait après la guerre.</p>\n<p>Certains nous voient comme des collectionneurs obsessifs, des tyrans en armure. La vérité est plus simple : quelqu'un doit porter le poids de ces décisions du passé. Et les Steel Rangers ont accepté ce fardeau, même si cela signifie être craints plutôt que remerciés.</p>",
+            "ask-about-mission": "Qu'est-ce que vous faites ici ?",
+            "ask-about-rangers-intent": "Je ne vous suis plus. Pourquoi serait-il plus sûr de confier la batterie à votre ordre, plutôt qu'à Sabairain ?",
+            "ask-about-steel-rangers": "Les Steel Rangers… c'est quoi exactement ?",
+            "ask-about-thornhoof-help": "Qu'est-ce qui va arriver à Sabairain si vous récupérez la batterie ?",
+            "ask-about-thornhoof-not-cooperating": "Pourquoi le conseil des gardiens refuserait de vous laisser avoir la batterie ?",
+            "ask-call-for-action": "Et pourquoi est-ce que tu va pas juste récupérer ce machin toi-même ?",
+            "intro": "Bonjour. Il ne me semble pas vous reconnaître. Je suis Scribe {{npc}}, représentant ici les Steel Rangers.",
+            "intro-as-steel-ranger": "Je suis aussi membre des Steel Rangers. Initié {{name}}.",
+            "intro-present-self": "Je suis {{name}}. Enchanté.",
+            "intro-react": "Un plaisir de faire votre connaissance, {{playerUsedName}}. Comment puis-je vous aider ?",
+            "intro-steel-ranger-disbelief": "J'en doute fort. Nous vivons reclus dans un espace clos, et si tu étais l'un des notres, je le saurais. À moins que tu vienne d'un différent chapitre, le cas échéant, tu n'aurais absolument rien à faire ici. Ne te joue pas de moi, et dis-moi plutôt ce que tu veux.",
+            "lab-quest-leave": "Parlons d'autre chose.",
+            "lab-quest-offer-help": "Ca a l'air drôlement intéressant. Si j'allais la cherche moi-même, cette batterie ?",
+            "lab-quest/about-council-intents": "Hélàs, les gardiens sont tétus. Ils veulent chercher la batterie eux-même, et la garder pour leurs propres usages. Je ne suis pas sûr qu'on puisse leur faire confiance avec une telle technologie. Il serait bien plus sûr de la conserver sous la surveillance de notre ordre.",
+            "lab-quest/about-diplomatic-mission": "Ma mission, ici, à Sabairain, est de convaincre le Conseil des Gardiens de nous laisser acquérir une importante technologie d'avant-guerre, perdue dans un ancien laboratoire souterrain. L'appareil que nous recherchons peut servir de batterie à mana. Elle peut être utilisée pour stocker des sorts complexes, et les invoquer sur demande. Entre les mauvais sabots, elle pourrait se révéler très dangereuse.",
+            "lab-quest/about-rangers-motives": "<p>Les Steel Rangers ont été fondés pour une raison précise : empêcher que les erreurs de l'Ancien Monde ne se répètent. Nous étudions ces reliques depuis des générations, nous connaissons leurs dangers autant que leur potentiel.</p>\n<p>Une batterie à mana de ce calibre n'est pas qu'une source d'énergie. C'est une arme stratégique. Mal comprise, elle peut surcharger un sort, contaminer son porteur, peut-être même une ville entière.</p>\n<p>Je ne doute pas de la bonne volonté du Conseil des Gardiens… mais contrairement aux Steel Rangers, ils n'ont pas voué leur vie à protéger le monde des dangers de telles technologies, et des ravages qu'elles ont déjà provoquées lors de la Grande Guerre.</p>",
+            "lab-quest/call-for-action": "En tant que Scribe, je ne suis pas préparé pour explorer un laboratoire d'avant-guerre. De plus, le conseil surveille mes actions de près. Si je devais essayer quoique ce soit d'invasif, cela nuirait à notre relation avec Sabairain.",
+            "lab-quest/offered-help": "Disons les choses ainsi. Je ne te demanderai jamais d'aller chercher cet appareil. Je ne voudrais pas agir dans le dos du Conseil des Gardiens. Maintenant… si d'aventure, tu tombais sur cette batterie, et décidais de la remettre aux Steel Rangers, plutôt qu'au Conseil des Gardiens, je suis sûr que notre ordre saurait apprécier ce geste.",
+            "lab-quest/report": "Vraiment ? C'est une excellente nouvelle ! La suite ne dépend que de vous, {{playerUsedName}}. Cependant… je ne peux que vous suggérer de ramener cet appareil au bunker de l'ordre des Steel Rangers. Remettez-le aux anciens, ou confiez-le à Cabbit, si vous n'êtes pas autorisé à entrer dans le bunker.",
+            "lab-quest/thornhoof-help": "<p>Nous avons déjà proposé notre assistance à la ville de Sabairain, en échange de la batterie.</p>\n<p>Peu importe par quel moyen cela arrive, si nous entrons en posséssion de l'appareil, mon offre tient toujours. Apporte la batterie au bunker de notre ordre, et nos anciens enverront une escouade afin d'aider cette ville à contre-attaquer. Ca peut sembler bien peu, mais nos Paladins sont lourdement équippés et fortement entraînés : une poignée d'entre eux suffira largement à renvoyer la Meute d'Or d'où elle est venue.</p>",
+            "leave": "Au revoir.",
+            "prompt": "Vous souhaitiez vous entretenir avec moi, {{playerUsedName}} ?",
+            "report-lab-quest": "J'ai trouvé la batterie à mana que vous recherchiez.",
+            "steel-ranger-aknowledged": "Vraiment ? Il est rare pour notre ordre d'accepter de nouvelles recrues. Je suppose que tu as rendu à l'ordre un fier service.\n<br><br>\nSi ça t'intéresse, je crois pouvoir trouver un moyen pour toi de prouver ta valeur à nouveau."
+        }
+    }
+}

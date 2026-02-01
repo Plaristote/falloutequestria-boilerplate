@@ -1,0 +1,34 @@
+{
+    "dialogs": {
+        "thornhoof/steel-ranger-agent": {
+            "about-steel-rangers": "<p>The Steel Rangers are the guardians of what the Old World left behind… and of the things it should've never birthed.</p>\n<p>Before the end, we were part of the Ministry of Wartime Technology. We best understood what military magic meant, its limitations, and its consequences. When the Megaspells reduced Equestria to ashes, that knowledge didn't vanish. It remained, hidden, buried… and dangerous.</p>\n<p>Our order still exists for one single reason: preventing that technology from dooming the world a second time. We register, study, confine dangerous technologies. Whenever necessary, we destroy it. Too many spells were conceived without thinking of what would come after the war.</p>\n<p>Some see us as obsessive collectors, armored tyrans. Truth is much simpler: somepony has to bear the weight of past decisions. And the Steel Rangers accepted that burden, even if it's a thankless job, even if ponies fear us as a result.</p>",
+            "ask-about-mission": "What are you doing here ?",
+            "ask-about-rangers-intent": "That's the part I don't get. Why would the device be safer under your watch rather than theirs ?",
+            "ask-about-steel-rangers": "Steel Rangers… what's that exactly ?",
+            "ask-about-thornhoof-help": "What's going to happen to Thornhoof if you get the battery ?",
+            "ask-about-thornhoof-not-cooperating": "Why wouldn't the town's council agree for you to get the battery ?",
+            "ask-call-for-action": "I don't get it. Why don't you just find the device yourself and get on with it ?",
+            "call-for-quest": "My mission here in Thornhoof is to convince the council of guardians to let us acquire and retrieve an important piece of pre-war technology, currently lost in an old underground laboratory. The device we're looking for serves as a mana battery, and can be used to store complex spells and cast them on demand. In the wrong hooves, it could be very dangerous.",
+            "intro": "Hello. I don't think we are acquainted. I am Scribe {{npc}}, acting here in the name of the Steel Rangers.",
+            "intro-as-steel-ranger": "I'm Initiate {{name}}, I'm also a Steel Ranger.",
+            "intro-present-self": "My name is {{name}}. Pleased to meet you.",
+            "intro-react": "Nice to meet you, {{playerUsedName}}. How may I help you ?",
+            "intro-steel-ranger-disbelief": "I strongly doubt that. We live in a tight bunker, and I would know if you were one of us. Unless you were from a different chapter, in which case you'd have no business being here. Don't play games with me, and tell me what you want.",
+            "lab-quest-leave": "Let's talk about something else.",
+            "lab-quest-offer-help": "Sounds interesting. What if I were to find that device myself ?",
+            "lab-quest/about-council-intents": "Unfortunately, the guardians are stubborn. They want to look for the device themselves, and keep it for their own uses. I'm not sure they can be trusted with such dangerous tech. It'd be much safer under the careful watch of our order.",
+            "lab-quest/about-diplomatic-mission": "My mission here in Thornhoof is to convince the council of guardians to let us acquire and retrieve an important piece of pre-war technology, currently lost in an old underground laboratory. The device we're looking for serves as a mana battery, and can be used to store complex spells and cast them on demand. In the wrong hooves, it could be very dangerous.",
+            "lab-quest/about-rangers-motives": "<p>The Steel Rangers have perdured with a precise goal : preventing the mistakes of the Old World from repeating ever again. We've been studying these technologies for generations, we know their power, as well as the affiliated danger.</p>\n<p>A mana battery of this caliber is far more than an source of magical energy. It is a strategic weapon. Poorly used, it can overcharge a spell, tainting its bearer, perhaps even entire towns.</p>\n<p>I have no doubt that the Council of Gardian has the best of intentions… but unlike the Steel Rangers, they haven't vowed to protect the world from the danger of such technologies, and from the waste they caused during the Great War.</p>",
+            "lab-quest/call-for-action": "As a Scribe, I'm not equipped to explore the laboratory. Furthermore, the council keep watches on me. If I were to try anything of the sort, it'd greatly damage our relationship with them.",
+            "lab-quest/offered-help": "Here's how it is. I'm not telling you to fetch the device for us. I wouldn't want to act behind the council's back. But… if you were to stumble upon it, and decided to bring it back to the Steel Ranger bunker, instead of Thornhoof's council, I'm sure the order would greatly appreciate it.",
+            "lab-quest/prompt": "dialogs.thornhoof/steel-ranger-agent.lab-quest/prompt",
+            "lab-quest/report": "Really ? That's outstanding news ! What comes next is up to you, {{playerUsedName}}. That being said… I suggest you bring this device back to the Steel Ranger bunker. Give it to the elder, or, if you're not yet allowed inside the bunker, trust it to Cabbit.",
+            "lab-quest/thornhoof-help": "<p>We've already offered our help to the people of Thornhoof, in exchange for the device.</p>\n<p>Regardless of how it happens, if we acquire the device, my offer still stand. Bring the device to our headquarters, and our Elder will send a tactical squad to help this town fight back. It might seem like it isn't much, but our Paladins are heavily equipped and very well trained: a few of them will be more than enough to kick the Golden Herd's flanks back to wherever they came from.</p>",
+            "leave": "Bye !",
+            "prompt": "You wanted to speak with me, {{playerUsedName}} ?",
+            "report-lab-quest": "I found the mana battery you were looking for.",
+            "steel-ranger-aknowledged": "Is that so ? It's a rare occurence for us to take new recruits. You must've done us a great service.\n<br><br>\nIf you're interested, I can think of a way for you to help the Steel Rangers and prove your worth again.",
+            "waiting-to-leave": "Since it has now become impossible for me to acquire Thornhoof's mana battery, I am now merely waiting for the next opportunity to go back and report to my order. I have nothing else to discuss with the council."
+        }
+    }
+}

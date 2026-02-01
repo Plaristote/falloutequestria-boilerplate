@@ -1,0 +1,12 @@
+{
+  "quests": {
+    "steel-rangers/hoarfrostQuest": {
+      "title": "Le Tomb Raider d'Acier",
+      "report": "Retourne voir le Scribe Hoarfrost",
+      "delivery": "Apporte la batterie au bunker des Steel Rangers",
+      "description": "Hoarfrost, Scribe des Steel Rangers, est actuellement en service dans le cadre d'une mission diplomatique auprès de la villle de Sabairain. Sa mission est de récupérer, d'une manière ou d'une autre, une Batterie à Flux Inversé, située dans un laboratoire d'avant-guerre, dans les sous-sols de Sabairain. Cependant, le conseil municipal préférerait garder cette technologie pour eux-mêmes... toutefois, pour le moment, aucune expédition n'a été envoyée afin de braver les dangers du laboratoire souterrain, et récupérer l'appareil. Peut-être te fera-tu quelques amis en t'occupant du problème ?",
+      "desc-report": "Après minutieuse exploration du laboratoire, tu as fais l'acquisition d'une Batterie à Flux Inversé, et tu es retourné auprès du Scribe Hoarfrost afin de lui annoncer la bonne nouvelle. Il s'est montré très receptif, et t'as recommandé d'amener cet appareil au bunker des Steel Rangers.",
+      "desc-delivery": "Tu as amené la Batterie à Flux Inversé aux Steel Rangers. Les Anciens de l'ordre ont été ravis de ta coopération. Comme quoi, tu t'es effectivement fait des amis. Bien joué !"
+    }
+  }
+}

@@ -1,0 +1,162 @@
+{
+    "answers": {
+        "ask-about-mission": {
+            "hook": "askAboutMission",
+            "text": "ask-about-mission"
+        },
+        "ask-about-rangers-intent": {
+            "availableHook": "labQuestCanAskAboutRangersIntent",
+            "state": "lab-quest/prompt",
+            "text": "ask-about-rangers-intent"
+        },
+        "ask-about-steel-rangers": {
+            "state": "prompt",
+            "text": "ask-about-steel-rangers"
+        },
+        "ask-about-thornhoof-help": {
+            "state": "lab-quest/prompt",
+            "text": "ask-about-thornhoof-help"
+        },
+        "ask-about-thornhoof-not-cooperating": {
+            "state": "lab-quest/prompt",
+            "text": "ask-about-thornhoof-not-cooperating"
+        },
+        "ask-call-for-action": {
+            "state": "lab-quest/prompt",
+            "text": "ask-call-for-action"
+        },
+        "intro-as-steel-ranger": {
+            "availableHook": "canIntroAsSteelRanger",
+            "hook": "tryIntroAsSteelRanger",
+            "state": "prompt",
+            "text": "intro-as-steel-ranger"
+        },
+        "intro-present-self": {
+            "state": "prompt",
+            "text": "intro-present-self"
+        },
+        "lab-quest-leave": {
+            "state": "prompt",
+            "text": "lab-quest-leave"
+        },
+        "lab-quest-offer-help": {
+            "state": "lab-quest/prompt",
+            "text": "lab-quest-offer-help"
+        },
+        "leave": {
+            "text": "leave"
+        },
+        "report-lab-quest": {
+            "availableHook": "canReportLabQuest",
+            "state": "lab-quest/report",
+            "text": "report-lab-quest"
+        }
+    },
+    "entryPoint": "prompt",
+    "states": {
+        "about-steel-rangers": {
+            "answers": [
+            ],
+            "text": "about-steel-rangers"
+        },
+        "call-for-quest": {
+            "answers": [
+            ],
+            "text": "call-for-quest"
+        },
+        "intro": {
+            "answers": [
+                "intro-present-self",
+                "intro-as-steel-ranger"
+            ],
+            "text": "intro"
+        },
+        "intro-react": {
+            "answers": [
+            ],
+            "text": "intro-react"
+        },
+        "intro-steel-ranger-disbelief": {
+            "answers": [
+            ],
+            "text": "intro-steel-ranger-disbelief"
+        },
+        "lab-quest/about-council-intents": {
+            "answers": [
+            ],
+            "text": "lab-quest/about-council-intents"
+        },
+        "lab-quest/about-diplomatic-mission": {
+            "answers": [
+            ],
+            "text": "lab-quest/about-diplomatic-mission"
+        },
+        "lab-quest/about-rangers-motives": {
+            "answers": [
+            ],
+            "text": "lab-quest/about-rangers-motives"
+        },
+        "lab-quest/call-for-action": {
+            "answers": [
+            ],
+            "text": "lab-quest/call-for-action"
+        },
+        "lab-quest/offered-help": {
+            "answers": [
+            ],
+            "text": "lab-quest/offered-help"
+        },
+        "lab-quest/prompt": {
+            "answers": [
+                "ask-about-rangers-intent",
+                "report-lab-quest",
+                "lab-quest-offer-help",
+                "ask-about-thornhoof-not-cooperating",
+                "ask-about-thornhoof-help",
+                "ask-call-for-action",
+                "lab-quest-leave"
+            ],
+            "hook": "labQuestPrompt",
+            "mood": "neutral",
+            "text": "lab-quest/prompt"
+        },
+        "lab-quest/report": {
+            "answers": [
+            ],
+            "hook": "labQuestReport",
+            "mood": "smile",
+            "text": "lab-quest/report"
+        },
+        "lab-quest/thornhoof-help": {
+            "answers": [
+            ],
+            "text": "lab-quest/thornhoof-help"
+        },
+        "prompt": {
+            "answers": [
+                "report-lab-quest",
+                "ask-about-steel-rangers",
+                "ask-about-mission",
+                "leave"
+            ],
+            "hook": "prompt",
+            "text": "prompt"
+        },
+        "steel-ranger-aknowledged": {
+            "answers": [
+            ],
+            "mood": "smile",
+            "text": "steel-ranger-aknowledged"
+        },
+        "waiting-to-leave": {
+            "answers": [
+            ],
+            "text": "waiting-to-leave"
+        },
+        "war-liaison/prompt": {
+            "answers": [
+            ],
+            "text": "war-liaison/prompt"
+        }
+    }
+}
