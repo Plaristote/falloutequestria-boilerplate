@@ -113,8 +113,31 @@
             "state": "officeMeeting/lab-quest/extra/intro-confess-1",
             "text": "lab-quest/question-extra-A4"
         },
+        "lab-quest/receive-battery-followup": {
+            "hook": "labQuestReportFollowup",
+            "state": "officeMeeting/lab-quest/report/followup-holodisk",
+            "text": "exit"
+        },
         "lab-quest/reject": {
             "text": "lab-quest/reject"
+        },
+        "lab-quest/report-holodisk-followup": {
+            "hook": "labQuestReportFollowup",
+            "state": "officeMeeting/lab-quest/report/followup-device",
+            "text": "exit"
+        },
+        "lab-quest/report/tell-device-given-to-rangers": {
+            "availableHook": "labQuestDeviceGivenToRangers",
+            "state": "officeMeeting/lab-quest/report/device-given-to-rangers",
+            "text": "lab-quest/report/tell-device-given-to-rangers"
+        },
+        "lab-quest/report/tell-device-not-found": {
+            "state": "officeMeeting/lab-quest/report/undone-main-terminal",
+            "text": "lab-quest/report/tell-device-not-found"
+        },
+        "lab-quest/report/tell-found-device": {
+            "availableHook": "labQuestCanGiveDevice",
+            "text": "lab-quest/report/tell-found-device"
         },
         "meeting-heroic-1": {
             "hook": "onCouncilMeetingEntryResponse",
@@ -137,7 +160,7 @@
         },
         "report-lab-quest": {
             "availableHook": "labQuestCanReport",
-            "state": "officeMeeting/lab-quest/report/entry",
+            "state": "officeMeeting/lab-quest/report/prompt",
             "text": "report-lab-quest"
         }
     },
@@ -317,6 +340,13 @@
             "mood": "smile",
             "text": "officeMeeting/lab-quest/intro-reward-bonus"
         },
+        "officeMeeting/lab-quest/report/device-given-to-rangers": {
+            "answers": [
+                "lab-quest/receive-battery-followup"
+            ],
+            "mood": "angry",
+            "text": "officeMeeting/lab-quest/report/device-given-to-rangers"
+        },
         "officeMeeting/lab-quest/report/done": {
             "answers": [
                 "lab-quest/ask-reward",
@@ -326,15 +356,23 @@
             "mood": "smile",
             "text": "officeMeeting/lab-quest/report/done"
         },
-        "officeMeeting/lab-quest/report/entry": {
+        "officeMeeting/lab-quest/report/followup-device": {
+            "answers": [
+                "lab-quest/report/tell-device-given-to-rangers",
+                "lab-quest/report/tell-found-device",
+                "lab-quest/report/tell-device-not-found"
+            ],
+            "text": "officeMeeting/lab-quest/report/followup-device"
+        },
+        "officeMeeting/lab-quest/report/followup-holodisk": {
             "answers": [
                 "lab-quest/confirm-holodisk-task",
                 "lab-quest/lie-holodisk-task",
                 "lab-quest/holodisk-task-not-done",
                 "lab-quest/holodisk-task-refuse"
             ],
-            "mood": "smile",
-            "text": "officeMeeting/lab-quest/report/entry"
+            "mood": "dubious",
+            "text": "officeMeeting/lab-quest/report/followup-holodisk"
         },
         "officeMeeting/lab-quest/report/give-reward": {
             "answers": [
@@ -343,12 +381,37 @@
             "mood": "neutral",
             "text": "officeMeeting/lab-quest/report/give-reward"
         },
+        "officeMeeting/lab-quest/report/prompt": {
+            "answers": [
+                "lab-quest/report/tell-device-given-to-rangers",
+                "lab-quest/report/tell-found-device",
+                "lab-quest/confirm-holodisk-task",
+                "lab-quest/holodisk-task-refuse"
+            ],
+            "text": "officeMeeting/lab-quest/report/prompt"
+        },
+        "officeMeeting/lab-quest/report/receive-battery": {
+            "answers": [
+                "lab-quest/receive-battery-followup"
+            ],
+            "hook": "labQuestReportedDevice",
+            "mood": "smile",
+            "text": "officeMeeting/lab-quest/report/receive-battery"
+        },
         "officeMeeting/lab-quest/report/reject-holodisk": {
             "answers": [
             ],
             "hook": "labQuestRejectHolodisk",
             "mood": "angry",
             "text": "officeMeeting/lab-quest/report/reject-holodisk"
+        },
+        "officeMeeting/lab-quest/report/report-holodisk": {
+            "answers": [
+                "lab-quest/report-holodisk-followup"
+            ],
+            "hook": "labQuestReportedHolodisk",
+            "mood": "smile",
+            "text": "officeMeeting/lab-quest/report/report-holodisk"
         },
         "officeMeeting/lab-quest/report/undone-main-terminal": {
             "answers": [

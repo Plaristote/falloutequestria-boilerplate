@@ -37,15 +37,23 @@ export default class extends QuestHelper {
       this.model.completeObjective("battery");
   }
 
-  completeObjective(name) {
+  onCharacterKilled(character) {
+    if (character.characterSheet == "thornhoof/scroll")
+      this.model.failObjective("report");
+  }
+
+  completeObjective(name, success) {
     switch (name) {
     case "battery":
     case "holodisk":
-      if (this.model.areObjectivesCompleted(["battery", "holodisk"]))
+      if (this.model.areObjectivesCrossedOff(["battery", "holodisk"]))
         this.model.addObjective("report", this.tr("report"));
       break ;
     case "report":
-      this.model.completed = true;
+      if (success)
+        this.model.completed = true;
+      else
+        this.mdoel.failed = true;
       break ;
     }
   }

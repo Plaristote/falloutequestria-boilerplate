@@ -34,6 +34,9 @@
             "lab-quest/question-extra-A3": "Et donc, c'est pour ça que vous voulez que ce soit fait discrètement, sans impliquer le conseil ?",
             "lab-quest/question-extra-A4": "Vous y étiez, n'est-ce pas ? Voilà comment vous savez tout ça. Vous travailliez là-bas ? Et vous voulez maintenant que je fasse disparaître vos secrets ?",
             "lab-quest/reject": "Je dois y réfléchir.",
+            "lab-quest/report/tell-device-given-to-rangers": "J'ai trouvé la batterie à flux inversé. Mais j'ai décidé de la donner aux Steel Rangers.",
+            "lab-quest/report/tell-device-not-found": "Je ne l'ai pas encore trouvé.",
+            "lab-quest/report/tell-found-device": "Je vous ai amené la batterie à flux inversé.",
             "meeting-heroic-1": "Je suis venu apporter mon aide. Je ne vous laisserai pas tomber.",
             "meeting-mercenary-1": "Si la paye est bonne, vous pouvez compter sur moi.",
             "meeting-pacifist-1": "Je suis ici en tant qu'observateur. Je ne peux pas encore prendre parti.",
@@ -57,11 +60,20 @@
             "officeMeeting/lab-quest/intro-extra": "Il y a autre chose que je voudrais que tu fasse, lorsque tu sera là-bas. Il y a un ordinateur, dans la salle de contrôle du laboratoire. Je veux que tu y insère cet holodisque. C'est très important.",
             "officeMeeting/lab-quest/intro-reward": "Bien sûr. Je n'en attendais pas moins. Je vous paierai {{labQuestPayment}} capsules, dès que je posséderai la batterie.",
             "officeMeeting/lab-quest/intro-reward-bonus": "Oui, ça me semble raisonnable.<br><br>\n<i>Vellum Scroll te donne {{labQuestUpfrontPayment}} capsules.</i>",
-            "officeMeeting/lab-quest/report/done": "Parfait. C'est mieux ainsi, crois moi. Tu as rendu un grand service à moi-même, et à cette ville. Peut-être même aux terres dévastées dans leur ensemble.",
+            "officeMeeting/lab-quest/report/device-given-to-rangers": "Aux… aux Steel Rangers ? Aux Steel Rangers ?! <br>\nBon sang, mais qu'est-ce qui t'es passé par la tête ? C'est du pognon que tu voulais ? Où juste nous laisser dans la merde ? Comment les terres désolées sont censées se développer si tous les prospectives de progrès se retrouvent enfermer dans le bunker de ces lunatiques ?",
+            "officeMeeting/lab-quest/report/done": "Je savais que je pouvais compter sur toi. Cette ville te doit beaucoup.",
+            "officeMeeting/lab-quest/report/done-half": "Bien. Tu as trahis notre ville, mais tu m'as quand même rendu un service personnel. Je sais me montrer reconnaissant. Merci.",
             "officeMeeting/lab-quest/report/entry": "Excellent ! Tu as rendu un grand service à cette ville. Les recherches de Beryl porteront sûrement leurs fruits, maintenant, et les espions des Steel Rangers ne pourront plus mettre la main sur cet appareil.\n<br><br>\nJe t'avais également confié une tâche supplémentaire. Qu'en est-il ? Est-ce que tu as fait tourner l'holodisque dans le terminal principal ?",
+            "officeMeeting/lab-quest/report/followup-device": "Je t'avais également confié une tâche supplémentaire. Qu'en est-il ? Est-ce que tu as trouvé la batterie à flux inversé ?",
+            "officeMeeting/lab-quest/report/followup-holodisk": "Je t'avais également confié une tâche supplémentaire. Qu'en est-il ? Est-ce que tu as fait tourner l'holodisque dans le terminal principal ?",
             "officeMeeting/lab-quest/report/give-reward": "Tu l'as mérité.<br>\n<i>Il te donne {{labQuestPayment}} capsules.</i>",
+            "officeMeeting/lab-quest/report/prompt": "Oui ? As-tu complété les tâches que je t'avais assignées ?",
+            "officeMeeting/lab-quest/report/receive-battery": "Excellent ! Tu as rendu un grand service à cette ville. Les recherches de Beryl porteront sûrement leurs fruits, maintenant, et les espions des Steel Rangers ne pourront plus mettre la main sur cet appareil.",
+            "officeMeeting/lab-quest/report/report-holodisk": "Parfait. C'est mieux ainsi, crois moi. Tu as rendu un grand service à moi-même, et à cette ville. Peut-être même aux terres dévastées dans leur ensemble.",
             "officeMeeting/lab-quest/report/undone-main-terminal": "Alors que fais-tu ici ? Il faut que tu y retourne et que tu termine le travail !",
-            "officeMeeting/not-ready": "Oui. J'ai bon espoir qu'avec ta coopération, nous puissions sortir cette ville de la situation épineuse dans laquelle elle se trouve.\n<br><br>\nJ'ai une mission personnelle à te confier. Mais avant cela, je voudrais observer ta façon de travailler. Le conseiller Rime Leaf se trouve dans le bureau à côté du miens, et elle a des tâches à te confier concernant notre sécurité intérieure. Elles éprouveront ta loyauté envers notre ville, et si tu te montre capable de prendre les décisions difficiles qu'une situation peut exiger, j'aurais alors une tâche de la plus haute importance à te confier.\n<br><br>\nMerci de ta visite."
+            "officeMeeting/not-ready": "Oui. J'ai bon espoir qu'avec ta coopération, nous puissions sortir cette ville de la situation épineuse dans laquelle elle se trouve.\n<br><br>\nJ'ai une mission personnelle à te confier. Mais avant cela, je voudrais observer ta façon de travailler. Le conseiller Rime Leaf se trouve dans le bureau à côté du miens, et elle a des tâches à te confier concernant notre sécurité intérieure. Elles éprouveront ta loyauté envers notre ville, et si tu te montre capable de prendre les décisions difficiles qu'une situation peut exiger, j'aurais alors une tâche de la plus haute importance à te confier.\n<br><br>\nMerci de ta visite.",
+            "report-failed-lab-quest": "À propos de la batterie à flux inversé…",
+            "report-lab-quest": "À propos de ce que vous m'aviez demandé, pour le laboratoire souterrain…"
         }
     }
 }

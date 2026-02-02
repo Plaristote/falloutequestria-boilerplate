@@ -34,6 +34,9 @@
             "lab-quest/question-extra-A3": "So, is this the real reason why you want this task to be done secretely, outside of the council's attention ?",
             "lab-quest/question-extra-A4": "You've been there, haven't you ? That's how you know all this. Did you use to work there ? And now, you want me to clean up your secrets ?",
             "lab-quest/reject": "I'll have to think about it.",
+            "lab-quest/report/tell-device-given-to-rangers": "I found the inverted flux battery. But I decided to give it to the Steel Rangers.",
+            "lab-quest/report/tell-device-not-found": "I haven't found it yet.",
+            "lab-quest/report/tell-found-device": "I'm here to give you the inverted flux battery.",
             "meeting-heroic-1": "I'm here to help. I won't let you down.",
             "meeting-mercenary-1": "As long as the reward is worth it, you'll have my support.",
             "meeting-pacifist-1": "I'm here as an observer. I cannot take a decision right now.",
@@ -57,13 +60,21 @@
             "officeMeeting/lab-quest/intro-extra": "There's something else I need you to do down there. There's a computer, in the laboratory's control room. I want you to plug this holodisk in it. It's very important.",
             "officeMeeting/lab-quest/intro-reward": "Of course. I expected no less. I will pay you {{labQuestPayment}} caps, upon receiving the battery.",
             "officeMeeting/lab-quest/intro-reward-bonus": "Yes, that's reasonable.<br><br>\n<i>Vellum Scroll gives you {{labQuestUpfrontPayment}} caps.</i>",
-            "officeMeeting/lab-quest/report/done": "Good. It's for the best, believe me. You've done a great service to me, and this town. Perhaps even the whole wasteland.",
+            "officeMeeting/lab-quest/report/device-given-to-rangers": "To… to the Steel Rangers ? The Steel Rangers ?! <br>\nDammit, what could possibly motivate you to do something that stupid ? Is it about money ? Or were you just trying to fuck with us ? How are the crystal wastelands supposed to rise again, if every promising piece of technology ends up locked up in this bunker full of hoarding lunatics ?",
+            "officeMeeting/lab-quest/report/done": "I knew I could count on you. This town will be forever thankful to you.",
+            "officeMeeting/lab-quest/report/done-half": "Well. You failed this town, but at the very least, you didn't fail me. I take what I can get. Thank you.",
             "officeMeeting/lab-quest/report/entry": "Excellent ! You've done this town a huge service. Beryl's research will now surely bear fruit, and the device is safe from Steel Rangers spies.\n<br><br>\nBut I also trusted you with another task. What about it. Did you run the holodisk on the main terminal ?",
+            "officeMeeting/lab-quest/report/followup-device": "But I also trusted you with another task. What about it. Did you find the Inverted Flux Battery ?",
+            "officeMeeting/lab-quest/report/followup-holodisk": "But I also trusted you with another task. What about it. Did you run the holodisk on the main terminal ?",
             "officeMeeting/lab-quest/report/give-reward": "You earned it.<br>\n<i>He gives you {{labQuestPayment}} caps.</i>",
+            "officeMeeting/lab-quest/report/prompt": "Yes ? Have you completed the tasks I assigned you ?",
+            "officeMeeting/lab-quest/report/receive-battery": "Excellent ! You've done this town a huge service. Beryl's research will now surely bear fruit, and the device is safe from Steel Rangers spies.",
             "officeMeeting/lab-quest/report/reject-holodisk": "TODO: there should be some kind of discussion here, about the content of the logs.",
+            "officeMeeting/lab-quest/report/report-holodisk": "Good. It's for the best, believe me. You've done a great service to me, and this town. Perhaps even the whole wasteland.",
             "officeMeeting/lab-quest/report/undone-main-terminal": "Then what are you doing here ? You must go back !",
             "officeMeeting/not-ready": "Yes. I have high hopes that, with your cooperation, we might just be able to get this town out of this precarious situation.\n<br><br>\nI have a mission to task you with. But before that, I'd like to see how you work. Councilmare Rime Leaf works in the office right next to mine, and she has tasks for you regarding the security of our walls. They will test your loyalty to us, and if you show yourself able to take the harsh decisions that a situation might require, I will then trust you with a task of the utmost importance.\n<br><br>\nThank you for coming by.",
-            "report-lab-quest": "I have that device you wanted from the laboratory."
+            "report-failed-lab-quest": "About the device you wanted from the laboratory…",
+            "report-lab-quest": "About what you asked me to do, in the underground lab…"
         }
     }
 }

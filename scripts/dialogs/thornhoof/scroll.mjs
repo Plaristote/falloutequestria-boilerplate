@@ -152,7 +152,29 @@ class Dialog {
   }
 
   labQuestCanReport() {
+    return this.labQuest.inProgress;
+  }
+
+  labQuestCanGiveDevice() {
     return this.labQuest.inProgress && game.player.inventory.count("thornhoof-laboratory-device");
+  }
+
+  labQuestDeviceGivenToRangers() {
+    return this.labQuest.inProgress && this.labQuest.isObjectiveFailed("give-battery");
+  }
+
+  labQuestReportedDevice() {
+    this.labQuest.setVariable("reportedDevice", 1);
+    this.labQuest.completeObjective("give-battery");
+  }
+
+  labQuestReportedHolodisk() {
+    this.labQuest.setVariable("reportedHolodisk", 1);
+  }
+
+  labQuestReportFollowup() {
+    if (this.labQuest.hasVariable("reportedHolodisk") && this.labQuest.hasVariable("reportedDevice"))
+      return "officeMeeting/lab-quest/report/done";
   }
 
   labQuestPayReward() {
@@ -161,7 +183,9 @@ class Dialog {
 
   labQuestConfirmed() {
     game.player.inventory.removeItemOfType("thornhoof-laboratory-device");
-    this.labQuest.completeObjective("report")
+    this.labQuest.completeObjective("report");
+    if (this.labQuest.isObjectiveFailed("give-battery"))
+      return { textKey: "officeMeeting/lab-quest/report/done-half" };
   }
 
   labQuestAskRewardText() {
