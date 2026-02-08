@@ -7446,6 +7446,10 @@
             "width": 32
         }
     },
+    "sand-stairs": {
+        "cloneOf": "wooden-stairs",
+        "defaultSource": "stairs/sand.png"
+    },
     "scorpion": {
         "damaged-down": {
             "frameCount": 5,
@@ -10133,10 +10137,6 @@
             "repeat": false,
             "width": 56
         }
-    },
-    "sand-stairs": {
-        "cloneOf": "wooden-stairs",
-        "defaultSource": "stairs/sand.png"
     },
     "wooden-stairs": {
         "A-down": {

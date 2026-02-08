@@ -98,6 +98,10 @@
         "thornhoof-refugees": {
             "description": "La ville de Basalburg a été attaqué, pillé, et détruite par le Troupeau d'Or. Les rares survivants ayant échappé au massacre se sont réfugiés dans la ville de Sabairain. Ils y survivent tant bien que mal, dans l'attente de jours meilleurs.",
             "name": "Réfugiés de Basalburg"
+        },
+        "unhaus": {
+            "description": "Construite compacte et au sommet d'une colline, Unhaus est un petit village construit sur une route commerciale. Il sert d'étape pour les caravanes, et prélèvent une taxe sur ces dernières.",
+            "name": "Unhaus"
         }
     },
     "item-descriptions": {

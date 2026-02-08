@@ -96,6 +96,10 @@
         "thornhoof-refugees": {
             "description": "The town of Basalburg was attacked, pillaged and destroyed by the Golden Herd. The few survivors who managed to escape found refuge in the town of Thornhoof.  They've managed to survive there since then, waiting for better days.",
             "name": "Basalburg Refugees"
+        },
+        "unhaus": {
+            "description": "Built tightly upon a hill, Unhaus is a small haven located on a trade route. It serves as waustation for caravans, and requires a toll from them.",
+            "name": "Unhaus"
         }
     },
     "locations": {
