@@ -1,12 +1,17 @@
-import {CharacterBehaviour} from "./../character.mjs";
+import CharacterBehaviour from "../thornhoof/council-routine.mjs";
 
-class Hoarfrost extends CharacterBehaviour {
+export default class Hoarfrost extends CharacterBehaviour {
   constructor(model) {
     super(model);
     this.dialog = "thornhoof/steel-ranger-agent";
   }
-}
 
-export function create(model) {
-  return new Hoarfrost(model);
+  get bed() {
+    return level.findObject("residence.floor#0.appartment#1.bed");
+  }
+
+  goToWork() {
+    this.model.actionQueue.pushMovement(34, 7, 0);
+    this.model.actionQueue.start();
+  }
 }

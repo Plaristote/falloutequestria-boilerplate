@@ -11,10 +11,29 @@ export default class extends LevelBase {
       game.uniqueCharacterStorage.loadCharacterToCurrentLevel("thornhoof/silvertide", 26, 7, 0);
   }
 
+  get caravanQuest() {
+    return game.quests.getQuest("thornhoof/caravan");
+  }
+
+  get unlawfullyEntered() {
+    return game.getVariable("unlawfullyEnteredThornhoof", 0) == 1;
+  }
+
+  set unlawfullyEntered(value) {
+    game.setVariable("unlawfullyEnteredThornhoof", value ? 1 : 0);
+  }
+
   loadCaravanIntoCity() {
-    const quest = game.quests.getQuest("thornhoof/caravan");
-    if (quest.script.caravanInProgress)
-      quest.completeObjective("lead-caravan");
+    if (this.caravanQuest.script.caravanInProgress)
+      this.caravanQuest.completeObjective("lead-caravan");
     super.loadCaravanIntoCity();
+  }
+
+  onZoneEntered(zoneName, character) {
+    if (zoneName == "authorized-zone") {
+      this.unlawfullyEntered = false;
+    } else if (zoneName == "forbidden-zone" && !this.caravanQuest.completed) {
+      this.unlawfullyEntered = true;
+    }
   }
 }
