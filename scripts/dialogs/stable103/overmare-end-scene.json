@@ -1,0 +1,471 @@
+{
+    "answers": {
+        "accept-to-give-pipbuck": {
+            "state": "entry/taking-pipbuck",
+            "text": "accept-to-give-pipbuck"
+        },
+        "advocate-for-opening-stable": {
+            "state": "safety-concern/seclusion",
+            "text": "advocate-for-opening-stable"
+        },
+        "arguing-adapt": {
+            "state": "safety-concern/arguing-failure",
+            "text": "arguing-adapt"
+        },
+        "arguing-adapt-2": {
+            "state": "safety-concern/arguing-failure",
+            "text": "arguing-adapt-2"
+        },
+        "arguing-failure-reaction#A": {
+            "state": "safety-concern/banishment#2",
+            "text": "arguing-failure-reaction#A"
+        },
+        "arguing-failure-reaction#B": {
+            "state": "safety-concern/banishment#2",
+            "text": "arguing-failure-reaction#B"
+        },
+        "arguing-friendships": {
+            "availableHook": "canConvinceOfAlliances",
+            "hook": "tryToConvinceAlliance",
+            "state": "safety-concern/arguing#2",
+            "text": "arguing-friendships"
+        },
+        "arguing-protector": {
+            "hook": "tryToConvinceToughness",
+            "state": "safety-concern/arguing#2",
+            "text": "arguing-protector"
+        },
+        "arguing-psychology": {
+            "availableHook": "canConvincePsychology",
+            "state": "safety-concern/arguing-success",
+            "text": "arguing-psychology"
+        },
+        "arguing-sentinel": {
+            "availableHook": "knowsAboutSentinel",
+            "state": "sentinel/entry",
+            "text": "arguing-sentinel"
+        },
+        "arguing-speech": {
+            "availableHook": "canConvinceSpeech",
+            "state": "safety-concern/arguing-success",
+            "text": "arguing-speech"
+        },
+        "arguing-success-followup": {
+            "state": "safety-concern/arguing-success-2",
+            "text": "exit"
+        },
+        "arguing-trust": {
+            "hook": "tryToConvinceFriendship",
+            "state": "safety-concern/arguing-success",
+            "text": "arguing-trust"
+        },
+        "ask-about-pipbuck-bug": {
+            "state": "entry/pipbuck-bug-2",
+            "text": "ask-about-pipbuck-bug"
+        },
+        "ask-about-rathian-death-knowledge": {
+            "state": "entry/pipbuck-bug",
+            "text": "ask-about-rathian-death-knowledge"
+        },
+        "ask-about-rathian-discovery": {
+            "state": "entry/about-rathian-discovery",
+            "text": "ask-about-rathian-discovery"
+        },
+        "ask-about-stable-safety": {
+            "state": "safety-concern/intro",
+            "text": "ask-about-stable-safety"
+        },
+        "ask-about-stable-safety-alt": {
+            "availableHook": "useDialogBaseEntry",
+            "state": "safety-concern/intro",
+            "text": "ask-about-stable-safety-alt"
+        },
+        "ask-about-stable-safety-alt2": {
+            "availableHook": "useDialogBaseEntry",
+            "state": "safety-concern/intro",
+            "text": "ask-about-stable-safety-alt2"
+        },
+        "ask-entry-followup": {
+            "availableHook": "useDialogAltEntry",
+            "state": "entry/base-alt-return",
+            "text": "ask-entry-followup"
+        },
+        "ask-sentinel-why-not": {
+            "state": "sentinel/not-using-sentinel",
+            "text": "ask-sentinel-why-not"
+        },
+        "banishment-ask-killing": {
+            "hook": "decreaseTrust",
+            "state": "safety-concern/banishment#2",
+            "text": "banishment-ask-killing"
+        },
+        "banishment-followup": {
+            "state": "safety-concern/banishment#2",
+            "text": "banishment-followup"
+        },
+        "banishment-swear-fealty": {
+            "hook": "increaseTrust",
+            "state": "safety-concern/banishment#2",
+            "text": "banishment-swear-fealty"
+        },
+        "call-out-banishment": {
+            "state": "safety-concern/banishment",
+            "text": "call-out-banishment"
+        },
+        "endGameStableOpening": {
+            "hook": "endGameOnStableOpening",
+            "text": "exit"
+        },
+        "go-to-murder-framing-A": {
+            "state": "safety-concern/murder-framing",
+            "text": "go-to-murder-framing-A"
+        },
+        "go-to-murder-framing-B": {
+            "state": "safety-concern/murder-framing",
+            "text": "go-to-murder-framing-B"
+        },
+        "move-on-to-safety-concerns": {
+            "state": "safety-concern/intro",
+            "text": "move-on-to-safety-concerns"
+        },
+        "move-on-to-safety-concerns-alt": {
+            "state": "safety-concern/intro",
+            "text": "move-on-to-safety-concerns-alt"
+        },
+        "murderFramingFollowup": {
+            "state": "safety-concern/murder-plan-start",
+            "text": "murderFramingFollowup"
+        },
+        "murderFramingPlead": {
+            "state": "safety-concern/murder-plan-start",
+            "text": "murderFramingPlead"
+        },
+        "murderFramingToSeclusion": {
+            "availableHook": "!talkedAboutSeclusion",
+            "state": "safety-concern/seclusion",
+            "text": "murderFramingToSeclusion"
+        },
+        "open-with-sentinal-alt": {
+            "availableHook": "knowsAboutSentinel",
+            "state": "sentinel/entry",
+            "text": "open-with-sentinal-alt"
+        },
+        "open-with-sentinel": {
+            "availableHook": "knowsAboutSentinel",
+            "state": "sentinel/entry",
+            "text": "open-with-sentinel"
+        },
+        "refuse-to-give-pipbuck": {
+            "state": "entry/taking-pipbuck",
+            "text": "refuse-to-give-pipbuck"
+        },
+        "refused-to-kill-rathian": {
+            "hook": "increaseTrust",
+            "state": "entry/refused-to-kill",
+            "text": "refused-to-kill-rathian"
+        },
+        "refused-to-kill-rathian-alt": {
+            "availableHook": "knewRathianBeforehoof",
+            "hook": "decreaseTrust",
+            "state": "entry/refused-to-kill",
+            "text": "refused-to-kill-rathian-alt"
+        },
+        "seclusion-ask-how": {
+            "hook": "seclusionAskHow",
+            "state": "safety-concern/banishment#2",
+            "text": "seclusion-ask-how"
+        },
+        "seclusion-repair-retort": {
+            "availableHook": "canRetortSeclusionRepair",
+            "state": "safety-concern/arguing",
+            "text": "seclusion-repair-retort"
+        },
+        "seclusion-speech-retort": {
+            "availableHook": "canRetortSeclusionSpeech",
+            "state": "safety-concern/arguing",
+            "text": "seclusion-speech-retort"
+        },
+        "sentinel-accept-harmony": {
+            "state": "safety-concern/seclusion",
+            "text": "sentinel-accept-harmony"
+        },
+        "sentinel-convince-give-up": {
+            "hook": "increaseTrust",
+            "state": "safety-concern/seclusion",
+            "text": "sentinel-convince-give-up"
+        },
+        "sentinel-convince-harmony": {
+            "availableHook": "canConvinceLowerSpeech",
+            "state": "sentinel/convinced",
+            "text": "sentinel-convince-harmony"
+        },
+        "sentinel-convince-overmare": {
+            "availableHook": "canConvinceSpeech",
+            "state": "sentinel/convinced-overmare",
+            "text": "sentinel-convince-overmare"
+        },
+        "sentinel-convinced-followup": {
+            "state": "safety-concern/arguing-success-2",
+            "text": "exit"
+        },
+        "sentinel-has-magical-imprint": {
+            "availableHook": "hasMagicalImprint",
+            "state": "sentinel/has-imprint",
+            "text": "sentinel-has-magical-imprint"
+        },
+        "sentinel-has-magical-imprint-alt": {
+            "availableHook": "hasMagicalImprint",
+            "state": "sentinel/convinced-player",
+            "text": "sentinel-has-magical-imprint-alt"
+        },
+        "sentinel-hostile-harmony": {
+            "state": "safety-concern/arguing-failure",
+            "text": "sentinel-hostile-harmony"
+        }
+    },
+    "entryPoint": "entry/base",
+    "states": {
+        "entry/about-rathian-captivity": {
+            "answers": [
+            ],
+            "text": "entry/about-rathian-captivity"
+        },
+        "entry/about-rathian-discovery": {
+            "answers": [
+                "open-with-sentinal-alt",
+                "move-on-to-safety-concerns",
+                "move-on-to-safety-concerns-alt"
+            ],
+            "hook": "aboutRathianDiscovery",
+            "mood": "sad",
+            "text": "entry/about-rathian-discovery"
+        },
+        "entry/authorzed-pipbuck": {
+            "answers": [
+            ],
+            "text": "entry/authorzed-pipbuck"
+        },
+        "entry/base": {
+            "answers": [
+                "ask-about-stable-safety",
+                "ask-about-stable-safety-alt",
+                "ask-about-rathian-death-knowledge"
+            ],
+            "text": "entry/base"
+        },
+        "entry/base-alt": {
+            "answers": [
+                "open-with-sentinel",
+                "refused-to-kill-rathian",
+                "refused-to-kill-rathian-alt",
+                "ask-about-rathian-death-knowledge"
+            ],
+            "text": "entry/base-alt"
+        },
+        "entry/base-alt-return": {
+            "answers": [
+                "open-with-sentinel",
+                "refused-to-kill-rathian",
+                "refused-to-kill-rathian-alt"
+            ],
+            "mood": "dubious",
+            "text": "entry/base-alt-return"
+        },
+        "entry/pipbuck-bug": {
+            "answers": [
+                "ask-about-pipbuck-bug",
+                "ask-about-stable-safety-alt2"
+            ],
+            "mood": "smile",
+            "text": "entry/pipbuck-bug"
+        },
+        "entry/pipbuck-bug-2": {
+            "answers": [
+                "refuse-to-give-pipbuck",
+                "accept-to-give-pipbuck",
+                "ask-about-stable-safety-alt"
+            ],
+            "mood": "neutral",
+            "text": "entry/pipbuck-bug-2"
+        },
+        "entry/rathian-captured": {
+            "answers": [
+            ],
+            "text": "entry/rathian-captured"
+        },
+        "entry/rathian-free": {
+            "answers": [
+            ],
+            "text": "entry/rathian-free"
+        },
+        "entry/refused-to-kill": {
+            "answers": [
+                "open-with-sentinel",
+                "ask-about-rathian-discovery",
+                "move-on-to-safety-concerns"
+            ],
+            "hook": "refusedToKill",
+            "mood": "angry",
+            "text": "entry/refused-to-kill"
+        },
+        "entry/taking-pipbuck": {
+            "answers": [
+                "ask-about-stable-safety-alt2",
+                "ask-about-stable-safety-alt",
+                "ask-entry-followup"
+            ],
+            "hook": "onTakingPipbuck",
+            "mood": "cocky",
+            "text": "entry/taking-pipbuck"
+        },
+        "safety-concern/arguing": {
+            "answers": [
+                "arguing-sentinel",
+                "arguing-protector",
+                "arguing-friendships",
+                "arguing-adapt"
+            ],
+            "mood": "sad",
+            "text": "safety-concern/arguing"
+        },
+        "safety-concern/arguing#2": {
+            "answers": [
+                "arguing-speech",
+                "arguing-psychology",
+                "arguing-trust",
+                "arguing-adapt-2"
+            ],
+            "mood": "dubious",
+            "text": "safety-concern/arguing#2"
+        },
+        "safety-concern/arguing-failure": {
+            "answers": [
+                "arguing-failure-reaction#A",
+                "arguing-failure-reaction#B"
+            ],
+            "text": "safety-concern/arguing-failure"
+        },
+        "safety-concern/arguing-lack-trust": {
+            "answers": [
+                "arguing-failure-reaction#B",
+                "arguing-failure-reaction#A"
+            ],
+            "mood": "dubious",
+            "text": "safety-concern/arguing-lack-trust"
+        },
+        "safety-concern/arguing-success": {
+            "answers": [
+                "arguing-success-followup"
+            ],
+            "mood": "sad",
+            "text": "safety-concern/arguing-success"
+        },
+        "safety-concern/arguing-success-2": {
+            "answers": [
+                "endGameStableOpening"
+            ],
+            "mood": "smile",
+            "text": "safety-concern/arguing-success-2"
+        },
+        "safety-concern/banishment": {
+            "answers": [
+                "banishment-followup",
+                "banishment-swear-fealty",
+                "banishment-ask-killing"
+            ],
+            "text": "safety-concern/banishment"
+        },
+        "safety-concern/banishment#2": {
+            "answers": [
+                "go-to-murder-framing-A",
+                "go-to-murder-framing-B"
+            ],
+            "text": "safety-concern/banishment#2"
+        },
+        "safety-concern/intro": {
+            "answers": [
+                "advocate-for-opening-stable",
+                "call-out-banishment"
+            ],
+            "mood": "sad",
+            "text": "safety-concern/intro"
+        },
+        "safety-concern/murder-framing": {
+            "answers": [
+                "murderFramingToSeclusion",
+                "murderFramingFollowup",
+                "murderFramingPlead"
+            ],
+            "hook": "onMurderFraming",
+            "mood": "angry",
+            "text": "safety-concern/murder-framing"
+        },
+        "safety-concern/murder-plan-start": {
+            "answers": [
+            ],
+            "hook": "startFight",
+            "mood": "cocky",
+            "text": "safety-concern/murder-plan-start"
+        },
+        "safety-concern/seclusion": {
+            "answers": [
+                "seclusion-speech-retort",
+                "seclusion-repair-retort",
+                "seclusion-ask-how"
+            ],
+            "hook": "onSeclusion",
+            "mood": "sad",
+            "text": "safety-concern/seclusion"
+        },
+        "sentinel/convinced": {
+            "answers": [
+                "sentinel-has-magical-imprint-alt",
+                "sentinel-convince-overmare",
+                "sentinel-convince-give-up"
+            ],
+            "mood": "sad",
+            "text": "sentinel/convinced"
+        },
+        "sentinel/convinced-overmare": {
+            "answers": [
+                "sentinel-convinced-followup"
+            ],
+            "hook": "onSentinelConvincedOvermare",
+            "mood": "cocky",
+            "text": "sentinel/convinced-overmare"
+        },
+        "sentinel/convinced-player": {
+            "answers": [
+                "sentinel-convinced-followup"
+            ],
+            "hook": "onSentinelConvincedPlayer",
+            "mood": "cocky",
+            "text": "sentinel/convinced-player"
+        },
+        "sentinel/entry": {
+            "answers": [
+                "ask-sentinel-why-not",
+                "sentinel-has-magical-imprint"
+            ],
+            "mood": "angry",
+            "text": "sentinel/entry"
+        },
+        "sentinel/has-imprint": {
+            "answers": [
+            ],
+            "hook": "startFight",
+            "mood": "sad",
+            "text": "sentinel/has-imprint"
+        },
+        "sentinel/not-using-sentinel": {
+            "answers": [
+                "sentinel-convince-harmony",
+                "sentinel-accept-harmony",
+                "sentinel-hostile-harmony",
+                "sentinel-has-magical-imprint"
+            ],
+            "mood": "neutral",
+            "text": "sentinel/not-using-sentinel"
+        }
+    }
+}

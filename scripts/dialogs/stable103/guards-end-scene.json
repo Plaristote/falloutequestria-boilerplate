@@ -1,0 +1,111 @@
+{
+    "answers": {
+        "betray-rathian": {
+            "state": "rathian-betrayed",
+            "text": "betray-rathian"
+        },
+        "conflict-fight": {
+            "hook": "startFight",
+            "text": "conflict-fight"
+        },
+        "conflict-intimidate": {
+            "hook": "onIntimidate",
+            "text": "conflict-intimidate"
+        },
+        "follow-to-overmare": {
+            "hook": "goingToOvermareHook",
+            "text": "follow-to-overmare"
+        },
+        "go-with-rathian": {
+            "hook": "goToConflict",
+            "state": "conflict",
+            "text": "go-with-rathian"
+        },
+        "leave-companion-accept": {
+            "hook": "leaveCompanionsHook",
+            "text": "leave-companion-accept"
+        },
+        "rathian-betrayed-answer1": {
+            "hook": "betrayRathianHook",
+            "text": "rathian-betrayed-answer1"
+        },
+        "rathian-betrayed-answer2": {
+            "hook": "betrayRathianHook",
+            "text": "rathian-betrayed-answer2"
+        },
+        "refuse-to-follow": {
+            "state": "refused-to-follow",
+            "text": "refuse-to-follow"
+        },
+        "refuse-to-follow-alt": {
+            "hook": "goingToOvermareHook",
+            "text": "refuse-to-follow-alt"
+        },
+        "refuse-to-leave-friends": {
+            "state": "conflict",
+            "text": "refuse-to-leave-friends"
+        },
+        "tell-go-up-with-rathian": {
+            "state": "conflict",
+            "text": "tell-go-up-with-rathian"
+        }
+    },
+    "entryPoint": "entry",
+    "states": {
+        "conflict": {
+            "answers": [
+                "conflict-intimidate",
+                "conflict-fight"
+            ],
+            "mood": "angry",
+            "text": "conflict"
+        },
+        "entry": {
+            "answers": [
+                "follow-to-overmare",
+                "refuse-to-follow",
+                "refuse-to-follow-alt"
+            ],
+            "mood": "smile",
+            "text": "entry"
+        },
+        "leave-friends": {
+            "answers": [
+                "leave-companion-accept",
+                "refuse-to-leave-friends"
+            ],
+            "mood": "dubious",
+            "text": "leave-friends"
+        },
+        "rathian-betrayed": {
+            "answers": [
+                "rathian-betrayed-answer2",
+                "rathian-betrayed-answer1"
+            ],
+            "text": "rathian-betrayed"
+        },
+        "rathian-interjects": {
+            "answers": [
+                "go-with-rathian",
+                "betray-rathian"
+            ],
+            "mood": "angry",
+            "text": "rathian-interjects"
+        },
+        "refused-to-follow": {
+            "answers": [
+                "follow-to-overmare"
+            ],
+            "mood": "sad",
+            "text": "refused-to-follow"
+        },
+        "with-rathian": {
+            "answers": [
+                "follow-to-overmare",
+                "tell-go-up-with-rathian"
+            ],
+            "mood": "angry",
+            "text": "with-rathian"
+        }
+    }
+}

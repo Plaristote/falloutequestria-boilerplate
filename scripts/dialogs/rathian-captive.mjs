@@ -19,6 +19,7 @@ class Dialog {
 
   getEntryPoint() {
     if (!this.quest.isObjectiveCompleted("trackCulprit")) {
+      this.quest.setVariable("metRathianAsCaptive", 1);
       this.quest.completeObjective("trackCulprit");
       if (!this.dialog.npc.hasVariable("met")) {
         this.dialog.npc.setVariable("met", true);

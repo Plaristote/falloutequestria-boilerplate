@@ -11,7 +11,7 @@ export class StableParty extends QuestHelper {
   }
   
   initialize() {
-    this.model.location = "stable";
+    this.model.location = "stable-103";
   }
 
   onItemPicked(item) {

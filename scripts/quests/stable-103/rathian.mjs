@@ -85,6 +85,7 @@ export default class extends QuestHelper {
             && currentCase.y >= 14 && currentCase.y <= 22) {
       if (!this.model.hasVariable("foundSignal")) {
         this.model.setVariable("foundSignal", 1);
+        this.model.location = "golden-herd-camp";
         game.worldmap.revealCase(16, 19);
         game.appendToConsole(this.tr("signal-update"));
       }
@@ -102,5 +103,6 @@ export default class extends QuestHelper {
     if (this.model.hasVariable("knowsAboutSentinel"))
       this.model.addObjective("dealWithSentinel", this.tr("deal-with-sentinel"));
     this.model.addObjective("reportOvermare", this.tr("report-to-overmare"));
+    this.model.location = "stable-103";
   }
 }

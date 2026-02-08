@@ -1,0 +1,25 @@
+{
+    "dialogs": {
+        "stable103/guards-end-scene": {
+            "betray-rathian": "Désolé, Rathian. Ca n'a jamais fait partie de mon plan.",
+            "conflict": "J'ai des ordres, {{player}}, et je dois les respecter. S'il te plait, je veux pas faire ça.",
+            "conflict-fight": "Dommage, il n'y en a qu'un de nous deux qui va apprécier la suite. Baston !",
+            "conflict-intimidate": "Je sais bien. T'as pas l'habitude de la violence, t'es un gratte-papier. Pousse-toi de là, ou je te plie en deux comme un de tes formulaires !",
+            "entry": "Salut, {{name}} !<br>\nLa superviseuse voudrait te parler dans son bureau. Si tu veux bien nous suivre.",
+            "follow-to-overmare": "D'accord. Allons-y.",
+            "go-with-rathian": "Très bien. <i>[S'adresser aux gardes:]</i> Il reste avec moi. Laissez-nous passer.",
+            "leave-companion-accept": "Ok. Attendez-moi ici, je reviens.",
+            "leave-friends": "Je suis désolé, mais tes compagnons ne peuvent pas venir. Ils vont devoir attendre ici.",
+            "rathian-betrayed": "Alors c'est comme ça ? Tu me trahis ? Tu me sors de ma prison chez le Troupeau d'Or pour me jeter dans une cellule de ton Étable ?",
+            "rathian-betrayed-answer1": "Te plains pas trop, {{npc}}. Ici au moins, la nourriture à le goût de nourriture.",
+            "rathian-betrayed-answer2": "J'aurais aussi pu te tuer. Tu gagne au change.",
+            "rathian-interjects": "Éh ! Qu'est-ce que t'es en train de faire ? Je croyais qu'on faisais équipe ! Les contrôles de Sentinel sont dans les quarters de la superviseuse. Je viens avec toi.",
+            "refuse-to-follow": "Je voudrais me reposer d'abord.",
+            "refuse-to-follow-alt": "Oh, j'ai bien l'intention d'aller la voir. Laissez-moi passer.",
+            "refuse-to-leave-friends": "Non. Ils restent avec moi. Laissez-nous passer.",
+            "refused-to-follow": "J'ai bien peur que ce ne soit pas une requête, mais un ordre. La superviseuse veut te voir là-haut, maintenant. S'il te plait, ne rend pas la situation plus compliqué qu'elle ne doit l'être.",
+            "tell-go-up-with-rathian": "Il est avec moi. Nous allons tous aller voir la superviseuse. Laissez-nous passer.",
+            "with-rathian": "Stop.<br>\nNous avons été avertis que l'intrus était avec toi. Nous allons le mettre sous bonne garde. La superviseuse veut te voir dans son bureau."
+        }
+    }
+}

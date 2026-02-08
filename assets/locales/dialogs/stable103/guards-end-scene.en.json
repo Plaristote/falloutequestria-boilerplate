@@ -1,0 +1,25 @@
+{
+    "dialogs": {
+        "stable103/guards-end-scene": {
+            "betray-rathian": "Sorry, Rathian. That was never part of my plan.",
+            "conflict": "I have orders, {{player}}, and I have to carry them out. Please, I don't want to do this.",
+            "conflict-fight": "Too bad. I really want to do this. Bring it on.",
+            "conflict-intimidate": "I know you don't, you're a pencil pusher. Now stand down, or I'll fold you like a piece of paper.",
+            "entry": "Hi, {{name}} !<br>\nThe Overmare wishes to see you in her office. Please follow us.",
+            "follow-to-overmare": "Sure thing. Let's go.",
+            "go-with-rathian": "I see. <i>[Speak to the guards:]</i> He stays with me. Let us go.",
+            "leave-companion-accept": "Alright. Wait here, I'll be back soon.",
+            "leave-friends": "I'm sorry, but your companions can't come with you. They'll have to wait here.",
+            "rathian-betrayed": "So that's it then ? You're betraying me ? I traded a cell with the Golden Herd, for a cell in your Stable ?",
+            "rathian-betrayed-answer1": "Rejoice, Rathian. At least, our food tastes like food.",
+            "rathian-betrayed-answer2": "I could've killed you. I think you got off easy.",
+            "rathian-interjects": "Hey. What are you doing ? I thought we were in this together. The controls for Sentinel are in the overmare's quarters. I'm coming with you.",
+            "refuse-to-follow": "I'd like to rest first.",
+            "refuse-to-follow-alt": "Oh, I'm going to see her. Let me pass.",
+            "refuse-to-leave-friends": "No. They're with me all the way. Let us through.",
+            "refused-to-follow": "Afraid that's not a request, it's an order. The Overmare demands you up there, right now. I don't want things to get ugly.",
+            "tell-go-up-with-rathian": "He's with me. We're all going to see the overmare. Let us through.",
+            "with-rathian": "Halt.<br>\nWe've been warned the intruder was with you. We'll take him into custody, if you don't mind. The Overmare wants to see you in her office."
+        }
+    }
+}
