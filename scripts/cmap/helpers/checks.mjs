@@ -91,3 +91,9 @@ export function stealCheck(user, target, item, quantity, callbacks) {
     criticalFailure: callbacks.criticalFailure || callbacks.failure
   });
 }
+
+export function intimidateCheck(user, target, dice = 3) {
+  return user.statistics.level > target.statistics.level
+      && skillContest(user, target, "charisma", dice) == user
+      && skillContest(user, target, "strength", dice) == user;
+}
