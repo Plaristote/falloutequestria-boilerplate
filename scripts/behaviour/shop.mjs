@@ -25,7 +25,7 @@ const defaultRoutine = [
 ];
 
 function displayRandomTextBubble(character, options) {
-  character.getScriptObject().displayRandomTextBubble(options);
+  character.script.displayRandomTextBubble(options);
 }
 
 export class Shop {
@@ -48,7 +48,12 @@ export class Shop {
 
   get shopShelfs() {
     const npc = this.shopOwner;
-    return npc && npc.script ? this.shopOwner.script.shopShelfs : [];
+    const npcShelfs = npc?.script?.shopShelfs;
+    return npcShelfs ? npcShelfs : this.findAllShelves();
+  }
+
+  findAllShelves() {
+    return this.model.find(object => object.type == "StorageObject");
   }
 
   get stealAttemptCount() {
