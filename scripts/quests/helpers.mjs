@@ -27,6 +27,11 @@ export class QuestHelper {
     return JSON.parse(this.model.getVariable(eventStorageKey, "[]"));
   }
 
+  pushUniqueEvent(event) {
+    if (!this.hasEvent(event))
+      this.pushEvent(event);
+  }
+
   pushEvent(event) {
     const events = this.events;
     events.push(event);
