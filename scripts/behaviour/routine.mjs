@@ -54,7 +54,7 @@ function refreshRoutine(routine) {
   if (!isBusy(routine)) {
     const callback = routine.getCurrentRoutine().callback;
     if (typeof callback == "function")
-      callback();
+      callback(routine.model);
     else
       routine.parent[callback]();
   }
