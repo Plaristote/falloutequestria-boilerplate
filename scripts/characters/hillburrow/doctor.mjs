@@ -11,6 +11,10 @@ class Doctor extends CharacterBehaviour {
       return "hillburrow/doctor";
     return "hillburrow/doctor-drunk-quest";
   }
+
+  get shop() {
+    return level.findGroup("clinic");
+  }
 }
 
 export function create(model) {

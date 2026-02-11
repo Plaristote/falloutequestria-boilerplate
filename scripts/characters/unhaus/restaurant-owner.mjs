@@ -1,4 +1,4 @@
-import {CharacterBehaviour} from "./../changeling.mjs";
+import CharacterBehaviour from "./../changeling.mjs";
 
 export default class extends CharacterBehaviour {
   constructor(model) {

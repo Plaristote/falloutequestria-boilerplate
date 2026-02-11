@@ -37,6 +37,7 @@ class Dialog {
   }
 
   onAcceptedSabotageJob() {
+    game.worldmap.revealCity("hillburrow");
     game.quests.addQuest("cristal-den/bibins-sabotage-delivery");
     game.player.inventory.addItemOfType("bibin-sabotage-suitcase");
   }

@@ -153,10 +153,10 @@ class Dialog {
 
   negociateEntry() {
     switch (this.dialog.previousAnswer) {
-      case "push-to-hide-dolly": return { textKey: "negociate/why-dolly-hide", mood: "angry" };
+      case "push-to-hide-dolly": return { textKey: "negociations/why-dolly-hide", mood: "angry" };
       case "push-to-hide-wait":
-      case "negociation-suggest-waiting": return { textKey: "negociate/why-not-wait", mood: "cocky" };
-      case "negociation-why-me": return { textKey: "negociate/why-player", mood: "smile" };
+      case "negociation-suggest-waiting": return { textKey: "negociations/why-not-wait", mood: "cocky" };
+      case "negociation-why-me": return { textKey: "negociations/why-player", mood: "smile" };
     }
   }
 
@@ -198,6 +198,10 @@ class Dialog {
         return this.dialog.t("negociations/on-junkville-reject");
     }
     return "<i>SCRIPT ERROR</i>";
+  }
+
+  negociationsKnowAboutDollyOpinion() {
+    return this.negociateQuest.hasVariable("knowAboutDollyOpinion");
   }
 
   // BEGIN SPINEL QUEST

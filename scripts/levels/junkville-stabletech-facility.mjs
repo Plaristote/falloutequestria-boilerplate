@@ -34,7 +34,7 @@ export class JunkvilleStabletechFacility extends LevelBase {
 
   togglePower(running) {
     this.model.useAmbientLight = !running;
-    this.commandTerminal.script.enabled = this.running;
+    this.commandTerminal.script.enabled = running;
     this.guards.forEach(sentinel => {
       if (running) {
         sentinel.wakeUp();

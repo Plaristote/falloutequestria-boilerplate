@@ -24,13 +24,13 @@ class Dialog extends BarkeepHelper {
     const quest = game.quests.getQuest("hillburrow/oldSheriffMurder");
     quest.setVariable("leadsMercenaries", 1);
     quest.setVariable("leadsSheriffWorkingCase", 1);
-    quest.script.pushEvent("barkeepToldAboutMercenary");
+    quest.script.pushUniqueEvent("barkeepToldAboutMercenary");
   }
 
   toldAboutDrunkenMasterDisputeWithSheriff() {
     const quest = game.quests.getQuest("hillburrow/oldSheriffMurder");
     quest.setVariable("leadsDrunkenMaster", 1);
-    quest.script.pushEvent("barkeepToldAboutDrunkenMaster");
+    quest.script.pushUniqueEvent("barkeepToldAboutDrunkenMaster");
   }
 
   onToldName() {

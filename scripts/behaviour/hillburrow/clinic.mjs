@@ -10,6 +10,10 @@ export class Clinic extends Shop {
     return level.findObject("doctor");
   }
 
+  get shopShelfs() {
+    return ["shelf#1", "shelf#2"].map(path => this.model.findObject(path));
+  }
+
   onZoneEntered(object) {
     if (object == game.player && !this.model.hasVariable("drunkQuestStarted"))
       return this.startDrunkQuest();

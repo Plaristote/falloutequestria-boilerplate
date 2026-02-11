@@ -86,6 +86,7 @@
             "textHook": "negociatePassOnJunkvilleDecisionText"
         },
         "push-to-hide-dolly": {
+            "availableHook": "negociationsKnowAboutDollyOpinion",
             "state": "negociations/entry",
             "text": "push-to-hide-dolly"
         },

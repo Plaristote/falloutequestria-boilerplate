@@ -42,7 +42,7 @@ export default class extends LevelBase {
   }
 
   startFight() {
-    game.diplomacy.setAsEnemy("player", "stable-103");
+    game.diplomacy.setAsEnemy(true, "player", "stable-103");
     callGuards(this.guards, game.player, AlarmLevel.ShootOnSight);
   }
 }

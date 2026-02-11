@@ -58,7 +58,7 @@ class Dialog {
   }
 
   startFight() {
-    game.diplomacy.setAsEnemy("player", "stable-103");
+    game.diplomacy.setAsEnemy(true, "player", "stable-103");
   }
 }
 

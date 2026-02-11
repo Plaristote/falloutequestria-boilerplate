@@ -74,6 +74,9 @@ class Rathian extends CharacterBehaviour {
     }
   }
 
+  moveToHome() {
+  }
+
   headTowardsDumps() {
     this.model.actionQueue.pushMovement(17, 1);
     this.model.actionQueue.pushScript(this.onReachedDumpsEntryZone.bind(this));

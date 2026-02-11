@@ -146,6 +146,7 @@ class Dialog {
 
   endGameOnStableOpening() {
     // TODO implement end game
+    game.gameFinished();
   }
 
   increaseTrust() {

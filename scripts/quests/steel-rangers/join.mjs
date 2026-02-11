@@ -31,8 +31,8 @@ export default class Join extends QuestHelper {
       },
       {
         label: this.tr("bring-to-cabbit"),
-        success: this.isObjectiveCompleted("bring-to-cabbit"),
-        failure: this.isObjectiveCompleted("bring-to-cabbit") && !this.cabbitDead
+        success: this.model.isObjectiveCompleted("bring-to-cabbit"),
+        failure: this.model.isObjectiveCompleted("bring-to-cabbit") && !this.cabbitDead
       }
     ];
   }

@@ -1,4 +1,4 @@
-import Terminal extends "../terminal.mjs";
+import Terminal from "../terminal.mjs";
 
 export default class extends Terminal {
   constructor(model) {

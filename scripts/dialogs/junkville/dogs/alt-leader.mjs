@@ -1,4 +1,4 @@
-import {requireQuest} from "../../../quests/helpers.mjs";
+import {requireQuest, QuestFlags} from "../../../quests/helpers.mjs";
 
 class Dialog {
   constructor(dialog) {
@@ -10,6 +10,10 @@ class Dialog {
 
   spokeAgainstLeader() {
     return this.dialog.npc.hasVariable("spokeAgainstLeader");
+  }
+
+  toldOpinionAboutPony() {
+    requireQuest("junkvilleNegociateWithDogs", QuestFlags.HiddenQuest).setVariable("knowAboutDollyOpinion", 1);
   }
 
   get convinceFailureCount() {

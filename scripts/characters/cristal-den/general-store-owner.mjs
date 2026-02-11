@@ -5,4 +5,8 @@ export default class GeneralStoreOwner extends ShopOwner {
     super(model);
     this.dialog = "cristal-den/general-store-owner";
   }
+
+  get shop() {
+    return level.findGroup("shop");
+  }
 }

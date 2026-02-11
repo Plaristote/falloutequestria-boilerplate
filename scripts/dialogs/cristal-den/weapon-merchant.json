@@ -20,7 +20,8 @@
         "trade": {
             "answers": [
             ],
-            "mood": "barter",
+            "hook": "barter",
+            "mood": "smile",
             "text": "trade"
         }
     }

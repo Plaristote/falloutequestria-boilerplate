@@ -1,4 +1,4 @@
-import {DialogHelper} from "../helpers.mjs";
+import DialogHelper from "../merchant.mjs";
 import {drunkenQuestSucceeded} from "../../quests/hillburrow/saveDrunkenMaster.mjs";
 import {hasActiveOldSheriffMurderQuest} from "../../quests/hillburrow/oldSheriffMurder.mjs";
 
@@ -39,15 +39,15 @@ class Dialog extends DialogHelper {
     var suffix;
     const quest = game.quests.getQuest("hillburrow/oldSheriffMurder");
 
-    quest.script.pushEvent("doctorsAdvice");
+    quest.script.pushUniqueEvent("doctorsAdvice");
     quest.setVariable("leadsMercenaries", 1);
     if (drunkenQuestSucceeded()) {
       quest.setVariable("leadsDrunken", 1);
-      quest.script.pushEvent("doctorsLeadsWithDrunken");
+      quest.script.pushUniqueEvent("doctorsLeadsWithDrunken");
       suffix = this.dialog.t("old-sheriff-with-drunken");
     }
     else {
-      quest.script.pushEvent("doctorsLeadsWithoutDrunken");
+      quest.script.pushUniqueEvent("doctorsLeadsWithoutDrunken");
       suffix = this.dialog.t("old-sheriff-without-drunken");
     }
     return this.dialog.t("old-sheriff-suspicions") + ' ' + suffix;
