@@ -1,0 +1,12 @@
+{
+  "quests": {
+    "bookCollect": {
+      "title": "Livres pour la bibliothèque",
+      "description": "<p>Le problème, quand on est enfermé pour tant de temps, c'est qu'il devient compliquer de mettre les sabots sur des oeuvres originales. Mythic Bristle est un lecteur assidu, mais il est fatigué de lire encore et encore les mêmes choses… et il est las des fanfictions et romans à l'eau de rose que les quelques écrivains amateurs de l'étable produisent !</p><p>Puisque tu va passer du temps à l'exterieur, Mythic Bristle voudrait que tu ouvre l'oeil, et collecte de nouveaux livres pour la bibliothèques. {{requiredBooks}} bouquins devraient faire l'affaire.</p>",
+      "desc-done": "Tu es revenu avec les ouvrages requis, et Mythic Bristle était extatique ! Pour sûr, les rats de bibliothèques de l'étable te seront reconnaissants !.",
+      "objective-books": "Trouver des livres: {{currentCount}}/{{count}}",
+      "give-books-to-library": "Amener les livres à la librairie"
+    }
+  }
+}
+

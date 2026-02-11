@@ -1,0 +1,17 @@
+{
+    "dialogs": {
+        "stable103/librarian": {
+            "bookCollect/accept": "Oui, je devrais pouvoir te trouver ça.",
+            "bookCollect/accepted": "Génial ! J'attends de voir ça avec impatience ! Une trentaine de livres devraient faire l'affaire ! Merci !",
+            "bookCollect/askAboutAuthors": "Comment ça ? On ne manque pas d'auteurs dans l'étable, il y a de nouveaux livres qui sortent régulièrement.",
+            "bookCollect/brought": "<p><i>Il parcours rapidement les titres, les yeux écarquillés</i></p>\n<p>Wow ! C'est génial ! Merci, ça va vraiment nous changer la vie ! Merci infiniement !</p>",
+            "bookCollect/intro": "Attends une seconde. Tu sais, au bout d'un moment, on se lasse de lire les mêmes livres encore et encore… et puisque tu va passer du temps dehors, je me demandais si tu pouvais essayer de ramener quelques nouveautés pour la bibliothèque ?",
+            "bookCollect/sarcasm": "Ben voyons ! Je vais me péter le dos pour ramener des romans pourris à des rats de bibliothèque ! J'ai une étable à sauver, binoclard.",
+            "bookCollect/sarcasmed": "Je me serais bien passé du sarcasme…",
+            "bookCollect/stable-authors": "Ah ! T'appelles ça des auteurs ? Ils écrivent toujours sur les mêmes thèmes éculés, ça tourne en rond, c'est sans intérêt ! Je veux du frais, du neuf, de l'original, je veux découvrir des univers étonnants, des idées renversantes ! C'est pas les amateurs de l'étable qui vont satisfaire un vrai passionné…",
+            "bringBooks": "J'ai trouvé les livres que tu voulais.",
+            "entry": "Oui ?",
+            "leave": "À bientôt !"
+        }
+    }
+}

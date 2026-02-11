@@ -1,0 +1,11 @@
+{
+  "quests": {
+    "stable-party": {
+      "title": "Sans alcool, la fête est plus molle",
+      "description": "L'incident de l'appareil Celeste a motivé la superviseuse a restreindre l'usage des pommes, et les stocks de cidres sont en train de s'épuiser. Midnight Aurora, barmaid de l'étable et experte de la fête, voudrais que tu lui amène {{requiredBottles}} boissons alcolisées, afin qu'elle puisse organiser une soirée qui apaiserait les esprits de chacun.",
+      "desc-done": "Tu es revenu avec la tiz, et grâce aux efforts de Midnight Aurora et aux tiens, l'étable a connu une fête qui restera dans les anales.",
+      "objective-bottles": "Collecte les bouteilles: {{currentCount}}/{{count}}",
+      "give-bottles-to-barmaid": "Apporte les boissons à Midnight Aurora"
+    }
+  }
+}

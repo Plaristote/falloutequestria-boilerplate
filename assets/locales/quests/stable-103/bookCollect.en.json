@@ -1,0 +1,11 @@
+{
+  "quests": {
+    "bookCollect": {
+      "title": "Books for the library",
+      "description": "<p>The issue with being isolated for so long is that it gets hard to get your hooves on original reads. Mythic Bristle loves books, but he's tired of reading the same old book over and over… and he's getting tired of the stable's authors derivative work !</p><p>Since you'll spend time outside the Stable anyway, Mythic Bristle asked you to keep an eye out for books, to bring some fresh new pages to the library. {{requiredBooks}} books should be enough.</p>",
+      "desc-done": "You came back with plenty of new books, and Mythic Bristle was overjoyed ! Surely, the stable's bookworm will be thankful !.",
+      "objective-books": "Find books: {{currentCount}}/{{count}}",
+      "give-books-to-library": "Bring the books to the library"
+    }
+  }
+}

@@ -37,6 +37,10 @@ class Dialog {
       return quest.script.hasEnoughBottles();
     return false;
   }
+
+  givePartyBottles() {
+    quests.getQuest("stable-party").script.giveBottles();
+  }
 }
 
 export function create(dialog) {

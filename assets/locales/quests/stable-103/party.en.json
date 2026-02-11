@@ -1,0 +1,11 @@
+{
+  "quests": {
+    "stable-party": {
+      "title": "The Element of Alcohol",
+      "description": "Because of the Celestial incident, the overmare has restricted the use of apples, and the cider supply are getting low. Midnight Aurora, the stable's cocktail artist and party expert, wants you to bring her {{requiredBottles}} bottles of various alcoholic beverages, so she can set up an event to take everpony's minds away from the crisis.",
+      "desc-done": "You came back with the party supplies, and thanks to your efforts and Midnight Aurora's, the stable has seen its best party in a long while.",
+      "objective-bottles": "Find alcoholic beverages: {{currentCount}}/{{count}}",
+      "give-bottles-to-barmaid": "Bring the bottles back to Midnight Aurora"
+    }
+  }
+}

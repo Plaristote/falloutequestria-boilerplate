@@ -6,6 +6,7 @@ class Book extends Item {
     super(model);
     this.useModes = ["use"];
     this.disabledCombatUse = true;
+    this.isBook = true;
   }
 
   get requiresTarget() {

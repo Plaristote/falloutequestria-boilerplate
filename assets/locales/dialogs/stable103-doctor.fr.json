@@ -15,6 +15,7 @@
             "healedWounds": "Voilà, tu es guéri. Maintenant si tu pouvais être un peu plus prudent la prochaine fois que tu va dehors, je suis pas ton infirmière de service. Et j'ai d'important problèmes scientifiques à résoudre. Scientifiques. Parfaitement. <br>Allez, ouste. Laisse-moi à mon enfer personnel.",
             "introduction": "Bonjour, citoyen {{name}}. C'est amusant de vous voir ici si tôt. Avez-vous déjà trouvé une solution pour réparer l'Appareil Célèste ?",
             "introductionQuestDone": "Vraiment ? Éh ben, c'est génial ! Pour tout te dire, j'ai pas cru une seconde que toi, ou qui que ce soit dans cette Étable, serait capable de régler ça. Bien… c'est presque dommage. J'espérais que finalement, la superviseuse nous ferait sortir. Le monde extérieur ne peut pas être si terrible que ça.",
+            "introductionQuestNotDone": "Ben tiens… j'avais bien demandé à la superviseuse de m'envoyer, mais non, bien sûr… on est pas sortit du sable. Alors qu'est-ce que tu fais là ? Tu devrais pas être en train de te bouger ?",
             "main-quest-done": "Oui, d'ailleurs je suis venu apporter un Appareil Célèste flambant neuf.",
             "main-quest-not-done": "Non, j'y travaille encore.",
             "main-quest-progress": "Oui, j'ai trouvé un moyen de  construire un nouvel Appareil Célèste.",

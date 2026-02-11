@@ -54,7 +54,6 @@
                 "drink-nothing"
             ],
             "hook": "entryPoint",
-            "mood": "",
             "text": "entryPoint"
         },
         "partyPlanAccept": {
@@ -63,8 +62,6 @@
                 "partyPlanAccepted",
                 "partyPlanReject"
             ],
-            "hook": "",
-            "mood": "",
             "text": "partyPlanAccept"
         },
         "partyPlanIntro": {
@@ -72,13 +69,13 @@
                 "partyPlanSuggest",
                 "partyPlanPassing"
             ],
-            "mood": "",
             "text": "partyPlanIntro"
         },
         "partyPlanStart": {
             "answers": [
             ],
-            "mood": "",
+            "hook": "givePartyBottles",
+            "mood": "smile",
             "text": "partyPlanStart"
         }
     }

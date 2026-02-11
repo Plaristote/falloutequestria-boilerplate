@@ -1,12 +1,11 @@
 {
     "dialogs": {
         "stable103-barmaid": {
-            "partyPlanIntro": "One cider coming up !<br>You're lucky there's still some left. The overmare has forbidden further production of alcoholic beverages, on the account that we might run out of apples before you fix that artificial sky issue for us…<br/>It's a shame really. I can't really imagine what a stable party would look like if we can't get the buzz going…",
             "drink-cider": "Pour me some of that cider.",
             "drink-juice": "I'll have an apple juice.",
             "drink-nothing": "I'm not thirsty. Bye.",
             "entryPoint": "Hi there, {{name}} ! You look like yo could use a refreshment ! What do you wanna drink ?",
-            "partyPlanAccept": "Holy molly ! I hadn't even thought of that ! Silly me ! Tell you what, bring me, like, 40 or so bottles of any alcoholic drink, and I'll throw you the biggest party this stable has ever seen ! Deal ?",
+            "partyPlanAccept": "Holy molly ! I hadn't even thought of that ! Silly me ! Tell you what, bring me, like, 15 or so bottles of any alcoholic drink, and I'll throw you the biggest party this stable has ever seen ! Deal ?",
             "partyPlanAccepted": "Deal !",
             "partyPlanAlreadyHasBottles": "Actually, I already have enough alcohol on me to get the whole stable drunk.",
             "partyPlanBottlesReady": "Hey ! I have gathered enough drinks to throw a huge party ! Are you still up for it ?",

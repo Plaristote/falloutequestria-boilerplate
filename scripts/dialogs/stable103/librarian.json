@@ -1,0 +1,71 @@
+{
+    "answers": {
+        "bookCollect/accept": {
+            "state": "bookCollect/accepted",
+            "text": "bookCollect/accept"
+        },
+        "bookCollect/askAboutAuthors": {
+            "state": "bookCollect/stable-authors",
+            "text": "bookCollect/askAboutAuthors"
+        },
+        "bookCollect/sarcasm": {
+            "state": "bookCollect/sarcasmed",
+            "text": "bookCollect/sarcasm"
+        },
+        "bringBooks": {
+            "availableHook": "canCompleteBookQuest",
+            "state": "bookCollect/brought",
+            "text": "bringBooks"
+        },
+        "leave": {
+            "hook": "tryToTriggerBookQuest",
+            "text": "leave"
+        }
+    },
+    "entryPoint": "entry",
+    "states": {
+        "bookCollect/accepted": {
+            "answers": [
+            ],
+            "hook": "triggerBookQuest",
+            "mood": "smile",
+            "text": "bookCollect/accepted"
+        },
+        "bookCollect/brought": {
+            "answers": [
+            ],
+            "hook": "completeBookQuest",
+            "mood": "laugh",
+            "text": "bookCollect/brought"
+        },
+        "bookCollect/intro": {
+            "answers": [
+                "bookCollect/askAboutAuthors",
+                "bookCollect/accept",
+                "bookCollect/sarcasm"
+            ],
+            "mood": "dubious",
+            "text": "bookCollect/intro"
+        },
+        "bookCollect/sarcasmed": {
+            "answers": [
+            ],
+            "text": "bookCollect/sarcasmed"
+        },
+        "bookCollect/stable-authors": {
+            "answers": [
+                "bookCollect/accept",
+                "bookCollect/sarcasm"
+            ],
+            "mood": "cocky",
+            "text": "bookCollect/stable-authors"
+        },
+        "entry": {
+            "answers": [
+                "bringBooks",
+                "leave"
+            ],
+            "text": "entry"
+        }
+    }
+}

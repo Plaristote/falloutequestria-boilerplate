@@ -15,6 +15,7 @@
             "healedWounds": "Here you go, all patched up. Now if you could be more careful next time you head outside, I'm not your personal nurse. And I have important science matters to take care off. Yes. Science. Indeed.\n<br>Now, be a dear and leave me to my own personal hell.",
             "introduction": "Hello, citizen {{name}}. Fancy seeing you here so soon. Have you already found a solution to the celestial device issue ?",
             "introductionQuestDone": "Is that so ? Well, that's amazing ! I'm gonna be honest with you : I didn't think for a second that you, or anyone else in this stable, would be able to fix it. Well… that's too bad. I kinda hoped that in the end, the overmare would have to lead us all to the outside world. The outside world can't be so bad.",
+            "introductionQuestNotDone": "What a surprise… I did ask the overmare to sent me instead, but of course, it had to be you… so, why are you here ? Shouldn't you be out there ?",
             "main-quest-done": "Yes, I actually have a new Celestial Device ready to go.",
             "main-quest-not-done": "No, I'm still working on it.",
             "main-quest-progress": "Yes, I found a way to build a new Celestial Device.",

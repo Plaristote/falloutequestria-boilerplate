@@ -1,3 +1,5 @@
+export const bookwormRequirement = 30;
+
 export function isAvailableFor(characterSheet) {
   return false;
 }
@@ -14,7 +16,7 @@ export function increaseBookCount(character) {
 
   console.log("increaseBookCount", count);
   character.setVariable("books", ++count);
-  if (count > 30 && character.statistics.perks.indexOf("bookworm") < 0) {
+  if (count > bookwormRequirement && character.statistics.perks.indexOf("bookworm") < 0) {
     character.statistics.togglePerk("bookworm", true);
     if (character === game.player)
       game.appendToConsole(i18n.t("messages.gained-bookworm"));

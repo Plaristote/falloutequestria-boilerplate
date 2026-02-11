@@ -1,0 +1,18 @@
+{
+    "dialogs": {
+        "stable103/librarian": {
+            "bookCollect/accept": "Sure, I guess I can look for some new books.",
+            "bookCollect/accepted": "Outsanding ! I just can't wait ! I suppose around 30 new books would be enough. Thank you !",
+            "bookCollect/askAboutAuthors": "What do you mean ? We have plenty of authors in this stable, there's a few new books popping up every year.",
+            "bookCollect/brought": "<p><i>He quickly scan through the titles</i></p>\n<p>Oh wow ! Outsanding ! Thank you so much, this is really going to be refreshing ! Thank you so much !</p>",
+            "bookCollect/intro": "Wait a minute. You know, at some point, it gets boring reading the same books again and again. But since you're going to go outside, I was wondering… would you mind keeping an eye out for new books to add to our collection ?",
+            "bookCollect/reject": "I",
+            "bookCollect/sarcasm": "Yeah, sure, I'm going to break my back carrying fictions and cookbooks for the bookworms. Get a life, nerd.",
+            "bookCollect/sarcasmed": "You don't have to be an ass about it…",
+            "bookCollect/stable-authors": "Authors, you think they deserve the title ? Always the same old theme, biting their own tails. I want something fresh and exciting, uncharted universes, provocative ideas ! The amateurs from the stable aren't going to satisfy the thirst of a true bookworm…",
+            "bringBooks": "I have those new books you wanted.",
+            "entry": "Yes ?",
+            "leave": "Goodbye !"
+        }
+    }
+}
