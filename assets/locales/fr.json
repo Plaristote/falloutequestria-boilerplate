@@ -1,4 +1,5 @@
 {
+    "timeOfDay": "{{hour}}h{{minute}}",
     "bubbles": {
         "chase-from-bar": "Éh, sors de mon bar !",
         "chase-from-kitchen": "Sors de ma cuisine !",

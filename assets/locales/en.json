@@ -1,4 +1,5 @@
 {
+    "timeOfDay": "{{hour}}h{{minute}}",
     "bubbles": {
         "chase-from-kitchen": "Get ouf of my kitchen !",
         "fear-reaction-1": "Help ! Guards !",
