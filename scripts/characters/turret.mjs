@@ -1,7 +1,7 @@
 import {CharacterBehaviour} from "./character.mjs";
 import {skillCheck} from "../cmap/helpers/checks.mjs";
 
-export class Turret extends CharacterBehaviour {
+export default class Turret extends CharacterBehaviour {
   constructor(model) {
     super(model);
     this.canPush = false;
@@ -50,6 +50,35 @@ export class Turret extends CharacterBehaviour {
     return false;
   }
 
+  onUseRepair(user) {
+    const friendly = user.statistics.faction == this.model.statistics.faction;
+    const damaged = this.model.statistics.hitPoints < this.model.statistics.maxHitPoints;
+
+    if (!this.model.isAlive() || (friendly && !damaged))
+      return false;
+    skillCheck(user, "repair", {
+      target: 55 + this.model.statistics.level * 18,
+      success: () => {
+        const xpReward = this.model.statistics.level * 12;
+        if (friendly) {
+          this.model.statistics.hitPoints = this.model.statistics.maxHitPoints;
+        } else {
+          this.model.takeDamage(this.model.statistics.hitPoints, user);
+        }
+        user.statistics.addExperience(xpReward);
+      },
+      failure: () => {
+        if (user == game.player)
+          game.appendToConsole(i18n.t("messages.repair-failure", { target: this.model.displayName }));
+      }
+    });
+    return true;
+  }
+
+  onUseMedicine(user) {
+    return false;
+  }
+
   onTurnStart() {
     if (this.isAsleep()) {
       this.popUp(); // Add an animation action and use it here, otherwise it does nothing
@@ -95,8 +124,4 @@ export class Turret extends CharacterBehaviour {
   runAwayFromCombatTarget() {
     return null;
   }
-}
-
-export function create(model) {
-  return new Turret(model);
 }
