@@ -109,6 +109,7 @@
         "read-spellbook": "You read a spellbook and learn {{spell}}.",
         "repair-failure": "You weren't able to fix {{target}}.",
         "repair-success": "You managed to repair {{target}}.",
+        "shop-open-hours": "You see a sign showing the shop's opening hour: \"Open from {{open}} to {{close}}\".",
         "spell-already-known": "You already know that spell.",
         "spellcast-critical-failure": "{{character}} horribly failed to cast a spell.",
         "spellcast-critical-success": "{{character}} masterfully casted {{spell}}.",

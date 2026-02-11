@@ -1,5 +1,6 @@
 import {callGuards, AlarmLevel} from "../characters/components/alarm.mjs";
 import {RoutineComponent} from "./routine.mjs";
+import {overrideBehaviour} from "./override.mjs";
 
 const stealReactions = [
   {content: i18n.t("bubbles.steal-warning-1"), duration: 2500, color: "yellow"},
@@ -70,6 +71,42 @@ export class Shop {
   
   get opened() {
     return this.routineComponent.getCurrentRoutine().callback === "openShopRoutine";
+  }
+
+  onLoaded() {
+    this.shopDoors.forEach(door => {
+      overrideBehaviour(door.script, "canGoThrough", character => {
+        return character == this.shopOwner;
+      });
+      overrideBehaviour(door.script, "onUse", character => {
+        if (character == this.shopOwner) {
+          door.opened = !door.opened;
+          return true;
+        }
+        if (character == game.player && door.locked && !this.opened)
+          this.notifyOpenHours();
+      });
+      overrideBehaviour(door.script, "onLook", character => {
+        if (character == game.player) {
+          this.notifyOpenHours();
+          return true;
+        }
+      });
+    });
+  }
+
+  notifyOpenHours() {
+    let openHour, closeHour;
+
+    for (let i = 0 ; i < this.routineComponent.routine.length ; ++i) {
+      const routine = this.routineComponent.routine[i];
+
+      switch (routine.callback) {
+      case "openShopRoutine":  openHour  = i18n.t("timeOfDay", routine); break ;
+      case "closeShopRoutine": closeHour = i18n.t("timeOfDay", routine); break ;
+      }
+    }
+    game.appendToConsole(i18n.t("messages.shop-open-hours", { open: openHour, close: closeHour } ));
   }
 
   isShopOwnerConscious() {

@@ -1,4 +1,5 @@
 {
+    "timeOfDay": "{{hour}}h{{minute}}",
     "bubbles": {
         "caravaneer-1": "Can't wait until the next stop !",
         "caravaneer-2": "So, you're joining the caravan ?",

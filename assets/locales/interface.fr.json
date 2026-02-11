@@ -158,6 +158,7 @@
         "xp-gain": "Tu as gagne {{xp}} points d'experience.",
         "repair-success": "Tu as réparé {{target}}.",
         "repair-failure": "Tu n'arrive pas à réparer {{target}}.",
+        "shop-open-hours": "Tu vois un écriteau indiquant les heures d'ouverture : « Ouvert de {{open}} à {{close}} ».",
         "training": "Tu as entrainé ta compétence {{skill}} et gagné {{amount}} points dans cette compétence."
     },
     "pipboy": {
