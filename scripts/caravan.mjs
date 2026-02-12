@@ -256,8 +256,10 @@ export default class CaravanProcess {
       xp: this.xpReward,
       goingTo: i18n.t(`locations.${this.goingTo}`)
     }));
-    this.pendingReward += 200; // TODO should vary depending on destination, also should be 0 for the first thornhoof caravan
     this.goingTo = null;
+    if (game.quests.getQuest("thornhoof/caravan")?.script?.caravanInProgress)
+      return ;
+    this.pendingReward += 200; // TODO should vary depending on destination
   }
 
   onHostileEncounter() {
@@ -276,9 +278,9 @@ export default class CaravanProcess {
     if (game.quests.hasQuest("thornhoof/caravan"))
       game.quests.getQuest("thornhoof/caravan").script.onCaravanFailure();
 
-    // TODO implement some consequences for a player abandonning a caravan
     this.goingTo = null;
     this.currentDuration = 0;
+    game.setVariable("abandonnedCaravan", 1);
   }
 
   get xpReward() {
@@ -290,7 +292,7 @@ export default class CaravanProcess {
   }
 
   get withCaravanLeader() {
-    return true;
+    return game.getVariable("withCaravanLeader", 1) == 1;
   }
 
   get escortMembersCount() {

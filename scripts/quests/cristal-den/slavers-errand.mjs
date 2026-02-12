@@ -1,8 +1,8 @@
 import {QuestHelper} from "../helpers.mjs";
 
 const questName = "cristal-den/slavers-errand";
-const potiokDefaultSlavePrice = 50;
-const slaverDefaultSlavePrice = 100;
+export const potiokDefaultSlavePrice = 50;
+export const slaverDefaultSlavePrice = 100;
 
 export class SlaversErrand extends QuestHelper {
   get potiokSlavePrice() {

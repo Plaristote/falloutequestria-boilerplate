@@ -1,0 +1,27 @@
+{
+    "dialogs": {
+        "cristal-den/boxing-manager": {
+            "about-gym": "T'es dans la salle d'entrâinement du Havre Cristalin, et c'est moi le manager. Tout le monde peut venir ici pour s'entraîner. On oragnise aussi des combats tous les soirs. Tu peux parier sur les gagnants. Ou tu peux monter sur le ring.",
+            "ask-about-gym": "C'est quoi, cet endroit ?",
+            "ask-bet": "Je veux parier sur le prochain combat.",
+            "ask-join-fights": "Je veux monter sur le ring.",
+            "avoid-fight": "Je suis pas encore prêt. Je reviendrai plus tard.",
+            "bet-accepted": "Cool ! Le combat commence dans une minute. Reviens me voir si {{selectedFighterName}} gagne, je te filerai tes gains.",
+            "bet-earnings": "T'as gagné ton dernier pari ! Voilà tes gains.  Reviens quand tu veux, je suis sûr que tu peux gagner encore plus !<br><i>Il te donne {{betPotentialGains}} capsules.</i>",
+            "bets": "C'est cool ! Le prochain combat sera entre {{name1}} et {{name2}}. Sur qui tu met tes jetons ?",
+            "boxing-closed": "Si t'es là pour voir les match ou monter sur le ring, reviens plus tard. On se bat tous les soirs, à partir du 22 heures.",
+            "boxing-entry": "Qu'est-ce que ce sera ? Tu veux parier, ou tu veux cogner ?",
+            "entry-exit": "Je m'en vais.",
+            "exit-bets": "J'ai changé d'avis, je veux pas parier.",
+            "fight": "C'est top, {{ringName}} ! Ton premier combat, c'est contre {{currentOpponentName}}. Si tu peux le plier, tu gagnera  {{nextFightWinningPrice}} capsules. Qu'est-ce que tu dis de ça ?",
+            "fight-champion-earnings": "Quel combat ! Félicitation mon pôte, t'es le nouveau champion du Havre Cristalin ! Ta légende de challenger a vraiment touché les foules. T'as motivé les locaux à plus s'entraîner, la salle a plus de membres que jamais ! Tiens, voilà un petit cadeau, tu l'as bien mérité !<br><i>Elle te donne {{fightWinningPrice}} capsules et une bonne grosse tape sur l'épaule.</i>",
+            "fight-earnings": "Beau boulot sur le ring, mon pôte ! La foule te kiffe, tu fais rentrer le pognon ! Voilà ta part !<br><i>Elle te donne {{fightWinningPrice}} capsules.</i>",
+            "introduction": "Yo ! Bienvenu dans la salle d'entraînement ! Qu'est-ce que je peux faire pour toi ?",
+            "introduction-for-strong": "Sainte Celestia sur un tricycle ! Je vois pas ça tous les jours ! Avec une carrure comme la tienne, tu dois être venu ici pour gagner de l'argent, pas vrai ? On peut commencer tout de suite ! Je vais faire de toi une star !",
+            "no-more-challengers": "On a plus d'autres compétiteurs pour toi, champion ! Tu les as tous battus !",
+            "pick-ring-name": "Yes ! Si tu veux monter sur le ring, il va te falloir un nom de scène ! Qu'est-ce que tu veux entendre la foule hurler quand pour t'encourager ?",
+            "set-bet-amount": "Un excellent choix, pour sûr ! Combien tu veux miser ?",
+            "start-ight": "Je suis prêt à monter sur le ring."
+        }
+    }
+}

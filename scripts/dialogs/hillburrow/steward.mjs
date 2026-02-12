@@ -1,4 +1,4 @@
-import {DialogHelper} from "../helpers.mjs";
+import DialogHelper from "../merchant.mjs";
 import {drunkenQuestDoctorBagNeeded} from "../../quests/hillburrow/saveDrunkenMaster.mjs";
 import {skillContest} from "../../cmap/helpers/checks.mjs";
 

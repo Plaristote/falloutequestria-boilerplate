@@ -85,7 +85,8 @@ export class Gym {
   }
 
   get combatWinner() {
-    return level.findObject(this.model.getVariable("winner"));
+    const path = this.model.getVariable("winner");
+    return path === ".player" ? game.player : level.findObject(path);
   }
 
   get playerWinCount() {
@@ -197,8 +198,13 @@ export class Gym {
   }
 
   onPlayerWinsCombat() {
+    let xpGain;
+
     this.combatWinner = game.player;
     this.onPlayerCombatEnds();
+    xpGain = 100 + (this.playerWinCount - 1) * 60;
+    game.player.statistics.addExperience(xpGain);
+    game.appendToConsole(i18n.t("messages.xp-gain", { xp: xpGain }));
   }
 
   onPlayerLosesCombat() {

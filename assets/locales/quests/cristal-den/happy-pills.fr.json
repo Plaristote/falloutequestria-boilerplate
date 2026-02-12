@@ -3,7 +3,14 @@
     "cristal-den/happy-pills": {
       "title": "Sans Mint-Al, la fête est triviale",
       "description": "<p>Blue Flask prépare des composants chimiques au Flacon Fuchsia, un établissement situé dans le Quartier Rouge du Havre Cristallin.</p><p>Elle éprouve des difficultés dans la conception de sa nouvelle recette de Mint-Als améliorés. Elle aimerait que tu lui apporte un échantillon des mythiques <i>Party-Time Mint-Als</i>, afin de pouvoir analyser leur composition. Les Party-Time Mint-Als existent-ils seulement, où ne sont-ils que le fantasme d'une bande de drogués ?",
-      "fetch-sample": "Trouver un échantillon de Party-Time Mint-Als"
+      "desc-brought-sample": "Tu as amené l'échantillon à Blue Flask, et elle a pu commencer à travailler sur le produit.",
+      "desc-help-cook": "Mettant à profit tes compétences de chimiste, tu as accéléré le processus en offrant ton aide.",
+      "desc-test": "Blue Flask a terminé sa préparation. Il ne reste plus qu'à tester ses effets sur un poney.",
+      "desc-test2": "Le test s'est bien passé, et la drogue peut maintenant être commercialisée.",
+      "desc-guinea-pig": "Tu as généreusement offert ton corps pour la science, et testé le produit toi-même. Quel pieds !",
+      "fetch-sample": "Trouver un échantillon de Party-Time Mint-Als",
+      "bring-sample": "Donner l'échantillon à Blue Flask",
+      "test-batch": "Le nouveau produit doit être testé"
     }
   }
 }

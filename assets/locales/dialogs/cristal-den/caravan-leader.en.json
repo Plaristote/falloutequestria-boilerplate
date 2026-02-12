@@ -12,6 +12,8 @@
             "entry": "Hey. You here to join the caravan ?",
             "entry-exit": "No, I'm not. Bye.",
             "join-caravan": "Great ! We'll take off anytime now. We're going to {{nextCaravanDestination}}. You're interested ?",
+            "ranaway": "<p>So you're here after all ? We thought you were dead, but apparently you just ran away in the middle of the heat ! Caravaners died because of your cowardice ! Forget about getting paid !</p>",
+            "ranawayReward": "Wasn't sure I'd see you alive again. You ran away on us, put all our lives in danger. You still did part of the way with us, so I'll pay you for that. But you're not getting any caps for the way back.\n<br><br>\n<i>She hands you {{pendingReward}} caps.</i>",
             "reward": "Hey ! I'm glad you made it out alive ! Here's your reward ! Come back whenever you're ready for some more action !\n<br><br>\n<i>She hands you {{pendingReward}} caps.</i>",
             "talk-about-thornhoof-caravan": "I'm here to bring a caravan to Thornhoof. They need help.",
             "thornhoof-1-plea-for-help": "An entire town needs our help. It's worth taking our chances.",

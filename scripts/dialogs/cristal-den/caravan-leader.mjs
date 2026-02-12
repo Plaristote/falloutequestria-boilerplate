@@ -11,7 +11,7 @@ class Dialog extends ThornhoofCaravanComponent {
       return "thornhoof-caravan/waiting-to-go";
     else if (this.canJoinCaravanOnTheWayBack())
       return "way-back";
-    else if (this.pendingReward)
+    else if (this.pendingReward > 0 || game.hasVariable("abandonnedCaravan"))
       return "reward";
     return "entry";
   }
@@ -37,12 +37,28 @@ class Dialog extends ThornhoofCaravanComponent {
   }
 
   get pendingReward() {
-    return game.script.caravan.pendingReward > 0;
+    return game.script.caravan.pendingReward;
+  }
+
+  set pendingReward(value) {
+    game.script.caravan.pendingReward = value;
   }
 
   giveReward() {
-    game.player.inventory.addItemOfType("bottlecaps", game.script.caravan.pendingReward);
-    game.script.caravan.pendingReward = 0;
+    const abandonnedCaravan = game.hasVariable("abandonnedCaravan");
+    let rewarded = this.pendingReward;
+
+    this.pendingReward = 0;
+    if (rewarded > 0)
+      game.player.inventory.addItemOfType("bottlecaps", rewarded);
+    game.unsetVariable("abandonnedCaravan");
+    if (abandonnedCaravan) {
+      if (rewarded > 0)
+        return { text: this.dialog.tr("ranawayReward", { pendingReward: rewarded }), mood: "dubious" };
+      else
+        return { text: this.dialog.tr("ranaway"), mood: "angry" };
+    }
+    return this.dialog.tr("reward", { pendingReward: rewarded });
   }
 }
 

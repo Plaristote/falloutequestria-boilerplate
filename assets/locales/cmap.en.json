@@ -156,16 +156,6 @@
         "very-good": "Very good",
         "armorBidAilments": "Energetic Disorder Stage 2"
     },
-    "factions": {
-        "hillburrow": {
-            "description": "factions.hillburrow.description",
-            "name": "factions.hillburrow.name"
-        },
-        "junkville": {
-            "description": "factions.junkville.description",
-            "name": "factions.junkville.name"
-        }
-    },
     "genders": {
         "female": "Female",
         "male": "Male"

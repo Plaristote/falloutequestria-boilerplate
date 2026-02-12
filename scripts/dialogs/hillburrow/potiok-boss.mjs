@@ -1,6 +1,7 @@
 import * as Checks from "../../cmap/helpers/checks.mjs";
 import {QuestFlags} from "../../quests/helpers.mjs";
 import {saboteurShouldDisappear} from "../../quests/hillburrow/sabotage.mjs";
+import {potiokDefaultSlavePrice} from "../../quests/cristal-den/slavers-errand.mjs";
 
 class Dialog {
   constructor(dialog) {
@@ -109,7 +110,7 @@ class Dialog {
   }
 
   get slaversErrandSlaveCost() {
-    return this.slaversErrand.script.potiokSlavePrice;
+    return this.slaversErrand?.script?.potiokSlavePrice || potiokDefaultSlavePrice;
   }
 
   set slaversErrandSlaveCost(value) {

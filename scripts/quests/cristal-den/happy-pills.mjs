@@ -25,8 +25,19 @@ export default class extends QuestHelper {
 
   getDescription() {
     let text = this.tr("description");
-    if (this.model.isObjectiveCompleted("bringSample"))
-      text += `<p>${this.tr("desc-brought-sample")}</p>`;
+    if (this.model.isObjectiveCompleted("bringSample")) {
+      text += `<p>${this.tr("desc-brought-sample")}`;
+      if (this.model.hasObjective("helpCook"))
+        text += ` ${this.tr("desc-help-cook")}`;
+      text += "</p>";
+    }
+    if (this.model.hasObjective("testBatch")) {
+      text += `<p>${this.tr("desc-test")}`;
+      if (this.model.hasVariable("playerTested"))
+        text += ` ${this.tr("desc-guinea-pig")}`;
+      if (this.model.isObjectiveCompleted("testBatch"))
+        text += ` ${this.tr("desc-test2")}</p>`;
+    }
     return text;
   }
 
@@ -71,6 +82,7 @@ export default class extends QuestHelper {
   }
 
   startTestingOnPlayer() {
+    this.model.setVariable("playerTested", 1);
     this.model.setVariable("batchIteration", 2);
     this.model.addObjective("testBatch", this.tr("test-batch"));
     game.asyncAdvanceTime(24 * 60, () => {

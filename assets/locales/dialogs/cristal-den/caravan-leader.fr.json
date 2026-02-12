@@ -7,6 +7,8 @@
             "caravan-start": "Allons-y allonso !",
             "entry": "Hey ! T'es là pour rejoindre la caravane ?",
             "join-caravan": "Génial ! Nous allons bientôt décoller, en direction de {{nextCaravanDestination}}. Ca t'intéresse ?",
+            "ranaway": "<p>Ah ! Te voilà ! On te croyais mort, mais il faut croire que tu nous as laissé tomber dans le feu de l'action ! Des caravaniers sont morts à cause de ta lâcheté ! Tu peux oublier ton salaire, mon pote !</p>",
+            "ranawayReward": "<p>Je savais pas si je te reverrai en vie. T'as pris la poudre d'escampette, tu nous as tous mis en danger. Écoute, t'as complété la première partie du trajet avec nous, donc je vais te payer pour ça. Pour le retour, laisse tomber.</p>\n<p><i>Elle te donne {{pendingReward}} capsules.</i></p>",
             "reward": "Hey ! Je suis content que tu t'en sois sortie ! Voià ta récompense ! Reviens quand tu sera prêt pour plus d'action !\n<br><br>\n<i>Elle te donne {{pendingReward}} capsules.</i>",
             "talk-about-thornhoof-caravan": "Je viens pour ramener un caravane à Thornhoof. Ils ont besion d'aide.",
             "thornhoof-1-plea-for-help": "Une ville entière a besoin de notre aide, ça vaut le coup d'essayer.",

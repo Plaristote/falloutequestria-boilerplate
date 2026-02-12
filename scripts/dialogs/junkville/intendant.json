@@ -12,6 +12,7 @@
             "text": "ask-about-scavengers"
         },
         "ask-celestial-device": {
+            "availableHook": "isLookingForCelestialDevice",
             "state": "about-celestial-device",
             "text": "ask-celestial-device"
         },

@@ -117,10 +117,21 @@
             ],
             "text": "join-caravan"
         },
+        "ranaway": {
+            "answers": [
+            ],
+            "text": "ranaway"
+        },
+        "ranawayReward": {
+            "answers": [
+            ],
+            "text": "ranawayReward"
+        },
         "reward": {
             "answers": [
             ],
             "hook": "giveReward",
+            "mood": "smile",
             "text": "reward"
         },
         "thornhoof-caravan/accept-approved": {

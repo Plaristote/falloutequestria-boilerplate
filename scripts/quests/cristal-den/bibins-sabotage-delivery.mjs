@@ -43,7 +43,7 @@ export class BibinsSabotageDelivery extends QuestHelper {
   }
 
   onSuccess() {
-    game.dataEngine.addReputaiton("bibins-band", 75);
+    game.dataEngine.addReputation("bibins-band", 75);
     super.onSuccess();
   }
 }

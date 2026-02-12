@@ -37,6 +37,11 @@ class Dialog extends DialogHelper {
     level.setVariable("intendantToldAboutLeader", true);
   }
 
+  isLookingForCelestialDevice() {
+    const quest = game.quests.getQuest("celestialDevice");
+    return quest && !quest.isObjectiveCompleted("find-blueprints");
+  }
+
   // BEGIN SCAVENGERS
   get scavengerQuest() { return game.quests.getQuest("junkvilleDumpsDisappeared"); }
 

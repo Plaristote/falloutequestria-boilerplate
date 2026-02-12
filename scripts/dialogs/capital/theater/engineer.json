@@ -67,7 +67,7 @@
             "text": "crystal-prompt-not-yet"
         },
         "crystal-prompt-success": {
-            "availableHook": "hasElectroMagicSpinel",
+            "availableHook": "hasElectromagicSpinel",
             "state": "crystal/found-crystal",
             "text": "crystal-prompt-success"
         },
@@ -290,6 +290,7 @@
         },
         "intro/crystal-whereabouts": {
             "answers": [
+                "help-already-has-cristal",
                 "accept-find-crystal",
                 "ask-crystal-whereabout-more",
                 "exit-about-generator"
