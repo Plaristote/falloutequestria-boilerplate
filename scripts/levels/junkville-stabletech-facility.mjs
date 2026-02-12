@@ -47,6 +47,10 @@ export class JunkvilleStabletechFacility extends LevelBase {
     });
   }
 
+  get powerEnabled() {
+    return this.commandTerminal.script.enabled;
+  }
+
   get commandTerminal() {
     return level.findObject("control-room.terminal");
   }

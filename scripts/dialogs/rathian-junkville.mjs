@@ -8,6 +8,8 @@ class Dialog {
   }
 
   getEntryPoint() {
+    if (game.hasVariable("playerLeftRathianInDumps"))
+      return "left-in-dumps";
     if (!this.dialog.npc.hasVariable("met")) {
       this.dialog.npc.setVariable("met-junkville", true);
       this.dialog.npc.setVariable("met", true);

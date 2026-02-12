@@ -34,11 +34,11 @@ class Dialog {
   }
 
   canReportBlueprints() {
-    return !this.mainQuest.completed && !this.dialog.npc.hasVariable("reportedBlueprints") && game.player.inventory.count("celestial-device-blueprints") > 0;
+    return !this.mainQuest.completed && !this.mainQuest.hasVariable("reportedBlueprints") && game.player.inventory.count("celestial-device-blueprints") > 0;
   }
 
   canReportFoundARM() {
-    return !this.mainQuest.completed && this.dialog.npc.hasVariable("reportedBlueprints") && !this.dialog.npc.hasVariable("reportedARM") && game.player.inventory.count("celestial-device-mra");
+    return !this.mainQuest.completed && this.mainQuest.hasVariable("reportedBlueprints") && !this.dialog.npc.hasVariable("reportedARM") && game.player.inventory.count("celestial-device-mra");
   }
 
   canReportCelestialDevice() {
@@ -50,7 +50,7 @@ class Dialog {
   }
 
   reportBlueprints() {
-    this.dialog.npc.setVariable("reportedBlueprints", 1);
+    this.mainQuest.setVariable("reportedBlueprints", 1);
   }
 
   reportBlueprintsEngineer() {

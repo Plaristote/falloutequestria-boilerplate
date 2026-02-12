@@ -1,5 +1,5 @@
 {
-  "dialogs": {
+    "dialogs": {
         "junkville/stabletech-terminal": {
             "ask-security-report": "Security report.",
             "ask-unlock-storage": "Open storage room.",
@@ -17,10 +17,12 @@
             "security-disable": "Disable security measures.",
             "security-enable": "Enable security measures.",
             "security-off": "Security measures currently disabled.",
-            "security-on": "Security meastures are enabled. Unknown personel will be disposed of by the sentinels.<br>Sentinels currently operating: {{sentinelCount}}.",
+            "security-on": "Security meastures are enabled. Unknown personel will be disposed of by the sentinels.<br>Sentinels currently operating: {{sentinelCount}}.<br>\nGround defense: turret {{turretStatus}}.",
             "terminal-locked": "<i>[You're pretty sure you found a breach you may be able to exploit. Just when you think you've got it, the screen turns black and two lines of text appears:]</i><br>Intrusion attmpt detected.<br/> This terminal is locked. Please ask an admin user to unlock it.",
             "terminal-locked-curse": "Shit !",
-            "terminal-unlocked": "<i>[You find a security breach in the terminal input interface and manage to elevate the terminal privileges. That means you just hacked a terminal. Congrats !]</i>"
+            "terminal-unlocked": "<i>[You find a security breach in the terminal input interface and manage to elevate the terminal privileges. That means you just hacked a terminal. Congrats !]</i>",
+            "turret-status-on": "active",
+            "turret-status-off": "lost signal"
         }
-  }
+    }
 }

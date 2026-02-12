@@ -13,13 +13,13 @@
             "ask-something-else": "I wanted to ask about something else.",
             "ask-steel-ranger": "You said you were a Steel Ranger. What's that about ?",
             "cannot-afford-craft": "I can't afford that right now.",
+            "celestial-device-ask-where-arm": "Where would I find an Atmospheric Regulatory Module ?",
             "celestial-device-do-later": "I'm not interested right now. Let's talk about something else.",
+            "celestial-device-give-arm": "I already got one. Here you go.",
             "celestial-device-go": "Alright, let's go.",
             "celestial-device-who-help": "So how about you help me get in there ?",
             "celestial-device-why-done": "And I suppose I'll be rushing past the defenses while you'll be safe behind your terminal ?",
             "celestial-device-why-help": "Why would I need help to get in ?",
-            "celestial-device-ask-where-arm": "Where would I find an Atmospheric Regulatory Module ?",
-            "celestial-device-give-arm": "I already got one. Here you go.",
             "celestial-device/arm-whereabouts": "It's not such a common part. It was used in some Stables, but you probably know that already. It would also have had its use in scientific research centers and laboratories. Scavenge deep and far enough, and you might come around your Atmospheric Regulatory Module.",
             "celestial-device/craft": "Yeah, I could build that for you. If you bring me the right parts. These blueprints require a Atmospheric Regulatory Module. Bring me one, and I'll make the magic happen.",
             "celestial-device/crafted": "<i>You spent nearly two days working on that thing. Rathian sets it up, presses a few buttons: some lights flicker. Rathian has a very satisfied look on his face when he turns to you:</i>\n<br><br>\nIt's working. Congratulations, you are the proud owner of a brand new Celestial Device.",
@@ -33,7 +33,8 @@
             "entry-alt": "Hi ! I'm so glad you came after all ! Welcome to my workshop, where all sorts of magic happen ! If you have any technical issues, something that needs fixing, just come to me ! So, can I help you with something ?",
             "entry-first-meeting": "Hi ! I recognize you ! You're that one pony that I rescued from those bandits in the middle of nowhere ! I'm glad to see you've made it this far ! I was worrried, with you running away on your own ! My name's Rathian, I'm a Steel Ranger scribe. That means I'm pretty good at fixing stuff and engineering new devices. So, is there anything I can do for you ?",
             "entry-more": "Sure. What else can I do for you ?",
-            "exit-without-craft": "I changed my mind."
+            "exit-without-craft": "I changed my mind.",
+            "left-in-dumps": "Didn't think you'd have the nerve to show up again. You used me to get into the facility, and you left me hanging up there. I made my own way in after all, but I'm not going to lie, I'm a bit pissed at you, and I'm not in the mood to talk with you. Get lost."
         }
     }
 }

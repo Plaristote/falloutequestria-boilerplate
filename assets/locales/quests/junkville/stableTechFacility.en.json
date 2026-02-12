@@ -21,7 +21,9 @@
     "rathian-player-fixed-generator": "Wait, did you do this ? That wasn't half bad, good job !",
     "rathian-stock-room-intro": "Here we are ! This is the storage room !",
     "rathian-stock-room-locked": "It won't budge. This is where all the loot is located. We'll have to make our way through.",
-    "rathian-stock-room-reached": "Oh yes ! This is it ! Come on buddy, let's take a peek at all these potential treasures !"
+    "rathian-stock-room-reached": "Oh yes ! This is it ! Come on buddy, let's take a peek at all these potential treasures !",
+    "rathian-suggest-enable-power": "Main power's down. We should probably find the generator and turn it back on.",
+    "rathian-suggest-storage": "We should look for the main storage room."
   }
 }
 

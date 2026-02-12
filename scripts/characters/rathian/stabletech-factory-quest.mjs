@@ -38,9 +38,22 @@ class Rathian extends CharacterBehaviour {
   get dialog() {
     const quest = requireQuest("junkvilleStabletechFacility");
 
-    if (quest && quest.isObjectiveCompleted("find-blueprints"))
+    if (quest && quest.isObjectiveCompleted("find-blueprints") && level.name == "junkville-stabletech-facility")
       return "rathian-facility-end";
     return null;
+  }
+
+  get textBubbles() {
+    switch (this.state) {
+    case States.WaitInSurfaceBackroom:
+      return [{ content: i18n.t("junkville-stabletech.rathian-first-computer"), duration: 6565 }];
+    case States.FollowingPlayerInFacilty:
+      if (level.script.powerEnabled)
+        return [{ content: i18n.t("junkville-stabletech.rathian-suggest-enable-power"), duration: 5000 }];
+      else
+        return [{ content: i18n.t("junkville-stabletech.rathian-suggest-storage"), duration: 5000 }];
+    }
+    return [];
   }
 
   get shouldBeAtJunkville() {

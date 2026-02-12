@@ -21,6 +21,8 @@
     "rathian-player-fixed-generator": "Attends, t'as fait ça ? C'était pas trop mal, bon boulot !",
     "rathian-stock-room-intro": "Nous y voilà ! La salle de stockage !",
     "rathian-stock-room-locked": "Ça veut pas bouger. C'est là que tous les trésors sont cachés. Il va falloir trouver un moyen de passer.",
-    "rathian-stock-room-reached": "Oh oui ! Ça y est ! Viens mon pôte, allons jeter un oeil dans cette caverne d'Alibaba !"
+    "rathian-stock-room-reached": "Oh oui ! Ça y est ! Viens mon pôte, allons jeter un oeil dans cette caverne d'Alibaba !",
+    "rathian-suggest-enable-power": "L'alimentation principale est éteinte. Nous devrions peut-être chercher le générateur et le rallumer.",
+    "rathian-suggest-storage": "Cherchons l'entrepôt. C'est là qu'on trouvera tous les bibelots."
   }
 }

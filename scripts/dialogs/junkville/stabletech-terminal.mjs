@@ -1,4 +1,5 @@
 import {skillCheck} from "../../cmap/helpers/checks.mjs";
+import {status as groundTurretStatus} from "../../characters/junkville/stabletech-turret.mjs";
 
 function doorToggle(name, state) {
   const door = level.findObject(name);
@@ -54,7 +55,8 @@ class Dialog {
     const enabled = this.isSecurityEnabled();
 
     return this.dialog.t("security-" + (enabled ? "on" : "off"), {
-      sentinelCount: level.getScriptObject().guards.length
+      sentinelCount: level.script.guards.length,
+      turretStatus: this.dialog.t(`turret-status-${groundTurretStatus()}`)
     });
   }
   

@@ -14,11 +14,11 @@
             "cannot-afford-craft": "Je peux pas dépenser cet argent maintenant.",
             "celestial-device-ask-where-arm": "Où est-ce que je pourrais trouver un Module de Régulation Atmosphérique ?",
             "celestial-device-do-later": "Ça ne m'intéresse pas pour le moment. Parlons d'autre chose.",
+            "celestial-device-give-arm": "J'en ai déjà un. Le voilà.",
             "celestial-device-go": "Très bien, allons-y.",
             "celestial-device-who-help": "Et si tu m'aidais à entrer ?",
             "celestial-device-why-done": "Et je suppose que je vais me précipiter à travers les défenses pendant que tu seras en sécurité derrière ton terminal ?",
             "celestial-device-why-help": "Pourquoi aurais-je besoin d'aide pour entrer ?",
-            "celestial-device-give-arm": "J'en ai déjà un. Le voilà.",
             "celestial-device/arm-whereabouts": "C'est pas une pièce très commune. Elle était utilisée ans des Étables, mais je suppose que tu es déjà au courant. Elle était également utile pour les centre de recherches scientifiques ou des laboratoires. Fouine assez loin et assez longtemps, et tu finira peut-être par trouver ton Module de Régulation Atmosphérique.",
             "celestial-device/craft": "Ouais, je pourrais te fabriquer ça. Si tu me fourni les pièces manquantes. Ce plan mentionne un Module de Régulation Atmosphérique. Apporte m'en un, et je construis ton Appareil Célèste.",
             "celestial-device/crafted": "<i>Vous passez pratiquement deux jours à bricoler. Rathian manipule l'objet, presse quelques boutons, des lumières s'allument. Lorsque Rathian se retourne vers toi, il arbore un sourire pleinement satisfait :</i>\n<br><br>\nCa fonctionne. Félicitation, mon cher : tu es désormais le propriétaire d'un Appareil Célèste flambant neuf !",
@@ -32,7 +32,8 @@
             "entry-alt": "Salut ! Je suis si content que tu sois venu après tout ! Bienvenue dans mon atelier, où toutes sortes de magie opèrent ! Si tu as un problème technique, un problème à résoudre, viens me voir ! Alors, puis-je t'aider ?",
             "entry-first-meeting": "Salut ! Je te reconnais ! Tu es ce poney que j'ai sauvé de ces bandits au milieu de nulle part ! Je suis content de voir que tu es arrivé jusqu'ici ! J'étais inquiet de te voir partir seul ! Je m'appelle Rathian, je suis scribe Steel Ranger. Ca veut dire que je suis plutôt doué pour réparer des trucs et concevoir de nouveaux appareils. Alors, est-ce que je peux faire quelque chose pour toi ?",
             "entry-more": "Bien sûr. Que puis-je faire d'autre pour toi ?",
-            "exit-without-craft": "Finalement, j'ai changé d'avis."
+            "exit-without-craft": "Finalement, j'ai changé d'avis.",
+            "left-in-dumps": "T'as un sacré culot de ramener ta fraise chez moi. Tu m'as utilisé pour entrer dans l'entrepot, et tu m'as laissé là-haut comme un con. J'ai fini par rentrer par moi-même, mais je vais pas te mentir, je l'ai un peu mauvaise, et je suis pas d'humeur à papoter avec toi. Allez, fous le camp de chez moi."
         }
     }
 }

@@ -26,7 +26,7 @@ export default class Dialog {
 
   get canGiveThornhoofDevice() {
     const quest = game.quests.getQuest("steel-rangers/hoarfrostQuest");
-    return quest.isObjectiveCompleted("report") && game.player.inventory.count("thornhoof-laboratory-device") > 0;
+    return quest && quest.isObjectiveCompleted("report") && game.player.inventory.count("thornhoof-laboratory-device") > 0;
   }
 
   get thornhoofDeviceCapsReward() {
@@ -45,7 +45,13 @@ export default class Dialog {
     game.quests.getQuest("steel-rangers/hoarfrostQuest").setVariable("askedReward", 1);
   }
 
+  giveThornhoofDeviceReward() {
+    game.dataEngine.addReputation("steel-rangers", -20);
+    game.player.inventory.addItemOfType("bottlecaps", this.thornhoofDeviceCapsReward);
+  }
+
   waitForThornhoofDeviceForward() {
+    game.dataEngine.addReputation("steel-rangers", 30);
     game.player.inventory.removeItemOfType("thornhoof-laboratory-device");
     game.asyncAdvanceTime(5, function() {
       game.quests.getQuest("steel-rangers/hoarfrostQuest").completeObjective("delivery");

@@ -1,5 +1,5 @@
 {
-  "dialogs": {
+    "dialogs": {
         "junkville/stabletech-terminal": {
             "ask-security-report": "Rapport de sécurité.",
             "ask-unlock-storage": "Ouvrir l'entrepôt.",
@@ -17,10 +17,12 @@
             "security-disable": "Désactiver les mesures de sécurité.",
             "security-enable": "Activer les mesures de sécurité.",
             "security-off": "Mesures de sécurité désactivées.",
-            "security-on": "Mesures de sécurité activées. Les individus étrangers seront éliminés par les sentinelles.<br>Sentinelles en fonction : {{sentinelCount}}.",
+            "security-on": "Mesures de sécurité activées. Les individus étrangers seront éliminés par les sentinelles.<br>Sentinelles en fonction : {{sentinelCount}}.<br>\nDéfense de surface : tourelle {{turretStatus}}.",
             "terminal-locked": "<i>[Tu es as peu près sûr d'avoir trouvé une faille dans le système. Juste quand tu pense y être arrivé, l'écran se vide et deux lignes de texte apparaissent:]</i><br>Tentative d'instrusion détectée.<br/> Verouillage du terminal. Veuillez demander à un administrateur de le déverouiller.",
             "terminal-locked-curse": "Merde !",
-            "terminal-unlocked": "<i>[Tu trouve une faille de sécurité dans le terminal et parvient à élever tes privilèges au rang d'administrateur. Ça veut dire que tu viens de pirater le terminal. Félicitations !]</i>"
+            "terminal-unlocked": "<i>[Tu trouve une faille de sécurité dans le terminal et parvient à élever tes privilèges au rang d'administrateur. Ça veut dire que tu viens de pirater le terminal. Félicitations !]</i>",
+            "turret-status-on": "actif",
+            "turret-status-off": "pas de signal"
         }
-  }
+    }
 }

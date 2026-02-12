@@ -216,6 +216,7 @@
         "thornhoof-device/reward": {
             "answers": [
             ],
+            "hook": "giveThornhoofDeviceReward",
             "mood": "cocky",
             "text": "thornhoof-device/reward"
         },

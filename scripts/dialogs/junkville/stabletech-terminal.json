@@ -1,7 +1,6 @@
 {
     "answers": {
         "ask-security-report": {
-            "hook": "",
             "state": "security-report",
             "text": "ask-security-report"
         },
@@ -10,19 +9,14 @@
             "text": "ask-unlock-storage"
         },
         "back": {
-            "hook": "",
             "state": "entry",
-            "text": "back",
-            "textHook": ""
+            "text": "back"
         },
         "disconnect": {
-            "hook": "",
-            "state": "",
             "text": "disconnect"
         },
         "hack-terminal": {
             "hook": "hackTerminal",
-            "state": "",
             "text": "hack-terminal"
         },
         "terminal-locked-curse": {
@@ -30,7 +24,6 @@
         },
         "toggle-security": {
             "hook": "toggleSecurity",
-            "state": "",
             "text": "security-disable",
             "textHook": "securityToggleText"
         }

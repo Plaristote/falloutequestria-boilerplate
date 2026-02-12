@@ -163,6 +163,12 @@
                 "ask-nothing"
             ],
             "text": "entry-first-meeting"
+        },
+        "left-in-dumps": {
+            "answers": [
+            ],
+            "mood": "angry",
+            "text": "left-in-dumps"
         }
     }
 }

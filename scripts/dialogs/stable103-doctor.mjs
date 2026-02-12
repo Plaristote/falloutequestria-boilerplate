@@ -17,9 +17,7 @@ class Dialog {
       return "mainQuestThanks";
     }
     if (!this.dialog.npc.hasVariable("met")) {
-      const elapsedTime = game.timeManager.getTimestamp() - game.getVariable("startedAt");
       this.dialog.npc.setVariable("met", true);
-      this.introduction = elapsedTime < 20 * 24 * 60 * 60;
       return "mainQuest";
     }
     return "entryPoint";
@@ -50,7 +48,7 @@ class Dialog {
   }
 
   mainQuestQuestion() {
-    if (this.introduction)
+    if (!this.celestialDeviceQuest.hasVariable("reportedBlueprints"))
       return this.dialog.t("introduction");
   }
 
