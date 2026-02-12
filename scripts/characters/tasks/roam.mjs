@@ -91,6 +91,12 @@ function roamTask() {
 
 
 export function injectRoamTask(object) {
+  const onDiedBackup = object.onDied;
+
   object.prepareRoamTask =  prepareRoamTask.bind(object);
   object._roamTask = roamTask.bind(object);
+  object.onDied = function() {
+    onDiedBackup.bind(object)();
+    object.roamTask.terminate();
+  };
 }
