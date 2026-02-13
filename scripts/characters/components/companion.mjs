@@ -18,7 +18,7 @@ export class CompanionCharacter extends CharacterBehaviour {
     game.playerParty.removeCharacter(this.model);
     this.model.attacksOnSight = true;
     this.model.statistics.faction = this.fallbackFaction || "";
-    this.tasks.removeTask("playerStalking");
+    this.model.tasks.removeTask("playerStalking");
   }
 
   onDied() {
