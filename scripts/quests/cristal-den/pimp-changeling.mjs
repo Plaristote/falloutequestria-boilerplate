@@ -80,6 +80,17 @@ export default class PimpChangeling extends QuestHelper {
     return timestamp && game.timeManager.getTimestamp() - timestamp > 60*60*24;
   }
 
+  get petioleCleanedUp() {
+    return this.model.hasVariable("cleanedUp");
+  }
+
+  set petioleCleanedUp(value) {
+    if (value)
+      this.model.setVariable("cleanedUp", 1);
+    else
+      this.model.unsetVariable("cleanedUp");
+  }
+
   onTalkedToPetiole() {
     this.model.addObjective("killPimp", this.model.tr("kill-pimp"));
   }

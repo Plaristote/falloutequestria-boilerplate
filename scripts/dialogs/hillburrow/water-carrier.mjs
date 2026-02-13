@@ -106,7 +106,8 @@ class Dialog {
   }
 
   onDeliveryLearnedSuitcaseContents() {
-    this.dynamiteHasBeenFound();
+    const quest = requireQuest("hillburrow/sabotage", QuestFlags.HiddenQuest);
+    quest.completeObjective("confession");
     this.onLearnAboutBibinInvolvment();
   }
 

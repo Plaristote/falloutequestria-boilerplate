@@ -69,21 +69,17 @@
                 "ask-join-fights",
                 "entry-exit"
             ],
-            "hook": "",
-            "mood": "",
             "text": "about-gym"
         },
         "bet-accepted": {
             "answers": [
             ],
-            "mood": "",
             "text": "bet-accepted"
         },
         "bet-earnings": {
             "answers": [
             ],
             "hook": "betEarnings",
-            "mood": "",
             "text": "bet-earnings"
         },
         "bets": {
@@ -91,7 +87,6 @@
                 "exit-bets"
             ],
             "hook": "bets",
-            "mood": "",
             "text": "bets"
         },
         "boxing-closed": {
@@ -99,8 +94,6 @@
                 "ask-about-gym",
                 "entry-exit"
             ],
-            "hook": "",
-            "mood": "",
             "text": "boxing-closed"
         },
         "boxing-entry": {
@@ -109,8 +102,6 @@
                 "ask-join-fights",
                 "entry-exit"
             ],
-            "hook": "",
-            "mood": "",
             "text": "boxing-entry"
         },
         "fight": {
@@ -119,21 +110,18 @@
                 "avoid-fight"
             ],
             "hook": "fight",
-            "mood": "",
             "text": "fight"
         },
         "fight-champion-earnings": {
             "answers": [
             ],
             "hook": "fightEarnings",
-            "mood": "",
             "text": "fight-champion-earnings"
         },
         "fight-earnings": {
             "answers": [
             ],
             "hook": "fightEarnings",
-            "mood": "",
             "text": "fight-earnings"
         },
         "introduction": {
@@ -141,8 +129,6 @@
                 "ask-about-gym",
                 "entry-exit"
             ],
-            "hook": "",
-            "mood": "",
             "text": "introduction"
         },
         "introduction-for-strong": {
@@ -150,8 +136,6 @@
                 "ask-about-gym",
                 "entry-exit"
             ],
-            "hook": "",
-            "mood": "",
             "text": "introduction-for-strong"
         },
         "no-more-challengers": {
@@ -159,15 +143,13 @@
                 "ask-bet",
                 "entry-exit"
             ],
-            "hook": "",
-            "mood": "",
             "text": "no-more-challengers"
         },
         "pick-ring-name": {
             "answers": [
             ],
             "hook": "pickRingName",
-            "mood": "",
+            "mood": "smile",
             "text": "pick-ring-name"
         },
         "set-bet-amount": {
@@ -175,7 +157,6 @@
                 "exit-bets"
             ],
             "hook": "setBetAmount",
-            "mood": "",
             "text": "set-bet-amount"
         }
     }

@@ -165,10 +165,13 @@ class Dialog {
   }
 
   sabotageKilledWaterCarrier() {
-    return true;
+    return (this.sabotageWaterCarrierDied() || this.sabogtageQuest.foughtWaterCarrier;
+  }
+
+  sabotageWaterCarrierDied() {
     const waterCarrier = game.getCharacter("hillburrow/water-carrier");
 
-    return (!waterCarrier || !waterCarrier.isAlive()) || this.sabogtageQuest.foughtWaterCarrier;
+    return (!waterCarrier || !waterCarrier.isAlive());
   }
 
   sabotageCanConvinceOfWaterCarierCuplability() {

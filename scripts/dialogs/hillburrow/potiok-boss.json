@@ -28,6 +28,11 @@
             "state": "slavers-errand/refund",
             "text": "ask-slaves-errand-refund"
         },
+        "cant-prosecute-dead-watercarrier": {
+            "availableHook": "sabotageWaterCarrierDied",
+            "state": "sabotage/accusation/water-carrier/water-carrier-dead",
+            "text": "cant-prosecute-dead-watercarrier"
+        },
         "entry-accept-new-quest": {
             "hook": "onTakeOnNewQuest",
             "text": "entry-accept-new-quest"
@@ -272,6 +277,7 @@
         },
         "sabotage/dynamite-reported": {
             "answers": [
+                "cant-prosecute-dead-watercarrier",
                 "accept-sabotage-quest"
             ],
             "text": "sabotage/dynamite-reported"

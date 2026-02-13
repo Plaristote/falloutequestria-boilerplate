@@ -156,7 +156,7 @@ class Dialog {
     names.forEach(name => {
       answers.push(ringNameOption(this.gym, name));
     });
-    return { answers: answers };
+    return { textKey: "pick-ring-name", mood: "smile", answers: answers };
   }
 
   onStartFight() {
