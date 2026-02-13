@@ -13,8 +13,15 @@ export class MercenaryRiotComponent {
     return Quest.getState() == Quest.states.Rioting;
   }
 
+  goToSlaveRiot() {
+    this.model.actionQueue.pushReachNear(27, 19, 0, 4);
+    this.model.actionQueue.start();
+  }
+
   onSlaveRiot() {
-    level.joinCombat(this.model);
+    this.model.actionQueue.reset();
+    this.model.actionQueue.pushWait(8);
+    this.goToSlaveRiot();
   }
 
   slaveRiotTask() {

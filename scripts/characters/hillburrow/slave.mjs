@@ -1,4 +1,5 @@
 import {CharacterBehaviour} from "../character.mjs";
+import SeekAndDestroyComponent from "../components/seekAndDestroy.mjs";
 import {RoutineComponent} from "../../behaviour/routine.mjs";
 import {routine} from "./slave-routine.mjs";
 import * as SlaveRiot from "../../quests/hillburrow/slaveRiot.mjs";
@@ -13,17 +14,19 @@ export class Slave extends CharacterBehaviour {
   constructor(model) {
     super(model);
     this.routineComponent = new RoutineComponent(this, routine);
+    this.seekAndDestroy = new SeekAndDestroyComponent(this, function () { return SlaveRiot.getGuardTarget(model); });
+  }
+
+  onLoaded() {
+    this.seekAndDestroy.onLoaded();
+    if (!this.model.hasVariable("bed"))
+      this.model.setVariable("bed", findBed().path);
   }
 
   initialize() {
     this.model.setVariable("workX", this.model.position.x);
     this.model.setVariable("workY", this.model.position.y);
-    this.model.tasks.addTask("postInitialize", 100);
     this.model.tasks.addUniqueTask("runRoutine", Math.random() * 5000 + 5000, 0);
-  }
-
-  postInitialize() {
-    this.model.setVariable("bed", findBed().path);
   }
 
   runRoutine() {

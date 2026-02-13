@@ -20,6 +20,18 @@ export function areGuardsAlive() {
   }).length > 0;
 }
 
+export function getGuardTarget(character) {
+  let targets = level.find("guards.**.*");
+  const boss = level.findObject("boss");
+  const mercenaryBoss = level.findObject("mercenary-boss");
+
+  if (boss) targets.push(boss);
+  if (mercenaryBoss) targets.push(mercenaryBoss);
+  targets = targets.filter(target => target.isAlive());
+  targets.sort((a, b) => character.getDistance(a) - character.getDistance(b));
+  return targets[0];
+}
+
 export function getState() {
   const quest = game.quests.getQuest(questName);
 
@@ -87,6 +99,7 @@ export class SlaveRiot extends QuestHelper {
     const guards = level.find("guards.**.*");
 
     slaves.forEach(slave => {
+      slave.script.seekAndDestroy.enable();
       slave.tasks.removeTask("runRoutine");
       equipItem(weaponInventory, slave);
     });
@@ -97,7 +110,7 @@ export class SlaveRiot extends QuestHelper {
       game.diplomacy.setAsEnemy(true, "hillburrow-potioks", faction);
     });
     guards.forEach(guard => {
-      guard.getScriptObject().onSlaveRiot();
+      guard.script.onSlaveRiot();
     });
   }
 
@@ -116,5 +129,6 @@ export class SlaveRiot extends QuestHelper {
   onSuccess() {
     super.onSuccess();
     game.dataEngine.addReputation("hillburrow", 75);
+    level.find("slaves.*").forEach(slave => slave.script.seekAndDestroy.disable());
   }
 }

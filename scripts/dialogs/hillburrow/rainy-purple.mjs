@@ -57,7 +57,7 @@ class Dialog extends DialogHelper {
   }
 
   startRiot() {
-    game.quests.getQuest("hillburrow/slaveRiot").getScriptObject().startRiot();
+    game.quests.getQuest("hillburrow/slaveRiot").script.startRiot();
   }
 
   triggerVendetta() {
