@@ -56,12 +56,16 @@ export class MovableObject {
 
   onAttemptedToPushAt(user, position) {
     if (this.tryToMoveMovableObject(user)) {
-      this.moved = true;
-      level.setObjectPosition(this.model, position.x, position.y, this.model.floor);
-      game.appendToConsole(i18n.t("actions.moved-moveable-object"));
+      this.onSuccessfullPushAt(user, position);
     } else {
       game.appendToConsole(i18n.t("actions.failed-to-move-movable-object"));
     }
+  }
+
+  onSuccessfullPushAt(user, position) {
+    this.moved = true;
+    level.setObjectPosition(this.model, position.x, position.y, this.model.floor);
+    game.appendToConsole(i18n.t("actions.moved-moveable-object"));
   }
 
   onLook(user) {
@@ -78,6 +82,26 @@ export class MovableObject {
     user.lookAt(this.model);
     game.appendToConsole(i18n.t(message, {target: this.model.displayName}));
     return true;
+  }
+
+  onUseRepair(user) {
+    if (!this.canMove) {
+      if (skillCheck(user, "repair", { target: 30 + this.moveDifficulty * 20 })) {
+        game.appendToConsole(i18n.t("inspection.movable-object.found"));
+        this.canMove = true;
+        return true;
+      }
+    } else if (!this.moved) {
+      if (skillCheck(user, "repair", { target: 35 + this.moveDifficulty * 25 })) {
+        const position = this.targetPosition;
+        if (position)
+          game.asyncAdvanceTime(5, () => { this.onSuccessfullPushAt(user, position); });
+        else
+          game.appendToConsole(i18n.t("actions.no-room-to-move-object"));
+        return true;
+      }
+    }
+    return false;
   }
 
   onMoved() {
