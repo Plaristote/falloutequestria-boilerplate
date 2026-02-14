@@ -18,7 +18,7 @@ export class CelestialDevice extends QuestHelper {
     if (this.model.isObjectiveCompleted("find-arm-module"))
       text += "<p>" + this.model.tr("description-arm-module") + "</p>";
     if (this.model.isObjectiveCompleted("craftDevice"))
-      text += "<p>" + this.model.tr("description-crafted-" + this.model.getVariable("craftingBudddy")) + "</p>";
+      text += "<p>" + this.model.tr("description-crafted-" + this.model.getVariable("craftingBuddy")) + "</p>";
     if (this.model.isObjectiveCompleted("bringDevice"))
       text += "<p>" + this.model.tr("description-finished") + "</p>";
     return text;

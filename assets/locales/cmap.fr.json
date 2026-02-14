@@ -43,7 +43,9 @@
             "drunk": "Ivre",
             "ko": "Inconscient",
             "poisoned": "Empoisonné",
-            "rested": "En forme"
+            "rested": "En forme",
+            "dark-magic-buff": "Puissance sombre",
+            "dark-magic-sickness": "Sombre faiblesse"
         },
         "carryWeight": "Capacité en poids",
         "charisma": "Charisme",

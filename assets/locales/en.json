@@ -1,5 +1,4 @@
 {
-    "timeOfDay": "{{hour}}h{{minute}}",
     "bubbles": {
         "caravaneer-1": "Can't wait until the next stop !",
         "caravaneer-2": "So, you're joining the caravan ?",
@@ -62,9 +61,17 @@
             "description": "The most prosperous town of the crystal wastes, Crystal Den was built by the Potiok family, soon after the destruction of the Crystal Empire. The Crystal Den is home to many farmers, merchants, caravaneers, slavers, and it is also the place of respite for many lost souls, who live day by day and try to get by.",
             "name": "Crystal Den"
         },
+        "cristal-den-slavers": {
+            "description": "factions.cristal-den-slavers.description",
+            "name": "factions.cristal-den-slavers.name"
+        },
         "diamond-dogs": {
             "description": "The diamond dogs living under the ground of Junkville and its scrapyard.",
             "name": "Diamond dogs"
+        },
+        "feral-ghouls": {
+            "description": "factions.feral-ghouls.description",
+            "name": "factions.feral-ghouls.name"
         },
         "golden-herd": {
             "description": "The Golden Herd is a bunch of nomadic tribe herding together to find strength in numbers. Warriors, proud of their strength, they sustain themselves by exploiting the weak, demanding tribute from the towns they pass by, ransacking and pillaging whoever refuses to submit to their might.",
@@ -212,6 +219,7 @@
             "passerby-3": "Hey {{name}} ! Sorry, I'm busy right now, see you later !"
         }
     },
+    "timeOfDay": "{{hour}}h{{minute}}",
     "tutorial": {
         "1": "PipBuck",
         "10": "Field of View",

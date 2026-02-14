@@ -1,0 +1,20 @@
+{
+  "quests": {
+    "hillburrow/slaveRiot": {
+      "title": "Le prix de la liberté",
+      "rendezvous": "Parle à Rainy Purple dans le dortoir des esclaves",
+      "fetchWeapons": "Arme les esclaves ({{found}}/{{required}})",
+      "killPotioks": "Tue tous les gardes ({{killed}}/{{total}})",
+      "saveSlaves": "Sauve les esclaves ({{alive}}/{{total}})",
+      "saveRainy": "Rainy Purple survit",
+      "desc-rendezvous": "Tu as rencontré une jument très enervée, à la mine de charbon de Hillburrow. Elle y travaille en tant qu'esclave, ce qui explique peut-être son humeur massacrante. Tu lui as offert ton aide, et elle t'as demandé de la retrouver, la nuit. Les esclaves sont parqués dans un dortoir chaque nuit, au QG des Potioks de Hillburrow. Tu devrais peut-être accéder à sa demande, voir ce qu'il en est.",
+      "desc-riotPlanned": "Rainy Purple est son nom. Elle veut se délivrer de sa condition d'esclave, et semble décidée à employer la manière forte. Puisque tu as pu entrer dans le dortoir des esclaves, elle veut que tu revienne, cette fois-ci avec des armes pour ses camarades esclavagisés, afin qu'ils puissent saigner les mercenaires Potioks à blanc. Cool.",
+      "desc-riotStarted": "Tu as apporté les armes sus-mentionnées et équipé la troupe de poneys libres en puissance. Ils sont tous prêt à faire le job. Voyons comment ça va se passer.",
+      "desc-riotSuccess": "Gloire aux vainquers. Les geoliers sont décédés, et les anciens esclaves sont maintenant libres. C'est grâce à toi. Bon boulot, héro des terres désolées !",
+      "desc-riotFailure": "Pas ouf, il faut le dire. Bien que tous les méchants soient morts, absolument tous les esclaves ont perit dans l'entreprise. Ils auront trouvé leur liberté dans la mort, sans doute.",
+      "desc-riotUtterFailure": "Pas top, finalement. Tout le monde est mort, et les méchants sont toujours présents. Bon, d'une manière ou d'une autre, tu as accomplis ton objectif : il n'y a plus d'esclaves à la mine de charbon de Hillburrow. C'est un succès ?",
+      "desc-slavesDead": "Hm, bon. Les esclaves sont tous mort. Tant pis pour la grande échappée.",
+      "desc-rainyDead": "Rainy Purple n'est plus de ce monde, et ne connaîtra plus jamais ce sentiment grisant de liberté."
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "quests": {
+    "hillburrow/slaveRiot": {
+      "title": "Freedom isn't free",
+      "rendezvous": "Talk to Rainy Purple in the slaves' pen",
+      "fetchWeapons": "Bring weapons for the slaves ({{found}}/{{required}})",
+      "killPotioks": "Kill all the guards ({{killed}}/{{total}})",
+      "saveSlaves": "Save the slaves ({{alive}}/{{total}})",
+      "saveRainy": "Rainy Purple survives",
+      "desc-rendezvous": "You met a very pissed off mare at Hillburrow's coal mine. She's working there as a slave, which may explain her mood issues. You offered to help her, and she asked you to meet her at night. The slaves are packed into a room every night, at the Potiok Hillburrow's headquarters. You probably should pay her a visit, see what all the fuss is about.",
+      "desc-riotPlanned": "Rainy Purple is the name of the mare. She wants to escape her condition as a slave, and she seems fixated on doing it the harsh way. Since you managed to get into the slave dormitory, she wants you to do it again, this time with enough weapons for all her enslaved comrades, so they can bleed the Potiok mercenary to death. Fun.",
+      "desc-riotStarted": "You brought the aforementioned weapons and armed the whole band of soon-to-be former slaves. Everypony's ready to do their job. Let's see how this pans out.",
+      "desc-riotSuccess": "Glory to the victors. The captors are all dead, and the former slaves are now free. It's all thanks to you. Good job, mighty hero of the wastes !",
+      "desc-riotFailure": "Not good, as it turned out. While the bad ponies lay dead on the ground, each and every one of the slaves lost their life in the process. So much for freedom.",
+      "desc-riotUtterFailure": "Not good, it turns out. Everypony's dead, and the bad ponies remain alive. Well, at the very least, there's no more slave at Hillburrow's coal mine. Success ?",
+      "desc-slavesDead": "Welp. The slaves are all dead. I guess we can forget about that grand escpae.",
+      "desc-rainyDead": "Rainy Purple is no longer among us, and will never know the taste of freedom again."
+    }
+  }
+}

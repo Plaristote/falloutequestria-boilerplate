@@ -20,7 +20,9 @@
             "drunk": "Drunk",
             "ko": "Unconscious",
             "poisoned": "Poisoned",
-            "rested": "Rested"
+            "rested": "Rested",
+            "dark-magic-buff": "Shadow empowerment",
+            "dark-magic-sickness": "Shadow enfeeblement"
         },
         "carryWeight": "Carry weight",
         "charisma": "Charisma",

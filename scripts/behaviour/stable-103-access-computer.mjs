@@ -6,7 +6,7 @@ export class Stable103AccessComputer {
       this.model.setAnimation("monitor-right-on");
     else
       this.model.setAnimation("monitor-right-off");
-    this.model.tasks.addTask("initializeDoor", 1, 1);
+    this.model.tasks.addUniqueTask("initializeDoor", 1, 1);
   }
 
   initializeDoor() {

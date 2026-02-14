@@ -9,6 +9,7 @@
         "use": "Utiliser"
     },
     "item-descriptions": {
+        "dark-magic-artefact": "Un petit conteneur renfermant un fragment de magie noire. Le conteneur porte la marque du laboratoire Ombrage où tu as récupérer ce curieux objet. Sa proximité te confère un étrange sentiment de toute puissance.",
         "lockpicking-kit": "Des outils de crochetages basiques, facilitant les tâches consistant à crocheter des verrous.",
         "lockpicking-kit-v2": "Un kit complet d'outils de crochetages, avec une grande variété de crochets."
     },
@@ -27,6 +28,7 @@
         "celestial-device-blueprints": "Plan d'Appareil Célèste",
         "celestial-device-mra": "Module de Régulation Atmosphérique",
         "dynamite": "Dynamite",
+        "dark-magic-artefact": "Artefact de magie noire",
         "health-potion": "Potion de vie",
         "lockpicking-kit-v2": "Kit de crochetage avancé",
         "lockpicking-kit": "Kit de crochetage",

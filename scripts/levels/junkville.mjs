@@ -21,10 +21,16 @@ class Level extends LevelBase {
   }
 
   prepareRathian() {
-    const rathian = game.uniqueCharacterStorage.getCharacter("rathian");
+    const rathian = game.getCharacter("rathian");
     const door = level.findObject("smith.door-entrance");
+    const shouldBeHere = rathian && rathian.script.shouldBeAtJunkville;
+    let isHere = level.findObject("Rathian#0");
 
-    if (rathian && rathian.script.shouldBeAtJunkville && rathian.isAlive()) {
+    if (!shouldBeHere && isHere) {
+      game.uniqueCharacterStorage.detachCharacter(rathian);
+      isHere = false;
+    }
+    if (shouldBeHere && rathian.isAlive()) {
       game.uniqueCharacterStorage.loadCharacterToCurrentLevel("rathian", 53, 27, 0);
       rathian.setScript("rathian/junkville.mjs");
       rathian.attacksOnSight = true;
@@ -32,7 +38,7 @@ class Level extends LevelBase {
       rathian.statistics.faction = "rathian";
       rathian.tasks.removeTask("autopilot");
       if (door) door.locked = false;
-    } else if (door && !level.findObject("Rathian#0")) {
+    } else if (door && !isHere) {
       door.opened = false;
       door.locked = true;
     }

@@ -2,9 +2,14 @@ import {QuestHelper} from "../helpers.mjs";
 import {DealWithRathian} from "../../characters/rathian/captive.mjs";
 
 export default class extends QuestHelper {
+  get xpReward() {
+    return 7500;
+  }
+
   initialize() {
-    this.model.location = "?";
+    this.model.location = "stable-103";
     this.model.addObjective("overmareBrief", this.tr("overmare-briefing"));
+    game.appendToConsole(this.tr("desc-called-to-overmare-office"));
   }
 
   getDescription() {
@@ -62,6 +67,7 @@ export default class extends QuestHelper {
   completeObjective(name) {
     switch (name) {
       case "overmareBrief":
+        this.model.location = "?";
         this.model.addObjective("trackCulprit", this.tr("track-culprit"));
         game.script.rathianTrack = 1;
         break ;

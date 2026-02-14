@@ -88,9 +88,89 @@ function equipItem(weaponInventory, slave) {
 export class SlaveRiot extends QuestHelper {
   initialize() {
     this.model.location = "hillburrow";
-    this.model.addObjective("fetchWeapons", this.tr("fetchWeapons"));
-    this.model.addObjective("killPotioks", this.tr("killPotioks"));
-    this.xpReward = 4000;
+    this.model.setVariable("slaveCount", level.findGroup("slaves").objects.length);
+    this.model.setVariable("guardCount", level.findGroup("guards").find(candidate => candidate.type == "Character" && candidate.isAlive()).length);
+  }
+
+  get xpReward() {
+    return 3000 + (100 * this.aliveSlaves) + (250 * (this.isRainyAlive ? 1 : 0));
+  }
+
+  get broughtWeapons() {
+    return this.model.getVariable("broughtWeapons", 0);
+  }
+
+  set broughtWeapons(value) {
+    this.model.setVariable("broughtWeapons", value);
+  }
+
+  get slaveCount() {
+    return this.model.getVariable("slaveCount");
+  }
+
+  get guardCount() {
+    return this.model.getVariable("guardCount");
+  }
+
+  get aliveSlaves() {
+    return level.findGroup("slaves").find(candidate => candidate.type == "Character" && candidate.isAlive()).length;
+  }
+
+  get killedGuards() {
+    return this.model.getVariable("killedGuards", 0);
+  }
+
+  set killedGuards(value) {
+    this.model.setVariable("killedGuards", value);
+  }
+
+  get isRainyAlive() {
+    return !this.model.hasVariable("rainyDead");
+  }
+
+  getDescription() {
+    let text = "";
+
+    if (this.model.hasVariable("rendezvous"))
+      text += `<p>${this.tr("desc-rendezvous")}</p>`;
+    if (this.model.hasVariable("riotPlanned"))
+      text += `<p>${this.tr("desc-riotPlanned")}</p>`;
+    if (this.model.hasVariable("riotStarted")) {
+      text += `<p>${this.tr("desc-riotStarted")}</p>`;
+      if (this.model.isObjectiveCompleted("killPotioks"))
+        text += `<p>${this.tr(this.aliveSlaves > 0 ? "desc-riotSuccess" : "desc-riotFailure")}</p>`;
+      else if (this.aliveSlaves == 0)
+        text += `<p>${this.tr("desc-riotUtterFailure")}</p>`;
+    } else if (this.model.isObjectiveCompleted("killPotioks")) {
+      text += `<p>${this.tr("desc-soloedPotioks")}</p>`;
+    } else if (this.aliveSlaves == 0) {
+      text += `<p>${this.tr("desc-slavesDead")}</p>`;
+    }
+    if (!this.isRainyAlive)
+      text += `<p>${this.tr("desc-rainyDead")}</p>`;
+    return text;
+  }
+
+  getObjectives() {
+    let objectives = [];
+
+    if (this.model.hasVariable("rendezvous"))
+      objectives.push({ label: this.tr("rendezvous"), success: this.model.isObjectiveCompleted("metAtPen") });
+    if (this.model.hasVariable("riotPlanned")) {
+      objectives.push({ label: this.tr("fetchWeapons", { found: this.broughtWeapons, required: this.slaveCount }), success: this.model.isObjectiveCompleted("fetchWeapons") });
+      objectives.push({ label: this.tr("killPotioks", { killed: this.killedGuards, total: this.guardCount }), success: this.model.isObjectiveCompleted("killPotioks") });
+      objectives.push({ label: this.tr("saveSlaves", { alive: this.aliveSlaves, total: this.slaveCount }), success: this.aliveSlaves > 0 && this.model.isObjectiveCompleted("killPotioks"), failure: this.aliveSlaves == 0 });
+      objectives.push({ label: this.tr("saveRainy"), success: this.isRainyAlive > 0 && this.model.isObjectiveCompleted("killPotioks"), failure: !this.isRainyAlive });
+    }
+    return objectives;
+  }
+
+  addPenRendezvous() {
+    this.model.setVariable("rendezvous", 1);
+  }
+
+  addRiotPlans() {
+    this.model.setVariable("riotPlanned", 1);
   }
 
   startRiot() {
@@ -103,6 +183,7 @@ export class SlaveRiot extends QuestHelper {
       slave.tasks.removeTask("runRoutine");
       equipItem(weaponInventory, slave);
     });
+    this.model.setVariable("riotStarted", 1);
     level.setVariable("riotStarted", 1);
     level.findObject("house.slave-pen.door-inside").locked = false;
     level.findObject("house.slave-pen.door-outside").locked = false;
@@ -117,11 +198,19 @@ export class SlaveRiot extends QuestHelper {
   onCharacterKilled(character) {
     if (level.name == "hillburrow-backtown") {
       const guardGroup = level.findGroup("guards");
+      const slaveGroup = level.findGroup("slaves");
       const filter = candidate => { return candidate.isAlive && candidate.isAlive(); }
 
+      if (guardGroup.find(candidate => character == candidate).length > 0)
+        this.killedGuards++;
+      else if (character == slaveGroup.findObject("rainy-purple"))
+        this.model.setVariable("rainyDead", 1);
       if (guardGroup.find(filter).length == 0) {
         this.model.completeObjective("killPotioks");
         this.model.completed = true;
+      }
+      if (slaveGroup.find(filter).length == 0) {
+        this.model.failure = true;
       }
     }
   }

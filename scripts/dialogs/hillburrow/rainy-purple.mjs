@@ -1,5 +1,6 @@
 import {DialogHelper} from "../helpers.mjs";
 import {areDenSlaversDead} from "../../characters/cristal-den/slavers/denSlaversDead.mjs";
+import {requireQuest} from "../../quests/helpers.mjs";
 
 class Dialog extends DialogHelper {
   getEntryPoint() {
@@ -26,10 +27,11 @@ class Dialog extends DialogHelper {
 
   onProposedToHelp() {
     this.dialog.npc.setVariable("proposed-help", 1);
+    requireQuest("hillburrow/slaveRiot").script.addPenRendezvous();
   }
 
   addRiotQuest() {
-    game.quests.addQuest("hillburrow/slaveRiot");
+    requireQuest("hillburrow/slaveRiot").script.addRiotPlans();
   }
 
   onGiveWeapons() {
@@ -37,8 +39,11 @@ class Dialog extends DialogHelper {
   }
 
   afterGiveWeapons() {
+    const quest = game.quests.getQuest("hillburrow/slaveRiot");
+
+    quest.script.broughtWeapons = this.acquiredWeaponsCount;
     if (this.hasQuestWeapons()) {
-      game.quests.getQuest("hillburrow/slaveRiot").completeObjective("fetchWeapons");
+      quest.completeObjective("fetchWeapons");
       return "quest-riot-prompt";
     }
     return "quest-not-enough-weapons";

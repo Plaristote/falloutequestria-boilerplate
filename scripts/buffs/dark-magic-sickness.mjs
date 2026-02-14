@@ -1,6 +1,7 @@
 class DarkMagicSickness {
   constructor(model) {
     this.model = model;
+    this.model.hudVisible = false;
   }
 
   set modifier(value) { this.model.setVariable("modifier", value); }
