@@ -37,12 +37,13 @@ export default class Rathian extends Base {
     super(model);
     this.model.attacksOnSight = false;
     this.model.statistics.faction = "rathian";
-    this.model.tasks.addTask("initializeDoorWatch", 100, 1);
   }
 
-  initializeDoorWatch() {
-    overrideBehaviour(this.cellDoor.script,                 "onBustOpen",   this.onCellDoorOpening.bind(this));
-    overrideBehaviour(this.cellDoor.script.lockedComponent, "toggleLocked", this.beforeCellDoorLockToggle.bind(this))
+  onLoaded() {
+    if (this.cellDoor) {
+      overrideBehaviour(this.cellDoor.script,                 "onBustOpen",   this.onCellDoorBustOpen.bind(this));
+      overrideBehaviour(this.cellDoor.script.lockedComponent, "toggleLocked", this.beforeCellDoorLockToggle.bind(this))
+    }
   }
 
   get dealWithRathianFlag() {
@@ -51,6 +52,7 @@ export default class Rathian extends Base {
 
   toggleDealWithRathianFlag(value) {
     this.model.setVariable("dealWithRathian", this.dealWithRathianFlag | value);
+    game.quests.getQuest("stable-103/rathian").completeObjective("dealWithRathian");
   }
 
   beforeCellDoorLockToggle() {
@@ -62,6 +64,11 @@ export default class Rathian extends Base {
       if ((this.dealWithRathianFlag & DealWithRathian.CellOpened) > 0)
         this.model.setVariable("dealWithRathian", this.dealWithRathianFlag - DealWithRathian.CellOpened);
     }
+  }
+
+  onCellDoorBustOpen() {
+    this.onCellDoorOpening();
+    return true;
   }
 
   onCellDoorOpening() {
@@ -86,12 +93,14 @@ export default class Rathian extends Base {
 
   escapeWithPlayer() {
     game.playerParty.addCharacter(this.model);
-    this.retrieveItems(() => {
-      this.model.tasks.addUniqueTask("followPlayer", 2323, 0);
-    });
+    this.retrieveItems();
   }
 
-  retrieveItems(callback) {
+  afterItemRetrieval() {
+    this.model.tasks.addUniqueTask("followPlayer", 2323, 0);
+  }
+
+  retrieveItems() {
     const actions = this.model.actionQueue;
     const shelf = level.findObject("police-station.cells.storage-chest");
     if (actions.isEmpty() && shelf) {
@@ -102,7 +111,7 @@ export default class Rathian extends Base {
       actions.pushScript({
         onTrigger: () => {
           shelf.inventory.transferTo(this.model.inventory);
-          callback();
+          this.afterItemRetrieval();
         },
         onCancel: () => {
           this.model.tasks.addUniqueTask("retrieveItems", 500, 1);

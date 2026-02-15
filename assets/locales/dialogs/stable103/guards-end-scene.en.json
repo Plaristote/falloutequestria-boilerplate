@@ -2,7 +2,7 @@
     "dialogs": {
         "stable103/guards-end-scene": {
             "betray-rathian": "Sorry, Rathian. That was never part of my plan.",
-            "conflict": "I have orders, {{player}}, and I have to carry them out. Please, I don't want to do this.",
+            "conflict": "I have orders, {{name}}, and I have to carry them out. Please, I don't want to do this.",
             "conflict-fight": "Too bad. I really want to do this. Bring it on.",
             "conflict-intimidate": "I know you don't, you're a pencil pusher. Now stand down, or I'll fold you like a piece of paper.",
             "entry": "Hi, {{name}} !<br>\nThe Overmare wishes to see you in her office. Please follow us.",

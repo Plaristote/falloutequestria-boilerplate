@@ -12,7 +12,7 @@ class Dialog {
   }
 
   get rathianQuest() {
-    return game.getQuest("stable-103/rathian");
+    return game.quests.getQuest("stable-103/rathian");
   }
 
   get knewRathianBeforehoof() {
@@ -24,7 +24,7 @@ class Dialog {
   }
 
   get useDialogAltEntry() {
-    return !this.useDialogBaseEntry();
+    return !this.useDialogBaseEntry;
   }
 
   get hasMagicalImprint() {
@@ -32,7 +32,7 @@ class Dialog {
   }
 
   getEntryPoint() {
-    if (this.useDialogAltEntry())
+    if (this.useDialogAltEntry)
       return "entry/base-alt";
     return "entry/base";
   }
@@ -48,7 +48,7 @@ class Dialog {
 
   aboutRathianDiscovery() {
     if (game.hasVariable("rathianBetrayedAtStable"))
-      return this.dialog.tr("about-rathian-captivity");
+      return this.dialog.tr("entry/about-rathian-captivity");
   }
 
   onTakingPipbuck() {

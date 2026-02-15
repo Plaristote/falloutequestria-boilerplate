@@ -9,7 +9,7 @@ export default class extends LevelBase {
   }
 
   get rathianQuest() {
-    return game.getQuest("stable-103/rathian");
+    return game.quests.getQuest("stable-103/rathian");
   }
 
   get overmare() {
@@ -20,12 +20,25 @@ export default class extends LevelBase {
     return level.findGroup("guards");
   }
 
+  moveCharacterToJail(character) {
+    const door = level.findObject("level#0.jail.door");
+
+    door.opened = false;
+    door.locked = true;
+    level.moveCharacterToZone(character, "containment-cell", 0);
+    game.playerParty.removeCharacter(character);
+  }
+
   initializePreEndGameScene() {
     let guardIndex = 0;
     this.guards.objects.forEach(guard => {
       level.setCharacterPosition(guard, 32 + guardIndex, 47, 0);
       guardIndex++;
     });
+    level.tasks.addUniqueTask("startPreEndGameDialog", 1, 1);
+  }
+
+  startPreEndGameDialog() {
     level.initializeDialog(this.guards.objects[0], "stable103/guards-end-scene");
   }
 

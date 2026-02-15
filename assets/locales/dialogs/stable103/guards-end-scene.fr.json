@@ -2,7 +2,7 @@
     "dialogs": {
         "stable103/guards-end-scene": {
             "betray-rathian": "Désolé, Rathian. Ca n'a jamais fait partie de mon plan.",
-            "conflict": "J'ai des ordres, {{player}}, et je dois les respecter. S'il te plait, je veux pas faire ça.",
+            "conflict": "J'ai des ordres, {{name}}, et je dois les respecter. S'il te plait, je veux pas faire ça.",
             "conflict-fight": "Dommage, il n'y en a qu'un de nous deux qui va apprécier la suite. Baston !",
             "conflict-intimidate": "Je sais bien. T'as pas l'habitude de la violence, t'es un gratte-papier. Pousse-toi de là, ou je te plie en deux comme un de tes formulaires !",
             "entry": "Salut, {{name}} !<br>\nLa superviseuse voudrait te parler dans son bureau. Si tu veux bien nous suivre.",

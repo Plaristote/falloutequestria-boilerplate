@@ -2,7 +2,7 @@ import {OwnedStorage} from "../ownedStorage.mjs";
 
 export default class extends OwnedStorage {
   get storageOwners() {
-    return [game.getCharacter("rathian")];
+    return [level.findObject("Rathian#0")];
   }
 
   onTakeItem(user, item, quantity) {

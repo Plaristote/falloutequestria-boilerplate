@@ -29,12 +29,14 @@ class Dialog {
   }
 
   leaveCompanionsHook() {
-    // TODO leave companion in a cell
+    game.playerParty.findAll(character => character != game.player).forEach(character => {
+      level.script.moveCharacterToJail(character);
+    });
     return this.goingToOvermare();
   }
 
   betrayRathianHook() {
-    // TODO leave Rathian in a cell
+    level.script.moveCharacterToJail(game.getCharacter("rathian"));
     game.setVariable("rathianBetrayedAtStable", 1);
     this.dialog.npc = this.guard;
     return this.goingToOvermareHook();

@@ -32,6 +32,11 @@ export class Sabotage extends QuestHelper {
     this.model.addObjective("findCulprit", this.tr("findCulprit"));
   }
 
+  onCharacterKilled(character) {
+    if (character.characterSheet === "hillburrow/bitty-potiok")
+      this.model.failed = true;
+  }
+
   onPointersGivenByBittyPotiok() {
     this.model.addObjective("talkToMercenaryBoss", this.tr("talkToMercenaryBoss"));
   }
