@@ -21,10 +21,11 @@ export default class extends LevelBase {
   }
 
   onExit() {
-    const rathian = game.uniqueCharacterStorage.getCharacter("rathian");
+    const rathian = game.getCharacter("rathian");
 
-    if (game.playerParty.containsCharacter(rathian))
+    if (game.playerParty.containsCharacter(rathian)) {
       rathian.script.onEscapedWithPlayer();
+    }
   }
 
   onZoneEntered(zoneName, object) {

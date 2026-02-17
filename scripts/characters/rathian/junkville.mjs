@@ -1,6 +1,6 @@
 import Base from "./base.mjs";
 
-class Rathian extends Base {
+export default class Rathian extends Base {
   isInWorkshop() {
     if (typeof level !== "undefined" && level.name === "junkville") {
       const zone = level.findGroup("smith").controlZone;

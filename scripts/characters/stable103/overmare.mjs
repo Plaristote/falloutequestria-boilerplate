@@ -5,6 +5,11 @@ class Character extends CharacterBehaviour {
     super(model);
     this.dialog = "stable103-overmare";
   }
+
+  onDied() {
+    level.setVariable("endGameOnExit", 1);
+    super.onDied();
+  }
 }
 
 export function create(model) {

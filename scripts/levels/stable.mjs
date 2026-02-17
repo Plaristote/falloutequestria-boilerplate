@@ -8,6 +8,11 @@ export default class extends LevelBase {
       this.initializePreEndGameScene();
   }
 
+  onExit() {
+    if (level.hasVariable("endGameOnExit"))
+      game.gameFinished();
+  }
+
   get rathianQuest() {
     return game.quests.getQuest("stable-103/rathian");
   }

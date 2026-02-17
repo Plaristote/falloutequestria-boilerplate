@@ -32,6 +32,7 @@
             "text": "ask-crystal-whereabouts"
         },
         "ask-make-celestial-device-parts": {
+            "availableHook": "canStartCelestialDeviceRightAway",
             "hook": "celestialDeviceAskToCraft",
             "text": "ask-make-celestial-device-parts"
         },
@@ -49,7 +50,7 @@
             "text": "ask-to-learn"
         },
         "boast-about-already-having-arm": {
-            "availableHook": "celestialDeviceAlreadyFoundArm",
+            "availableHook": "celestialDeviceCanGiveArm",
             "state": "celestial-device/introduction",
             "text": "boast-about-already-having-arm"
         },
@@ -114,6 +115,9 @@
             "hook": "learnRepair",
             "text": "exit"
         },
+        "leave-celestial-device-introduction": {
+            "text": "leave-celestial-device-introduction"
+        },
         "negociate-celestial-device-price": {
             "availableHook": "canNegociateCelestialDevicePrice",
             "hook": "celestialDeviceNegociatePrice",
@@ -176,7 +180,8 @@
             "answers": [
                 "ask-make-celestial-device-parts",
                 "boast-about-already-having-arm",
-                "ask-suggestion-celestial-device-arm"
+                "ask-suggestion-celestial-device-arm",
+                "leave-celestial-device-introduction"
             ],
             "hook": "celestialDeviceIntroduction",
             "mood": "dubious",

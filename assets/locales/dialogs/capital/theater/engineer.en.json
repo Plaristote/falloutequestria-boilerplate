@@ -52,6 +52,7 @@
             "introduction": "<i>You see a ghoul getting busy fixing up a generator. When he sees you, he startles, hit his head on a shelf. A whole toolbox falls and spills on the floor.</i>\n<br><br>\nOUCH ! That shouldn't even have been there !\n<br><br>\nYou better have a damn good reason to be here. I'm BUSY. What do you want ?",
             "introduction-engineer": "Good stuff, that generator. How do you manage to keep the load balanced with all that patchwork ?",
             "introduction-leave": "Forget it, I'll get lost.",
+            "leave-celestial-device-introduction": "Alright. Guess I'll have to start searching then.",
             "negociate-celestial-device-price": "That's a bit too expensive. Can you make me a lower offer ? It'd be a waste to miss such a work opportunity, don't you think ?",
             "negociate-craft-parts-accept": "Deal !",
             "negociate-craft-parts-reject": "I can't pay that much. Another time, maybe.",

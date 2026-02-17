@@ -1,13 +1,6 @@
 import Base from "./base.mjs";
 import {overrideBehaviour} from "../../behaviour/override.mjs";
-
-export const DealWithRathian = {
-  LeaveBehind: 1,
-  HelpLeave: 2,
-  CellOpened: 4,
-  LeftWithPlayer: 8,
-  GaveUpSentinel: 16
-};
+import {DealWithRathian} from "./flags.mjs";
 
 function enemyBubbles() {
   return [
@@ -89,9 +82,14 @@ export default class Rathian extends Base {
 
   onEscapedWithPlayer() {
     this.toggleDealWithRathianFlag(DealWithRathian.LeftWithPlayer);
+    if (!this.shouldGetSentinelWithPlayer) {
+      this.model.tasks.removeTask("followPlayer");
+      game.uniqueCharacterStorage.detachCharacter(rathian);
+    }
   }
 
   escapeWithPlayer() {
+    console.log("rathian: escapeWithPlayer called");
     game.playerParty.addCharacter(this.model);
     this.retrieveItems();
   }

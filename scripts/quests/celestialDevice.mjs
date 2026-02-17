@@ -48,6 +48,11 @@ export class CelestialDevice extends QuestHelper {
     this.model.addObjective("bringDevice", this.tr("bring-celestial-device"));
   }
 
+  onBuildCelestialDeviceInPlace() {
+    game.player.inventory.removeItemOfType("celestial-device-mra");
+    this.onCraftedCelestialDevice("self");
+  }
+
   onBroughtCelestialDevice() {
     game.player.inventory.removeItemOfType("celestial-device");
     if (!this.model.hasObjective("bringDevice"))

@@ -1,4 +1,4 @@
-import {DealWithRathian} from "../characters/rathian/captive.mjs";
+import {DealWithRathian} from "../characters/rathian/flags.mjs";
 
 class Dialog {
   constructor(dialog) {
@@ -116,6 +116,8 @@ class Dialog {
   }
 
   decisionHelp() {
+    console.log("DECISION HELP");
+    this.dialog.npc.setVariable("acquireSentinelWithPlayer", 1);
     this.dialog.npc.setVariable("waitForCellToOpen", 1);
   }
 
@@ -137,14 +139,17 @@ class Dialog {
   }
 
   alternativeConvinced() {
+    console.log("ALTERNATIVE CONVINCED");
     this.dialog.npc.script.toggleDealWithRathianFlag(DealWithRathian.GaveUpSentinel);
   }
 
   leaveRathianBehind() {
+    console.log("LEAVE RATHIAN BEHIND");
     this.dialog.npc.script.toggleDealWithRathianFlag(DealWithRathian.LeaveBehind);
   }
 
   helpRathianLeave() {
+    console.log("HELP RATHIAN LEAVE");
     this.dialog.npc.script.onInvitedToEscape();
   }
 }

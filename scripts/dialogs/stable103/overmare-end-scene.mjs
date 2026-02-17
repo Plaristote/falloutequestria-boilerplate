@@ -1,10 +1,11 @@
-import {DealWithRathian} from "../../characters/rathian/captive.mjs";
+import {DealWithRathian} from "../../characters/rathian/flags.mjs";
 
 class Dialog {
   constructor(dialog) {
     this.dialog = dialog;
     this.trust = game.dataEngine.getReputation("stable-103") >= 250 ? 1 : 0;
     this.talkedAboutSeclusion = false;
+    level.setVariable("endGameOnExit", 1);
   }
 
   get rathian() {
@@ -54,8 +55,8 @@ class Dialog {
   onTakingPipbuck() {
     let text = this.dialog.tr("entry/taking-pipbuck");
 
-    if (this.dialog.lastAnswer == "accept-to-give-up-pipbuck") {
-      text = this.dialog.tr("entry/authorized-pipbuck") + text;
+    if (this.dialog.previousAnswer == "accept-to-give-pipbuck") {
+      text = this.dialog.tr("entry/authorzed-pipbuck") + text;
       this.increaseTrust();
     }
     return text;

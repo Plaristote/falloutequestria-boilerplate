@@ -1,5 +1,5 @@
 import {QuestHelper} from "../helpers.mjs";
-import {DealWithRathian} from "../../characters/rathian/captive.mjs";
+import {DealWithRathian} from "../../characters/rathian/flags.mjs";
 
 export default class extends QuestHelper {
   get xpReward() {

@@ -68,6 +68,23 @@ class Dialog {
     this.dialog.npc.setVariable("reportedARM", 1);
   }
 
+  canBuildCelestialDevice() {
+    return game.player.statistics.repair >= 95 || game.player.statistics.science >= 110;
+  }
+
+  reportARMEngineer() {
+    this.dialog.swapNpc(level.findObject("engineer"));
+  }
+
+  canTeachCelestialDevice() {
+    return this.mainQuest.hasVariable("reportedBlueprints") && this.canBuildCelestialDevice() && game.player.inventory.count("celestial-device-mra");
+  }
+
+  buildCelestialDevice() {
+    const quest = game.quests.getQuest("celestialDevice");
+    quest.script.onBuildCelestialDeviceInPlace();
+  }
+
   reportCelestialDevice() {
     const quest = game.quests.getQuest("celestialDevice");
     quest.script.onBroughtCelestialDevice();

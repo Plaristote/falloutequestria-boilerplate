@@ -13,6 +13,12 @@
             "state": "reportedBlueprints#3",
             "text": "blueprints-wait#2"
         },
+        "buildCelestialDevice": {
+            "availableHook": "canTeachCelestialDevice",
+            "hook": "buildCelestialDevice",
+            "state": "reportedCelestialDevice",
+            "text": "buildCelestialDevice"
+        },
         "celestial-device-next": {
             "state": "reportedCelestialDevice#2",
             "text": "exit"
@@ -41,6 +47,11 @@
             "state": "rathian-quest/intro-followup#3",
             "text": "rathian-intro-continue-5"
         },
+        "reportARM": {
+            "availableHook": "canReportFoundARM",
+            "state": "reportedARM",
+            "text": "reportARM"
+        },
         "reportBlueprints": {
             "availableHook": "canReportBlueprints",
             "state": "reportedBlueprints",
@@ -56,6 +67,28 @@
             "state": "reportedJunkvilleTrail",
             "text": "reportJunkvilleTrail"
         },
+        "reported-ARM#2-followup": {
+            "state": "reportedARM#3",
+            "text": "exit"
+        },
+        "reportedARM-advise": {
+            "availableHook": "canBuildCelestialDevice",
+            "state": "reportedARM#2-advised",
+            "text": "reportedARM-advise"
+        },
+        "reportedARM-followup": {
+            "state": "reportedARM#2",
+            "text": "exit"
+        },
+        "reportedARM-look-for-expert": {
+            "state": "reportedARM#2-expertise",
+            "text": "reportedARM-look-for-expert"
+        },
+        "reportedARM-to-celestial-device": {
+            "hook": "speakerOvermare",
+            "state": "reportedCelestialDevice",
+            "text": "exit"
+        },
         "takeCelestialDeviceRest": {
             "hook": "celestialDeviceRest",
             "text": "takeCelestialDeviceRest"
@@ -66,6 +99,8 @@
         "entryPoint": {
             "answers": [
                 "reportCelestialDevice",
+                "buildCelestialDevice",
+                "reportARM",
                 "reportBlueprints",
                 "reportJunkvilleTrail",
                 "nothing-to-report"
@@ -117,6 +152,44 @@
             "hook": "speakerTechnician",
             "mood": "cocky",
             "text": "rathian-quest/technician-intro"
+        },
+        "reportedARM": {
+            "answers": [
+                "reportedARM-followup"
+            ],
+            "hook": "reportFoundARM",
+            "mood": "smile",
+            "text": "reportedARM"
+        },
+        "reportedARM#2": {
+            "answers": [
+                "reportedARM-advise",
+                "reportedARM-look-for-expert"
+            ],
+            "hook": "reportARMEngineer",
+            "mood": "sad",
+            "text": "reportedARM#2"
+        },
+        "reportedARM#2-advised": {
+            "answers": [
+                "reportedARM-to-celestial-device"
+            ],
+            "mood": "smile",
+            "text": "reportedARM#2-advised"
+        },
+        "reportedARM#2-expertise": {
+            "answers": [
+                "reported-ARM#2-followup"
+            ],
+            "mood": "sheepish",
+            "text": "reportedARM#2-expertise"
+        },
+        "reportedARM#3": {
+            "answers": [
+            ],
+            "hook": "speakerOvermare",
+            "mood": "angry",
+            "text": "reportedARM#3"
         },
         "reportedBlueprints": {
             "answers": [

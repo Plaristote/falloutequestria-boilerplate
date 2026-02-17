@@ -13,6 +13,7 @@ export default class extends DialogHelper {
     this.canNegociateCelestialDevicePrice = this.celestialDevicePriceBarter.visibilityCallback;
     this.celestialDeviceNegociatePrice    = this.celestialDevicePriceBarter.triggerCallback;
     this.crafter = new CrafterComponent(this);
+    this.canStartCelestialDeviceRightAway = false;
   }
 
   get spinelQuest() {
@@ -42,7 +43,7 @@ export default class extends DialogHelper {
       const mainQuest = game.quests.getQuest("celestialDevice");
       if (this.canClaimCelestialDeviceParts())
         return this.celestialPartsClaim();
-      return "celestial-devie/introduction";
+      return "celestial-device/introduction";
     }
     return this.crafter.defaultCraftAppraise();
   }
@@ -57,13 +58,17 @@ export default class extends DialogHelper {
         mainQuest.setVariable("ombrageLabHint", 1);
         return { textKey: "celestial-device/arm-location-suggestion" };
       case "boast-about-already-having-arm":
+        this.canStartCelestialDeviceRightAway = true;
         return { textKey: "celestial-device/arm-already-found", mood: "laugh" };
     }
   }
 
+  celestialDeviceCanGiveArm() {
+    return game.player.inventory.count("celestial-device-mra") > 0;
+  }
+
   celestialDeviceAlreadyFoundArm() {
-    const mainQuest = game.quests.getQuest("celestialDevice");
-    return mainQuest.isObjectiveCompleted("find-arm-module");
+    return this.celestialDeviceCanGiveArm() && !this.canStartCelestialDeviceRightAway;
   }
 
   canShowCelestialDevicePlans() {
@@ -78,6 +83,7 @@ export default class extends DialogHelper {
     const target = game.timeManager.getTimestamp() + game.timeManager.secondsUntilTime({ "weeks": 1, "hour": 0 });
     this.dialog.npc.setVariable("celestialDeviceTime", target);
     this.dialog.npc.setVariable("celestialDeviceState", 1);
+    game.player.inventory.removeItemOfType("celestial-device-mra");
   }
 
   celestialDevicePartsReady() {

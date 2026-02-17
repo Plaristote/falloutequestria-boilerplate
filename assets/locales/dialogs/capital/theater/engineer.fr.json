@@ -52,6 +52,7 @@
             "introduction": "<i>Tu vois une goule s'affairer sur un générateur. Lorsqu'il t'aperçoit, il se redresse brusquement, se cogne la tête, fait chuter une caisse à outil qui se répend sur le sol.</i>\n<br><br>\nAÏE ! Ca a rien à faire là, ça !\n<br><br>\nToi, j'espère que t'as une bonne raison d'être ici. Je suis occupé. Qu'est-ce que tu veux ?",
             "introduction-engineer": "Pas mal, ton générateur. T'arrive à stabiliser la charge avec toute cette rustine ?",
             "introduction-leave": "Laisse tomber, je vais voir ailleurs.",
+            "leave-celestial-device-introduction": "Ok. Je vais commencer à chercher alors.",
             "negociate-celestial-device-price": "C'est un peu trop cher pour mes moyens. Peut-être peux-tu me faire une offre plus basse ? Ce serait dommage de rater l'opportunité de travailler sur un tel projet.",
             "negociate-craft-parts-accept": "Marché conclu !",
             "negociate-craft-parts-reject": "Je peux pas débourser ça pour le moment. Une autre fois.",
