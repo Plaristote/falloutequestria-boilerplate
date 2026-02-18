@@ -1,11 +1,16 @@
+function onSneakRunning(model) {
+  if (model.statistics.perks.indexOf("silent-running") < 0)
+    model.toggleSneaking(false);
+}
+
 export class MovementComponent {
   constructor(model) {
     this.model = model;
   }
 
   onMovementStart() {
-    if (this.model.movementMode === "running")
-      this.model.toggleSneaking(false);
+    if (this.model.movementMode === "running" && this.model.sneaking)
+      onSneakRunning(this.model);
   }
 
   onMovementEnded() {
