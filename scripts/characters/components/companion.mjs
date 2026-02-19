@@ -21,6 +21,22 @@ export class CompanionCharacter extends CharacterBehaviour {
     this.model.tasks.removeTask("playerStalking");
   }
 
+  findCombatTarget() {
+    super.findCombatTarget();
+    if (!this.combatTarget) {
+      for (let i = 0 ; i < game.playerParty.list.length ; ++i) {
+        const companion = game.playerParty.list[i];
+        const enemies = companion.fieldOfView.getEnemies();
+
+        if (enemies.length) {
+          this.combatTarget = enemies[0];
+          return true;
+        }
+      }
+    }
+    return false;
+  }
+
   onDied() {
     super.onDied();
     this.endCompanionship();

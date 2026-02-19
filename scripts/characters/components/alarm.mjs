@@ -17,10 +17,17 @@ export function callGuards(guards, target, alarmLevel) {
 
 export class AlarmComponent {
   constructor(parent) {
+    const self = this;
     this.parent = parent;
     this.parent.alarmTask = this.alarmTask.bind(this);
     this.parent.receiveAlarmSignal = this.receiveAlarmSignal.bind(this);
     this.parent.arrestDialogState = "town-guard";
+    this.defaultShouldJoinOngoingCombat = parent.shouldJoinOngoingCombat ? parent.shouldJoinOngoingCombat.bind(parent) : undefined;
+    parent.shouldJoinOngoingCombat = function() {
+      parent.combatTarget = self.target;
+      return self.alarmLevel == AlarmLevel.ShootOnSight
+         || (self.defaultShouldJoinOngoingCombat && self.defaultShouldJoinOngoingCombat());
+    }
   }
 
   get model() { return this.parent.model; }
