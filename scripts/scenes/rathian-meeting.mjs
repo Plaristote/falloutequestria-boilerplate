@@ -1,10 +1,16 @@
 import {SceneManager} from "../behaviour/sceneManager.mjs";
  
 export class MeetingScene extends SceneManager {
-  constructor(parent, bandits, rathian) {
+  constructor(parent) {
     super(parent, "rathian-meeting");
-    this.bandits = bandits;
-    this.rathian = rathian;
+  }
+
+  get bandits() {
+    return level.script.bandits;
+  }
+
+  get rathian() {
+    return level.script.rathianParty;
   }
 
   get actors() {
@@ -57,7 +63,6 @@ export class MeetingScene extends SceneManager {
   }
 
   leaderReaction() {
-    console.log("How the hell did we get here ?");
     const actionQueue = this.banditLeader.actionQueue;
     level.cameraFocusRequired(this.banditLeader);
     actionQueue.pushSpeak(this.line("leaderReaction"), 6000, "red");

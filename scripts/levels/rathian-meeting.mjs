@@ -29,38 +29,46 @@ function banditTemplate(type, amount = 1) {
   };
 }
 
+function makeBanditsParty() {
+  const objects = level.objects.filter(object => object.objectName.startsWith("bandits"));
+
+  return level.createNpcGroup({
+    name: "bandits",
+    faction: "bandits",
+    members: objects.length == 0 ? [banditTemplate("B"), banditTemplate("A"), banditTemplate("A"), banditTemplate("C")] : objects
+  });
+}
+
+function makeRathianParty() {
+  const object = game.getCharacter("rathian");
+
+  if (object && game.playerParty.containsCharacter(object))
+    return null;
+  return level.createNpcGroup({
+    name: "Rathian",
+    members: object ? [object] : [rathianTemplate]
+  });
+}
+
 class Level extends LevelBase {
   constructor(model) {
     super();
     this.model = model;
     console.log("BUILD rathian-meeting");
   }
-
   get rathian() {
     return game.getCharacter("rathian");
   }
-	
-  initialize() {
-    level.tasks.addTask("delayedInitialize", 1, 1);
-  }
-
-  delayedInitialize() {
-    this.bandits = level.createNpcGroup({
-      name: "bandits",
-      members: [banditTemplate("B"), banditTemplate("A"), banditTemplate("A"), banditTemplate("C")]
-    });
-    this.rathianParty = level.createNpcGroup({
-      name: "Rathian",
-      members: [rathianTemplate]
-    });
+  onLoaded() {
+    this.bandits = makeBanditsParty();
+    this.rathianParty = makeRathianParty();
     this.rathianParty.list[0].isUnique = true;
-    this.scene = new MeetingScene(this, this.bandits, this.rathianParty);
-    level.tasks.addTask("startAmbush", 1, 1);
-  }
-  startAmbush() {
-    game.appendToConsole(i18n.t("scenes.rathian-meeting.console-message"));
-    this.bandits.insertIntoZone(level, "bandits-entry");
-    this.scene.initialize();
+    this.scene = new MeetingScene(this);
+    if (!level.hasVariable("prepared")) {
+      level.setVariable("prepared", 1);
+      this.bandits.insertIntoZone(level, "bandits-entry");
+      this.scene.initialize();
+    }
   }
   onZoneExited(zone, object) {
     if (object === game.player

@@ -21,6 +21,13 @@ class Rathian extends Base {
     return game.playerParty.find(character => { return character === this.model }) != null;
   }
 
+  mitigateDamage(damage, type, dealer) {
+    if (!this.isInPlayerParty()) {
+      damage = 1;
+    }
+    return super.mitigateDamage(damage, type, dealer);
+  }
+
   startFollowingPlayer() {
     this.model.statistics.faction = "player";
     this.model.tasks.addUniqueTask("followPlayer", 6123, 0);
