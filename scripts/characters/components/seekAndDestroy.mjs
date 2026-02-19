@@ -4,7 +4,7 @@ export default class {
   constructor(self, targetFinder) {
     this.targetFinder = targetFinder;
     this.defaultTargetSearch = self.searchForNextCombatTarget ? self.searchForNextCombatTarget.bind(self) : undefined;
-    this.defaultShouldOngoingCombat = self.shouldJoinOngoingCombat ? self.shouldJoinOngoingCombat.bind(self) : undefined;
+    this.defaultShouldJoinOngoingCombat = self.shouldJoinOngoingCombat ? self.shouldJoinOngoingCombat.bind(self) : undefined;
     this.model = self.model;
     self[seekAndDestroyIdleTask] = this.onIdle.bind(this);
   }
