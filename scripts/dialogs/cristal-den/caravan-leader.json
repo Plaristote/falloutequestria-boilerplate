@@ -13,7 +13,6 @@
         "ask-join-caravan": {
             "availableHook": "canJoinCaravan",
             "hook": "onJoinCaravan",
-            "state": "join-caravan",
             "text": "ask-join-caravan"
         },
         "caravan-cancel": {
@@ -93,6 +92,7 @@
         "about-joining-answer": {
             "answers": [
             ],
+            "mood": "smile",
             "text": "about-joining-answer"
         },
         "caravan-later": {
@@ -214,12 +214,24 @@
             ],
             "text": "thornhoof-caravan/who-else"
         },
+        "too-many-failures": {
+            "answers": [
+            ],
+            "mood": "angry",
+            "text": "too-many-failures"
+        },
         "way-back": {
             "answers": [
                 "caravan-start",
                 "caravan-cancel"
             ],
             "text": "way-back"
+        },
+        "wipedout": {
+            "answers": [
+            ],
+            "mood": "sad",
+            "text": "wipedout"
         }
     }
 }

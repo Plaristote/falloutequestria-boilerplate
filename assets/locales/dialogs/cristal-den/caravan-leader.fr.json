@@ -1,11 +1,16 @@
 {
     "dialogs": {
         "cristal-den/caravan-leader": {
+            "about-caravan": "La caravane ? C'est quoi ce truc ?",
             "about-caravan-answer": "Ce que nous sommes ? Le sang et les veine du wasteland cristallin, voilà qui on est ! On sécurise les routes commerciales et acheminons les marchandises dans toute les directions !",
+            "about-joining": "Comment je devrais m'y prendre pour rejoindre la caravane ?",
+            "about-joining-answer": "Top ! On est toujours à la recherche de nouveaux sabots pour remplacer les pertes ! On a un bureau au centre-ville: trouve Narbie Valoin et demande-lui de te faire un contrat. C'est lui qui fait tourner cette opération… enfin, le backend de l'opération. C'est nous qui prenons tous les risques, pas vrai ?",
+            "ask-join-caravan": "Oui, quand est-ce que vous partez ?",
             "caravan-cancel": "Pas tout de suite.",
             "caravan-later": "La prochaine caravane décolle Lundi. Nous partirons pour  {{nextCaravanDestination}}.",
             "caravan-start": "Allons-y allonso !",
             "entry": "Hey ! T'es là pour rejoindre la caravane ?",
+            "entry-exit": "Non, très peu pour moi. Ciao.",
             "join-caravan": "Génial ! Nous allons bientôt décoller, en direction de {{nextCaravanDestination}}. Ca t'intéresse ?",
             "ranaway": "<p>Ah ! Te voilà ! On te croyais mort, mais il faut croire que tu nous as laissé tomber dans le feu de l'action ! Des caravaniers sont morts à cause de ta lâcheté ! Tu peux oublier ton salaire, mon pote !</p>",
             "ranawayReward": "<p>Je savais pas si je te reverrai en vie. T'as pris la poudre d'escampette, tu nous as tous mis en danger. Écoute, t'as complété la première partie du trajet avec nous, donc je vais te payer pour ça. Pour le retour, laisse tomber.</p>\n<p><i>Elle te donne {{pendingReward}} capsules.</i></p>",
@@ -20,7 +25,7 @@
             "thornhoof-caravan-go-later": "J'ai encore des préparations à faire. Je reviens bientôt.",
             "thornhoof-caravan-go-now": "On peut y aller.",
             "thornhoof-caravan/accept-approved": "Alors c'est bon. On a un accord. J'vais rassembler quelques fêlés qui aiment courir après la gloire… ou les emmerdes.\nTu veux partir tout de suite, ou je t'attends ?",
-            "thornhoof-caravan/accept-whatever": "Bah, Narbi peut bien s'étouffer dans ses registre. C'est moi qui choisis où je mène mes talons, pas lui.\nEt s'il chouine, j'poserai sur son bureau une pile de capsules et un tonneau de bière… ça le calmera.",
+            "thornhoof-caravan/accept-whatever": "Bah, Narbie peut bien s'étouffer dans ses registre. C'est moi qui choisis où je mène mes talons, pas lui.\nEt s'il chouine, j'poserai sur son bureau une pile de capsules et un tonneau de bière… ça le calmera.",
             "thornhoof-caravan/combat-failed": "Ouais, je sais pas. Tu m'as pas l'air si débrouillard. Je te confierais pas la sécurité de ma caravane dans un milieu aussi hostile.",
             "thornhoof-caravan/combat-success": "T'as l'air d'savoir défendre une caravane. Ok. J'ai déjà plus confiance que si je partais avec des bleus.\nMais même avec toi, y'a encore un détail à régler…\n<br><br>\nIl nous faut le l'approbation de Narbi pour charger une caravane. Il est aux bureaux des caravaniers, dans le centre ville. Tu lui as déjà demandé ?",
             "thornhoof-caravan/entry": "Thornhoof ? Eh ben dis donc, t'as pas froid aux yeux ! Aux dernières nouvelles, leurs voies de ravitallement sont toujours coupées par les pillards. Je suis pas du genre à reculer devant le danger, mais toi t'es sacrément téméraire.",
@@ -33,7 +38,9 @@
             "thunderhoof-1-who-else": "Si on ne s'en charge pas, qui le fera ?",
             "thunderhoof-go-see-narbi": "I understand. I'll go ask at the caravaneers' office.",
             "thunderhoof-try-skip-fargo": "Eh quoi maintenant ? On a besoin d'un formulaire pour partir à l'aventure et sauver des vies ? T'inquiète par pour les gratte-papiers, on m'a promis une grosse récompese pour cette caravane, ils pourront être que content de toi uand ils verront tout le pognon qu'on va ramener !",
-            "way-back": "Nous sommes prêt pour le trajet retour. Préviens-moi quand tu veux y aller."
+            "too-many-failures": "Ouais, ben tu peux toujours courrir. Tu nous as trop souvent causé des problèmes. Nous, il nous faut une escorte sur laquelle on peut compter. Trouve-toi plutôt un job à ta hauteur, minus.",
+            "way-back": "Nous sommes prêt pour le trajet retour. Préviens-moi quand tu veux y aller.",
+            "wipedout": "<p>Alors comme ça tu t'en es sortis ? J'aimerais pouvoir en dire autant du reste de la caravane. Elle a été entièrement décimée.</p>\n<p>On a perdu beaucoup de pognon avec ce voyage. Je peux pas te payer. De toute façon, il reste rien y personne pour justifier de ta participation. Désolé.</p>"
         }
     }
 }

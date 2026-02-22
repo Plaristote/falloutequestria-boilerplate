@@ -25,6 +25,11 @@ export default class extends RandomEncounterComponent {
     super.outdoorsTick(minute);
   }
 
+  onLoaded() {
+    if (this.caravan.hasCaravan)
+      this.caravan.onGameLoaded();
+  }
+
   onExitingLevel() {
     if (this.caravan.hasCaravan)
       this.caravan.onExitingLevel();

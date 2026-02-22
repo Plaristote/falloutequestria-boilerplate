@@ -11,7 +11,7 @@ class Dialog extends ThornhoofCaravanComponent {
       return "thornhoof-caravan/waiting-to-go";
     else if (this.canJoinCaravanOnTheWayBack())
       return "way-back";
-    else if (this.pendingReward > 0 || game.hasVariable("abandonnedCaravan"))
+    else if (this.pendingReward > 0 || game.hasVariable("abandonnedCaravan") || game.hasVariable("wipedOutCaravan"))
       return "reward";
     return "entry";
   }
@@ -29,6 +29,8 @@ class Dialog extends ThornhoofCaravanComponent {
   }
 
   onJoinCaravan() {
+    if (game.script.caravan.failedCaravanCount > 3)
+      return "too-many-failures";
     return game.timeManager.weekDay == 1 ? "join-caravan" : "caravan-later";
   }
 
@@ -46,17 +48,20 @@ class Dialog extends ThornhoofCaravanComponent {
 
   giveReward() {
     const abandonnedCaravan = game.hasVariable("abandonnedCaravan");
+    const wipedOutCaravan = game.hasVariable("wipedOutCaravan");
     let rewarded = this.pendingReward;
 
     this.pendingReward = 0;
-    if (rewarded > 0)
+    if (rewarded > 0 && !wipedOutCaravan)
       game.player.inventory.addItemOfType("bottlecaps", rewarded);
-    game.unsetVariable("abandonnedCaravan");
+    game.unsetVariables(["abandonnedCaravan", "wipedOutCaravan"]);
     if (abandonnedCaravan) {
       if (rewarded > 0)
         return { text: this.dialog.tr("ranawayReward", { pendingReward: rewarded }), mood: "dubious" };
       else
         return { text: this.dialog.tr("ranaway"), mood: "angry" };
+    } else if (wipedOutCaravan) {
+      return { text: this.dialog.tr("wipedout"), mood: "sad" };
     }
     return this.dialog.tr("reward", { pendingReward: rewarded });
   }

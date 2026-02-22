@@ -3,10 +3,17 @@ import {generateHostileEncounter} from "worldmap/hostileEncounters.mjs";
 import {generateEncounterLevel} from "worldmap/encounterLevels.mjs";
 import loadCaravansIntoLevel from "worldmap/caravanEncounterPlacement.mjs";
 
+const caravanPartyName = "caravan-escort";
+
 function shouldHaveEncounter() {
   if (!isJinxed(game.player))
     return getValueFromRange(0, 10) > game.player.statistics.luck;
   return true;
+}
+
+function isCharacterInEscort(character) {
+  return character.objectName.indexOf(caravanPartyName) == 0
+      || character.objectName.indexOf("caravan-leader") == 0;
 }
 
 function computeDistance(pointA, pointB) {
@@ -158,6 +165,14 @@ export default class CaravanProcess {
       game.unsetVariable("caravanPath");
   }
 
+  get failedCaravanCount() {
+    return game.getVariable("failedCaravanCount", 0);
+  }
+
+  set failedCaravanCount(value) {
+    game.setVariable("failedCaravanCount", value);
+  }
+
   get hostileEncounterOver() {
     if (this.currentDuration > 0 && typeof level != "undefined")
       return !level.combat;
@@ -193,13 +208,23 @@ export default class CaravanProcess {
   }
 
   onCaravanStarted() {
+    game.unsetVariables(["abandonnedCaravan", "wipedOutCaravan"]);
+    this.party = this.createCaravanParty();
     this.triggerNextStep();
+  }
+
+  onGameLoaded() {
+    this.loadCaravanParty();
   }
 
   onExitingLevel() {
     if (this.withCaravanLeader)
       game.uniqueCharacterStorage.detachCharacter(this.defaultCaravanLeader);
-    if (this.hostileEncounterOver)
+    if (this.party)
+      this.party.extractFromLevel(level);
+    if (!this.party)
+      this.onCaravanStarted();
+    else if (this.hostileEncounterOver && this.party.list.length > 0)
       this.triggerNextStep();
     else
       this.onCaravanFailure();
@@ -260,27 +285,37 @@ export default class CaravanProcess {
     if (game.quests.getQuest("thornhoof/caravan")?.script?.caravanInProgress)
       return ;
     this.pendingReward += 200; // TODO should vary depending on destination
+    this.deleteCaravanParty();
   }
 
   onHostileEncounter() {
     const parties = generateHostileEncounter();
 
-    parties.unshift(this.caravanPartyData());
     game.randomEncounters.startEncounter(generateEncounterLevel(), {
       "title": "caravan-attack",
       "parties": parties,
-      "callback": () => { loadCaravansIntoLevel(this.caravanCount); }
+      "callback": () => {
+        level.insertPartyIntoZone(this.party, "encounter-zone-2");
+        loadCaravansIntoLevel(this.caravanCount);
+      }
     });
   }
 
   onCaravanFailure() {
+    const remainingEscort = this.party.list.length;
+
     // Thornhoof Caravan Quest handler
     if (game.quests.hasQuest("thornhoof/caravan"))
       game.quests.getQuest("thornhoof/caravan").script.onCaravanFailure();
 
     this.goingTo = null;
     this.currentDuration = 0;
-    game.setVariable("abandonnedCaravan", 1);
+    this.failedCaravanCount++;
+    this.deleteCaravanParty();
+    if (remainingEscort === 0)
+      game.setVariable("wipedOutCaravan", 1);
+    else
+      game.setVariable("abandonnedCaravan", 1);
   }
 
   get xpReward() {
@@ -292,7 +327,9 @@ export default class CaravanProcess {
   }
 
   get withCaravanLeader() {
-    return game.getVariable("withCaravanLeader", 1) == 1;
+    if (game.quests.getQuest("thornhoof/caravan")?.script?.caravanInProgress)
+      return true;
+    return game.getVariable("withCaravanLeader", 0) == 1;
   }
 
   get escortMembersCount() {
@@ -307,31 +344,53 @@ export default class CaravanProcess {
     let character;
 
     if (!this.withCaravanLeader) {
-      character = level.factory().generateCharacter("caravan-leader", "cristal-den/caravan-leader-alt");
-      character.setScript("cristal-den/caravan-leader-alt");
+      if (typeof level != "undefined") {
+        character = level.factory().generateCharacter("caravan-leader", "cristal-den/caravan-leader-alt");
+        character.setScript("cristal-den/caravan-leader-alt");
+      } else {
+        return { "sheet": "cristal-den/caravan-leader-alt", "inventory": inventoryFighter }
+      }
     }
     return character || this.defaultCaravanLeader;
   }
 
-  caravanPartyData() {
-    const object = {
-      "name": "caravan-escort",
-      "members": [],
-      "zone": "encounter-zone-2"
-    };
-
-    if (this.withCaravanLeader)
-      object.members.push(this.defaultCaravanLeader);
-    else
-      object.members.push({}); // TODO: make an alternate caravan leader which can die without consequences in the game story
-    for (let i = 0 ; i < this.escortMembersCount ; ++i) {
-      const characterSheet = i % 2 == 0 ? "cristal-den/caravaneer-A" : "cristal-den/caravaneer-B";
-      object.members.push({
-        "sheet": characterSheet,
-        "inventory": i % 3 == 0 ? inventoryFighter : inventoryShooter
-      });
+  caravanPartyData(members = null) {
+    if (members === null) {
+      members = [];
+      members.push(this.makeCaravanLeaderCharacter());
+      for (let i = 0 ; i < this.escortMembersCount ; ++i) {
+        const characterSheet = i % 2 == 0 ? "cristal-den/caravaneer-A" : "cristal-den/caravaneer-B";
+        members.push({
+          "sheet": characterSheet,
+          "inventory": i % 3 == 0 ? inventoryFighter : inventoryShooter
+        });
+      }
     }
-    return object;
+    return {
+      "name": caravanPartyName,
+      "members": members,
+      "faction": "cristal-den"
+    };
+  }
+
+  createCaravanParty() {
+    return this.party = game.createNpcGroup(this.caravanPartyData());
+  }
+
+  loadCaravanParty() {
+    if (!this.party && typeof level != "undefined") {
+      const members = level.find(isCharacterInEscort);
+
+      if (this.withCaravanLeader && members.indexOf(this.defaultCaravanLeader) < 0)
+        members.push(this.defaultCaravanLeader);
+      this.party = game.createNpcGroup(this.caravanPartyData(members));
+    }
+    return this.party;
+  }
+
+  deleteCaravanParty() {
+    game.deleteNpcGroup(this.party);
+    this.party = null;
   }
 }
 

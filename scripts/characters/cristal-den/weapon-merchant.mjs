@@ -1,10 +1,24 @@
 import {ShopOwner} from "./../shop-owner.mjs";
+import {RoutineComponent} from "../../behaviour/routine.mjs";
+import {callGuards, AlarmLevel} from "../components/alarm.mjs";
 import {overrideBehaviour} from "../../behaviour/override.mjs";
+
+function isInsidePrivateZone(shop, character) {
+  const backroom = shop.findGroup("backroom");
+  const appartments = shop.findGroup("upper-floor");
+
+  return level.isInsideZone(backroom.controlZone, character)
+      || level.isInsideZone(appartments.controlZone, character);
+}
 
 export class WeaponMerchant extends ShopOwner {
   constructor(model) {
     super(model);
     this.model.tasks.addTask("initializeBackdoorWatch", 100, 1);
+    this.routine = new RoutineComponent(this, [
+      { hour: "8", minute: "20", callback: "goToWork" },
+      { hour: "19", minute: "31", callback: "goToSleep" }
+    ]);
   }
 
   get dialog() {
@@ -28,6 +42,27 @@ export class WeaponMerchant extends ShopOwner {
   }
 
   onBackdoorOpening(user) {
-    return !this.shop.script.onShopliftAttempt(user);
+    if (user === game.player)
+      return !this.shop.script.onShopliftAttempt(user);
+  }
+
+  onIntruderDetected(character) {
+    callGuards(this.shop.script.guards, character, AlarmLevel.Arrest);
+  }
+
+  onCharacterDetected(character) {
+    if (character === game.player && isInsidePrivateZone(this.shop, character)) {
+      this.onIntruderDetected(character);
+    } else {
+      super.onCharacterDetected();
+    }
+  }
+
+  onTalkTo() {
+    if (isInsidePrivateZone(this.shop, character)) {
+      this.onIntruderDetected(character);
+      return false;
+    }
+    return super.onTalkTo();
   }
 }

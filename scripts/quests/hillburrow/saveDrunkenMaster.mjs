@@ -31,6 +31,12 @@ export function initializeDrunkenQuest() {
   doctor.script.startDialog("hillburrow/doctor-drunk-quest");
 }
 
+export function healDuringDrunkenQuest() {
+  const quest = game.quests.getQuest(questName);
+
+  quest.setVariable("playerHealed", 1);
+}
+
 export function failDrunkenQuest() {
   const drunk = level.findObject("drunk");
   const quest = game.quests.getQuest(questName);
@@ -55,7 +61,8 @@ export function completeDrunkenQuest() {
 export class SaveDrunkenMaster extends QuestHelper {
   initialize() {
     this.model.location = "hillburrow";
-    this.model.addObjective("find-doctor-bag", this.tr("findDoctorBag"));
+    if (game.player.inventory.count("doctor-bag") === 0)
+      this.model.addObjective("find-doctor-bag", this.tr("findDoctorBag"));
     this.model.addObjective("save-drunken-master", this.tr("saveDrunkenMaster"));
   }
 
@@ -63,5 +70,21 @@ export class SaveDrunkenMaster extends QuestHelper {
     if (item.itemType === "doctor-bag") {
       this.model.completeObjective("find-doctor-bag");
     }
+  }
+
+  getDescription() {
+    let html = `<p>${this.model.tr("description")}</p>`;
+
+    if (this.model.completed) {
+      if (this.model.hasVariable("playerHealed"))
+        html += `<p>${this.model.tr("desc-player-healed")}</p>`;
+      else
+        html += `<p>${this.model.tr("desc-doctor-healed")}</p>`;
+      html += `<p>${this.model.tr("desc-saved")}</p>`;
+    }
+    else if (this.model.failed) {
+      html += `<p>${this.model.tr("desc-failed")}</p>`;
+    }
+    return html;
   }
 }

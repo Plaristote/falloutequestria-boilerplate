@@ -30,7 +30,7 @@ class Dialog extends DialogHelper {
   }
 
   onTalkAboutOldSheriffMurder() {
-    const quest = game.quests.get("hillburrow/oldSheriffMurder");
+    const quest = game.quests.getQuest("hillburrow/oldSheriffMurder");
 
     quest.completeObjective("talkToDoctor");
   }

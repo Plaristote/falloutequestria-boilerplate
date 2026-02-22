@@ -2,7 +2,11 @@
   "quests": {
     "hillburrow/saveDrunkenMaster": {
       "title": "From brawler to downer",
-      "description": "<p>When you came into Hillburrow's clinic, the doctor immediately tasked you with fetching medical supplies needed to save a patient's life. She needs a doctor bag, and says you can find one at the nearby shop.</p>",
+      "description": "When you came into Hillburrow's clinic, the doctor immediately tasked you with fetching medical supplies needed to save a patient's life. She needs a doctor bag, and says you can find one at the nearby shop.",
+      "desc-player-healed": "However, it turns out that you're the best field medic around. You successfully saved the patient using nothing but your own skills. Wow.",
+      "desc-doctor-healed": "Doctor's bag aren't so easy to come by, but you complied, and provided one, in order to save that pony's life. Your generosity won't be forgotten.",
+      "desc-failed": "But you just couldn't bother to spend time on somepony dumb enough to end up this badly wounded. Natural selection prevailed once again.",
+      "desc-saved": "Maybe you could've a chat with that poney. Considering the alcohol stench, you can guess he's a regular at the bar.",
       "findDoctorBag": "Fetch a doctor bag",
       "saveDrunkenMaster": "Save the doctor's patient"
     }

@@ -1,4 +1,4 @@
-import {completeDrunkenQuest} from "../../quests/hillburrow/saveDrunkenMaster.mjs";
+import {completeDrunkenQuest, healDuringDrunkenQuest} from "../../quests/hillburrow/saveDrunkenMaster.mjs";
 
 class Dialog {
   constructor(dialog) {
@@ -38,7 +38,7 @@ class Dialog {
     if (!this.variables.hasVariable("diagnostic")) {
       this.variables.setVariable("diagnostic", 1);
       game.appendToConsole(this.dialog.t("received-diagnostic-reward"));
-      game.player.statis.addExperience(175);
+      game.player.statistics.addExperience(175);
     }
   }
 
@@ -47,6 +47,7 @@ class Dialog {
   }
 
   tryToHeal() {
+    healDuringDrunkenQuest();
     game.asyncAdvanceTime(15, completeDrunkenQuest);
     return "heal-success";
   }
