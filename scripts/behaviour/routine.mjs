@@ -106,6 +106,11 @@ export class RoutineComponent {
     return options[0].routine;
   }
 
+  getCurrentRoutineName() {
+    const routine = this.getCurrentRoutine();
+    return routine.name ? routine.name : routine.callback.name;
+  }
+
   isActiveRoutine(name) {
     const routine = this.getCurrentRoutine();
     return routine.name ? routine.name === name : routine.callback === name;

@@ -3,6 +3,7 @@ import {OwnedStorage} from "./ownedStorage.mjs";
 const refillDelay = 1000*60*60*24*7;
 
 function dropRateFor(item) {
+  if (item.itemType.startsWith("skill-book")) return 0.01;
   switch (item.category) {
   case "ammo": return 0.8;
   case "consommables": return 0.5;
@@ -14,7 +15,7 @@ function createItemPopDescriptor(inventory) {
   const models = [];
   for (let i = 0 ; i < inventory.items.length ; ++i) {
     const item = inventory.items[i];
-    models.push({ itemType: item.itemType, quantity: item.quantity });
+    models.push({ itemType: item.itemType, quantity: item.quantity, dropRate: dropRateFor(item) });
   }
   return models;
 }
@@ -36,7 +37,9 @@ export class ShopShelf extends OwnedStorage {
         let popQuantity = 0;
 
         for (let i = 0 ; i < item.quantity && popQuantity < maxPop ; ++i) {
-          if (Math.random() > 0.4)
+          const dropRate = item.dropRate || 0.4;
+
+          if (Math.random() < dropRate)
             popQuantity++;
         }
         this.model.inventory.addItemOfType(item.itemType, popQuantity);
@@ -62,9 +65,9 @@ export class ShopShelf extends OwnedStorage {
   }
 
   get shop() {
-    var parent = this.model.parent;
+    let parent = this.model.parent;
 
-    while (parent && parent.script && !parent.script.isShop)
+    while (parent && (!parent.script || !parent.script.isShop))
       parent = parent.parent;
     return parent;
   }

@@ -30,10 +30,6 @@ class RoamTask {
     this.model.tasks.removeTask("roamTask");
   }
 
-  range(value) {
-    this.model.setVariable("roamRange", value);
-  }
-
   interval(min, max) {
     this.model.setVariable("roamMin", min);
     this.model.setVariable("roamMax", max);
@@ -44,7 +40,7 @@ class RoamTask {
     const maxInterval = this.model.getVariable("roamMax");
     const interval    = randomInterval(minInterval * 1000, maxInterval * 1000);
 
-    this.model.tasks.addTask("_roamTask", Math.floor(interval), 1);
+    this.model.tasks.addUniqueTask("_roamTask", Math.floor(interval), 1);
   }
 
   exists() {
@@ -58,13 +54,12 @@ class RoamTask {
   run() {
     if (this.exists()) {
       if (!level.isInCombat(this.model) && this.model.actionQueue.isEmpty() && this.prepared()) {
-        const range = this.model.getVariable("roamRange");
         const center = {
           x: this.model.getVariable("roamX"),
           y: this.model.getVariable("roamY")
         };
 
-        this.model.actionQueue.pushReachNear(center.x, center.y, range);
+        this.model.actionQueue.pushReachNear(center.x, center.y, this.range);
         this.model.actionQueue.start();
       }
       this.schedule();
@@ -73,14 +68,14 @@ class RoamTask {
 }
 
 function prepareRoamTask(range, minInterval = 5, maxInterval = 15) {
-  this.model.setVariable("roamRange", range);
   this.roamTask = new RoamTask(this);
+  this.roamTask.range = range;
   if (!this.roamTask.exists()) {
     this.roamTask.prepare(range, minInterval, maxInterval);
     this.roamTask.start();
   }
   else {
-    this.roamTask.range(range);
+    this.roamTask.range = range;
     this.roamTask.interval(minInterval, maxInterval);
   }
 }
@@ -88,7 +83,6 @@ function prepareRoamTask(range, minInterval = 5, maxInterval = 15) {
 function roamTask() {
   this.roamTask.run();
 }
-
 
 export function injectRoamTask(object) {
   const onDiedBackup = object.onDied;
