@@ -8,6 +8,7 @@ export class Grenade extends WeaponBehaviour {
     this.zoneTarget = true;
     this.zoneSize = 1;
     this.useModes = ["throw"];
+    this.isExplosive = true;
   }
 
   attemptToUseAt(x, y) {

@@ -10,6 +10,7 @@ export class Dynamite extends ThrowableBehaviour {
     super(model);
     this.useModes = ["use", "throw"];
     this.trappedComponent = new TrappedComponent(this);
+    this.isExplosive = true;
   }
 
   initialize() {
