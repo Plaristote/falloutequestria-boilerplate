@@ -6,9 +6,13 @@ export class ShopOwner extends CharacterBehaviour {
   }
 
   initialize() {
-    this.model.setVariable("workPosition", JSON.stringify({
-      x: this.model.position.x, y: this.model.position.y, z: this.model.floor
-    }));
+    this.initializeWorkPosition();
+  }
+
+  initializeWorkPosition() {
+    const position = { x: this.model.position.x, y: this.model.position.y, z: this.model.floor };
+    this.model.setVariable("workPosition", JSON.stringify(position));
+    return position;
   }
 
   get shop() {
@@ -16,7 +20,11 @@ export class ShopOwner extends CharacterBehaviour {
   }
 
   get workPosition() {
-    return JSON.parse(this.model.getVariable("workPosition"));
+    try {
+      return JSON.parse(this.model.getVariable("workPosition"));
+    } catch (err) {
+      return this.initializeWorkPosition();
+    }
   }
 
   goToWork() {

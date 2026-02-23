@@ -23,11 +23,7 @@ export class AlarmComponent {
     this.parent.receiveAlarmSignal = this.receiveAlarmSignal.bind(this);
     this.parent.arrestDialogState = "town-guard";
     this.defaultShouldJoinOngoingCombat = parent.shouldJoinOngoingCombat ? parent.shouldJoinOngoingCombat.bind(parent) : undefined;
-    parent.shouldJoinOngoingCombat = function() {
-      parent.combatTarget = self.target;
-      return self.alarmLevel == AlarmLevel.ShootOnSight
-         || (self.defaultShouldJoinOngoingCombat && self.defaultShouldJoinOngoingCombat());
-    }
+    parent.shouldJoinOngoingCombat = function() { return self.shouldJoinOngoingCombat(); };
   }
 
   get model() { return this.parent.model; }
@@ -51,6 +47,12 @@ export class AlarmComponent {
   set targetPath(value) { this.model.setVariable("alarmTarget", value); }
   get target() { return level.findObject(this.targetPath); }
   get isActive() { return this.model.tasks.hasTask("alarmTask"); }
+
+  shouldJoinOngoingCombat() {
+    this.parent.combatTarget = this.target;
+    return this.alarmLevel == AlarmLevel.ShootOnSight
+      || (this.defaultShouldJoinOngoingCombat && this.defaultShouldJoinOngoingCombat());
+  }
 
   alarmTask() {
     if (this.model.actionQueue.isEmpty())
