@@ -1,16 +1,17 @@
 function initializePlayerInventory() {
   const proficiencies = game.player.statistics.proficiencies;
+  const barterMultiplier = proficiencies.indexOf("barter") >= 0 ? 1.5 : 1;
 
   game.player.inventory.addItemOfType("stable-suit", 1);
-  game.player.inventory.addItemOfType("health-potion", 2);
+  game.player.inventory.addItemOfType("health-potion", Math.ceil(2 * barterMultiplier));
   game.player.inventory.equipItem(game.player.inventory.items[0], "armor");
-  if (proficiencies.indexOf("smallGuns") >= 0) {
+  if (proficiencies.indexOf("smallGuns") >= 0 || proficiencies.indexOf("bigGuns") >= 0) {
     game.player.inventory.addItemOfType("mouthgun");
-    game.player.inventory.addItemOfType("9mm-ammo", 20);
+    game.player.inventory.addItemOfType("9mm-ammo", Math.ceil(20 * barterMultiplier));
   } else {
     game.player.inventory.addItemOfType("combat-knife");
   }
-  if (proficiencies.indexOf("lockpick") >= 0) {
+  if (proficiencies.indexOf("lockpick") >= 0 || proficiencies.indexOf("sneak") >= 0 || proficiencies.indexOf("steal") >= 0) {
     game.player.inventory.addItemOfType("lockpicking-kit");
   }
   if (proficiencies.indexOf("medicine") >= 0) {
