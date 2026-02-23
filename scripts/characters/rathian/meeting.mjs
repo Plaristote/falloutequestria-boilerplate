@@ -81,7 +81,7 @@ class Rathian extends Base {
   removeRathian() {
     console.log("TRIGGER REMOVAL");
     if (this.talkedOnArrival)
-      this.model.tasks.addTask("goToLevelExit");
+      this.model.tasks.addTask("goToLevelExit", 1000, 1);
     else
       this.model.tasks.addTask("removeRathian", 1500, 1);
   }
@@ -97,7 +97,7 @@ class Rathian extends Base {
     actions.pushScript({
       onTrigger: () => game.uniqueCharacterStorage.detachCharacter(this.model),
       onCancel: reschedule
-    };
+    });
     if (actions.start())
       console.log("Rathian moving towards level exit");
     else
