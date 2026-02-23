@@ -4,7 +4,8 @@ import {
   hasFoundDisappearedPonies,
   onDisappearedPoniesFound,
   captiveReleaseAuthorized,
-  areCaptorsDead
+  areCaptorsDead,
+  skipScavengerRansom
 } from "./junkvilleDumpsDisappeared.mjs";
 import {getValueFromRange} from "../behaviour/random.mjs";
 
@@ -83,6 +84,7 @@ function junkvilleCombattantTemplate() {
 }
 
 export function startUndergroundBattle() {
+  skipScavengerRansom();
   requireQuest(questName).setVariable("battleState", 1);
   game.setVariable("junkvilleUndergroundBattle", true);
   level.tasks.addTask("goToUndergroundBattle", 1500, 1);

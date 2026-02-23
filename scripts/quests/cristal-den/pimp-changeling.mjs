@@ -74,6 +74,17 @@ export default class PimpChangeling extends QuestHelper {
     }
   }
 
+  get trapEnabled() {
+    return this.model.hasVariable("trapEnabled");
+  }
+
+  set trapEnabled(value) {
+    if (!this.model.hasVariable("trapEnabled") && value) {
+      this.model.setVariable("trapEnabled", 1);
+      this.model.addObjective("lead-to-trap");
+    }
+  }
+
   get timeHasPassedSincePimpsPassing() {
     const timestamp = this.model.getVariable("killedPimpAt", 0);
 

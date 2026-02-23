@@ -156,6 +156,7 @@
         "on-help-explosive": {
             "answers": [
             ],
+            "hook": "startTrap",
             "text": "on-help-explosive"
         },
         "on-insulted": {

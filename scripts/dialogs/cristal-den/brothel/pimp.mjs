@@ -20,18 +20,18 @@ class Dialog {
   }
 
   startFight() {
-    const position = this.dialog.npc.position;
-    const guards = [level.findObject("brothel.staff#1"), level.findObject("brothel.staff#2")];
-
-    guards.forEach(guard => {
-      if (!guard.hasVariable("distracted")) {
-        guard.script.alarmComponent.receiveAlarmSignal(position.x, position.y, game.player, AlarmLevel.ShootOnSight);
-      }
-    });
-    this.dialog.npc.setAsEnemy(game.player);
+    this.dialog.npc.script.callGuardsOn(game.player);
     if (this.canAttackWithPetiole) {
       this.dialog.npc.setAsEnemy(level.findObject("brothel.petiole"));
     }
+  }
+
+  giveDenounciationReward() {
+    game.player.inventory.addItemOfType("bottlecaps", 350);
+  }
+
+  triggerDenounciationRoute() {
+    this.dialog.npc.script.startLookForPetiole();
   }
 
   get changelingQuest() {
@@ -40,11 +40,19 @@ class Dialog {
 
   get hasChangelingQuest() {
     const quest = this.changelingQuest;
-    return quest != null && quest.hasObjective("killPimp");
+    return quest != null && quest.hasObjective("killPimp") && !quest.failed;
   }
 
   get canAttackWithPetiole() {
     return this.hasChangelingQuest && this.changelingQuest.script.isWithPetiole === true;
+  }
+
+  get canBarterDenounciation() {
+    return game.player.statistics.charisma > 6 || game.player.statistics.speech > 65 || game.player.statistics.barter >= 45;
+  }
+
+  get canBackpedalDenounciation() {
+    return game.player.statistics.charisma > 6 || game.player.statistics.speech > 45;
   }
 }
 

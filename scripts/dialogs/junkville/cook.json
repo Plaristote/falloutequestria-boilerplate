@@ -717,6 +717,7 @@
                 "scavengers-tell-theyre-dead",
                 "scavenger-report-cancel"
             ],
+            "hook": "scavengerReport",
             "text": "scavengers/report"
         },
         "scavengers/report-freed": {
@@ -732,6 +733,7 @@
                 "scavenger-ransom-more-time",
                 "scavenger-ransom-give-up"
             ],
+            "hook": "scavengerReport",
             "text": "scavengers/report-ransom"
         },
         "town-index": {

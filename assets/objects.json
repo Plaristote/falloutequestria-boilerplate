@@ -540,6 +540,51 @@
         "value": 12,
         "weight": 1
     },
+    "spell-book-frost-armor": {
+        "icon": "spellbook.png",
+        "isGroupable": true,
+        "scriptName": "spellbook.mjs",
+        "sprite": "book",
+        "type": "consommables",
+        "value": 650,
+        "weight": 2
+    },
+    "spell-book-heal": {
+        "icon": "spellbook.png",
+        "isGroupable": true,
+        "scriptName": "spellbook.mjs",
+        "sprite": "book",
+        "type": "consommables",
+        "value": 350,
+        "weight": 3
+    },
+    "spell-book-purification": {
+        "icon": "spellbook.png",
+        "isGroupable": true,
+        "scriptName": "spellbook.mjs",
+        "sprite": "book",
+        "type": "consommables",
+        "value": 150,
+        "weight": 2
+    },
+    "spell-book-sleep": {
+        "icon": "spellbook.png",
+        "isGroupable": true,
+        "scriptName": "spellbook.mjs",
+        "sprite": "book",
+        "type": "consommables",
+        "value": 1650,
+        "weight": 3
+    },
+    "spell-book-teleport": {
+        "icon": "spellbook.png",
+        "isGroupable": true,
+        "scriptName": "spellbook.mjs",
+        "sprite": "book",
+        "type": "consommables",
+        "value": 2500,
+        "weight": 3
+    },
     "stable-armor": {
         "icon": "stable-suit.png",
         "isGroupable": true,

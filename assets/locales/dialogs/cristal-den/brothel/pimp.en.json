@@ -2,6 +2,18 @@
     "dialogs": {
         "cristal-den/brothel/pimp": {
             "about-activity": "What any connoisseur of the flesh does. I manage, I make business and I print money.",
+            "about-killing-bartering": "How about you pay me now?",
+            "about-killing-denouncing": "She is close by, waiting right next to the building.",
+            "about-killing-followup": "I know exactly who is currently planing your death and where she is.",
+            "about-killing-forget-it": "Nevermind",
+            "about-killing-forget-it#3": "I was thinking about dealing with her myself. She is an inconvenience for myself, too.",
+            "about-killing-fuck-off": "Fuck off.",
+            "about-killing/backpedalled": "In that case you could just ask for my help. However, who am I to stand in your vendetta.",
+            "about-killing/backpedalling": "You are not going off the hook that easy after telling me something that interesting. I insist.",
+            "about-killing/bartered": "You drive a hard bargain. Here. Now let’s get that bloody spy.",
+            "about-killing/entry": "There are many that want that. That isn't exactly a surprise.",
+            "about-killing/fucked-off": "Now that isn’t how you talk to a Potiok. Guards, teach this ruffian a lesson.",
+            "about-killing/state#3": "Now that's quite welcome. Please do tell. There will even be a boon for you.",
             "about-self": "What question is that? You walk into this building, this district, and you don’t know who owns it? Let me enlighten you, mare/stallion. I am Tout Spruiker Potiok.",
             "ask-about-activity": "What exactly do you do here?",
             "ask-about-him": "Who are you ?",

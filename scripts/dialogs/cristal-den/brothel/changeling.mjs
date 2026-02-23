@@ -54,6 +54,19 @@ export default class Dialog {
       return { textKey: "about-help-agan" };
   }
 
+  startTrap() {
+    const quest = this.dialog.npc.script.quest;
+
+    for (let i = 0 ; i < game.player.inventory.items.length ; ++i) {
+      const item = game.player.inventory.items[i];
+      if (item.script?.isExplosive) {
+        game.player.inventory.destroyItem(item, 1);
+        break ;
+      }
+    }
+    quest.script.trapEnabled = true;
+  }
+
   startAssault() {
     const quest = this.dialog.npc.script.quest;
     quest.script.isWithPetiole = true;
@@ -114,6 +127,10 @@ export default class Dialog {
   }
 
   get canPrepareTrap() {
-    return false; // TODO check for explosives in inventory
+    for (let i = 0 ; i < game.player.inventory.items.length ; ++i) {
+      if (game.player.inventory.items[i]?.script?.isExplosive)
+        return true;
+    }
+    return false;
   }
 }

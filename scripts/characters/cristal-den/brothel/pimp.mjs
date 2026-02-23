@@ -1,6 +1,8 @@
 import {CharacterBehaviour} from "./../../character.mjs";
+import {AlarmLevel} from "../../components/alarm.mjs";
 import {RoutineComponent} from "../../../behaviour/routine.mjs";
 import {QuestFlags, requireQuest} from "../../../quests/helpers.mjs";
+import {explode} from "../../../behaviour/explosion.mjs";
 
 const routine = [
   { hour: "4",  name: "night",  callback: "runSleepRoutine" },
@@ -112,5 +114,69 @@ export default class Pimp extends CharacterBehaviour {
     }
     else
       this.model.tasks.addUniqueTask("runPatrol", 5000, 1);
+  }
+
+  callGuardsOn(target) {
+    const position = this.model.position;
+    const guards = [level.findObject("brothel.staff#1"), level.findObject("brothel.staff#2")];
+
+    guards.forEach(guard => {
+      if (!guard.hasVariable("distracted")) {
+        console.log("ALARM SIGNAL SENT TO GUARD", target, "level=", AlarmLevel.ShootOnSight);
+        guard.script.alarmComponent.receiveAlarmSignal(position.x, position.y, 0, target, AlarmLevel.ShootOnSight);
+      }
+    });
+    this.model.setAsEnemy(target);
+  }
+
+  startLookForPetiole() {
+    this.routineComponent.disablePersistentRoutine();
+    this.model.tasks.addUniqueTask("runLookForPetiole", 500, 1);
+  }
+
+  startHuntingPetiole() {
+    this.model.tasks.addUniqueTask("runHuntingPetiole", 500, 1);
+  }
+
+  runLookForPetiole() {
+    const actions = this.model.actionQueue;
+    const dumpster = level.findObject("brothel.dumpster");
+
+    actions.pushReachCase(11, 1, 2);
+    actions.pushReachCase(3, 1, 1);
+    actions.pushScript({
+      onTrigger: () => { this.triggerPetioleTrap(); },
+      onCancel: () => { this.model.tasks.addUniqueTask("runLookForPetiole", 500, 1); }
+    });
+    actions.start();
+  }
+
+  runHuntingPetiole() {
+    const actions = this.model.actionQueue;
+    const petiole = level.findObject("brothel.petiole");
+    const onFinished = () => { this.routineComponent.enablePersistentRoutine(); }
+
+    if (petiole) {
+      actions.pushReach(petiole, 3);
+      actions.pushScript({
+        onTrigger: () => {
+          this.callGuardsOn(petiole);
+          onFinished();
+        },
+        onCancel: () => { this.model.tasks.addUniqueTask("runHuntingPetiole", 1000, 1); }
+      });
+      actions.start();
+    } else {
+      onFinished();
+    }
+  }
+
+  triggerPetioleTrap() {
+    const quest = requireQuest("cristal-den/pimp-changeling");
+    if (quest.script.trapEnabled) {
+      explode({ x: this.model.position.x, y: this.model.position.y, z: 0 }, 1, 50, this.model, null) ;
+    } else {
+      this.startHuntingPetiole();
+    }
   }
 }

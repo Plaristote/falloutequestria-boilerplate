@@ -1,5 +1,42 @@
 {
     "answers": {
+        "about-killing-backpedalled-followup": {
+            "state": "entry",
+            "text": "exit"
+        },
+        "about-killing-bartering": {
+            "availableHook": "denouncePetioleCanBarter",
+            "state": "about-killing/bartered",
+            "text": "about-killing-bartering"
+        },
+        "about-killing-denouncing": {
+            "hook": "triggerDenounciationRoute",
+            "text": "about-killing-denouncing"
+        },
+        "about-killing-followup": {
+            "state": "about-killing/state#3",
+            "text": "about-killing-followup"
+        },
+        "about-killing-forget-it": {
+            "state": "entry",
+            "text": "about-killing-forget-it"
+        },
+        "about-killing-forget-it#2": {
+            "state": "about-killing/backpedalling",
+            "text": "about-killing-forget-it"
+        },
+        "about-killing-forget-it#3": {
+            "availableHook": "canBackpedalDenounciation",
+            "text": "about-killing-forget-it#3"
+        },
+        "about-killing-fuck-off": {
+            "state": "about-killing/fucked-off",
+            "text": "about-killing-fuck-off"
+        },
+        "about-killing-trigger": {
+            "hook": "triggerDenounciationRoute",
+            "text": "exit"
+        },
         "ask-about-activity": {
             "state": "entry",
             "text": "ask-about-activity"
@@ -23,6 +60,7 @@
         },
         "talk-about-changeling-quest": {
             "availableHook": "hasChangelingQuest",
+            "state": "about-killing/entry",
             "text": "talk-about-changeling-quest"
         }
     },
@@ -32,6 +70,53 @@
             "answers": [
             ],
             "text": "about-activity"
+        },
+        "about-killing/backpedalled": {
+            "answers": [
+                "about-killing-backpedalled-followup"
+            ],
+            "mood": "laugh",
+            "text": "about-killing/backpedalled"
+        },
+        "about-killing/backpedalling": {
+            "answers": [
+                "about-killing-forget-it#3",
+                "about-killing-fuck-off"
+            ],
+            "mood": "cocky",
+            "text": "about-killing/backpedalling"
+        },
+        "about-killing/bartered": {
+            "answers": [
+                "about-killing-trigger"
+            ],
+            "hook": "giveDenounciationReward",
+            "mood": "smile",
+            "text": "about-killing/bartered"
+        },
+        "about-killing/entry": {
+            "answers": [
+                "about-killing-followup",
+                "about-killing-forget-it"
+            ],
+            "mood": "smile",
+            "text": "about-killing/entry"
+        },
+        "about-killing/fucked-off": {
+            "answers": [
+            ],
+            "hook": "startFight",
+            "mood": "angry",
+            "text": "about-killing/fucked-off"
+        },
+        "about-killing/state#3": {
+            "answers": [
+                "about-killing-bartering",
+                "about-killing-denouncing",
+                "about-killing-forget-it#2"
+            ],
+            "mood": "dubious",
+            "text": "about-killing/state#3"
         },
         "about-self": {
             "answers": [

@@ -89,7 +89,7 @@ export class JunkvilleDumpsDisappeared extends QuestHelper {
   }
 
   get ransomActive() {
-    return this.model.hasVariable("ransom") && this.model.getVariable("ransom") == "normal";
+    return this.model.getVariable("ransom", 0) == "normal" && !this.ransomSkipped;
   }
 
   get ransomSkipped() {
@@ -108,6 +108,14 @@ export class JunkvilleDumpsDisappeared extends QuestHelper {
     this.model.setVariable("woundedDogs", value);
     if (value <= 0)
       this.model.completeObjective("healWoundedDogs");
+  }
+
+  get heardAboutQuestFromRandy() {
+    return this.model.hasVariable("headFromRandy");
+  }
+
+  onHeardAboutQuestFromRandy() {
+    this.model.setVariable("heardFromRandy", 1);
   }
 
   canInventoryProvideRequiredSupplies(inventory) {

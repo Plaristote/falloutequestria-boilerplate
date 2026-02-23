@@ -40,10 +40,13 @@ class Dialog extends Innkeeper {
   }
   
   jobs() {
-    if (this.availableHauntedHeapQuest())
+    if (this.availableHauntedHeapQuest()) {
+      requireQuest("junkvilleDumpsDisappeared", QuestFlags.HiddenQuest).script.onHeardAboutQuestFromRandy();
       return this.dialog.t("job-haunted-heap");
-    if (isHelpfulQuestAvailable())
+    }
+    if (isHelpfulQuestAvailable()) {
       return this.dialog.t("job-find-helpful");
+    }
     return this.dialog.t("no-jobs");
   }
 
@@ -238,7 +241,6 @@ class Dialog extends Innkeeper {
     this.dialog.npc.tasks.addTask("headTowardsBattle", 1500, 0);
   }
 
-
   // NEW VERSION SCAVENGER
   onScavengerReport() {
     if (this.hasFreedScavengers()) {
@@ -248,6 +250,11 @@ class Dialog extends Innkeeper {
       return "scavengers/report-ransom"
     }
     return "scavengers/report";
+  }
+
+  scavengerReport() {
+    if (!this.junkvilleDumpsDisappeared.script.heardAboutQuestFromRandy)
+      return { textKey: "scavengers/report-alt-surprised" };
   }
 
   scavengersKnowLocation() {
