@@ -1,5 +1,6 @@
 import {canWarnPotioksAboutBibin} from "../../../quests/hillburrow/sabotage.mjs";
 import {hasPotiokSpyQuest} from "../../../quests/cristal-den/potioks-spy.mjs";
+import {RanchAccess} from "../../../levels/cristal-den-ranch.mjs";
 
 class Dialog {
   constructor(dialog) {
@@ -23,14 +24,18 @@ class Dialog {
 
     if (result != "on-matriarch-dead")
       this.matriarch.setVariable("sabotagePrompt", 1);
-    this.dialog.npc.script.accessGranted = true;
+    level.script.grantAccess(RanchAccess.MatriarchOffice);
     return "on-sent-by-bitty";
   }
 
   matriarchWillReceiveAboutJob() {
-    if (!this.matriarch || !this.matriarch.isAlive())
+    if (!this.matriarch || !this.matriarch.isAlive()) {
+      this.dialog.npc.script.onMatriarchDeathNoticed();
       return "on-matriarch-dead";
-    this.dialog.npc.script.accessGranted = true;
+    } else {
+      this.matriarch.setVariable("jobPrompt", 1);
+    }
+    level.script.grantAccess(RanchAccess.MatriarchOffice);
     return "on-sent-by-bitty";
   }
 

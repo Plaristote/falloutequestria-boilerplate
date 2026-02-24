@@ -1243,6 +1243,12 @@
                  "id":39,
                  "name":"to-worldmap",
                  "opacity":1,
+                 "properties":[
+                        {
+                         "name":"type",
+                         "type":"string",
+                         "value":"exit"
+                        }],
                  "type":"tilelayer",
                  "visible":true,
                  "width":40,

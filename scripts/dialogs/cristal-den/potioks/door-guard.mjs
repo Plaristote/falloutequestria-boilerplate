@@ -1,4 +1,5 @@
 import {canWarnPotioksAboutBibin} from "../../../quests/hillburrow/sabotage.mjs";
+import {RanchAccess} from "../../../levels/cristal-den-ranch.mjs";
 
 class Dialog {
   constructor(dialog) {
@@ -6,7 +7,7 @@ class Dialog {
   }
 
   getEntryPoint() {
-    if (level.getVariable("access", 0) > 0)
+    if (level.script.ranchAccess > RanchAccess.None)
       return "prompt-with-access";
     return "prompt";
   }
@@ -16,12 +17,11 @@ class Dialog {
   }
 
   giveFullAccess() {
-    level.setVariable("access", 2);
+    level.script.grantAccess(RanchAccess.Bunker);
   }
 
   giveWorkAccess() {
-    if (level.getVariable("access", 0) == 0)
-      level.setVariable("access", 1);
+    level.script.grantAccess(RanchAccess.Entrance);
   }
 }
 

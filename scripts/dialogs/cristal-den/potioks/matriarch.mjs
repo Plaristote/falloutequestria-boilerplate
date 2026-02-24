@@ -8,6 +8,7 @@ import {
   hasPotiokSpyQuest,
   foundPotiokSpy
 } from "../../../quests/cristal-den/potioks-spy.mjs";
+import {RanchAccess} from "../../../levels/cristal-den-ranch.mjs";
 import {skillContest} from "../../../cmap/helpers/checks.mjs";
 
 class Dialog {
@@ -105,7 +106,7 @@ class Dialog {
   }
 
   sneakJobHasFoundSpy() {
-    return this.sneakJobQuest.isObjectiveCompleted("findSpy");
+    return this.sneakJobQuest && this.sneakJobQuest.isObjectiveCompleted("findSpy");
   }
 
   sneakJobSpyFoundAndAlive() {
