@@ -16,7 +16,7 @@ export default class extends QuestHelper {
   }
 
   getDescription() {
-    let text = this.tr("description", { requiredBottles: this.requiredBottles });
+    let text = this.tr("description", { requiredBooks: this.requiredBooks });
 
     if (this.model.completed)
       text += `<p>${this.tr("desc-done")}</p>`;
@@ -29,12 +29,15 @@ export default class extends QuestHelper {
   }
 
   bookCount() {
-    let count = 0;
-    for (let i = 0 ; i < game.player.inventory.items.length ; ++i) {
-      if (isBookItem(game.player.inventory.items[i]))
-        count += game.player.inventory.items[i].quantity;
+    if (!this.model.isObjectiveCompleted("give")) {
+      let count = 0;
+      for (let i = 0 ; i < game.player.inventory.items.length ; ++i) {
+        if (isBookItem(game.player.inventory.items[i]))
+          count += game.player.inventory.items[i].quantity;
+      }
+      return count;
     }
-    return count;
+    return this.requiredBooks;
   }
 
   hasEnoughBooks() {
@@ -45,9 +48,9 @@ export default class extends QuestHelper {
     return [
       {
         label: this.tr("objective-books", {count: this.requiredBooks, currentCount: this.bookCount()}),
-        success: this.model.isObjectiveCompleted("books")
+        success: this.model.isObjectiveCompleted("books") || this.model.isObjectiveCompleted("give")
       },
-      {label: this.tr("give-bottles-to-library"), success: this.model.isObjectiveCompleted("give")}
+      {label: this.tr("give-books-to-library"), success: this.model.isObjectiveCompleted("give")}
     ];
   }
 
