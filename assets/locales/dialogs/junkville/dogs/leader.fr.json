@@ -1,11 +1,16 @@
 {
     "dialogs": {
         "junkville/dogs/leader": {
+            "about-back-to-entry": "Je vois. J'ai autre chose à demander.",
+            "about-dogs/diamonds": "<p>Nous consommons les diamants.</p>\n<p>Ils sont beaux. Brillants. Succulents. Certaines des gemmes, nous les mangeons. D'autres ont des usages différents.</p>\n<p>Longtemps avant, nous en échangions avec les poneys. Le passé nous a appris que la confiance ne doit pas se donner facilement.</p>",
+            "about-dogs/entry": "<p>Nous sommes les chiens à diamant. Votre race nous appelait par ce nom, longtemps de ça.</p>\n<p>Nous sommes des profondeurs. Nous creusons les meilleures roches et la terre la plus fraîche, pour créer des refuges ou le soleil ne peut pas aveugler.</p>",
+            "about-why-diamond": "Pourquoi parler de chiens à « diamant » ?",
             "accept-scavenger-trade": "Très bien. Je reviendrais avec les ressources dont vous avez besoin.",
             "ask-about-dogs": "Qui êtes-vous, exactement ?",
             "ask-about-spinel": "Les Chiens à Diamant s'y connaissent en cristaux, non ? Je cherche une spinelle electromagique.",
             "bring-up-negociations": "À propos des négociations avec la surface…",
             "came-seeking-scavengers": "Je ne cherche pas d'ennuis. Je suis venu enquêter sur des disparitions près de la décharge.",
+            "entry": "Hmm ?",
             "first-meeting": "Voilà qui est rare… un poney qui ne court pas ou ne hurle pas. Tu es entré dans notre tanière sans invitation. Parle, maintenant : que\nviens-tu chercher ici, dans les entrailles oubliées ? ",
             "go-to-the-pen": "Non. Non, j'aime bien rester en vie. Allons rejoindre les fouilleurs !",
             "intimidation-free-scavengers": "Libérez les fouilleurs, ou ça va mal se passer.",
@@ -27,9 +32,9 @@
             "negociations/entry": "Tu as tenu parole. Mes frères et sœurs se relèvent, et il n'y a pas eu de sang. C'est plus que je ne pouvais espérer.\n<br><br>\nIl est temps de penser à l'avenir. J'aimerais… ouvrir le dialogue avec ceux de la surface. Je veux que tu sois notre messager.",
             "negociations/entry-alt": "Des nouvelles de la surface ?",
             "negociations/hiding": "Tu as peut-être raison. Nous avons survécu des générations, isolés dans ces tunnels… peut-être vaut-il mieux préserver notre mode de vie pour le moment, et attendre que la surface devienne plus pacifique.",
-            "negociations/on-accepted": "Merci. Dis-leur que nous ne voulons pas la guerre. Dis-leur que nous avons des choses à offrir. Je sais que ce ne sera pas facile, mais si tu parles en notre nom, peut-être qu'ils écouteront.",
+            "negociations/on-accepted": "Merci. Dis-leur que nous ne voulons que paix et sécurité. Les chiens ne donnent pas facilement leur confiance, et ça ne les aidera pas à nous donner la leur. Je sais que ce ne sera pas facile, mais si tu parles en notre nom, peut-être qu'ils écouteront.",
             "negociations/on-junkville-reject": "Je vois… j'avais peur que les choses tournent ainsi. J'espère qu'on pourra vivre côte à côte, sans autres incidents… on verra bien.<br>\nMerci pour tes efforts. Tu n'es pas comme les autres surfaceux. Tu es digne de confiance. Je m'en souviendrais.",
-            "negociations/pushed-to-hide": "Tu crois qu'on devrait continuer à se terrer ? Vivre dans l'ombre, comme des bêtes, pendant que la surface oublie même qu'on existe ?",
+            "negociations/pushed-to-hide": "Tu crois qu'on devrait continuer à se terrer ? Même lorsque les surfaceux ont des choses dont nous avons tant besoins, et nous celles qu'ils désirent tant ?",
             "negociations/skepticism": "Je sais. Mais tout ce que j'ai vu depuis que tu es descendu ici, c'est que certains poneys sont capables de penser autrement. Tu m'as prouvé ça.",
             "negociations/why-dolly-hide": "Dolly et les autres se focalisent sur les fantômes du passés. Nous ne pouvons pas laisser le passer nous déterminer éternellement. Il est temps de tourner la page.",
             "negociations/why-not-wait": "Et s'ils se préparent à nous déloger ? Que se passe-t-il, si un fouilleur s'introduit dans un tunnel et qu'une altercation éclate avec un de mes chiens ? Nous devons trouver un accord. Le moment, c'est maintenant.",

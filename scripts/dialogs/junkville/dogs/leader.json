@@ -1,10 +1,18 @@
 {
     "answers": {
+        "about-back-to-entry": {
+            "state": "entry",
+            "text": "about-back-to-entry"
+        },
+        "about-why-diamond": {
+            "state": "about-dogs/diamonds",
+            "text": "about-why-diamond"
+        },
         "accept-scavenger-trade": {
             "text": "accept-scavenger-trade"
         },
         "ask-about-dogs": {
-            "state": "about-dogs",
+            "state": "about-dogs/entry",
             "text": "ask-about-dogs"
         },
         "ask-about-spinel": {
@@ -147,10 +155,18 @@
     },
     "entryPoint": "first-meeting",
     "states": {
-        "about-dogs": {
+        "about-dogs/diamonds": {
             "answers": [
+                "about-back-to-entry"
             ],
-            "text": "about-dogs"
+            "text": "about-dogs/diamonds"
+        },
+        "about-dogs/entry": {
+            "answers": [
+                "about-why-diamond",
+                "about-back-to-entry"
+            ],
+            "text": "about-dogs/entry"
         },
         "entry": {
             "answers": [
