@@ -247,7 +247,6 @@
                 "computer-room-log-access",
                 "leave-terminal"
             ],
-            "hook": "",
             "text": "computer-room/entry"
         },
         "computer-room/logs": {
@@ -256,7 +255,6 @@
                 "ask-log-113",
                 "leave-terminal"
             ],
-            "hook": "",
             "text": "scientist-room/logs-fixed"
         },
         "control-room/about-celestial-device-part": {
@@ -354,7 +352,6 @@
                 "lookup-alim-data",
                 "leave-terminal"
             ],
-            "hook": "",
             "text": "restricted-alim/entry"
         },
         "restricted-alim/generator-manual": {
@@ -376,7 +373,6 @@
                 "back-to-restricted-main-menu",
                 "leave-terminal"
             ],
-            "hook": "",
             "text": "restricted-mode/alimented-systems"
         },
         "restricted-mode/diagnostic": {
@@ -396,7 +392,6 @@
                 "ask-generator-location",
                 "leave-terminal"
             ],
-            "hook": "",
             "text": "restricted-mode/entry"
         },
         "restricted-mode/full-diagnostic": {
@@ -405,7 +400,6 @@
                 "back-to-restricted-main-menu",
                 "leave-terminal"
             ],
-            "hook": "",
             "text": "restricted-mode/full-diagnostic"
         },
         "restricted-mode/generator-location": {
@@ -413,7 +407,6 @@
                 "back-to-restricted-main-menu",
                 "leave-terminal"
             ],
-            "hook": "",
             "text": "restricted-mode/generator-location"
         },
         "scientist-room/entry": {
@@ -421,7 +414,6 @@
                 "scientist-log-access",
                 "leave-terminal"
             ],
-            "hook": "",
             "text": "scientist-room/entry"
         },
         "scientist-room/log-entries/101": {
@@ -450,13 +442,14 @@
                 "scientist-back-to-logs",
                 "leave-terminal"
             ],
+            "hook": "learnedAboutLog47",
             "text": "scientist-room/log-entries/47"
         },
         "scientist-room/log-entries/65": {
             "answers": [
                 "scientist-log-065-next"
             ],
-            "hook": "",
+            "hook": "learnedAboutLog65",
             "text": "scientist-room/log-entries/65"
         },
         "scientist-room/log-entries/65-2": {
@@ -483,7 +476,7 @@
                 "scientist-back-to-logs",
                 "leave-terminal"
             ],
-            "hook": "",
+            "hook": "learnedAboutLog93",
             "text": "scientist-room/log-entries/93"
         },
         "scientist-room/logs": {

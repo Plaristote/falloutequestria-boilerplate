@@ -73,6 +73,18 @@ export class FindHelpful extends QuestHelper {
     return 800;
   }
 
+  getDescription() {
+    let text = `<p>${this.tr("description")}</p>`;
+    if (this.model.isObjectiveCompleted("find-helpful")) {
+        text += `<p>${this.tr("desc-found-helpful")}</p>`;
+      if (this.model.hasVariable("died"))
+        text += `<p>${this.tr("desc-helpful-died")}</p>`;
+      if (this.model.isObjectiveCompleted("save-helpful"))
+        text += `<p>${this.tr("desc-helpful-save")}</p>`;
+    }
+    return text;
+  }
+
   getObjectives() {
     const objectives = [];
 
@@ -109,6 +121,10 @@ export class FindHelpful extends QuestHelper {
 
   completeObjective(objective) {
     switch (objective) {
+      case "find-helpful":
+        if (this.model.hasVariable("died"))
+          this.model.failed = true;
+        break ;
       case "save-helpful":
       case "tell-parents":
         this.model.completed = true;
@@ -118,8 +134,9 @@ export class FindHelpful extends QuestHelper {
 
   onCharacterKilled(character) {
     if (character.characterSheet === "helpful-copain") {
-      this.model.failed = true;
       this.model.setVariable("died", true);
+      if (this.model.isObjectiveCompleted("find-helpful"))
+        this.model.failed = true;
     }
   }
 

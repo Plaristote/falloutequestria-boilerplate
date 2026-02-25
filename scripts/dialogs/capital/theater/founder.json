@@ -22,6 +22,11 @@
             "state": "experiments/about-cadence",
             "text": "ask-cadence-knew-experiments"
         },
+        "ask-experiments-fragment": {
+            "availableHook": "knowsAboutFragmentLogs",
+            "state": "experiments/about-fragment",
+            "text": "ask-experiments-fragment"
+        },
         "ask-expriments-prisoners": {
             "state": "experiments/about-prisoners",
             "text": "ask-expriments-prisoners"
@@ -36,13 +41,20 @@
             "state": "holodisk/story-start",
             "text": "ask-holodisk-crimes"
         },
+        "back-to-entry": {
+            "state": "introduction",
+            "text": "back-to-entry"
+        },
         "book/dismissive": {
+            "state": "book/on-book-dismissive",
             "text": "book/dismissive"
         },
         "book/talk-about-action": {
+            "state": "book/on-action",
             "text": "book/talk-about-action"
         },
         "book/talk-about-crimes": {
+            "state": "book/on-crimes",
             "text": "book/talk-about-crimes"
         },
         "bring-holodisk": {
@@ -93,6 +105,9 @@
             "state": "laboratory/secret-tunnel#2",
             "text": "next"
         },
+        "on-action-take-care": {
+            "text": "on-action-take-care"
+        },
         "thanks-about-secret-tunnel": {
             "state": "laboratory/holodisk-intro",
             "text": "thanks-about-secret-tunnel"
@@ -108,10 +123,33 @@
             "answers": [
                 "book/talk-about-crimes",
                 "book/talk-about-action",
-                "book/dismissive"
+                "book/dismissive",
+                "back-to-entry"
             ],
             "mood": "smile",
             "text": "book/entry"
+        },
+        "book/on-action": {
+            "answers": [
+                "on-action-take-care",
+                "back-to-entry"
+            ],
+            "mood": "cocky",
+            "text": "book/on-action"
+        },
+        "book/on-book-dismissive": {
+            "answers": [
+                "back-to-entry"
+            ],
+            "mood": "smile",
+            "text": "book/on-book-dismissive"
+        },
+        "book/on-crimes": {
+            "answers": [
+                "back-to-entry"
+            ],
+            "mood": "sad",
+            "text": "book/on-crimes"
         },
         "experiments/about-cadence": {
             "answers": [
@@ -119,6 +157,13 @@
                 "topic-move-on"
             ],
             "text": "experiments/about-cadence"
+        },
+        "experiments/about-fragment": {
+            "answers": [
+                "topic-move-on"
+            ],
+            "mood": "dubious",
+            "text": "experiments/about-fragment"
         },
         "experiments/about-prisoners": {
             "answers": [
@@ -131,13 +176,17 @@
             "answers": [
                 "ask-cadence-knew-experiments",
                 "ask-expriments-prisoners",
+                "ask-experiments-fragment",
                 "topic-move-on"
             ],
+            "mood": "sad",
             "text": "experiments/entry"
         },
         "holodisk/details-rejected": {
             "answers": [
-                "ask-holodisk-crimes"
+                "ask-holodisk-crimes",
+                "back-to-entry",
+                "on-action-take-care"
             ],
             "text": "holodisk/details-rejected"
         },

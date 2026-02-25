@@ -1,0 +1,16 @@
+{
+  "quests": {
+    "junkville/findHelpful": {
+      "title": "Missing colt",
+      "talk-to-parents": "Talk to the parents",
+      "find-helpful": "Find the colt",
+      "escape-cavern": "Leave the caverns",
+      "save-helpful": "Save the colt",
+      "tell-parents": "Break up the news to the parents",
+      "description": "That young colt you met earlier in Junkville disappeared. That's really none of your business, but you could take a look still. With those short legs of his, he can't have gone too far.",
+      "desc-found-helpful": "You found the child. He didn't go very far indeed. It seems like he fell down the well, and ended up dwown in the undergrounds.",
+      "desc-helpful-died": "Here's the thing though : he's dead. It's never easy to break up the news to the family.",
+      "desc-helpful-save": "Thanks to your help, the young colt made it out safe and sound, and is now reunited with his loving family."
+    }
+  }
+}

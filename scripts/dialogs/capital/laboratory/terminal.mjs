@@ -69,6 +69,17 @@ class Dialog {
       level.setVariable("fixedScientistLogs", 1);
     }
   }
+
+  learnedAboutLog47() { this.learnedAboutLogs(47); }
+  learnedAboutLog65() { this.learnedAboutLogs(65); }
+  learnedAboutLog93() { this.learnedAboutLogs(93); }
+
+  learnedAboutLogs(id) {
+    let logsSeen = JSON.parse(game.getVariable("readOmbrageLogs", "[]"));
+    if (logsSeen.indexOf(id) < 0)
+      logsSeen.push(id);
+    game.setVariable("readOmbrageLogs", JSON.stringify(logsSeen));
+  }
 }
 
 export function create(dialog) {

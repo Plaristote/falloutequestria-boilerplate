@@ -60,10 +60,17 @@ class Dialog {
 
   onHolodiskStoryStart() {
     game.quests.getQuest("capital/founders-holodisk").setVariable("toldStory", 1);
+    this.dialog.npc.script.startBrooding();
   }
 
   knowsAboutOmbrageExperiments() {
-    return false; // TODO
+    const logs = JSON.parse(game.getVariable("readOmbrageLogs", "[]"));
+    return logs.length > 0;
+  }
+
+  knowsAboutFragmentLogs() {
+    const logs = JSON.parse(game.getVariable("readOmbrageLogs", "[]"));
+    return logs.indexOf(93) >= 0;
   }
 }
 

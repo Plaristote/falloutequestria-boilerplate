@@ -1,0 +1,16 @@
+{
+  "quests": {
+    "junkville/findHelpful": {
+      "title": "L'enfant perdu",
+      "talk-to-parents": "Parle aux parents",
+      "find-helpful": "Trouve l'enfant",
+      "escape-cavern": "Sortez des cavernes",
+      "save-helpful": "Sauve l'enfant",
+      "tell-parents": "Annonce le décès de l'enfant",
+      "description": "Ce jeune poney que tu as autrefois rencontré à Junkville a disparu. C'est pas vraiment ton problème, mais tu peux peut-être quand même jeter un oeil. Avec ses courtes pates, il ne doit pas être bien loin.",
+      "desc-found-helpful": "Tu as trouvé l'enfant. Il n'était effectivement pas allé bien loin. Visiblement, il est tombé dans le puit, et il s'est retrouvé dans une caverne.",
+      "desc-helpful-died": "Mais bon : il est mort. C'est jamais agréable d'annoncer ce genre de nouvelles aux parents.",
+      "desc-helpful-save": "Grâce à ton aide, le jeune poulain s'en est sortit sain et sauf, et est désormais réunis avec sa famille."
+    }
+  }
+}
