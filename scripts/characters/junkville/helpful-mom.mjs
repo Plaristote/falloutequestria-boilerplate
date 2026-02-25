@@ -35,9 +35,11 @@ export class HelpfulMom extends CharacterBehaviour {
   }
 
   onCharacterDetected(character) {
-    if (helpfulHasDisappeared() && character.characterSheet == "helpful-copain" && !this.sceneManager) {
-      this.scene = new HelpfulReturnScene(this);
-      this.scene.initialize();
+    if (helpfulHasDisappeared()
+      && level.script.helpfulReturnScene
+      && character.characterSheet == "helpful-copain") {
+      if (!level.script.helpfulReturnScene.active)
+        level.script.helpfulReturnScene.initialize();
     }
     super.onCharacterDetected(character);
   }

@@ -37,6 +37,8 @@ class Dialog {
 
   onExplain() {
     const quest = getQuest();
+    if (!quest.hasVariable("initBy"))
+      quest.setVariable("initBy", "mom");
     quest.completeObjective("talk-to-parents");
   }
 

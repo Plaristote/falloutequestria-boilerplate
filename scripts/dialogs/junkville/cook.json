@@ -148,6 +148,11 @@
         "done-asking": {
             "text": "done-asking"
         },
+        "found-helpful": {
+            "availableHook": "canReportHelpfulFound",
+            "state": "on-found-helpful",
+            "text": "found-helpful"
+        },
         "get-battle-reward": {
             "availableHook": "canGetBattleReward",
             "state": "dogs-get-reward",
@@ -603,6 +608,7 @@
         },
         "entry": {
             "answers": [
+                "found-helpful",
                 "get-battle-reward",
                 "ask-meal",
                 "ask-room",
@@ -657,6 +663,13 @@
                 "meal-reject"
             ],
             "text": "menu"
+        },
+        "on-found-helpful": {
+            "answers": [
+            ],
+            "hook": "onFoundHelpful",
+            "mood": "sad",
+            "text": "on-found-helpful"
         },
         "scavengers/about-facade": {
             "answers": [

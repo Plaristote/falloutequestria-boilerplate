@@ -1,9 +1,11 @@
 import {LevelBase} from "./base.mjs";
 import {NegociationAssembly} from "../scenes/junkville/negociationAssembly.mjs";
 import {
+  helpfulDisappearDelay,
   findHelpfulRescueRouteState,
   finalizeRescueRoute
 } from "../quests/junkville/findHelpful.mjs";
+import {HelpfulReturnScene} from "../scenes/junkville/helpfulReturn.mjs";
 
 class Level extends LevelBase {
   constructor(model) {
@@ -67,6 +69,7 @@ class Level extends LevelBase {
   }
 
   onLoaded() {
+    this.helpfulReturnScene = new HelpfulReturnScene(this);
     super.onLoaded();
     this.prepareRathian();
     this.prepareCook();
@@ -79,11 +82,10 @@ class Level extends LevelBase {
   }
 
   prepareJunkvilleDisappearence() {
-    const character = level.findObject("house-copain.copain");
+    const character = level.findObject("helpful-copain");
 
-    if (character && !character.hasVariable("disappeared")) {
-      character.tasks.removeTask("prepareDisappear");
-      character.tasks.addTask("prepareDisappear", 172800 * 1000, 1);
+    if (character && character.hasVariable("met") && !character.hasVariable("disappeared")) {
+      character.script.helpfulDisappear();
     }
   }
 

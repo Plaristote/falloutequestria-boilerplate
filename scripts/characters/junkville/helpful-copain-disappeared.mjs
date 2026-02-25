@@ -28,7 +28,7 @@ export class HelpfulCopainDisappeared extends CharacterBehaviour {
   }
 
   initialize() {
-    this.model.tasks.addTask("deathTimeout", deathDelay * 1000, 1);
+    this.model.tasks.addUniqueTask("deathTimeout", deathDelay * 1000, 1);
     this.model.setAnimation("fall");
   }
 

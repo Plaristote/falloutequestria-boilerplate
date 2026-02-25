@@ -2,6 +2,8 @@ import {QuestHelper} from "../helpers.mjs";
 
 const questName = "junkville/findHelpful";
 
+export const helpfulDisappearDelay = 172800;
+
 export function helpfulHasDisappeared() {
   if (!game.hasVariable("helpfulDead")) {
     const character = game.getCharacter("helpful-copain");
@@ -41,10 +43,11 @@ export function finalizeRescueRoute() {
   level.setCharacterPosition(dad, 8, 9);
   level.setCharacterPosition(son, 7, 9);
   level.setCharacterPosition(game.player, 10, 12);
-  level.addTextBubble(mom, "Kthxbye", 5000, "cyan");
   if (!quest.hasVariable("died")) {
     quest.completeObjective("escape-cavern");
     quest.completeObjective("save-helpful");
+    if (!level.script.helpfulReturnScene.active)
+      level.script.helpfulReturnScene.initialize();
   }
 }
 
@@ -65,9 +68,9 @@ export class FindHelpful extends QuestHelper {
   }
 
   get xpReward() {
-    if (this.isObjectiveCompleted("save-helpful"))
+    if (this.model.isObjectiveCompleted("save-helpful"))
       return 1800;
-    return 1000;
+    return 800;
   }
 
   getObjectives() {

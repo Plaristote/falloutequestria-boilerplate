@@ -10,7 +10,7 @@ import {
   hasAltLeaderTakenOver,
   hasMediationStarted
 } from "../../quests/junkvilleNegociateWithDogs.mjs";
-import {isHelpfulQuestAvailable} from "../../quests/junkville/findHelpful.mjs";
+import {isHelpfulQuestAvailable, teleportToCaverns as helpfulQuestGoToCaverns} from "../../quests/junkville/findHelpful.mjs";
 import {opinionVarName} from "../../scenes/junkville/negociationAssembly.mjs";
 
 class Dialog extends Innkeeper {
@@ -60,6 +60,21 @@ class Dialog extends Innkeeper {
   acceptFindHelpfulQuest() {
     const object = requireQuest("junkville/findHelpful", QuestFlags.NormalQuest);
     object.setVariable("initBy", this.dialog.npc.objectName);
+  }
+
+  canReportHelpfulFound() {
+    const quest = game.quests.getQuest("junkville/findHelpful");
+    return quest && quest.isObjectiveCompleted("find-helpful") && !quest.isObjectiveCompleted("save-helpful") && !quest.hasVariable("died");
+  }
+
+  reportHelpfulFoundLine() {
+    const quest = game.quests.getQuest("junkville/findHelpful");
+    if (quest && !quest.hasVariable("initBy"))
+      return this.dialog.tr("report-found-helpful-alt");
+  }
+
+  onFoundHelpful() {
+    helpfulQuestGoToCaverns();
   }
   
   get junkvilleDumpsDisappeared() {
