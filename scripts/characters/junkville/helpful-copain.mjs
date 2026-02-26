@@ -1,4 +1,5 @@
 import {CharacterBehaviour} from "../character.mjs";
+import {helpfulDisappearDelay} from "../../quests/junkville/findHelpful.mjs";
 
 export class HelpfulCopain extends CharacterBehaviour {
   constructor(model) {
@@ -6,12 +7,24 @@ export class HelpfulCopain extends CharacterBehaviour {
   }
 
   get dialog() {
+    if (this.model.hasVariable("insulted") && !this.alreadySaved)
+      return null;
     return "junkville/helpful-copain";
   }
 
+  get textBubbles() {
+    if (this.model.hasVariable("insulted") && !this.alreadySaved)
+      return [{ content: "Bleh", duration: 1500, color: "yellow" }];
+    return [{ content: i18n.t("dialogs.junkville/helpful-copain.entry-alt"), duration: 2500 }];
+  }
+
+  get alreadySaved() {
+    return game.quests.getQuest("junkville/findHelpful")?.completed;
+  }
+
   helpfulDisappear() {
-    character.tasks.removeTask("prepareDisappear");
-    character.tasks.addUniqueTask("prepareDisappear", helpfulDisappearDelay * 1000, 1);
+    this.model.tasks.removeTask("prepareDisappear");
+    this.model.tasks.addUniqueTask("prepareDisappear", helpfulDisappearDelay * 1000, 1);
   }
 
   prepareDisappear() {

@@ -1,0 +1,37 @@
+{
+    "dialogs": {
+        "junkville/helpful-copain": {
+            "about": "J'fais rien… mes parents veulent pas que je traine trop loin de la maison. Ca craint… le monde est si grand, et moi je suis coincé dans ce trou…",
+            "about-adventure": "Une aventure ? Génial ! Où est-ce que tu va ? Qu'est-ce que tu va faire ?",
+            "about-leave": "Tes parents savent ce qui est bon pour toi. Tu devrais les écouter.",
+            "about-stable": "Alors quoi, tu va barouder partout, chercher des trucs pour sauver ton village ? C'est cool !",
+            "about-stable-discourage": "Pas tant que ça. Je me retrouve surtout à faire ça parce que personne de dispensable ne voulait le faire, à part moi. Je suis pas sûr que mes camarades croient vraiment en moi.",
+            "about-stable-encourage": "Ouaip. Je vais fouiller chaque centimètre carré d'Equestria s'il le faut !",
+            "adventure-fable": "J'accomplis une mission de première importance. J'ai été envoyé pour répandre l'amour et la tolérance partout dans le monde. Je dois le faire en traquant tous les méchants et en leur bottant le cul !",
+            "adventure-lie": "J'ai été envoyé par une société secrète afin d'infiltrer le monde des poney et infecter les poulains trop curieux avec un virus qui fait exploser leur cerveau quand ils éternuent.",
+            "adventure-stable": "Je suis en mission pour sauver mon Étable. Je dois trouver un appareil qui assurera sa survie pour des décenies, des siècles peut-être. J'ai aucune idée d'où aller ou de quoi faire. Mais je sais une chose : je vais lef aire !",
+            "after-saved-talk": "Salut ! Merci de m'avoir sauvé ! Je ferais attention maintenant, promis !",
+            "ask-to-join": "Tu sais… je suis plutôt fort en enquête. Et je sais plein de trucs sur le monde extérieur… mes parents me laissent pas partir, mais je parle avec tous les étrangers qui viennent en ville, et je sais tout sur toute les villes à des kilomètres à la ronde ! Et puis j'en ai marre d'entendre toujours les mêmes histoires… je veux aller faire les miennes ! Tu voudrais pas… je pourrais pas venir avec toi ?",
+            "entry": "Salut ! Moi c'est Helpful ! C'est quoi ton nom ?",
+            "entry-alt": "Salut !",
+            "entry-exit": "À la prochaine !",
+            "greet-ask-about": "Yo ! Moi c'est {{name}} ! Qu'est-ce que tu fais ? Des bétises, pas vrai ?",
+            "greet-hostile": "T'es Helpful ? Attends, c'est ton nom ? HA ! C'est complètement con, comme nom !",
+            "greet-with-name": "Je suis {{name}}. Content de te rencontrer.",
+            "hostile-give-up": "<i>Partir</i>",
+            "hostile-response": "Ah ouais ? Euh… bah, toi t'as une tête de con ! Bleh !<br/><i>Il s'enfuit.</i>",
+            "hostile-yell": "<i>Crier:</i> C'est ça, court, merdeux, court !",
+            "introducing": "Eh, je t'ai jamais vu dans le coin ! Tu viens d'où ? Il se passe quoi là-bas ? Allez, dis-moi, dis, dis !",
+            "introducing-evasive": "Oh tu sais, d'ici et là. Je fais rien de spécial. Et toi alors ? Qu'est-ce qui se passe ici ?",
+            "introducing-exit": "Désolé gamin, j'ai pas le temps de répondre. Une autre fois.",
+            "introducing-hostile-exit": "Bah, tu sais ce qu'on dit : il n'y a pas de question idiote. Juste des gens stupides. Qui posent des questions qu'ils rendent stupides. Je crois que je dois clarifier: t'es un gamin stupide.",
+            "join-hostile": "Quoi ? Absolument pas, je vais pas m'encombrer d'un mioche !",
+            "join-reject": "Désolé {{npc}}. Ce n'est pas raisonnable. C'est dangereux.",
+            "reaction-adventure-fable": "Ouais, ok, c'est trop marrant ! Tu va rien me dire alors ? Allez… raconte !",
+            "reaction-adventure-lie": "Allez… j'ai quatorze ans, tu va pas m'intimider comme ça ! Raconte moi, je veux savoir !",
+            "reaction-told-to-stay": "Ouais, ouais… il y a déjà juste tout les autres pour me dire ça… j'en ai assez. Je veux plus en parler. Salut.",
+            "tell-stuck-at-home": "Je sais ce que c'est, moi aussi ! Le monde est vaste, c'est vrai… mais le foyer, c'est là ou tu peux te reposer, avec ceux qui t'aiment. Tu devrais apprendre à apprécier ça.",
+            "tell-stuck-at-home-alt": "Je sais ce que c'est que de grandir confiné ! C'est frustrant d'être toujours entouré des mêmes quatre murs, jour après jour… ça me rendait dingue aussi. Puis une aventure s'est présentée à moi… et j'ai saisi l'opportunité !"
+        }
+    }
+}

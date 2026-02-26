@@ -1,8 +1,7 @@
-import {CharacterBehaviour} from "../character.mjs";
+import CharacterBehaviour from "./helpful-dad.mjs";
 import {RoutineComponent} from "../../behaviour/routine.mjs";
 import {routine, initializeRoutineUser} from "./resident-routine.mjs";
-import {helpfulHasDisappeared} from "../../quests/junkville/findHelpful.mjs";
-import {greetingsBubbles} from "./helpful-dad.mjs";
+import {helpfulHasDisappeared, canTalkAboutMissingHelpful} from "../../quests/junkville/findHelpful.mjs";
 import {HelpfulReturnScene} from "../../scenes/junkville/helpfulReturn.mjs";
 
 function broughtBackHelpful() {
@@ -12,21 +11,12 @@ function broughtBackHelpful() {
 export class HelpfulMom extends CharacterBehaviour {
   constructor(model) {
     super(model);
-    this.routineComponent = new RoutineComponent(this, routine);
-  }
-
-  initialize() {
-    initializeRoutineUser(this.model);
-  }
-
-  get textBubbles() {
-    return greetingsBubbles;
   }
 
   get dialog() {
     if (this.routineComponent.isActiveRoutine("assembly"))
       return ;
-    return helpfulHasDisappeared() && !broughtBackHelpful() ? "junkville/helpful-mom-quest" : null;
+    return canTalkAboutMissingHelpful() ? "junkville/helpful-mom-quest" : null;
   }
 
   broughtBackHelpful() {

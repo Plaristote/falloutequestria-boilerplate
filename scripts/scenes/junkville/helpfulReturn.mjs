@@ -4,8 +4,6 @@ import {requireQuest} from "../../quests/helpers.mjs";
 export class HelpfulReturnScene extends SceneManager {
   constructor(parent) {
     super(parent, "helpful-return");
-    this.son.isUnique = false;
-    game.playerParty.removeCharacter(this.son);
   }
 
   get mom() { return game.getCharacter("junkville-copain-mom"); }
@@ -70,6 +68,9 @@ export class HelpfulReturnScene extends SceneManager {
 
   sonReachesMother() {
     const actionQueue = this.son.actionQueue;
+    this.son.isUnique = false;
+    this.son.tasks.removeTask("followPlayer");
+    game.playerParty.removeCharacter(this.son);
     actionQueue.pushReach(this.mom, 2);
     actionQueue.pushScript(this.triggerNextStep.bind(this));
     actionQueue.start();

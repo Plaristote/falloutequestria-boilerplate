@@ -1,12 +1,8 @@
 {
     "answers": {
         "": {
-            "availableHook": "",
-            "hook": "",
-            "state": ""
         },
         "accept-payment": {
-            "hook": "",
             "text": "accept-payment"
         },
         "accept-quest": {
@@ -36,19 +32,16 @@
         },
         "entry-explain": {
             "availableHook": "canConvinceToExplain",
-            "hook": "",
             "state": "explain-success",
             "text": "entry-explain"
         },
         "entry-explain-wrong": {
-            "availableHook": "",
             "hook": "nothingSaid",
             "state": "explain-failure",
             "text": "entry-explain-wrong"
         },
         "entry-leave": {
             "hook": "nothingSaid",
-            "state": "",
             "text": "entry-leave"
         },
         "explain-quest": {
@@ -62,23 +55,16 @@
             "text": "explanations-provoke"
         },
         "explanations-reject": {
-            "hook": "",
-            "state": "",
             "text": "explanations-reject"
         },
         "explanations-where": {
-            "hook": "",
             "state": "speculate-where",
             "text": "explanations-where"
         },
         "give-up-on-forbidden-caverns": {
-            "availableHook": "",
-            "state": "",
             "text": "give-up-on-forbidden-caverns"
         },
         "go-hopeful": {
-            "availableHook": "",
-            "state": "",
             "text": "go-hopeful"
         },
         "go-to-help": {
@@ -86,12 +72,9 @@
             "text": "go-to-help"
         },
         "half-accept-quest": {
-            "state": "",
             "text": "half-accept-quest"
         },
         "murder-dogs-forbidden-caverns": {
-            "availableHook": "",
-            "state": "",
             "text": "murder-dogs-forbidden-caverns"
         },
         "on-death-ask-payment": {
@@ -104,16 +87,12 @@
         },
         "on-save-ask-payment": {
             "availableHook": "askedForPayment",
-            "hook": "",
             "text": "on-save-ask-payment"
         },
         "on-save-detached-leave": {
-            "availableHook": "",
-            "hook": "",
             "text": "on-save-detached-leave"
         },
         "on-save-gracefully-leave": {
-            "availableHook": "",
             "hook": "rejectedReward",
             "text": "on-save-gracefully-leave"
         },
@@ -121,13 +100,10 @@
             "text": "refuse-payment"
         },
         "refuse-quest": {
-            "hook": "",
-            "state": "",
             "text": "refuse-quest"
         },
         "report-death": {
             "availableHook": "hasFoundHelpful",
-            "hook": "",
             "state": "on-death-report",
             "text": "report-death"
         },
@@ -146,8 +122,6 @@
                 "ask-payment",
                 "demand-payment"
             ],
-            "hook": "",
-            "mood": "",
             "text": "accepted"
         },
         "angered-exit": {
@@ -174,15 +148,11 @@
                 "explanations-where",
                 "refuse-quest"
             ],
-            "hook": "",
-            "mood": "",
             "text": "entry-alt"
         },
         "explain-failure": {
             "answers": [
             ],
-            "hook": "",
-            "mood": "",
             "text": "explain-failure"
         },
         "explain-randy": {
@@ -196,7 +166,6 @@
                 "refuse-quest"
             ],
             "hook": "onExplain",
-            "mood": "",
             "text": "explain-randy"
         },
         "explain-success": {
@@ -211,7 +180,6 @@
                 "refuse-quest"
             ],
             "hook": "onExplain",
-            "mood": "",
             "text": "explain-success"
         },
         "forbidden-caverns": {
@@ -221,8 +189,6 @@
                 "murder-dogs-forbidden-caverns",
                 "give-up-on-forbidden-caverns"
             ],
-            "hook": "",
-            "mood": "",
             "text": "forbidden-caverns"
         },
         "give-no-payment": {
@@ -242,8 +208,6 @@
             "answers": [
                 "go-to-help"
             ],
-            "hook": "",
-            "mood": "",
             "text": "going-to-help"
         },
         "on-death-report": {
@@ -251,7 +215,8 @@
                 "on-death-leave",
                 "on-death-ask-payment"
             ],
-            "mood": "",
+            "hook": "onDeathReport",
+            "mood": "sad",
             "text": "on-death-report"
         },
         "payment-asked": {
@@ -260,7 +225,6 @@
                 "ask-more-payment"
             ],
             "hook": "acceptedPayment1",
-            "mood": "",
             "text": "payment-asked"
         },
         "payment-asked-more-failure": {
@@ -268,8 +232,6 @@
                 "accept-payment",
                 "refuse-payment"
             ],
-            "hook": "",
-            "mood": "",
             "text": "payment-asked-more-failure"
         },
         "payment-asked-more-success": {
@@ -286,7 +248,6 @@
                 "on-save-gracefully-leave",
                 "on-save-detached-leave"
             ],
-            "hook": "",
             "mood": "smile",
             "text": "quest-success"
         },
@@ -296,7 +257,6 @@
                 "accept-quest",
                 "refuse-quest"
             ],
-            "hook": "",
             "mood": "sad",
             "text": "speculate-where"
         }

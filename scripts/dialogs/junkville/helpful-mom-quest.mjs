@@ -68,6 +68,11 @@ class Dialog {
     return game.player.statistics.speech > 45;
   }
 
+  onDeathReport() {
+    const quest = getQuest();
+    quest.completeObjective("tell-parents");
+  }
+
   onReportHurt() {
     return allowedInCaverns() ? "going-to-help" : "forbidden-caverns";
   }

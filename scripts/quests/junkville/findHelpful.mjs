@@ -2,7 +2,7 @@ import {QuestHelper} from "../helpers.mjs";
 
 const questName = "junkville/findHelpful";
 
-export const helpfulDisappearDelay = 172800;
+export const helpfulDisappearDelay = 60*60*24*7;// 172800;
 
 export function helpfulHasDisappeared() {
   if (!game.hasVariable("helpfulDead")) {
@@ -10,6 +10,14 @@ export function helpfulHasDisappeared() {
     return character && character.hasVariable("disappearedAt");
   }
   return true;
+}
+
+export function canTalkAboutMissingHelpful() {
+  if (helpfulHasDisappeared()) {
+    const quest = game.quests.getQuest(questName);
+    return !quest || !quest.isObjectiveCompleted("tell-parents");
+  }
+  return false;
 }
 
 export function isHelpfulQuestAvailable() {

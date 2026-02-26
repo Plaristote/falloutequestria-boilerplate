@@ -15,7 +15,7 @@ export const greetingsBubbles = [
   {content: i18n.t("bubbles.greetings-3"), duration: 3000}
 ];
 
-export class HelpfulDad extends CharacterBehaviour {
+export default class HelpfulDad extends CharacterBehaviour {
   constructor(model) {
     super(model);
     this.routineComponent = new RoutineComponent(this, routine);
@@ -26,7 +26,7 @@ export class HelpfulDad extends CharacterBehaviour {
   }
 
   get textBubbles() {
-    if (helpfulHasDisappeared())
+    if (helpfulHasDisappeared() && game.quests.getQuest("junkville/findHelpful")?.completed !== true)
       return sobbingBubbles;
     return greetingsBubbles;
   }

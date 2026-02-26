@@ -29,6 +29,9 @@
             "state": "about-stable",
             "text": "adventure-stable"
         },
+        "entry-exit": {
+            "text": "entry-exit"
+        },
         "greet-ask-about": {
             "hook": "nameGiven",
             "state": "about",
@@ -123,6 +126,11 @@
             "mood": "happy",
             "text": "about-stable"
         },
+        "after-saved-talk": {
+            "answers": [
+            ],
+            "text": "after-saved-talk"
+        },
         "ask-to-join": {
             "answers": [
                 "join-hostile",
@@ -140,6 +148,15 @@
             "mood": "smile",
             "text": "entry"
         },
+        "entry-alt": {
+            "answers": [
+                "greet-ask-about",
+                "entry-exit"
+            ],
+            "hook": "onEntryAlt",
+            "mood": "smile",
+            "text": "entry-alt"
+        },
         "hostile-response": {
             "answers": [
                 "hostile-yell",
@@ -155,6 +172,7 @@
                 "introducing-hostile-exit",
                 "introducing-exit"
             ],
+            "hook": "onIntroducing",
             "text": "introducing"
         },
         "join-parents": {
