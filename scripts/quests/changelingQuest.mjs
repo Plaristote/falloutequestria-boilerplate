@@ -34,6 +34,17 @@ export default class extends QuestHelper {
     return text;
   }
 
+  canKidnapPlayer() {
+    return !this.model.hasVariable("kidnapped") && !this.model.hasVariable("queenProposal") && !this.model.completed;
+  }
+
+  kidnapPlayer() {
+    this.model.setVariable("kidnapped", 1);
+    game.asyncAdvanceTime(15, function() {
+      game.switchToLevel("unhaus-hive", "jail-cell");
+    });
+  }
+
   onToldAboutUnhaus(npc) {
     let revealer = "changeling";
     if (npc.statistics.race != "changeling")

@@ -58,6 +58,10 @@ class Dialog extends DialogHelper {
     }
   }
 
+  goToHiveEntrance() {
+    console.log("TODO: implement hive entrance and go there on this hook");
+  }
+
   get metInHive() {
     return this.dialog.npc.getVariable("metInHive", 0) == 1;
   }

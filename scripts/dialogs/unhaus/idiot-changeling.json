@@ -13,6 +13,7 @@
             "text": "about-race-ans-hive"
         },
         "ask-about-closet": {
+            "state": "prompt",
             "text": "ask-about-closet"
         },
         "ask-about-npc": {
