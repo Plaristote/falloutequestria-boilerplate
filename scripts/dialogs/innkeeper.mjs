@@ -54,10 +54,14 @@ export class Innkeeper extends MerchantHelper {
     return this.innDialogFollowup();
   }
 
+  innDialogFollowupLine() {
+    return this.dialog.tWithFallback("innDialog-followup", {}, i18n.t("innkeep.dialog.followup", { rentedRoomNumber: this.rentedRoomNumber }));
+  }
+
   innDialogFollowup() {
     console.log("Generating innDialogFollowup");
     return {
-      text: this.dialog.tWithFallback("innDialog-followup", {}, i18n.t("innkeep.dialog.followup", { rentedRoomNumber: this.rentedRoomNumber })),
+      text: this.innDialogFollowupLine(),
       answers: [
         {
           symbol: "escort-to-room",
@@ -72,13 +76,18 @@ export class Innkeeper extends MerchantHelper {
     };
   }
 
+  innDialogLine(offerParams) {
+    return this.dialog.tWithFallback("innDialog", {}, i18n.t("innkeep.dialog.entry", offerParams));
+  }
+
   innDialog() {
     const offerParams = { nightRent: this.nightRent, weekRent: this.weekRent };
+    let text;
 
     if (this.rentedRoomNumber)
       return i18n.t("innkeep.dialog.alreadyHasRoom", { roomNumber: this.rentedRoomNumber });
     return {
-      text: this.dialog.tWithFallback("innDialog", {}, i18n.t("innkeep.dialog.entry", offerParams)),
+      text: this.innDialogLine(offerParams),
       answers: [
         {
           symbol: "order-room-night",
