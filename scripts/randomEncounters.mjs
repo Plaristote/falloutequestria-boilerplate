@@ -3,6 +3,7 @@ import {skillCheck} from "cmap/helpers/checks.mjs";
 import OutdoorsCheck from "worldmap/outdoorsCheck.mjs";
 import {generateHostileEncounter} from "worldmap/hostileEncounters.mjs";
 import {generateEncounterLevel} from "worldmap/encounterLevels.mjs";
+import {onSpecialEncounterOccured, availableSpecialEncounters} from "worldmap/specialEncounters.mjs";
 
 const RandomEncounterChart = {
   None:     0,
@@ -31,7 +32,7 @@ export class RandomEncounterComponent {
   constructor() {
     this.outdoorElapsedTime = 0;
   }
-	
+
   outdoorsTick(minutes) {
     this.outdoorElapsedTime += minutes;
     if (this.outdoorElapsedTime >= 30) {
@@ -50,8 +51,10 @@ export class RandomEncounterComponent {
         this.triggerHostileEncounter();
         break ;
       case RandomEncounterChart.Special:
-        console.log("/!!\\ SPECIAL ENCOUNTER (none implemented yet though)");
-        break ;
+        if (this.availableSpecialEncounters().length > 0) {
+          this.triggerSpecialEncounter();
+          break ;
+        }
       case RandomEncounterChart.Dungeon:
         console.log("/!!\\ FOUND A DUNGEON (none implemented yet though)");
         break ;
@@ -129,5 +132,27 @@ export class RandomEncounterComponent {
       "optional": true,
       "title": i18n.t(`worldmap.places.${candidateMaps[mapRoll]}`)
     });
+  }
+
+  triggerSpecialEncounter() {
+    const candidates = availableSpecialEncounters();
+    const index = Math.round(Math.random() * candidates.length);
+    const encounter = candidates[index];
+
+    if (!encounter) return false;
+    onSpecialEncounterOccured(encounter);
+    if (encounter.persistent) {
+      const city = game.worldmap.createCity(encounter.level);
+      city.level = encounter.level;
+      city.position.x = game.worldmap.currentPosition.x;
+      city.position.y = game.worldmap.currentPosition.y;
+      city.size = 25;
+      game.switchToLevel(encounter.level);
+    } else {
+      game.randomEncounters.prepareEncounter(encounter.level, {
+        optional: false, title: encounter.level
+      });
+    }
+    return true;
   }
 }
