@@ -10,7 +10,9 @@
     },
     "item-descriptions": {
         "lockpicking-kit": "Des outils de crochetages basiques, facilitant les tâches consistant à crocheter des verrous.",
-        "lockpicking-kit-v2": "Un kit complet d'outils de crochetages, avec une grande variété de crochets."
+        "lockpicking-kit-v2": "Un kit complet d'outils de crochetages, avec une grande variété de crochets.",
+        "note": "Un papier avec du texte écrit. Tu aura besoin de le ramasser pour lire ce que ça dit.",
+        "note-readable": "<p>Il est écrit :</p><p>{{content}}</p>"
     },
     "item-slots": {
         "armor": "Armure",
