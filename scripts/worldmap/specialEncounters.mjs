@@ -1,4 +1,5 @@
 const specialEncounters = [
+  { level: "ovipostor-meeting", persistent: false }
 ];
 
 export function onSpecialEncounterOccured(encounter) {

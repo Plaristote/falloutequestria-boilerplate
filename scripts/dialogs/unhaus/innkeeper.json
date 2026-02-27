@@ -1,0 +1,45 @@
+{
+    "answers": {
+        "accept-room": {
+            "state": "innDialog",
+            "text": "accept-room"
+        },
+        "ask-room": {
+            "state": "innDialog",
+            "text": "ask-room"
+        },
+        "exit-entry": {
+            "text": "exit-entry"
+        }
+    },
+    "entryPoint": "entry",
+    "states": {
+        "entry": {
+            "answers": [
+                "ask-room",
+                "exit-entry"
+            ],
+            "text": "entry"
+        },
+        "innDialog": {
+            "answers": [
+            ],
+            "hook": "innDialog",
+            "mood": "smile",
+            "text": "innDialog"
+        },
+        "introduction": {
+            "answers": [
+                "accept-room",
+                "exit-entry"
+            ],
+            "mood": "smile",
+            "text": "introduction"
+        },
+        "roomsAreFree": {
+            "answers": [
+            ],
+            "text": "roomsAreFree"
+        }
+    }
+}
