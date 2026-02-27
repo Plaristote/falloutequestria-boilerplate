@@ -1,14 +1,33 @@
 { "columns":8,
  "image":"cave-walls.png",
- "imageheight":327,
+ "imageheight":436,
  "imagewidth":584,
  "margin":0,
  "name":"Cave Walls",
  "spacing":1,
- "tilecount":24,
- "tiledversion":"1.8.0",
+ "tilecount":32,
+ "tiledversion":"1.11.2",
  "tileheight":108,
+ "tiles":[
+        {
+         "id":24,
+         "properties":[
+                {
+                 "name":"cover",
+                 "type":"int",
+                 "value":50
+                }]
+        }, 
+        {
+         "id":25,
+         "properties":[
+                {
+                 "name":"cover",
+                 "type":"int",
+                 "value":50
+                }]
+        }],
  "tilewidth":72,
  "type":"tileset",
- "version":"1.8"
+ "version":"1.10"
 }
