@@ -32,6 +32,8 @@
         "stable-suit": "Your everyday standard stable suit, issued by Stable Tech.",
         "trialKey": "The key to the Cavern of Trials. It used to belong to Trial Blister. Now it's yours.",
         "trialStartKey": "A rusty key found deep in the cavern of trials.",
+        "note": "A note with some text written on it. You'll need to pick it up first to be able to read it.",
+        "note-readable": "<p>The note says:</p><p>{{content}}</p>",
         "tuxedo": "An elegant tuxedo."
     },
     "item-slots": {
