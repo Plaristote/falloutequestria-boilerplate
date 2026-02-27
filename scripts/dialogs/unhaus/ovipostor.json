@@ -1,0 +1,115 @@
+{
+    "answers": {
+        "about-caput": {
+            "availableHook": "metCaput",
+            "state": "hive/prompt",
+            "text": "about-caput"
+        },
+        "about-murder": {
+            "availableHook": "metInEncounter",
+            "state": "hive/prompt",
+            "text": "about-murder"
+        },
+        "about-queen": {
+            "state": "hive/prompt",
+            "text": "about-queen"
+        },
+        "ask-about": {
+            "state": "hive/prompt",
+            "text": "ask-about"
+        },
+        "encounter/hostile-answer": {
+            "state": "encounter/on-hostile",
+            "text": "encounter/hostile-answer"
+        },
+        "encounters/agree-answer": {
+            "text": "encounters/agree-answer"
+        },
+        "encounters/intimidate-answer": {
+            "availableHook": "canIntimidate",
+            "state": "encounter/on-intimidate",
+            "text": "encounters/intimidate-answer"
+        },
+        "leave": {
+            "text": "exit-dialog"
+        }
+    },
+    "entryPoint": "hive/introduction",
+    "states": {
+        "encounter/entry": {
+            "answers": [
+                "encounter/hostile-answer",
+                "encounters/intimidate-answer",
+                "encounters/agree-answer"
+            ],
+            "mood": "angry",
+            "text": "encounter/entry"
+        },
+        "encounter/on-hostile": {
+            "answers": [
+            ],
+            "hook": "startFight",
+            "mood": "angry",
+            "text": "encounter/on-hostile"
+        },
+        "encounter/on-intimidate": {
+            "answers": [
+            ],
+            "hook": "onIntimidated",
+            "mood": "sad",
+            "text": "encounter/on-intimidate"
+        },
+        "hive/intro-intimidated": {
+            "answers": [
+            ],
+            "text": "hive/intro-intimidated"
+        },
+        "hive/intro-met": {
+            "answers": [
+            ],
+            "text": "hive/intro-met"
+        },
+        "hive/introduction": {
+            "answers": [
+                "ask-about",
+                "about-murder",
+                "about-queen",
+                "about-caput",
+                "leave"
+            ],
+            "hook": "hiveIntroduction",
+            "text": "hive/introduction"
+        },
+        "hive/on-caput": {
+            "answers": [
+            ],
+            "text": "hive/on-caput"
+        },
+        "hive/on-murder": {
+            "answers": [
+            ],
+            "text": "hive/on-murder"
+        },
+        "hive/on-queen": {
+            "answers": [
+            ],
+            "text": "hive/on-queen"
+        },
+        "hive/on-self": {
+            "answers": [
+            ],
+            "text": "hive/on-self"
+        },
+        "hive/prompt": {
+            "answers": [
+                "ask-about",
+                "about-murder",
+                "about-queen",
+                "about-caput",
+                "leave"
+            ],
+            "hook": "prompt",
+            "text": "hive/prompt"
+        }
+    }
+}

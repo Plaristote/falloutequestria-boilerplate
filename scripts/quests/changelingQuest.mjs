@@ -11,17 +11,24 @@ export default class extends QuestHelper {
 
     if (this.model.hasVariable("foundCorpse"))
       text += `<p>${this.model.tr("desc-found-corpse")}</p>`;
+    else if (this.model.hasVariable("foundOvipostorNote"))
+      text += `<p>${this.model.tr("desc-found-ovipostor-note")}</p>`;
     else
       text += `<p>${this.model.tr("desc-found-others")}</p>`;
-    switch (heardAboutUnhausFrom) {
-      case "":
-        break ;
-      case "changeling":
-        text += `<p>${this.model.tr("desc-unhaus-from-changeling")}</p>`;
-        break ;
-      default:
-        text += `<p>${this.model.tr("desc-unhaus-from-talking", {unhausRevealerName: heardAboutUnhausFrom})}</p>`;
-        break ;
+    if (!this.model.hasVariable("foundOvipostorNote")) {
+      switch (heardAboutUnhausFrom) {
+        case "":
+          break ;
+        case "changeling":
+          text += `<p>${this.model.tr("desc-unhaus-from-changeling")}</p>`;
+          break ;
+        case "ovipostor-note":
+          text += `<p>${this.model.tr("desc-found-ovipostor-note")}</p>`;
+          break ;
+        default:
+          text += `<p>${this.model.tr("desc-unhaus-from-talking", {unhausRevealerName: heardAboutUnhausFrom})}</p>`;
+          break ;
+      }
     }
     if (this.model.isObjectiveCompleted("findLair")) {
       if (this.model.hasVariable("kidnapped"))

@@ -399,6 +399,15 @@
         "value": 5,
         "weight": 0
     },
+    "ovipostor-todo-list": {
+        "icon": "ovipostor-note.png",
+        "isGroupable": false,
+        "scriptName": "quests/ovipostor-note.mjs",
+        "sprite": "misc",
+        "type": "quests",
+        "value": 1,
+        "weight": 0
+    },
     "party-time-mint-als": {
         "icon": "mintals-partytime.webp",
         "isGroupable": true,

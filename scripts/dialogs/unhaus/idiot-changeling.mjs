@@ -16,6 +16,8 @@ class Dialog extends DialogHelper {
   }
 
   prompt() {
+    if (["meeting-ans-curiosity", "ask-about-npc"].indexOf(this.dialog.previousAnswer) >= 0)
+      game.setVariable("knowAboutCaput", 1);
     switch (this.dialog.previousAnswer) {
     case "meeting-ans-insect":
       return { text: "?", mood: "dubious" };
