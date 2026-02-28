@@ -35,7 +35,8 @@
             "prompt": "Hi there. It's so nice seeing you again.",
             "show-hive": "Of course! Just, don’t tell anyling. Follow me!",
             "show-hive-ans-accept": "Alright.",
-            "show-hive-ans-later": "Not right now."
+            "show-hive-ans-later": "Not right now.",
+            "brought-to-hive-entrance": "Here we are !"
         }
     }
 }

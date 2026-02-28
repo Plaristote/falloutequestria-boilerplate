@@ -6,7 +6,6 @@ export default class Dialog {
   getEntryPoint() {
     if (level.name == "ovipostor-meeting")
       return "encounter/entry";
-    return "hive/entry";
   }
 
   get metInEncounter() {

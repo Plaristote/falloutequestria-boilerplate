@@ -18,7 +18,8 @@
             "hive/introduction": "A pony in the hive? This place is supposed to be secret. The queen can’t just let every collaborator walk in.",
             "hive/on-caput": "Her? More or less she’s the local jester. Harmless if a bit stupid. She’s not really allowed out because she doesn’t understand why we hide.",
             "hive/on-murder": "She was the interest of some raider boss. Queeny wanted him gone. I took her appearance to kill. You should thank me, pony, for cleaning up the trash.",
-            "hive/on-queen": "Trying to get secrets out of me are you?” *He suspiciously looks you up and down* “I won’t tell you more than that I think she is doing a good job, though she’s a bit cranky.",
+            "hive/on-queen": "<p>Trying to get secrets out of me are you?</p>\n<p><i>He suspiciously looks you up and down.</i></p>\n<p>I won’t tell you more than that I think she is doing a good job, though she’s a bit cranky.</p>",
+            "hive/on-self": "<i>He sighs.</i><br>\nSomehow telling it to a pony makes it worse. I’m ovipositor. I’ll have you know that is an acceptable changeling name.",
             "scene-line": "Nothing personal, there just can't be two of you around.",
             "scene-victim-line": "What the fuck ?!"
         }

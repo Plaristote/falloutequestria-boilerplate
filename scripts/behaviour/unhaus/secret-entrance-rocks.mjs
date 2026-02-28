@@ -17,4 +17,9 @@ export default class extends MovableObject {
   onZoneExited(character) {
     if (character ===  game.player) this.model.interactive = false;
   }
+
+  onMoved() {
+    super.onMoved();
+    level.deleteObject(level.findObject("floor-0.secret-entrance-blocker"));
+  }
 }

@@ -48,7 +48,9 @@ export default class extends QuestHelper {
   kidnapPlayer() {
     this.model.setVariable("kidnapped", 1);
     game.asyncAdvanceTime(15, function() {
-      game.switchToLevel("unhaus-hive", "jail-cell");
+      game.switchToLevel("unhaus-hive", "jail-cell-3", function() {
+        level.script.prepareKidnappedPlayer();
+      });
     });
   }
 

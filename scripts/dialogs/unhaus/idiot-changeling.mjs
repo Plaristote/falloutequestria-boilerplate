@@ -61,7 +61,10 @@ class Dialog extends DialogHelper {
   }
 
   goToHiveEntrance() {
-    console.log("TODO: implement hive entrance and go there on this hook");
+    game.playerParty.addCharacter(this.dialog.npc);
+    level.insertPartyIntoZone(game.playerParty, "secret-entrance-exit");
+    game.playerParty.removeCharacter(this.dialog.npc);
+    level.addTextBubble(this.dialog.npc, this.dialog.tr("brought-to-hive-entrance"), 4000, "green");
   }
 
   get metInHive() {

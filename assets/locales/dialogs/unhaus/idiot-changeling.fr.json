@@ -35,7 +35,8 @@
             "prompt": "Salut ! Je suis content de te revoir !",
             "show-hive": "Bien sûr ! Mais ne le dis à personne ! Suis-moi !",
             "show-hive-ans-accept": "D'accord.",
-            "show-hive-ans-later": "Pas maintenant."
+            "show-hive-ans-later": "Pas maintenant.",
+            "brought-to-hive-entrance": "C'est là !"
         }
     }
 }
