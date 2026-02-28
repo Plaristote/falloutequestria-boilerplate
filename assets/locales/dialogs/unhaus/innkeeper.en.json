@@ -1,0 +1,12 @@
+{
+    "dialogs": {
+        "unhaus/innkeeper": {
+            "accept-room": "Sure, why not !",
+            "ask-room": "I need a room to rest.",
+            "entry": "Hi ! Can I help you with something ?",
+            "exit-entry": "No, thank you.",
+            "introduction": "Hey ! Nice meeting you ! Are you staying with us tonight ? Are you looking for a place to sleep ?",
+            "roomsAreFree": "Good news, the Mayor told me I shouldn't charge you for the room. At least I think he did. Sometimes I'm not sure what he's saying.<br>Anyway. How long do you intend to stay this time ?"
+        }
+    }
+}

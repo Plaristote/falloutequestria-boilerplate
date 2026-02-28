@@ -28,6 +28,7 @@ export default class extends CharacterBehaviour {
       } else {
         const actions = this.model.actionQueue;
         actions.pushReach(level.script.scene.victim);
+        actions.pushWait(1);
         actions.pushScript({
           onTrigger: () => {
             level.addAnimationSequence({ steps: [makeVanishAnimation(level.script.scene.victim)] });

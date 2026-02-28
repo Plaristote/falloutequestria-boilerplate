@@ -8810,6 +8810,18 @@
             "width": 79
         }
     },
+    "unhaus": {
+        "secret-rocks": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 113,
+            "offsetX": 0,
+            "offsetY": 0,
+            "repeat": false,
+            "source": "unhaus-secret-entrance.png",
+            "width": 110
+        }
+    },
     "vault-bed": {
         "alt-bottom-left": {
             "frameCount": 1,

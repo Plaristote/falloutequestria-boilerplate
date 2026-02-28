@@ -1,0 +1,12 @@
+{
+    "dialogs": {
+        "unhaus/innkeeper": {
+            "accept-room": "Bah, oui, pourquoi pas.",
+            "ask-room": "J'ai besoin d'une chambre.",
+            "entry": "Bonjour ! Je peux faire quelque chose pour toi ?",
+            "exit-entry": "Non, merci.",
+            "introduction": "Hey ! Enchanté de faire ta connaissance ! Tu reste avec nous cette nuit ? T'as besoin d'un coin pour dormir ?",
+            "roomsAreFree": "Bonne nouvelle, le maire m'a dis de ne plus te facturer tes nuitées. Enfin je crois. Je suis pas toujours sûr de bien le capter.<br>\nEnfin bon. Combien de temps tu va rester, cette fois-ci ?"
+        }
+    }
+}

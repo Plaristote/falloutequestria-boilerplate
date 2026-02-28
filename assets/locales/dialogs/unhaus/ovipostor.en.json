@@ -1,0 +1,26 @@
+{
+    "dialogs": {
+        "unhaus/ovipostor": {
+            "about-caput": "What can you tell me about Caput?",
+            "about-murder": "Why did you kill that mare?",
+            "about-queen": "What can you tell me about your queen?",
+            "ask-about": "Who are you ?",
+            "encounter/entry": "You ponies really can’t make my life easy. Listen, how about you waddle away, forget anything happened, and we both can be happy.",
+            "encounter/hostile-answer": "No way I let a monster like you walk around.",
+            "encounter/on-hostile": "Oh for fuck’s sake.",
+            "encounter/on-intimidate": "So-so sorry for standing in your way. You won’t see me ever again.",
+            "encounters/agree-answer": "I will do that.",
+            "encounters/intimidate-answer": "<i>Give the bug-pony a threatening death stare.</i>",
+            "exit-dialog": "Bye.",
+            "hive/entry": "A pony in the hive? This place is supposed to be secret. The queen can’t just let every collaborator walk in.",
+            "hive/intro-intimidated": "Shit! I almost jumped out of my carapace! What are you doing here? I guess it makes sense the queen hires machines like you.",
+            "hive/intro-met": "You again?! Are you supposed to be here? I guess the queen does occasionally employ ponies… so what do you want?",
+            "hive/introduction": "A pony in the hive? This place is supposed to be secret. The queen can’t just let every collaborator walk in.",
+            "hive/on-caput": "Her? More or less she’s the local jester. Harmless if a bit stupid. She’s not really allowed out because she doesn’t understand why we hide.",
+            "hive/on-murder": "She was the interest of some raider boss. Queeny wanted him gone. I took her appearance to kill. You should thank me, pony, for cleaning up the trash.",
+            "hive/on-queen": "Trying to get secrets out of me are you?” *He suspiciously looks you up and down* “I won’t tell you more than that I think she is doing a good job, though she’s a bit cranky.",
+            "scene-line": "Nothing personal, there just can't be two of you around.",
+            "scene-victim-line": "What the fuck ?!"
+        }
+    }
+}

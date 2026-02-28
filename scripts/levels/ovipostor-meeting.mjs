@@ -9,7 +9,7 @@ class Scene extends SceneManager {
   }
 
   get changeling() {
-    return level.findObject("changeling");
+    return level.findObject("ovipostor");
   }
 
   get states() {
@@ -67,13 +67,17 @@ export default class extends LevelBase {
   }
 
   onLoaded() {
+    if (!level.findObject("ovipostor"))
+      game.uniqueCharacterStorage.loadCharacterToCurrentLevel("unhaus/ovipostor", 25, 18);
     this.scene = new Scene(this, "ovipostor-meeting");
     this.scene.changeling.statistics.faction = "";
     this.scene.changeling.setVariable("metInEncounter", 1);
     if (!level.hasVariable("prepared")) {
       level.setVariable("prepared", 1);
       this.scene.changeling.inventory.addItemOfType("ovipostor-todo-list");
+      this.scene.changeling.lookAt(this.scene.victim);
       this.scene.initialize();
-    }
+    } else
+      this.scene.changeling.lookAt(this.scene.victim);
   }
 }
