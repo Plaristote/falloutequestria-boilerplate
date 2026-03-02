@@ -1,0 +1,223 @@
+{
+    "answers": {
+        "about-changeling-back": {
+            "state": "prompt",
+            "text": "about-changeling-back"
+        },
+        "about-changelings-tell-bloody-mess": {
+            "availableHook": "canTellBloodyMessAboutReproduction",
+            "state": "about-changelings",
+            "text": "about-changelings-tell-bloody-mess"
+        },
+        "about-help-purpose-ask-followup": {
+            "state": "about-help-purpose",
+            "text": "about-help-purpose-ask-followup"
+        },
+        "about-help-question-purpose": {
+            "availableHook": "canQuestionPurpose",
+            "state": "about-help-purpose",
+            "text": "about-help-question-purpose"
+        },
+        "answer-ask-why-help": {
+            "availableHook": "canAskWhyHelp",
+            "state": "meeting",
+            "text": "answer-ask-why-help"
+        },
+        "answer-meeting-listen": {
+            "state": "prompt",
+            "text": "answer-meeting-listen"
+        },
+        "answer-reject-money": {
+            "availableHook": "disabled",
+            "state": "on-reject-money",
+            "text": "answer-reject-money"
+        },
+        "ask-about-changelings": {
+            "state": "about-changelings",
+            "text": "ask-about-changelings"
+        },
+        "ask-about-diet": {
+            "state": "about-changelings",
+            "text": "ask-about-diet"
+        },
+        "ask-about-mayor": {
+            "availableHook": "canAskAboutMayor",
+            "state": "prompt",
+            "text": "ask-about-mayor"
+        },
+        "ask-about-mines": {
+            "availableHook": "canAskAboutMines",
+            "state": "prompt",
+            "text": "ask-about-mines"
+        },
+        "ask-about-mission": {
+            "availableHook": "canAskAboutMission",
+            "hook": "nextMissionState",
+            "text": "ask-about-mission"
+        },
+        "ask-about-reproduction": {
+            "state": "about-changelings",
+            "text": "ask-about-reproduction"
+        },
+        "ask-why-help": {
+            "state": "about-help-purpose",
+            "text": "answer-ask-why-help"
+        },
+        "denounce-caput": {
+            "availableHook": "canDenounceCaput",
+            "state": "meeting",
+            "text": "denounce-caput"
+        },
+        "exit-prompt": {
+            "availableHook": "canExitDialogue",
+            "text": "exit-prompt"
+        },
+        "give-report": {
+            "availableHook": "canReportAboutMission",
+            "hook": "nextReportState",
+            "text": "give-report"
+        },
+        "meeting-as-enemy-argue": {
+            "state": "prompt",
+            "text": "meeting-as-enemy-argue"
+        },
+        "meeting-as-enemy-question": {
+            "state": "meeting-as-enemy",
+            "text": "meeting-as-enemy-question"
+        },
+        "meeting-as-enemy-reject": {
+            "state": "start-fight",
+            "text": "meeting-as-enemy-reject"
+        },
+        "meeting-as-enemy-surrender": {
+            "state": "prompt",
+            "text": "meeting-as-enemy-surrender"
+        },
+        "petiole-quest/accept": {
+            "state": "petiole-quest/accepted",
+            "text": "petiole-quest/accept"
+        },
+        "petiole-quest/ask-more-questions": {
+            "state": "prompt",
+            "text": "petiole-quest/ask-more-questions"
+        },
+        "petiole-quest/ask-why-there": {
+            "state": "petiole-quest/why",
+            "text": "petiole-quest/ask-why-there"
+        },
+        "petiole-quest/report-cancel": {
+            "text": "petiole-quest/report-cancel"
+        },
+        "shoot-asks-questions-later": {
+            "state": "start-fight",
+            "text": "shoot-asks-questions-later"
+        },
+        "tell-about-changeling-kills": {
+            "availableHook": "canTellAboutChangelingKills",
+            "state": "prompt",
+            "text": "tell-about-changeling-kills"
+        }
+    },
+    "entryPoint": "prompt",
+    "states": {
+        "about-changelings": {
+            "answers": [
+                "about-changelings-tell-bloody-mess",
+                "ask-about-reproduction",
+                "ask-about-diet",
+                "about-changeling-back"
+            ],
+            "hook": "aboutChangelings",
+            "text": "about-changelings"
+        },
+        "about-help-purpose": {
+            "answers": [
+                "about-help-question-purpose",
+                "about-help-purpose-ask-followup",
+                "about-changeling-back"
+            ],
+            "hook": "aboutHelpPurpose",
+            "text": "about-help-purpose"
+        },
+        "meeting": {
+            "answers": [
+                "answer-reject-money",
+                "answer-meeting-listen",
+                "answer-ask-why-help",
+                "denounce-caput",
+                "shoot-asks-questions-later"
+            ],
+            "hook": "meeting",
+            "text": "meeting-guard"
+        },
+        "meeting-as-enemy": {
+            "answers": [
+                "meeting-as-enemy-question",
+                "meeting-as-enemy-reject",
+                "meeting-as-enemy-surrender",
+                "meeting-as-enemy-argue"
+            ],
+            "hook": "meetingAsEnemy",
+            "mood": "angry",
+            "text": "meeting-as-enemy"
+        },
+        "on-reject-money": {
+            "answers": [
+            ],
+            "text": "on-reject-money"
+        },
+        "petiole-quest/accepted": {
+            "answers": [
+            ],
+            "hook": "acceptPetioleQuest",
+            "text": "petiole-quest/accepted"
+        },
+        "petiole-quest/give": {
+            "answers": [
+                "petiole-quest/accept",
+                "petiole-quest/ask-why-there",
+                "petiole-quest/ask-more-questions"
+            ],
+            "hook": "givePetioleQuest",
+            "text": "petiole-quest/give"
+        },
+        "petiole-quest/report-failure": {
+            "answers": [
+            ],
+            "hook": "startFight",
+            "text": "petiole-quest/report-failure"
+        },
+        "petiole-quest/report-success": {
+            "answers": [
+            ],
+            "text": "petiole-quest/report-success"
+        },
+        "petiole-quest/why": {
+            "answers": [
+                "petiole-quest/accept",
+                "petiole-quest/ask-more-questions"
+            ],
+            "text": "petiole-quest/why"
+        },
+        "prompt": {
+            "answers": [
+                "give-report",
+                "ask-about-mission",
+                "ask-about-changelings",
+                "ask-why-help",
+                "ask-about-mines",
+                "tell-about-changeling-kills",
+                "ask-about-mayor",
+                "exit-prompt"
+            ],
+            "hook": "prompt",
+            "text": "on-meeting-surrender"
+        },
+        "start-fight": {
+            "answers": [
+            ],
+            "hook": "startFight",
+            "text": "start-fight"
+        }
+    }
+}

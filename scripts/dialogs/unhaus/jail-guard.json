@@ -1,0 +1,142 @@
+{
+    "answers": {
+        "ask-about-motives": {
+            "state": "jailed/entry",
+            "text": "ask-about-motives"
+        },
+        "ask-about-self": {
+            "state": "jailed/entry",
+            "text": "ask-about-self"
+        },
+        "ask-about-stuff": {
+            "state": "jailed/entry",
+            "text": "ask-about-stuff"
+        },
+        "ask-let-out": {
+            "state": "jailed/let-out-prompt",
+            "text": "ask-let-out"
+        },
+        "ask-let-out-deal": {
+            "state": "jailed/let-out-insisted",
+            "text": "ask-let-out-deal"
+        },
+        "ask-let-out-insist": {
+            "state": "jailed/entry",
+            "text": "ask-let-out-insist"
+        },
+        "ask-let-out-offer-friendship": {
+            "state": "jailed/entry",
+            "text": "ask-let-out-offer-friendship"
+        },
+        "ask-let-out-offer-services": {
+            "state": "jailed/let-out-services",
+            "text": "ask-let-out-offer-services"
+        },
+        "ask-let-out-reason": {
+            "state": "jailed/entry",
+            "text": "ask-let-out-reason"
+        },
+        "ask-let-out-threat": {
+            "state": "jailed/entry",
+            "text": "ask-let-out-threat"
+        },
+        "go-to-queen": {
+            "hook": "goToQueen",
+            "text": "exit"
+        },
+        "leave": {
+            "text": "leave"
+        },
+        "let-out-ask-equality": {
+            "state": "jailed/entry",
+            "text": "let-out-ask-equality"
+        },
+        "let-out-ask-see-leader": {
+            "state": "jailed/let-out-to-leader",
+            "text": "let-out-ask-see-leader"
+        },
+        "let-out-offer-sex": {
+            "state": "jailed/entry",
+            "text": "let-out-offer-sex"
+        }
+    },
+    "entryPoint": "jailed/entry",
+    "states": {
+        "jailed/entry": {
+            "answers": [
+                "ask-let-out",
+                "ask-about-self",
+                "ask-about-motives",
+                "ask-about-stuff",
+                "leave"
+            ],
+            "hook": "jailPrompt",
+            "text": "jailed/entry"
+        },
+        "jailed/let-out-insisted": {
+            "answers": [
+                "ask-let-out-offer-services",
+                "ask-let-out-offer-friendship",
+                "ask-let-out-reason"
+            ],
+            "text": "jailed/let-out-insisted"
+        },
+        "jailed/let-out-prompt": {
+            "answers": [
+                "ask-let-out-insist",
+                "ask-let-out-deal",
+                "ask-let-out-threat"
+            ],
+            "text": "jailed/let-out-prompt"
+        },
+        "jailed/let-out-services": {
+            "answers": [
+                "let-out-offer-sex",
+                "let-out-ask-see-leader",
+                "let-out-ask-equality"
+            ],
+            "text": "jailed/let-out-services"
+        },
+        "jailed/let-out-to-leader": {
+            "answers": [
+                "go-to-queen"
+            ],
+            "text": "jailed/let-out-to-leader"
+        },
+        "jailed/reactions-about-motives": {
+            "answers": [
+            ],
+            "text": "jailed/reactions-about-motives"
+        },
+        "jailed/reactions-about-self": {
+            "answers": [
+            ],
+            "text": "jailed/reactions-about-self"
+        },
+        "jailed/reactions-about-sex": {
+            "answers": [
+            ],
+            "text": "jailed/reactions-about-sex"
+        },
+        "jailed/reactions-asked-nicely": {
+            "answers": [
+            ],
+            "text": "jailed/reactions-asked-nicely"
+        },
+        "jailed/reactions-equality": {
+            "answers": [
+            ],
+            "text": "jailed/reactions-equality"
+        },
+        "jailed/reactions-friendship": {
+            "answers": [
+            ],
+            "text": "jailed/reactions-friendship"
+        },
+        "jailed/reactions-reason": {
+            "answers": [
+            ],
+            "text": "jailed/reactions-reason"
+        }
+    }
+}

@@ -1,11 +1,12 @@
 import {DialogHelper} from "../helpers.mjs";
 
-class Dialog extends DialogHelper {
+export default class extends DialogHelper {
   constructor(dialog) {
     super(dialog);
   }
 
   getEntryPoint() {
+    game.setVariable("metUnhausMayor", 1);
     if (this.firstMeetingCheck())
       return "meeting";
   }
@@ -46,12 +47,12 @@ class Dialog extends DialogHelper {
     return game.quests.getQuest("changelingQuest");
   }
 
-  get knowsAboutInsectPony() {
-    return this.changelingQuest && !this.changelingQuest.isObjectiveCompleted("findLair");
+  knowsAboutInsectPony() {
+    return this.changelingQuest && !this.changelingQuest.hidden && !this.changelingQuest.isObjectiveCompleted("findLair");
   }
 
-  get canAskAboutInsectPony() {
-    return this.dialog.previousAnswer != "ask-about-insects" && this.knowsAboutInsectPony;
+  canAskAboutInsectPony() {
+    return this.dialog.previousAnswer != "ask-about-insects" && this.knowsAboutInsectPony();
   }
 
   get canPressAboutInsectPony() {
@@ -67,8 +68,4 @@ class Dialog extends DialogHelper {
   get canPressUsingSpeech() {
     return game.player.statistics.speech > 70;
   }
-}
-
-export function create(dialog) {
-  return new Dialog(dialog);
 }

@@ -59,6 +59,7 @@
             "text": "leave-prompt"
         },
         "meeting-ans-curiosity": {
+            "state": "prompt",
             "text": "meeting-ans-curiosity"
         },
         "meeting-ans-insect": {

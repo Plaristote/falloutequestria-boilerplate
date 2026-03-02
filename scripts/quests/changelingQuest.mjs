@@ -38,6 +38,8 @@ export default class extends QuestHelper {
     }
     if (this.model.hasVariable("queenProposal"))
       text += `<p>${this.model.tr("desc-queen-proposal")}</p>`;
+    if (this.model.hasVariable("queenKilled"))
+      text += `<p>${this.model.tr("desc-queen-killed")}</p>`;
     return text;
   }
 
@@ -49,7 +51,7 @@ export default class extends QuestHelper {
     this.model.setVariable("kidnapped", 1);
     game.asyncAdvanceTime(15, function() {
       game.switchToLevel("unhaus-hive", "jail-cell-3", function() {
-        level.script.prepareKidnappedPlayer();
+        level.script.initializeKidnappedPlayer();
       });
     });
   }
@@ -61,6 +63,11 @@ export default class extends QuestHelper {
     this.model.setVariable("heardAboutUnhaus", revealer);
     this.model.completeObjective("findAboutUnhaus");
     this.model.location = "unhaus";
+  }
+
+  onQueenKilled() {
+    this.model.setVariable("queenKilled", 1);
+    this.model.completed = true;
   }
 
   completeObjective(name) {

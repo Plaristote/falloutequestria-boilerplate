@@ -3,6 +3,8 @@ import {DialogHelper} from "../helpers.mjs";
 class Dialog extends DialogHelper {
   constructor(dialog) {
     super(dialog);
+    if (!game.quests.hasQuest("changelingQuest"))
+      game.quests.addQuest("changelingQuest");
   }
 
   getEntryPoint() {
@@ -65,6 +67,8 @@ class Dialog extends DialogHelper {
     level.insertPartyIntoZone(game.playerParty, "secret-entrance-exit");
     game.playerParty.removeCharacter(this.dialog.npc);
     level.addTextBubble(this.dialog.npc, this.dialog.tr("brought-to-hive-entrance"), 4000, "green");
+    this.changelingQuest.completeObjective("findLair");
+    this.changelingQuest.setVariable("hiveShownByCaput", 1);
   }
 
   get metInHive() {
