@@ -44,6 +44,11 @@ export class DialogHelper {
   barter() {
     this.dialog.tryToBarter();
   }
+
+  startFight() {
+    game.player.setAsEnemy(this.dialog.npc);
+    this.dialog.npc.setAsEnemy(game.player);
+  }
 }
 
 export class BarterAnswer {

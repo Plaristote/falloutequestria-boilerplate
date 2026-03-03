@@ -47,13 +47,12 @@ export class DialogComponent extends MetabolismComponent {
 
   dialogDetectionHook() {
     if (this.speakOnDetection && this.model.fieldOfView.isDetected(game.player)) {
-      if (canAutoTalk(this.model))
-      {
+      if (canAutoTalk(this.model)) {
         this.startDialog();
         return true;
-      }
-      else
+      } else {
         this.model.tasks.addTask("dialogDetectionHook", 1000, 1);
+      }
     }
     return false;
   }
