@@ -1,0 +1,39 @@
+{
+    "dialogs": {
+        "cristal-den/enforcer-captain": {
+            "about-back-to-entry": "Cool. I had something else to ask you.",
+            "about-enforcers/confusion": "Are… are you flirting with me ?",
+            "about-enforcers/entry": "We keep this town in one piece. We save our peace from outside threats, and more often than not, from our own unruly folks. You know how it is. Police work.",
+            "ask-about": "I'd like to learn more about you.",
+            "ask-about-confusion-encourage": "What ? No, I… well, unless… you wanted me to, maybe ?",
+            "ask-about-confusion-reject": "What ? No, I… I mean I want to know more about this place, and what you all do here !",
+            "ask-for-work": "I'm looking for work.",
+            "meeting": "Who are you and what are you doing in my office ? If you're here to file a complaint, you're at the wrong desk. Get back upstairs.",
+            "meeting-ask-work-name": "I'm {{name}}. I'm looking for work.",
+            "meeting-hostile": "Sheesh, calm down, lady, I'll be on my way.",
+            "meeting-leave": "Sorry, I didn't mean to bother you !",
+            "meeting-polite-continue": "Sorry, I didn't mean to bother you !",
+            "prompt": "You're back. What now ?",
+            "prompt-leave": "Nothing, I'll be on my way.",
+            "work-introduction": "My name is {{name}}.",
+            "work-patrol-accept": "I'm in.",
+            "work-patrol-ask": "What should I expect ?",
+            "work-patrol-ask-pay": "How much does it pay ?",
+            "work-patrol-negociate-pay": "And since I'm not a your standard mercenary, I might ask {{{{patrolWorkIncreasedReward}} caps, wouldn't you agree ?",
+            "work-patrol-reject": "Not interested.",
+            "work-reject-introduction": "That's none of your concern.",
+            "work/ask-name": "How about you introduce yourself first ?",
+            "work/entry": "You look like you can handle yourself. If you can follow orders and stay in line, we'll get along just fine.",
+            "work/entry-bad-rep": "Oh. Yeah. I heard about you. And you probably know already, but it can't be a good thing for you.<br>\nTell you what. I'm all for second chances. Prove you can be a force of good, fix up your reputation, and come back to see me. Maybe I'll have work for you then.",
+            "work/entry-good-rep": "I've heard about you. Good things, of course. That already puts you ahead of half my crew. But hey. Due process. I'm not going to do you any favor.",
+            "work/on-reject-introduction": "Oh yeah ? This is a fair, orderly trade we do here. We don't need your kind. Buzz off.",
+            "work/patrol/about-pay": "Since you're an outsider, you'll be paid as a mercenary. The standard fee is {{patrolWorkReward}} caps.",
+            "work/patrol/expectations": "Nothing too dangerous, hoepfully. A few packs of savage beasts, which we have to keep away from town, typically. Bandits, if you're lucky.",
+            "work/patrol/intro": "Alright. There's a patrol heading out in a couple of minutes. Just the routine sweep. You go with them, you all come back alive, and we'll talk again.",
+            "work/patrol/negociate-pay-failure": "As far as I'm concerned, you're a nobody at best. You'll take the standard pay.",
+            "work/patrol/negociate-pay-success": "Hm. Yeah. You already made a name for yourself in town. I guess you can.",
+            "work/patrol/report-failure": "So, I heard you ran away on your own ? I trusted you with a simple mission, and you still somehow managed to disappoint. Your carreer is off to quite the start.<br>\nIt's the last time you ever went on patrol. And you can forget about getting paid, this time. You're lucky I'm short on ponies. But you'll be doing your next jobs on your own, is that clear ? I'm not letting you put anymore of your partners in danger.",
+            "work/patrol/report-success": "<p>Back from your patrol, huh ? I've been told you did an adequate job.</p>\n<p>Take your reward and listen up. I have another job for you. <i>She gives you {{patrolWorkReward}}</i> caps.</p>"
+        }
+    }
+}

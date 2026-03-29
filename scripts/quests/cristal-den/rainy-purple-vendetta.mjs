@@ -40,12 +40,16 @@ export function findLiveSlaver() {
 }
 
 export class RainyPurpleVendetta extends QuestHelper {
+  constructor(model) {
+    super(model);
+    this.xpReward = 2500;
+  }
+
   initialize() {
     this.model.location = "cristal-den";
     this.model.addObjective("join",        this.tr("join"));
     this.model.addObjective("killSlavers", this.tr("killSlavers"));
     this.model.addObjective("freeSlaves",  this.tr("freeSlaves"));
-    this.xpReward = 2500;
   }
 
   get rainyPurple() {

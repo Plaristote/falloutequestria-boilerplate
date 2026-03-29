@@ -1,5 +1,6 @@
 import {RandomEncounterComponent} from "./randomEncounters.mjs";
 import Caravan from "./caravan.mjs";
+import cristalDenPatrol from "behaviour/cristal-den/copper-patrol.mjs";
 import {getValueFromRange} from "behaviour/random.mjs";
 
 function contains(array, faction1, faction2) {
@@ -17,22 +18,28 @@ export default class extends RandomEncounterComponent {
   get rathianTrack() { return game.hasVariable("rathianTrack"); }
   set rathianTrack(value) { game.setVariable("rathianTrack", value); }
 
+  get activeCaravans() {
+    return [this.caravan, cristalDenPatrol()]
+      .filter(caravan => caravan.hasCaravan);
+  }
+  get activeProcesses() {
+    return this.activeCaravans;
+  }
+
   outdoorsTick(minute) {
     if (this.rathianTrack)
       game.quests.getQuest("stable-103/rathian").script.updateRathianTrack();
-    if (this.caravan.hasCaravan)
+    if (this.activeCaravans.length > 0)
       return ;
     super.outdoorsTick(minute);
   }
 
   onLoaded() {
-    if (this.caravan.hasCaravan)
-      this.caravan.onGameLoaded();
+    this.activeProcesses.forEach(controller => controller.onGameLoaded());
   }
 
   onExitingLevel() {
-    if (this.caravan.hasCaravan)
-      this.caravan.onExitingLevel();
+    this.activeProcesses.forEach(controller => controller.onExitingLevel());
   }
 
   diplomacyUpdate(factions, hostility) {

@@ -1,0 +1,207 @@
+{
+    "answers": {
+        "about-back-to-entry": {
+            "state": "prompt",
+            "text": "about-back-to-entry"
+        },
+        "ask-about": {
+            "hook": "askAbout",
+            "state": "about-enforcers/entry",
+            "text": "ask-about"
+        },
+        "ask-about-confusion-encourage": {
+            "text": "ask-about-confusion-encourage"
+        },
+        "ask-about-confusion-reject": {
+            "state": "about-enforcers/entry",
+            "text": "ask-about-confusion-reject"
+        },
+        "ask-for-work": {
+            "hook": "onAskedForWork",
+            "state": "work/entry",
+            "text": "ask-for-work"
+        },
+        "meeting-ask-work-name": {
+            "hook": "onIntroduced",
+            "state": "work/entry",
+            "text": "meeting-ask-work-name"
+        },
+        "meeting-hostile": {
+            "hook": "onRefuseIntroduction",
+            "text": "meeting-hostile"
+        },
+        "meeting-polite-continue": {
+            "state": "prompt",
+            "text": "meeting-polite-continue"
+        },
+        "prompt-leave": {
+            "text": "prompt-leave"
+        },
+        "work-entry-continue": {
+            "state": "work/patrol/intro",
+            "text": "exit"
+        },
+        "work-introduction": {
+            "hook": "onIntroduced",
+            "state": "work/entry",
+            "text": "work-introduction"
+        },
+        "work-patrol-accept": {
+            "hook": "startPatrolQuest",
+            "text": "work-patrol-accept"
+        },
+        "work-patrol-ask": {
+            "state": "work/patrol/expectations",
+            "text": "work-patrol-ask"
+        },
+        "work-patrol-ask-pay": {
+            "availableHook": "!hasNegociatedPatrolReward",
+            "state": "work/patrol/about-pay",
+            "text": "work-patrol-ask-pay"
+        },
+        "work-patrol-negociate-pay": {
+            "availableHook": "canNegociatePatrolReward",
+            "state": "work/patrol/negociate-pay-failure",
+            "text": "work-patrol-negociate-pay"
+        },
+        "work-patrol-reject": {
+            "text": "work-patrol-reject"
+        },
+        "work-reject-introduction": {
+            "hook": "onRefuseIntroduction",
+            "state": "work/on-reject-introduction",
+            "text": "work-reject-introduction"
+        }
+    },
+    "entryPoint": "prompt",
+    "states": {
+        "about-enforcers/confusion": {
+            "answers": [
+                "ask-about-confusion-reject",
+                "ask-about-confusion-encourage"
+            ],
+            "mood": "dubious",
+            "text": "about-enforcers/confusion"
+        },
+        "about-enforcers/entry": {
+            "answers": [
+                "about-back-to-entry"
+            ],
+            "mood": "neutral",
+            "text": "about-enforcers/entry"
+        },
+        "meeting": {
+            "answers": [
+                "meeting-ask-work-name",
+                "meeting-polite-continue",
+                "meeting-hostile"
+            ],
+            "mood": "angry",
+            "text": "meeting"
+        },
+        "prompt": {
+            "answers": [
+                "ask-for-work",
+                "ask-about",
+                "prompt-leave"
+            ],
+            "mood": "angry",
+            "text": "prompt"
+        },
+        "work/ask-name": {
+            "answers": [
+                "work-introduction",
+                "work-reject-introduction"
+            ],
+            "mood": "cocky",
+            "text": "work/ask-name"
+        },
+        "work/entry": {
+            "answers": [
+                "work-entry-continue"
+            ],
+            "hook": "workEntry",
+            "mood": "dubious",
+            "text": "work/entry"
+        },
+        "work/entry-bad-rep": {
+            "answers": [
+            ],
+            "mood": "dubious",
+            "text": "work/entry-bad-rep"
+        },
+        "work/entry-good-rep": {
+            "answers": [
+            ],
+            "mood": "smile",
+            "text": "work/entry-good-rep"
+        },
+        "work/on-reject-introduction": {
+            "answers": [
+            ],
+            "mood": "angry",
+            "text": "work/on-reject-introduction"
+        },
+        "work/patrol/about-pay": {
+            "answers": [
+                "work-patrol-negociate-pay",
+                "work-patrol-accept",
+                "work-patrol-ask",
+                "work-patrol-reject"
+            ],
+            "mood": "neutral",
+            "text": "work/patrol/about-pay"
+        },
+        "work/patrol/expectations": {
+            "answers": [
+                "work-patrol-accept",
+                "work-patrol-ask-pay",
+                "work-patrol-reject"
+            ],
+            "mood": "smile",
+            "text": "work/patrol/expectations"
+        },
+        "work/patrol/intro": {
+            "answers": [
+                "work-patrol-accept",
+                "work-patrol-ask",
+                "work-patrol-ask-pay",
+                "work-patrol-reject"
+            ],
+            "mood": "cocky",
+            "text": "work/patrol/intro"
+        },
+        "work/patrol/negociate-pay-failure": {
+            "answers": [
+                "work-patrol-accept",
+                "work-patrol-ask",
+                "work-patrol-reject"
+            ],
+            "mood": "angry",
+            "text": "work/patrol/negociate-pay-failure"
+        },
+        "work/patrol/negociate-pay-success": {
+            "answers": [
+                "work-patrol-accept",
+                "work-patrol-ask",
+                "work-patrol-reject"
+            ],
+            "mood": "smile",
+            "text": "work/patrol/negociate-pay-success"
+        },
+        "work/patrol/report-failure": {
+            "answers": [
+            ],
+            "hook": "onReportPatrolFailure",
+            "mood": "angry",
+            "text": "work/patrol/report-failure"
+        },
+        "work/patrol/report-success": {
+            "answers": [
+            ],
+            "hook": "onReportPatrolSuccess",
+            "mood": "smile",
+            "text": "work/patrol/report-success"
+        }
+    }
+}

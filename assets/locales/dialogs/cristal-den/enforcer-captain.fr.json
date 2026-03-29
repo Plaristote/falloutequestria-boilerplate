@@ -1,0 +1,39 @@
+{
+    "dialogs": {
+        "cristal-den/enforcer-captain": {
+            "about-back-to-entry": "Je vois. J'avais autre chose à demander.",
+            "about-enforcers/confusion": "Tu… t'es en train de me faire du rentre-dedans, là ?",
+            "about-enforcers/entry": "Nous gardons cette ville en un seul morceau. Nous la protégeons des menaces extérieures, et plus souvent que je ne le voudrais, nous la protégeons de nos propres connards internes. Tu sais ce que c'est. Un travail de police, quoi.",
+            "about-leave": "Je vois. Merci, je vais y aller.",
+            "ask-about": "Je voudrais en savoir plus sur vous.",
+            "ask-about-confusion-encourage": "Quoi ? Non, bien sûr… enfin… sauf si ça te ferais plaisir, peut-être ?",
+            "ask-about-confusion-reject": "Hein ? Non, je… je voulais savoir qui vous êtes tous, ici, et ce que vous faites comme travail !",
+            "ask-for-work": "Je cherche du travail.",
+            "meeting": "Qui t'es et qu'est-ce que tu fous dans mon bureau ? Si t'es là pour déposer plainte, tu t'es planté de guichet, mon pote. Retourne au rez-de-chaussé.",
+            "meeting-ask-work-name": "Je suis {{name}}. Je cherche du travail.",
+            "meeting-hostile": "Du calme, l'ancienne. Je me casse.",
+            "meeting-polite-continue": "Excusez-moi, je ne voulais pas déranger.",
+            "prompt": "Ah. Te revoilà. Qu'est-ce qu'il y a ?",
+            "prompt-leave": "Rien, j'y vais.",
+            "work-introduction": "Je suis {{name}}.",
+            "work-patrol-accept": "J'en suis.",
+            "work-patrol-ask": "À quoi je dois m'attendre ?",
+            "work-patrol-ask-pay": "Combien ça paye ?",
+            "work-patrol-negociate-pay": "Et comme je ne suis pas un mercenaire standard, je peux demander {{patrolWorkIncreasedReward}} capsules, pas vrai ?",
+            "work-patrol-reject": "Non merci, ça m'intéresse pas.",
+            "work-reject-introduction": "Ca ne te regarde pas.",
+            "work/ask-name": "Et si tu te présentais d'abord ?",
+            "work/entry": "T'as l'air de pouvoir te débrouiller. Si tu peux suivre des ordres et rester dans les rangs, nous allons nous s'entendre, toi et moi.",
+            "work/entry-bad-rep": "Ah. Je vois. J'ai entendu parler de toi. Et comme tu peux l'imaginer, ça n'aide pas vraiment ton cas.<br>\nTu sais quoi ? J'ai rien contre les secondes chances. Prouve que tu peux être un citoyen modèle, améliore ta réputation, et reviens me voir. Peut-être alors que j'aurais du travail pour toi.",
+            "work/entry-good-rep": "J'ai entendu parler de toi. Que des bonnes choses. Ca te place déjà devant la moitié de mes poneys. Mais t'imagine pas que je te ferais un traitement de faveur. Les règles avant tout.",
+            "work/on-reject-introduction": "Ah ouais ? On travaille au propre, dans ce métier. J'ai pas besoin de ton engeance dans mes rangs. Dégage.",
+            "work/patrol/about-pay": "Puisque tu es un étranger, tu sera payé en tant que mercenaire. La paie standard est de {{patrolWorkReward}} capsules.",
+            "work/patrol/expectations": "Rien de très dangereux, en principe. Quelques meutes d'animaux sauvage, qu'on doit maintenir à distance de la ville. Parfois, des bandits, si la chance te sourit.",
+            "work/patrol/intro": "Très bien. Il y a une patrouille qui décolle dans quelques minutes. Juste la routine. Tu pars avec eux, tu les accompagne, vous revenez tous en vie, et on reparle après.",
+            "work/patrol/negociate-pay-failure": "Pour autant que je sache, t'es personne. Tu prendra la paie standard, et pas un sous de plus.",
+            "work/patrol/negociate-pay-success": "Hm. Ouais. T'as déjà fait tes preuves en ville. Je suppose que tu peux.",
+            "work/patrol/report-failure": "Alors comme ça, on abandonne son poste ? Je t'ai confié une mission simple, et t'as quand même réussi à me décevoir. Ta carrière commence très mal.<br>\nC'est la dernière fois que tu pars en patrouille. Et tu peux oublier ta solde. T'as de la chance qu'on soit en manque d'effectif. Mais tes prochaines missions, tu les fera en solo, c'est clair ? Pas question que tu mette d'autres collègues en danger.",
+            "work/patrol/report-success": "<p>Déjà de retour de patrouille ? Excellent. J'ai entendu dire que t'avais fais un boulot acceptable.</p>\n\n<p>Prend ta solde et tend l'oreille. J'ai une autre mission pour toi. <i>Elle te tend {{patrolWorkReward}} capsules</i>.</p>"
+        }
+    }
+}
