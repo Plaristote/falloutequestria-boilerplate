@@ -93,84 +93,88 @@ function thornhoofPath() {
 // 48h -> 1000
 
 export default class CaravanProcess {
+  get variableStore() {
+    return game;
+  }
+
   get hasCaravan() {
     return this.goingTo !== null;
   }
 
   get pendingReward() {
-    return game.getVariable("caravanReward", 0);
+    return this.variableStore.getVariable("caravanReward", 0);
   }
 
   set pendingReward(value) {
     if (value)
-      game.setVariable("caravanReward", value);
+      this.variableStore.setVariable("caravanReward", value);
     else
-      game.unsetVariable("caravanReward");
+      this.variableStore.unsetVariable("caravanReward");
   }
 
   get duration() {
-    return game.getVariable("caravanDuration", 0);
+    return this.variableStore.getVariable("caravanDuration", 0);
   }
 
   set duration(value) {
     if (value)
-      game.setVariable("caravanDuration", value);
+      this.variableStore.setVariable("caravanDuration", value);
     else
-      game.unsetVariable("caravanDuration");
+      this.variableStore.unsetVariable("caravanDuration");
   }
 
   get currentDuration() {
-    return game.getVariable("caravanDurationAt", 0);
+    return this.variableStore.getVariable("caravanDurationAt", 0);
   }
 
   set currentDuration(value) {
     if (value)
-      game.setVariable("caravanDurationAt", value);
+      this.variableStore.setVariable("caravanDurationAt", value);
     else
-      game.unsetVariable("caravanDurationAt");
+      this.variableStore.unsetVariable("caravanDurationAt");
   }
 
   get startedAt() {
-    return game.getVariable("caravanStartedAt", null);
+    return this.variableStore.getVariable("caravanStartedAt", null);
   }
 
   set startedAt(value) {
     if (value !== null)
-      game.setVariable("caravanStartedAt", value);
+      this.variableStore.setVariable("caravanStartedAt", value);
     else
-      game.unsetVariable("caravanStartedAt");
+      this.variableStore.unsetVariable("caravanStartedAt");
   }
 
   get goingTo() {
-    return game.getVariable("caravanTarget", null);
+    return this.variableStore.getVariable("caravanTarget", null);
   }
 
   set goingTo(value) {
     if (value !== null)
-      game.setVariable("caravanTarget", value);
+      this.variableStore.setVariable("caravanTarget", value);
     else
-      game.unsetVariable("caravanTarget");
+      this.variableStore.unsetVariable("caravanTarget");
   }
 
   get path() {
-    if (game.hasVariable("caravanPath"))
-      return JSON.parse(game.getVariable("caravanPath"));
+    if (this.variableStore.hasVariable("caravanPath"))
+      return JSON.parse(this.variableStore.getVariable("caravanPath"));
     return null;
   }
 
   set path(value) {
     if (value)
-      game.setVariable("caravanPath", JSON.stringify(value));
+      this.variableStore.setVariable("caravanPath", JSON.stringify(value));
     else
-      game.unsetVariable("caravanPath");
+      this.variableStore.unsetVariable("caravanPath");
   }
 
   get failedCaravanCount() {
-    return game.getVariable("failedCaravanCount", 0);
+    return this.variableStore.getVariable("failedCaravanCount", 0);
   }
 
   set failedCaravanCount(value) {
-    game.setVariable("failedCaravanCount", value);
+    this.variableStore.setVariable("failedCaravanCount", value);
   }
 
   get hostileEncounterOver() {
@@ -208,7 +212,7 @@ export default class CaravanProcess {
   }
 
   onCaravanStarted() {
-    game.unsetVariables(["abandonnedCaravan", "wipedOutCaravan"]);
+    this.variableStore.unsetVariables(["abandonnedCaravan", "wipedOutCaravan"]);
     this.party = this.createCaravanParty();
     this.triggerNextStep();
   }
@@ -313,9 +317,9 @@ export default class CaravanProcess {
     this.failedCaravanCount++;
     this.deleteCaravanParty();
     if (remainingEscort === 0)
-      game.setVariable("wipedOutCaravan", 1);
+      this.variableStore.setVariable("wipedOutCaravan", 1);
     else
-      game.setVariable("abandonnedCaravan", 1);
+      this.variableStore.setVariable("abandonnedCaravan", 1);
   }
 
   get xpReward() {
@@ -329,7 +333,7 @@ export default class CaravanProcess {
   get withCaravanLeader() {
     if (game.quests.getQuest("thornhoof/caravan")?.script?.caravanInProgress)
       return true;
-    return game.getVariable("withCaravanLeader", 0) == 1;
+    return this.variableStore.getVariable("withCaravanLeader", 0) == 1;
   }
 
   get escortMembersCount() {
