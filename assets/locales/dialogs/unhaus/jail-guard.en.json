@@ -1,0 +1,32 @@
+{
+    "dialogs": {
+        "unhaus/jail-guard": {
+            "ask-about-motives": "Why am I being held?",
+            "ask-about-self": "What are you?",
+            "ask-about-stuff": "Can I have my stuff back?",
+            "ask-let-out": "Can you let me out?",
+            "ask-let-out-deal": "I am sure you are a nice insect pony. Maybe we can make a deal.",
+            "ask-let-out-insist": "Pretty please.",
+            "ask-let-out-offer-friendship": "I can offer friendship.",
+            "ask-let-out-offer-services": "I can offer my services to you.",
+            "ask-let-out-reason": "Don’t you think this job is a bit too dangerous. Eventually, you’ll have a pony who’ll shred you to pieces. But if you look away now…",
+            "ask-let-out-threat": "If you don’t I’ll peel that carapace from you.",
+            "jailed/entry": "What is it?",
+            "jailed/let-out-insisted": "I doubt you have anything to offer, pony.",
+            "jailed/let-out-prompt": "No.",
+            "jailed/let-out-services": "Sure… How?",
+            "jailed/let-out-to-leader": "Fine. Have it your way. I’ll let you talk to the queen. She’ll probably kill you on the spot.",
+            "jailed/reactions-about-motives": "Because we have run out of pods and we are currently making one for you.",
+            "jailed/reactions-about-self": "None of your concern.",
+            "jailed/reactions-about-sex": "I'm female.",
+            "jailed/reactions-asked-nicely": "Stop talking.",
+            "jailed/reactions-equality": "You’re an idealist.",
+            "jailed/reactions-friendship": "Very funny.<br>\n<i>His face muscles don’t move a bit</i>",
+            "jailed/reactions-reason": "Not gonna happen.",
+            "leave": "Forget it.",
+            "let-out-ask-equality": "I will fight for the total equality of insect ponies and ponies.",
+            "let-out-ask-see-leader": "Bring me to your leader. I can bring out a deal.",
+            "let-out-offer-sex": "I could suck your dick."
+        }
+    }
+}

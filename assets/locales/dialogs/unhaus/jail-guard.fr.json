@@ -1,0 +1,32 @@
+{
+    "dialogs": {
+        "unhaus/jail-guard": {
+            "ask-about-motives": "Pourquoi vous m'avez enfermé?",
+            "ask-about-self": "Qu'est-ce que vous êtes ?",
+            "ask-about-stuff": "Je pourrais récupérer mes affaires?",
+            "ask-let-out": "Vous pourriez me laisser sortir ?",
+            "ask-let-out-deal": "Je suis sûr que vous êtes un gentil insecte. On peut sûrement s'arranger.",
+            "ask-let-out-insist": "S'il vous plait !",
+            "ask-let-out-offer-friendship": "Je pourrais être ton ami.",
+            "ask-let-out-offer-services": "Je peux t'offrir mes services.",
+            "ask-let-out-reason": "Tu crois pas que tu fais un job un peu trop dangereux ? Un jour, tu va tomber sur un poney qui te réglera ton compte. Mais si tu passe l'éponge…",
+            "ask-let-out-threat": "Si tu me libère pas, je vais te le faire regretter.",
+            "jailed/entry": "Qu'est-ce que t'as ?",
+            "jailed/let-out-insisted": "Je crois pas que t'ai rien qui m'intéresse, petit poney.",
+            "jailed/let-out-prompt": "Non.",
+            "jailed/let-out-services": "Mouais… quel genre de service ?",
+            "jailed/let-out-to-leader": "Bon. Comme tu veux. Je vais te laisser voir la reine. Elle va sûrement t'executer sur place. Bon débarras.",
+            "jailed/reactions-about-motives": "Parce qu'on a pas de cuves disponibles en ce moment, et on est en train de t'en préparer une.",
+            "jailed/reactions-about-self": "Ca te regarde pas.",
+            "jailed/reactions-about-sex": "Je suis une femelle.",
+            "jailed/reactions-asked-nicely": "Ferme-là.",
+            "jailed/reactions-equality": "T'es un idéaliste.",
+            "jailed/reactions-friendship": "Très drôle.<br>\n<i>Les muscles de sont visages ne trahissent aucune réaction.</i>",
+            "jailed/reactions-reason": "Même pas en rêve.",
+            "leave": "Laisse tomber.",
+            "let-out-ask-equality": "Je me battrais pour les droits et l'égalité entre poneys et insectoïdes.",
+            "let-out-ask-see-leader": "Amène-moi voir votre chef. Je peux lui faire une proposition.",
+            "let-out-offer-sex": "Je pourrais te pomper le dard."
+        }
+    }
+}
