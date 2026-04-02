@@ -61,6 +61,7 @@ class RoamTask {
 
         this.model.actionQueue.pushReachNear(center.x, center.y, this.range);
         this.model.actionQueue.start();
+        this.model.truncatePath(this.range);
       }
       this.schedule();
     }
