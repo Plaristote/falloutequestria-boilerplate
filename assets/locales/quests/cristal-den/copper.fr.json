@@ -1,0 +1,33 @@
+{
+  "quests": {
+    "cristal-den/copper-patrol": {
+      "title": "Patrouille du Havre",
+      "description": "Le capitaine Cass de la police du Havre Cristallin t'as demandé de te joindre à une de ses patrouilles, surveillant les alentours de la ville. Si tu peux suivre les ordres, peut-être gagnera-tu sa confiance, voir même quelques capsules.",
+      "desc-ran-away": "Suivre les ordres, c'est pas ton truc. Tu as abandonné la patrouille en chemin. Ce qui leur arrive, ça ne te regarde plus. Le capitaine va probablement t'engueuler quand tu la reverras.",
+      "desc-success": "Suivre les ordres, c'est pas la joie, mais tu as néanmoins complété la patrouille. Le captaine va sûrement te récompenser. Peut-être même qu'elle te fera des gratouilles aux oreilles. Bon petit poney que tu es.",
+      "patrol": "Complète la patrouille",
+      "report": "Retourne voir Cass"
+    },
+    "cristal-den/copper-outpost": {
+      "title": "L'avant-poste silencieux",
+      "description": "L'un des avant-postes des éclaireurs du Havre Cristallin, près de la rivière, a cessé de communiquer avec le quartier général. Le Capitaine Cass veut que tu t'y rende afin de l'informer de ce qui s'y passe.",
+      "desc-wolves": "Tu as trouvé l'avant-poste, et il n'était pas vide : des loups s'y sont installés.",
+      "desc-wolves-killed": "Tu t'en es débarassé: l'avant-poste est de nouveau sécurisé.",
+      "desc-wolves-not-found": "Tu as trouvé l'avant-poste.",
+      "desc-death": "Tu as aussi trouvé la raison du silence de l'avant-poste : les éclaireurs sont morts.",
+      "desc-death-by-firearms": "En inspectant les corps, tu as trouvé des blessures indiquant qu'ils ont été tué par des armes à feux.",
+      "desc-found-herd": "Ce n'est pas tout : l'un des cadavres diffère des autres. Un des poneys décédés ici ne porte pas l'équipement des éclaireurs, et son corps est couvert de tatouages tribaux.",
+      "desc-full-report": "Le Capitaine Cass semble avoir été troublé de la nouvelle, particulièrement quant à l'identité des coupables. Elle a néanmoins apprécié ton rapport, et te montre désormais plus de respect.",
+      "desc-lied-herd": "Tu n'as pas dit toute la vérité au Capitaine Cass, décidant de la laisser dans le flou quant à l'identité des coupables.",
+      "desc-report-default": "Tu as fait ton rapport au Capitaine Cass. La situation l'inquiète, mais ta mission est accomplie. Bon boulot.",
+      "desc-report-failure": "Le Capitaine Cass n'a pas du tout apprécié ton rapport. Tu as du dire quelque chose qu'il ne fallait pas. Espèce de maladroit.",
+      "inspect-body-herd": "Tu vois un poney mort. Ce n'est pas un éclaireur du Havre. Son équipement ne colle pas. Et il est couvert de tatouages tribaux.",
+      "inspect-body-floor-1": "Tu vois un éclaireur du Havre, mort, par balles.",
+      "inspect-body-floor-0-success": "Tu vois un éclaireur du Havre, mort. Son cadavre a été partiellement dévoré par les loups, mais en regardant de plus prêt, ce n'est pas la cause du décès : il est couvert de blessures par balles.",
+      "inspect-body-floor-0-failure": "Tu vois un éclaireur du Havre, mort. Son cadavre a été partiellement dévoré par les loups. C'est dégueulasse.",
+      "investigate": "Inspecte l'avant-poste",
+      "report": "Informe Cass de la situation",
+      "kill-wolves": "Neutraliser les loups"
+    }
+  }
+}

@@ -34,6 +34,58 @@
             "state": "prompt",
             "text": "meeting-polite-continue"
         },
+        "outpost-ask-about-herd": {
+            "availableHook": "outpostReportedHerd",
+            "state": "work/outpost/report/about-herd",
+            "text": "outpost-ask-about-herd"
+        },
+        "outpost-ask-payment": {
+            "availableHook": "outpostCanAskSalary",
+            "state": "work/outpost/report/pay-up",
+            "text": "outpost-ask-payment"
+        },
+        "outpost-leave": {
+            "text": "outpost-leave"
+        },
+        "outpost-report": {
+            "availableHook": "outpostWorkCanReport",
+            "state": "work/outpost/report/entry",
+            "text": "outpost-report"
+        },
+        "outpost-report-dead-wolves": {
+            "availableHook": "outpostWorkCanReportDeadWolves",
+            "state": "work/outpost/report/prompt",
+            "text": "outpost-report-dead-wolves"
+        },
+        "outpost-report-death": {
+            "state": "work/outpost/report/prompt",
+            "text": "outpost-report-death"
+        },
+        "outpost-report-done": {
+            "hook": "onOutpostReportDone",
+            "state": "work/outpost/report/conclusion-vague",
+            "text": "outpost-report-done"
+        },
+        "outpost-report-firearms": {
+            "availableHook": "outpostWorkCanReportFirearms",
+            "state": "work/outpost/report/prompt",
+            "text": "outpost-report-firearms"
+        },
+        "outpost-report-herd": {
+            "availableHook": "outpostWorkCanReportHerd",
+            "state": "work/outpost/report/prompt",
+            "text": "outpost-report-herd"
+        },
+        "outpost-report-wolves": {
+            "availableHook": "outpostWorkCanReportWolves",
+            "state": "work/outpost/report/prompt",
+            "text": "outpost-report-wolves"
+        },
+        "outpost-tell-about-herd-destroyed": {
+            "availableHook": "isGoldenHerdDestroyed",
+            "state": "work/outpost/report/about-heard-destroyed",
+            "text": "outpost-tell-about-herd-destroyed"
+        },
         "prompt-leave": {
             "text": "prompt-leave"
         },
@@ -45,6 +97,29 @@
             "hook": "onIntroduced",
             "state": "work/entry",
             "text": "work-introduction"
+        },
+        "work-outpost-accept": {
+            "state": "work/outpost/accepted",
+            "text": "work-outpost-accept"
+        },
+        "work-outpost-ask-pay": {
+            "availableHook": "!hasNegociatedOutpostReward",
+            "state": "work/outpost/about-pay",
+            "text": "work-outpost-ask-pay"
+        },
+        "work-outpost-leads": {
+            "state": "work/outpost/leads",
+            "text": "work-outpost-leads"
+        },
+        "work-outpost-negociate-pay": {
+            "availableHook": "canNegociatePatrolReward",
+            "hook": "onNegociateOutpostReward",
+            "state": "work/outpost/negociate-pay-failure",
+            "text": "work-outpost-negociate-pay"
+        },
+        "work-outpost-postpone": {
+            "state": "work/outpost/postponed",
+            "text": "work-outpost-postpone"
         },
         "work-patrol-accept": {
             "hook": "startPatrolQuest",
@@ -59,8 +134,13 @@
             "state": "work/patrol/about-pay",
             "text": "work-patrol-ask-pay"
         },
+        "work-patrol-followup": {
+            "state": "work/outpost/intro",
+            "text": "work-patrol-followup"
+        },
         "work-patrol-negociate-pay": {
             "availableHook": "canNegociatePatrolReward",
+            "hook": "onNegociatePatrolReward",
             "state": "work/patrol/negociate-pay-failure",
             "text": "work-patrol-negociate-pay"
         },
@@ -101,6 +181,7 @@
         },
         "prompt": {
             "answers": [
+                "outpost-report",
                 "ask-for-work",
                 "ask-about",
                 "prompt-leave"
@@ -141,6 +222,155 @@
             ],
             "mood": "angry",
             "text": "work/on-reject-introduction"
+        },
+        "work/outpost/about-pay": {
+            "answers": [
+                "work-outpost-negociate-pay",
+                "work-outpost-accept",
+                "work-outpost-leads",
+                "work-outpost-postpone"
+            ],
+            "text": "work/outpost/about-pay"
+        },
+        "work/outpost/accepted": {
+            "answers": [
+            ],
+            "hook": "startOutpostQuest",
+            "mood": "neutral",
+            "text": "work/outpost/accepted"
+        },
+        "work/outpost/intro": {
+            "answers": [
+                "work-outpost-accept",
+                "work-outpost-leads",
+                "work-outpost-ask-pay",
+                "work-outpost-postpone"
+            ],
+            "text": "work/outpost/intro"
+        },
+        "work/outpost/leads": {
+            "answers": [
+                "work-outpost-accept",
+                "work-outpost-ask-pay",
+                "work-outpost-postpone"
+            ],
+            "text": "work/outpost/leads"
+        },
+        "work/outpost/negociate-pay-failure": {
+            "answers": [
+                "work-outpost-accept",
+                "work-outpost-leads",
+                "work-outpost-postpone"
+            ],
+            "mood": "angry",
+            "text": "work/outpost/negociate-pay-failure"
+        },
+        "work/outpost/negociate-pay-success": {
+            "answers": [
+                "work-outpost-accept",
+                "work-outpost-leads",
+                "work-outpost-postpone"
+            ],
+            "hook": "onNegociateOutpostReward",
+            "mood": "smile",
+            "text": "work/outpost/negociate-pay-success"
+        },
+        "work/outpost/postponed": {
+            "answers": [
+            ],
+            "mood": "angry",
+            "text": "work/outpost/postponed"
+        },
+        "work/outpost/report/about-heard-destroyed": {
+            "answers": [
+                "outpost-ask-payment",
+                "outpost-leave"
+            ],
+            "mood": "cocky",
+            "text": "work/outpost/report/about-heard-destroyed"
+        },
+        "work/outpost/report/about-herd": {
+            "answers": [
+                "outpost-tell-about-herd-destroyed",
+                "outpost-ask-payment",
+                "outpost-leave"
+            ],
+            "mood": "neutral",
+            "text": "work/outpost/report/about-herd"
+        },
+        "work/outpost/report/conclusion-failure": {
+            "answers": [
+                "outpost-leave"
+            ],
+            "mood": "angry",
+            "text": "work/outpost/report/conclusion-failure"
+        },
+        "work/outpost/report/conclusion-vague": {
+            "answers": [
+                "outpost-ask-payment",
+                "outpost-leave"
+            ],
+            "mood": "neutral",
+            "text": "work/outpost/report/conclusion-vague"
+        },
+        "work/outpost/report/conclusion-with-herd": {
+            "answers": [
+                "outpost-ask-about-herd",
+                "outpost-ask-payment",
+                "outpost-leave"
+            ],
+            "mood": "angry",
+            "text": "work/outpost/report/conclusion-with-herd"
+        },
+        "work/outpost/report/entry": {
+            "answers": [
+                "outpost-report-death"
+            ],
+            "text": "work/outpost/report/entry"
+        },
+        "work/outpost/report/on-firearms-used": {
+            "answers": [
+            ],
+            "text": "work/outpost/report/on-firearms-used"
+        },
+        "work/outpost/report/on-herd-found": {
+            "answers": [
+            ],
+            "text": "work/outpost/report/on-herd-found"
+        },
+        "work/outpost/report/on-wolves-found": {
+            "answers": [
+            ],
+            "text": "work/outpost/report/on-wolves-found"
+        },
+        "work/outpost/report/on-wolves-found-followup": {
+            "answers": [
+            ],
+            "text": "work/outpost/report/on-wolves-found-followup"
+        },
+        "work/outpost/report/on-wolves-killed": {
+            "answers": [
+            ],
+            "text": "work/outpost/report/on-wolves-killed"
+        },
+        "work/outpost/report/pay-up": {
+            "answers": [
+                "outpost-ask-about-herd",
+                "outpost-leave"
+            ],
+            "hook": "outpostPayUp",
+            "text": "work/outpost/report/pay-up"
+        },
+        "work/outpost/report/prompt": {
+            "answers": [
+                "outpost-report-dead-wolves",
+                "outpost-report-herd",
+                "outpost-report-firearms",
+                "outpost-report-wolves",
+                "outpost-report-done"
+            ],
+            "hook": "outpostReportPrompt",
+            "text": "work/outpost/report/prompt"
         },
         "work/patrol/about-pay": {
             "answers": [
@@ -191,6 +421,8 @@
         },
         "work/patrol/report-failure": {
             "answers": [
+                "work-patrol-followup",
+                "work-outpost-postpone"
             ],
             "hook": "onReportPatrolFailure",
             "mood": "angry",
@@ -198,6 +430,8 @@
         },
         "work/patrol/report-success": {
             "answers": [
+                "work-patrol-followup",
+                "work-outpost-postpone"
             ],
             "hook": "onReportPatrolSuccess",
             "mood": "smile",

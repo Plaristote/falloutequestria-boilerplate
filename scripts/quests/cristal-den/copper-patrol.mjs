@@ -14,6 +14,16 @@ export default class extends QuestHelper {
     patrolProcess().start();
   }
 
+  getDescription() {
+    let text = `<p>${this.model.tr("description")}</p>`;
+
+    if (this.model.isObjectiveCompleted("patrol"))
+      text += `<p>${this.model.tr("desc-success")}</p>`;
+    if (this.model.isObjectiveFailed("patrol"))
+      text += `<p>${this.model.tr("desc-ran-away")}</p>`;
+    return text;
+  }
+
   completeObjective(name) {
     if (name == "patrol")
       this.model.addObjective("report");

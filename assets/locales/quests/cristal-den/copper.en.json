@@ -1,0 +1,33 @@
+{
+  "quests": {
+    "cristal-den/copper-patrol": {
+      "title": "Patrolling the wasteland",
+      "description": "Captain Cass of the Cristal Den police force asked you to join one of her patrols, watching over the outskirts of the town. If you can follow order, maybe you'll earn her trust, and hopefully some caps.",
+      "desc-ran-away": "Following orders proved way too boring however. You left the patrol midway. Whatever happens to them is not your problem. The captain will probably give you a hearful when you meet her again.",
+      "desc-success": "Following orders is quite boring. But you completed the patrol nevertheless. The captain will surely reward you. Perhaps even give you a headpat. Good pony.",
+      "patrol": "Complete the patrol",
+      "report": "Speak with Cass"
+    },
+    "cristal-den/copper-outpost": {
+      "title": "Silent outpost",
+      "description": "One of the Cristal Den's scouts outpost near the river has gone silent. Captain Cass wants you to check it out and report back on what's happening.",
+      "desc-wolves": "You found the outpost, and it was not empty : a pack of wolves has moved in.",
+      "desc-wolves-killed": "You cleared the place: it's safe again.",
+      "desc-wolves-not-found": "You found the outpost.",
+      "desc-death": "You also found out why the outpost went silent: the scouts are all dead.",
+      "desc-death-by-firearms": "Inspecting the bodies, you noticed the wounds were dealt by firearms.",
+      "desc-found-herd": "Furthermore, one dead pony did not look like the others. The body wasn't wearing the same equipment as the other scouts, and its skin was covered in tribal tatoos.",
+      "desc-full-report": "Capitain Cass seemed troubled about the news, especially about the perpetrators. Still, she appreciated your work, and shows you more respect.",
+      "desc-lied-herd": "You didn't tell the full story to Captain Cass, and decided to hide the truth about the perpetrators from her.",
+      "desc-report-default": "You made your report to Captain Cass. She seemed worried about the situation, but you did your job okay. Good work.",
+      "desc-report-failure": "Captain Cass didn't like your report one bit. You must've said something wrong, you goofball.",
+      "inspect-body-herd": "You see a dead pony. This one is not a Cristal Den scout. The gear does not match. And he has tribal tatoos all over.",
+      "inspect-body-floor-1": "You see a dead Cristal Den scout. He died from multiple gun shots.",
+      "inspect-body-floor-0-success": "You see a dead Cristal Den scout. He's been partially eaten by wolves, but upon closer inspection, you can tell he was already dead when that happened. There are several gunshot wounds.",
+      "inspect-body-floor-0-failure": "You see a dead Cristal Den scout. Mauled. Partially eaten. It's gruesome.",
+      "investigate": "Investigate the outpost",
+      "report": "Report your findings to Cass",
+      "kill-wolves": "Kill the wolves"
+    }
+  }
+}
