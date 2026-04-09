@@ -1,0 +1,28 @@
+{
+    "dialogs": {
+        "cristal-den/bibin": {
+            "ask-about-job": "T'as dis que t'avais besoin de mon aide ?",
+            "ask-about-job#2": "Alors, t'as un autre travail pour moi ?",
+            "enforcer-ask-cautious": "C'est radical, comme solution. T'as pas peur que la situation s'envenimme ?",
+            "enforcers-accept-job": "D'accord. Je vais le faire.",
+            "enforcers-accept-job-enthusiast": "Tout faire péter ? Tu sais parler aux poneys, toi ! Ok, je vais le faire !",
+            "enforcers-ask-about-payment": "C'est un travail risqué. Combien t'es prêt à payer ?",
+            "enforcers-trigger-report": "Je me suis occupé de désarmer les barbouzes.",
+            "enforcers/about-caution": "Ca fait parti du plan, mon pote. La situation va empirer. Aussi longtemps que le petit nombre tyranise le grand nombre, ça va empirer de toute façon, avec ou sans nous. C'est pas nous qui avons enclenché le processus, ça avait déjà commencé. Nous, on peut juste s'assurer que quand les barbouzes voudront dominer par la violence, ils seront moins bien équipés pour le faire.",
+            "enforcers/about-payment": "Ceux qui se battent pour la dignité des faibles méritent une juste récompense. Et je ne parle pas juste de respect, même si tu en recevra plein aussi. Je peux t'offrir {{enforcersReward}} si tu complète la tâche. Ca te convient, n'est-ce pas ?",
+            "enforcers/accepted": "<p>Génial. Tiens, j'ai des explosifs pour toi, ça devrait t'aider.</p>\n<p><i>Il te donne de la dynamite.</i></p>\n<p>Bonne chance. Tout le bidonville compte sur ton succès !</p>",
+            "enforcers/intro": "<p>Oh oui. Je crois que t'es prêt à rentrer dans le dur.  Cette fois, on  va mettre fin à l'oppression du Havre Cristallin sur nous autres. Les barbouzes de cette ville ne barbouzeront plus rien.</p>\n<p>Je veux que tu entre dans leur station de \"police\", dans le centre ville. Au sous-sol, il y a un dépôt d'armement. Trouve un moyen d'y entrer, et fais-moi péter tout ça.",
+            "enforcers/report": "<p>Ouais. J'ai entendu le feu d'artifice d'ici. Bon travail, mon pote. Tiens, voilà ta récompense.</p>\n<p><i>Il te tends {{enforcersReward}} capsules.</i></p>",
+            "entry-exit": "Rien, ciao !",
+            "entry/default": "Yo. Ca gaze ? De quoi t'as besoin ?",
+            "pinnedHerd/accepted": "C'est ça qu'on veut ! Voilà les coordonnées, dépêche-toi, ils ont besoin de ton aide !",
+            "pinnedHerd/how": "Bien sûr, pourquoi pas ? Je te fais entièrement confiance. T'arrive toujours à t'en sortir !<br>\nMais si tu préfère éviter la manière forte, tu peux peut-être trouver un moyen de faire diversion. L'important, c'est que mes amis s'en sortent vivant.",
+            "pinnedHerd/intro": "Ouais, tu tombe à pic. Quelques potes à moi m'ont appelé par radio. Ils sont sous le feu des barbouzes des Potioks, au nord de la ville, près de la rivière. Tu leur rendrai un bon service si tu pouvais prendre ces petits soldats à revers, les empêcher de nuires à mes bons amis, d'une manière ou d'une autre.",
+            "rescue-accept-alt": "Ok, je verrais ce que je peux faire.",
+            "rescue-accept-directly": "Ah, enfin un peu d'action ! Où est-ce que je dois tirer ?",
+            "rescue-ask-how": "Tu me vois descendre toute une escouade de scouts du Havre ?",
+            "sabotage-reject-job": "Désolé, ça m'intéresse pas.",
+            "sabotage-trigger-report": "J'ai du nouveau par rapport à la livraison de la malette."
+        }
+    }
+}

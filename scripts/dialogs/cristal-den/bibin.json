@@ -13,6 +13,11 @@
             "state": "job-proposal",
             "text": "ask-about-job"
         },
+        "ask-about-job#2": {
+            "availableHook": "canStartNextQuest",
+            "hook": "goToNextQuestIntroState",
+            "text": "ask-about-job#2"
+        },
         "ask-about-project": {
             "state": "about-necessary-actions",
             "text": "ask-about-project"
@@ -28,6 +33,33 @@
         "caught-attention-curious": {
             "state": "job-proposal",
             "text": "caught-attention-curious"
+        },
+        "enforcer-ask-cautious": {
+            "state": "enforcers/about-caution",
+            "text": "enforcer-ask-cautious"
+        },
+        "enforcer-report-exit": {
+            "text": "sabotage-report-exit"
+        },
+        "enforcers-accept-job": {
+            "state": "enforcers/accepted",
+            "text": "enforcers-accept-job"
+        },
+        "enforcers-accept-job-enthusiast": {
+            "state": "enforcers/accepted",
+            "text": "enforcers-accept-job-enthusiast"
+        },
+        "enforcers-ask-about-payment": {
+            "state": "enforcers/about-payment",
+            "text": "enforcers-ask-about-payment"
+        },
+        "enforcers-reject-job": {
+            "text": "sabotage-reject-job"
+        },
+        "enforcers-trigger-report": {
+            "availableHook": "canReportOnEnforcersJob",
+            "state": "enforcers/report",
+            "text": "enforcers-trigger-report"
         },
         "entry-exit": {
             "text": "entry-exit"
@@ -77,6 +109,21 @@
         "refuse-to-work": {
             "state": "job-refusal",
             "text": "refuse-to-work"
+        },
+        "rescue-accept-alt": {
+            "state": "pinnedHerd/accepted",
+            "text": "rescue-accept-alt"
+        },
+        "rescue-accept-directly": {
+            "state": "pinnedHerd/accepted",
+            "text": "rescue-accept-directly"
+        },
+        "rescue-ask-how": {
+            "state": "pinnedHerd/how",
+            "text": "rescue-ask-how"
+        },
+        "rescue-reject-job": {
+            "text": "sabotage-reject-job"
         },
         "sabotage-ask-more-payment": {
             "hook": "onNegociateSabotageJob",
@@ -181,6 +228,49 @@
             ],
             "text": "about-necessary-actions"
         },
+        "enforcers/about-caution": {
+            "answers": [
+                "enforcers-accept-job",
+                "enforcers-ask-about-payment",
+                "enforcers-reject-job"
+            ],
+            "mood": "smile",
+            "text": "enforcers/about-caution"
+        },
+        "enforcers/about-payment": {
+            "answers": [
+                "enforcers-accept-job",
+                "enforcers-reject-job"
+            ],
+            "mood": "smile",
+            "text": "enforcers/about-payment"
+        },
+        "enforcers/accepted": {
+            "answers": [
+            ],
+            "hook": "onEnforcersJobAccepted",
+            "mood": "smile",
+            "text": "enforcers/accepted"
+        },
+        "enforcers/intro": {
+            "answers": [
+                "enforcers-accept-job-enthusiast",
+                "enforcer-ask-cautious",
+                "enforcers-ask-about-payment",
+                "enforcers-reject-job"
+            ],
+            "mood": "cocky",
+            "text": "enforcers/intro"
+        },
+        "enforcers/report": {
+            "answers": [
+                "ask-about-job#2",
+                "enforcer-report-exit"
+            ],
+            "hook": "onEnforcersJobReport",
+            "mood": "laugh",
+            "text": "enforcers/report"
+        },
         "entry/caught-attention": {
             "answers": [
                 "caught-attention-ask-who",
@@ -190,7 +280,9 @@
         },
         "entry/default": {
             "answers": [
+                "enforcers-trigger-report",
                 "sabotage-trigger-report",
+                "ask-about-job#2",
                 "ask-about-job",
                 "entry-exit"
             ],
@@ -264,6 +356,29 @@
                 "necessary-action-doubts"
             ],
             "text": "necessary-actions/objected-morale"
+        },
+        "pinnedHerd/accepted": {
+            "answers": [
+            ],
+            "hook": "onRescueQuestAccepted",
+            "mood": "smile",
+            "text": "pinnedHerd/accepted"
+        },
+        "pinnedHerd/how": {
+            "answers": [
+                "rescue-accept-alt",
+                "rescue-reject-job"
+            ],
+            "text": "pinnedHerd/how"
+        },
+        "pinnedHerd/intro": {
+            "answers": [
+                "rescue-accept-directly",
+                "rescue-ask-how",
+                "rescue-reject-job"
+            ],
+            "mood": "cocky",
+            "text": "pinnedHerd/intro"
         },
         "sabotage/about-payment": {
             "answers": [
@@ -345,12 +460,13 @@
         "sabotage/reporting-no-password": {
             "answers": [
             ],
-            "hook": "callGuards",
+            "hook": "onFailedSabotageReport",
             "mood": "sad",
             "text": "sabotage/reporting-no-password"
         },
         "sabotage/reporting-reward": {
             "answers": [
+                "ask-about-job#2",
                 "sabotage-report-exit"
             ],
             "hook": "onSabotageReceivedReward",

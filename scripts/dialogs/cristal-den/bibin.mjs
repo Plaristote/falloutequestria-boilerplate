@@ -43,9 +43,16 @@ class Dialog {
   }
 
   onCompletedSabotageReport() {
-    const quest = game.quests.getQuest("cristal-den/bibins-sabotage-delivery");
-    quest.completeObjective("report");
-    quest.completed = true;
+    this.sabotageDeliveryQuest.setVariable("gavePassword", 1);
+    this.sabotageDeliveryQuest.completeObjective("report");
+    this.sabotageDeliveryQuest.completed = true;
+  }
+
+  onFailedSabotageReport() {
+    this.sabotageDeliveryQuest.setVariable("gavePassword", 0);
+    this.sabotageDeliveryQuest.completeObjective("report");
+    this.sabotageDeliveryQuest.failed = true;
+    this.callGuards();
   }
 
   onAskedRewardSabotageJob() {
@@ -70,7 +77,9 @@ class Dialog {
   }
 
   canReportOnSabotageJob() {
-    return this.sabotageDeliveryQuest != null && this.sabotageDeliveryQuest.isObjectiveCompleted("delivery");
+    return this.sabotageDeliveryQuest != null
+      && this.sabotageDeliveryQuest.isObjectiveCompleted("delivery")
+      && !this.sabotageDeliveryQuest.isObjectiveCompleted("report");
   }
 
   canReportOnSabotagePassword() {
@@ -103,12 +112,76 @@ class Dialog {
     this.dialog.npc.setVariable("sabotage-delivery-reward", value);
   }
 
+  get increasedSabotageReward() {
+    return this.enforcersReward + 250;
+  }
+
+  get enforcersReward() {
+    return this.dialog.npc.getVariable("enforcers-reward", 600);
+  }
+
+  set enforcersReward(value) {
+    this.dialog.npc.setVariable("enforcers-reward", value);
+  }
+
+  get enforcersQuest() {
+    return game.quests.getQuest("cristal-den/bibins-enforcers-sabotage");
+  }
+
+  onEnforcersJobAccepted() {
+    game.quests.addQuest("cristal-den/bibins-enforcers-sabotage");
+    game.player.inventory.addItemOfType("dynamite");
+  }
+
+  canReportOnEnforcersJob() {
+    return this.enforcersQuest && this.enforcersQuest.isObjectiveCompleted("destroyedStash");
+  }
+
+  onEnforcersJobReport() {
+    this.enforcersQuest.completed = true;
+    game.player.inventory.addItemOfType("bottlecaps", this.enforcersReward);
+  }
+
   isNotWorkingForBibin() {
     return !this.isWorkingForBibin();
   }
 
   isWorkingForBibin() {
     return game.quests.getQuest("cristal-den/bibins-sabotage-delivery") != null;
+  }
+
+  canStartSecondQuest() {
+    return this.sabotageDeliveryQuest != null && this.sabotageDeliveryQuest.completed
+        && (this.enforcersQuest == null || this.enforcersQuest.hidden);
+  }
+
+  get rescueHerdQuest() {
+    return game.quests.getQuest("cristal-den/bibins-rescue-herd");
+  }
+
+  onRescueQuestAccepted() {
+    game.quests.addQuest("cristal-den/bibins-rescue-herd");
+  }
+
+  canReportOnRescueQuest() {
+    return this.rescueHerdQuest != null && this.rescueHerdQuest.isObjectiveCrossedOff("rescue");
+  }
+
+  canStartThirdQuest() {
+    return this.enforcersQuest != null && this.enforcersQuest.completed
+        && (this.rescueHerdQuest == null || this.rescueHerdQuest.hidden);
+  }
+
+  canStartNextQuest() {
+    return this.canStartSecondQuest() || this.canStartThirdQuest();
+  }
+
+  goToNextQuestIntroState() {
+    if (this.canStartSecondQuest())
+      return "enforcers/intro";
+    else if (this.canStartThirdQuest())
+      return "pinnedHerd/intro";
+    return null;
   }
 
   backToPreviousContext() {
