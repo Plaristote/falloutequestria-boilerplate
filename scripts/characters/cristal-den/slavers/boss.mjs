@@ -12,4 +12,9 @@ export class Boss extends CharacterBehaviour {
     updateDenSlaversDead();
     super.onDied();
   }
+
+  canAutoTalk() {
+    return super.canAutoTalk() &&
+      level.getTileZone("slaver-leader-office").isInside(game.player.position.x, game.player.position.y, game.player.floor);
+  }
 }
