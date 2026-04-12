@@ -124,6 +124,10 @@ class Dialog {
     this.dialog.npc.setVariable("enforcers-reward", value);
   }
 
+  get rescueReward() {
+    return this.enforcersReward; // TODO ?
+  }
+
   get enforcersQuest() {
     return game.quests.getQuest("cristal-den/bibins-enforcers-sabotage");
   }
@@ -155,6 +159,10 @@ class Dialog {
         && (this.enforcersQuest == null || this.enforcersQuest.hidden);
   }
 
+  get potiokSpyQuest() {
+    return game.quests.getQuest("cristal-den/potioks-spy");
+  }
+
   get rescueHerdQuest() {
     return game.quests.getQuest("cristal-den/bibins-rescue-herd");
   }
@@ -163,8 +171,37 @@ class Dialog {
     game.quests.addQuest("cristal-den/bibins-rescue-herd");
   }
 
+  reportRescueQuest() {
+    if (this.rescueHerdQuest.isObjectiveCompleted("rescue"))
+      return "pinnedHerd/report-success";
+    return "pinnedHerd/report-failure";
+  }
+
+  onReportRescueQuest() {
+    this.rescueHerdQuest.completed = true;
+    this.rescueHerdQuest.completeObjective("report");
+    game.player.inventory.addItemOfType("bottlecaps", this.rescueReward);
+  }
+
+  onReportFailedRescueQuest() {
+    this.rescueHerdQuest.completeObjective("report");
+  }
+
+  canAskAboutGoldenHerdFriends() {
+    const knowsConnection =
+            (this.rescueHerdQuest && this.rescueHerdQuest.isObjectiveCrossedOff("rescue"))
+         || (this.potiokSpyQuest && this.potiokSpyQuest.isObjectiveCompleted("learnAboutSavageConnection"));
+    return knowsConnection && game.dataEngine.hasReputation("golden-herd");
+  }
+
+  canAskAboutThornhoofSiege() {
+    const liftQuest = game.quests.getQuest("thornhoof/besiegedWalls");
+    return game.quests.hasQuest("thornhoof/caravan") && (!liftQuest || !liftQuest.completed);
+  }
+
   canReportOnRescueQuest() {
-    return this.rescueHerdQuest != null && this.rescueHerdQuest.isObjectiveCrossedOff("rescue");
+    return this.rescueHerdQuest != null && this.rescueHerdQuest.isObjectiveCrossedOff("rescue")
+        && !this.rescueHerdQuest.isObjectiveCompleted("report");
   }
 
   canStartThirdQuest() {
@@ -186,6 +223,23 @@ class Dialog {
 
   backToPreviousContext() {
     return "job-proposal-return";
+  }
+
+  // Herd talk
+  herdPrompt() {
+    switch (this.dialog.previousAnswer) {
+    case "herd-ask-about-thornhoof":
+      return { textKey: "about-herd/about-thornhoof", mood: "cocky" };
+    case "ask-about-golden-herd":
+    case "rescue-bring-up-golden-herd":
+      return { textKey: "about-herd/intro", mood: "cocky" };
+    case "herd-give-positive-opinion":
+      return { textKey: "about-herd/about-strong-herd", mood: "smile" };
+    }
+  }
+
+  onHerdCooperationAccepted() {
+    // TODO ?
   }
 }
 

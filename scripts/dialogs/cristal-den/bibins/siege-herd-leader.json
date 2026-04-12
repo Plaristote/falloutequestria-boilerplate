@@ -1,0 +1,72 @@
+{
+    "answers": {
+        "already-killed-enforcers": {
+            "availableHook": "hasKilledEnforcers",
+            "state": "on-enforcers-killed",
+            "text": "already-killed-enforcers"
+        },
+        "bibin-start-will-be-back": {
+            "text": "bibin-start-will-be-back"
+        },
+        "entry-exit": {
+            "hook": "startFight",
+            "text": "entry-exit"
+        },
+        "entry-provocative-exit": {
+            "hook": "startFight",
+            "text": "entry-provocative-exit"
+        },
+        "start-bibin-quest": {
+            "availableHook": "sentByBibin",
+            "state": "on-bibin-start",
+            "text": "start-bibin-quest"
+        }
+    },
+    "entryPoint": "entry",
+    "states": {
+        "after-fight": {
+            "answers": [
+            ],
+            "hook": "completeQuest",
+            "mood": "smile",
+            "text": "after-fight"
+        },
+        "entry": {
+            "answers": [
+                "start-bibin-quest",
+                "already-killed-enforcers",
+                "entry-provocative-exit",
+                "entry-exit"
+            ],
+            "hook": "onBibinStart",
+            "mood": "angry",
+            "text": "entry"
+        },
+        "leave-bubble": {
+            "answers": [
+            ],
+            "text": "leave-bubble"
+        },
+        "on-bibin-restart": {
+            "answers": [
+            ],
+            "text": "on-bibin-restart"
+        },
+        "on-bibin-start": {
+            "answers": [
+                "already-killed-enforcers",
+                "bibin-start-will-be-back"
+            ],
+            "hook": "onBibinStart",
+            "mood": "dubious",
+            "text": "on-bibin-start"
+        },
+        "on-enforcers-killed": {
+            "answers": [
+            ],
+            "hook": "completeQuest",
+            "mood": "neutral",
+            "text": "on-enforcers-killed"
+        }
+    }
+}

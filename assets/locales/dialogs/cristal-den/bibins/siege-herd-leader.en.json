@@ -1,0 +1,17 @@
+{
+    "dialogs": {
+        "cristal-den/bibins/siege-herd-leader": {
+            "after-fight": "Good job, pal. Thanks for getting us out of this mess. We'll be on our way now.",
+            "already-killed-enforcers": "No need. I already took care of everypony outside. Just came to tell you the way is clear.",
+            "bibin-start-will-be-back": "I still have to figure it out. I'll be back soon.",
+            "entry": "How nice of you to come one by one. Let's make an example out of you, show your little friends what will soon happen to them.",
+            "entry-exit": "What ? No, wait, let's talk !",
+            "entry-provocative-exit": "One of me is more than enough to take care of y'all, wimp. Let's get to it.",
+            "leave-bubble": "Alright, ponies ! We're moving out ! Let's go !",
+            "on-bibin-restart": "What now ? Anything new, or do I have to get out and take care of it all by myself ?",
+            "on-bibin-start": "Really ? He sent you ? That's it ? What an ass… I was expecting some firepower.<br>\nSo what, do you have some kind of plan to get us out of here ?",
+            "on-enforcers-killed": "<p><i>She makes a sign towards of her goons. They check the window, the doors, and report no live enforcers.</i></p>\n<p>Damn. You're efficient. Thanks for the help, pal.</p>",
+            "start-bibin-quest": "Wait. Bibin sent me. I'm here to help."
+        }
+    }
+}

@@ -1,5 +1,77 @@
 {
     "answers": {
+        "about-herd-ask-betrayal": {
+            "state": "about-herd/about-cristal-den/on-betrayal",
+            "text": "about-herd-ask-betrayal"
+        },
+        "about-herd-ask-people-fate": {
+            "state": "about-herd/about-cristal-den/people-fate",
+            "text": "about-herd-ask-people-fate"
+        },
+        "about-herd-ask-takeover": {
+            "state": "about-herd/about-cristal-den/on-takeover",
+            "text": "about-herd-ask-takeover"
+        },
+        "about-herd-den-infer-role": {
+            "state": "about-herd/about-role/entry",
+            "text": "about-herd-den-infer-role"
+        },
+        "about-herd-den-plans-ask-settle": {
+            "state": "about-herd/about-cristal-den/settle",
+            "text": "about-herd-den-plans-ask-settle"
+        },
+        "about-herd-den-plans-who": {
+            "state": "about-herd/about-cristal-den/herd-plotters",
+            "text": "about-herd-den-plans-who"
+        },
+        "about-herd-heard-enough": {
+            "hook": "callGuards",
+            "text": "about-herd-heard-enough"
+        },
+        "about-herd-pillaging": {
+            "state": "about-herd/defend/pillaging",
+            "text": "about-herd-pillaging"
+        },
+        "about-herd-pillaging-defy": {
+            "state": "about-herd/defend/pillaging-defy",
+            "text": "about-herd-pillaging-defy"
+        },
+        "about-herd-pillaging-defy-start": {
+            "hook": "callGuards",
+            "text": "about-herd-pillaging-defy-start"
+        },
+        "about-herd-plans-ask-when": {
+            "state": "about-herd/about-cristal-den/asked-when",
+            "text": "about-herd-plans-ask-when"
+        },
+        "about-herd-role-further": {
+            "state": "about-herd/about-role/entry",
+            "text": "about-herd-role-further"
+        },
+        "about-herd-role-wtf": {
+            "state": "about-herd/about-role/entry",
+            "text": "about-herd-role-wtf"
+        },
+        "about-herd-slave-exploit": {
+            "state": "about-herd/defend/slavery-exploit",
+            "text": "about-herd-slave-exploit"
+        },
+        "about-herd-slave-justify": {
+            "state": "about-herd/defend/slavery-justify",
+            "text": "about-herd-slave-justify"
+        },
+        "about-herd-slave-push": {
+            "state": "about-herd/defend/slavery-push",
+            "text": "about-herd-slave-push"
+        },
+        "about-herd-slaves": {
+            "state": "about-herd/defend/slavery",
+            "text": "about-herd-slaves"
+        },
+        "about-herd-to-exit": {
+            "state": "about-herd/about-cristal-den/give-mission",
+            "text": "exit"
+        },
         "accept-to-work-for-price": {
             "state": "sabotage/intro",
             "text": "accept-to-work-for-price"
@@ -7,6 +79,11 @@
         "accept-to-work-gracefully": {
             "state": "sabotage/intro",
             "text": "accept-to-work-gracefully"
+        },
+        "ask-about-golden-herd": {
+            "availableHook": "canAskAboutGoldenHerdFriends",
+            "state": "about-herd/prompt",
+            "text": "ask-about-golden-herd"
         },
         "ask-about-job": {
             "availableHook": "isNotWorkingForBibin",
@@ -63,6 +140,31 @@
         },
         "entry-exit": {
             "text": "entry-exit"
+        },
+        "herd-ask-about-plans": {
+            "state": "about-herd/about-cristal-den/entry",
+            "text": "herd-ask-about-plans"
+        },
+        "herd-ask-about-thornhoof": {
+            "availableHook": "canAskAboutThornhoofSiege",
+            "state": "about-herd/prompt",
+            "text": "herd-ask-about-thornhoof"
+        },
+        "herd-give-negative-opinion": {
+            "state": "about-herd/defend/entry",
+            "text": "herd-give-negative-opinion"
+        },
+        "herd-give-positive-opinion": {
+            "state": "about-herd/prompt",
+            "text": "herd-give-positive-opinion"
+        },
+        "herd-mission-accept": {
+            "state": "about-herd/about-cristal-den/give-mission",
+            "text": "herd-mission-accept"
+        },
+        "herd-mission-not-mercenary": {
+            "state": "about-herd/about-cristal-den/give-mission-rejected",
+            "text": "herd-mission-not-mercenary"
         },
         "intruding-friendly-sneak": {
             "state": "entry/intruder/intro",
@@ -122,8 +224,30 @@
             "state": "pinnedHerd/how",
             "text": "rescue-ask-how"
         },
+        "rescue-bring-up-golden-herd": {
+            "availableHook": "canAskAboutGoldenHerdFriends",
+            "state": "about-herd/prompt",
+            "text": "rescue-bring-up-golden-herd"
+        },
+        "rescue-failed-bring-up-golden-herd": {
+            "availableHook": "canAskAboutGoldenHerdFriends",
+            "text": "rescue-failed-bring-up-golden-herd"
+        },
+        "rescue-failed-justify": {
+            "state": "pinnedHerd/failure-reported",
+            "text": "rescue-failed-justify"
+        },
         "rescue-reject-job": {
             "text": "sabotage-reject-job"
+        },
+        "rescue-report-exit": {
+            "text": "sabotage-report-exit"
+        },
+        "rescue-trigger-report": {
+            "availableHook": "canReportOnRescueQuest",
+            "hook": "reportRescueQuest",
+            "state": "pinnedHerd/report-failure",
+            "text": "rescue-trigger-report"
         },
         "sabotage-ask-more-payment": {
             "hook": "onNegociateSabotageJob",
@@ -219,6 +343,179 @@
     },
     "entryPoint": "entry/default",
     "states": {
+        "about-herd/about-cristal-den/asked-when": {
+            "answers": [
+                "about-herd-to-exit"
+            ],
+            "text": "about-herd/about-cristal-den/asked-when"
+        },
+        "about-herd/about-cristal-den/asked-when-thornoof-already-down": {
+            "answers": [
+                "about-herd-to-exit"
+            ],
+            "text": "about-herd/about-cristal-den/asked-when-thornoof-already-down"
+        },
+        "about-herd/about-cristal-den/entry": {
+            "answers": [
+                "about-herd-den-plans-ask-settle",
+                "about-herd-den-plans-who"
+            ],
+            "mood": "neutral",
+            "text": "about-herd/about-cristal-den/entry"
+        },
+        "about-herd/about-cristal-den/give-mission": {
+            "answers": [
+                "herd-mission-accept",
+                "herd-mission-not-mercenary",
+                "about-herd-heard-enough"
+            ],
+            "mood": "dubious",
+            "text": "about-herd/about-cristal-den/give-mission"
+        },
+        "about-herd/about-cristal-den/give-mission-accepted": {
+            "answers": [
+            ],
+            "hook": "onHerdCooperationAccepted",
+            "mood": "smile",
+            "text": "about-herd/about-cristal-den/give-mission-accepted"
+        },
+        "about-herd/about-cristal-den/give-mission-rejected": {
+            "answers": [
+            ],
+            "hook": "callGuard",
+            "mood": "laugh",
+            "text": "about-herd/about-cristal-den/give-mission-rejected"
+        },
+        "about-herd/about-cristal-den/herd-plotters": {
+            "answers": [
+                "about-herd-den-plans-ask-settle",
+                "about-herd-den-infer-role"
+            ],
+            "text": "about-herd/about-cristal-den/herd-plotters"
+        },
+        "about-herd/about-cristal-den/on-betrayal": {
+            "answers": [
+                "about-herd-ask-people-fate",
+                "about-herd-plans-ask-when",
+                "herd-give-negative-opinion"
+            ],
+            "mood": "laugh",
+            "text": "about-herd/about-cristal-den/on-betrayal"
+        },
+        "about-herd/about-cristal-den/on-takeover": {
+            "answers": [
+                "about-herd-ask-people-fate",
+                "about-herd-plans-ask-when",
+                "about-herd-ask-betrayal"
+            ],
+            "mood": "cocky",
+            "text": "about-herd/about-cristal-den/on-takeover"
+        },
+        "about-herd/about-cristal-den/people-fate": {
+            "answers": [
+                "about-herd-plans-ask-when",
+                "about-herd-heard-enough"
+            ],
+            "text": "about-herd/about-cristal-den/people-fate"
+        },
+        "about-herd/about-cristal-den/settle": {
+            "answers": [
+                "about-herd-ask-takeover",
+                "about-herd-ask-betrayal"
+            ],
+            "mood": "smile",
+            "text": "about-herd/about-cristal-den/settle"
+        },
+        "about-herd/about-role/entry": {
+            "answers": [
+                "herd-ask-about-plans"
+            ],
+            "mood": "smile",
+            "text": "about-herd/about-role/entry"
+        },
+        "about-herd/about-strong-herd": {
+            "answers": [
+            ],
+            "text": "about-herd/about-strong-herd"
+        },
+        "about-herd/about-thornhoof": {
+            "answers": [
+            ],
+            "text": "about-herd/about-thornhoof"
+        },
+        "about-herd/defend/entry": {
+            "answers": [
+                "about-herd-slaves",
+                "about-herd-pillaging",
+                "herd-ask-about-thornhoof"
+            ],
+            "mood": "angry",
+            "text": "about-herd/defend/entry"
+        },
+        "about-herd/defend/pillaging": {
+            "answers": [
+                "about-herd-pillaging-defy",
+                "about-herd-slaves",
+                "herd-ask-about-thornhoof"
+            ],
+            "mood": "neutral",
+            "text": "about-herd/defend/pillaging"
+        },
+        "about-herd/defend/pillaging-defy": {
+            "answers": [
+                "about-herd-slave-push",
+                "about-herd-pillaging-defy-start"
+            ],
+            "mood": "cocky",
+            "text": "about-herd/defend/pillaging-defy"
+        },
+        "about-herd/defend/slavery": {
+            "answers": [
+                "about-herd-slave-justify",
+                "about-herd-slave-exploit"
+            ],
+            "mood": "smile",
+            "text": "about-herd/defend/slavery"
+        },
+        "about-herd/defend/slavery-exploit": {
+            "answers": [
+                "about-herd-pillaging",
+                "herd-ask-about-thornhoof"
+            ],
+            "mood": "cocky",
+            "text": "about-herd/defend/slavery-exploit"
+        },
+        "about-herd/defend/slavery-justify": {
+            "answers": [
+                "about-herd-slave-push",
+                "about-herd-slave-exploit"
+            ],
+            "mood": "angry",
+            "text": "about-herd/defend/slavery-justify"
+        },
+        "about-herd/defend/slavery-push": {
+            "answers": [
+                "about-herd-role-wtf",
+                "about-herd-role-further"
+            ],
+            "mood": "smile",
+            "text": "about-herd/defend/slavery-push"
+        },
+        "about-herd/intro": {
+            "answers": [
+            ],
+            "mood": "cocky",
+            "text": "about-herd/intro"
+        },
+        "about-herd/prompt": {
+            "answers": [
+                "herd-give-negative-opinion",
+                "herd-give-positive-opinion",
+                "herd-ask-about-thornhoof",
+                "herd-ask-about-plans"
+            ],
+            "text": "about-herd/prompt"
+        },
         "about-necessary-actions": {
             "answers": [
                 "necessary-action-exit",
@@ -280,12 +577,15 @@
         },
         "entry/default": {
             "answers": [
+                "rescue-trigger-report",
                 "enforcers-trigger-report",
                 "sabotage-trigger-report",
+                "ask-about-golden-herd",
                 "ask-about-job#2",
                 "ask-about-job",
                 "entry-exit"
             ],
+            "hook": "reportRescueQuest",
             "text": "entry/default"
         },
         "entry/introduction": {
@@ -364,6 +664,13 @@
             "mood": "smile",
             "text": "pinnedHerd/accepted"
         },
+        "pinnedHerd/failure-reported": {
+            "answers": [
+            ],
+            "hook": "callGuards",
+            "mood": "sad",
+            "text": "pinnedHerd/failure-reported"
+        },
         "pinnedHerd/how": {
             "answers": [
                 "rescue-accept-alt",
@@ -379,6 +686,25 @@
             ],
             "mood": "cocky",
             "text": "pinnedHerd/intro"
+        },
+        "pinnedHerd/report-failure": {
+            "answers": [
+                "rescue-failed-justify",
+                "rescue-failed-bring-up-golden-herd"
+            ],
+            "hook": "onReportFailedRescueQuest",
+            "mood": "dubious",
+            "text": "pinnedHerd/report-failure"
+        },
+        "pinnedHerd/report-success": {
+            "answers": [
+                "rescue-bring-up-golden-herd",
+                "ask-about-job#2",
+                "rescue-report-exit"
+            ],
+            "hook": "onReportRescueQuest",
+            "mood": "smile",
+            "text": "pinnedHerd/report-success"
         },
         "sabotage/about-payment": {
             "answers": [
