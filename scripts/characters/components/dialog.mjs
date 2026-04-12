@@ -6,13 +6,17 @@ function isInAutoTalkRange(character) {
   return character.getDistance(game.player) <= 10;
 }
 
-function canAutoTalk(character) {
-  return !level.combat && !character.unconscious && isInAutoTalkRange(character)
-}
-
 export class DialogComponent extends MetabolismComponent {
   constructor(model) {
     super(model);
+  }
+
+  canTalk() {
+    return this.dialog || this.textBubbles;
+  }
+
+  canAutoTalk() {
+    return !level.combat && !this.model.unconscious && isInAutoTalkRange(this.model)
   }
 
   onTalkTo() {
@@ -47,7 +51,7 @@ export class DialogComponent extends MetabolismComponent {
 
   dialogDetectionHook() {
     if (this.speakOnDetection && this.model.fieldOfView.isDetected(game.player)) {
-      if (canAutoTalk(this.model)) {
+      if (this.canAutoTalk(this.model)) {
         this.startDialog();
         return true;
       } else {
