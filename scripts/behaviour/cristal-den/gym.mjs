@@ -86,7 +86,7 @@ export class Gym {
 
   get combatWinner() {
     const path = this.model.getVariable("winner");
-    return path === ".player" ? game.player : level.findObject(path);
+    return path === "player" ? game.player : level.findObject(path);
   }
 
   get playerWinCount() {
