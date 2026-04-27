@@ -1,4 +1,10 @@
 import {RoutineComponent} from "../routine.mjs";
+import {onCatchBibinAttention} from "../../quests/cristal-den/bibins-meeting.mjs";
+
+function onChampionTitleAcquired() {
+  onCatchBibinAttention();
+  game.player.statistics.togglePerk("boxingChampion", true);
+}
 
 export class Gym {
   constructor(model) {
@@ -15,7 +21,7 @@ export class Gym {
   }
 
   get openForMatches() {
-    return this.model.tasks.hasTask("scheduleNpcMatch");
+    return this.routineComponent.getCurrentRoutineName() == "startMatches";
   }
 
   get canPlayerJoinCombat() {
@@ -95,8 +101,8 @@ export class Gym {
 
   set playerWinCount(value) {
     this.model.setVariable("winCount", value);
-    if (value > 0 && value > this.boxers.length)
-      onCatchBibinAttention();
+    if (value > 0 && value >= this.boxers.length)
+      onChampionTitleAcquired();
   }
 
   get playerCurrentOpponent() {
@@ -140,7 +146,7 @@ export class Gym {
   }
 
   startMatches() {
-    this.model.tasks.addUniqueTask("scheduleNpcMatch", 30000, 0);
+    this.model.tasks.addUniqueTask("scheduleNpcMatch", 30000, 1);
   }
 
   stopMatches() {
@@ -150,6 +156,8 @@ export class Gym {
   scheduleNpcMatch() {
     let candidates = this.boxers;
 
+    if (this.routineComponent.getCurrentRoutineName() == "stopMatches")
+      return ;
     console.log("Start match triggered", this.combatOngoing, candidates.length > 2);
     if (!this.combatOngoing && candidates.length > 2) {
       const combattants = [];
@@ -216,8 +224,10 @@ export class Gym {
     const opponent = this.playerCurrentOpponent;
     const actions = this.referee.actionQueue;
     const self = this;
-    const winnerName = this.combatWinner == game.player ? this.ringName : this.combatWinner.displayName;
+    const playerWin = this.combatWinner == game.player;
+    const winnerName = playerWin ? this.ringName : this.combatWinner.displayName;
 
+    game.dataEngine.addReputation("cristal-den", playerWin ? 5 : -5);
     this.unstashPlayerInventory();
     game.player.script.invulnerable = false;
     opponent.setAsFriendly(game.player);
@@ -232,7 +242,7 @@ export class Gym {
     actions.pushWait(5);
     actions.pushScript({
       onTrigger: function() {
-        if (self.combatWinner == game.player)
+        if (playerWin)
           self.playerWinCount++;
         opponent.statistics.faction = "cristal-den";
         opponent.setAsFriendly(game.player);

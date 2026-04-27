@@ -113,8 +113,11 @@
             "throwing": "La compétence à faire atterir les objets que vous lancez là ou vous le désirez. Manipulation des armes de lancer telles que les couteaux de lancer, javelots ou grenades.",
 	    "toughness": "Quand on est dur, on subit moins de dégâts. Chaque niveau de cette Abilité ajoute +10% a ta résistance aux dommages.",
             "unarmed": "Une combinaison d'art martiaux, de boxe et autres compétences de combat rapproché.",
-            "armorBidAilments": "Armor Bid t'as diagnostiqué un désordre métabolique. Tu ferais mieux d'écouter ton docteur, si tu ne veux pas éviter une mort prématurée et inutile. Ton métabolisme est grandement réduit jusqu'à ce que cette maladie soit purgée."
+            "armorBidAilments": "Armor Bid t'as diagnostiqué un désordre métabolique. Tu ferais mieux d'écouter ton docteur, si tu ne veux pas éviter une mort prématurée et inutile. Ton métabolisme est grandement réduit jusqu'à ce que cette maladie soit purgée.",
+            "boxingChampion": "Tu t'es taillé une solide réputation au Havre Cristallin en grimpant sur le ring. Tu as affronté tous les boxeurs de la ville, et tu es sortis vainqueur à chaque fois. Bravo, champion."
         },
+        "armorBidAilments": "Désordre métabolique",
+        "boxingChampion": "Champion local de boxe",
         "earlierSequence": "Réflexes affutés",
         "endurance": "Endurance",
         "energyGuns": "Armes a energie",
