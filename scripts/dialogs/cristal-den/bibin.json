@@ -609,6 +609,12 @@
             ],
             "text": "entry/intruding"
         },
+        "entry/no-more-work": {
+            "answers": [
+            ],
+            "mood": "smile",
+            "text": "entry/no-more-work"
+        },
         "job-proposal": {
             "answers": [
                 "ask-about-project",

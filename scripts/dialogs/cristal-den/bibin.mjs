@@ -209,8 +209,12 @@ class Dialog {
         && (this.rescueHerdQuest == null || this.rescueHerdQuest.hidden);
   }
 
+  finishedAllQuests() {
+    return this.rescueHerdQuest != null && this.rescueHerdQuest.completed;
+  }
+
   canStartNextQuest() {
-    return this.canStartSecondQuest() || this.canStartThirdQuest();
+    return this.canStartSecondQuest() || this.canStartThirdQuest() || this.finishedAllQuests();
   }
 
   goToNextQuestIntroState() {
@@ -218,7 +222,7 @@ class Dialog {
       return "enforcers/intro";
     else if (this.canStartThirdQuest())
       return "pinnedHerd/intro";
-    return null;
+    return "entry/no-more-work";
   }
 
   backToPreviousContext() {
