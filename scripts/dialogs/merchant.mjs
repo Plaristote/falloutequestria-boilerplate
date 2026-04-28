@@ -20,6 +20,14 @@ export default class MerchantHelper extends DialogHelper {
     return this.dialog.npc.script?.shop;
   }
 
+  get merchantDiscount() {
+    return this.dialog.npc?.script?.merchantDiscount || 0;
+  }
+
+  getPriceWithDiscount(price) {
+    return Math.ceil(price * (1 - this.merchantDiscount));
+  }
+
   canBuy(price) {
     return this.dialog.player.inventory.count("bottlecaps") >= price;
   }

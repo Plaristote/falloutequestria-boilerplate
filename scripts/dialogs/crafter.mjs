@@ -68,7 +68,7 @@ export default class CrafterComponent {
   }
 
   defaultCraftAppraise(itemType) {
-    const cost = this.appraiseCraft(itemType);
+    const cost = this.getPriceWithDiscount(this.appraiseCraft(itemType));
     const availableMoney = game.player.inventory.count("bottlecaps");
 
     return {

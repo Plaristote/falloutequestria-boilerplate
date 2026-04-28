@@ -36,7 +36,7 @@ function makeBeverageChoice(self, beverage) {
 }
 
 function addBeverage(beverage) {
-  this[`${beverage.name}Price`] = beverage.price || 5;
+  this[`${beverage.name}Price`] = beverage.price || this.getPriceWithDiscount(5);
   this.beverageChoices.push(makeBeverageChoice(this, beverage));
 }
 
