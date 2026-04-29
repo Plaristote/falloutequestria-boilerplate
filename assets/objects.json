@@ -158,6 +158,14 @@
         "value": 15,
         "weight": 0
     },
+    "cristal-den-enforcers-armory-key": {
+        "icon": "key.webp",
+        "isGroupable": false,
+        "sprite": "misc",
+        "type": "keys",
+        "value": 5,
+        "weight": 0
+    },
     "crystal-companion": {
         "icon": "crystal-charged.webp",
         "isGroupable": true,
