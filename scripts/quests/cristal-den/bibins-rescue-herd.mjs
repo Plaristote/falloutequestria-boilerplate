@@ -23,6 +23,10 @@ export default class BibinsRescueHerd extends QuestHelper {
     return this.model.isObjectiveCrossedOff("rescue") ? "cristal-den" : "wasteland";
   }
 
+  get locationWasVisited() {
+    return game.dataEngine.hasLevelBeenVisited(levelName);
+  }
+
   onCharacterKilled(character) {
     if (typeof level != "undefined" && level.name == levelName && character.parent == level.findGroup("scouts"))
       this.onScoutKilled();

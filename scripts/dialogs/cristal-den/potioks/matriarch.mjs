@@ -1,13 +1,16 @@
 import {
   canWarnPotioksAboutBibin,
+  canReportSabotageToMatriarch,
   sabotageReportedToMatriarch,
   bibinSabotageReportedToMatriarch,
   wasSaboteurInterrogatedByBibin
 } from "../../../quests/hillburrow/sabotage.mjs";
 import {
   hasPotiokSpyQuest,
-  foundPotiokSpy
+  foundPotiokSpy,
+  learnedAboutSavageConnection
 } from "../../../quests/cristal-den/potioks-spy.mjs";
+import {enforcersKnowAboutHerdScouts} from "../../../quests/cristal-den/copper.mjs";
 import {RanchAccess} from "../../../levels/cristal-den-ranch.mjs";
 import {skillContest} from "../../../cmap/helpers/checks.mjs";
 
@@ -46,6 +49,68 @@ class Dialog {
 
   wasSentByBibin() {
     return false;
+  }
+
+  canAskMoreJobs() {
+    if (this.sneakJobQuest?.completed) {
+      if (this.saboteurQuestCanStartOrReport())
+        return true;
+    }
+    return false;
+  }
+
+  askMoreJobs() {
+    if (this.saboteurQuestCanStartOrReport())
+      return "sabotage/init/entry";
+    else if (this.saboteurQuest?.completed && !game.quests.hasQuest("cristal-den/investigate-bibin")) {
+      if (this.knowsAboutGoldenHerdAndBibin)
+        return "bibin-job/init/entry-herd";
+      else if (bibinSabotageReportedToMatriarch())
+        return "bibin-job/init/entry-no-herd";
+    }
+    return "no-jobs-available";
+  }
+
+  get investigateBibinQuest() {
+    return game.quests.getQuest("cristal-den/investigate-bibin");
+  }
+
+  investigateBibinQuestStart() {
+    if (!game.quests.hasQuest("cristal-den/investigate-bibin"))
+      game.quests.addQuest("cristal-den/investigate-bibin");
+  }
+
+  investigateBibinAskAboutSuspicions() {
+    if (learnedAboutSavageConnection())
+      return "bibin-job/init/suspicions-spy";
+    return "bibin-job/init/suspicions-hunch";
+  }
+
+  investigateBibinAskAboutHerd() {
+    if (false) // TODO if herd already destroyed
+      return "bibin-job/init/about-herd-destroyed";
+    return "bibin-job/init/about-herd";
+  }
+
+  investigateBibinCanNegociate() {
+    return game.player.statistics.barter >= 80;
+  }
+
+  investigateBibinNegociated() {
+    game.player.statistics.addExperience(125);
+    tins.investigateBibinQuest.script.onNegociatedPayment();
+  }
+
+  playerLearnsAboutHerdTatoo() {
+    game.setVariable("playerKnowsAboutHerdTatoos", 1);
+  }
+
+  get knowsAboutGoldenHerdAndBibin() {
+    return learnedAboutSavageConnection() || enforcersKnowAboutHerdScouts();
+  }
+
+  get saboteurQuestCanStartOrReport() {
+    return !this.saboteurQuest || !this.saboteurQuest.script.sentByMatriarch || !this.saboteurQuest.script.reportedToMatriarch;
   }
 
   get sneakJobReward() {
@@ -132,6 +197,25 @@ class Dialog {
 
   saboteurWasInterrogated() {
     return wasSaboteurInterrogatedByBibin();
+  }
+
+  saboteurCanReport() {
+    return canReportSabotageToMatriarch();
+  }
+
+  get saboteurQuest() {
+    return game.quests.getQuest("hillburrow/sabotage");
+  }
+
+  saboteurAcceptToGo() {
+    const quest = game.quests.addQuest("hillburrow/sabotage", QuestFlags.HiddenQuest);
+
+    game.worldmap.revealCity("hillburrow");
+    quest.script.sentByMatriarch = true;
+  }
+
+  saboteurCanTellAboutBibinInvolvement() {
+    return !this.dialog.npc.hasVariable("bibinInvolvedInSabotage");
   }
 
   saboteurToldAboutBibinInvolvement() {

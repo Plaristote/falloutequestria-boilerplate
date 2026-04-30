@@ -42,6 +42,7 @@
             "work/entry": "T'as l'air de pouvoir te débrouiller. Si tu peux suivre des ordres et rester dans les rangs, nous allons nous s'entendre, toi et moi.",
             "work/entry-bad-rep": "Ah. Je vois. J'ai entendu parler de toi. Et comme tu peux l'imaginer, ça n'aide pas vraiment ton cas.<br>\nTu sais quoi ? J'ai rien contre les secondes chances. Prouve que tu peux être un citoyen modèle, améliore ta réputation, et reviens me voir. Peut-être alors que j'aurais du travail pour toi.",
             "work/entry-good-rep": "J'ai entendu parler de toi. Que des bonnes choses. Ca te place déjà devant la moitié de mes poneys. Mais t'imagine pas que je te ferais un traitement de faveur. Les règles avant tout.",
+            "work/no-more-work": "J'ai rien pour toi en cemoment, soldat. Repos.",
             "work/on-reject-introduction": "Ah ouais ? On travaille au propre, dans ce métier. J'ai pas besoin de ton engeance dans mes rangs. Dégage.",
             "work/outpost/about-pay": "Tu sera payé ton salaire habituel. {{outpostWorkReward}} capsules.",
             "work/outpost/accepted": "Je vais marquer la position de l'avant-poste sur ta carte. Ne perds pas de temps. J'attends ton rapport.",
@@ -68,7 +69,8 @@
             "work/patrol/negociate-pay-failure": "Pour autant que je sache, t'es personne. Tu prendra la paie standard, et pas un sous de plus.",
             "work/patrol/negociate-pay-success": "Hm. Ouais. T'as déjà fait tes preuves en ville. Je suppose que tu peux.",
             "work/patrol/report-failure": "Alors comme ça, on abandonne son poste ? Je t'ai confié une mission simple, et t'as quand même réussi à me décevoir. Ta carrière commence très mal.<br>\nC'est la dernière fois que tu pars en patrouille. Et tu peux oublier ta solde. T'as de la chance qu'on soit en manque d'effectif. Mais tes prochaines missions, tu les fera en solo, c'est clair ? Pas question que tu mette d'autres collègues en danger.",
-            "work/patrol/report-success": "<p>Déjà de retour de patrouille ? Excellent. J'ai entendu dire que t'avais fais un boulot acceptable.</p>\n\n<p>Prend ta solde et tend l'oreille. J'ai une autre mission pour toi. <i>Elle te tend {{patrolWorkReward}} capsules</i>.</p>"
+            "work/patrol/report-success": "<p>Déjà de retour de patrouille ? Excellent. J'ai entendu dire que t'avais fais un boulot acceptable.</p>\n\n<p>Prend ta solde et tend l'oreille. J'ai une autre mission pour toi. <i>Elle te tend {{patrolWorkReward}} capsules</i>.</p>",
+            "work/send-to-potioks": "J'ai rien à te faire faire. Mais j'ai parlé de toi à la Matriarche des Potioks. Elle veut te voir. Un genre de mission secrète qu'elle te croit capable de remplir. Je crois que tu devrais y penser. C'est toujours bon d'être dans les petits papiers des Potioks, dans cette ville."
         }
     }
 }

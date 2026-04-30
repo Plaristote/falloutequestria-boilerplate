@@ -30,6 +30,10 @@ export default class extends QuestHelper {
     this.model.addObjective("report");
   }
 
+  get reportedGoldenHerdInvolvement() {
+    return this.model.getVariable("full-report", 0) == 2;
+  }
+
   getDescription() {
     let text = `<p>${this.model.tr("description")}</p>`;
 
@@ -48,7 +52,7 @@ export default class extends QuestHelper {
         text += `<p>${this.model.tr("desc-found-herd")}</p>`;
     }
     if (this.model.isObjectiveCompleted("report")) {
-      if (this.model.getVariable("full-report", 0) == 2)
+      if (this.reportedGoldenHerdInvolvement)
         text += `<p>${this.model.tr("desc-full-report")}</p>`;
       else if (this.model.getVariable("found-herd-body", 0) == 1 && this.model.getVariable("full-report", 0) < 2)
         text += `<p>${this.model.tr("desc-lied-herd")}</p>`;

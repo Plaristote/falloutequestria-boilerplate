@@ -57,6 +57,34 @@ class Dialog {
       return "sabotage/entry";
   }
 
+  sentByMatriarch() {
+    return this.sabotageQuest && this.sabotageQuest.script.sentByMatriarch;
+  }
+
+  sentByMatriarchIntimidate() {
+    if (Checks.skillCheck(game.player, "speech", 110))
+      return "matriarch-intro/intimidated";
+    return "introduction-chase-away";
+  }
+
+  sentByMatriarchCanBarter() {
+    return game.player.statistics.barter >= 65;
+  }
+
+  matriarchTakeIncreasedBribe() {
+    game.player.statistics.addExperience(125);
+    game.player.inventory.addItemOfType("bottlecaps", 500);
+  }
+
+  matriarchTakeBribe() {
+    game.player.statistics.addExperience(75);
+    game.player.inventory.addItemOfType("bottlecaps", 100);
+  }
+
+  knowsAboutPotioks() {
+    return false; // TODO
+  }
+
   /*
    * Slaver's Errand Quest
    */

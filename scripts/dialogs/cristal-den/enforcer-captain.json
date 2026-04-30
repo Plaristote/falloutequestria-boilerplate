@@ -217,6 +217,12 @@
             "mood": "smile",
             "text": "work/entry-good-rep"
         },
+        "work/no-more-work": {
+            "answers": [
+            ],
+            "mood": "smile",
+            "text": "work/no-more-work"
+        },
         "work/on-reject-introduction": {
             "answers": [
             ],
@@ -436,6 +442,12 @@
             "hook": "onReportPatrolSuccess",
             "mood": "smile",
             "text": "work/patrol/report-success"
+        },
+        "work/send-to-potioks": {
+            "answers": [
+            ],
+            "mood": "neutral",
+            "text": "work/send-to-potioks"
         }
     }
 }

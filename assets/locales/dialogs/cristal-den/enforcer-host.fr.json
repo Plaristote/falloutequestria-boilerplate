@@ -1,0 +1,16 @@
+{
+    "dialogs": {
+        "cristal-den/enforcer-host": {
+            "about-enforcers": "C'est le QG de la police de la ville, ici. On protège le Havre des menaces extérieures, et intérieures. Si tu fous le bordel, c'est à nous que t'aura à faire.",
+            "about-messing-around": "Pourquoi, j'ai une tête à foutre le bordel ?",
+            "about-work": "Ptet ben que oui. Voit ça avec Capitaine Sentry. Elle est en bas.",
+            "ask-about-place": "C'est quoi, cet endroit ?",
+            "ask-about-work": "Je cherche du travail. Il vous faut de l'aide ?",
+            "entry": "Ouaip ?",
+            "entry-exit": "J'y vais.",
+            "on-trouble": "T'inquiète. On reste sur nos garde à propos de tous le monde, par ici. Il y a eu pas mal de tensions, en ville, ces temps-ci.",
+            "on-trouble-bad-rep": "C'est notre taffe de savoir ce qui se passe par ici. Tu t'es fais une petite reputation dans le coin, et pas pour les bonnes raisons. Fais gaffe à toi, on t'as à l'oeil.",
+            "on-trouble-slavers-wiped-out": "Bah, t'as bien exterminé les esclavagistes. Ca c'était couillu. Heureusement que le Capitaine Sentry nous a demandé de pas intervenir. Elle avait jamais pu blairer ces connards, de toute façon. Les Potioks ne vont pas apprécier, mais le capitaine fait ce que le capitaine veut."
+        }
+    }
+}

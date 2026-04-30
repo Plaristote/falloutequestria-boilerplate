@@ -1,4 +1,5 @@
 import {DialogHelper} from "../helpers.mjs";
+import {matriarchDead} from "../../quests/cristal-den/potioks.mjs";
 
 export default class extends DialogHelper {
   constructor(dialog) {
@@ -28,9 +29,17 @@ export default class extends DialogHelper {
 
   followupWorkState() {
     if (this.metaQuest.isObjectiveCrossedOff("outpost"))
-      return ;
+      return this.followupJobsOver();
     if (this.metaQuest.isObjectiveCrossedOff("patrol"))
       return "work/outpost/intro";
+  }
+
+  followupJobsOver() {
+    if (!game.quests.hasQuest("cristal-den/potioks-spy") && !matriarchDead()) {
+      game.setVariable("enforcerCaptainSentPlayerToPotioks", 1);
+      return "work/send-to-potioks";
+    }
+    return "work/no-more-work";
   }
 
   onIntroduced() {

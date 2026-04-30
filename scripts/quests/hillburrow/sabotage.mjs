@@ -21,6 +21,11 @@ export function sabotageReportedToMatriarch() {
   game.quests.getQuest(questName).completeObjective("mustWarnPotioksAboutBibin");
 }
 
+export function canReportSabotageToMatriarch() {
+  const quest = game.quests.getQuest(questName);
+  return quest && quest.completed && !quest.isObjectiveCompleted("mustWarnPotioksAboutBibin");
+}
+
 export function bibinSabotageReportedToMatriarch() {
   sabotageReportedToMatriarch();
   game.quests.getQuest(questName).setVariable("matriarchKnwosAboutBibinInvolvement", 1);
@@ -125,6 +130,14 @@ export class Sabotage extends QuestHelper {
 
   get potiokKilledWaterCarrier() {
     return this.model.getVariable("bittyInterrogatedHobo");
+  }
+
+  get sentByMatriarch() {
+    return this.model.getVariable("sentByMatriarch", 0) == 1;
+  }
+
+  set sentByMatriarch(value) {
+    this.model.setVariable("sentByMatriarch", value ? 1 : 0);
   }
 
   completeWaterCarrierRoute() {

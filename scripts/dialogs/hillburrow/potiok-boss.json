@@ -49,8 +49,23 @@
             "text": "introduction-confused"
         },
         "introduction-hostile": {
+            "availableHook": "knowsAboutPotioks",
             "hook": "startCombat",
             "text": "introduction-hostile"
+        },
+        "introduction-matriarch": {
+            "availableHook": "sentByMatriarch",
+            "state": "introduction-matriarch",
+            "text": "introduction-matriarch"
+        },
+        "introduction-matriarch-forcing": {
+            "state": "matriarch-intro/help",
+            "text": "introduction-matriarch-forcing"
+        },
+        "introduction-matriarch-intimidate": {
+            "hook": "sentByMatriarchIntimidate",
+            "state": "matriarch-intro/intimidated",
+            "text": "introduction-matriarch-intimidate"
         },
         "introduction-polite": {
             "state": "introduction-give-work",
@@ -59,6 +74,17 @@
         "introduction-rude": {
             "state": "introduction-chase-away",
             "text": "introduction-rude"
+        },
+        "matriarch-intimidated-accept": {
+            "hook": "matriarchTakeBribe",
+            "state": "matriarch-intro/help",
+            "text": "matriarch-intimidated-accept"
+        },
+        "matriarch-intimidation-barter": {
+            "availableHook": "sentByMatriarchCanBarter",
+            "hook": "matriarchTakeIncreasedBribe",
+            "state": "matriarch-intro/negociated",
+            "text": "matriarch-intimidation-barter"
         },
         "on-chased-away-fight-back": {
             "hook": "onFightGuards",
@@ -184,6 +210,7 @@
         },
         "introduction": {
             "answers": [
+                "introduction-matriarch",
                 "introduction-confused",
                 "introduction-polite",
                 "introduction-rude",
@@ -211,6 +238,36 @@
             ],
             "mood": "smile",
             "text": "introduction-give-work"
+        },
+        "introduction-matriarch": {
+            "answers": [
+                "introduction-matriarch-forcing",
+                "introduction-matriarch-intimidate"
+            ],
+            "mood": "angry",
+            "text": "introduction-matriarch-response"
+        },
+        "matriarch-intro/help": {
+            "answers": [
+                "ask-about-errand-quest"
+            ],
+            "mood": "cocky",
+            "text": "matriarch-intro/help"
+        },
+        "matriarch-intro/intimidated": {
+            "answers": [
+                "matriarch-intimidation-barter",
+                "matriarch-intimidated-accept"
+            ],
+            "mood": "angry",
+            "text": "matriarch-intro/intimidated"
+        },
+        "matriarch-intro/negociated": {
+            "answers": [
+                "matriarch-intimidated-accept"
+            ],
+            "mood": "angry",
+            "text": "matriarch-intro/negociated"
         },
         "sabotage/about-payment": {
             "answers": [

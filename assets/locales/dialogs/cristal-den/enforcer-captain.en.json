@@ -43,6 +43,7 @@
             "work/entry": "You look like you can handle yourself. If you can follow orders and stay in line, we'll get along just fine.",
             "work/entry-bad-rep": "Oh. Yeah. I heard about you. And you probably know already, but it can't be a good thing for you.<br>\nTell you what. I'm all for second chances. Prove you can be a force of good, fix up your reputation, and come back to see me. Maybe I'll have work for you then.",
             "work/entry-good-rep": "I've heard about you. Good things, of course. That already puts you ahead of half my crew. But hey. Due process. I'm not going to do you any favor.",
+            "work/no-more-work": "I've got nothing for you to do at the moment, soldier. At ease.",
             "work/on-reject-introduction": "Oh yeah ? This is a fair, orderly trade we do here. We don't need your kind. Buzz off.",
             "work/outpost/about-pay": "You'll make your usual fee. {{outpostWorkReward}} caps.",
             "work/outpost/accepted": "I'll mark the location on your map. Don't waste time. I'll be waiting for your report.",
@@ -70,7 +71,8 @@
             "work/patrol/negociate-pay-failure": "As far as I'm concerned, you're a nobody at best. You'll take the standard pay.",
             "work/patrol/negociate-pay-success": "Hm. Yeah. You already made a name for yourself in town. I guess you can.",
             "work/patrol/report-failure": "So, I heard you ran away on your own ? I trusted you with a simple mission, and you still somehow managed to disappoint. Your carreer is off to quite the start.<br>\nIt's the last time you ever went on patrol. And you can forget about getting paid, this time. You're lucky I'm short on ponies. But you'll be doing your next jobs on your own, is that clear ? I'm not letting you put anymore of your partners in danger.",
-            "work/patrol/report-success": "<p>Back from your patrol, huh ? I've been told you did an adequate job.</p>\n<p>Take your reward and listen up. I have another job for you. <i>She gives you {{patrolWorkReward}}</i> caps.</p>"
+            "work/patrol/report-success": "<p>Back from your patrol, huh ? I've been told you did an adequate job.</p>\n<p>Take your reward and listen up. I have another job for you. <i>She gives you {{patrolWorkReward}}</i> caps.</p>",
+            "work/send-to-potioks": "I have nothing for you to do. But I did tell the Potiok Matriarch about you. She wants to see you. Some kind of hush-hush mission she thinks you might help with. I think you should do it. It's always good to have a good relationship with the Potioks, in this town."
         }
     }
 }

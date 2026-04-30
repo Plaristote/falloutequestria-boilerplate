@@ -1,0 +1,71 @@
+{
+    "answers": {
+        "about-messing-around": {
+            "state": "on-trouble",
+            "text": "about-messing-around"
+        },
+        "ask-about-place": {
+            "hook": "onAskAboutPlace",
+            "state": "about-enforcers",
+            "text": "ask-about-place"
+        },
+        "ask-about-work": {
+            "availableHook": "canAskAboutWork",
+            "state": "about-work",
+            "text": "ask-about-work"
+        },
+        "entry-exit": {
+            "text": "entry-exit"
+        }
+    },
+    "entryPoint": "entry",
+    "states": {
+        "about-enforcers": {
+            "answers": [
+                "ask-about-work",
+                "about-messing-around",
+                "entry-exit"
+            ],
+            "text": "about-enforcers"
+        },
+        "about-work": {
+            "answers": [
+                "entry-exit"
+            ],
+            "text": "about-work"
+        },
+        "entry": {
+            "answers": [
+                "ask-about-place",
+                "ask-about-work",
+                "entry-exit"
+            ],
+            "hook": "entry",
+            "text": "entry"
+        },
+        "on-trouble": {
+            "answers": [
+                "ask-about-work",
+                "entry-exit"
+            ],
+            "mood": "smile",
+            "text": "on-trouble"
+        },
+        "on-trouble-bad-rep": {
+            "answers": [
+                "ask-about-work",
+                "entry-exit"
+            ],
+            "mood": "angry",
+            "text": "on-trouble-bad-rep"
+        },
+        "on-trouble-slavers-wiped-out": {
+            "answers": [
+                "ask-about-work",
+                "entry-exit"
+            ],
+            "mood": "smile",
+            "text": "on-trouble-slavers-wiped-out"
+        }
+    }
+}

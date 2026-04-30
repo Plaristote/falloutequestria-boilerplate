@@ -9,9 +9,11 @@
             "exit": "",
             "exit-entry": "Nothing, I'll be on my way.",
             "on-sent-by-bitty": "Bitty, huh ? I wonder in what kind of way she fucked up this time. Alright then, go on. The matriarch is in the bunker. Go past the room behind me and take the elevator. She's in the room downstairs, right out of the elevator.",
+            "on-sent-by-enforcers": "Sure, I've heard about you. You've been working for our police force. Okay, then. The matriarch is in the bunker. Go past the room behind me and take the elevator. She's in the room downstairs, right out of the elevator.",
             "prompt": "This is a private property. What's your business here ?",
             "prompt-with-access": "Hey. What's new ?",
-            "sent-by-bitty": "I've been sent by Bitty Potiok. I bring important information that the matriarch will want to hear for herself."
+            "sent-by-bitty": "I've been sent by Bitty Potiok. I bring important information that the matriarch will want to hear for herself.",
+            "sent-by-enforcers": "Cass Sentry told me to come here. The Matriarch wants to see me about some kind of job."
         }
     }
 }

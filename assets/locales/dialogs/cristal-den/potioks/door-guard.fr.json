@@ -1,0 +1,17 @@
+{
+    "dialogs": {
+        "cristal-den/potioks/door-guard": {
+            "about-place": "T'es dans le ranch des Potioks. C'est là que la plupart d'entre eux vivent. Et si t'avais été invité, j'aurais été prévenu.",
+            "about-work": "D'accord. Parle à Pat. Elle est dans la salle derrière moi. T'es pas autorisé à aller plus loin. Je t'ai à l'oeil.",
+            "ask-about-place": "C'est quoi, cet endroit ?",
+            "ask-about-work": "Je voudrais travailler pour les Potioks.",
+            "exit-entry": "Rien de bien captivant. A plus.",
+            "on-sent-by-bitty": "Bitty ? Quelle connerie est-ce qu'elle a bien pu faire, cette fois-ci, hein ? Allez c'est bon, tu peux passer. Le matriarche est dans le bunker. Traverse la salle derrière moi, prend l'ascenseur. Elle est dans la salle en bas, juste à côté de la sortie de l'ascenseur.",
+            "on-sent-by-enforcers": "Ouais, j'ai entendu parler de toi. T'as bossé pour dans la sécurité de la ville. Ok. Le matriarche est dans le bunker. Traverse la salle derrière moi, prend l'ascenseur. Elle est dans la salle en bas, juste à côté de la sortie de l'ascenseur.",
+            "prompt": "C'est une propriété privée. Qu'est-ce que tu viens faire ici ?",
+            "prompt-with-access": "Yo. Quoi de neuf ?",
+            "sent-by-bitty": "C'est Bitty Potiok qui m'envoit. J'ai des informations que la matriarche voudra connaître.",
+            "sent-by-enforcers": "Cass Sentry m'a dit de venir ici. La matriarche a du boulot pour moi, à ce qu'il parait."
+        }
+    }
+}

@@ -1,6 +1,4 @@
-function potiokRuleEnded() { // TODO implement this, and do it someplace else
-  return false;
-}
+import {potiokRuleEnded} from "../../../quests/cristal-den/potioks.mjs";
 
 export default class Dialog {
   constructor(dialog) {

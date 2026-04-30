@@ -4,6 +4,25 @@
             "state": "sneak-job/about-bibin-feud",
             "text": "ask-about-bibin-feud"
         },
+        "ask-about-herd": {
+            "hook": "investigateBibinAskAboutHerd",
+            "state": "bibin-job/init/about-herd",
+            "text": "ask-about-herd"
+        },
+        "ask-about-job": {
+            "state": "bibin-job/init/why-need-proof",
+            "text": "ask-about-job"
+        },
+        "ask-about-suspicions": {
+            "hook": "investigateBibinAskAboutSuspicions",
+            "state": "bibin-job/init/suspicions-hunch",
+            "text": "ask-about-suspicions"
+        },
+        "ask-more-jobs": {
+            "availableHook": "canAskMoreJobs",
+            "hook": "askMoreJobs",
+            "text": "ask-more-jobs"
+        },
         "back-to-sabotage-report": {
             "state": "sabotage/report-follow-up",
             "text": "back-to-sabotage-report"
@@ -60,6 +79,36 @@
             "state": "intrusion-on-sneaked-in",
             "text": "intrusion-sneaked-in"
         },
+        "investigate-bibin/ask-about-killing": {
+            "state": "bibin-job/init/why-no-murder",
+            "text": "investigate-bibin/ask-about-killing"
+        },
+        "investigate-bibin/ask-what-looking-for": {
+            "state": "bibin-job/init/what-looking-for",
+            "text": "investigate-bibin/ask-what-looking-for"
+        },
+        "investigate-bibin/intro/accept-dignified": {
+            "state": "bibin-job/init/accepted",
+            "text": "investigate-bibin/intro/accept-dignified"
+        },
+        "investigate-bibin/intro/accept-price": {
+            "state": "bibin-job/init/accepted",
+            "text": "investigate-bibin/intro/accept-price"
+        },
+        "investigate-bibin/intro/negociate-more": {
+            "availableHook": "investigateBibinCanNegociate",
+            "hook": "investigateBibinNegociated",
+            "state": "bibin-job/init/negociated",
+            "text": "investigate-bibin/intro/negociate-more"
+        },
+        "investigate-bibin/intro/negociate-price": {
+            "state": "bibin-job/init/negociating",
+            "text": "investigate-bibin/intro/negociate-price"
+        },
+        "investigate-bibin/murder-back": {
+            "state": "bibin-job/init/why-need-proof",
+            "text": "investigate-bibin/murder-back"
+        },
         "on-bitty-intrusion-go-on": {
             "state": "sabotage/entry",
             "text": "on-bitty-intrusion-go-on"
@@ -96,9 +145,14 @@
             "text": "prompt-exit"
         },
         "report-bibin-involvement": {
+            "availableHook": "saboteurCanTellAboutBibinInvolvement",
             "hook": "saboteurToldAboutBibinInvolvement",
-            "state": "sabotage/about-saboteur-tortured",
+            "state": "sabotage/on-bibin-involvement",
             "text": "report-bibin-involvement"
+        },
+        "report-bibin-involvement-2": {
+            "state": "sabotage/about-saboteur",
+            "text": "exit"
         },
         "report-cancel": {
             "text": "report-cancel"
@@ -136,6 +190,24 @@
         "sabotage-exit": {
             "state": "sabotage/exit",
             "text": "sabotage-exit"
+        },
+        "sabotage-init-accept": {
+            "state": "sabotage/init/accepted",
+            "text": "sabotage-init-accept"
+        },
+        "sabotage-init-already-done": {
+            "availableHook": "saboteurCanReport",
+            "state": "sabotage/entry",
+            "text": "sabotage-init-already-done"
+        },
+        "sabotage-init-reject": {
+            "state": "sabotage/init/refused",
+            "text": "sabotage-init-reject"
+        },
+        "sabotage-job-report": {
+            "availableHook": "saboteurCanReport",
+            "state": "sabotage/entry",
+            "text": "sabotage-job-report"
         },
         "sabotage-report": {
             "state": "sabotage/report",
@@ -290,6 +362,98 @@
     },
     "entryPoint": "intrusion",
     "states": {
+        "bibin-job/init/about-herd": {
+            "answers": [
+                "ask-about-job",
+                "ask-about-suspicions"
+            ],
+            "text": "bibin-job/init/about-herd"
+        },
+        "bibin-job/init/about-herd-destroyed": {
+            "answers": [
+                "ask-about-job",
+                "ask-about-suspicions"
+            ],
+            "text": "bibin-job/init/about-herd-destroyed"
+        },
+        "bibin-job/init/accepted": {
+            "answers": [
+            ],
+            "mood": "smile",
+            "text": "bibin-job/init/accepted"
+        },
+        "bibin-job/init/entry-herd": {
+            "answers": [
+                "ask-about-job",
+                "ask-about-herd",
+                "ask-about-suspicions"
+            ],
+            "hook": "investigateBibinQuestStart",
+            "text": "bibin-job/init/entry-herd"
+        },
+        "bibin-job/init/negociated": {
+            "answers": [
+            ],
+            "text": "bibin-job/init/negociated"
+        },
+        "bibin-job/init/negociating": {
+            "answers": [
+                "investigate-bibin/intro/negociate-more",
+                "investigate-bibin/intro/accept-price"
+            ],
+            "text": "bibin-job/init/negociating"
+        },
+        "bibin-job/init/suspicions-hunch": {
+            "answers": [
+                "ask-about-job",
+                "ask-about-herd"
+            ],
+            "mood": "smile",
+            "text": "bibin-job/init/suspicions-hunch"
+        },
+        "bibin-job/init/suspicions-scouts": {
+            "answers": [
+                "ask-about-job",
+                "ask-about-herd",
+                "ask-about-suspicions"
+            ],
+            "text": "bibin-job/init/suspicions-scouts"
+        },
+        "bibin-job/init/suspicions-spy": {
+            "answers": [
+                "ask-about-job",
+                "ask-about-herd"
+            ],
+            "hook": "playerLearnsAboutHerdTatoo",
+            "text": "bibin-job/init/suspicions-spy"
+        },
+        "bibin-job/init/what-looking-for": {
+            "answers": [
+                "investigate-bibin/intro/accept-dignified",
+                "investigate-bibin/intro/negociate-price"
+            ],
+            "text": "bibin-job/init/what-looking-for"
+        },
+        "bibin-job/init/why-need-proof": {
+            "answers": [
+                "investigate-bibin/ask-what-looking-for",
+                "investigate-bibin/ask-about-killing"
+            ],
+            "mood": "neutral",
+            "text": "bibin-job/init/why-need-proof"
+        },
+        "bibin-job/init/why-no-murder": {
+            "answers": [
+                "investigate-bibin/murder-back"
+            ],
+            "mood": "angry",
+            "text": "bibin-job/init/why-no-murder"
+        },
+        "enforcers-job/init": {
+            "answers": [
+            ],
+            "text": "enforcers-job/init"
+        },
         "intrusion": {
             "answers": [
                 "was-sent-by-bitty",
@@ -297,7 +461,6 @@
                 "was-sent-by-bibin",
                 "intrusion-evasive"
             ],
-            "hook": "",
             "text": "intrusion"
         },
         "intrusion-bitty": {
@@ -321,7 +484,6 @@
                 "intrusion-on-sneaked-in-accept-job-alt",
                 "intrusion-on-sneaked-in-accept-job"
             ],
-            "hook": "",
             "text": "intrusion-on-sneaked-in"
         },
         "intrusion-questions": {
@@ -331,7 +493,6 @@
                 "was-sent-by-bibin",
                 "was-sent-by-no-one"
             ],
-            "hook": "",
             "text": "intrusion-questions"
         },
         "intrustion-job": {
@@ -341,23 +502,30 @@
             "hook": "grantAccess",
             "text": "intrusion-bitty"
         },
+        "no-jobs-available": {
+            "answers": [
+            ],
+            "text": "no-jobs-available"
+        },
         "prompt": {
             "answers": [
                 "was-sent-by-pat-alt",
                 "sneak-job-reentry",
                 "sneak-job-report",
+                "sabotage-job-report",
+                "ask-more-jobs",
                 "prompt-exit"
             ],
-            "hook": "",
             "text": "prompt"
         },
         "sabotage/about-saboteur": {
             "answers": [
+                "report-bibin-involvement",
                 "saboteur-interrogated-by-bitty",
                 "saboteur-killed-by-player",
                 "saboteur-slipped-away"
             ],
-            "hook": "",
+            "mood": "dubious",
             "text": "sabotage/about-saboteur"
         },
         "sabotage/about-saboteur-disappeared": {
@@ -378,7 +546,6 @@
             "answers": [
                 "back-to-sabotage-report"
             ],
-            "hook": "",
             "text": "sabotage/asked-for-supplies"
         },
         "sabotage/bitty-leadership/on-bad": {
@@ -423,8 +590,34 @@
         "sabotage/exit": {
             "answers": [
             ],
-            "hook": "",
             "text": "sabotage/exit"
+        },
+        "sabotage/init/accepted": {
+            "answers": [
+            ],
+            "hook": "saboteurAcceptToGo",
+            "text": "sabotage/init/accepted"
+        },
+        "sabotage/init/entry": {
+            "answers": [
+                "sabotage-init-already-done",
+                "sabotage-init-accept",
+                "sabotage-init-reject"
+            ],
+            "text": "sabotage/init/entry"
+        },
+        "sabotage/init/refused": {
+            "answers": [
+            ],
+            "mood": "angry",
+            "text": "sabotage/init/refused"
+        },
+        "sabotage/on-bibin-involvement": {
+            "answers": [
+                "report-bibin-involvement-2"
+            ],
+            "mood": "cocky",
+            "text": "sabotage/on-bibin-involvement"
         },
         "sabotage/on-blame-bitty": {
             "answers": [
@@ -467,14 +660,12 @@
                 "sneak-job/ask-more-reward",
                 "sneak-job/reject-reward"
             ],
-            "hook": "",
             "text": "sneak-job/about-reward"
         },
         "sneak-job/apply/entry": {
             "answers": [
                 "from-sneak-apply-to-entry"
             ],
-            "hook": "",
             "text": "sneak-job/apply/entry"
         },
         "sneak-job/done": {
@@ -498,7 +689,6 @@
                 "sneak-job/accept-reward",
                 "sneak-job/reject-reward"
             ],
-            "hook": "",
             "text": "sneak-job/increase-reward"
         },
         "sneak-job/on-accepted": {
@@ -525,7 +715,6 @@
         "sneak-job/on-rejected": {
             "answers": [
             ],
-            "hook": "",
             "text": "sneak-job/on-rejected"
         },
         "sneak-job/on-report-death-misjudged": {
@@ -538,14 +727,12 @@
             "answers": [
                 "sneak-job/entry-alt-go-on"
             ],
-            "hook": "",
             "text": "sneak-job/pre-entry"
         },
         "sneak-job/pre-entry-alt": {
             "answers": [
                 "sneak-job/entry-alt-go-on"
             ],
-            "hook": "",
             "text": "sneak-job/pre-entry-alt"
         },
         "sneak-job/report": {

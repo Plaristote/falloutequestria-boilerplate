@@ -1,0 +1,16 @@
+{
+    "dialogs": {
+        "cristal-den/enforcer-host": {
+            "about-enforcers": "You're in the HQ of the town's police force. We protect the Den from outside <b>and</b> inside threats. If you go looking for trouble, we're the one making sure you'll find it.",
+            "about-messing-around": "Why would you think I'm looking for trouble ?",
+            "about-work": "Maybe. Talk to Captain Sentry. She's downstairs.",
+            "ask-about-place": "What's this place ?",
+            "ask-about-work": "I'm looking for work. You ponies need any help ?",
+            "entry": "Eyup ?",
+            "entry-exit": "I'm leaving.",
+            "on-trouble": "I'm just saying. Don't take it the wrong way. We have to be careful about everypony here. There's a lot of tension around here.",
+            "on-trouble-bad-rep": "It's our job to know what goes around in this town. You've made a name for yourself here, and not for the good reasons. You'd best watch your steps when you're around us.",
+            "on-trouble-slavers-wiped-out": "Well, you did wipe out the slavers. That was quite a ballsy move. Good thing Captain Sentry told us not to intervene. I guess she never really liked those pricks. The Potioks might disapprove, but Captain does what Captain wants."
+        }
+    }
+}

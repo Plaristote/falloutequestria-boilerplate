@@ -19,6 +19,10 @@
             "availableHook": "wasSentByBitty",
             "state": "on-sent-by-bitty",
             "text": "sent-by-bitty"
+        },
+        "sent-by-enforcers": {
+            "state": "on-sent-by-enforcers",
+            "text": "sent-by-enforcers"
         }
     },
     "entryPoint": "prompt",
@@ -27,15 +31,12 @@
             "answers": [
                 "back-from-about-place"
             ],
-            "hook": "",
-            "mood": "",
             "text": "about-place"
         },
         "about-work": {
             "answers": [
             ],
             "hook": "giveWorkAccess",
-            "mood": "",
             "text": "about-work"
         },
         "on-sent-by-bitty": {
@@ -45,14 +46,21 @@
             "mood": "cocky",
             "text": "on-sent-by-bitty"
         },
+        "on-sent-by-enforcers": {
+            "answers": [
+            ],
+            "hook": "giveFullAccess",
+            "mood": "smile",
+            "text": "on-sent-by-enforcers"
+        },
         "prompt": {
             "answers": [
+                "sent-by-enforcers",
                 "sent-by-bitty",
                 "ask-about-place",
                 "ask-about-work",
                 "exit-entry"
             ],
-            "hook": "",
             "mood": "angry",
             "text": "prompt"
         },
@@ -61,7 +69,6 @@
                 "sent-by-bitty",
                 "exit-entry"
             ],
-            "mood": "",
             "text": "prompt-with-access"
         }
     }
