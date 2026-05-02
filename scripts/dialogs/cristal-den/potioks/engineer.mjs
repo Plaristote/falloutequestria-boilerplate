@@ -3,6 +3,10 @@ class Dialog {
     this.dialog = dialog;
   }
 
+  isPlayerLookingForCelestialDevice() {
+    return !game.quests.getQuest("celestialDevice").isObjectiveCompleted("craftDevice");
+  }
+
   onTalkedAboutDevice() {
     const factions = game.getVariable("celestial-device-disclosure", []);
     factions.push("potioks");

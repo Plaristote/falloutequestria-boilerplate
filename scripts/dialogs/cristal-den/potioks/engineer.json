@@ -1,6 +1,7 @@
 {
     "answers": {
         "ask-about-celestial-device": {
+            "availableHook": "isPlayerLookingForCelestialDevice",
             "state": "about-celestial-device",
             "text": "ask-about-celestial-device"
         },
@@ -77,7 +78,7 @@
             "text": "powerhoof-risk-reward"
         }
     },
-    "entryPoint": "",
+    "entryPoint": "entry",
     "states": {
         "about-celestial-device": {
             "answers": [
