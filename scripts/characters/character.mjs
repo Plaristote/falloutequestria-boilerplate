@@ -109,7 +109,20 @@ export class CharacterBehaviour extends SceneActorComponent {
 
   onDied() {
     this.playReactionSound("dead");
+    this.model.tasks.addTask("bodyDecayTask", (this.bodyDecayDuration || 15768000) * 1000, 1);
     super.onDied();
+  }
+
+  bodyDecayTask() {
+    const ponies = [
+      "earth-pony", "unicorn", "pegasus", "ghoul-earth-pony", "ghoul-unicorn"
+    ];
+    if (ponies.indexOf(this.model.statistics.race) >= 0) {
+      this.model.spriteName = "pony-skeleton";
+      this.model.setAnimation("idle");
+    } else {
+      level.deleteObject(this.model);
+    }
   }
 
   playReactionSound(reaction) {

@@ -6,6 +6,7 @@ export default class Dog extends Rat {
   constructor(model) {
     super(model);
     this.squadComponent = new SquadFighterComponent(this);
+    this.bodyDecayDuration = 60 * 60 * 24 * 14;
   }
 
   playReactionSound(reaction) {
