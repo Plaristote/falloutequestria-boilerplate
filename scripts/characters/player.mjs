@@ -33,7 +33,7 @@ class Player extends CharacterBehaviour {
       }
       return 0;
     }
-    return damage;
+    return super.mitigateDamage(damage, type, dealer);
   }
 }
 
