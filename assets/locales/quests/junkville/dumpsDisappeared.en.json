@@ -6,7 +6,13 @@
       "bring-ransom": "Pay up the ransom asked by the Diamond Dogs",
       "save-all-captives": "Save all the captured scavengers",
       "save-some-captives": "Save some of the captured scavengers",
-      "report-success": "Report your success to Raggedy Randy"
+      "report-success": "Report your success to Raggedy Randy",
+      "medicine-failure": "You failed to heal the wounded dog. Careful, you might hurt them if you fail too much.",
+      "medicine-critical-fail": "Oh shit ! You critically failed to heal the wounded dog and killed them instead !",
+      "medicine-success-1": "You successfully healed the first wounded dog",
+      "medicine-success-2": "You successfully healed the second wounded dog",
+      "medicine-success-3": "You successfully healed the third wounded dog",
+      "medicine-success-4": "You successfully healed the fourth wounded dog"
     }
   }
 }

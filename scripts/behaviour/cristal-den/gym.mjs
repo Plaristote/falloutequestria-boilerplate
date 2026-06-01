@@ -279,11 +279,12 @@ export class Gym {
   combatPresentation(characterA, characterB) {
     const actions = this.referee.actionQueue;
     const self = this;
+    const randomIntroLine = Math.floor(Math.random() * 3);
 
     actions.reset();
     actions.pushSpeak(i18n.t("cristal-den.ring.combat-introduction-1"), 3000, "white");
     actions.pushWait(3);
-    actions.pushSpeak(i18n.t("cristal-den.ring.combat-introduction-2", {
+    actions.pushSpeak(i18n.t(`cristal-den.ring.combat-introduction-2-${randomIntroLine}`, {
       name1: this.fighterName(characterA),
       name2: this.fighterName(characterB)
     }), 4000, "white");
@@ -330,11 +331,12 @@ export class Gym {
   npcCombatEnd() {
     const actions = this.referee.actionQueue;
     const self = this;
+    const randomOutroLine = Math.floor(Math.random() * 3);
 
     actions.pushReach(this.combatWinner);
-    actions.pushSpeak(i18n.t("cristal-den.ring.combat-ending-part-0"), 5000, "white");
+    actions.pushSpeak(i18n.t(`cristal-den.ring.combat-ending-part-0-${randomOutroLine}`), 5000, "white");
     actions.pushWait(5);
-    actions.pushSpeak(i18n.t("cristal-den.ring.combat-ending-part-1", {name: this.combatWinner.displayName}), 5000, "white");
+    actions.pushSpeak(i18n.t("cristal-den.ring.combat-ending-part-1-0", {name: this.combatWinner.displayName}), 5000, "white");
     actions.pushWait(5);
     actions.pushScript({
       onTrigger: this.finalizeCombat.bind(this),

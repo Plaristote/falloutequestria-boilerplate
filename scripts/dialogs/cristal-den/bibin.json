@@ -182,6 +182,7 @@
             "text": "intruding-take-job"
         },
         "necessary-action-bullshit-hostile": {
+            "hook": "callGuards",
             "text": "necessary-action-bullshit-hostile"
         },
         "necessary-action-bullshit-join": {
@@ -207,6 +208,22 @@
         "necessary-action-moral-objection": {
             "state": "necessary-actions/objected-morale",
             "text": "necessary-action-moral-objection"
+        },
+        "potiok-assassination-report": {
+            "state": "potiokAssassination/report",
+            "text": "potiok-assassination-report"
+        },
+        "potiokAssassination/accept-enthusiast": {
+            "state": "potiokAssassination/accepted",
+            "text": "potiokAssassination/accept-enthusiast"
+        },
+        "potiokAssassination/reject-fight": {
+            "state": "potiokAssassination/rejected",
+            "text": "potiokAssassination/reject-fight"
+        },
+        "potiokAssassination/reject-preacefully": {
+            "state": "potiokAssassination/rejected",
+            "text": "potiokAssassination/reject-preacefully"
         },
         "refuse-to-work": {
             "state": "job-refusal",
@@ -578,6 +595,7 @@
         "entry/default": {
             "answers": [
                 "rescue-trigger-report",
+                "potiok-assassination-report",
                 "enforcers-trigger-report",
                 "sabotage-trigger-report",
                 "ask-about-golden-herd",
@@ -711,6 +729,42 @@
             "hook": "onReportRescueQuest",
             "mood": "smile",
             "text": "pinnedHerd/report-success"
+        },
+        "potiokAssassination/accepted": {
+            "answers": [
+            ],
+            "hook": "onAssassinationQuestAccepted",
+            "mood": "smile",
+            "text": "potiokAssassination/accepted"
+        },
+        "potiokAssassination/already-done": {
+            "answers": [
+            ],
+            "hook": "onAssassinationQuestAlreadyDone",
+            "mood": "cocky",
+            "text": "potiokAssassination/already-done"
+        },
+        "potiokAssassination/intro": {
+            "answers": [
+                "potiokAssassination/accept-enthusiast",
+                "potiokAssassination/reject-fight",
+                "potiokAssassination/reject-preacefully"
+            ],
+            "mood": "cocky",
+            "text": "potiokAssassination/intro"
+        },
+        "potiokAssassination/rejected": {
+            "answers": [
+            ],
+            "hook": "callGuards",
+            "text": "potiokAssassination/rejected"
+        },
+        "potiokAssassination/report": {
+            "answers": [
+            ],
+            "hook": "onAssassinationQuestReport",
+            "mood": "smile",
+            "text": "potiokAssassination/report"
         },
         "sabotage/about-payment": {
             "answers": [

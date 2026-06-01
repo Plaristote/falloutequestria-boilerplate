@@ -1,0 +1,23 @@
+{
+  "cristal-den": {
+    "ring": {
+      "combat-introduction-1": "Poulains et pouliches, approchez, approchez pour le prochain combat !",
+      "combat-introduction-2-0": "Ce soir, {{name1}} et {{name2}} vont s'éclater la gueule pour le plaisir de vos yeux !",
+      "combat-introduction-2-1": "Ici présents, {{name1}} et {{name2}}, sur le point de s'étriper en bon ordre !",
+      "combat-introduction-2-2": "Cette fois-ci, {{name1}} va se mesurer à {{name2}} !",
+      "combat-introduction-3": "Que le combat… commence !",
+      "combat-ending-part-0-0": "Génial ! Quel combat de titans ces deux-là nous ont offert !",
+      "combat-ending-part-0-1": "Superbe pugilat ! Applaudissez nos deux guerriers !",
+      "combat-ending-part-0-2": "Ouch, ça a du faire très mal !",
+      "combat-ending-part-1-0": "{{name}} est déclaré vainqueur par K.O. !",
+      "combat-ending-part-1-1": "{{name}} est déclaré vainqueur par K.O. technique !",
+      "cheers-0": "Chope-le, {{name}} ! Vas-y !",
+      "cheers-1": "Personne peut t'arrêter, {{name}} !",
+      "cheers-2": "Défonce-lui le museau, {{name}} !",
+      "cheers-3": "J'ai toute mes économies sur toi, {{name}} !",
+      "cheers-4": "{{name}} !!",
+      "cheers-5": "Pète-lui les pattes, {{name}} !",
+      "cheers-6": "Vas-y, {{name}} !"
+    }
+  }
+}

@@ -12,7 +12,7 @@ export class DogGuard extends PackMember {
   }
 
   get speakOnDetection() {
-    return this.model.getVariable("met") !== true;
+    return !level.hasVariable("player-known");
   }
 
   investigatePlayerFall() {

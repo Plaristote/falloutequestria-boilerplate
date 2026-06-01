@@ -44,7 +44,6 @@
                 "ask-about-gym",
                 "exit-questions"
             ],
-            "mood": "",
             "text": "about-place/bibin"
         },
         "about-place/bibin-meeting": {
@@ -53,7 +52,6 @@
                 "exit-questions"
             ],
             "hook": "onSpeakAboutMeetingBibin",
-            "mood": "",
             "text": "about-place/bibin-meeting"
         },
         "about-place/entry": {
@@ -62,7 +60,6 @@
                 "ask-about-gym",
                 "exit-questions"
             ],
-            "mood": "",
             "text": "about-place/entry"
         },
         "about-place/gym": {
@@ -70,8 +67,6 @@
                 "ask-about-bibin",
                 "exit-questions"
             ],
-            "hook": "",
-            "mood": "",
             "text": "about-place/gym"
         },
         "entry": {
@@ -80,8 +75,6 @@
                 "ask-about-place",
                 "exit-entry"
             ],
-            "hook": "",
-            "mood": "",
             "text": "entry"
         },
         "order-drinks": {
@@ -89,7 +82,6 @@
                 "exit-without-drinks"
             ],
             "hook": "barDialog",
-            "mood": "",
             "text": "order-drink-alt"
         }
     }

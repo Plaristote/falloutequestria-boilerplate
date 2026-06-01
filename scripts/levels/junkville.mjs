@@ -32,8 +32,13 @@ class Level extends LevelBase {
       game.uniqueCharacterStorage.detachCharacter(rathian);
       isHere = false;
     }
-    if (shouldBeHere && rathian.isAlive()) {
+    if (rathian.scriptName == "rathian/meeting.mjs") {
+      rathian.script.insertedIntoZone();
+    }
+    else if (shouldBeHere && rathian.isAlive()) {
       game.uniqueCharacterStorage.loadCharacterToCurrentLevel("rathian", 53, 27, 0);
+      if (rathian.scriptName == "rathian/meeting.mjs")
+        rathian.script.talkOnArrival();
       rathian.setScript("rathian/junkville.mjs");
       rathian.attacksOnSight = true;
       rathian.movementMode = "walking";

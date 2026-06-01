@@ -3,6 +3,7 @@ class Dialog {
     this.dialog = dialog;
     this.dialog.ambiance = "cavern";
     this.dialog.npc.setVariable("met", true);
+    level.setVariable("player-known", 1);
   }
   
   canConvinceNotToKill() {

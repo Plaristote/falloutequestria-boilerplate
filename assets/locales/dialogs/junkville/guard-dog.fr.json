@@ -1,0 +1,15 @@
+{
+  "dialogs": {
+    "junkville/guard-dog": {
+        "detected": "<i>[Un gigantesque chien bipède se dresse devant toi. En t'apercevant, il soupire fortement et dit :]</i><br>Encore un qui s'est faufilé ici… les poneys trainent leurs sabots partout… si difficiles. Suis-moi, poney. Je t'amène à Fido. Il saura quoi faire de toi.",
+        "detected-come-with": "Euh, j'ai aucune idée de ce qui se passe, mais ok, pourquoi pas, allons voir Fido…",
+        "detected-details": "Tu es dans mon tunnel, et Fido est le chef de ma meute. Personne rentre dans mon tunnel. Maintenant, tu viens avec moi, et Fido saura quoi faire.",
+        "detected-question": "C'est quoi ce délire ? Où je suis, et qui est Fido ?",
+        "detected-refuse-to-come": "Tu va m'emmener avec toi ? J'aimerais te voir essayer !",
+        "detected-start-combat": "Oh, merde !",
+        "detected-threat": "Hm. Peut-être que je peux te tuer, et Fido saura jamais que t'es venu ici. Oui. Les poneys ont parfois de bonnes idées. D'accord, poney, ne bouge pas, je vais te tuer maintenant.",
+        "detected-threat-cool-down": "Attends ! Fido doit être intelligent, pas vrai ? Il va sûrement comprendre ce qui s'est passé ! Allons juste le voir, d'accord ?",
+        "detected-to-leader": "Hm, oui, allons voir Fido. Allez, marche devant moi."
+    }
+  }
+}

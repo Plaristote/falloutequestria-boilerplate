@@ -15,7 +15,10 @@ export class PackMember extends CharacterBehaviour {
   }
 
   watchForIntruders() {
-    if (level.getVariable("player-in-pen") === true) {
+    if (!level.hasVariable("player-known") && this.model.fieldOfView.isDetected(game.player)) {
+      this.startDialog("junkville/guard-dog");
+    }
+    else if (level.getVariable("player-in-pen") === true) {
       const sendToPen = this.model.fieldOfView.isDetected(game.player)
                      && !isCharacterInPonyPen(game.player)
                      && this.model.hasLineOfSight(game.player);

@@ -21,7 +21,7 @@ function availableEncounters() {
   if (zones.indexOf("capital-surroundings") >= 0) {
     // Roaches, feral ghouls, maybe shadow knights ?
     array.push(function(difficultyRoll) { return { "name": "Roaches",      "avoidRoll": (80 + difficultyRoll / 4), "members": [{"sheet": "roach", "script": "roach.mjs", "amount": 3 + Math.ceil(difficultyRoll / 20)}, {"sheet": "roach-big", "script": "roach.mjs", "amount": Math.ceil(difficultyRoll / 33)}] }; });
-    array.push(function(difficultyRoll) { return { "name": "Feral Ghouls", "avoidRoll": (70 + difficultyRoll / 4), "members": [{"sheet": "capital/feral-ghoul-1", "script": "feral-ghoul.mjs", "amount": 2 + Math.ceil(difficultyRoll / 18)}, {"sheet": "capital/feral-ghoul-1", "script": "feral-ghoul.mjs", "amount": 2 + Math.ceil(difficultyRoll / 18)}] }; });
+    array.push(function(difficultyRoll) { return { "name": "Feral Ghouls", "avoidRoll": (70 + difficultyRoll / 4), "members": [{"sheet": "capital/feral-ghoul-1", "script": "feral-ghoul.mjs", "amount": 2 + Math.ceil(difficultyRoll / 23)}, {"sheet": "capital/feral-ghoul-1", "script": "feral-ghoul.mjs", "amount": 2 + Math.ceil(difficultyRoll / 18)}] }; });
   }
   if (zones.indexOf("golden-horde-siege") >= 0) {
     for (let i = 0 ; i < 6 ; ++i)

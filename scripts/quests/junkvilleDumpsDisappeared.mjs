@@ -111,7 +111,7 @@ export class JunkvilleDumpsDisappeared extends QuestHelper {
   }
 
   get heardAboutQuestFromRandy() {
-    return this.model.hasVariable("headFromRandy");
+    return this.model.hasVariable("heardFromRandy");
   }
 
   onHeardAboutQuestFromRandy() {

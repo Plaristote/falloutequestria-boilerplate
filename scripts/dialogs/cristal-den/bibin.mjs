@@ -1,5 +1,6 @@
 import {QuestHelper, QuestFlags, requireQuest} from "../../quests/helpers.mjs";
 import {skillContest} from "../../cmap/helpers/checks.mjs";
+import * as Potioks from "./potioks.mjs";
 
 class Dialog {
   constructor(dialog) {
@@ -163,6 +164,10 @@ class Dialog {
     return game.quests.getQuest("cristal-den/potioks-spy");
   }
 
+  get potiokAssassinationQuest() {
+    return game.quests.getQuest("cristal-den/bibins-potiok-assassination");
+  }
+
   get rescueHerdQuest() {
     return game.quests.getQuest("cristal-den/bibins-rescue-herd");
   }
@@ -204,8 +209,34 @@ class Dialog {
         && !this.rescueHerdQuest.isObjectiveCompleted("report");
   }
 
+  onAssassinationQuestAccepted() {
+    game.quests.addQuest("cristal-den/bibins-potiok-assassination");
+  }
+
+  onAssassinationQuestAlreadyDone() {
+    game.quests.addQuest("cristal-den/bibins-potiok-assassination");
+    this.potiokAssassinationQuest.completed = true;
+  }
+
+  canReportAssassinationQuest() {
+    return this.potiokAssassinationQuest.script.canReport;
+  }
+
+  onAssassinationQuestReport() {
+    this.potiokAssassinationQuest.completed = true;
+  }
+
+  get potiokAssassinationReward() {
+    return this.potiokAssassinationQuest.script.reward || 500;
+  }
+
   canStartThirdQuest() {
     return this.enforcersQuest != null && this.enforcersQuest.completed
+        && (this.potiokAssassinationQuest == null || this.potiokAssassinationQuest.hidden);
+  }
+
+  canStartFourthQuest() {
+    return this.potiokAssassinationQuest != null && this.potiokAssassination.completed
         && (this.rescueHerdQuest == null || this.rescueHerdQuest.hidden);
   }
 
@@ -214,13 +245,19 @@ class Dialog {
   }
 
   canStartNextQuest() {
-    return this.canStartSecondQuest() || this.canStartThirdQuest() || this.finishedAllQuests();
+    return this.canStartSecondQuest() || this.canStartThirdQuest() || this.canStartFourthQuest() || this.finishedAllQuests();
   }
 
   goToNextQuestIntroState() {
     if (this.canStartSecondQuest())
       return "enforcers/intro";
-    else if (this.canStartThirdQuest())
+    else if (this.canStartThirdQuest()) {
+      if (Potioks.allHeirsDead() && Potioks.matriarchDead())
+        return "potiokAssassination/already-done";
+      else
+        return "potiokAssassination/intro";
+    }
+    else if (this.canStartFourthQuest())
       return "pinnedHerd/intro";
     return "entry/no-more-work";
   }

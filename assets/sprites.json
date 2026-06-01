@@ -1328,6 +1328,68 @@
         },
         "defaultSource": "crates.png"
     },
+    "cristal-den-deco": {
+        "bibins": {
+            "frameCount": 2,
+            "frameInterval": 878,
+            "height": 66,
+            "offsetX": 0,
+            "offsetY": 0,
+            "repeat": false,
+            "source": "wall-decoration/cristal-den/bibins.png",
+            "width": 67
+        },
+        "caravaneers": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 69,
+            "offsetX": 0,
+            "offsetY": 0,
+            "repeat": false,
+            "source": "wall-decoration/cristal-den/fargo-caravan.png",
+            "width": 55
+        },
+        "chem-store": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 69,
+            "offsetX": 0,
+            "offsetY": 0,
+            "repeat": false,
+            "source": "wall-decoration/cristal-den/chemstore.png",
+            "width": 55
+        },
+        "clinic": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 38,
+            "offsetX": 0,
+            "offsetY": 0,
+            "repeat": false,
+            "source": "wall-decoration/cristal-den/clinic.png",
+            "width": 36
+        },
+        "general-store": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 64,
+            "offsetX": 0,
+            "offsetY": 0,
+            "repeat": false,
+            "source": "wall-decoration/cristal-den/general-store.png",
+            "width": 78
+        },
+        "police": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 61,
+            "offsetX": 0,
+            "offsetY": 0,
+            "repeat": false,
+            "source": "wall-decoration/cristal-den/police-sign.png",
+            "width": 40
+        }
+    },
     "cupboards": {
         "A-left": {
             "frameCount": 1,

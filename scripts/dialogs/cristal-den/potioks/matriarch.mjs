@@ -101,6 +101,10 @@ class Dialog {
     tins.investigateBibinQuest.script.onNegociatedPayment();
   }
 
+  get investigateBibinReward() {
+    return this.investigateBibin?.script?.reward || 1000;
+  }
+
   playerLearnsAboutHerdTatoo() {
     game.setVariable("playerKnowsAboutHerdTatoos", 1);
   }

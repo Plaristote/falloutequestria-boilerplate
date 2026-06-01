@@ -10,7 +10,7 @@
             "text": "ask-about-herd"
         },
         "ask-about-job": {
-            "state": "bibin-job/init/why-need-proof",
+            "state": "bibin-job/init/ask-murder",
             "text": "ask-about-job"
         },
         "ask-about-suspicions": {
@@ -26,6 +26,14 @@
         "back-to-sabotage-report": {
             "state": "sabotage/report-follow-up",
             "text": "back-to-sabotage-report"
+        },
+        "bibin-job/init/ask-murder/explicit": {
+            "state": "bibin-job/init/ask-murder#2",
+            "text": "bibin-job/init/ask-murder/explicit"
+        },
+        "bibin-job/init/ask-murder/sarcastic": {
+            "state": "bibin-job/init/ask-murder#2",
+            "text": "bibin-job/init/ask-murder/sarcastic"
         },
         "bitty-appreciation-bad": {
             "state": "sabotage/bitty-leadership/on-bad",
@@ -382,6 +390,20 @@
             "mood": "smile",
             "text": "bibin-job/init/accepted"
         },
+        "bibin-job/init/ask-murder": {
+            "answers": [
+                "bibin-job/init/ask-murder/explicit",
+                "bibin-job/init/ask-murder/sarcastic"
+            ],
+            "text": "bibin-job/init/ask-murder"
+        },
+        "bibin-job/init/ask-murder#2": {
+            "answers": [
+                "investigate-bibin/intro/negociate-price",
+                "investigate-bibin/intro/accept-dignified"
+            ],
+            "text": "bibin-job/init/ask-murder#2"
+        },
         "bibin-job/init/entry-herd": {
             "answers": [
                 "ask-about-job",
@@ -393,6 +415,7 @@
         },
         "bibin-job/init/negociated": {
             "answers": [
+                "investigate-bibin/intro/accept-price"
             ],
             "text": "bibin-job/init/negociated"
         },

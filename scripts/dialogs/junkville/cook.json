@@ -746,7 +746,6 @@
                 "scavenger-ransom-more-time",
                 "scavenger-ransom-give-up"
             ],
-            "hook": "scavengerReport",
             "text": "scavengers/report-ransom"
         },
         "town-index": {

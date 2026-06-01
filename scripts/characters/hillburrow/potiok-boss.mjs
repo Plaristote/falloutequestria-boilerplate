@@ -5,6 +5,11 @@ class PotiokBoss extends CharacterBehaviour {
     super(model);
     this.dialog = "hillburrow/potiok-boss";
   }
+
+  onDied() {
+    game.setVariable("potiokBittyDead", 1);
+    super.onDied();
+  }
 }
 
 export function create(model) {

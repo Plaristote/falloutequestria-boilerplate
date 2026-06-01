@@ -269,7 +269,7 @@ class Dialog extends Innkeeper {
 
   scavengerReport() {
     if (!this.junkvilleDumpsDisappeared.script.heardAboutQuestFromRandy)
-      return { textKey: "scavengers/report-alt-surprised" };
+      return { textKey: "scavengers/report-alt-surprised", mood: "dubious" };
   }
 
   scavengersKnowLocation() {

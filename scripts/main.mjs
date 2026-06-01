@@ -43,7 +43,16 @@ export default class extends RandomEncounterComponent {
   }
 
   diplomacyUpdate(factions, hostility) {
-    console.log("diplomacyUpdate", factions, hostility);
+    console.log("diplomacyUpdate", factions, ", hostility=", hostility);
+    if (hostility && factions.indexOf("player") >= 0) {
+      if (factions.indexOf("cristal-den") >= 0) {
+        ["potioks", "cristal-den-slavers", "cristal-den-slaves", "cristal-den-brothel"]
+          .forEach(faction => { game.diplomacy.setAsEnemy(true, "player", faction); });
+      }
+      if (factions.indexOf("potioks") >= 0) {
+        game.diplomacy.setAsEnemy(true, "player", "hillburrow-potioks");
+      }
+    }
   }
 
   enableEncounters() {
@@ -63,9 +72,14 @@ export default class extends RandomEncounterComponent {
   }
 
   randomIntroduceRathian() {
-    this.rathianIt = this.rathianIt ? this.rathianIt + 1 : 1;
-    if (getValueFromRange(this.rathianIt, 10) >= 8)
-      this.introduceRathian();
+    const minDelay = 60 * 60 * 24 * 1;
+    const minStartAt = game.getVariable("startedAt") + minDelay;
+
+    if (game.timeManager.getTimestamp() > startAt) {
+      this.rathianIt = this.rathianIt ? this.rathianIt + 1 : 1;
+      if (getValueFromRange(this.rathianIt, 10) >= 8)
+        this.introduceRathian();
+    }
   }
 
   introduceRathian() {

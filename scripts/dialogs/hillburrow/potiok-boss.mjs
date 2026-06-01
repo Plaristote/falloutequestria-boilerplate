@@ -82,7 +82,9 @@ class Dialog {
   }
 
   knowsAboutPotioks() {
-    return false; // TODO
+    if (game.quests.hasQuest("cristal-den/bibins-potiok-assassination"))
+      return true;
+    return false; // TODO maybe more reasons ?
   }
 
   /*

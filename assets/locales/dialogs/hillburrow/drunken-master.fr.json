@@ -1,0 +1,36 @@
+{
+    "dialogs": {
+        "hillburrow/drunken-master": {
+            "about-brawl": "C'est une longue histoire… euh, attends, non, en fait elle est plutôt courte. Je me suis frité avec un connard de mercenaire des Potioks. J'étais un boxeur célèbre dans ma jeunesse, tu vois, alors j'ai cru que ce serait facile et que je le défoncerai. Je me suis planté. Il a pété un tabouret sur ma margoulette, et j'ai piqué un petit somme jusqu'à me réveiller dans la clinique tout à l'heure.",
+            "about-mercenaries": "Les Potioks gèrent la mine de charbon, au nord du village. Ils font travailler des esclaves… c'est plus efficace que de payer de la main d'oeuvre, parait-il. Les mercenaires gèrent les esclaves. Et quand le soleil se couche, ils se bourrent la gueule avec nous à la taverne. Je peux pas t'en dire plus.",
+            "ask-about-brawl": "Comment tu t'es retrouvé avec un pieds de chaise dans le bide ?",
+            "ask-about-mercenaries": "C'est quoi, l'histoire, avec ces mercenaires ?",
+            "ask-about-sheriff-murder": "J'enquête sur la mort de Scratchy Lead. Tu veux bien répondre à mes questions ?",
+            "ask-for-training": "Un boxeur célèbre, tu dis ? Tu m'apprendrais deux ou trois trucs ?",
+            "end-training-no-beer": "Une autre fois ! Merci pour la leçon !",
+            "end-training-with-beer": "Bien sûr, on l'a bien mérité !",
+            "entry": "Salut, mon ami ! Comment va la journée ?",
+            "entry-alt": "Hey ! C'est sympa de te revoir ! Je t'ai pas encore remercié pour m'avoir sauvé la vie, dans la clinique ! Alors… merci ! Si je peux faire un truc pour toi, demande ! Comment se passe ta journée ?",
+            "exit-about-brawl": "Je vois. C'est tout ce que je voulais savoir. Salut !.",
+            "exit-entry": "Ca va. Au revoir !",
+            "exit-teaching": "En fait, je dois aller m'occuper de quelque chose d'important. Au revoir !",
+            "quest-sheriff-ask-murder-night": "Où étais-tu la nuit du meurtre ?",
+            "quest-sheriff-ask-murder-night-suspicions": "Tu as remarqué quelque chose qui sortait de l'ordinaire, ce soirlà ?",
+            "quest-sheriff-ask-relationship": "Quelle était ta relation avec la victime ?",
+            "quest-sheriff-ask-suspects": "Tu connais quelqu'un qui aurait pu en vouloir à Scratchy Lead ?",
+            "quest-sheriff-back-to-entry": "Je voudrais te demander autre chose.",
+            "quest-sheriff-exit": "Je n'ai plus de questions. Merci de ta patience.",
+            "quest-sheriff-murder": "Oh. Ouais, ok. Je crois pas savoir quoique ce soit d'important, mais vas-y.",
+            "quest-sheriff-murder-night" : "La nuit où il a été tué ? Je suppose que j'étais dans le coin. Je viens ici tous les soirs. Je n'ai rien de mieux à faire. En plus, j'adore cet endroit, et il me le rend bien. J'étais au même endroit, à siroter ma bière, comme d'habitude. Demandez à n'importe qui.",
+            "quest-sheriff-murder-night-suspicions" : "Euh… écoutez, je peux vous dire une chose dont je me souviens probablement correctement de cette nuit-là. J'étais ivre, d'accord ? Vous devriez peut-être demander à quelqu'un qui ne boit pas autant que moi. Je suis le genre de poney avec qui on se crée des souvenirs : pas le genre de poney qui s'en souvient !",
+            "quest-sheriff-relationship" : "Ma relation avec Scratchy Lead ? Je savais qui il était, c'est tout. Enfin… c'était le cas, puisque… vous savez… Il venait parfois ici pour boire un verre tard. Il ne s'impliquait pas trop avec les autres, cependant. Il demandait juste quelque chose de fort. et ruminait dans un coin pendant un moment. Puis il se levait et partait.",
+            "quest-sheriff-suspects": "Eh bien, il ne s'est pas beaucoup impliqué avec nous, et je ne pense pas que quelqu'un d'autre en ville lui en veuille.",
+            "start-fighting": "Allons-y !",
+            "teach-fighting": "D'accord. Ça va probablement faire mal, mais rien de valable n'est facile, n'est-ce pas ? Prépare-toi !",
+            "teach-fighting-beer": "<i>Vous passez encore un peu de temps avec {{npc}} à boire vos bières et à parler de son époque de champion dans l'arène de Crystal Den, appelée Jungle Gym. Il était apparemment assez populaire à l'époque. Après une conversation agréable, tu décides qu'il est temps de partir.</i>",
+            "teach-fighting-done": "<i>Vous sortez et vous vous entraînez pendant plusieurs heures sous la direction rigoureuse de {{npc}}. Après une dernière séance d'entraînement, il s'assoit et dit :</i><br/><br/>Bon champion, ça suffit pour aujourd'hui. Tu as déjà fait des progrès, et j'ai besoin de repos. Rentrons. Et si tu nous offrais une bière bien méritée pour récupérer ?",
+            "teach-fighting-over": "Si tu étais débutant, je pourrais t'apprendre deux ou trois choses. On dirait que tu sais déjà te débrouiller. Un conseil ? Va au Repaire de Cristal et demande à participer à des combats au Gymnase. Avec ton niveau, tu devrais pouvoir gagner facilement des capsules. Surtout, ne leur dis pas que je t'envois.",
+            "teach-fighting-recover": "J'aimerais bien, mais mes vieux os se remettent encore de la dernière fois. Reviens dans un jour ou deux et je te montrerai comment on fait !"
+        }
+    }
+}

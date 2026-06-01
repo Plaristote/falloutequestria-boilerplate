@@ -2,10 +2,15 @@
   "cristal-den": {
     "ring": {
       "combat-introduction-1": "Fillies and gentlecolts, round up for the next fight !",
-      "combat-introduction-2": "Tonight, {{name1}} and {{name2}} will beat each other to a pulp for your pleasure !",
+      "combat-introduction-2-0": "Tonight, {{name1}} and {{name2}} will beat each other to a pulp for your pleasure !",
+      "combat-introduction-2-1": "I present you {{name1}} and {{name2}}, they're about to rip each other apart !",
+      "combat-introduction-2-2": "This time, {{name1}} will be facing against {{name2}} !",
       "combat-introduction-3": "Let the fight… BEGIN !",
-      "combat-ending-part-0": "Wow ! What a fight have these two colosses shown us !",
-      "combat-ending-part-1": "{{name}} is declared victor by K.O. !",
+      "combat-ending-part-0-0": "Wow ! What a fight have these two colosses shown us !",
+      "combat-ending-part-0-1": "What a fight that was ! A round of applause for the contendants !",
+      "combat-ending-part-0-2": "Damn, that must've hurt pretty bad !",
+      "combat-ending-part-1-0": "{{name}} is declared victor by K.O. !",
+      "combat-ending-part-1-1": "{{name}} is declared victor by technical K.O. !",
       "cheers-0": "Get them, {{name}} ! You can do it !",
       "cheers-1": "No one can stop {{name}} ! Fuck'em up !",
       "cheers-2": "Kill them all, {{name}} !",
