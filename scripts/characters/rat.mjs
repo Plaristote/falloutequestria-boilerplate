@@ -6,6 +6,7 @@ export class Rat extends CharacterBehaviour {
     super(model);
     injectRoamTask(this);
     this.prepareRoamTask(3);
+    this.bodyDecayDuration = 60 * 60 * 36;
   }
 }
 
