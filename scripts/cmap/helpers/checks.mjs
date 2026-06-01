@@ -41,7 +41,7 @@ export function skillCheck(user, skill, options = {}) {
   const target     = options.target ? options.target : 100;
   const roll       = getValueFromRange(0, dice, user);
   const critical   = Math.ceil(modifiedSkillValue(user, "criticalChance") / 100 * dice);
-  const criticalFail = Math.floor((isJinxed(game.player) ? 15 : 5) / 100 * dice);
+  const criticalFail = Math.ceil((isJinxed(game.player) ? 15 : 5) / 100 * dice);
   var callback;
   var success = false;
 
@@ -52,7 +52,7 @@ export function skillCheck(user, skill, options = {}) {
   } else if (roll + skillValue >= target) {
     callback = options.success;
     success = true;
-  } else if (roll <= Math.ceil(dice / 100 * criticalFail))
+  } else if (roll <= criticalFail)
     callback = options.criticalFailure || options.failure;
   else
     callback = options.failure;
