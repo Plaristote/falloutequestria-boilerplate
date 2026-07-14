@@ -20,6 +20,35 @@
             "state": "spinel/entry",
             "text": "ask-about-spinel"
         },
+        "bandits-ask-details": {
+            "state": "bandits/details",
+            "text": "bandits-ask-details"
+        },
+        "bandits-ask-reinforcements": {
+            "hook": "banditsConvinceToHelp",
+            "text": "bandits-ask-reinforcements"
+        },
+        "bandits-confirm-quest": {
+            "hook": "banditsQuestAccepted",
+            "text": "bandits-confirm-quest"
+        },
+        "bandits-demand-pay": {
+            "hook": "banditsBarterReward",
+            "text": "bandits-demand-pay"
+        },
+        "bandits-offer-help": {
+            "state": "bandits/accept-quest",
+            "text": "bandits-offer-help"
+        },
+        "bandits-refuse": {
+            "hook": "tryToLeave",
+            "text": "bandits-refuse"
+        },
+        "bandits-suggest-collapse": {
+            "availableHook": "banditsCanSuggestCollapse",
+            "state": "bandits/collapse-plan",
+            "text": "bandits-suggest-collapse"
+        },
         "bring-up-negociations": {
             "availableHook": "negociateCanBringUp",
             "hook": "negociateBringUp",
@@ -132,6 +161,11 @@
             "state": "scavengers/on-reject-trade",
             "text": "reject-scavenger-trade"
         },
+        "scavenger-ask-wounded": {
+            "availableHook": "canAskAboutWoundedDogs",
+            "state": "bandits/intro",
+            "text": "scavenger-ask-wounded"
+        },
         "scavengers-ask-demands": {
             "state": "scavengers/motives",
             "text": "scavengers-ask-demands"
@@ -167,6 +201,67 @@
                 "about-back-to-entry"
             ],
             "text": "about-dogs/entry"
+        },
+        "bandits/accept-quest": {
+            "answers": [
+                "bandits-confirm-quest",
+                "bandits-demand-pay"
+            ],
+            "text": "bandits/accept-quest"
+        },
+        "bandits/barter-failure": {
+            "answers": [
+                "bandits-offer-help",
+                "bandits-refuse"
+            ],
+            "mood": "angry",
+            "text": "bandits/barter-failure"
+        },
+        "bandits/barter-success": {
+            "answers": [
+                "bandits-confirm-quest"
+            ],
+            "mood": "smile",
+            "text": "bandits/barter-success"
+        },
+        "bandits/collapse-plan": {
+            "answers": [
+                "bandits-confirm-quest",
+                "bandits-demand-pay"
+            ],
+            "text": "bandits/collapse-plan"
+        },
+        "bandits/details": {
+            "answers": [
+                "bandits-offer-help",
+                "bandits-suggest-collapse",
+                "bandits-ask-reinforcements",
+                "bandits-refuse"
+            ],
+            "text": "bandits/details"
+        },
+        "bandits/intro": {
+            "answers": [
+                "bandits-ask-details",
+                "bandits-offer-help",
+                "bandits-refuse"
+            ],
+            "text": "bandits/intro"
+        },
+        "bandits/reinforce-failure": {
+            "answers": [
+                "bandits-offer-help",
+                "bandits-refuse"
+            ],
+            "mood": "sad",
+            "text": "bandits/reinforce-failure"
+        },
+        "bandits/reinforce-success": {
+            "answers": [
+                "bandits-confirm-quest"
+            ],
+            "mood": "smile",
+            "text": "bandits/reinforce-success"
         },
         "entry": {
             "answers": [
@@ -271,6 +366,7 @@
             "answers": [
                 "scavengers-ask-demands",
                 "scavengers-ask-why-captives",
+                "scavenger-ask-wounded",
                 "intimidation-free-scavengers"
             ],
             "hook": "scavengerAbout",

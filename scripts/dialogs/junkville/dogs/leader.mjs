@@ -86,7 +86,9 @@ class Dialog {
     if (!isLookingForDisappearedPonies()) startLookingForDisappearedPonies();
     if (!hasFoundDisappearedPonies()) onDisappearedPoniesFound();
     switch (this.dialog.previousAnswer) {
-      case "scavengers-ask-why-captives":  return { textKey: "scavengers/why" };
+      case "scavengers-ask-why-captives":
+        this.canAskAboutWoundedDogs = true;
+        return { textKey: "scavengers/why" };
       case "intimidation-free-scavengers": return { textKey: "scavengers/intimidation-failure" };
       case "leave":                        return { textKey: "scavengers/introduction" };
     }
@@ -222,6 +224,41 @@ class Dialog {
     chest.inventory.removeItemOfType("electromagic-spinel");
     game.player.inventory.addItemOfType("electromagic-spinel");
     quest.completeObjective("find-spinel");
+  }
+
+  //
+  // BEGIN BANDITS QUEST
+  //
+  get banditsQuest() { return game.quests.getQuest("junkville/cavernBandits"); }
+
+  banditsQuestAccepted() {
+    let quest = game.quests.getQuest("junkville/cavernBandits");
+    if (quest) {
+      quest = game.quests.addQuest("junkville/cavernBandits");
+      quest.script.pushUniqueEvent("given-by-dogs");
+    } else {
+      quest.script.pushUniqueEvent("talked-with-dogs");
+    }
+  }
+
+  banditsCanSuggestCollapse() {
+    return game.player.statistics.science > 45 || game.player.statistics.explosives > 40;
+  }
+
+  banditsBarterReward() {
+    const success = skillCheck(game.player, "barter", 60);
+    if (success) {
+      return "bandits/barter-success";
+    }
+    return "bandits/barter-failure";
+  }
+
+  banditsConvinceToHelp() {
+    const success = skillContest(game.player, this.dialog.npc, "speech", 65);
+    if (success) {
+      return "bandits/reinforce-success";
+    }
+    return "bandits/reinforce-failure";
   }
 }
 
