@@ -1,6 +1,6 @@
 import {QuestHelper, QuestFlags, requireQuest} from "../../quests/helpers.mjs";
 import {skillContest} from "../../cmap/helpers/checks.mjs";
-import * as Potioks from "./potioks.mjs";
+import * as Potioks from "../../quests/cristal-den/potioks.mjs";
 
 class Dialog {
   constructor(dialog) {
@@ -177,7 +177,7 @@ class Dialog {
   }
 
   reportRescueQuest() {
-    if (this.rescueHerdQuest.isObjectiveCompleted("rescue"))
+    if (this.rescueHerdQuest && this.rescueHerdQuest.isObjectiveCompleted("rescue"))
       return "pinnedHerd/report-success";
     return "pinnedHerd/report-failure";
   }

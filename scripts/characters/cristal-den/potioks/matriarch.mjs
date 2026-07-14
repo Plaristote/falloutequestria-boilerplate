@@ -13,4 +13,9 @@ export class Matriarch extends CharacterBehaviour {
   get hasPlayerBeenIntroduced() {
     return this.model.hasVariable("sabotagePrompt");
   }
+
+  onDied() {
+    game.setVariable("potiokMatDead", 1);
+    super.onDied();
+  }
 }

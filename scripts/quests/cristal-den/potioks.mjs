@@ -1,5 +1,5 @@
 export function matriarchDead() {
-  return !game.getCharacter("cristal-den/potioks/matriarch").isAlive();
+  return game.hasVariable("potiokMatDead");
 }
 
 export function patDead() {
