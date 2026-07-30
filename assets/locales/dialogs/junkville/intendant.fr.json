@@ -39,6 +39,7 @@
             "scavengers/sub-quest": "Les fouilleurs sont précieux, mais je ne peux pas risquer de mettre nos ressources en jeu sans garantie. Je vais avoir besoin de re-stocker.<br><br>\nEt je sais comment faire. Rathian, ui vit dans l'atelier en face d'ici, détient des caisses entières de matériel éléctronique… impossible de le convaincre de les partager avec nous, pourtant. Un truc de Steel Rangers, sans doute, ils n'aiment pas partager la technologie.<br><br>\nSi tu m'obtiens une caisse de son matériel, je pourrais vendre tout ça aux caravaniers, et racheter le matériel médical que les chiens à diamant nous demandent.",
             "scavengers/sub-quest-instant-solve#2": "Bien sûr, prend le matériel médical dont tu as besoin.\n<br><br>\n<i>Elle te donne ce que tu avais demandé.</i>",
             "scavengers/towards-cook": "Des fouilleurs disparus ? Merde. Tu devrais en parler à Raggedy Randy. Il est à l'auberge, il se faisait du soucis pour eux !",
+            "scavengers/towards-cook-alt": "Des fouilleurs disparus ? Merde. Randy s'inquiétait pour eux… avant qu'il ne meure. Je suppose qu'on va devoir s'occuper de ça nous-mêmes. Qu'est-ce que je peux faire pour aider ?",
             "trade": "Voilà ce que j'ai à vendre, jette un oeil !"
         }
     }

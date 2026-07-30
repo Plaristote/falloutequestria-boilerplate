@@ -51,6 +51,9 @@ class Dialog extends DialogHelper {
 
   reportMissingScavengers() {
     this.scavengerQuest.setVariable("reportedScavengerFound", 1);
+    return game.getCharacter("junkville-cook").isAlive()
+      ? "scavengers/towards-cook"
+      : "scavengers/towards-cook-alt";
   }
 
   isLookingForScavengerRansom() {

@@ -1,6 +1,7 @@
 {
     "answers": {
         "about-back-to-entry": {
+            "hook": "exitAboutDogs",
             "state": "entry",
             "text": "about-back-to-entry"
         },
@@ -10,6 +11,11 @@
         },
         "accept-scavenger-trade": {
             "text": "accept-scavenger-trade"
+        },
+        "already-healed-wounded": {
+            "availableHook": "scavengerHealedWoundedDogs",
+            "state": "scavengers/on-dogs-healed",
+            "text": "already-healed-wounded"
         },
         "ask-about-dogs": {
             "state": "about-dogs/entry",
@@ -44,29 +50,135 @@
             "hook": "tryToLeave",
             "text": "bandits-refuse"
         },
+        "bandits-report-dogs-reply": {
+            "state": "negociations/entry",
+            "text": "bandits-report-dogs-reply"
+        },
+        "bandits-report-junkville-reply": {
+            "state": "negociations/entry",
+            "text": "bandits-report-junkville-reply"
+        },
+        "bandits-report-resolution": {
+            "availableHook": "banditsCanReportResolution",
+            "hook": "banditsReportResolution",
+            "text": "bandits-report-resolution"
+        },
+        "bandits-report-solo-reply": {
+            "state": "negociations/entry",
+            "text": "bandits-report-solo-reply"
+        },
         "bandits-suggest-collapse": {
             "availableHook": "banditsCanSuggestCollapse",
             "state": "bandits/collapse-plan",
             "text": "bandits-suggest-collapse"
+        },
+        "bandits/exit-tell-about-location": {
+            "hook": "tryToLeaveAlt",
+            "text": "exit"
+        },
+        "believe-attempt": {
+            "hook": "firstContactPersuade",
+            "text": "believe-attempt"
+        },
+        "believe-give-up": {
+            "state": "first-contact/distrust",
+            "text": "believe-give-up"
+        },
+        "believe-threaten": {
+            "hook": "startCombat",
+            "text": "believe-threaten"
         },
         "bring-up-negociations": {
             "availableHook": "negociateCanBringUp",
             "hook": "negociateBringUp",
             "text": "bring-up-negociations"
         },
-        "came-seeking-scavengers": {
-            "availableHook": "hasLostScavengerQuest",
-            "state": "scavengers/about",
-            "text": "came-seeking-scavengers"
+        "captives-ask-demands": {
+            "state": "scavengers/motives",
+            "text": "captives-ask-demands"
+        },
+        "captives-ask-why": {
+            "state": "scavengers/captives",
+            "text": "captives-ask-why"
+        },
+        "captives-not-bandits": {
+            "state": "scavengers/release-request",
+            "text": "captives-not-bandits"
+        },
+        "details-intro-back": {
+            "state": "first-contact/bandits-explained",
+            "text": "details-intro-back"
+        },
+        "distrust-leave": {
+            "hook": "tryToLeave",
+            "text": "distrust-leave"
+        },
+        "distrust-retry": {
+            "state": "first-contact/why-believe-you",
+            "text": "distrust-retry"
+        },
+        "distrust-threaten": {
+            "hook": "startCombat",
+            "text": "distrust-threaten"
+        },
+        "explained-maybe-i-can-help": {
+            "state": "first-contact/bandit-proposal",
+            "text": "explained-maybe-i-can-help"
+        },
+        "explained-not-one-of-them": {
+            "state": "first-contact/why-believe-you",
+            "text": "explained-not-one-of-them"
+        },
+        "explained-sounds-like-your-problem": {
+            "text": "explained-sounds-like-your-problem"
+        },
+        "explained-tell-me-more": {
+            "state": "first-contact/bandit-details",
+            "text": "explained-tell-me-more"
+        },
+        "first-contact-exit-go-for-quest": {
+            "hook": "firstContactGoToQuest",
+            "state": "scavengers/wounded-intro",
+            "text": "first-contact-exit-go-for-quest"
         },
         "go-to-the-pen": {
             "hook": "sendPlayerToPen",
             "text": "go-to-the-pen"
         },
+        "hub-ask-about-scavengers": {
+            "availableHook": "canAskAboutScavengers",
+            "state": "scavengers/about",
+            "text": "hub-ask-about-scavengers"
+        },
+        "hub-ask-about-wounded-dogs": {
+            "availableHook": "canAskAboutWoundedDogs",
+            "hook": "woundedDogsTopic",
+            "text": "hub-ask-about-wounded-dogs"
+        },
         "intimidation-free-scavengers": {
             "availableHook": "knowsAboutDisappearedScavengers",
             "hook": "intimidateIntoFreeingScavengers",
             "text": "intimidation-free-scavengers"
+        },
+        "intro-just-passing-through": {
+            "state": "first-contact/why-here",
+            "text": "intro-just-passing-through"
+        },
+        "intro-not-looking-for-trouble": {
+            "state": "first-contact/why-believe-you",
+            "text": "intro-not-looking-for-trouble"
+        },
+        "intro-seeking-scavengers": {
+            "state": "scavengers/about",
+            "text": "intro-seeking-scavengers"
+        },
+        "intro-threaten": {
+            "hook": "startCombat",
+            "text": "intro-threaten"
+        },
+        "intro-who-are-you": {
+            "state": "about-dogs/entry",
+            "text": "intro-who-are-you"
         },
         "leave": {
             "hook": "tryToLeave",
@@ -79,14 +191,9 @@
             "state": "scavengers/motives",
             "text": "motives-followup"
         },
-        "motives-question": {
-            "availableHook": "scavengerCanQuestionCaptivity",
-            "state": "scavengers/convince-success",
-            "text": "motives-question"
-        },
         "negociate-accept": {
             "availableHook": "negociateClarified",
-            "state": "negociations/on-accepted",
+            "hook": "negociateAttemptAccept",
             "text": "negociate-accept"
         },
         "negociate-ask-clarifications": {
@@ -121,6 +228,14 @@
             "state": "negociations/on-junkville-decision",
             "text": "pass-on-junkville-decision-reject",
             "textHook": "negociatePassOnJunkvilleDecisionText"
+        },
+        "proposal-intro-back": {
+            "state": "first-contact/bandits-explained",
+            "text": "proposal-intro-back"
+        },
+        "proposal-intro-confirm": {
+            "hook": "banditsQuestAccepted",
+            "text": "proposal-intro-confirm"
         },
         "push-to-hide-dolly": {
             "availableHook": "negociationsKnowAboutDollyOpinion",
@@ -161,18 +276,21 @@
             "state": "scavengers/on-reject-trade",
             "text": "reject-scavenger-trade"
         },
-        "scavenger-ask-wounded": {
-            "availableHook": "canAskAboutWoundedDogs",
-            "state": "bandits/intro",
-            "text": "scavenger-ask-wounded"
+        "release-request-attempt": {
+            "hook": "scavengerReleaseAttempt",
+            "text": "release-request-attempt"
         },
-        "scavengers-ask-demands": {
-            "state": "scavengers/motives",
-            "text": "scavengers-ask-demands"
+        "release-request-cancel": {
+            "state": "entry",
+            "text": "release-request-cancel"
         },
-        "scavengers-ask-why-captives": {
-            "state": "scavengers/about",
-            "text": "scavengers-ask-why-captives"
+        "scavenger-intro-next": {
+            "state": "scavengers/wounded-intro",
+            "text": "exit"
+        },
+        "scavengers-release-now": {
+            "state": "scavengers/release-request",
+            "text": "scavengers-release-now"
         },
         "spinel-intro-next": {
             "hook": "onSpinelAsked",
@@ -183,11 +301,44 @@
             "hook": "startCombat",
             "text": "start-fight"
         },
+        "suspicion-maybe": {
+            "state": "first-contact/distrust",
+            "text": "suspicion-maybe"
+        },
+        "suspicion-no": {
+            "state": "first-contact/why-believe-you",
+            "text": "suspicion-no"
+        },
+        "suspicion-the-others": {
+            "state": "first-contact/bandits-explained",
+            "text": "suspicion-the-others"
+        },
         "thanks": {
             "text": "thanks"
+        },
+        "why-here-exploring": {
+            "state": "first-contact/bandit-suspicion",
+            "text": "why-here-exploring"
+        },
+        "why-here-following-trail": {
+            "availableHook": "hasScavengerQuest",
+            "state": "scavengers/about",
+            "text": "why-here-following-trail"
+        },
+        "why-here-none-of-your-business": {
+            "state": "first-contact/distrust",
+            "text": "why-here-none-of-your-business"
+        },
+        "why-here-traveler": {
+            "state": "first-contact/bandit-suspicion",
+            "text": "why-here-traveler"
+        },
+        "wounded-intro-tell-me-more": {
+            "state": "scavengers/about",
+            "text": "wounded-intro-tell-me-more"
         }
     },
-    "entryPoint": "first-meeting",
+    "entryPoint": "first-contact/entry",
     "states": {
         "about-dogs/diamonds": {
             "answers": [
@@ -263,22 +414,132 @@
             "mood": "smile",
             "text": "bandits/reinforce-success"
         },
+        "bandits/report-dogs": {
+            "answers": [
+                "bandits-report-dogs-reply"
+            ],
+            "text": "bandits/report-dogs"
+        },
+        "bandits/report-junkville": {
+            "answers": [
+                "bandits-report-junkville-reply"
+            ],
+            "text": "bandits/report-junkville"
+        },
+        "bandits/report-solo": {
+            "answers": [
+                "bandits-report-solo-reply"
+            ],
+            "text": "bandits/report-solo"
+        },
+        "bandits/tell-about-location": {
+            "answers": [
+                "bandits/exit-tell-about-location"
+            ],
+            "text": "bandits/tell-about-location"
+        },
         "entry": {
             "answers": [
+                "bandits-report-resolution",
                 "bring-up-negociations",
+                "hub-ask-about-wounded-dogs",
+                "hub-ask-about-scavengers",
                 "ask-about-spinel",
                 "ask-about-dogs",
                 "leave"
             ],
+            "hook": "entry",
             "text": "entry"
         },
-        "first-meeting": {
+        "first-contact/bandit-details": {
             "answers": [
-                "came-seeking-scavengers",
-                "intimidation-free-scavengers",
-                "leave"
+                "details-intro-back"
             ],
-            "text": "first-meeting"
+            "mood": "angry",
+            "text": "first-contact/bandit-details"
+        },
+        "first-contact/bandit-proposal": {
+            "answers": [
+                "proposal-intro-confirm",
+                "proposal-intro-back"
+            ],
+            "mood": "dubious",
+            "text": "first-contact/bandit-proposal"
+        },
+        "first-contact/bandit-suspicion": {
+            "answers": [
+                "suspicion-the-others",
+                "suspicion-no",
+                "suspicion-maybe"
+            ],
+            "mood": "dubious",
+            "text": "first-contact/bandit-suspicion"
+        },
+        "first-contact/bandits-explained": {
+            "answers": [
+                "explained-not-one-of-them",
+                "explained-sounds-like-your-problem",
+                "explained-maybe-i-can-help",
+                "explained-tell-me-more"
+            ],
+            "mood": "angry",
+            "text": "first-contact/bandits-explained"
+        },
+        "first-contact/distrust": {
+            "answers": [
+                "distrust-retry",
+                "distrust-leave",
+                "distrust-threaten"
+            ],
+            "mood": "angry",
+            "text": "first-contact/distrust"
+        },
+        "first-contact/entry": {
+            "answers": [
+                "intro-just-passing-through",
+                "why-here-following-trail",
+                "intro-who-are-you",
+                "intro-not-looking-for-trouble",
+                "intro-threaten"
+            ],
+            "text": "first-contact/entry"
+        },
+        "first-contact/on-exit-attempt": {
+            "answers": [
+                "first-contact-exit-go-for-quest"
+            ],
+            "text": "first-contact/on-exit-attempt"
+        },
+        "first-contact/on-exit-attempt-alt": {
+            "answers": [
+                "first-contact-exit-go-for-quest"
+            ],
+            "mood": "neutral",
+            "text": "first-contact/on-exit-attempt-alt"
+        },
+        "first-contact/why-believe-you": {
+            "answers": [
+                "believe-attempt",
+                "believe-give-up",
+                "believe-threaten"
+            ],
+            "mood": "dubious",
+            "text": "first-contact/why-believe-you"
+        },
+        "first-contact/why-here": {
+            "answers": [
+                "why-here-following-trail",
+                "why-here-exploring",
+                "why-here-traveler",
+                "why-here-none-of-your-business"
+            ],
+            "hook": "firstContactWhyHere",
+            "text": "first-contact/why-here"
+        },
+        "first-contact/why-here-reentry": {
+            "answers": [
+            ],
+            "text": "first-contact/why-here-reentry"
         },
         "negociations/clarifications": {
             "answers": [
@@ -347,6 +608,14 @@
             "mood": "smile",
             "text": "negociations/skepticism"
         },
+        "negociations/wary-refusal": {
+            "answers": [
+                "negociate-accept",
+                "leave-alt"
+            ],
+            "mood": "dubious",
+            "text": "negociations/wary-refusal"
+        },
         "negociations/why-dolly-hide": {
             "answers": [
             ],
@@ -364,13 +633,21 @@
         },
         "scavengers/about": {
             "answers": [
-                "scavengers-ask-demands",
-                "scavengers-ask-why-captives",
-                "scavenger-ask-wounded",
-                "intimidation-free-scavengers"
+                "captives-ask-why",
+                "scavengers-release-now",
+                "intimidation-free-scavengers",
+                "about-back-to-entry"
             ],
             "hook": "scavengerAbout",
             "text": "scavengers/about"
+        },
+        "scavengers/captives": {
+            "answers": [
+                "captives-ask-demands",
+                "captives-not-bandits",
+                "about-back-to-entry"
+            ],
+            "text": "scavengers/captives"
         },
         "scavengers/convince-success": {
             "answers": [
@@ -392,15 +669,17 @@
         },
         "scavengers/introduction": {
             "answers": [
+                "scavenger-intro-next"
             ],
             "text": "scavengers/introduction"
         },
         "scavengers/motives": {
             "answers": [
                 "accept-scavenger-trade",
-                "motives-question",
+                "already-healed-wounded",
                 "motives-followup",
-                "reject-scavenger-trade"
+                "reject-scavenger-trade",
+                "about-back-to-entry"
             ],
             "hook": "scavengerMotives",
             "mood": "cocky",
@@ -437,6 +716,11 @@
             ],
             "text": "scavengers/on-ransom-received-free-scavengers"
         },
+        "scavengers/on-ransom-received-scavengers-already-freed": {
+            "answers": [
+            ],
+            "text": "scavengers/on-ransom-received-scavengers-already-freed"
+        },
         "scavengers/on-ransom-turnedcoat": {
             "answers": [
             ],
@@ -462,10 +746,27 @@
             ],
             "text": "scavengers/ransom-entry"
         },
-        "scavengers/why": {
+        "scavengers/release-refused": {
             "answers": [
+                "about-back-to-entry"
             ],
-            "text": "scavengers/why"
+            "mood": "angry",
+            "text": "scavengers/release-refused"
+        },
+        "scavengers/release-request": {
+            "answers": [
+                "release-request-attempt",
+                "release-request-cancel"
+            ],
+            "mood": "dubious",
+            "text": "scavengers/release-request"
+        },
+        "scavengers/wounded-intro": {
+            "answers": [
+                "wounded-intro-tell-me-more",
+                "about-back-to-entry"
+            ],
+            "text": "scavengers/wounded-intro"
         },
         "spinel/done": {
             "answers": [

@@ -45,7 +45,7 @@ class Level extends LevelBase {
       rathian.statistics.faction = "rathian";
       rathian.tasks.removeTask("autopilot");
       if (door) door.locked = false;
-    } else if (door && !isHere) {
+    } else if (door && !isHere && rathian.isAlive()) {
       door.opened = false;
       door.locked = true;
     }
@@ -65,6 +65,10 @@ class Level extends LevelBase {
 
   goToUndergroundBattle() {
     game.switchToLevel("junkville-underground", "battle-entry");
+  }
+
+  goToBanditsRaid() {
+    game.switchToLevel("junkville-cavern", "bandits-camp-entry");
   }
 
   get negociationScene() {

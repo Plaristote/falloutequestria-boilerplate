@@ -1,5 +1,5 @@
 import {Innkeeper} from "../innkeeper.mjs";
-import {skillContest} from "../../cmap/helpers/checks.mjs";
+import {skillCheck, skillContest} from "../../cmap/helpers/checks.mjs";
 import {requireQuest, QuestFlags} from "../../quests/helpers.mjs";
 import {
   areCaptorsDead,
@@ -12,13 +12,26 @@ import {
 } from "../../quests/junkvilleNegociateWithDogs.mjs";
 import {isHelpfulQuestAvailable, teleportToCaverns as helpfulQuestGoToCaverns} from "../../quests/junkville/findHelpful.mjs";
 import {opinionVarName} from "../../scenes/junkville/negociationAssembly.mjs";
+import {
+  hasCavernBanditsQuest,
+  canReportNestLocationToRandy,
+  banditsCleared,
+  banditsResolution,
+  banditsDefeatedWithJunkvilleHelp,
+  reportedToRandy,
+  startBanditsRaidWithRandy,
+  startBanditsRaidSolo,
+  randyShouldReprimandAboutFleeingBanditBattle
+} from "../../quests/junkville/cavernBandits.mjs";
 
-class Dialog extends Innkeeper {
+export default class Dialog extends Innkeeper {
   constructor(dialog) {
     super(dialog);
   }
 
   getEntryPoint() {
+    if (randyShouldReprimandAboutFleeingBanditBattle())
+      return "bandits/ran-away-earful";
     if (this.dialog.npc.script.shouldTalkAboutDogDealDecision())
       return this.negociateDealEntryPoint();
     return "entry";
@@ -35,31 +48,54 @@ class Dialog extends Innkeeper {
     return level.hasVariable("intendantToldAboutLeader");
   }
 
-  availableHauntedHeapQuest() {
-    return !game.quests.hasQuest("junkvilleDumpsDisappeared");
+  shouldRandyBringUpHauntedHeapQuest() {
+    const quest = game.quests.getQuest("junkvilleDumpsDisappeared");
+    return this.availableHauntedHeapQuest()
+        || (!quest.script.hasEvent("talk-to-cook") && quest.inProgress);
   }
-  
+
+  availableBanditsQuestFromRandy() {
+    const quest = game.quests.getQuest("junkville/cavernBandits");
+    return !quest || !quest.script.talkedWithRandy;
+  }
+
   jobs() {
-    if (this.availableHauntedHeapQuest()) {
+    let text = "";
+
+    if (this.shouldRandyBringUpHauntedHeapQuest()) {
       requireQuest("junkvilleDumpsDisappeared", QuestFlags.HiddenQuest).script.onHeardAboutQuestFromRandy();
-      return this.dialog.t("job-haunted-heap");
+      text += `<p>${this.dialog.t("job-haunted-heap")}</p>`;
     }
     if (isHelpfulQuestAvailable()) {
-      return this.dialog.t("job-find-helpful");
+      text += `<p>${this.dialog.t("job-find-helpful")}</p>`;
     }
-    return this.dialog.t("no-jobs");
+    if (this.availableBanditsQuestFromRandy()) {
+      text += `<p>${this.dialog.t("job-bandits")}</p>`;
+    }
+    return text.length > 0 ? text : this.dialog.t("no-jobs");
   }
 
   isHelpfulQuestAvailable_() { return !this.availableHauntedHeapQuest() && isHelpfulQuestAvailable(); }
 
   acceptHauntedHeapQuest() {
     const object = requireQuest("junkvilleDumpsDisappeared", QuestFlags.NormalQuest);
-    object.setVariable("initBy", this.dialog.npc.objectName);
+
+    if (!object.hasVariable("initBy"))
+      object.setVariable("initBy", this.dialog.npc.objectName);
+    object.script.pushUniqueEvent("talk-to-cook");
   }
 
   acceptFindHelpfulQuest() {
     const object = requireQuest("junkville/findHelpful", QuestFlags.NormalQuest);
     object.setVariable("initBy", this.dialog.npc.objectName);
+  }
+
+  acceptBanditsQuest() {
+    let eventName = game.quests.hasQuest("junkville/cavernBandits")
+      ? "talked-with-cook"
+      : "given-by-cook";
+    const object = requireQuest("junkville/cavernBandits", QuestFlags.NormalQuest);
+    object.script.pushUniqueEvent(eventName);
   }
 
   canReportHelpfulFound() {
@@ -81,13 +117,23 @@ class Dialog extends Innkeeper {
     return game.quests.getQuest("junkvilleDumpsDisappeared");
   }
 
-  hasHauntedDumpQuest() {
-    const quest = this.junkvilleDumpsDisappeared;
-    return quest && ((!quest.completed && !quest.failed) || (!quest.isObjectiveCompleted("report-success")));
+  availableHauntedHeapQuest() {
+    return !game.quests.hasQuest("junkvilleDumpsDisappeared");
   }
 
-  availableHauntedDumpQuest() {
-    return !game.quests.hasQuest("junkvilleDumpsDisappeared") ;
+  hasHauntedDumpQuest() {
+    const quest = this.junkvilleDumpsDisappeared;
+    const res = game.quests.hasQuest("junkvilleDumpsDisappeared") && (quest.inProgress || (!quest.isObjectiveCompleted("report-success")));
+    console.log("hasHauntedDumpQuest", res);
+    return res;
+  }
+
+  canReportMissingScavengersInJobs() {
+    let res = false;
+    if (this.shouldRandyBringUpHauntedHeapQuest())
+      res = this.hasHauntedDumpQuest();
+    console.log("canReportMissingScavengersInJobs", res);
+    return res;
   }
 
   reportDisappearedLocation() {
@@ -208,7 +254,7 @@ class Dialog extends Innkeeper {
     return this.dialog.t("dogs-battle-peacemaking-convince");
   }
 
-  onDogsBattlePeacemaingAppease() {
+  onDogsBattlePeacemakingAppease() {
     if (this.dogsBattleCanAppease())
       return "dogs/battle/peacemaking-appeased";
     return "dogs/battle/peacemaking-not-appeased";
@@ -297,6 +343,88 @@ class Dialog extends Innkeeper {
     requireQuest("junkvilleDumpsDisappeared").setVariable("reportedScavengerFound", 2);
   }
 
+  //
+  // BEGIN BANDITS QUEST (Randy's side)
+  //
+  get banditsQuest() { return game.quests.getQuest("junkville/cavernBandits"); }
+
+  canReportBanditsLocation() {
+    return canReportNestLocationToRandy();
+  }
+
+  onReportBanditsLocation() {
+    this.banditsQuest.completeObjective("report-nest");
+    if (banditsCleared()) {
+      // The player already dealt with the bandits before coming back to
+      // report - no need to organize anything, just close the loop.
+      this.banditsQuest.completeObjective("reported-to-randy");
+      switch (banditsResolution()) {
+        case "junkville-help": return "bandits/nest-report-already-cleared-together";
+        case "dogs-help":      return "bandits/nest-report-already-cleared-dogs";
+        default:                return "bandits/nest-report-already-cleared-solo";
+      }
+    }
+    return "bandits/nest-report";
+  }
+
+  acceptRandyJoinsBandits() {
+    startBanditsRaidWithRandy();
+  }
+
+  declineRandyJoinsBandits() {
+    startBanditsRaidSolo();
+  }
+
+  get banditsReward() {
+    return this.banditsQuest.getVariable("randyReward", 0);
+  }
+
+  set banditsReward(value) {
+    this.banditsQuest.setVariable("randyReward", value);
+  }
+
+  canNegotiateBanditsReward() {
+    return this.improvedBanditsReward === undefined;
+  }
+
+  negotiateBanditsReward() {
+    const winner = skillContest(game.player, this.dialog.npc, "barter");
+
+    this.improvedBanditsReward = winner === game.player;
+    this.banditsReward = this.improvedBanditsReward ? 150 : 100;
+    return this.improvedBanditsReward ? "bandits/negotiate-success" : "bandits/negotiate-failure";
+  }
+
+  banditsRanAwayEarful() {
+    this.banditsQuest.setVariable("ranAwayTalkedWithRandy", 1);
+  }
+
+  canReportBanditsBattle() {
+    return hasCavernBanditsQuest() && banditsCleared() && !reportedToRandy();
+  }
+
+  onReportBanditsBattle() {
+    this.banditsQuest.completeObjective("reported-to-randy");
+    game.player.inventory.addItemOfType("bottlecaps", this.banditsReward);
+    switch (banditsResolution()) {
+      case "junkville-help": return "bandits/battle-report-together";
+      case "dogs-help":      return "bandits/battle-report-dogs";
+      default:                return "bandits/battle-report-solo";
+    }
+  }
+
+  // Randy needs a lot less convincing about the diamond dogs if Junkville
+  // folk already bled next to them against the bandits - it's proof enough
+  // that peace is possible.
+  banditsHelpedByJunkville() {
+    return banditsDefeatedWithJunkvilleHelp();
+  }
+
+  negociateCiteBanditsHelp() {
+    this.negociationPoints = 3;
+    return "dogs/negociations/step-5-convinced";
+  }
+
   // NEW VERSION NEGOCIATE
   negociateCanTellDogsWantNegociate() {
     const quest = requireQuest("junkvilleNegociateWithDogs");
@@ -370,8 +498,4 @@ class Dialog extends Innkeeper {
       return "dogs/negociations/wait-assembly";
     return "dogs/negociations/entry";
   }
-}
-
-export function create(dialog) {
-  return new Dialog(dialog);
 }

@@ -1,14 +1,16 @@
 {
     "answers": {
-        "": {
+        "ask-about-gems": {
+            "state": "gems-value",
+            "text": "ask-about-gems"
         },
-        "announce-release": {
-            "availableHook": "wasReleaseAccepted",
-            "text": "announce-release"
+        "ask-about-junkville-argument": {
+            "state": "junkville-argument",
+            "text": "ask-about-junkville-argument"
         },
-        "ask-about-secrecy": {
-            "state": "secrecy",
-            "text": "ask-about-secrecy"
+        "ask-about-scavenging": {
+            "state": "scavenging",
+            "text": "ask-about-scavenging"
         },
         "ask-situation": {
             "state": "situation",
@@ -32,17 +34,12 @@
             "text": "let-them-rot-alt"
         },
         "missioned-by-junkville": {
-            "text": "missioned-by-junkville"
-        },
-        "missionned-by-junkville": {
             "availableHook": "wasSentByJunkville",
             "state": "junkville-mission",
-            "text": "missionned-by-junkville"
-        },
-        "missionned-junkville": {
-            "text": "missionned-junkville"
+            "text": "missioned-by-junkville"
         },
         "suggest-breakout": {
+            "availableHook": "hasQuest",
             "hook": "onBreakout",
             "text": "suggest-breakout"
         },
@@ -64,26 +61,49 @@
         "breakout-fail": {
             "answers": [
             ],
-            "hook": "",
             "mood": "angry",
             "text": "breakout-fail"
         },
         "entry": {
             "answers": [
                 "ask-situation",
+                "missioned-by-junkville",
                 "tell-freedom",
-                "dogs-slained"
+                "dogs-slained",
+                "suggest-breakout"
             ],
-            "hook": "",
+            "hook": "onMeetCaptive",
             "text": "entry"
+        },
+        "gems-value": {
+            "answers": [
+                "ask-about-junkville-argument",
+                "missioned-by-junkville",
+                "tell-freedom",
+                "suggest-breakout"
+            ],
+            "mood": "cocky",
+            "text": "gems-value"
+        },
+        "junkville-argument": {
+            "answers": [
+                "missioned-by-junkville",
+                "tell-freedom",
+                "suggest-breakout",
+                "let-them-rot-alt",
+                "let-them-rot"
+            ],
+            "mood": "cocky",
+            "text": "junkville-argument"
         },
         "junkville-mission": {
             "answers": [
-                "announce-release",
+                "tell-freedom",
+                "dogs-slained",
                 "suggest-breakout",
                 "leave"
             ],
-            "hook": "",
+            "mood": "smile",
             "text": "junkville-mission"
         },
         "released": {
@@ -93,28 +113,28 @@
             "mood": "smile",
             "text": "released"
         },
-        "secrecy": {
+        "scavenging": {
             "answers": [
-                "missionned-by-junkville",
-                "announce-release",
-                "suggest-breakout",
-                "let-them-rot-alt",
-                "let-them-rot"
+                "ask-about-gems",
+                "ask-about-junkville-argument",
+                "missioned-by-junkville",
+                "tell-freedom",
+                "suggest-breakout"
             ],
-            "hook": "",
-            "text": "secrecy"
+            "mood": "neutral",
+            "text": "scavenging"
         },
         "situation": {
             "answers": [
-                "missionned-by-junkville",
+                "ask-about-scavenging",
+                "missioned-by-junkville",
                 "tell-freedom",
                 "dogs-slained",
                 "suggest-breakout",
-                "ask-about-secrecy",
                 "leave-sarcastic",
                 "leave"
             ],
-            "hook": "addQuest",
+            "hook": "onSituationExplained",
             "text": "situation"
         }
     }

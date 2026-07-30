@@ -12,9 +12,13 @@ import {
   hasMediationStarted,
   startMediation
 } from "../../../quests/junkvilleNegociateWithDogs.mjs";
+import {
+  banditsDefeatedWithJunkvilleHelp,
+  sendDogReinforcement
+} from "../../../quests/junkville/cavernBandits.mjs";
 import {skillCheck, skillContest} from "../../../cmap/helpers/checks.mjs";
 
-class Dialog {
+export default class Dialog {
   constructor(dialog) {
     this.dialog = dialog;
     this.dialog.ambiance = "cavern";
@@ -33,7 +37,8 @@ class Dialog {
     }
     this.dialog.npc.setVariable("met", 1);
     this.firstMeeting = true;
-    return "first-meeting";
+    this.firstContactLock = true;
+    return "first-contact/entry";
   }
 
   //
@@ -43,8 +48,12 @@ class Dialog {
 
   get scavengerHealedWoundedDogs() { return this.scavengerQuest?.isObjectiveCompleted("healWoundedDogs"); }
 
-  hasLostScavengerQuest() {
-    return isLookingForDisappearedPonies();
+  hasScavengerQuest() {
+    return game.quests.hasQuest("junkvilleDumpsDisappeared");
+  }
+
+  canAskAboutScavengers() {
+    return this.hasScavengerQuest() && !this.scavengerQuest.script.ransomActive;
   }
 
   knowsAboutDisappearedScavengers() {
@@ -68,29 +77,26 @@ class Dialog {
     return "scavengers/intimidation-failure";
   }
 
-  scavengerCanQuestionCaptivity() {
-    return game.player.statistics.speech > 85;
+  woundedDogsTopic() {
+    if (!hasFoundDisappearedPonies()) return "scavengers/wounded-intro";
+    if (this.canAskAboutWoundedDogs) return "bandits/intro";
+    return "scavengers/about";
   }
 
-  scavengerConvincedToRelease() {
-    authorizeCaptiveRelease();
-    enableScavengerRansom("alt");
-  }
-
-  scavengerWoundedHealed() {
-    authorizeCaptiveRelease();
+  get canAskAboutWoundedDogs() {
+    return this.dialog.npc.getVariable("canAskAboutWoundedDogs", 0) == 1
+        && this.scavengerHealedWoundedDogs
+        && (!this.banditsQuest || !this.banditsQuest.script.talkedWithDogs);
   }
 
   scavengerAbout() {
     console.log("scavengerAbout", "What is previous answer", this.dialog.previousAnswer);
     if (!isLookingForDisappearedPonies()) startLookingForDisappearedPonies();
     if (!hasFoundDisappearedPonies()) onDisappearedPoniesFound();
+    this.dialog.npc.setVariable("canAskAboutWoundedDogs", 1);
     switch (this.dialog.previousAnswer) {
-      case "scavengers-ask-why-captives":
-        this.canAskAboutWoundedDogs = true;
-        return { textKey: "scavengers/why" };
-      case "intimidation-free-scavengers": return { textKey: "scavengers/intimidation-failure" };
-      case "leave":                        return { textKey: "scavengers/introduction" };
+      case "wounded-intro-tell-me-more": return { textKey: "scavengers/about-from-wounded" };
+      case "leave":                      return { textKey: "scavengers/introduction" };
     }
   }
 
@@ -106,6 +112,21 @@ class Dialog {
     game.dataEngine.addReputation("diamond-dogs", -15);
   }
 
+  scavengerReleaseAttempt() {
+    const success = skillCheck(game.player, "speech", 85);
+    if (success) return "scavengers/convince-success";
+    return "scavengers/release-refused";
+  }
+
+  scavengerConvincedToRelease() {
+    authorizeCaptiveRelease();
+    enableScavengerRansom("alt");
+  }
+
+  scavengerWoundedHealed() {
+    authorizeCaptiveRelease();
+  }
+
   scavengerCanPayRansom() {
     return this.scavengerQuest.script.canInventoryProvideRequiredSupplies(game.player.inventory);
   }
@@ -119,12 +140,63 @@ class Dialog {
   scavengerOnRansomNext() {
     const altState = "scavengers/on-ransom-received-free-scavengers";
     if (this.scavengerQuest.script.ransomActive && this.dialog.previousState != altState)
-      return altState;
-    return "negociations/entry";
+      this.entryTextOverload = altState;
+    else
+      this.entryTextOverload = "scavengers/on-ransom-received-scavengers-already-freed";
+    return "entry";
+  }
+
+  entry() {
+    const overload = this.entryTextOverload;
+    const mood = this.entryMoodOverload;
+
+    this.entryTextOverload = null;
+    this.entryMoodOverload = null;
+    if (overload)
+      return { textKey: overload, mood: mood || undefined };
+  }
+
+  exitAboutDogs() {
+    console.log("exitAboutDogs, scavengerLock=", this.scavengerLock);
+    if (this.firstContactLock)
+      return "first-contact/why-here";
+    if (this.scavengerLock)
+      return "scavengers/introduction";
+    console.log("exitAboutDogs, no scavengerLock");
+  }
+
+  //
+  // BEGIN FIRST CONTACT
+  //
+  firstContactPersuade() {
+    const success = skillCheck(game.player, "speech", 75);
+    if (success) {
+      this.firstContactLock = false;
+      this.entryTextOverload = "neutral-ground";
+      this.entryMoodOverload = "neutral";
+      return "entry";
+    }
+    return "first-contact/distrust";
+  }
+
+  firstContactWhyHere() {
+    if (this.dialog.previousAnswer === "about-back-to-entry")
+      return { textKey: "first-contact/why-here-reentry" };
+    return { textKey: "first-contact/why-here" };
+  }
+
+  firstContactGoToQuest() {
+    console.log("Swapping to scavengerLock");
+    this.firstContactLock = false;
+    this.scavengerLock = true;
   }
 
   tryToLeave() {
-    return this.firstMeeting ? "scavengers/about" : "";
+    return this.firstMeeting ? "first-contact/on-exit-attempt" : "";
+  }
+
+  tryToLeaveAlt() {
+    return this.firstMeeting ? "first-contact/on-exit-attempt-alt" : "";
   }
 
   sendPlayerToPen() {
@@ -169,6 +241,23 @@ class Dialog {
 
   negociateClarifications() {
     this._negociateClarified = true;
+  }
+
+  negociateCanConvinceDogs() {
+    return skillCheck(game.player, "speech", 75) || banditsDefeatedWithJunkvilleHelp();
+  }
+
+  negociateAttemptAccept() {
+    if (!this.negociateCanConvinceDogs()) {
+      this.dialog.npc.setVariable("negociateWaryToldOnce", 1);
+      return "negociations/wary-refusal";
+    }
+    return "negociations/on-accepted";
+  }
+
+  negociateOnAcceptedText() {
+    return banditsDefeatedWithJunkvilleHelp() ?
+      "negociations/on-accepted-bandits" : "negociations/on-accepted";
   }
 
   negociateOnAccepted() {
@@ -233,12 +322,17 @@ class Dialog {
 
   banditsQuestAccepted() {
     let quest = game.quests.getQuest("junkville/cavernBandits");
-    if (quest) {
+    if (!quest) {
+      // Nobody told the player about this yet - Fido is the first to bring
+      // it up, so he's the one credited with handing out the quest.
       quest = game.quests.addQuest("junkville/cavernBandits");
       quest.script.pushUniqueEvent("given-by-dogs");
     } else {
+      // Randy may already have sent the player looking for the bandits'
+      // camp. Either way, the player now has the full story from Fido.
       quest.script.pushUniqueEvent("talked-with-dogs");
     }
+    return "bandits/tell-about-location";
   }
 
   banditsCanSuggestCollapse() {
@@ -256,12 +350,30 @@ class Dialog {
   banditsConvinceToHelp() {
     const success = skillContest(game.player, this.dialog.npc, "speech", 65);
     if (success) {
+      sendDogReinforcement();
       return "bandits/reinforce-success";
     }
     return "bandits/reinforce-failure";
   }
-}
 
-export function create(dialog) {
-  return new Dialog(dialog);
+  banditsCanReportResolution() {
+    const quest = game.quests.getQuest("junkville/cavernBandits");
+    return quest && quest.isObjectiveCompleted("remove-bandits") && !quest.isObjectiveCompleted("reported-to-leader");
+  }
+
+  banditsReportResolution() {
+    const quest = game.quests.getQuest("junkville/cavernBandits");
+    const resolution = quest.getVariable("raidersResolution");
+
+    quest.completeObjective("reported-to-leader");
+
+    if (resolution === "player-solo") {
+      return "bandits/report-solo";
+    } else if (resolution === "junkville-help") {
+      return "bandits/report-junkville";
+    } else if (resolution === "dogs-help") {
+      return "bandits/report-dogs";
+    }
+    return "entry"; // Fallback
+  }
 }

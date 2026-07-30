@@ -1,4 +1,5 @@
 import {QuestHelper, requireQuest} from "./helpers.mjs";
+import killArray from "../characters/killArray.mjs";
 import {
   isLookingForDisappearedPonies,
   hasFoundDisappearedPonies,
@@ -7,6 +8,7 @@ import {
   areCaptorsDead,
   skipScavengerRansom
 } from "./junkvilleDumpsDisappeared.mjs";
+import {junkvilleCombattantTemplate} from "./junkville/helpers.mjs";
 import {getValueFromRange} from "../behaviour/random.mjs";
 
 const questName = "junkvilleNegociateWithDogs";
@@ -63,26 +65,6 @@ export function prepareDiamondDogsOnCavernAccessTransgression() {
   }
 }
 
-function junkvilleCombattantTemplate() {
-  const capsCount = getValueFromRange(0, 31);
-  const ammoCount = getValueFromRange(12, 28);
-  let items = [];
-  let slots = {};
-
-  items.push({ itemType: "9mm-ammo", quantity: ammoCount });
-  if (capsCount > 0)
-    items.push({ itemType: "bottlecaps", quantity: capsCount });
-  slots["use-1"] = { hasItem: true, itemType: "mouthgun", ammo: 6, maxAmmo: 6 };
-  return {
-    sheet: "junkville-combattant",
-    script: "junkville/underground-combattant.mjs",
-    inventory: {
-      items: items,
-      slots: slots
-    }
-  };
-}
-
 export function startUndergroundBattle() {
   skipScavengerRansom();
   requireQuest(questName).setVariable("battleState", 1);
@@ -114,12 +96,6 @@ export function initializeBattle() {
     onDisappearedPoniesFound();
   level.script.liveCaptives.forEach(captive => {
     captive.tasks.addUniqueTask("reachExitZone", 1500, 0);
-  });
-}
-
-function killArray(array) {
-  array.forEach(character => {
-    character.takeDamage(character.statistics.hitPoints, null);
   });
 }
 

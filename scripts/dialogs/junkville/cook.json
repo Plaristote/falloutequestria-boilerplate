@@ -2,13 +2,19 @@
     "answers": {
         "": {
         },
+        "accept-bandits-quest": {
+            "availableHook": "availableBanditsQuestFromRandy",
+            "hook": "acceptBanditsQuest",
+            "state": "job-bandits-details",
+            "text": "accept-bandits-quest"
+        },
         "accept-find-helpful": {
             "availableHook": "isHelpfulQuestAvailable_",
             "hook": "acceptFindHelpfulQuest",
             "text": "accept-find-helpful"
         },
         "accept-haunting-heap": {
-            "availableHook": "availableHauntedDumpQuest",
+            "availableHook": "availableHauntedHeapQuest",
             "hook": "acceptHauntedHeapQuest",
             "state": "job-haunted-heap-details",
             "text": "accept-haunting-heap"
@@ -57,6 +63,32 @@
         "ask-town": {
             "state": "town-index",
             "text": "ask-town"
+        },
+        "bandits-join-accept": {
+            "hook": "acceptRandyJoinsBandits",
+            "text": "bandits-join-accept"
+        },
+        "bandits-join-negotiate": {
+            "availableHook": "canNegotiateBanditsReward",
+            "hook": "negotiateBanditsReward",
+            "text": "bandits-join-negotiate"
+        },
+        "bandits-join-refuse": {
+            "hook": "declineRandyJoinsBandits",
+            "text": "bandits-join-refuse"
+        },
+        "bandits-report-battle-trigger": {
+            "availableHook": "canReportBanditsBattle",
+            "hook": "onReportBanditsBattle",
+            "text": "bandits-report-battle-trigger"
+        },
+        "bandits-report-close": {
+            "text": "bandits-report-close"
+        },
+        "bandits-report-nest-trigger": {
+            "availableHook": "canReportBanditsLocation",
+            "hook": "onReportBanditsLocation",
+            "text": "bandits-report-nest-trigger"
         },
         "battle-reward-negociate": {
             "availableHook": "canAskBetterReward",
@@ -140,6 +172,7 @@
         },
         "dogs-warpath-trigger": {
             "availableHook": "dogsStillAlive",
+            "state": "dogs/battle/start",
             "text": "dogs-warpath-trigger"
         },
         "dogs-warpath-trigger-no-involvment": {
@@ -172,6 +205,12 @@
             "state": "scavengers/report",
             "text": "job-haunted-heap-report-trigger"
         },
+        "job-haunted-heap-report-trigger-alt": {
+            "availableHook": "canReportMissingScavengersInJobs",
+            "hook": "onScavengerReport",
+            "state": "scavengers/report",
+            "text": "job-haunted-heap-report-trigger"
+        },
         "job-haunted-heap-tell-about-dogs": {
             "availableHook": "hauntedDumpDisappearedFound",
             "state": "job-haunted-heap-reporting-dogs",
@@ -180,6 +219,11 @@
         "job-haunted-heap-tell-about-saved": {
             "availableHook": "hauntedDumpDisappearedDone",
             "text": "job-haunted-heap-tell-about-saved"
+        },
+        "jobs-bandits-details-nest-found": {
+            "availableHook": "canReportBanditsLocation",
+            "hook": "onReportBanditsLocation",
+            "text": "jobs-bandits-details-nest-found"
         },
         "just-passing-by": {
             "text": "just-passing-by"
@@ -203,6 +247,11 @@
         "negociate-step1-anger": {
             "state": "dogs/negociations/step-1-angered",
             "text": "negociate-step1-anger"
+        },
+        "negociate-step1-bandits-help": {
+            "availableHook": "banditsHelpedByJunkville",
+            "hook": "negociateCiteBanditsHelp",
+            "text": "negociate-step1-bandits-help"
         },
         "negociate-step1-convince": {
             "state": "dogs/negociations/step-1-convinced",
@@ -350,6 +399,73 @@
     },
     "entryPoint": "entry",
     "states": {
+        "bandits/battle-report-dogs": {
+            "answers": [
+                "bandits-report-close"
+            ],
+            "mood": "smile",
+            "text": "bandits/battle-report-dogs"
+        },
+        "bandits/battle-report-solo": {
+            "answers": [
+                "bandits-report-close"
+            ],
+            "mood": "smile",
+            "text": "bandits/battle-report-solo"
+        },
+        "bandits/battle-report-together": {
+            "answers": [
+                "bandits-report-close"
+            ],
+            "mood": "smile",
+            "text": "bandits/battle-report-together"
+        },
+        "bandits/negotiate-failure": {
+            "answers": [
+                "bandits-join-accept",
+                "bandits-join-refuse"
+            ],
+            "mood": "sad",
+            "text": "bandits/negotiate-failure"
+        },
+        "bandits/negotiate-success": {
+            "answers": [
+                "bandits-join-accept"
+            ],
+            "mood": "smile",
+            "text": "bandits/negotiate-success"
+        },
+        "bandits/nest-report": {
+            "answers": [
+                "bandits-join-accept",
+                "bandits-join-refuse",
+                "bandits-join-negotiate"
+            ],
+            "mood": "dubious",
+            "text": "bandits/nest-report"
+        },
+        "bandits/nest-report-already-cleared-dogs": {
+            "answers": [
+            ],
+            "text": "bandits/nest-report-already-cleared-dogs"
+        },
+        "bandits/nest-report-already-cleared-solo": {
+            "answers": [
+            ],
+            "text": "bandits/nest-report-already-cleared-solo"
+        },
+        "bandits/nest-report-already-cleared-together": {
+            "answers": [
+            ],
+            "text": "bandits/nest-report-already-cleared-together"
+        },
+        "bandits/ran-away-earful": {
+            "answers": [
+            ],
+            "hook": "banditsRanAwayEarful",
+            "mood": "angry",
+            "text": "bandits/ran-away-earful"
+        },
         "dogs-get-reward": {
             "answers": [
             ],
@@ -443,6 +559,7 @@
         },
         "dogs/negociations/start-step-1": {
             "answers": [
+                "negociate-step1-bandits-help",
                 "negociate-step1-neutral",
                 "negociate-step1-anger",
                 "negociate-step1-convince"
@@ -609,6 +726,8 @@
         "entry": {
             "answers": [
                 "found-helpful",
+                "bandits-report-nest-trigger",
+                "bandits-report-battle-trigger",
                 "get-battle-reward",
                 "ask-meal",
                 "ask-room",
@@ -633,6 +752,13 @@
             ],
             "text": "innDialog-followup"
         },
+        "job-bandits-details": {
+            "answers": [
+                "jobs-bandits-details-nest-found",
+                "done-asking"
+            ],
+            "text": "job-bandits-details"
+        },
         "job-haunted-heap-details": {
             "answers": [
                 "ask-payment",
@@ -648,8 +774,10 @@
         },
         "jobs": {
             "answers": [
+                "job-haunted-heap-report-trigger-alt",
                 "accept-haunting-heap",
                 "accept-find-helpful",
+                "accept-bandits-quest",
                 "done-asking"
             ],
             "hook": "jobs",
@@ -752,6 +880,7 @@
             "answers": [
                 "ask-story",
                 "ask-about-leader",
+                "ask-job",
                 "done-asking"
             ],
             "text": "town-index"

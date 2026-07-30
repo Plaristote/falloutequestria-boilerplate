@@ -1,16 +1,24 @@
 {
     "dialogs": {
         "junkville/dog-captive": {
-            "announce-release": "Vous êtes libres de partir. J'ai parlé au chef des chiens à diamant, et il a accepté de vous laisser partir.",
+            "ask-about-gems": "Pourquoi les diamants ont-ils tant de valeur ?",
+            "ask-about-junkville-argument": "Comment ça se fait que Junkville n'ait pas déjà investit cet endroit ?",
+            "ask-about-scavenging": "Qu'est-ce que vous êtes venu chercher ici ?",
+            "ask-situation": "Qu'est-ce qui se passe ici ?",
             "breakout": "D'accord. On va te faire confiance… allez tous le monde, ce poney va nous sortir d'ici !",
             "breakout-fail": "De quoi ? Tu rigoles, ils vont nous transformer en charpie !",
             "dogs-slained": "Les chiens à diamant sont tous morts. Vous pouvez y aller.",
             "entry": "…",
+            "gems-value": "T'es un peu lent, non ? Les diamants sont pas juste de jolis cailloux. Dans les restes de l'Empire de Cristal, la moitié de la technologie d'avant guerre, du moins celle qui continue de fonctionner, tourne à partir de cristaux chargés, plutôt que de simples batteries. Si t'as de la veine, et que tu trouve une bonne veine, tu peux te faire plus de pognon que la récup' pourra jamais t'en rapporter.",
+            "junkville-argument": "Les gens de Junkville ne s'aventurent pas dans les cavernes. Junkville survit de rouille et de restes, et ils ont pas la moindre idée du magot sur lequel ils sont assis. Pendant ce temps, les chiens à diamant se complaisent dans leurs tunnels. Ca demanderait pas un effort sur-équin de les dégager de là et de miner cet endroit comme il faut. Et si on considère la manière dont ils nous traitent, je dirais que les virer d'ici.",
             "junkville-mission": "Super ! Je savais que Raggedy Randy finirait par envoyer quelqu'un ! Ce vieux frère ne laisserait jamais ses invités disparaître sans dire au revoir ! Alors, quel est le plan ?",
             "leave": "Je vais voir ce que je peux faire.",
             "leave-sarcastic": "Ah merde, c'est con ça. Bon, moi je vais y aller, a plus dans le bus !",
-            "missionned-by-junkville": "Eh bien j'ai de bonnes nouvelles. Randy m'a envoyé pour vous chercher.",
-            "released": "Vraiment ? C'est génial ! Vous avez entendu ça, tout le monde ? Nous sommes libres ! Sortons d'ici et allons fêter ça chez Randy !",
+            "let-them-rot": "Voilà donc le sort que vous réserveriez aux chiens à diamant ? C'est bon à savoir. Profite bien de ta captivité.",
+            "let-them-rot-alt": "Eh ben vous perdez pas le nord. Je vais avoir besoin d'y réflechir.",
+            "missioned-by-junkville": "Je vois. Bon, j'ai une bonne nouvelle : Randy m'a envoyé vous sauver.",
+            "released": "Vraiment ? C'est génial ! Vous avez entendu ça, tout le monde ? Nous sommes libres ! Sortons d'ici !",
+            "scavenging": "De la feraille, en gros. Des métaux rares, des pièces récupérables, qu'on échange ensuite à Junkville. Mais quand on a trouvé l'entrée du tunnel, on s'est demandé s'il n'y avait pas du vrai, dans la rumeur qui disait que cet endroit était exploité autrefois pour ses gemmes et diamants. Alors on est allé voir si on avait pas touché le jackpot. Et c'est vrai, ces tunnels sont bourrés de gemmes. Malheureusement, ils sont aussi bourrés de chiens à diamants.",
             "situation": "Ben… on a trouvé ce tunnel, et on s'est demandé si on y trouverait pas des trucs de valeur, alors on est descendu. Pis on est tombé sur les chiens à diamant, qui nous choppés et qui nous ont foutus ici. Ils nous font bosser pour eux, parfois… mais ils veulent pas qu'on parte.",
             "suggest-breakout": "Je vais vous sortir de cette prison ! Suivez-moi !",
             "tell-freedom": "J'ai parlé au chef des chiens à diamant. Je suis venu vous dire que vous êtes libres de partir."

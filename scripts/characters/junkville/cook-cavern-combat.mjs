@@ -1,9 +1,9 @@
-import {UndergroundCombattant} from "./underground-combattant.mjs";
+import CavernCombattant from "./cavern-combattant.mjs";
 import {requireQuest} from "../../quests/helpers.mjs";
 
-const questName = "junkvilleNegociateWithDogs";
+const questName = "junkville/cavernBandits";
 
-export class CookUndergroundCombat extends UndergroundCombattant {
+export default class extends CavernCombattant {
   constructor(model) {
     super(model);
   }
@@ -16,16 +16,16 @@ export class CookUndergroundCombat extends UndergroundCombattant {
 
   get dialog() {
     const quest = requireQuest(questName);
-    if (quest.isObjectiveCompleted("win-battle"))
-      return "junkville/cook-battle-won";
+    if (quest.isObjectiveCompleted("remove-bandits"))
+      return "junkville/cook-bandits-won";
     return null;
   }
 
   onDied() {
     const quest = requireQuest(questName);
-    game.setVariable("junkvilleBattleCookDied", 1);
+    game.setVariable("junkvilleBattleCookDied", 2);
     game.setVariable("junkvilleCookDied", 1);
-    quest.script.addUniqueEvent("cook-died");
+    quest.script.pushUniqueEvent("cook-died");
     super.onDied();
   }
 

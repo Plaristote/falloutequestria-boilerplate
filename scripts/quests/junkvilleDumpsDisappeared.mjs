@@ -1,4 +1,4 @@
-import {QuestHelper, requireQuest} from "./helpers.mjs";
+import {QuestHelper, requireQuest, QuestFlags} from "./helpers.mjs";
 
 const captiveCount = 3;
 const questName = "junkvilleDumpsDisappeared";
@@ -26,7 +26,7 @@ export function hasFoundDisappearedPonies() {
 }
 
 export function onDisappearedPoniesFound() {
-  requireQuest(questName).completeObjective("find-disappeared");
+  requireQuest(questName, QuestFlags.HiddenQuest).completeObjective("find-disappeared");
   console.log(questName, "-> onDisappearedPoniesFound");
 }
 
@@ -166,7 +166,8 @@ export class JunkvilleDumpsDisappeared extends QuestHelper {
       }
       objectives.push({
         label: this.tr("report-success"),
-        success: this.model.isObjectiveCompleted("report-success")
+        success: this.model.isObjectiveCompleted("report-success"),
+        failed: !game.getCharacter("junkville-cook").isAlive()
       });
     }
     return objectives;

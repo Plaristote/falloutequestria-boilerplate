@@ -1,0 +1,10 @@
+{
+    "dialogs": {
+        "junkville/cook-bandits-won": {
+            "claim-reward": "Yup. I helped. And I believe we agreed on a reward ?",
+            "entry": "Whew. Would you look at that. We did it. Those roads will be safe for honest travelers again. Thanks for your help.",
+            "leave": "Let's head back.",
+            "reward-given": "Fair's fair. Now let's get out of this hole and back to some daylight."
+        }
+    }
+}

@@ -1,25 +1,27 @@
 {
     "dialogs": {
         "junkville/dog-captive": {
-            "announce-release": "You're all free to go. I've talked to the diamond dog's leader, and he's agreed to let you go.",
-            "ask-about-secrecy": "And ? Would you tell ponies about these tunnels ?",
-            "ask-situation": "What's going on here ?",
-            "breakout": "Alright. We're going to trust you on this… come on everypony, this one's going to lead us out !",
-            "breakout-fail": "What ? No way, they'll tear us to shreds !",
-            "dogs-slained": "The diamond dogs are all dead. You're free.",
+            "ask-about-gems": "Why are gemstones worth so much, exactly?",
+            "ask-about-junkville-argument": "So why hasn't Junkville just taken this place over, then?",
+            "ask-about-scavenging": "What were you even looking for down here?",
+            "ask-situation": "What's going on here?",
+            "breakout": "Alright. We're trusting you on this. Come on, everypony, this one's getting us out of here!",
+            "breakout-fail": "Are you insane? They'll tear us apart before we make it ten steps!",
+            "dogs-slained": "The diamond dogs are dead. You're free.",
             "entry": "…",
-            "junkville-mission": "Yes ! I knew Raggedy Randy would send someone eventually ! That old pal would never let his patrons disappear and do nothing about it ! So, what's the plan ?",
-            "leave": "Alright, I'll see what I can do !",
-            "leave-sarcastic": "Wow, sucks to be you. I'm gonna go now, see you around !",
-            "let-them-rot": "So the diamond dogs were right about you. It's a good thing you'll rot here.",
-            "let-them-rot-alt": "Thank you for your honesty. I need to go now.",
-            "meet": "Hi. So you've been caught as well ? Welcome to this very private club of unlucky bums.",
-            "missionned-by-junkville": "I see. Well I've got good news. I've been sent by Randy to look for you.",
-            "released": "Really ? That's awesome ! You heard that everypony ? We're free ! Let's go and have a drink at Randy's !",
-            "secrecy": "Em… I can keep a secret… but you know… these tunnels are filled with gems. There are some spellcasters who will trade for those. I understand the diamond dogs want their own home. But it's hard making a living out there. That doesn't make it right to keep us down there. Their secret's gonna be revealed sooner or later anyway.",
-            "situation": "Well… we all entered these caves one by one, either by accident, or looking for stuff to scavenge. Then these diamond dogs caught each of us and stuffed us in this pen. They've been keeping us here ever since. Sometimes, they take us out to do meneal work… they don't want us out. They fear that we'll tell everypony else about them.",
-            "suggest-breakout": "I'm breaking y'all out of here. Follow my lead.",
-            "tell-freedom": "I've had a talk with the diamond dog leader. I'm here to tell you that you're free to go."
+            "gems-value": "You're a bit slow, aren't you? Gems aren't just pretty rocks. In the Crystal wasteland, half the old-world tech still kicking around, the stuff that still actually works, runs on charged crystals instead of batteries. Find the right vein, and you're sitting on something worth more than anything else you'd scavenge in your entire life.",
+            "junkville-argument": "The folks from Junkville don't go into the caverns. Junkville scrapes by on rust and leftovers, and they have no idea just how much wealth they're sitting on. Meanwhile, the dogs are just chilling down there. It wouldn't take much to push them out and mine this place properly. Considering how they behave with ponies, I'd say we'd be well within our right to take over.",
+            "junkville-mission": "You... you're here for us? I knew Randy wouldn't just let us disappear. So, what's the plan?",
+            "leave": "Alright. I'll see what I can do.",
+            "leave-sarcastic": "Wow. Must be nice, being the one who gets to walk away. Have fun out there.",
+            "let-them-rot": "So that's what you'd do to them, given half a chance. Good to know. Enjoy the pen.",
+            "let-them-rot-alt": "Good to know where your priorities are. I need to think this over.",
+            "missioned-by-junkville": "I see. Well, I've got good news: Randy sent me to find you.",
+            "released": "Wait, really? That's… thank you! Thank you! Come on, everypony, we're leaving!",
+            "scavenging": "Scrap, mostly. Wire, circuits, old-world parts we could flip in Junkville. But when we found the entrance to underground tunnels, we started believing the rumors about this place being a gemstone mine, before the war. So we checked it out to see if we'd hit the jackpot. And it is packed with gemstones indeed. Unfortunately, it's also packed with diamond dogs.",
+            "situation": "We all ended up down here, looking for scrap, or hoping for gemstones. The dogs found us and have been holding us here ever since then. They don't seem too sure about what to do with us. They wanted to know if we were with \"the others\". Don't really know what that's about, but apparently we at least convinced them that we didn't even know who they were talking about. We didn't do anything to them, I swear it.",
+            "suggest-breakout": "I'm getting you all out of here. Follow my lead.",
+            "tell-freedom": "I've spoken with your leader. You're free to go."
         }
     }
 }

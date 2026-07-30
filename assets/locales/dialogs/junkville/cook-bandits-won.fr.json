@@ -1,0 +1,10 @@
+{
+    "dialogs": {
+        "junkville/cook-bandits-won": {
+            "claim-reward": "Ouais. J'ai aidé. Et il me semble qu'on avait parlé d'une récompense ?",
+            "entry": "Éh beh. Regarde-moi ça. On l'a fait. Les routes sont de nouveau sûres pour les honnêtes voyageurs. Merci pour ton aide.",
+            "leave": "Allons-y.",
+            "reward-given": "C'est vrai. Allez, allons retrouver la lumière naturelle."
+        }
+    }
+}

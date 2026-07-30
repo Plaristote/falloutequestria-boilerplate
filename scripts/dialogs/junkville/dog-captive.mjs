@@ -1,5 +1,11 @@
 import {requireQuest} from "../../quests/helpers.mjs";
-import {captiveReleaseAuthorized, areCaptorsDead} from "../../quests/junkvilleDumpsDisappeared.mjs";
+import {
+  captiveReleaseAuthorized,
+  areCaptorsDead,
+  onDisappearedPoniesFound
+} from "../../quests/junkvilleDumpsDisappeared.mjs";
+
+const questName = "junkvilleDumpsDisappeared";
 
 class Dialog {
   constructor(dialog) {
@@ -8,42 +14,41 @@ class Dialog {
     this.dialog.mood = "sad";
   }
 
-  addQuest() {
-    const object = requireQuest("junkvilleDumpsDisappeared");
-    if (!this.wasSentByJunkville())
-      object.setVariable("initBy", this.dialog.npc.objectName);
-    object.completeObjective("find-disappeared");
+  onMeetCaptive() {
+    onDisappearedPoniesFound();
   }
 
-  hasCaptiveQuest() {
-    return game.quests.hasQuest("junkvilleDumpsDisappeared");
+  hasQuest() {
+    return game.quests.hasQuest(questName);
+  }
+
+  onSituationExplained() {
+    if (!this.hasQuest())
+      game.quests.addQuest(questName).setVariable("initBy", this.dialog.npc.objectName);
   }
 
   wasSentByJunkville() {
-    if (this.hasCaptiveQuest()) {
-      const object = requireQuest("junkvilleDumpsDisappeared");
-      return object.getVariable("initBy") == "cook";
-    }
-    return false;
+    if (!game.quests.hasQuest(questName))
+      return false;
+    return game.quests.getQuest(questName).getVariable("initBy") == "cook";
   }
 
-  wasReleaseAccepted() { return captiveReleaseAuthorized(); }
+  wasReleaseAccepted() {
+    return captiveReleaseAuthorized();
+  }
+
+  dogsEradicated() {
+    return areCaptorsDead();
+  }
 
   triggerGoToExit() {
     game.level.script.sendCaptivesToExit();
   }
 
   onBreakout() {
-    if (game.player.statistics.level > 2 && (game.player.statistics.strength > 8 || game.player.statistics.traits.indexOf("bruiser") >= 0))
-    {
-      this.triggerGoToExit();
-      return "breakout";
-    }
-    return "breakout-fail";
-  }
-
-  dogsEradicated() {
-    return areCaptorsDead();
+    const canForceIt = game.player.statistics.level > 2
+      && (game.player.statistics.strength > 8 || game.player.statistics.traits.indexOf("bruiser") >= 0);
+    return canForceIt ? "breakout" : "breakout-fail";
   }
 }
 

@@ -1,0 +1,31 @@
+{
+    "answers": {
+        "claim-reward": {
+            "availableHook": "canClaimReward",
+            "hook": "claimReward",
+            "state": "reward-given",
+            "text": "claim-reward"
+        },
+        "leave": {
+            "text": "leave"
+        }
+    },
+    "entryPoint": "entry",
+    "states": {
+        "entry": {
+            "answers": [
+                "claim-reward",
+                "leave"
+            ],
+            "mood": "smile",
+            "text": "entry"
+        },
+        "reward-given": {
+            "answers": [
+                "leave"
+            ],
+            "mood": "smile",
+            "text": "reward-given"
+        }
+    }
+}
