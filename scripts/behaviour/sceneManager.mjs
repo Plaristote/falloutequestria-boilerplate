@@ -21,7 +21,7 @@ export class SceneManager {
   }
 
   get state() {
-    return this.model.hasVariable(this.storageScope)
+    return this.model && this.model.hasVariable(this.storageScope)
       ? this.model.getVariable(this.storageScope)
       : null;
   }
