@@ -3,6 +3,7 @@
     "junkvilleDumpsDisappeared": {
       "title": "Les disparus de Junkville",
       "find-disappeared": "Trouver les fouilleurs disparus",
+      "heal-wounded-dogs": "Soigne les chiens blessés",
       "bring-ransom": "Payer la rançon demandée par les Chiens à Diamant",
       "save-all-captives": "Sauver tous les fouilleurs captifs",
       "save-some-captives": "Sauver une partie des fouilleurs captifs",
@@ -12,7 +13,16 @@
       "medicine-success-1": "Tu as réussi à soigner les blessures du premier chien blessé.",
       "medicine-success-2": "Tu as réussi à soigner les blessures du deuxième chien blessé.",
       "medicine-success-3": "Tu as réussi à soigner les blessures du troisième chien blessé.",
-      "medicine-success-4": "Tu as réussi à soigner les blessures du quatrième chien blessé."
+      "medicine-success-4": "Tu as réussi à soigner les blessures du quatrième chien blessé.",
+      "desc-initby-cook": "Raggedy Randy est inquiet, car certains de ses amis fouilleurs ont disparus, récemment. Il t'a demandé de garder l'oeil ouvert. Les fouilleurs passent typiquement leur temps à fouiner la décharge de Junkville, à la recherche de tout ce qui est récupérable. Peut-être devrais-tu chercher là-bas.",
+      "desc-initby-captive": "Vagabondant dans les tunnels sous Junkville, tu as trouvé quelques fouilleurs tenus captifs par une meute de Chiens à Diamant. Ils aimeraient bien que tu les libère.",
+      "desc-initby-dogs": "Explorant les cavernes sous Junkville, tu as rencontré une meute de Chiens à Diamant, vivant dans leurs tunnels. Ils t'ont annoncé tenir en otage des fouilleurs, qu'ils ont attrapé tandis que ces derniers fouinaient là où il ne fallait pas.",
+      "desc-found-disappeared": "Il se trouve que les fouilleurs étaient tenus otages par une meute de Chiens à Diamant, vivant dans un ŕeseau de tunnel sous Junkville.",
+      "desc-ransom": "Fido, le chef de meute, dis que sa meute a besoin de matériel médical. Certains de ses camarades ont été blessés dans un combat, ou quelque chose comme ça. Il t'offre la liberté des fouilleurs en échange des ressources demandées. Il demande 5 potions de soin et une malette de docteur.",
+      "desc-brought-ransom": "Tu as réussi à te procurer les ressources nécessiares afin de satisfaire les demandes du chef des chiens. Les fouilleurs sont libres de partir.",
+      "desc-healed-dogs": "Tu as trouvé les chiens blessés, et tu as décidé de t'occuper de leurs blessures toi-même, en bon médecin de campagne. Bon travail. Les Chiens à Diamant seront sûrement reconnaissants.",
+      "desc-saved-all": "Tout est bien qui fini bien. Grâce à ton aide, les fouilleurs ont pu quitter les obscurs tunnels de Junkville.",
+      "desc-saved-some": "Malgré tes meilleurs efforts, tous ne furent pas sauvés. Certains des fouilleurs furent tué dans la tentative d'évasion que tu as instigué. Tu as fait de ton mieux. Était-ce suffisant ? Non. Mais tu as essayé."
     }
   }
 }

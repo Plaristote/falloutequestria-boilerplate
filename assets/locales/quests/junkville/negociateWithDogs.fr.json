@@ -10,7 +10,31 @@
       "assembly-participate": "Participe à l'Assemblée des citoyens de Junkville",
       "pass-on-assembly-decision": "Fais suivre le message de Junkville aux Chiens",
       "peaceful-resolve": "Atteint une solution pacifique",
-      "wipe-out-dogs": "Extermine les Chiens à Diamant"
+      "wipe-out-dogs": "Extermine les Chiens à Diamant",
+      "convince-fido-to-negotiate": "Convaincre Fido de parlementer avec Junkville",
+      "convince-randy-to-negotiate": "Convaincre Randy de parlementer avec les Chiens à Diamant",
+      "desc-intro": "Tu as découvert que Junkville était bâtie sur un réseau de tunnels, habités par une meute de Chiens à Diamant.",
+      "desc-safe": "Tu as survécu a ta première rencontre avec les Chiens à Diamant.",
+      "desc-fido-dead": "Fido est mort. S'il existait une chance de réconcilier Junkville et les Chiens à Diamant, elle s'est éteinte avec lui.",
+      "desc-fido-agreed-only": "Fido est d'accord pour parlementer avec Junkville.",
+      "desc-randy-agreed-only": "Randy est d'accord pour parlementer avec les Chiens à Diamant.",
+      "desc-both-agreed": "Randy et Fido sont d'accord pour parlementer.",
+      "desc-trade-accepted": "Fido a accepté de commercer avec la surface.",
+      "desc-trade-refused": "Fido n'a pas accepté de commercer avec la surface.",
+      "desc-dolly-convinced": "Les réticences de Dolly ont été désamorcées avant qu'elles ne portent préjudice à la relation des Chiens à Diamant avec Junkville.",
+      "desc-dolly-dead": "Dolly est morte, et le leadership de Fido n'est plus contesté par personne dans la meute.",
+      "desc-dolly-took-over": "Dolly n'entendais pas les choses de cette façon. Elle a pris le contrôe de la meute, et refuse tout contact avec le monde de la surface.",
+      "desc-message-passed": "Tu as informé Junkville des conditions des Chiens à Diamant.",
+      "desc-assembly-attended": "Tu as participé à l'assemblée populaire de Junkville, concernant l'avenir qu'ils souhaitent avoir avec les Chiens à Diamant.",
+      "desc-decision-passed": "Tu as informé les Chiens à Diamant de la décision de Junkville.",
+      "desc-decision-pending": "L'assemblée populaire de Junkvlle a émit son verdict. Il faut encore le faire parvenir aux Chiens à Diamant.",
+      "desc-peace-trade": "Junkville et les Chiens à Diamant ont accepté la paix : le commerce est ouvert, et chacun est satisfait du résultat, pour le moment.",
+      "desc-peace-boundary": "Junkville et les Chiens à Diamant ont accepté une paix relative : les habitants de Junkville ont abandonné tout projet d'exploiter les tunnels, et aucune relation ne sera entretenue entre les deux communautés.",
+      "desc-battle-fled": "Tu as quitté le combat avant qu'il ne soit terminé.",
+      "desc-battle-won": "Junkville a décidé de se débarasser de la menace des Chiens à Diamant. Sa milice est parvenue à vaincre l'ennemi.",
+      "desc-battle-lost": "Junkville a décidé de se débarasser de la menace des Chiens à Diamant. Leur expédition a cependant échoué, et Junkville est maintenant sans défense.",
+      "desc-battle-ongoing": "Junkville a décidé de se débarasser de la menace des Chiens à Diamant.",
+      "desc-dogs-wiped-out": "Les Chiens à Diamant qui régnaient autrefois sur ces tunnels ne sont plus - exterminés, sans plus personne avec qui faire la paix."
     }
   }
 }

@@ -2,6 +2,7 @@ import {getValueFromRange} from "../behaviour/random.mjs";
 import goldenHerdScoutParty from "./goldenHerdScouts.mjs";
 import steelRangerScoutParty from "./steelRangerScouts.mjs";
 import crystalDenScoutParty from "./crystalDenScouts.mjs";
+import {canJunkvilleBanditsPop, junkvilleBanditsParty} from "./junkvilleBandits.mjs";
 
 function availableEncounters() {
   const zones = game.worldmap.getCurrentZones();
@@ -34,6 +35,9 @@ function availableEncounters() {
   if (zones.indexOf("crystal-den-surroundings") >= 0) {
     for (let i = 0 ; i < 2 ; ++i)
        array.push(crystalDenScoutParty);
+  }
+  if (zones.indexOf("junkville-bandits") >= 0 && canJunkvilleBanditsPop()) {
+    array.push(junkvilleBanditsParty);
   }
   console.log("RANDOM ENCOUNTERS CURRENT ZONES", zones);
   return array;

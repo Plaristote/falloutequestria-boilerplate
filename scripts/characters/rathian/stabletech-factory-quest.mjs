@@ -106,14 +106,10 @@ class Rathian extends CharacterBehaviour {
     const computer = backroomComputer();
 
     console.log("HEAD TOWARDZ ZURVAce BACKROOM");
-    if (this.model.position.y > 145)
-      this.model.actionQueue.pushMovement(22, 145);
-    if (this.model.position.y > 115)
-      this.model.actionQueue.pushMovement(28, 115);
-    if (this.model.position.y > 72)
-      this.model.actionQueue.pushMovement(29, 72);
-    if (this.model.position.y > 29)
-      this.model.actionQueue.pushMovement(39, 29);
+    if (this.model.position.y > 75)
+      this.model.actionQueue.pushMovement(22, 75);
+    if (this.model.position.y > 45)
+      this.model.actionQueue.pushMovement(28, 45);
     this.model.actionQueue.pushReach(backdoor);
     this.model.actionQueue.pushReach(computer);
     this.model.actionQueue.pushScript(this.onFirstTerminalReached.bind(this));

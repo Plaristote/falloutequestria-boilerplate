@@ -56,7 +56,10 @@ export function skipScavengerRansom() {
 
 export function dogsExpectingSupplies() {
   const quest = getQuest();
-  return quest && quest.hasVariable("ransom") && !quest.isObjectiveCompleted("bring-ransom");
+  return quest
+      && quest.hasVariable("ransom")
+      && !quest.isObjectiveCompleted("bring-ransom")
+      && !quest.hasVariable("reportedHealedDogs");
 }
 
 export class JunkvilleDumpsDisappeared extends QuestHelper {
@@ -131,6 +134,41 @@ export class JunkvilleDumpsDisappeared extends QuestHelper {
       inventoryTarget.addItemOfType("health-potion", 5);
       inventoryTarget.addItemOfType("doctor-bag");
     }
+  }
+
+  getDescription() {
+    const initBy = this.model.getVariable("initBy");
+    let text = "";
+
+    switch (initBy) {
+    case "cook":
+      text += `<p>${this.model.tr("desc-initby-cook")}</p>`;
+      if (this.model.isObjectiveCompleted("find-disappeared"))
+        text += `<p>${this.model.tr("desc-found-disappeared")}</p>`;
+      break ;
+    case "captive":
+      text += `<p>${this.model.tr("desc-initby-captive")}</p>`;
+      break ;
+    default:
+      text += `<p>${this.model.tr("desc-initby-dogs")}</p>`;
+      break ;
+    }
+    if (this.ransomActive) {
+      text += `<p>${this.model.tr("desc-ransom")}</p>`;
+    }
+    if (this.model.isObjectiveCompleted("healWoundedDogs")) {
+      if (this.model.isObjectiveCompleted("bring-ransom"))
+        text += `<p>${this.model.tr("desc-brought-ransom")}</p>`;
+      else
+        text += `<p>${this.model.tr("desc-healed-dogs")}</p>`;
+    }
+    if (this.model.isObjectiveCompleted("save-captives")) {
+      if (this.captiveAlive())
+        text += `<p>${this.model.tr("desc-saved-all")}</p>`;
+      else
+        text += `<p>${this.model.tr("desc-saved-some")}</p>`;
+    }
+    return text;
   }
 
   getObjectives() {

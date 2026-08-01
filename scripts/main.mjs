@@ -2,6 +2,7 @@ import {RandomEncounterComponent} from "./randomEncounters.mjs";
 import Caravan from "./caravan.mjs";
 import cristalDenPatrol from "behaviour/cristal-den/copper-patrol.mjs";
 import {getValueFromRange} from "behaviour/random.mjs";
+import makeEndGameSlides from "slides/endGame.mjs";
 
 function contains(array, faction1, faction2) {
   return array.indexOf(faction1) >= 0 && array.indexOf(faction2) >= 0;
@@ -92,6 +93,10 @@ export default class extends RandomEncounterComponent {
         "title": i18n.t("encounters.ambush"),
       });
     }
+  }
+
+  getEndGameSlides() {
+    return makeEndGameSlides();
   }
   
   isMainQuestDone() {

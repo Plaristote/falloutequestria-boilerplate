@@ -15,6 +15,12 @@
       "desc-let-randy-fight": "Randy et la bonne gent de Junkville est allée botter le derrière des bandits. Certains n'en sont pas revenus, mais c'est le prix à payer pour la justice.",
       "desc-removed-bandits": "Les bandits ne sont plus une menace."
     }
+  },
+  "item-descriptions": {
+    "quest-junkville-bandits-cavern-hint": "Ce boût de papier, trouvé dans les affaires d'un bandit, porte des instructions et aides visuelles que tu peux utiliser pour trouver leur repère secret."
+  },
+  "items": {
+    "quest-junkville-bandits-cavern-hint": "Carte griffonée"
   }
 }
 

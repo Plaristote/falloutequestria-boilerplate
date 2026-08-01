@@ -28,6 +28,10 @@ class Level extends LevelBase {
     const shouldBeHere = rathian && rathian.script.shouldBeAtJunkville;
     let isHere = level.findObject("Rathian#0");
 
+    if (!rathian) {
+      console.log("Error: character rathian does not exist, and that should not be possible");
+      return ;
+    }
     if (!shouldBeHere && isHere) {
       game.uniqueCharacterStorage.detachCharacter(rathian);
       isHere = false;

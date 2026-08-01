@@ -8,7 +8,11 @@ import {
 import {
   startUndergroundBattle,
   hasAltLeaderTakenOver,
-  hasMediationStarted
+  hasMediationStarted,
+  hasRandyAgreedToNegotiate,
+  bothAgreedToNegotiate,
+  canDiscussPeaceWithDogs,
+  fidoAcceptedTradeOfGems
 } from "../../quests/junkvilleNegociateWithDogs.mjs";
 import {isHelpfulQuestAvailable, teleportToCaverns as helpfulQuestGoToCaverns} from "../../quests/junkville/findHelpful.mjs";
 import {opinionVarName} from "../../scenes/junkville/negociationAssembly.mjs";
@@ -117,6 +121,10 @@ export default class Dialog extends Innkeeper {
     return game.quests.getQuest("junkvilleDumpsDisappeared");
   }
 
+  get negociateQuest() {
+    return requireQuest("junkvilleNegociateWithDogs");
+  }
+
   availableHauntedHeapQuest() {
     return !game.quests.hasQuest("junkvilleDumpsDisappeared");
   }
@@ -174,6 +182,20 @@ export default class Dialog extends Innkeeper {
     game.dataEngine.addReputation("junkville", 75);
   }
 
+  // The topic becomes available to bring up with Randy as soon as the
+  // pack's wounded and captive-scavenger issues are behind us - same
+  // precondition Fido uses on his side. The player can go to either of
+  // them first.
+  negociateCanBringUp() {
+    return canDiscussPeaceWithDogs();
+  }
+
+  negociateBringUpText() {
+    if (!this.dialog.npc.hasVariable("negociateBroughtUp"))
+      return this.dialog.tr("dogs-mediation-start-init");
+    return this.dialog.tr("dogs-mediation-start");
+  }
+
   hasDogMediationQuest() {
     if (game.quests.hasQuest("junkvilleNegociateWithDogs"))
       return requireQuest("junkvilleNegociateWithDogs").inProgress;
@@ -211,37 +233,51 @@ export default class Dialog extends Innkeeper {
     quest.completed = true;
   }
 
-  onDogMediationEntry() {
-    const quest = requireQuest("junkvilleNegociateWithDogs");
-
-    if (quest.isObjectiveCompleted("junkville-warned"))
-      return this.dialog.t("dogs-mediation-reentry");
-    quest.completeObjective("junkville-warned");
-    return this.dialog.t("dogs-mediation-entry");
-  }
-
+  // Randy's own "convince him to negotiate at all" gate. Reachable only
+  // once canProposeDogNegotiation() is true, independent of whatever
+  // state Fido is in - the player can win Randy over first if they want.
+  // The one thing that can still stop him cold here is the diamond dogs
+  // having actually killed scavengers - that's a hard no, straight to war.
   onMediationProposal() {
-    if (!this.hauntedDumpDisappearedFound()) {
-      requireQuest("junkvilleDumpsDisappeared");
-      return "dogs-negociation-disappeared";
+    if (this.dogsKilledHostages())
+      return "dogs/negociations/killed";
+    return "dogs/negociations/debate-entry";
+  }
+
+  // Randy's own version of the debate Fido has to win on his side: two
+  // solid reasons out of three available ones are enough to bring him
+  // around. The scavenger point only comes up if it's actually true - the
+  // hostages were freed, and none of them got hurt in the process.
+  randyDebateHasArgued(flag) {
+    return this.negociateQuest.hasVariable(flag);
+  }
+
+  canArgueScavengersFreed() {
+    return !this.randyDebateHasArgued("randyDebateUsedScavengers")
+        &&  this.hasFreedScavengers()
+        &&  this.junkvilleDumpsDisappeared.script.captiveAlive();
+  }
+
+  canArgueBanditsHelp() {
+    return !this.randyDebateHasArgued("randyDebateUsedBandits")
+        &&  banditsDefeatedWithJunkvilleHelp();
+  }
+
+  canArgueSafety() {
+    return !this.randyDebateHasArgued("randyDebateUsedSafety");
+  }
+
+  onArgueScavengersFreed() { return this.negociateApplyRandyArgument("randyDebateUsedScavengers", "dogs/negociations/point-scavengers-made"); }
+  onArgueBanditsHelp()     { return this.negociateApplyRandyArgument("randyDebateUsedBandits", "dogs/negociations/point-bandits-made"); }
+  onArgueSafety()          { return this.negociateApplyRandyArgument("randyDebateUsedSafety", "dogs/negociations/point-safety-made"); }
+
+  negociateApplyRandyArgument(flag, reactionState) {
+    this.negociateQuest.setVariable(flag, true);
+    if (this.negociateQuest.script.randyDebatePoints >= 2) {
+      this.negociateQuest.completeObjective("randy-agreed-to-negotiate");
+      return "dogs/negociations/agree";
     }
-    else if (hasAltLeaderTakenOver())
-      return "dogs-negociation-failed";
-    else if (this.dogsKilledHostages())
-      return "dogs-negociation-killed";
-    else if (this.dogsHoldingHostages())
-      return "dogs-negociation-hostages";
-    return "dogs-negociation-accept";
-  }
-
-  onDogsMediationMustRelease() {
-    requireQuest("junkvilleNegociateWithDogs").setVariable("mustReleaseDogs", true);
-  }
-
-  mediationAccepted() {
-    requireQuest("junkvilleNegociateWithDogs").setVariable("mediation-accepted", true);
-    return this.hasDogTradeRoute() ?
-      this.dialog.t("dogs-negociation-accept-trade") : this.dialog.t("dogs-negociation-accept");
+    return reactionState;
   }
 
   dogsBattleCanAppease() {
@@ -420,56 +456,17 @@ export default class Dialog extends Innkeeper {
     return banditsDefeatedWithJunkvilleHelp();
   }
 
-  negociateCiteBanditsHelp() {
-    this.negociationPoints = 3;
-    return "dogs/negociations/step-5-convinced";
-  }
-
   // NEW VERSION NEGOCIATE
   negociateCanTellDogsWantNegociate() {
     const quest = requireQuest("junkvilleNegociateWithDogs");
-    return hasMediationStarted() && !quest.isObjectiveCompleted("pass-on-message");
-  }
-
-  negociateTellDogsWantToNegociate() {
-    return this.hasFreedScavengers() ? "dogs/negociations/start-step-1" : "dogs/negociations/captives-not-freed";
-  }
-
-  negociateCanExposeDemandsNicely() {
-    return game.player.statistics.speech > 70;
-  }
-
-  negociationStart() {
-    this.negociationPoints = 0;
-  }
-
-  negociationIncreasePoints() {
-    this.negociationPoints += 1;
-  }
-
-  negociationDecreasePoints() {
-    this.negociationPoints -= 1;
-  }
-
-  negociationEnd() {
-    console.log("negociationEnd with", this.negociationPoints, "points.");
-    if (this.negociationPoints > 2)
-      return "dogs/negociations/step-5-convinced";
-    else if (this.negociationPoints < 0)
-      return "dogs/negociations/step-5-angered";
-    return "dogs/negociations/step-5-neutral";
+    return bothAgreedToNegotiate() && !quest.isObjectiveCompleted("pass-on-message");
   }
 
   negociationStartAssembly() {
     const quest = requireQuest("junkvilleNegociateWithDogs");
     quest.completeObjective("pass-on-message");
-    this.dialog.npc.setVariable(opinionVarName, this.negociationPoints - 1);
+    //this.dialog.npc.setVariable(opinionVarName, this.negociationPoints - 1);
     level.script.setupNegociationAssembly();
-  }
-
-  negociateBattleCanBeCancelled() {
-    const quest = requireQuest("junkvilleNegociateWithDogs");
-    return !quest.hasVariable("junkvilleDecision");
   }
 
   negociatePassOnJunkvilleDecision() {
@@ -480,6 +477,7 @@ export default class Dialog extends Innkeeper {
   negociateDealEntryPoint() {
     const quest = requireQuest("junkvilleNegociateWithDogs");
 
+    quest.setVariable("junkvilleDecisionKnown", 1);
     switch (quest.getVariable("junkvilleDecision")) {
       case "accept": return "dogs/deal-accepted";
       case "reject": return "dogs/deal-rejected";
@@ -487,14 +485,30 @@ export default class Dialog extends Innkeeper {
     }
   }
 
-  onDogsMediationStart() {
+  negociateKnowsAboutAltTakeover() {
+    return hasAltLeaderTakenOver() && this.negociateQuest.script.hasEvent("talkedAboutTakeover");
+  }
+
+  // The community's "accept" vote can mean two different things depending
+  // on whether the dogs agreed to trade their gems or only to a boundary -
+  // reuse the two distinctly-flavored texts that already existed for this.
+  dealAcceptedText() {
+    return this.hasDogTradeRoute()
+      ? this.dialog.t("dogs/negociations/accept-trade")
+      : this.dialog.t("dogs/negociations/accept");
+  }
+
+  negociateBringUp() {
     const quest = requireQuest("junkvilleNegociateWithDogs");
 
-    if (quest.hasVariable("junkvilleDecision")) {
-      const choice = this.negociateDealEntryPoint();
-      if (choice) return choice;
-    }
-    if (quest.isObjectiveCompleted("pass-on-message") && level.tasks.hasTask("waitForAssembly"))
+    this.dialog.npc.setVariable("negociateBroughtUp", 1);
+    if (!hasRandyAgreedToNegotiate())
+      return this.onMediationProposal();
+    if (!hasMediationStarted())
+      return "dogs-mediation-waiting-on-dogs";
+    if (quest.hasVariable("junkvilleDecision") && !quest.hasVariable("junkvilleDecisionKnown"))
+      return this.negociateDealEntryPoint();
+    if (level.tasks.hasTask("waitForAssembly"))
       return "dogs/negociations/wait-assembly";
     return "dogs/negociations/entry";
   }

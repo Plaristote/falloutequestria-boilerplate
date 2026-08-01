@@ -1,7 +1,5 @@
 {
     "answers": {
-        "": {
-        },
         "about-weak-leader-intimidate": {
             "state": "fight-intro",
             "text": "about-weak-leader-intimidate"
@@ -84,6 +82,9 @@
             "availableHook": "spokeAgainstLeader",
             "state": "about-weak-leader",
             "text": "start-mediation-on-captive-released"
+        },
+        "took-over-leave": {
+            "text": "took-over-leave"
         }
     },
     "entryPoint": "entry",
@@ -188,6 +189,20 @@
             ],
             "hook": "",
             "text": "on-escape"
+        },
+        "took-over/entry-hostile": {
+            "answers": [
+            ],
+            "hook": "startCombat",
+            "mood": "angry",
+            "text": "took-over/entry-hostile"
+        },
+        "took-over/entry-spared": {
+            "answers": [
+                "took-over-leave"
+            ],
+            "mood": "angry",
+            "text": "took-over/entry-spared"
         }
     }
 }

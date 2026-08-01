@@ -24,7 +24,25 @@
             "scavengers/sub-quest": "The scavengers are important, but I can't risk sacrificing our resources without some kind of warranty. I will need to resupply.<br><br>\nAnd I know how to do it. Rathian, who lives in the workshop in front of here, has entire crate of electronical devices… but we can't get him to share these resources. A Steel Ranger thing, probably, they don't like sharing tech.<br><br>\nIf you get me a crate of electronical devices, I will be able to sell it to the caraveneers, and buy back the supplies the diamond dogs want from us.",
             "scavengers/sub-quest-instant-solve#2": "Of course, take the medical supplies you needed.\n<br><br>\n<i>She gives you everything you asked for.</i>",
             "scavengers/towards-cook": "Missing scavengers ? Holy crap. You should bring that up to Raggedy Randy. He's at the inn, he's been worried sick about them !",
-            "scavengers/towards-cook-alt": "Missing scavengers ? Raggedy Randy was worried about them. Before he… you know. I guess we'll have to take care of it ourselves. Is there anything I can do to help ?"
+            "scavengers/towards-cook-alt": "Missing scavengers ? Raggedy Randy was worried about them. Before he… you know. I guess we'll have to take care of it ourselves. Is there anything I can do to help ?",
+            "about-celestial-device": "A celestial device ? Never heard of that one before. But it sounds to me like it's a pre-war tech thing, right ? You should ask Rathian. He's a steel ranger scribe. He set up a workshop here, for some reason. If anyone here can help you with pre-war tech, it's gotta be him. You'll find him in the house which will be right in front of you when you leave my shop.",
+            "about-leader": "Well, people around here like to think that this dump is some kind of anarchist utopia, and that no one is in charge. The truth is that everyone listens to Randy. He's a good fellow, runs the inn, and pretty much runs the town.<br>If you want to help, he probably knows about everything that goes on around here.",
+            "about-leader-dead": "Well, people around here like to think that this dump is some kind of anarchist utopia. Up until now, everyone used to listen to Randy. But he's dead now. I don't know how things are going to go from now on.<br>\nI guess we're leaderless. The future is always full of unknown, isn't it ?",
+            "about-safety": "Well, for starters, no one's in charge of protecting the town, or even keeping order. Up until now, the folks have been keeping each other safe. But we're at the mercy of the first organized raider band that may come this way.",
+            "about-town": "This is Junkville. It's a small town built near the remains of an old dump site.<br>It's a bit chaotic, not very safe, but the people are nice, and the sheer amount of scrap laying around means there's a lot of opportunity for traders and scavengers.",
+            "ask-celestial-device": "I'm looking for something special. Ever heard of a celestial device ?",
+            "ask-leader": "I want to help. Who's in charge around here ?",
+            "ask-safety": "You said this place was unsafe. What do you mean by that ?",
+            "ask-something-else": "I want to know about something else.",
+            "ask-town": "What can you tell me about this town ?",
+            "customer": "dear customer",
+            "end-ask": "That's all I wanted to know.",
+            "entry": "Hello, {{name}} ! What can I get you today ?",
+            "introduce-player": "Hi. I'm {{name}}, and I'm looking for a celestial device.",
+            "introduction": "Hello, and welcome to Junkville ! My name's Midnight Facade, and I manage the town supplies. Come to me if you need anything, and I'll sell it to you ! So, what brings you to our small corner of the Crystal wastes ?",
+            "nothing-needed": "I don't need anything, just came by to say hi !",
+            "open-trade": "I need supplies. Show me what you're selling.",
+            "trade": "Here are my supplies, take a look !"
         }
     }
 }

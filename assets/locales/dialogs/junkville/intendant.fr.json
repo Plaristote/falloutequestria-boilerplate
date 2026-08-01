@@ -40,7 +40,9 @@
             "scavengers/sub-quest-instant-solve#2": "Bien sûr, prend le matériel médical dont tu as besoin.\n<br><br>\n<i>Elle te donne ce que tu avais demandé.</i>",
             "scavengers/towards-cook": "Des fouilleurs disparus ? Merde. Tu devrais en parler à Raggedy Randy. Il est à l'auberge, il se faisait du soucis pour eux !",
             "scavengers/towards-cook-alt": "Des fouilleurs disparus ? Merde. Randy s'inquiétait pour eux… avant qu'il ne meure. Je suppose qu'on va devoir s'occuper de ça nous-mêmes. Qu'est-ce que je peux faire pour aider ?",
-            "trade": "Voilà ce que j'ai à vendre, jette un oeil !"
+            "trade": "Voilà ce que j'ai à vendre, jette un oeil !",
+            "customer": "cher client",
+            "about-leader-dead": "Eh bien, les gens d'ici aiment croire que ce coin est une espèce d'utopie anarchiste. Jusqu'ici, tout le monde écoutait Randy. Mais il est mort. Je sais pas comment les choses vont se passer, à partir de là.<br>\nJe suppose qu'on est tout seul. Le future est toujours plein de questions sans réponses, hein ?"
         }
     }
 }

@@ -3,6 +3,7 @@
     "junkvilleDumpsDisappeared": {
       "title": "The missing scavengers of Junkville",
       "find-disappeared": "Find the missing scavengers",
+      "heal-wounded-dogs": "Heal the wounded dogs",
       "bring-ransom": "Pay up the ransom asked by the Diamond Dogs",
       "save-all-captives": "Save all the captured scavengers",
       "save-some-captives": "Save some of the captured scavengers",
@@ -12,7 +13,16 @@
       "medicine-success-1": "You successfully healed the first wounded dog",
       "medicine-success-2": "You successfully healed the second wounded dog",
       "medicine-success-3": "You successfully healed the third wounded dog",
-      "medicine-success-4": "You successfully healed the fourth wounded dog"
+      "medicine-success-4": "You successfully healed the fourth wounded dog",
+      "desc-initby-cook": "Raggedy Randy is worried about scavengers who went missing, recently. He's asked you to keep an eye out for them. Scavengers typically spend their time in Junkville by searching around the dumps for anything salvageable. Perhaps you should start there.",
+      "desc-initby-captive": "Dilly-dallying around Junkville's underground tunnels, you found a bunch of scavengers held captive by a pack of Diamond Dogs. They'd appreciate being freed from their tiny jail.",
+      "desc-initby-dogs": "While exploring caverns, you met with a pack of Diamond Dogs living under Junkville. They claim to have captured a bunch of scavengers who were snooping around in all the wrong places.",
+      "desc-found-disappeared": "Turns out the scavengers were being held by a pack of Diamond Dogs, who live in a network of tunnels under Junkvlle.",
+      "desc-ransom": "Fido, the pack leader, says his pack is in need of medical supplies. Some of his pals apparently got wounded in some kind of fight. He offered the freedom of the scavengers in exchange for said supplies. He asks for 5 health potion and a doctor bag.",
+      "desc-brought-ransom": "You managed to find enough supplies to satisfy the pack leader's demands. The scavengers were free to go.",
+      "desc-healed-dogs": "You met with the wounded diamond dogs, and you took care of their wounds by yourself, like the good field medic that you are. Good job. The Diamond Dogs surely appreciated the gesture.",
+      "desc-saved-all": "All is well that ends well. Thanks to your help, the scavengers were able to leave the undergrounds safe and sound.",
+      "desc-saved-some": "Despite your best efforts, not everypony could be saved. Some of the scavengers were killed in the escape attempt you instigated. You tried your best. Was it enough ? No. But you tried."
     }
   }
 }

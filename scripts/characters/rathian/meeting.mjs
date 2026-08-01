@@ -2,7 +2,11 @@ import Base from "./base.mjs";
 import toLevelExitAction from "../components/pathfinding/goToLevelExit.mjs";
 
 function isDropOffLevel() {
-  return worldmap.getCurrentCity() !== null;
+  const city = worldmap.getCurrentCity();
+  const levelName = typeof level != "undefined" ? level.name : "";
+  const exceptionLevel = ["junkville-cavern", "junkville-underground", "junkville-dumps"];
+
+  return city !== null && exceptionLevel.indexOf(levelName) == -1;
 }
 
 class Rathian extends Base {

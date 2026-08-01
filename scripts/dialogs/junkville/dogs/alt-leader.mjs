@@ -1,4 +1,10 @@
 import {requireQuest, QuestFlags} from "../../../quests/helpers.mjs";
+import {hasAltLeaderTakenOver} from "../../../quests/junkvilleNegociateWithDogs.mjs";
+
+// Reputation threshold below which Dolly considers the player an enemy of
+// the pack once she's taken over, rather than someone she's willing to
+// spare out of grudging respect.
+const GOOD_STANDING_WITH_DOGS = 50;
 
 class Dialog {
   constructor(dialog) {
@@ -6,6 +12,20 @@ class Dialog {
     this.dialog.ambiance = "cavern";
     this.dialog.mood = "neutral";
     game.dataEngine.showReputation("diamond-dogs");
+  }
+
+  // Once Dolly has taken over, everything else about the original
+  // conversation (mediation, hatred toward ponies, duels, etc.) becomes
+  // moot - she has one thing to say, and it depends entirely on whether
+  // the player has earned enough standing with the pack to be spared.
+  getEntryPoint() {
+    if (hasAltLeaderTakenOver()) {
+      game.quests.getQuest("junkvilleNegociateWithDogs").script.pushEvent("talkedAboutTakeover");
+      return game.dataEngine.getReputation("diamond-dogs") >= GOOD_STANDING_WITH_DOGS
+        ? "took-over/entry-spared"
+        : "took-over/entry-hostile";
+    }
+    return "entry";
   }
 
   spokeAgainstLeader() {
@@ -72,3 +92,4 @@ class Dialog {
 export function create(dialog) {
   return new Dialog(dialog);
 }
+

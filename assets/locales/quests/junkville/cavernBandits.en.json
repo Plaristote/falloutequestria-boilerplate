@@ -15,6 +15,12 @@
       "desc-let-randy-fight": "Randy and the good folk from Junkville went off to kick some raiders flanks. Some casualties occured, but it's the price to pay for justice and safety.",
       "desc-removed-bandits": "The raiders are no longer a threat."
     }
+  },
+  "item-descriptions": {
+    "quest-junkville-bandits-cavern-hint": "This piece of paper, taken from the belongings of a bandit, bears crude instructions and visual aids that you could use to reach their secret lair."
+  },
+  "items": {
+    "quest-junkville-bandits-cavern-hint": "Crude map"
   }
 }
 

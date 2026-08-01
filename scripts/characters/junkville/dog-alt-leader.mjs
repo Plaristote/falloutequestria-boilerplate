@@ -1,6 +1,6 @@
 import {PackMember} from "./pack-member.mjs";
 import {requireQuest} from "../../quests/helpers.mjs";
-import {internalPackIssueDone} from "../../quests/junkvilleNegociateWithDogs.mjs";
+import {hasAltLeaderTakenOver} from "../../quests/junkvilleNegociateWithDogs.mjs";
 
 export class DogAltLeader extends PackMember {
   constructor(model) {
@@ -8,9 +8,7 @@ export class DogAltLeader extends PackMember {
   }
 
   get dialog() {
-    if (!internalPackIssueDone())
-      return "junkville/dogs/alt-leader";
-    return null;
+    return "junkville/dogs/alt-leader";
   }
 
   get textBubbles() {
@@ -20,6 +18,10 @@ export class DogAltLeader extends PackMember {
       ];
     }
     return [];
+  }
+
+  get speakOnDetection() {
+    return hasAltLeaderTakenOver() && !this.model.hasVariable("overtookTalked");
   }
 
   onDied() {

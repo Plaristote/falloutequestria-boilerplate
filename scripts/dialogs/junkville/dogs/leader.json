@@ -17,6 +17,21 @@
             "state": "scavengers/on-dogs-healed",
             "text": "already-healed-wounded"
         },
+        "argue-bandits-help": {
+            "availableHook": "negociateCanArgueBandits",
+            "hook": "negociateOnArgueBandits",
+            "text": "negociations/argue-bandits-help"
+        },
+        "argue-future": {
+            "availableHook": "negociateCanArgueFuture",
+            "hook": "negociateOnArgueFuture",
+            "text": "negociations/argue-future"
+        },
+        "argue-need-help": {
+            "availableHook": "negociateCanArgueHelp",
+            "hook": "negociateOnArgueHelp",
+            "text": "negociations/argue-need-help"
+        },
         "ask-about-dogs": {
             "state": "about-dogs/entry",
             "text": "ask-about-dogs"
@@ -50,22 +65,10 @@
             "hook": "tryToLeave",
             "text": "bandits-refuse"
         },
-        "bandits-report-dogs-reply": {
-            "state": "negociations/entry",
-            "text": "bandits-report-dogs-reply"
-        },
-        "bandits-report-junkville-reply": {
-            "state": "negociations/entry",
-            "text": "bandits-report-junkville-reply"
-        },
         "bandits-report-resolution": {
             "availableHook": "banditsCanReportResolution",
             "hook": "banditsReportResolution",
             "text": "bandits-report-resolution"
-        },
-        "bandits-report-solo-reply": {
-            "state": "negociations/entry",
-            "text": "bandits-report-solo-reply"
         },
         "bandits-suggest-collapse": {
             "availableHook": "banditsCanSuggestCollapse",
@@ -91,7 +94,8 @@
         "bring-up-negociations": {
             "availableHook": "negociateCanBringUp",
             "hook": "negociateBringUp",
-            "text": "bring-up-negociations"
+            "text": "bring-up-negociations",
+            "textHook": "negociateBringUpText"
         },
         "captives-ask-demands": {
             "state": "scavengers/motives",
@@ -104,6 +108,9 @@
         "captives-not-bandits": {
             "state": "scavengers/release-request",
             "text": "captives-not-bandits"
+        },
+        "debate-leave": {
+            "text": "negociations/debate-leave"
         },
         "details-intro-back": {
             "state": "first-contact/bandits-explained",
@@ -196,32 +203,17 @@
             "hook": "negociateAttemptAccept",
             "text": "negociate-accept"
         },
-        "negociate-ask-clarifications": {
-            "state": "negociations/clarifications",
-            "text": "negociate-ask-clarifications"
+        "negociate-trade-frame-caps": {
+            "hook": "negociateFidoLockTrade",
+            "text": "negociate-trade-frame-caps"
         },
-        "negociate-ask-skepticism": {
-            "state": "negociations/skepticism",
-            "text": "negociate-ask-skepticism"
+        "negociate-trade-frame-dismissive": {
+            "hook": "negociateFidoLockTrade",
+            "text": "negociate-trade-frame-dismissive"
         },
-        "negociate-push-hiding": {
-            "state": "negociations/pushed-to-hide",
-            "text": "negociate-push-hiding"
-        },
-        "negociate-push-hiding-2": {
-            "state": "negociations/pushed-to-hide",
-            "text": "negociate-push-hiding-2"
-        },
-        "negociate-reject-sarcastically": {
-            "text": "negociate-reject-sarcastically"
-        },
-        "negociation-suggest-waiting": {
-            "state": "negociations/entry",
-            "text": "negociation-suggest-waiting"
-        },
-        "negociation-why-me": {
-            "state": "negociations/entry",
-            "text": "negociation-why-me"
+        "negociate-trade-frame-mutual": {
+            "hook": "negociateFidoAcceptTrade",
+            "text": "negociate-trade-frame-mutual"
         },
         "pass-on-junkville-decision": {
             "availableHook": "negociateCanPassOnJunkvilleDecision",
@@ -236,19 +228,6 @@
         "proposal-intro-confirm": {
             "hook": "banditsQuestAccepted",
             "text": "proposal-intro-confirm"
-        },
-        "push-to-hide-dolly": {
-            "availableHook": "negociationsKnowAboutDollyOpinion",
-            "state": "negociations/entry",
-            "text": "push-to-hide-dolly"
-        },
-        "push-to-hide-further": {
-            "state": "negociations/hiding",
-            "text": "push-to-hide-further"
-        },
-        "push-to-hide-wait": {
-            "state": "negociations/entry",
-            "text": "push-to-hide-wait"
         },
         "ransom-entry-healed-dogs": {
             "availableHook": "scavengerHealedWoundedDogs",
@@ -416,19 +395,16 @@
         },
         "bandits/report-dogs": {
             "answers": [
-                "bandits-report-dogs-reply"
             ],
             "text": "bandits/report-dogs"
         },
         "bandits/report-junkville": {
             "answers": [
-                "bandits-report-junkville-reply"
             ],
             "text": "bandits/report-junkville"
         },
         "bandits/report-solo": {
             "answers": [
-                "bandits-report-solo-reply"
             ],
             "text": "bandits/report-solo"
         },
@@ -541,27 +517,31 @@
             ],
             "text": "first-contact/why-here-reentry"
         },
-        "negociations/clarifications": {
+        "negociations/agreed": {
             "answers": [
-                "negociate-accept",
-                "negociate-ask-skepticism",
-                "negociate-push-hiding-2",
-                "negociate-reject-sarcastically"
             ],
-            "hook": "negociateClarifications",
-            "text": "negociations/clarifications"
+            "mood": "smile",
+            "text": "negociations/agreed"
         },
-        "negociations/entry": {
+        "negociations/debate-continue": {
             "answers": [
-                "negociate-accept",
-                "negociate-ask-clarifications",
-                "negociate-ask-skepticism",
-                "negociate-push-hiding",
-                "negociate-reject-sarcastically"
+                "argue-need-help",
+                "argue-bandits-help",
+                "argue-future",
+                "debate-leave"
             ],
-            "hook": "negociateEntry",
-            "mood": "neutral",
-            "text": "negociations/entry"
+            "mood": "dubious",
+            "text": "negociations/debate-continue"
+        },
+        "negociations/debate-entry": {
+            "answers": [
+                "argue-need-help",
+                "argue-bandits-help",
+                "argue-future",
+                "debate-leave"
+            ],
+            "mood": "dubious",
+            "text": "negociations/debate-entry"
         },
         "negociations/entry-alt": {
             "answers": [
@@ -569,12 +549,6 @@
                 "leave-alt"
             ],
             "text": "negociations/entry-alt"
-        },
-        "negociations/hiding": {
-            "answers": [
-            ],
-            "mood": "sad",
-            "text": "negociations/hiding"
         },
         "negociations/on-accepted": {
             "answers": [
@@ -589,24 +563,66 @@
             "hook": "negociateOnJunkvilleDecision",
             "text": "negociations/on-junkville-reject"
         },
-        "negociations/pushed-to-hide": {
+        "negociations/point-bandits-made": {
             "answers": [
-                "push-to-hide-wait",
-                "push-to-hide-further",
-                "push-to-hide-dolly"
+                "argue-need-help",
+                "argue-bandits-help",
+                "argue-future",
+                "debate-leave"
             ],
             "mood": "dubious",
-            "text": "negociations/pushed-to-hide"
+            "text": "negociations/point-bandits-made"
         },
-        "negociations/skepticism": {
+        "negociations/point-future-made": {
             "answers": [
-                "negociate-accept",
-                "negociation-why-me",
-                "negociation-suggest-waiting",
-                "negociate-reject-sarcastically"
+                "argue-need-help",
+                "argue-bandits-help",
+                "argue-future",
+                "debate-leave"
+            ],
+            "mood": "dubious",
+            "text": "negociations/point-future-made"
+        },
+        "negociations/point-help-made": {
+            "answers": [
+                "argue-need-help",
+                "argue-bandits-help",
+                "argue-future",
+                "debate-leave"
+            ],
+            "mood": "dubious",
+            "text": "negociations/point-help-made"
+        },
+        "negociations/trade-accepted": {
+            "answers": [
             ],
             "mood": "smile",
-            "text": "negociations/skepticism"
+            "text": "negociations/trade-accepted"
+        },
+        "negociations/trade-entry": {
+            "answers": [
+                "negociate-trade-frame-mutual",
+                "negociate-trade-frame-caps",
+                "negociate-trade-frame-dismissive"
+            ],
+            "mood": "dubious",
+            "text": "negociations/trade-entry"
+        },
+        "negociations/trade-locked": {
+            "answers": [
+            ],
+            "mood": "angry",
+            "text": "negociations/trade-locked"
+        },
+        "negociations/trade-resolved": {
+            "answers": [
+            ],
+            "text": "negociations/trade-resolved"
+        },
+        "negociations/waiting-on-randy": {
+            "answers": [
+            ],
+            "text": "negociations/waiting-on-randy"
         },
         "negociations/wary-refusal": {
             "answers": [

@@ -33,7 +33,10 @@
             "start-fight-sarcastic": "Génial ! Ta fourrure blanche sera du meilleur effet quand je la porterais en soirée !",
             "start-mediation": "Je suis désolé de vous déranger. Mais je veux savoir. Pourquoi tant de haine envers les poneys ?",
             "start-mediation-alt": "Mais, pourquoi ? Pourquoi détester tous les poneys ?",
-            "start-mediation-on-captive-released": "Je t'ai entendu traiter Fido de faible, devant tout le monde. Pourquoi as-tu dis ça ?"
+            "start-mediation-on-captive-released": "Je t'ai entendu traiter Fido de faible, devant tout le monde. Pourquoi as-tu dis ça ?",
+            "took-over-leave": "Je m'en vais.",
+            "took-over/entry-hostile": "Tiens tiens, qui voilà ? Tes petits complots prennent fin aujourd'hui. Fido était faible, il pensait que nous pouvions te faire confiance. C'est une erreur que je ne commettrai pas.",
+            "took-over/entry-spared": "Te voilà. Fido n'est plus chef de cette meute. Plus question de troc avec ton espèce, ou de laisser des poneys accéder aux tunnels. Pas sous mon commandement.<br><br>Mais toi… t'as quand même gagné le respect de mes chiens. J'oublierai pas ça. Allez, fou le camp d'ici avant que je change d'avis."
         }
     }
 }

@@ -9,14 +9,17 @@ import {
   dogsExpectingSupplies
 } from "../../../quests/junkvilleDumpsDisappeared.mjs";
 import {
+  NEGOTIATE_FIDO_ARGUMENT_FLAGS,
   hasMediationStarted,
-  startMediation
+  startMediation,
+  hasRandyAgreedToNegotiate
 } from "../../../quests/junkvilleNegociateWithDogs.mjs";
 import {
   banditsDefeatedWithJunkvilleHelp,
   sendDogReinforcement
 } from "../../../quests/junkville/cavernBandits.mjs";
 import {skillCheck, skillContest} from "../../../cmap/helpers/checks.mjs";
+
 
 export default class Dialog {
   constructor(dialog) {
@@ -77,6 +80,12 @@ export default class Dialog {
     return "scavengers/intimidation-failure";
   }
 
+  // Main Hub topic covering the pack's injuries. Where it goes depends on
+  // how much the player already knows: if they've never heard about the
+  // hostages, Fido volunteers the connection himself; if they already know
+  // about the hostages but have earned the full story (healed the dogs),
+  // he'll finally admit the bandits are to blame; otherwise it's just a
+  // status check on the hostage situation.
   woundedDogsTopic() {
     if (!hasFoundDisappearedPonies()) return "scavengers/wounded-intro";
     if (this.canAskAboutWoundedDogs) return "bandits/intro";
@@ -84,6 +93,9 @@ export default class Dialog {
   }
 
   get canAskAboutWoundedDogs() {
+    // The full story - bandits chased us out, that's why my dogs are hurt -
+    // only comes out once the player has actually healed them. Before that,
+    // all Fido will admit is that he needs supplies.
     return this.dialog.npc.getVariable("canAskAboutWoundedDogs", 0) == 1
         && this.scavengerHealedWoundedDogs
         && (!this.banditsQuest || !this.banditsQuest.script.talkedWithDogs);
@@ -112,6 +124,9 @@ export default class Dialog {
     game.dataEngine.addReputation("diamond-dogs", -15);
   }
 
+  // "Release them, now" and "They aren't bandits" both land here. This is a
+  // genuine failable persuasion attempt (not a hidden option only shown to
+  // already-high-speech characters) - Fido needs real convincing.
   scavengerReleaseAttempt() {
     const success = skillCheck(game.player, "speech", 85);
     if (success) return "scavengers/convince-success";
@@ -124,6 +139,7 @@ export default class Dialog {
   }
 
   scavengerWoundedHealed() {
+    this.scavengerQuest.setVariable("reportedHealedDogs", 1);
     authorizeCaptiveRelease();
   }
 
@@ -133,6 +149,7 @@ export default class Dialog {
 
   scavengerOnRansomReceived() {
     this.scavengerQuest.script.transferRequiredSupplies(game.player.inventory, null);
+    this.scavengerQuest.script.woundedDogs = 0;
     this.scavengerQuest.completeObjective("bring-ransom");
     authorizeCaptiveRelease();
   }
@@ -216,13 +233,71 @@ export default class Dialog {
   get negociateQuest() { return game.quests.getQuest("junkvilleNegociateWithDogs"); }
 
   negociateCanBringUp() {
-    return  this.negociateQuest
-        &&  this.negociateQuest.isObjectiveCompleted("bring-medical-supplies")
-        && !this.negociateQuest.isObjectiveCompleted("peaceful-resolve");
+    return  this.scavengerHealedWoundedDogs
+        &&  this.scavengerQuest?.isObjectiveCompleted("save-captives")
+        && !this.negociateQuest?.isObjectiveCompleted("peaceful-resolve");
   }
 
+  negociateHasStartedDebate() {
+    return NEGOTIATE_FIDO_ARGUMENT_FLAGS.some(flag => !!this.negociateQuest?.hasVariable(flag));
+  }
+
+  negociateDebatePoints() {
+    return this.negociateQuest.script.dogsDebatePoints;
+  }
+
+  negociateCanArgueHelp() {
+    return !this.negociateQuest?.hasVariable("fidoDebateUsedHelp");
+  }
+
+  negociateCanArgueBandits() {
+    return !this.negociateQuest?.hasVariable("fidoDebateUsedBandits")
+        && banditsDefeatedWithJunkvilleHelp();
+  }
+
+  negociateCanArgueFuture() {
+    return !this.negociateQuest?.hasVariable("fidoDebateUsedFuture");
+  }
+
+  negociateOnArgueHelp()    { return this.negociateApplyArgument("fidoDebateUsedHelp", "point-help-made"); }
+  negociateOnArgueBandits() { return this.negociateApplyArgument("fidoDebateUsedBandits", "point-bandits-made"); }
+  negociateOnArgueFuture()  { return this.negociateApplyArgument("fidoDebateUsedFuture", "point-future-made"); }
+
+  negociateApplyArgument(flag, reactionState) {
+    if (!this.negociateQuest || this.negociateQuest.hidden)
+      game.quests.addQuest("junkvilleNegociateWithDogs");
+    this.negociateQuest.setVariable(flag, true);
+    if (this.negociateDebatePoints() >= 2) {
+      startMediation();
+      level.script.dollyReactsToDogsNegotiating();
+      return "negociations/agreed";
+    }
+    return `negociations/${reactionState}`;
+  }
+
+  // Fido's side of the "who's in front of who" hub topic. It walks through
+  // three phases: getting him to agree to negotiate at all, waiting for
+  // Randy to independently do the same, then bringing up Randy's want
+  // (trading the tunnels' gems) once both have bought in. Once the
+  // tunnel-access debate with Randy is underway, this defers to the
+  // existing pass-on-the-decision flow instead.
   negociateBringUp() {
-    return hasMediationStarted() ? "negociations/entry-alt" : "negociations/entry";
+    this.dialog.npc.setVariable("negociateBroughtUp", 1);
+    if (!hasMediationStarted())
+      return "negociations/debate-entry";
+    if (!hasRandyAgreedToNegotiate())
+      return "negociations/waiting-on-randy";
+    if (this.negociateQuest.hasVariable("junkvilleDecision") || this.negociateQuest.isObjectiveCompleted("pass-on-message"))
+      return "negociations/entry-alt";
+    if (this.negociateQuest.isObjectiveCompleted("fido-accepted-trade") || this.negociateQuest.hasVariable("fidoTradeLocked"))
+      return "negociations/trade-resolved";
+    return "negociations/trade-entry";
+  }
+
+  negociateBringUpText() {
+    if (!this.dialog.npc.hasVariable("negociateBroughtUp"))
+      return this.dialog.tr("bring-up-negociations-init");
+    return this.dialog.tr("bring-up-negociations");
   }
 
   negociateEntry() {
@@ -243,8 +318,16 @@ export default class Dialog {
     this._negociateClarified = true;
   }
 
+  // Fido isn't interested in opening relations with the surface - a
+  // lifetime of chains and cages, then the bandits crawling into his
+  // tunnels, gave him no reason to trust ponies. He won't budge on words
+  // alone. What can move him is proof: his wounded actually healed, and
+  // Junkville bleeding alongside the pack against the raiders instead of
+  // leaving them to die. Short of that proof, only truly exceptional
+  // conviction (a very hard speech check) stands a chance of swaying him.
   negociateCanConvinceDogs() {
-    return skillCheck(game.player, "speech", 75) || banditsDefeatedWithJunkvilleHelp();
+    const provenGoodwill = this.scavengerHealedWoundedDogs && banditsDefeatedWithJunkvilleHelp();
+    return provenGoodwill || skillCheck(game.player, "speech", 90);
   }
 
   negociateAttemptAccept() {
@@ -260,8 +343,33 @@ export default class Dialog {
       "negociations/on-accepted-bandits" : "negociations/on-accepted";
   }
 
+  // The moment Fido commits to negotiating is also the moment Dolly's
+  // opposition turns into a real threat to him. She reacts on the spot so
+  // the player has a chance to notice something is wrong before it's too
+  // late - if they don't act on it, she'll have taken the pack from him
+  // by the time they next set foot back in the caverns.
   negociateOnAccepted() {
     startMediation();
+    level.getScriptObject().dollyReactsToDogsNegotiating();
+  }
+
+  // The "bring up Randy's want" debate: convincing Fido to let Junkville
+  // trade for the tunnels' gems and diamonds. One framing lands, the
+  // other two shut the topic down for good this playthrough. This
+  // textHook only fires on revisits, once the debate is already settled.
+  negociateTradeResolvedText() {
+    return this.negociateQuest.hasVariable("fidoTradeLocked") ?
+      this.dialog.t("negociations/trade-locked-recap") : this.dialog.t("negociations/trade-accepted-recap");
+  }
+
+  negociateFidoAcceptTrade() {
+    this.negociateQuest.completeObjective("fido-accepted-trade");
+    return "negociations/trade-accepted";
+  }
+
+  negociateFidoLockTrade() {
+    this.negociateQuest.setVariable("fidoTradeLocked", true);
+    return "negociations/trade-locked";
   }
 
   negociateCanPassOnJunkvilleDecision() {
@@ -295,7 +403,9 @@ export default class Dialog {
     return this.negociateQuest.hasVariable("knowAboutDollyOpinion");
   }
 
+  //
   // BEGIN SPINEL QUEST
+  //
   canAskAboutSpinel() {
     const quest = game.quests.getQuest("capital/find-spinel");
     return quest && !quest.isObjectiveCompleted("find-spinel");

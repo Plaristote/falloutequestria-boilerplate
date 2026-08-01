@@ -1,0 +1,19 @@
+{
+  "dialogs": {
+        "junkville/dogs/leader-negociation": {
+            "about-dolly": "There's something you should know. Dolly didn't take kindly to my decision. She's said nothing to my face, but I've seen that look before - she thinks I've gone soft. Maybe worse.\n<br><br>\nIf you want this peace to hold, you might want to go talk to her yourself. She listens to reason better than she listens to orders. Tread carefully - but don't wait too long, either.",
+            "about-dolly-ack": "I'll keep an eye on her.",
+            "about-dolly-repeat": "Just… watch yourself around Dolly, if you can. I'd rather not have to choose between her and this peace.",
+            "negociations/agreed": "…Fine. You've made your point, more than once. I'll allow it - a relationship with the surface, tested carefully, one step at a time. Go on, then. Tell them the diamond dogs are willing to talk.",
+            "negociations/debate-entry": "Relationship ? With the surface ?\n<br><br>\nMy wounded dogs got better thanks to you. I won't forget that. But one act of kindness doesn't undo generations of misdeeds. I don't see what good could come from opening our door to your kind.",
+            "negociations/argue-bandits-help": "Junkville marched down here and fought the bandits shoulder to shoulder with your pack. That's not nothing.",
+            "negociations/argue-future": "You can't keep the surface out forever, Fido. Better to build something on your own terms now, than have it forced on you later.",
+            "negociations/argue-need-help": "Your pack needed outside help before - remember the wounded dogs ? You didn't turn it down then.",
+            "negociations/debate-continue": "Back again ? Go on, then. Convince me, if you think you still can.",
+            "negociations/debate-leave": "I'll leave you to think about it.",
+            "negociations/point-bandits-made": "No. It's not. I still don't fully understand why they'd bleed for dogs they'd never met… but they did. That counts for something, I'll grant you that.",
+            "negociations/point-future-made": "…You're not wrong. Sooner or later, the surface finds its way down here, one way or another. Better it be a hand extended than a blade.",
+            "negociations/point-help-made": "We did. And I'm not made of stone - I remember who came when we needed it. But needing help once doesn't mean opening our home to strangers forever."
+        }
+  }
+}

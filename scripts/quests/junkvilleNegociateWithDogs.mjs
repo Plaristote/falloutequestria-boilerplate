@@ -16,6 +16,20 @@ const questName = "junkvilleNegociateWithDogs";
 function hasQuest() { return game.quests.hasQuest(questName); }
 function getQuest() { return game.quests.getQuest(questName); }
 
+export const NEGOTIATE_FIDO_ARGUMENT_FLAGS = [
+  "fidoDebateUsedHelp",
+  "fidoDebateUsedBandits",
+  "fidoDebateUsedFuture"
+];
+
+// Randy's side of the same kind of debate: he also needs two solid
+// reasons before he'll agree to entertain talks with the pack.
+export const NEGOTIATE_RANDY_ARGUMENT_FLAGS = [
+  "randyDebateUsedScavengers",
+  "randyDebateUsedBandits",
+  "randyDebateUsedSafety"
+];
+
 export function safeObjectiveCompleted() {
   if (hasQuest())
     getQuest().completeObjective("safe");
@@ -31,13 +45,46 @@ export function mediationNeedsCaptiveRelease() {
   return result;
 }
 
-export function startMediation(type) {
-  const quest = requireQuest("junkvilleNegociateWithDogs");
-  quest.setVariable("mediation", 1);
+// The pack's two open wounds - the injured dogs, and the captive scavengers
+// - must both be closed before either Fido or Randy will even entertain the
+// idea of negotiating. Both sides gate their half of the conversation on
+// this same precondition.
+export function canDiscussPeaceWithDogs() {
+  const scavengerQuest = game.quests.getQuest("junkvilleDumpsDisappeared");
+  return !!scavengerQuest
+      && scavengerQuest.isObjectiveCompleted("healWoundedDogs")
+      && scavengerQuest.isObjectiveCompleted("save-captives");
+}
+
+// Fido agreeing to entertain negotiation at all. Kept under the same name
+// as before since shouldAltLeaderTakeOver() and Randy's script both already
+// depend on it meaning exactly this.
+export function startMediation() {
+  const quest = requireQuest(questName);
+  quest.completeObjective("fido-agreed-to-negotiate");
 }
 
 export function hasMediationStarted() {
-  return hasQuest() && getQuest().hasVariable("mediation");
+  return hasQuest() && getQuest().isObjectiveCompleted("fido-agreed-to-negotiate");
+}
+
+// Randy independently agreeing to entertain negotiation.
+export function hasRandyAgreedToNegotiate() {
+  return hasQuest() && getQuest().isObjectiveCompleted("randy-agreed-to-negotiate");
+}
+
+// Only once BOTH sides have separately bought into the idea of negotiating
+// - in whichever order the player approached them - does it become possible
+// to start bringing up what each side actually wants.
+export function bothAgreedToNegotiate() {
+  return hasMediationStarted() && hasRandyAgreedToNegotiate();
+}
+
+// Whether Fido has been won over on the specific question of letting
+// Junkville trade for the tunnels' gems - this is what lets Randy's own
+// debate end in a full trade agreement rather than a bare boundary line.
+export function fidoAcceptedTradeOfGems() {
+  return hasQuest() && getQuest().isObjectiveCompleted("fido-accepted-trade");
 }
 
 export function hasBattleStarted() {
@@ -153,9 +200,18 @@ export function internalPackIssueDone() {
   return false;
 }
 
+// Dolly's betrayal: once Fido has committed to negotiating with the surface
+// (mediation started) and nobody has talked her down, killed her, or already
+// triggered this takeover, leaving the caverns hands control of the pack to
+// her the next time the player comes back. This is checked on every level
+// exit, but internalPackIssueDone() flips true as soon as it fires once
+// (via the "alt-leader-took-over" objective), so it only actually happens
+// the first time the conditions line up.
 export function shouldAltLeaderTakeOver() {
-  return false; // TODO re-write alt leader take over
-  return hasQuest() && !internalPackIssueDone() && captiveReleaseAuthorized();
+  return hasQuest()
+      && hasMediationStarted()
+      && !internalPackIssueDone()
+      && !hasBattleStarted();
 }
 
 export function hasAltLeaderTakenOver() {
@@ -165,7 +221,6 @@ export function hasAltLeaderTakenOver() {
 
 export function makeAltLeaderTakeOver() {
   requireQuest(questName).completeObjective("alt-leader-took-over");
-  game.diplomacy.setAsEnemy(true, "diamond-dogs", "player");
   game.diplomacy.setAsEnemy(true, "diamond-dogs", "junkville");
 }
 
@@ -189,13 +244,87 @@ export class JunkvilleNegociateWithDogs extends QuestHelper {
     return this.model.hasVariable("leadersDead") && this.model.hasVariable("altLeaderDead");
   }
 
+  get dogsDebatePoints() {
+    return NEGOTIATE_FIDO_ARGUMENT_FLAGS.filter(flag => this.model.hasVariable(flag)).length;
+  }
+
+  get randyDebatePoints() {
+    return NEGOTIATE_RANDY_ARGUMENT_FLAGS.filter(flag => this.model.hasVariable(flag)).length;
+  }
+
   onCharacterKilled(character) {
     switch (character.characterSheet) {
       case "junkville-dog-leader": this.model.setVariable("leaderDead", 1); break ;
-      case "junkville-dog-second": this.model.setVariable("altLeaderDead", 1); break ;
+      case "junkville-dog-second":
+        this.model.setVariable("altLeaderDead", 1);
+        getQuest().completeObjective("alt-leader-dead");
+        break ;
     }
     if (areCaptorsDead())
       this.model.completed = true;
+  }
+
+  getDescription() {
+    let text = `<p>${this.model.tr("desc-intro")}</p>`;
+
+    if (!this.model.isObjectiveCompleted("safe"))
+      return text;
+    text += `<p>${this.model.tr("desc-safe")}</p>`;
+
+    if (canDiscussPeaceWithDogs()) {
+      if (bothAgreedToNegotiate())
+        text += `<p>${this.model.tr("desc-both-agreed")}</p>`;
+      else if (hasMediationStarted())
+        text += `<p>${this.model.tr("desc-fido-agreed-only")}</p>`;
+      else if (hasRandyAgreedToNegotiate())
+        text += `<p>${this.model.tr("desc-randy-agreed-only")}</p>`;
+    }
+    if (bothAgreedToNegotiate()) {
+      if (fidoAcceptedTradeOfGems())
+        text += `<p>${this.model.tr("desc-trade-accepted")}</p>`;
+      else if (this.model.hasVariable("fidoTradeLocked"))
+        text += `<p>${this.model.tr("desc-trade-refused")}</p>`;
+    }
+    if (internalPackIssueDone()) {
+      if (this.model.isObjectiveCompleted("alt-leader-convinced"))
+        text += `<p>${this.model.tr("desc-dolly-convinced")}</p>`;
+      else if (this.model.isObjectiveCompleted("alt-leader-dead"))
+        text += `<p>${this.model.tr("desc-dolly-dead")}</p>`;
+    }
+    if (bothAgreedToNegotiate() && this.model.isObjectiveCompleted("pass-on-message"))
+      text += `<p>${this.model.tr("desc-message-passed")}</p>`;
+    if (this.model.isObjectiveCompleted("assembly-participate"))
+      text += `<p>${this.model.tr("desc-assembly-attended")}</p>`;
+    if (bothAgreedToNegotiate() && this.model.hasVariable("passOnJunkvilleDecision")) {
+      text += this.model.getVariable("passOnJunkvilleDecision") == 2
+        ? `<p>${this.model.tr("desc-decision-passed")}</p>`
+        : `<p>${this.model.tr("desc-decision-pending")}</p>`;
+    }
+    if (bothAgreedToNegotiate() && this.model.isObjectiveCompleted("peaceful-resolve")) {
+      text += this.model.getVariable("mediation") === "trade"
+        ? `<p>${this.model.tr("desc-peace-trade")}</p>`
+        : `<p>${this.model.tr("desc-peace-boundary")}</p>`;
+    }
+
+    if (internalPackIssueDone() && this.model.isObjectiveCompleted("alt-leader-took-over"))
+      text += `<p>${this.model.tr("desc-dolly-took-over")}</p>`;
+    else if (this.model.hasVariable("leaderDead"))
+      text += `<p>${this.model.tr("desc-fido-dead")}</p>`;
+
+    if (hasBattleStarted()) {
+      if (this.model.getVariable("escaped", false))
+        text += `<p>${this.model.tr("desc-battle-fled")}</p>`;
+      if (this.model.isObjectiveCompleted("win-battle"))
+        text += `<p>${this.model.tr("desc-battle-won")}</p>`;
+      else if (this.model.isObjectiveCompleted("lose-battle"))
+        text += `<p>${this.model.tr("desc-battle-lost")}</p>`;
+      else
+        text += `<p>${this.model.tr("desc-battle-ongoing")}</p>`;
+    } else if (areCaptorsDead()) {
+      text += `<p>${this.model.tr("desc-dogs-wiped-out")}</p>`;
+    }
+
+    return text;
   }
 
   getObjectives() {
@@ -205,11 +334,22 @@ export class JunkvilleNegociateWithDogs extends QuestHelper {
       label: this.tr("save-yourself-from-the-diamond-dogs"),
       success: this.model.isObjectiveCompleted("safe")
     });
-    if (hasSupplyRequestObjective()) {
+    if (canDiscussPeaceWithDogs()) {
       objectives.push({
-        label: this.tr("bring-medical-supplies"),
-        success: this.model.isObjectiveCompleted("bring-medical-supplies"),
-        failure: !this.model.isObjectiveCompleted("bring-medical-supplies") && (hasBattleStarted() || this.leadersDead)
+        label: this.tr("convince-fido-to-negotiate"),
+        success: this.model.isObjectiveCompleted("fido-agreed-to-negotiate"),
+        failure: !this.model.isObjectiveCompleted("fido-agreed-to-negotiate") && (hasBattleStarted() || this.leadersDead)
+      });
+      objectives.push({
+        label: this.tr("convince-randy-to-negotiate"),
+        success: this.model.isObjectiveCompleted("randy-agreed-to-negotiate")
+      });
+    }
+    if (bothAgreedToNegotiate()) {
+      objectives.push({
+        label: this.tr("convince-fido-to-trade"),
+        success: this.model.isObjectiveCompleted("fido-accepted-trade"),
+        failure: this.model.hasVariable("fidoTradeLocked")
       });
     }
     if (internalPackIssueDone()) {
@@ -219,7 +359,7 @@ export class JunkvilleNegociateWithDogs extends QuestHelper {
         failure: this.model.isObjectiveCompleted("alt-leader-took-over")
       });
     }
-    if (hasMediationStarted()) {
+    if (bothAgreedToNegotiate()) {
       objectives.push({
         label: this.tr("pass-on-message"),
         success: this.model.isObjectiveCompleted("pass-on-message")
@@ -231,13 +371,13 @@ export class JunkvilleNegociateWithDogs extends QuestHelper {
         success: true
       });
     }
-    if (hasMediationStarted() && this.model.hasVariable("passOnJunkvilleDecision")) {
+    if (bothAgreedToNegotiate() && this.model.hasVariable("passOnJunkvilleDecision")) {
       objectives.push({
         label: this.tr("pass-on-assembly-decision"),
         success: this.model.getVariable("passOnJunkvilleDecision") == 2
       });
     }
-    if (hasMediationStarted()) {
+    if (bothAgreedToNegotiate()) {
       objectives.push({
         label: this.tr("peaceful-resolve"),
         success: this.model.isObjectiveCompleted("peaceful-resolve"),

@@ -189,10 +189,10 @@ export function clearBanditsRaid(options) {
     options.survivors.junkville.forEach(character => {
       if (character != cook)
         level.deleteObject(character);
-      else
-        game.uniqueCharacterStorage.detachCharacter(character);
     });
   }
+  if (cook.isAlive())
+    game.uniqueCharacterStorage.detachCharacter(cook);
 }
 
 export function onBanditsWipedOutIndependently() {

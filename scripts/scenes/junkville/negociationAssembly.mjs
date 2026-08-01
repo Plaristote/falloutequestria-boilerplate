@@ -43,6 +43,7 @@ export default class NegociationAssembly extends SceneManager {
 
   finalize() {
     level.setVariable("nextAssemblyEnd", 0);
+    level.tasks.removeTask("waitForAssembly");
     super.finalize();
   }
 
@@ -71,7 +72,8 @@ export default class NegociationAssembly extends SceneManager {
   }
 
   onLevelExit() {
-    // TODO take decision immediately and end this ?
+    this.autoConclude(this.actors);
+    super.onLevelExit();
   }
 
   lineState(character, line, duration) {
@@ -138,7 +140,7 @@ export default class NegociationAssembly extends SceneManager {
         speaker: mediator,
         towards: { x: 32, y: 10 },
         line: this.line("conclusion-line-" + result),
-        duration: 5000
+        duration: 5
       });
     } else {
       this.triggerNextStep();
@@ -185,6 +187,7 @@ export default class NegociationAssembly extends SceneManager {
   choseSilence() {}
 
   influenceChallenge(direction, bonus) {
+    bonus += game.dataEngine.getReputation("junkville") / 10;
     this.actors.forEach(actor => {
       const opinion = actor.getVariable(opinionVarName);
       const winner = skillContest({ character: game.player, bonus: bonus }, actor, "charisma", 4);

@@ -10,7 +10,31 @@
       "assembly-participate": "Take part in Junkville's Assembly",
       "pass-on-assembly-decision": "Forward Junkville's message to the Diamond Dogs",
       "peaceful-resolve": "Reach a peaceful settlement",
-      "wipe-out-dogs": "Wipe out the Diamond Dogs"
+      "wipe-out-dogs": "Wipe out the Diamond Dogs",
+      "convince-fido-to-negotiate": "Get Fido on board for talking it out with the Junkville folks.",
+      "convince-randy-to-negotiate": "Get Randy on board for talking it out with the Diamond Dogs.",
+      "desc-intro": "You found out that Junkville sits right on top of a warren of tunnels, claimed by a pack of Diamond Dogs.",
+      "desc-safe": "You walked away from your first run-in with the pack in one piece.",
+      "desc-fido-dead": "Fido is dead. Whatever chance there was of talking things out with him died along with him.",
+      "desc-fido-agreed-only": "Fido has agreed to hear Junkville out.",
+      "desc-randy-agreed-only": "Randy is willing to give negotiation a shot.",
+      "desc-both-agreed": "Both Fido and Randy have agreed, separately, to give negotiation a chance.",
+      "desc-trade-accepted": "Fido has agreed to let Junkville trade for the gems dug out of the tunnels - assuming everything else falls into place.",
+      "desc-trade-refused": "Fido won't budge on the gems. Whatever peace comes out of this, it won't include trade.",
+      "desc-dolly-convinced": "Dolly's grumbling about Fido's leadership got talked down before it could turn into anything worse.",
+      "desc-dolly-dead": "Dolly is dead. Whatever challenge she posed to Fido's leadership, it died with her.",
+      "desc-dolly-took-over": "Dolly didn't wait around to be talked out of anything. She's seized control of the pack from Fido, and she wants nothing to do with ponies.",
+      "desc-message-passed": "You carried the Diamond Dogs' terms back up to Junkville.",
+      "desc-assembly-attended": "You joined in Junkville's assembly to weigh in on the path the town which to follow regarding the Diamond Dogs.",
+      "desc-decision-passed": "You carried Junkville's answer back down to the Diamond Dogs.",
+      "desc-decision-pending": "Junkville's assembly reached a decision. It still needs to be carried back down to the Diamond Dogs.",
+      "desc-peace-trade": "Junkville and the Diamond Dogs settled on a real peace: an open trade of gems for supplies, and an end - for now - to the fighting.",
+      "desc-peace-boundary": "Junkville and the Diamond Dogs settled on an uneasy peace: no trade, no trust, but no more bloodshed either, as long as everyone stays on their own side of the tunnels.",
+      "desc-battle-fled": "You pulled out of the underground fighting before it was over.",
+      "desc-battle-won": "The fighting is over. Junkville's militia drove the Diamond Dogs back into the dark.",
+      "desc-battle-lost": "The fighting is over, and Junkville lost. Too many of its own didn't make it back up out of the tunnels.",
+      "desc-battle-ongoing": "Ponies and Diamond Dogs are fighting it out in the tunnels beneath Junkville, right now.",
+      "desc-dogs-wiped-out": "The Diamond Dogs who once ruled these tunnels are gone - wiped out, with no one left to make peace with, or war on."
     }
   }
 }

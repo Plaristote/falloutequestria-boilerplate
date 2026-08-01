@@ -33,7 +33,10 @@
             "start-fight-sarcastic": "Nice ! Your white fur will look stunning once I wear it on my flank !",
             "start-mediation": "I'm sorry to disturb. But I want to learn. Why do you harbor such hatred towards my kind ?",
             "start-mediation-alt": "But why ? Why do you hate ponies ?",
-            "start-mediation-on-captive-released": "I heard you call Fido weak, in front of everyone. What was that about ?"
+            "start-mediation-on-captive-released": "I heard you call Fido weak, in front of everyone. What was that about ?",
+            "took-over-leave": "I'm leaving.",
+            "took-over/entry-hostile": "Well, well. Look who crawled back. Afraid your plots against us stop here. Fido was weak, he thought we could trust you. It's a mistake I won't make.",
+            "took-over/entry-spared": "Well, well. Look who crawled back. Fido no longer leads the pack. There won't be any more talk of trading with your kind, or opening these tunnels to ponies, not while I lead this pack.<br><br>Still… you've earned some standing with my dogs. I won't forget that. Walk away, pony, while I still let you."
         }
   }
 }

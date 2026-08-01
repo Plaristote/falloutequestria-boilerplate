@@ -28,6 +28,8 @@ export class JunkvilleUnderground extends LevelBase {
       game.unsetVariable("junkvilleUndergroundBattle");
       game.setVariable("ongoingJunkvilleUndergroundBattle", true);
     }
+    if (shouldAltLeaderTakeOver())
+      this.altLeaderTakesOver();
     if (findHelpfulRescueRouteState() == 2)
       prepareDiamondDogsOnCavernAccessTransgression();
   }
@@ -45,8 +47,6 @@ export class JunkvilleUnderground extends LevelBase {
       this.killLiveCaptives();
     if (game.getVariable("ongoingJunkvilleUndergroundBattle"))
       this.clearBattle();
-    if (shouldAltLeaderTakeOver())
-      this.altLeaderTakesOver();
     safeObjectiveCompleted();
   }
 
@@ -169,12 +169,28 @@ export class JunkvilleUnderground extends LevelBase {
     });
   }
 
+  // Called right after Fido agrees to negotiate with the surface. Dolly
+  // doesn't say anything to the player directly here - this is just a
+  // reaction shot (a TextBubble over her head) so the player has a chance
+  // to notice something is wrong before her betrayal plays out.
+  dollyReactsToDogsNegotiating() {
+    console.log("dollyReactsToDogsNegotiating");
+    const dolly = level.findObject("dog-alt-leader");
+
+    if (!dolly || !dolly.isAlive()) return;
+    dolly.actionQueue.pushWait(1);
+    dolly.actionQueue.pushSpeak(i18n.t("junkville.dogs.dolly-reacts-to-negociation"), 3200, "red");
+    dolly.actionQueue.start();
+  }
+
   altLeaderTakesOver() {
     console.log("altLeaderTakesOver");
     const altLeader = level.findObject("dog-alt-leader");
     const leader = level.findObject("dog-leader");
 
     leader.takeDamage(9999, null);
+    level.setCharacterPosition(altLeader, leader.position.x + 3, leader.position.y - 3);
+    altLeader.lookTo(altLeader.position.x + 3, altLeader.position.y - 3);
     makeAltLeaderTakeOver();
     this.liveCaptives.forEach(captive => {
       captive.takeDamage(9999, null);

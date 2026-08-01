@@ -24,7 +24,7 @@ class Dialog {
 
   onSituationExplained() {
     if (!this.hasQuest())
-      game.quests.addQuest(questName).setVariable("initBy", this.dialog.npc.objectName);
+      game.quests.addQuest(questName).setVariable("initBy", "captive");
   }
 
   wasSentByJunkville() {
