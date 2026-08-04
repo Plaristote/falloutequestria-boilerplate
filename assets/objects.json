@@ -17,13 +17,22 @@
         "value": 15,
         "weight": 1
     },
+    "5.56-ammo": {
+        "icon": "556-ammo.webp",
+        "isGroupable": true,
+        "scriptName": "ammo.mjs",
+        "sprite": "misc",
+        "type": "ammo",
+        "value": 4,
+        "weight": 0
+    },
     "9mm-ammo": {
         "icon": "9mm-bullets.png",
         "isGroupable": true,
         "scriptName": "ammo.mjs",
         "sprite": "misc",
         "type": "ammo",
-        "value": 4,
+        "value": 3,
         "weight": 0
     },
     "apple-cider": {
@@ -43,6 +52,15 @@
         "type": "consommables",
         "value": 25,
         "weight": 1
+    },
+    "assault-rifle": {
+        "icon": "assault-rifle.webp",
+        "isGroupable": false,
+        "scriptName": "assault-rifle.mjs",
+        "sprite": "mouthgun",
+        "type": "weapon",
+        "value": 5000,
+        "weight": 12
     },
     "book": {
         "icon": "book.png",
@@ -78,6 +96,15 @@
         "type": "weapon",
         "value": 95,
         "weight": 1
+    },
+    "combat-shotgun": {
+        "icon": "combat-shotgun.webp",
+        "isGroupable": false,
+        "scriptName": "combat-shotgun.mjs",
+        "sprite": "mouthgun",
+        "type": "weapon",
+        "value": 3500,
+        "weight": 12
     },
     "dash": {
         "icon": "dash.webp",
@@ -192,6 +219,24 @@
         "type": "weapon",
         "value": 600,
         "weight": 5
+    },
+    "laser-rifle": {
+        "icon": "laser-rifle.webp",
+        "isGroupable": false,
+        "scriptName": "laser-rifle.mjs",
+        "sprite": "mouthgun",
+        "type": "weapon",
+        "value": 4500,
+        "weight": 15
+    },
+    "laser-smg": {
+        "icon": "laser-gun.png",
+        "isGroupable": false,
+        "scriptName": "laser-smg.mjs",
+        "sprite": "mouthgun",
+        "type": "weapon",
+        "value": 800,
+        "weight": 7
     },
     "leather-armor": {
         "icon": "leather-armor.webp",
@@ -310,7 +355,7 @@
         "sprite": "mouthgun",
         "type": "weapon",
         "value": 10000,
-        "weight": 14
+        "weight": 16
     },
     "power-armor": {
         "icon": "powerarmor.png",
@@ -338,6 +383,15 @@
         "type": "armor",
         "value": 670,
         "weight": 10
+    },
+    "shotgun-shell": {
+        "icon": "shotgun-shell.webp",
+        "isGroupable": true,
+        "scriptName": "ammo.mjs",
+        "sprite": "misc",
+        "type": "ammo",
+        "value": 5,
+        "weight": 0
     },
     "skill-book-medicine": {
         "icon": "firstaid-book.png",
@@ -375,6 +429,15 @@
         "value": 250,
         "weight": 3
     },
+    "sniper-rifle": {
+        "icon": "sniper-rifle.webp",
+        "isGroupable": false,
+        "scriptName": "sniper-rifle.mjs",
+        "sprite": "mouthgun",
+        "type": "weapon",
+        "value": 6000,
+        "weight": 14
+    },
     "sparkle-cola": {
         "icon": "sparkle-cola.png",
         "isGroupable": true,
@@ -383,6 +446,51 @@
         "type": "consommables",
         "value": 12,
         "weight": 1
+    },
+    "spell-book-frost-armor": {
+        "icon": "spellbook.png",
+        "isGroupable": true,
+        "scriptName": "spellbook.mjs",
+        "sprite": "book",
+        "type": "consommables",
+        "value": 650,
+        "weight": 2
+    },
+    "spell-book-heal": {
+        "icon": "spellbook.png",
+        "isGroupable": true,
+        "scriptName": "spellbook.mjs",
+        "sprite": "book",
+        "type": "consommables",
+        "value": 350,
+        "weight": 3
+    },
+    "spell-book-purification": {
+        "icon": "spellbook.png",
+        "isGroupable": true,
+        "scriptName": "spellbook.mjs",
+        "sprite": "book",
+        "type": "consommables",
+        "value": 150,
+        "weight": 2
+    },
+    "spell-book-sleep": {
+        "icon": "spellbook.png",
+        "isGroupable": true,
+        "scriptName": "spellbook.mjs",
+        "sprite": "book",
+        "type": "consommables",
+        "value": 1650,
+        "weight": 3
+    },
+    "spell-book-teleport": {
+        "icon": "spellbook.png",
+        "isGroupable": true,
+        "scriptName": "spellbook.mjs",
+        "sprite": "book",
+        "type": "consommables",
+        "value": 15000,
+        "weight": 3
     },
     "stable-armor": {
         "icon": "stable-suit.png",

@@ -17,7 +17,7 @@ export default class Rifle extends Gun {
   }
 
   getWeaponAnimationSteps() {
-    if (this.model.useMode == "shoot") {
+    if (this.model.useMode == "shoot" || this.model.userMode == "burst") {
       switch (this.user.inventory.getEquippedItemSlot(this.model)) {
       case "use-1":
         return "shoot-1";
@@ -30,10 +30,17 @@ export default class Rifle extends Gun {
 
   getAnimationSteps(target) {
     const animation = this.getWeaponAnimationSteps();
-    return [
+    const shootAnimation = { type: "Animation", animation: animation, object: this.user }
+    let list = [
       { type: "Sound", sound: this.fireAnimationSound, object: this.user },
-      { type: "Animation", animation: animation, object: this.user },
+      shootAnimation
     ];
+
+    if (this.model.useMode == "burst") {
+      list.push(shootAnimation);
+      list.push(shootAnimation);
+    }
+    return list;
   }
 
   canEquipInSlotType(slotType) {
