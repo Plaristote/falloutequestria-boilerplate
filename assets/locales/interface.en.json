@@ -128,7 +128,8 @@
         },
         "wont-barter": "This person doesn't want to barter with you.",
         "xp-gain": "You gained {{xp}} experience points.",
-        "training": "You trained {{skill}} and gained {{amount}} skill points."
+        "training": "You trained {{skill}} and gained {{amount}} skill points.",
+        "worldmap-item-error": "This item can only be used from the worldmap."
     },
     "pipboy": {
         "Archives": "Archives",
