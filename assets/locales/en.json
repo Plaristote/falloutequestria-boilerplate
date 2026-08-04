@@ -114,11 +114,6 @@
         "city-sample": "Sample Town",
         "tutorial": "Cavern of Trials"
     },
-    "medicine-skill": {
-        "in-combat": "You can't use medicine during combat",
-        "max-use-reached": "{{target}}'s wounds have already received treatment and can't be healed anymore right now.",
-        "used-on": "{{user}} used medicine on {{target}} and healed it for {{hp}} hit points."
-    },
     "no-path": "You can't go there.",
     "objects": {
         "bed": "a bed",
