@@ -17,13 +17,22 @@
         "value": 15,
         "weight": 1
     },
+    "5.56-ammo": {
+        "icon": "556-ammo.webp",
+        "isGroupable": true,
+        "scriptName": "ammo.mjs",
+        "sprite": "misc",
+        "type": "ammo",
+        "value": 4,
+        "weight": 0
+    },
     "9mm-ammo": {
         "icon": "9mm-bullets.png",
         "isGroupable": true,
         "scriptName": "ammo.mjs",
         "sprite": "misc",
         "type": "ammo",
-        "value": 4,
+        "value": 3,
         "weight": 0
     },
     "agility-potion": {
@@ -61,6 +70,15 @@
         "type": "consommables",
         "value": 15,
         "weight": 1
+    },
+    "assault-rifle": {
+        "icon": "assault-rifle.webp",
+        "isGroupable": false,
+        "scriptName": "assault-rifle.mjs",
+        "sprite": "mouthgun",
+        "type": "weapon",
+        "value": 5000,
+        "weight": 12
     },
     "bibin-sabotage-suitcase": {
         "icon": "suitcase.png",
@@ -149,6 +167,15 @@
         "type": "weapon",
         "value": 95,
         "weight": 1
+    },
+    "combat-shotgun": {
+        "icon": "combat-shotgun.webp",
+        "isGroupable": false,
+        "scriptName": "combat-shotgun.mjs",
+        "sprite": "mouthgun",
+        "type": "weapon",
+        "value": 3500,
+        "weight": 12
     },
     "cristal-den-brothel-keys": {
         "icon": "trial-key-2.png",
@@ -301,10 +328,28 @@
         "icon": "laser-gun.png",
         "isGroupable": false,
         "scriptName": "lasergun.mjs",
-        "sprite": "misc",
+        "sprite": "mouthgun",
         "type": "weapon",
         "value": 600,
         "weight": 5
+    },
+    "laser-rifle": {
+        "icon": "laser-rifle.webp",
+        "isGroupable": false,
+        "scriptName": "laser-rifle.mjs",
+        "sprite": "mouthgun",
+        "type": "weapon",
+        "value": 4500,
+        "weight": 15
+    },
+    "laser-smg": {
+        "icon": "laser-gun.png",
+        "isGroupable": false,
+        "scriptName": "laser-smg.mjs",
+        "sprite": "mouthgun",
+        "type": "weapon",
+        "value": 800,
+        "weight": 7
     },
     "leather-armor": {
         "icon": "leather-armor.webp",
@@ -441,7 +486,7 @@
         "sprite": "mouthgun",
         "type": "weapon",
         "value": 10000,
-        "weight": 14
+        "weight": 16
     },
     "power-armor": {
         "icon": "powerarmor.png",
@@ -521,6 +566,15 @@
         "value": 670,
         "weight": 10
     },
+    "shotgun-shell": {
+        "icon": "shotgun-shell.webp",
+        "isGroupable": true,
+        "scriptName": "ammo.mjs",
+        "sprite": "misc",
+        "type": "ammo",
+        "value": 5,
+        "weight": 0
+    },
     "skill-book-medicine": {
         "icon": "firstaid-book.png",
         "isGroupable": true,
@@ -556,6 +610,15 @@
         "type": "consommables",
         "value": 250,
         "weight": 3
+    },
+    "sniper-rifle": {
+        "icon": "sniper-rifle.webp",
+        "isGroupable": false,
+        "scriptName": "sniper-rifle.mjs",
+        "sprite": "mouthgun",
+        "type": "weapon",
+        "value": 6000,
+        "weight": 14
     },
     "sparkle-cola": {
         "icon": "sparkle-cola.png",
@@ -608,7 +671,7 @@
         "scriptName": "spellbook.mjs",
         "sprite": "book",
         "type": "consommables",
-        "value": 2500,
+        "value": 15000,
         "weight": 3
     },
     "stable-armor": {
