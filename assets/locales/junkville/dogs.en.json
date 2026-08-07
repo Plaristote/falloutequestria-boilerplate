@@ -5,6 +5,7 @@
       "dogA-reactToDuelDefeat": "The puny pony killed Dolly !",
       "dogB-reactToDuelDefeat": "It was a fair fight. Leave the pony be."
     },
-    "escape-from-dogs-success": "You got out of the diamond dogs tunnels safely and gained {{xp}} experience points."
+    "escape-from-dogs-success": "You got out of the diamond dogs tunnels safely and gained {{xp}} experience points.",
+    "dumps-dog-hole-heard": "There's something off in this area. A faint cold breeze seems to be coming from the ground, loaded with a earthy scent."
   }
 }
