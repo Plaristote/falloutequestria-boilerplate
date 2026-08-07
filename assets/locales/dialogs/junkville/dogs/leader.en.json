@@ -154,6 +154,7 @@
             "scavengers/on-dogs-healed": "You did that ?\n<br><br>\nMaybe we were wrong about the surface dwellers. Very well. Go tell the scavengers they are free to go.",
             "scavengers/on-motives-followup": "It's up to you to convince them. If you fail, then they may forget about us, or pick up what they started back before the great disaster, and murder us all… buf if we must fall, then we fall with blood on our fangs and claws.",
             "scavengers/on-ransom-not-yet": "The clock is ticking, surface dweller. My dogs are in bad shape. And the scavengers… they're feeling the angst. Don't take too long.",
+            "scavengers/on-ransom-not-yet-freed": "I've been trusting your word so far, surface dweller. Don't make me regret it. My dogs are in bad shape. They need your help.",
             "scavengers/on-ransom-received": "<i>He inspects the good carefully, and nods with approbation:</i>\n<br><br>\nThis goes to show that ponies can hold true to their words, sometimes. My pack will be able to raise again.\n",
             "scavengers/on-ransom-received-free-scavengers": "You may go and tell the scavengers they're free to go.<br>",
             "scavengers/on-ransom-received-scavengers-already-freed": "The scavengers were already free to go. This is where our barter ends, then.",

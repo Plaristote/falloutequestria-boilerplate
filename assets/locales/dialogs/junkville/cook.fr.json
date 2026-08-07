@@ -175,7 +175,14 @@
       "dogs/negociations/killed": "Pas question. Ils ont assassiné des fouilleurs pacifiques. Nous ne pouvons pas faire confiance à ces chiens. À ce stade, l'un de nos deux groupes devra se tirer de cet endroit. Et je veillerai à ce que ma famille neleur maison. On va s'occuper de ces chiens, et on va s'occuper d'eux tout de suite.",
       "dogs/negociations/point-safety-made": "...Tu as peut-être raison à ce sujet. J'en ai marre d'enterrer des gens à cause d'une querelle qu'aucun de nous n'a commencée. Mais être fatigué de quelque chose n'est pas la même chose que de se faire confiance.",
       "dogs/negociations/point-scavengers-made": "D'accord, je te l'accorde. On ne leur a pas fait de mal. Qu'ils laissent les notres partir, c'est une chose. Qu'on les laisse s'approcher de nous en est une autre.",
-      "dogs/negociations/start-assembly": "Bien. Bien que je ne puisse pas prendre la décision pour toute la ville. Nous en discuterons lors de la prochaine assemblée communale."
+      "dogs/negociations/start-assembly": "Bien. Bien que je ne puisse pas prendre la décision pour toute la ville. Nous en discuterons lors de la prochaine assemblée communale.",
+      "dogs/negociations/trigger-ask-hostage-release": "Je vais voir ce que je peux faire.",
+      "job-bandits": "Il y a un autre problème, si ça t'intéresse. Des bandits volent les voyageurs et les caravanes aux alentours, et je pense qu'ils doivent s'être installés pas loin. Si tu peux trouver où se trouve leur campement, ça me rendrait un fier service.",
+      "job-bandits-details": "Trouve leur campement - n'essaye pas de les déloger tout seul. Tu reviens, tu m'indique ou ils sont, et on verra comment est-ce qu'on se débarasse d'eux.",
+      "jobs-bandits-details-nest-found": "En fait, je sais déjà où les bandits campent.",
+      "take-meal": "C'est ce qu'on va voir. Donne-moi un peu de tout, je pourrais bouffer n'importe quoi, au point ou j'en suis.",
+      "take-meal-moss-salad": "Donne-moi un peu de cette salade de mousse.",
+      "take-meal-stew": "Je vais prendre le ragoût."
     }
   }
 }

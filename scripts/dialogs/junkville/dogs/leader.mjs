@@ -83,12 +83,12 @@ export default class Dialog {
     return "scavengers/intimidation-failure";
   }
 
-  // Main Hub topic covering the pack's injuries. Where it goes depends on
-  // how much the player already knows: if they've never heard about the
-  // hostages, Fido volunteers the connection himself; if they already know
-  // about the hostages but have earned the full story (healed the dogs),
-  // he'll finally admit the bandits are to blame; otherwise it's just a
-  // status check on the hostage situation.
+  onCaptiveRansomNotYet() {
+    return captiveReleaseAuthorized()
+      ? this.dialog.tr("scavengers/on-ransom-not-yet")
+      : this.dialog.tr("scavengers/on-ransom-not-yet-freed");
+  }
+
   woundedDogsTopic() {
     if (!hasFoundDisappearedPonies()) return "scavengers/wounded-intro";
     if (this.canAskAboutWoundedDogs) return "bandits/intro";
@@ -96,9 +96,6 @@ export default class Dialog {
   }
 
   get canAskAboutWoundedDogs() {
-    // The full story - bandits chased us out, that's why my dogs are hurt -
-    // only comes out once the player has actually healed them. Before that,
-    // all Fido will admit is that he needs supplies.
     return this.dialog.npc.getVariable("canAskAboutWoundedDogs", 0) == 1
         && this.scavengerHealedWoundedDogs
         && (!this.banditsQuest || !this.banditsQuest.script.talkedWithDogs);
@@ -127,9 +124,6 @@ export default class Dialog {
     game.dataEngine.addReputation("diamond-dogs", -15);
   }
 
-  // "Release them, now" and "They aren't bandits" both land here. This is a
-  // genuine failable persuasion attempt (not a hidden option only shown to
-  // already-high-speech characters) - Fido needs real convincing.
   scavengerReleaseAttempt() {
     const success = skillCheck(game.player, "speech", 85);
     if (success) return "scavengers/convince-success";
@@ -278,12 +272,6 @@ export default class Dialog {
     return `negociations/${reactionState}`;
   }
 
-  // Fido's side of the "who's in front of who" hub topic. It walks through
-  // three phases: getting him to agree to negotiate at all, waiting for
-  // Randy to independently do the same, then bringing up Randy's want
-  // (trading the tunnels' gems) once both have bought in. Once the
-  // tunnel-access debate with Randy is underway, this defers to the
-  // existing pass-on-the-decision flow instead.
   negociateBringUp() {
     this.dialog.npc.setVariable("negociateBroughtUp", 1);
     if (!hasMediationStarted())
@@ -321,13 +309,6 @@ export default class Dialog {
     this._negociateClarified = true;
   }
 
-  // Fido isn't interested in opening relations with the surface - a
-  // lifetime of chains and cages, then the bandits crawling into his
-  // tunnels, gave him no reason to trust ponies. He won't budge on words
-  // alone. What can move him is proof: his wounded actually healed, and
-  // Junkville bleeding alongside the pack against the raiders instead of
-  // leaving them to die. Short of that proof, only truly exceptional
-  // conviction (a very hard speech check) stands a chance of swaying him.
   negociateCanConvinceDogs() {
     const provenGoodwill = this.scavengerHealedWoundedDogs && banditsDefeatedWithJunkvilleHelp();
     return provenGoodwill || skillCheck(game.player, "speech", 90);
@@ -346,20 +327,11 @@ export default class Dialog {
       "negociations/on-accepted-bandits" : "negociations/on-accepted";
   }
 
-  // The moment Fido commits to negotiating is also the moment Dolly's
-  // opposition turns into a real threat to him. She reacts on the spot so
-  // the player has a chance to notice something is wrong before it's too
-  // late - if they don't act on it, she'll have taken the pack from him
-  // by the time they next set foot back in the caverns.
   negociateOnAccepted() {
     startMediation();
     level.getScriptObject().dollyReactsToDogsNegotiating();
   }
 
-  // The "bring up Randy's want" debate: convincing Fido to let Junkville
-  // trade for the tunnels' gems and diamonds. One framing lands, the
-  // other two shut the topic down for good this playthrough. This
-  // textHook only fires on revisits, once the debate is already settled.
   negociateTradeResolvedText() {
     return this.negociateQuest.hasVariable("fidoTradeLocked") ?
       this.dialog.t("negociations/trade-locked-recap") : this.dialog.t("negociations/trade-accepted-recap");
@@ -436,13 +408,9 @@ export default class Dialog {
   banditsQuestAccepted() {
     let quest = game.quests.getQuest("junkville/cavernBandits");
     if (!quest) {
-      // Nobody told the player about this yet - Fido is the first to bring
-      // it up, so he's the one credited with handing out the quest.
       quest = game.quests.addQuest("junkville/cavernBandits");
       quest.script.pushUniqueEvent("given-by-dogs");
     } else {
-      // Randy may already have sent the player looking for the bandits'
-      // camp. Either way, the player now has the full story from Fido.
       quest.script.pushUniqueEvent("talked-with-dogs");
     }
     return "bandits/tell-about-location";
@@ -499,6 +467,6 @@ export default class Dialog {
     } else if (resolution === "dogs-help") {
       return "bandits/report-dogs";
     }
-    return "entry"; // Fallback
+    return "entry";
   }
 }

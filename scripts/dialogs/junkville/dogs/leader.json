@@ -730,7 +730,13 @@
         "scavengers/on-ransom-not-yet": {
             "answers": [
             ],
+            "hook": "onCaptiveRansomNotYet",
             "text": "scavengers/on-ransom-not-yet"
+        },
+        "scavengers/on-ransom-not-yet-freed": {
+            "answers": [
+            ],
+            "text": "scavengers/on-ransom-not-yet-freed"
         },
         "scavengers/on-ransom-received": {
             "answers": [

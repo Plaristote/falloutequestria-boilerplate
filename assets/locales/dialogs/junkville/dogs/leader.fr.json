@@ -132,6 +132,7 @@
             "scavengers/on-dogs-healed": "C'est toi qui as fait ça ?\n<br><br>\nPeut-être qu'on s'est trompés sur le compte des habitants de la surface. Très bien. Va dire aux pillards qu'ils sont libres de partir.",
             "scavengers/on-motives-followup": "C'est à toi de les convaincre. Si tu échoue, alors ils pourront nous oublier, où reprendre ce qu'ils ont commencé avant le grand désastre, et nous abattre… mais si nous tombons, nous tomberons les griffes ensanglantées.",
             "scavengers/on-ransom-not-yet": "Le temps passe, étranger. Mes chiens sont mal en point. Et les captifs… commencent à sentir l'angoisse. Ne tarde pas trop.",
+            "scavengers/on-ransom-not-yet-freed": "J'ai cru en ta parôle, jusque là, poney. Ne me le fais pas regretter. Mes chiens sont mal en point, et ils ont besoin de l'aide que tu nous as promise.",
             "scavengers/on-ransom-received": "<i>Il inspecte le matériel avec attention, et te donne un regard approbateur :</i>\n<br><br>\nExactement ce que j'avais demandé. Mes blessés te seront reconnaissants… et mes guerriers, moins sur les crocs.\n<br><br>\nEt maintenant qu'il est prouvé que nous pouvions faire affaire… parlons de la suite.",
             "scavengers/on-ransom-received-free-scavengers": "Tout d'abord, tu peux aller dire aux fouilleurs qu'ils sont libres de partir.\n<br><br>\nMais je voudais aussi te parler d'autre chose.",
             "scavengers/on-ransom-received-scavengers-already-freed": "Les fouilleurs ont déjà été libérés. C'est donc ici que ce termine notre transaction.",
