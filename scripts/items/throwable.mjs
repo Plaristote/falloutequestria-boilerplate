@@ -72,7 +72,6 @@ export class ThrowableBehaviour extends ItemBehaviour {
 
   triggerUseAt(x, y) {
     const successRate = this.getUseAtSuccessRate(x, y);
-    const roll = getValueFromRange(0, 100);
     let dispersedPos;
 
     randomCheck(successRate, {

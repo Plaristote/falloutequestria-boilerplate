@@ -21,7 +21,7 @@ export default class Ripper extends WeaponBehaviour {
 
   // as fast as a combat knife
   getActionPointCost() {
-    return 3;
+    return this.model.useMode == "hit" ? 3 : 2;
   }
 
   getDamageType() {
