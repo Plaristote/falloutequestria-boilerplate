@@ -21,7 +21,7 @@ function ifRathianIsInvolved(callback) {
 }
 
 const rathianPopPoints = {
-  "junkville-dumps":               { condition: "shouldPopAtDumps", position: [19,189] },
+  "junkville-dumps":               { condition: "shouldPopAtDumps", position: [19,115] },
   "junkville-stabletech-facility": { condition: "shouldPopAtFacility", position: [29,25] }
 };
 

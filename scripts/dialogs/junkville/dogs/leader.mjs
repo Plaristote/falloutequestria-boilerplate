@@ -6,7 +6,8 @@ import {
   authorizeCaptiveRelease,
   enableScavengerRansom,
   skipScavengerRansom,
-  dogsExpectingSupplies
+  dogsExpectingSupplies,
+  captiveReleaseAuthorized
 } from "../../../quests/junkvilleDumpsDisappeared.mjs";
 import {
   NEGOTIATE_FIDO_ARGUMENT_FLAGS,
@@ -56,7 +57,9 @@ export default class Dialog {
   }
 
   canAskAboutScavengers() {
-    return this.hasScavengerQuest() && !this.scavengerQuest.script.ransomActive;
+    return this.hasScavengerQuest()
+      && !captiveReleaseAuthorized()
+      && !this.scavengerQuest.script.ransomActive;
   }
 
   knowsAboutDisappearedScavengers() {
@@ -446,12 +449,24 @@ export default class Dialog {
   }
 
   banditsCanSuggestCollapse() {
-    return game.player.statistics.science > 45 || game.player.statistics.explosives > 40;
+    return false;
+    //return game.player.statistics.science > 45 || game.player.statistics.explosives > 40;
+  }
+
+  banditsCanAskReward() {
+    return this.dialog.npc.getVariable("banditsReward") == 1;
+  }
+
+  banditsGiveReward() {
+    this.dialog.npc.setVariable("banditsReward", 2);
+    game.player.inventory.addItemOfType("gemstone", 3);
+    game.dataEngine.addReputation("diamond-dogs", -10);
   }
 
   banditsBarterReward() {
     const success = skillCheck(game.player, "barter", 60);
     if (success) {
+      this.dialog.npc.setVariable("banditsReward", 1);
       return "bandits/barter-success";
     }
     return "bandits/barter-failure";

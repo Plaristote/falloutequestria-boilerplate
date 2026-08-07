@@ -21,7 +21,11 @@
             "player-not-trusting": "Je ne suis pas sûr de pouvoir vous faire confiance… Suis-je libre de partir, ou allez-vous me tuer comme les autres ?",
             "reject-help": "Merci, mais non merci. La jument m'a fait confiance. Je peux le faire tout seul.",
             "stable-answer": "En mission pour sauver une écurie ? Alors vous êtes un habitant d'écurie. Je me suis dit… que vous aviez l'air bien propre et en bonne santé pour un voyageur ordinaire… alors vous me dites qu'il y a une écurie dans le coin qui est toujours en activité ? C'est… assez intéressant. Avez-vous besoin d'aide ?",
-            "untrust-answer": "Quoi ? Non ! Écoute, il faut faire attention par ici. Je t'ai repéré, toi et ces bandits, bien avant que vous ne croisiez ton chemin… et à en juger par ton apparence, je me suis dit que tu serais une proie facile pour eux. Je suis juste venu pour aider, je n'attends rien de toi. Alors, qu'en dis-tu ? On peut se présenter correctement maintenant ?"
+            "untrust-answer": "Quoi ? Non ! Écoute, il faut faire attention par ici. Je t'ai repéré, toi et ces bandits, bien avant que vous ne croisiez ton chemin… et à en juger par ton apparence, je me suis dit que tu serais une proie facile pour eux. Je suis juste venu pour aider, je n'attends rien de toi. Alors, qu'en dis-tu ? On peut se présenter correctement maintenant ?",
+            "text-bubbles": {
+              "0": "Salut !",
+              "1": "Tout va comme tu veux ?"
+            }
         }
     }
 }

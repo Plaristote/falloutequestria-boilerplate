@@ -49,6 +49,11 @@
             "hook": "banditsConvinceToHelp",
             "text": "bandits-ask-reinforcements"
         },
+        "bandits-ask-reward": {
+            "availableHook": "banditsCanAskReward",
+            "state": "bandits/give-reward",
+            "text": "bandits-ask-reward"
+        },
         "bandits-confirm-quest": {
             "hook": "banditsQuestAccepted",
             "text": "bandits-confirm-quest"
@@ -370,6 +375,12 @@
             ],
             "text": "bandits/details"
         },
+        "bandits/give-reward": {
+            "answers": [
+            ],
+            "hook": "banditsGiveReward",
+            "text": "bandits/give-reward"
+        },
         "bandits/intro": {
             "answers": [
                 "bandits-ask-details",
@@ -395,16 +406,19 @@
         },
         "bandits/report-dogs": {
             "answers": [
+                "bandits-ask-reward"
             ],
             "text": "bandits/report-dogs"
         },
         "bandits/report-junkville": {
             "answers": [
+                "bandits-ask-reward"
             ],
             "text": "bandits/report-junkville"
         },
         "bandits/report-solo": {
             "answers": [
+                "bandits-ask-reward"
             ],
             "text": "bandits/report-solo"
         },

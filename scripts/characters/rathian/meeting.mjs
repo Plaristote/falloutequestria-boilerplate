@@ -11,14 +11,15 @@ function isDropOffLevel() {
 
 class Rathian extends Base {
   get dialog() {
-    if (level.name === "rathian-meeting")
+    if (level.name === "rathian-meeting" && game.playerParty.find(this.model) == null)
       return "rathian-introduction";
     return null;
   }
   
   get textBubbles() {
     return [
-      {content: "Hi !", duration: 1500, color: "lightgreen"}
+      {content: i18n.t("dialogs.rathian-introduction.text-bubbles.0"), duration: 1400, color: "lightgreen"},
+      {content: i18n.t("dialogs.rathian-introduction.text-bubbles.1"), duration: 1800, color: "lightgreen"}
     ];
   }
 

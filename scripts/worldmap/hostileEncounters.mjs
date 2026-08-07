@@ -3,6 +3,7 @@ import goldenHerdScoutParty from "./goldenHerdScouts.mjs";
 import steelRangerScoutParty from "./steelRangerScouts.mjs";
 import crystalDenScoutParty from "./crystalDenScouts.mjs";
 import {canJunkvilleBanditsPop, junkvilleBanditsParty} from "./junkvilleBandits.mjs";
+import {canSlaversPop, slaversParty} from "./slavers.mjs";
 
 function availableEncounters() {
   const zones = game.worldmap.getCurrentZones();
@@ -38,6 +39,9 @@ function availableEncounters() {
   }
   if (zones.indexOf("junkville-bandits") >= 0 && canJunkvilleBanditsPop()) {
     array.push(junkvilleBanditsParty);
+  }
+  if (zones.indexOf("slaver-hunting-ground") >= 0 && canSlaversPop()) {
+    array.push(slaversParty);
   }
   console.log("RANDOM ENCOUNTERS CURRENT ZONES", zones);
   return array;

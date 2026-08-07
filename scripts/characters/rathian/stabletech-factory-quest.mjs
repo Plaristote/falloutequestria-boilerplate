@@ -49,9 +49,9 @@ class Rathian extends CharacterBehaviour {
       return [{ content: i18n.t("junkville-stabletech.rathian-first-computer"), duration: 6565 }];
     case States.FollowingPlayerInFacilty:
       if (level.script.powerEnabled)
-        return [{ content: i18n.t("junkville-stabletech.rathian-suggest-enable-power"), duration: 5000 }];
-      else
         return [{ content: i18n.t("junkville-stabletech.rathian-suggest-storage"), duration: 5000 }];
+      else
+        return [{ content: i18n.t("junkville-stabletech.rathian-suggest-enable-power"), duration: 5000 }];
     }
     return [];
   }
