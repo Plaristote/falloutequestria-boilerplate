@@ -202,6 +202,15 @@
         "value": 75,
         "weight": 2
     },
+    "hoof-blades": {
+        "icon": "",
+        "isGroupable": true,
+        "scriptName": "hoof-blades.mjs",
+        "sprite": "misc",
+        "type": "weapon",
+        "value": 230,
+        "weight": 3
+    },
     "hunting-rifle": {
         "icon": "hunting-rifle.png",
         "isGroupable": false,
@@ -365,6 +374,42 @@
         "type": "armor",
         "value": 9000,
         "weight": 50
+    },
+    "power-hooves": {
+        "icon": "powerhooves.png",
+        "isGroupable": false,
+        "scriptName": "power-hoof.mjs",
+        "sprite": "misc",
+        "type": "weapon",
+        "value": 4500,
+        "weight": 8
+    },
+    "power-saddle": {
+        "icon": "saddle-basic.png",
+        "isGroupable": true,
+        "scriptName": "powerSaddle.mjs",
+        "sprite": "",
+        "type": "armor",
+        "value": 500,
+        "weight": 25
+    },
+    "rebar-club": {
+        "icon": "rebar-club.webp",
+        "isGroupable": true,
+        "scriptName": "rebar-club.mjs",
+        "sprite": "misc",
+        "type": "weapon",
+        "value": 75,
+        "weight": 12
+    },
+    "ripper": {
+        "icon": "ripper.webp",
+        "isGroupable": false,
+        "scriptName": "ripper.mjs",
+        "sprite": "knife",
+        "type": "weapon",
+        "value": 3500,
+        "weight": 5
     },
     "saddle": {
         "icon": "saddle-basic.png",
