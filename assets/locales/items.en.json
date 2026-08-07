@@ -1,7 +1,7 @@
 {
     "use-modes": {
         "hit": "Hit",
-        "burst": "Rafale",
+        "burst": "Burst",
         "reload": "Reload",
         "shoot": "Shoot",
         "shove": "Shove",
