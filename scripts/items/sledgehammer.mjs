@@ -1,7 +1,6 @@
 import {WeaponBehaviour} from "./weapon.mjs";
-import {ThrowableBehaviour} from "./throwable.mjs";
 import {getValueFromRange} from "../behaviour/random.mjs";
-import {Explosion} from "../behaviour/explosion.mjs";
+import {BlastWave} from "../behaviour/explosion.mjs";
 import {attemptPushAway} from "./push.mjs";
 
 export default class Sledgehammer extends WeaponBehaviour {
@@ -11,14 +10,6 @@ export default class Sledgehammer extends WeaponBehaviour {
     this.skill = "meleeWeapons";
     this.zoneSize = 1;
     this.useModes = ["hit", "swing"];
-
-    // Only mix in the parts of ThrowableBehaviour we don't override
-    // ourselves, so subclasses (see power-sledgehammer.mjs) can still use
-    // super.attemptToUseAt()/super.useAt() normally.
-    this.getUseAtSuccessRate = ThrowableBehaviour.prototype.getUseAtSuccessRate.bind(this);
-    this.disperseThrow       = ThrowableBehaviour.prototype.disperseThrow.bind(this);
-    this.onCriticalFailure   = ThrowableBehaviour.prototype.onCriticalFailure.bind(this);
-    this.triggerUseAt        = ThrowableBehaviour.prototype.triggerUseAt.bind(this);
   }
 
   get zoneTarget() {
@@ -26,7 +17,7 @@ export default class Sledgehammer extends WeaponBehaviour {
   }
 
   get requiresTarget() {
-    return this.model.useMode == "hit";
+    return this.model.useMode == "hit" || this.model.useMode == "swing";
   }
 
   get triggersCombat() {
@@ -46,31 +37,15 @@ export default class Sledgehammer extends WeaponBehaviour {
   }
 
   getRange() {
-    return 2;
+    return 0;
   }
-
-  // -- "hit" mode: single target, chance to push --
 
   useOn(target) {
-    const damage = getValueFromRange(...this.getDamageRange(), this.user);
-    let   mitigated = damage;
-
-    if (typeof target.script?.mitigateDamage == "function")
-      mitigated = target.script.mitigateDamage(damage, this.getDamageType(), this.user);
-    game.appendToConsole(i18n.t("messages.weapons.use", {
-      user:   this.user.statistics.name,
-      item:   this.model.displayName,
-      target: target.statistics.name,
-      damage: mitigated
-    }));
-    target.takeDamage(mitigated, this.user);
-    this.playHitSound(target, mitigated);
-    attemptPushAway(target, mitigated, this.user.position);
-    return true;
+    if (super.useOn(target)) {
+      attemptPushAway(target, this._lastDamage, this.user.position);
+      return true;
+    }
   }
-
-  // -- "swing" mode: zone damage in front of the wielder, reusing the same
-  //    Explosion behaviour grenades use for area damage + knockback --
 
   attemptToUseAt(x, y) {
     if (!this.user.hasLineOfSight(x, y))
@@ -85,20 +60,70 @@ export default class Sledgehammer extends WeaponBehaviour {
   getThrowAnimationSteps(x, y) {
     return [
       { type: "Sound", sound: this.hitSound, object: this.user },
-      { type: "Animation", animation: "melee-swing", object: this.user }
+      { type: "Animation", animation: "melee", object: this.user }
     ];
   }
 
-  useAt(x, y) {
+  getDamageFor(target) {
     const damage = getValueFromRange(...this.getDamageRange(), this.user);
-    const swing  = new Explosion({ x: x, y: y, z: this.user.floor });
 
-    swing.withDamage(damage)
-         .withDamageType(this.getDamageType())
-         .withRadius(this.zoneSize)
-         .withDamageDealer(this.user)
-         .withSound(this.hitSound)
+    if (typeof target.script?.mitigateDamage == "function")
+      return target.script.mitigateDamage(damage, this.getDamageType(), this.user);
+    return damage;
+  }
+
+  applySwingOnTarget(target) {
+    if (target.getObjectType() == "Character" && target != this.user) {
+      const damage = this.getDamageFor(target);
+      const successRate = getUseSuccessRateAt(target);
+
+      randomCheck(successRate, {
+        success: () => {
+          game.appendToConsole(i18n.t("messages.damaged", {
+            target: target.statistics.name, damage: damage
+          }));
+          target.takeDamage(damage, this.user);
+          attemptPushAway(target, damage, this.user.position);
+        }
+        failure: () => {
+          game.appendToConsole(i18n.t("messages.weapons.dodge", {
+            target: target.displayName,
+            user: this.user.displayName
+          });
+        }
+      });
+    }
+  }
+
+  triggerUseAt(x, y) {
+    const successRate = this.getUseAtSuccessRate(x, y);
+    let callback = this.useAt.bind(this, x, y);
+
+    randomCheck(successRate, {
+      criticalFailure: () => {
+        callback = this.criticalFailToUseAt.bind(this, x, y);
+      }
+    });
+    return {
+      steps: this.getThrowAnimationSteps(x, y),
+      callback: callback
+    };
+  }
+
+  useAt(x, y) {
+    const swing  = new BlastWave({ x: x, y: y, z: this.user.floor });
+
+    swing.triggeredOnObject = this.applySwingOnTarget.bind(this);
+    swing.withRadius(this.zoneSize)
          .trigger();
     return true;
+  }
+
+  criticalFailToUseAt(x, y) {
+    game.appendToConsole(i18n.t("messages.weapons.critical-failure", {
+      user: this.user.displayName,
+      item: this.model.displayName
+    })
+    this.user.takeDamage(this.getDamageFor(this.user), null);
   }
 }

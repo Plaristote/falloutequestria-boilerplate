@@ -36,7 +36,7 @@ export class WeaponBehaviour extends ItemBehaviour {
   }
 
   getTargetArmorClass(target) {
-    return target.statistics.armorClass;
+    return target ? target.statistics.armorClass : 0;
   }
 
   getRange() {
@@ -93,6 +93,7 @@ export class WeaponBehaviour extends ItemBehaviour {
     );
     target.takeDamage(damage, this.user); // damage already mitigated
     this.playHitSound(target, damage);
+    this._lastDamage = damage;
     return true;
   }
 

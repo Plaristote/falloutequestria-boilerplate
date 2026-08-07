@@ -4,15 +4,20 @@ import {isBursting, triggerBurstUseOn} from "./burst.mjs";
 export default class AssaultRifle extends Rifle {
   constructor(model) {
     super(model);
-    this.skill = "bigGuns";
+    this.skill = "smallGuns";
     this.model.maxAmmo = 30;
     this.ammoType = "5.56-ammo";
-    this.fireAnimationSound = "gunshot-auto";
     this.useModes = ["shoot", "burst", "reload"];
   }
 
   isBursting() {
     return isBursting(this);
+  }
+
+  get fireAnimationSound() {
+    if (this.model.useMode == "burst")
+      return "gunshot-burst";
+    return "gunshot";
   }
 
   get triggersCombat() {

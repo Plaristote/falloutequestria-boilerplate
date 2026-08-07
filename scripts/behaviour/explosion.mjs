@@ -16,21 +16,13 @@ function makeExplosionAnimationAt(x, y) {
   return {};
 }
 
-export class Explosion {
+export class BlastWave {
   constructor(position) {
     this.position = position;
     this.radius = 0;
-    this.damage = 10;
-    this.damageType = "explosion";
-    this.sound = "explosion";
   }
 
-  withWearer(wearer) { this.wearer = wearer; return this; }
-  withSound(sound)   { this.sound  = sound;  return this; }
-  withDamage(damage) { this.damage = damage; return this; }
-  withDamageType(t)  { this.damageType = t;  return this;}
   withRadius(radius) { this.radius = radius; return this; }
-  withDamageDealer(damageDealer) { this.damageDealer = damageDealer; return this; }
 
   trigger() {
     const fromPos  = [this.position.x - this.radius, this.position.y - this.radius];
@@ -41,11 +33,40 @@ export class Explosion {
         const objects = level.getDynamicObjectsAt(x, y, this.position.z);
 
         if (this.position.z === level.currentFloor)
-          level.addAnimationSequence({ steps: [makeExplosionAnimationAt(x, y)] });
+          this.triggeredOnPosition(x, y);
         objects.forEach(this.triggeredOnObject.bind(this));
       }
     }
+  }
+
+  triggeredOnPosition(x, y) {
+  }
+
+  triggeredOnObject(object) {
+  }
+};
+
+export class Explosion extends BlastWave {
+  constructor(position) {
+    super(position);
+    this.damage = 10;
+    this.damageType = "explosion";
+    this.sound = "explosion";
+  }
+
+  withWearer(wearer) { this.wearer = wearer; return this; }
+  withSound(sound)   { this.sound  = sound;  return this; }
+  withDamage(damage) { this.damage = damage; return this; }
+  withDamageType(t)  { this.damageType = t;  return this;}
+  withDamageDealer(damageDealer) { this.damageDealer = damageDealer; return this; }
+
+  trigger() {
+    super.trigger();
     game.sounds.play(this.sound);
+  }
+
+  triggeredOnPosition(x, y) {
+    level.addAnimationSequence({ steps: [makeExplosionAnimationAt(x, y)] });
   }
 
   triggeredOnObject(object) {
@@ -65,8 +86,8 @@ export class Explosion {
   }
 
   applyDamageOnCharacter(character) {
-    var resistance = (character.statistics.strength * 2 + character.statistics.endurance + character.statistics.agility);
-    var damage = this.damage;
+    let resistance = (character.statistics.strength * 2 + character.statistics.endurance + character.statistics.agility);
+    let damage = this.damage;
 
     if (character === this.wearer)
       damage *= 2;
