@@ -17,7 +17,7 @@ export default class MeleeAttack extends Weapon {
   getDamageRange() {
     const base = this.getDamageBase();
 
-    return [base, 3];
+    return [base, base + 3];
   }
 
   getDamageBase() {
