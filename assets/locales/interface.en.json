@@ -142,7 +142,19 @@
         "clock-wait-day": "Wait {{time}} days",
         "clock-wait-heal": "Wait until fully healed",
         "clock-wait-hour": "Wait {{time}} hours",
-        "clock-wait-minute": "Wait {{time}} minutes"
+        "clock-wait-minute": "Wait {{time}} minutes",
+        "clock-mode-until": "Wait until…",
+        "clock-mode-duration": "Wait for…",
+        "clock-wait-confirm": "Start waiting",
+        "clock-unit-days": "days",
+        "clock-unit-hours": "hours",
+        "clock-unit-minutes": "minutes",
+        "clock-today": "Today",
+        "clock-tomorrow": "Tomorrow",
+        "clock-wait-cancel": "Stop waiting",
+        "clock-wait-remaining": "Remaining time: {{time}}",
+        "clock-wait-ends": "Rest until {{time}}.",
+        "clock-wait-invalid": "Insert a resting duration."
     },
     "templates": {
         "create": "New character",
