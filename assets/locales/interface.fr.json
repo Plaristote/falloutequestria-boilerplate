@@ -172,7 +172,19 @@
         "clock-wait-day": "Attendre {{time}} jours",
         "clock-wait-heal": "Attendre jusqu'à guérison complète",
         "clock-wait-hour": "Attendre {{time}} heures",
-        "clock-wait-minute": "Attendre {{time}} minutes"
+        "clock-wait-minute": "Attendre {{time}} minutes",
+        "clock-mode-until": "Attendre jusqu'à…",
+        "clock-mode-duration": "Attendre pendant…",
+        "clock-wait-confirm": "Commencer à attendre",
+        "clock-unit-days": "jours",
+        "clock-unit-hours": "heures",
+        "clock-unit-minutes": "minutes",
+        "clock-today": "Aujourd'hui",
+        "clock-tomorrow": "Demain",
+        "clock-wait-cancel": "Arrêter d'attendre",
+        "clock-wait-remaining": "Temps restant : {{time}}",
+        "clock-wait-ends": "Repos jusqu'à {{time}}.",
+        "clock-wait-invalid": "Séléctionnez une durée de repos."
     },
     "templates": {
         "create": "Créer",
