@@ -108,8 +108,9 @@ export class CharacterBehaviour extends SceneActorComponent {
   }
 
   onDied() {
+    const decayDurationInSeconds = this.bodyDecayDuration == null ? 15768000 : this.bodyDecayDuration;
     this.playReactionSound("dead");
-    this.model.tasks.addTask("bodyDecayTask", (this.bodyDecayDuration || 15768000) * 1000, 1);
+    this.model.tasks.addTask("bodyDecayTask", decayDurationInSeconds * 1000, 1);
     super.onDied();
   }
 
