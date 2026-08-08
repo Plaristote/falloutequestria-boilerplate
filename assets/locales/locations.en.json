@@ -10,5 +10,27 @@
     "steel-ranger-bunker": "Steel Rangers",
     "thornhoof": "Thornhoof",
     "unhaus": "Unhaus"
+  },
+  "cities": {
+    "entryPoints": {
+      "stable": "Stable",
+      "stable-entrance": "Caverns",
+      "junkville": "Junkville",
+      "junkville-underground": "Underground tunnels",
+      "junkville-dumps": "Dumps",
+      "junkville-stabletech-facility": "Stable-Tech Facility",
+      "hillburrow-entrance": "Entrance",
+      "hillburrow-source": "Source",
+      "hillburrow-backtown": "Coal mine",
+      "cristal-den-entrance": "Entrance",
+      "cristal-den-center": "Town's center",
+      "cristal-den-ranch": "Potiok Ranch",
+      "cristal-den-rld": "Red Light District",
+      "cristal-den-slums": "Slums",
+      "capital-laboratory": "Umbridge Laboratory (underground)",
+      "capital-laboratory-entry": "Umbridge Laboratory",
+      "capital-theater": "Ash Haven (Theater)",
+      "capital-suburbs": "Suburbs"
+    }
   }
 }

@@ -8,7 +8,29 @@
     "junkville": "Junkville",
     "stable-103": "Étable 103",
     "steel-ranger-bunker": "Steel Rangers",
-    "thornhoof": "Thornhoof",
+    "thornhoof": "Sabairain",
     "unhaus": "Inhaus"
+  },
+  "cities": {
+    "entryPoints": {
+      "stable": "Étable",
+      "stable-entrance": "Caverne",
+      "junkville": "Junkville",
+      "junkville-underground": "Tunnels souterrains",
+      "junkville-dumps": "Décharge",
+      "junkville-stabletech-facility": "Entrepôt Stable-Tech",
+      "hillburrow-entrance": "Entrée",
+      "hillburrow-source": "Source",
+      "hillburrow-backtown": "Mine de charbon",
+      "cristal-den-entrance": "Entrée",
+      "cristal-den-center": "Centre-ville",
+      "cristal-den-ranch": "Ranch des Potioks",
+      "cristal-den-rld": "Quartier rouge",
+      "cristal-den-slums": "Bidonville",
+      "capital-laboratory": "Laboratoire Ombrage (souterrain)",
+      "capital-laboratory-entry": "Laboratoire Ombrage",
+      "capital-theater": "Ash-aven (Théâtre)",
+      "capital-suburbs": "Banlieue"
+    }
   }
 }
