@@ -2,16 +2,21 @@
   "quests": {
     "junkville/cavernBandits": {
       "title": "Maudits Bandits",
-      "find-lair": "Trouver le repère des bandits",
+      "locate-nest": "Trouver le repère des bandits",
+      "report-nest": "Révéler la positions des bandits à Randy",
       "remove-bandits": "Se débarasser des bandits",
+      "reported-to-leader": "Annoncer la victoire au chef des chiens à diamant",
+      "reported-to-randy": "Annoncer la victoire à Randy",
       "desc-dogs-told-lair": "Les Chiens à Diamant t'ont dit que des bandits ont installé leur campement dans leurs tunnels, de l'autre côté de la ville. Ils ont sappés leurs propres tunnels pour les empêcher de progresser, mais il existe une autre entrée, via l'extérieur.",
       "desc-item-told-lair": "En faisant les poches d'un bandit décédé, tu as trouvé une note portant des indications sur l'emplacement du campement des raiders. Il est situé proche d'une ville nommée Junkville.",
       "desc-given-by-dogs": "Rex, chef des Chiens à Diamant, t'as parlé d'une bande de raiders qui ont récemment envahit ses tunnels. Ils ont blessés plusieurs membres de la meute, et les ont forcé à se retirer plus profondément dans les tunnels.",
-      "desc-given-by-randy": "Randy, de Junkville, t'as parlé de bandits qui terrorisent les voyageurs, dernièrement. Avec la recrudescence d'attaques dans le coin, ils ont probablement installé un camp proche d'ici. Randy veut que tu le trouve.",
+      "desc-given-by-cook": "Randy, de Junkville, t'as parlé de bandits qui terrorisent les voyageurs, dernièrement. Avec la recrudescence d'attaques dans le coin, ils ont probablement installé un camp proche d'ici. Randy veut que tu le trouve.",
       "desc-talked-with-dogs": "Rex, chef des Chiens à Diamant, a aussi dit avoir des problèmes avec les bandits. Ils ont envahit les tunnels, blessant plusieurs chiens, et les forçant à se replier dans les profondeurs des tunnels.",
-      "desc-talked-with-randy": "Ces bandits ont aussi causé du tort à Junkville : Randy voudrait savoir où se trouve leur campement.",
-      "desc-fought-with-dogs": "Tu as convaincu les Chiens à Diamant de te soutenir, et vous avez vaincu les bandits ensemble.",
-      "desc-fought-with-randy": "Tu as accepté d'aider Randy et les gens de Junkville à chasser les bandits.",
+      "desc-talked-with-cook": "Ces bandits ont aussi causé du tort à Junkville : Randy voudrait savoir où se trouve leur campement.",
+      "desc-raid-with-dogs": "Tu as convaincu les Chiens à Diamant de te soutenir, et vous avez vaincu les bandits ensemble.",
+      "desc-raid-with-junkville": "Tu as accepté d'aider Randy et les gens de Junkville à chasser les bandits.",
+      "desc-victory-with-junkville": "Avec le soutien des volontaires de Junkville, vous avez chassé les bandits de leur repère souterrain, assurant la sécurité des voyageurs et des caravanes. Du moins, jusqu'à ce que de nouveaux bandits viennent combler le vide.",
+      "desc-victory-with-dogs": "Avec l'aide des chiens à diamant, tu as pu chasser les bandits de leur repère souterrain. Les chiens à diamant peuvent maintenant reprendre possession des tunnels qu'ils ont si durement creusés.",
       "desc-let-randy-fight": "Randy et la bonne gent de Junkville est allée botter le derrière des bandits. Certains n'en sont pas revenus, mais c'est le prix à payer pour la justice.",
       "desc-removed-bandits": "Les bandits ne sont plus une menace."
     }

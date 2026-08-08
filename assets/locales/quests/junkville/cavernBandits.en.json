@@ -2,16 +2,21 @@
   "quests": {
     "junkville/cavernBandits": {
       "title": "Raider Danger",
-      "find-lair": "Find the raiders' lair",
+      "locate-nest": "Find the raiders' lair",
+      "report-nest": "Reveal the lair's location to Randy",
       "remove-bandits": "Get rid of the raiders",
+      "reported-to-leader": "Report your victory to the diamond dogs",
+      "reported-to-randy": "Report your victory to Randy",
       "desc-dogs-told-lair": "The Diamond Dogs told you the raider band set up camp in their tunnels, on the other side of town. They sabotaged their own tunnels to stop the raiders advance, but there's another entrance from the outside.",
       "desc-item-told-lair": "While looking around the pockets of a deceased raider, you found a note bearing indications on how to get inside the raiders' lair. It's located near a town called Junkville.",
       "desc-given-by-dogs": "Rex, leader of the Diamond Dogs, told you about a band of raiders who recently invaded their tunnels. They wounded multiple member of his pack, and forced them to retreat deeper down the tunnels.",
-      "desc-given-by-randy": "Randy, from Junkville, told you about a bunch of raiders, who've been terrorising travelers, lately. Given how many reports there's been lately, they're probably crashing somewhere near. Randy wants you to find out where they are.",
+      "desc-given-by-cook": "Randy, from Junkville, told you about a bunch of raiders, who've been terrorising travelers, lately. Given how many reports there's been lately, they're probably crashing somewhere near. Randy wants you to find out where they are.",
       "desc-talked-with-dogs": "Rex, leader of the Diamond Dogs, also reported trouble coming from the raiders. They invaded the dogs' tunnels, wounding several of them, and forcing them further deep into the tunnels.",
-      "desc-talked-with-randy": "These raiders have also been causing trouble to the town of Junkville: Randy would like to know about the bandits' nest whereabouts.",
-      "desc-fought-with-dogs": "You convinced the Diamond Dogs to send you some help, and fought off the raiders with them.",
-      "desc-fought-with-randy": "You took up Randy's offer and took the fight to the raiders, along with him and the folks of Junkville.",
+      "desc-talked-with-cook": "These raiders have also been causing trouble to the town of Junkville: Randy would like to know about the bandits' nest whereabouts.",
+      "desc-raid-with-dogs": "You convinced the Diamond Dogs to send you some help, and fought off the raiders with them.",
+      "desc-raid-with-junkville": "You took up Randy's offer and took the fight to the raiders, along with him and the folks of Junkville.",
+      "desc-victory-with-junkville": "With the help of Junkville's volunteers, you chased every bandits from the underground lair, ensuring the safety of travelers and caravans. At least, until a new group of bandits decides to fill in the void.",
+      "desc-victory-with-dogs": "With the Diamond Dogs help, you rid the underground from the bandits. The Diamond Dogs can now reclaim the tunnels that they worked so hard to dig.",
       "desc-let-randy-fight": "Randy and the good folk from Junkville went off to kick some raiders flanks. Some casualties occured, but it's the price to pay for justice and safety.",
       "desc-removed-bandits": "The raiders are no longer a threat."
     }
