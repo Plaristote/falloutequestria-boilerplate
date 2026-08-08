@@ -6,7 +6,7 @@ export function isBursting(weapon) {
 
 export function getBystandersInLine(weapon, target) {
   const from = weapon.user.position;
-  const characters = level.getCharactersBetween(from.x, from.y, target.position.x, target.position.y);
+  const characters = level.getCharactersBetween(from.x, from.y, target.position.x, target.position.y, weapon.user.floor);
 
   return characters
     .slice(0, -1)
