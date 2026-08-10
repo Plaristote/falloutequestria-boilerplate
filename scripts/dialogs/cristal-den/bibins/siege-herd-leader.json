@@ -20,6 +20,11 @@
             "availableHook": "sentByBibin",
             "state": "on-bibin-start",
             "text": "start-bibin-quest"
+        },
+        "start-negociate": {
+            "availableHook": "canTryToNegotiate",
+            "state": "negociate-reject",
+            "text": "start-negociate"
         }
     },
     "entryPoint": "entry",
@@ -31,9 +36,17 @@
             "mood": "smile",
             "text": "after-fight"
         },
+        "enforcers-left": {
+            "answers": [
+            ],
+            "hook": "onEnforcersLeft",
+            "mood": "smile",
+            "text": "after-fight"
+        },
         "entry": {
             "answers": [
                 "start-bibin-quest",
+                "start-negociate",
                 "already-killed-enforcers",
                 "entry-provocative-exit",
                 "entry-exit"
@@ -42,10 +55,12 @@
             "mood": "angry",
             "text": "entry"
         },
-        "leave-bubble": {
+        "negociate-reject": {
             "answers": [
             ],
-            "text": "leave-bubble"
+            "hook": "startFight",
+            "mood": "laugh",
+            "text": "negociate-reject"
         },
         "on-bibin-restart": {
             "answers": [

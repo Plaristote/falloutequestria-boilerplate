@@ -1,0 +1,23 @@
+{
+  "quests": {
+    "cristal-den/bibins-rescue-herd": {
+      "title": "Bibin et ses Pôtes en Péril",
+      "rescue": "Sauver les assiégés",
+      "kill-scouts": "Tuer les flics du Havre Cristallin",
+      "desc-intro-bibin": "Quelque part, à l'extérieur du Havre Cristallin, Bibin a des \"pôtes\" qui se sont fait encerclés par les flics du Havre. S'ils sont tués, ou pire, capturés, cela pourrait devenir un problème pour Bibin, et il t'as demandé de t'en occuper.",
+      "desc-met-enforcer": "Les flics ont complètement encerclés la zone. Leur sergent voudrait prendre les intrus vivant pour les questionner, plutôt que de les tuer. Peut-être pourra-t-il être convaincu de parlementer, d'une manière ou d'une autre.",
+      "desc-met-herd-leader": "À l'intérieur, les pôtes de Bibin se sont présentés comme des guerriers du « Troupeau d'Or ». Ils se sont barricadés et sont lourdement armés.",
+      "desc-sent-as-negotiator": "Le sergent t'as demandé d'aller à l'intérieur, et de convaincre les intrus de se rendre dans le calme. La suite ne dépend plus que de toi.",
+      "desc-persuade-failed": "Tu as tenté de convaincre les flics de laisser tomber, mais le sergent préfère camper sur ses positions.",
+      "desc-persuade-refused-known-threat": "Tu as tenté de convaincre les flics de laisser tomber. Le sergent refuse catégoriquement, car il sait que ces intrus font partie du Troupeau d'Or, et il ne laissera pas tranquille ce qu'il percoit comme une menace réelle.",
+      "desc-enforcers-persuaded": "Tu as convaincu les flics de laisser tomber. Le siège est levé, et le chemin de la maisonnette est libre.",
+      "desc-enforcers-bribed": "Un pot de vin conséquent aura été suffisant pour convaincre le sergent de laisser tomber le siège et de détourner le regard sur ce qui s'est passé ici. Le chemin de la maisonnette est libre.",
+      "desc-scouts-killed": "Les flics sont finalement tous mort. La voie est libre.",
+      "desc-herd-killed": "Les guerres du Troupeau d'Or sont tous mort. Tout danger est désormais écarté.",
+      "desc-fought-off-enforcers": "Tu t'es battu aux côtés du Troupeau d'Or afin de chasser les flics.",
+      "desc-betrayed-herd": "Tu t'es battu contre les guerriers du Troupeau d'Or.",
+      "desc-herd-escaped-peacefully": "Les flics s'étant tirés, les membres du Troupeau d'Or ont pu prendre la poudre d'escampette en évitant tout sang.",
+      "desc-rescued-herd": "Les pôtes de Bibin sont en sécurité. Tu es un sbire bien fidèle."
+    }
+  }
+}

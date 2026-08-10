@@ -16,6 +16,10 @@ class Dialog {
     return canWarnPotioksAboutBibin();
   }
 
+  wasSentByEnforcers() {
+    return game.hasVariable("cristalDenEnforcersRecommendToPotiok");
+  }
+
   giveFullAccess() {
     level.script.grantAccess(RanchAccess.Bunker);
   }

@@ -7,7 +7,7 @@ export function patDead() {
 }
 
 export function craftyDead() {
-  return game.hasVariable("potiokCratfyDead");
+  return game.hasVariable("potiokCraftyDead");
 }
 
 export function bittyDead() {

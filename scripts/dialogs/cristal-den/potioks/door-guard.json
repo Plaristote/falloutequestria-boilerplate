@@ -21,6 +21,7 @@
             "text": "sent-by-bitty"
         },
         "sent-by-enforcers": {
+            "availableHook": "wasSentByEnforcers",
             "state": "on-sent-by-enforcers",
             "text": "sent-by-enforcers"
         }

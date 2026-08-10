@@ -1,20 +1,21 @@
 {
-    "dialogs": {
-        "cristal-den/bibin-bartender": {
-            "about-place/bibin": "Il a débarqué du désert il y a quelques mois, et s'est retrouvé dans la banlieue avec nous. Il a réussi à tous nous faire travailler ensemble, et a transformé ce trou en foyer. Autrefois, c'est les Potioks qui faisaient la loi ici, et on devait leur payer le loyer. Mais Bibin nous a procuré des flingues, et on les a chassé d'ici. Leurs barbouzes restent loin de chez nous depuis.",
-            "about-place/bibin-meeting": "Reste tranquille ! Bibin ne rencontre pas n'importe qui… plus maintenant. Il doit être prudent, à cause de sa relation tendue avec les Potioks. Tu peux pas juste prendre rendez-vous non plus… mais il cherche toujours à rencontrer les gens talentueux. ",
-            "about-place/entry": "L'ami, ici t'es chez Bibin. C'est une figure importante dans la banlieue, et c'est aussi le lieu qu'il nous a organisé pour nous reposer après une dure journée de labeur ! La plupart des poneys de la banlieue se retrouvent ici le soir. On a aussi une salle de boxe, qui organise des combats, en fin de soirée.",
-            "about-place/gym": "Comme tu veux, l'ami ! La salle est dans le sous-sol, tu peux y accéder par l'escalier à la gauche du bar. À partir de 21 heures, tous les soirs, les poneys du coin peuvent se défier sur le ring, ou parier sur le gagnant. Ca dure en général jusqu'à 2 heures du matin.",
-            "ask-about-bibin": "D'où il vient, ce Bibin, et pourquoi il fait tout ça ?",
-            "ask-about-gym": "La salle m'intéresse. Dis m'en plus !",
-            "ask-about-meeting-bibin": "Où est-ce que je pourrais rencontrer Bibin ?",
-            "ask-about-place": "Qu'est-ce que tu peux me dire sur cet établissement",
-            "ask-order-drink": "Oui, qu'est-ce qu'il y a à boire ?",
-            "entry": "Salut, bienvenue chez Bibin ! Je te sers à boire ?",
-            "exit-entry": "J'y vais.",
-            "exit-questions": "Merci de ton aide.",
-            "exit-without-drinks": "Finalement, j'ai plus soif.",
-            "order-drink-alt": "Tu veux boire autre chose ?"
-        }
+  "dialogs": {
+    "cristal-den/bibin-bartender": {
+      "about-place/bibin": "Il a débarqué du désert il y a quelques mois, et s'est retrouvé dans la banlieue avec nous. Il a réussi à tous nous faire travailler ensemble, et a transformé ce trou en foyer. Autrefois, c'est les Potioks qui faisaient la loi ici, et on devait leur payer le loyer. Mais Bibin nous a procuré des flingues, et on les a chassé d'ici. Leurs barbouzes restent loin de chez nous depuis.",
+      "about-place/bibin-meeting": "Reste tranquille ! Bibin ne rencontre pas n'importe qui… plus maintenant. Il doit être prudent, à cause de sa relation tendue avec les Potioks. Tu peux pas juste prendre rendez-vous non plus… mais il cherche toujours à rencontrer les gens talentueux. ",
+      "about-place/entry": "L'ami, ici t'es chez Bibin. C'est une figure importante dans la banlieue, et c'est aussi le lieu qu'il nous a organisé pour nous reposer après une dure journée de labeur ! La plupart des poneys de la banlieue se retrouvent ici le soir. On a aussi une salle de boxe, qui organise des combats, en fin de soirée.",
+      "about-place/gym": "Comme tu veux, l'ami ! La salle est dans le sous-sol, tu peux y accéder par l'escalier à la gauche du bar. À partir de 21 heures, tous les soirs, les poneys du coin peuvent se défier sur le ring, ou parier sur le gagnant. Ca dure en général jusqu'à 2 heures du matin.",
+      "ask-about-bibin": "D'où il vient, ce Bibin, et pourquoi il fait tout ça ?",
+      "ask-about-gym": "La salle m'intéresse. Dis m'en plus !",
+      "ask-about-meeting-bibin": "Où est-ce que je pourrais rencontrer Bibin ?",
+      "ask-about-place": "Qu'est-ce que tu peux me dire sur cet établissement",
+      "ask-order-drink": "Oui, qu'est-ce qu'il y a à boire ?",
+      "entry": "Salut, bienvenue chez Bibin ! Je te sers à boire ?",
+      "exit-entry": "J'y vais.",
+      "exit-questions": "Merci de ton aide.",
+      "exit-without-drinks": "Finalement, j'ai plus soif.",
+      "order-drink-alt": "Tu veux boire autre chose ?",
+      "order-drink": "Voici notre sélection, mon pote."
     }
+  }
 }

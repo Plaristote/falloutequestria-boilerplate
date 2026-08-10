@@ -1,10 +1,10 @@
 import {QuestHelper, QuestFlags} from "../helpers.mjs";
 
-const finalQuest = "";
+const finalQuest = "outpost"; // TODO add more copper quests ?
 
 export function enforcersKnowAboutHerdScouts() {
   const outpostQuest = game.quests.getQuest("cristal-den/copper-outpost");
-  const herdRescueQuest = game.quests.getQuest("cristal-den/bibin-rescue-herd");
+  const herdRescueQuest = game.quests.getQuest("cristal-den/bibins-rescue-herd");
 
   return (outpostQuest && outpostQuest.script.reportedGoldenHerdInvolvement)
       || (herdRescueQuest && herdRescueQuest.script.locationWasVisited);

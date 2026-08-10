@@ -113,7 +113,7 @@ class Dialog {
     this.dialog.npc.setVariable("sabotage-delivery-reward", value);
   }
 
-  get increasedSabotageReward() {
+  get increasedEnforcersReward() {
     return this.enforcersReward + 250;
   }
 
@@ -139,7 +139,9 @@ class Dialog {
   }
 
   canReportOnEnforcersJob() {
-    return this.enforcersQuest && this.enforcersQuest.isObjectiveCompleted("destroyedStash");
+    return this.enforcersQuest
+        && !this.enforcersQuest.completed
+        && this.enforcersQuest.isObjectiveCompleted("destroyedStash");
   }
 
   onEnforcersJobReport() {
@@ -173,13 +175,17 @@ class Dialog {
   }
 
   onRescueQuestAccepted() {
-    game.quests.addQuest("cristal-den/bibins-rescue-herd");
+    const quest = game.quests.addQuest("cristal-den/bibins-rescue-herd");
+    quest.script.pushUniqueEvent("desc-intro-bibin");
   }
 
   reportRescueQuest() {
-    if (this.rescueHerdQuest && this.rescueHerdQuest.isObjectiveCompleted("rescue"))
-      return "pinnedHerd/report-success";
-    return "pinnedHerd/report-failure";
+    if (this.rescueHerdQuest) {
+      if (this.rescueHerdQuest.isObjectiveCompleted("rescue"))
+        return this.dialog.tr("pinnedHerd/report-success");
+      else if (this.rescueHerdQuest.failed)
+        return this.dialog.tr("pinnedHerd/report-failure");
+    }
   }
 
   onReportRescueQuest() {
@@ -219,7 +225,7 @@ class Dialog {
   }
 
   canReportAssassinationQuest() {
-    return this.potiokAssassinationQuest.script.canReport;
+    return this.potiokAssassinationQuest?.script?.canReport;
   }
 
   onAssassinationQuestReport() {
@@ -236,7 +242,7 @@ class Dialog {
   }
 
   canStartFourthQuest() {
-    return this.potiokAssassinationQuest != null && this.potiokAssassination.completed
+    return this.potiokAssassinationQuest != null && this.potiokAssassinationQuest.completed
         && (this.rescueHerdQuest == null || this.rescueHerdQuest.hidden);
   }
 

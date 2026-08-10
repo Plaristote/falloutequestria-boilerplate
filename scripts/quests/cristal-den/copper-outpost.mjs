@@ -70,8 +70,8 @@ export default class extends QuestHelper {
     game.dataEngine.addReputation("cristal-den", 25);
   }
 
-  onFailure() {
-    super.onFailure();
+  onFailed() {
+    super.onFailed();
     game.dataEngine.addReputation("cristal-den", -15);
   }
 

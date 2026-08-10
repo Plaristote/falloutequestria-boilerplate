@@ -4,14 +4,16 @@
             "after-fight": "Bien joué mon pôte. C'est cool de nous avoir sorti de ce pétrin. Fais ce que tu veux. Nous on se tire.",
             "already-killed-enforcers": "Pas la peine. Je me suis déjà chargé de tout le monde dehors. Je viens juste vous dire que la voie est libre.",
             "bibin-start-will-be-back": "Je vais trouver quelque chose. Je reviens bientôt.",
-            "entry": "Comme c'est gentil de rentrer au compte-goute. Allez les potos, on va faire un exemple de lui, montrons à ses potes ce qui les attends.",
+            "entry": "Comme c'est gentil de rentrer au compte-goute. Allez les potos, on va faire un exemple de lui, montrons à ses potes de quel bois le Troupeau d'Or est fait !",
             "entry-exit": "Quoi ? Non, attendez, on peut discuter !",
             "entry-provocative-exit": "J'ai préféré venir en solo, pour vous laisser une chance de survie. En selle, mes mignons !",
             "leave-bubble": "Allez les trouffions, on se casse ! Bougez-vous !",
+            "negociate-reject": "Ah ! C'est un rigolo, celui la ! On dirait que tu sais pas bien à qui tu parles ! Allez les gars, on l'allume, ça nous chauffera pour les autres !",
             "on-bibin-restart": "Alors ? Il y a du nouveau, où il faut que j'aille m'en occuper moi-même ?",
             "on-bibin-start": "Ah ouais ? C'est toi qu'il envoit ? C'est tout ? Putain d'âne bâté… je m'attendais à un soutien un poil plus substantiel.<br>\nAlors quoi, t'as un plan pour nous sortir de là ?",
             "on-enforcers-killed": "<p><i>Elle signale à ses sbires. Ils regardent par les fenêtres, les portes, et ne voient personne de vivant.</i></p>\n<p>Merde. T'es efficace, toi. Ca fait plaisir. Merci, mon pôte.</p>",
-            "start-bibin-quest": "Attendez. C'est Bibin qui m'envoie. Je suis venu vous sortir de là."
+            "start-bibin-quest": "Attendez. C'est Bibin qui m'envoie. Je suis venu vous sortir de là.",
+            "start-negociate": "Je veux juste parler. Vous êtes cernés, la situation sent mauvais. Je veux juste trouver une solution qui permette à tous de sortir d'ici vivant."
         }
     }
 }

@@ -1,0 +1,34 @@
+{
+    "dialogs": {
+        "cristal-den/bibins/siege-enforcer-leader": {
+            "about-orders": "Dead ponies don't talk, genius. Somepony's been feeding and arming that lot well enough to hole up in a farmhouse and stare down a siege. I want names. Numbers. Where the rest of their friends are hiding. You put a bullet in all four heads, all we get is a body count and a mountain of paperwork.",
+            "ask-orders": "Why bother taking them alive? Why not just storm in?",
+            "ask-situation": "What's going on here?",
+            "back-to-situation": "Let's get back to the situation at hoof.",
+            "bribe-cancel": "On second thought, never mind.",
+            "bribe-exit-poor": "I'll find the money.",
+            "bribe-pay": "Deal. <i>[Pay {{bribeCost}} caps]</i>",
+            "bribe/confirm": "Heh. Everypony's got a price. Fine. {{bribeCost}} caps, and I never saw this place. Money talks louder than orders around here. Don't tell the Captain I said that.",
+            "bribe/success": "Pleasure doing business. Pack it up, ponies, we're done here! ...And you never heard any of that from me.",
+            "bribe/too-poor": "You're gonna have to do better than that. Come back when your bags are heavier.",
+            "entry": "This is police business. Keep walking, unless you've got a reason to be standing here.",
+            "herd-dead": "<p>You… you killed them. All of them.</p><p>That's not what I asked for. I wanted them alive, questioned, filed away nice and proper. Instead I've got four bodies, no names, no answers, and a report I'll be writing twice.</p><p><i>He rubs the bridge of his snout, then sighs.</i></p><p>…Still. Small mercy none of my ponies had to find out the hard way how many of them it'd take to put that lot down. So. Take that however you like. We're done here.</p>",
+            "herd-dead-aftermath": "We're pulling out. Nothing left here for either of us.",
+            "negotiate-ask": "I could go in there. Talk them into giving up.",
+            "negotiator/accepted": "Be my guest. Get them to drop their guns and walk out with their hooves up, and I'll make sure the Captain hears your name for it. Don't get yourself shot doing it.",
+            "offer-bribe": "What if I made it worth your while to just... walk away?",
+            "persuade-exit-failure": "Fine. Have it your way.",
+            "persuade-exit-refused": "We'll see about that.",
+            "persuade-withdraw": "Is this really worth it? Pull your ponies back. Let it go.",
+            "persuade/already-tried": "We already had this conversation. My answer hasn't changed. Unless you've got caps burning a hole in your saddlebag, get out of my face.",
+            "persuade/failure": "Nice try. I don't care how many stories you spin.  We're not going anywhere.",
+            "persuade/refuse-known-threat": "Let it go? Isn't it thanks to you that we know it's the Golden Herd that's b een harassing our scouts ? They're the tip of something bigger, and I'm not walking away from that. Neither is anypony else wearing this badge.",
+            "persuade/success": "<p>...Tartarus take it. Fine. Four dead scouts and a stack of paperwork, or four ponies I never have to explain to anypony - I'll take the second one.</p><p>Pack it in! We're pulling back! <i>[He waves the squad off.]</i> Don't make me regret this.</p>",
+            "scouts-dead": "<p><i>His eyes go from the bodies to you, and back again.</i></p><p>You... you killed all of them. Every last one.</p><p><i>He draws his weapon.</i></p><p>I'll see you in Tartarus for this.</p>",
+            "sergeant-exit": "I'll leave you to it.",
+            "situation": "Four of them, holed up in that building, armed to the teeth. We've got them surrounded three ways to Tartarus, and they won't come out and they won't put the guns down either. Captain wants prisoners for questioning, not corpses, so for now, we hold position.",
+            "withdrawal-thanks": "Wise choice.",
+            "withdrawn": "We're already pulling out, thanks to you. Now get out of the way, I've got ponies to move."
+        }
+    }
+}

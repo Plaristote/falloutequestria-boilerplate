@@ -400,7 +400,7 @@
         "about-herd/about-cristal-den/give-mission-rejected": {
             "answers": [
             ],
-            "hook": "callGuard",
+            "hook": "callGuards",
             "mood": "laugh",
             "text": "about-herd/about-cristal-den/give-mission-rejected"
         },
@@ -532,6 +532,7 @@
                 "herd-ask-about-thornhoof",
                 "herd-ask-about-plans"
             ],
+            "hook": "herdPrompt",
             "text": "about-herd/prompt"
         },
         "about-necessary-actions": {
@@ -810,7 +811,6 @@
         "sabotage/on-job-accepted": {
             "answers": [
             ],
-            "hook": "onSaboteurQuestAccepted",
             "text": "sabotage/on-job-accepted"
         },
         "sabotage/reject-more-payment": {

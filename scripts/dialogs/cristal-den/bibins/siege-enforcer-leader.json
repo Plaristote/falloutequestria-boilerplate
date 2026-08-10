@@ -1,0 +1,171 @@
+{
+    "answers": {
+        "ask-orders": {
+            "hook": "onAskOrders",
+            "state": "about-orders",
+            "text": "ask-orders"
+        },
+        "ask-situation": {
+            "state": "situation",
+            "text": "ask-situation"
+        },
+        "back-to-situation": {
+            "state": "situation",
+            "text": "back-to-situation"
+        },
+        "bribe-cancel": {
+            "text": "bribe-cancel"
+        },
+        "bribe-exit-poor": {
+            "text": "bribe-exit-poor"
+        },
+        "bribe-pay": {
+            "hook": "payBribe",
+            "state": "bribe/success",
+            "text": "bribe-pay"
+        },
+        "negotiate-ask": {
+            "availableHook": "canOfferToNegotiate",
+            "hook": "onAcceptNegotiator",
+            "state": "negotiator/accepted",
+            "text": "negotiate-ask"
+        },
+        "offer-bribe": {
+            "availableHook": "canOfferBribe",
+            "hook": "attemptBribe",
+            "text": "offer-bribe"
+        },
+        "persuade-exit-failure": {
+            "text": "persuade-exit-failure"
+        },
+        "persuade-exit-refused": {
+            "text": "persuade-exit-refused"
+        },
+        "persuade-withdraw": {
+            "hook": "attemptPersuade",
+            "text": "persuade-withdraw"
+        },
+        "sergeant-exit": {
+            "text": "sergeant-exit"
+        },
+        "withdrawal-thanks": {
+            "text": "withdrawal-thanks"
+        }
+    },
+    "entryPoint": "entry",
+    "states": {
+        "about-orders": {
+            "answers": [
+                "back-to-situation",
+                "sergeant-exit"
+            ],
+            "mood": "cocky",
+            "text": "about-orders"
+        },
+        "bribe/confirm": {
+            "answers": [
+                "bribe-pay",
+                "bribe-cancel"
+            ],
+            "mood": "cocky",
+            "text": "bribe/confirm"
+        },
+        "bribe/success": {
+            "answers": [
+                "withdrawal-thanks"
+            ],
+            "mood": "dubious",
+            "text": "bribe/success"
+        },
+        "bribe/too-poor": {
+            "answers": [
+                "bribe-exit-poor"
+            ],
+            "mood": "cocky",
+            "text": "bribe/too-poor"
+        },
+        "entry": {
+            "answers": [
+                "ask-situation",
+                "sergeant-exit"
+            ],
+            "mood": "angry",
+            "text": "entry"
+        },
+        "herd-dead": {
+            "answers": [
+            ],
+            "hook": "onHerdDeadReaction",
+            "mood": "angry",
+            "text": "herd-dead"
+        },
+        "herd-dead-aftermath": {
+            "answers": [
+            ],
+            "mood": "neutral",
+            "text": "herd-dead-aftermath"
+        },
+        "negotiator/accepted": {
+            "answers": [
+            ],
+            "hook": "sendToNegotiate",
+            "mood": "cocky",
+            "text": "negotiator/accepted"
+        },
+        "persuade/already-tried": {
+            "answers": [
+                "offer-bribe",
+                "sergeant-exit"
+            ],
+            "mood": "angry",
+            "text": "persuade/already-tried"
+        },
+        "persuade/failure": {
+            "answers": [
+                "offer-bribe",
+                "persuade-exit-failure"
+            ],
+            "mood": "angry",
+            "text": "persuade/failure"
+        },
+        "persuade/refuse-known-threat": {
+            "answers": [
+                "offer-bribe",
+                "persuade-exit-refused"
+            ],
+            "mood": "angry",
+            "text": "persuade/refuse-known-threat"
+        },
+        "persuade/success": {
+            "answers": [
+                "withdrawal-thanks"
+            ],
+            "mood": "dubious",
+            "text": "persuade/success"
+        },
+        "scouts-dead": {
+            "answers": [
+            ],
+            "hook": "avengeSquad",
+            "mood": "angry",
+            "text": "scouts-dead"
+        },
+        "situation": {
+            "answers": [
+                "ask-orders",
+                "negotiate-ask",
+                "persuade-withdraw",
+                "offer-bribe",
+                "sergeant-exit"
+            ],
+            "mood": "angry",
+            "text": "situation"
+        },
+        "withdrawn": {
+            "answers": [
+            ],
+            "mood": "smile",
+            "text": "withdrawn"
+        }
+    }
+}

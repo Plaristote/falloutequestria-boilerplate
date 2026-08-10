@@ -2,6 +2,11 @@ import {QuestHelper, QuestFlags, requireQuest} from "../helpers.mjs";
 import * as Potioks from "./potioks.mjs";
 
 export default class extends QuestHelper {
+  constructor(model) {
+    super(model);
+    this.xpReward = 1500;
+  }
+
   initialize() {
     this.model.location = "cristal-den";
   }

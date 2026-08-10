@@ -1,14 +1,9 @@
-import {CharacterBehaviour} from "./../character.mjs";
+import CharacterBehaviour from "./guard.mjs";
 import toLevelExitAction from "../components/pathfinding/goToLevelExit.mjs";
 
 export default class extends CharacterBehaviour {
   constructor(model) {
     super(model);
-  }
-
-  initialize() {
-    this.model.statistics.faction = "cristal-den-golden-herd";
-    this.model.attacksOnSight = false;
   }
 
   goToLevelExit() {

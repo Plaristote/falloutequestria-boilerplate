@@ -19,6 +19,14 @@ export default class BibinsRescueHerd extends QuestHelper {
     createLocation();
   }
 
+  getDescription() {
+    return this.events.map(event => `<p>${this.tr(event)}</p>`).join("");
+  }
+
+  get xpReward() {
+    return 2000;
+  }
+
   get location() {
     return this.model.isObjectiveCrossedOff("rescue") ? "cristal-den" : "wasteland";
   }
@@ -28,15 +36,30 @@ export default class BibinsRescueHerd extends QuestHelper {
   }
 
   onCharacterKilled(character) {
-    if (typeof level != "undefined" && level.name == levelName && character.parent == level.findGroup("scouts"))
-      this.onScoutKilled();
+    if (typeof level != "undefined" && level.name == levelName) {
+      if (character.parent == level.findGroup("scouts"))
+        this.onScoutKilled();
+      else if (character.parent == level.findGroup("herd"))
+        this.onHerdKilled();
+    }
   }
 
   onScoutKilled() {
     const group = level.findGroup("scouts");
 
-    if (group.find(object => object.isAlive()).length == 0)
+    if (group.find(object => object.isAlive()).length == 0) {
       this.model.completeObjective("kill-scouts");
+      this.pushUniqueEvent("desc-scouts-killed");
+    }
+  }
+
+  onHerdKilled() {
+    const group = level.findGroup("herd");
+
+    if (group.find(object => object.isAlive()).length == 0) {
+      this.model.failObjective("rescue");
+      this.pushUniqueEvent("desc-herd-killed");
+    }
   }
 
   get foughtAlongHerd() {
@@ -45,5 +68,13 @@ export default class BibinsRescueHerd extends QuestHelper {
 
   set foughtAlongHerd(value) {
     value ? this.model.setVariable("foughtAlongHerd", 1) : this.model.unsetVariable("foughtAlongHerd");
+  }
+
+  get enforcersWithdrewPeacefully() {
+    return this.model.hasVariable("enforcersWithdrewPeacefully");
+  }
+
+  set enforcersWithdrewPeacefully(value) {
+    value ? this.model.setVariable("enforcersWithdrewPeacefully", 1) : this.model.unsetVariable("enforcersWithdrewPeacefully");
   }
 }

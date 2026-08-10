@@ -59,8 +59,8 @@ export class WeaponMerchant extends ShopOwner {
   }
 
   onTalkTo() {
-    if (isInsidePrivateZone(this.shop, character)) {
-      this.onIntruderDetected(character);
+    if (isInsidePrivateZone(this.shop, game.player)) {
+      this.onIntruderDetected(game.player);
       return false;
     }
     return super.onTalkTo();

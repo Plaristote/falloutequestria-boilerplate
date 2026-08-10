@@ -1,0 +1,23 @@
+{
+  "quests": {
+    "cristal-den/bibins-rescue-herd": {
+      "title": "Pin on Bibin's Pals",
+      "rescue": "Rescue the besieged party",
+      "kill-scouts": "Kill the Cristal Den enforcers",
+      "desc-intro-bibin": "Somewhere out in the wasteland, Bibin has \"pals\" who have been cornered by Crystal Den enforcers. If they're captured or killed, it could spell trouble for Bibin.",
+      "desc-met-enforcer": "The enforcers have the place surrounded three ways to Tartarus. Their sergeant would rather take the raiders alive for questioning than kill them outright. That might leave some room to talk him down, one way or another.",
+      "desc-met-herd-leader": "Inside, Bibin's pals presented themselves as Golden Herd warriors. They are barricaded in and armed to the teeth.",
+      "desc-sent-as-negotiator": "The sergeant asked you to go inside and talk the intruders into surrendering peacefully. Whether you actually do that, or use it as a way in, is up to you.",
+      "desc-persuade-failed": "You tried to talk the enforcers into standing down, but the sergeant wasn't convinced.",
+      "desc-persuade-refused-known-threat": "The sergeant refused outright to stand down: he knows these riders are from the Golden Herd, and he won't let what he sees as a real threat just walk away.",
+      "desc-enforcers-persuaded": "You talked the enforcers into pulling back. The siege is lifted, and the way to the farmhouse is clear.",
+      "desc-enforcers-bribed": "A generous bribe was enough to convince the sergeant to call off the siege and look the other way. The way to the farmhouse is clear.",
+      "desc-scouts-killed": "The enforcers besieging the farmhouse are all dead. The way in is clear, if a bloody one.",
+      "desc-herd-killed": "The Golden Herd riders are all dead. There's nothing else to achieve here.",
+      "desc-fought-off-enforcers": "You fought alongside the Golden Herd riders to break the siege.",
+      "desc-betrayed-herd": "You fought against the Golden Herd riders.",
+      "desc-herd-escaped-peacefully": "With the enforcers gone, the Golden Herd riders slipped away without a drop of blood spilled.",
+      "desc-rescued-herd": "Bibin's pals are safe. You are quite the loyal goon."
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+    "dialogs": {
+        "cristal-den/bibins/siege-enforcer-leader": {
+            "about-orders": "Les poneys morts ne parlent pas, champion. Quelqu'un a suffisamment bien nourri et armé ce lot pour qu'ils se terrent dans cette ferme et nous résistent. Je veux des noms. Savoir où le reste de leurs amis se cachent. Si on zigouille toute nos pistes, tout ce qu'on obtient, c'est des cadavres et une montagne de paperasse à remplir.",
+            "ask-orders": "Pourquoi s'embêter à les prendre vivants ? Pourquoi ne pas juste tirer dans le tas ?",
+            "ask-situation": "Il se passe quoi ici ?",
+            "back-to-situation": "Revenons-en à la situation.",
+            "bribe-cancel": "À bien y réfléchir, tant pis.",
+            "bribe-exit-poor": "Je trouverai l'argent.",
+            "bribe-pay": "[Payer {{bribeCost}} capsules]",
+            "bribe/confirm": "Bah. Tout le monde a son prix. D'accord. {{bribeCost}} capsules, et j'ai rien vu de ce qui s'est passé. L'argent parle plus fort que les ordres, par ici. Ne le répète pas au capitaine.",
+            "bribe/success": "Content de pouvoir faire affaire avec toi. Allez la compagnie, on remballe, nous n'avons plus rien à faire ici ! … quant à toi, on se connait pas, on s'est jamais croisé, d'accord ?",
+            "bribe/too-poor": "Va falloir faire mieux que ça. Revient me voir quand tes bourses seront un peu plus pleines.",
+            "entry": "La police s'en occupe. Passe ton chemin, à moins que t'ai une vraie raison d'être ici.",
+            "herd-dead": "Tu… tu les as tués. Tu les as tous tués.<br>C'est pas ce que je voulais. Je les voulais vivants, intérrogés, pris en charge en bon ordre. Au lieu de ça, j'ai eds cadavres, pas de noms, pas de réponses, et un rapport à rédiger.<br><br><i>Il se frotte le museau d'un air pensif, et reprends plus calmement:</i><br><br>\nBon. Au moins, j'aurais pas à savoir combien de mes poneys j'aurais eu à sacrifier pour mettre la situation sous contrôle. Il y a plus rien à faire pour nous ici.</p>",
+            "herd-dead-aftermath": "On se casse. Plus rien à faire ici.",
+            "negotiate-ask": "Je pourrais aller les voir. Les convaincre de se rendre.",
+            "negotiator/accepted": "Fais comme tu veux. Si tu peux les faire déposer les armes et sortir, je m'assurerai que le capitaine soit au courant de tes contributions. Essaye juste de pas te faire flinguer, sinon ça va juste me donner plus de paperasse à remplir.",
+            "offer-bribe": "Et si je te disais que tu gagnerais plus à te retirer ? Regarder ailleurs, ça paye bien.",
+            "persuade-exit-failure": "D'accord, comme tu veux.",
+            "persuade-exit-refused": "C'est ce qu'on va voir.",
+            "persuade-withdraw": "Est-ce que ça veut vraiment le coup ? Retire tes poneys. Personne n'a beosin de mourrir.",
+            "persuade/already-tried": "On a déjà eu cette discussion. Ma réponse n'a pas changée. Si t'as pas de quoi me faire changer d'avis, dégage le chemin.",
+            "persuade/failure": "Bien essayé. Peu importe combien d'histoires tu me raconte. On reste en poste.",
+            "persuade/refuse-known-threat": "Laisser tomber ? C'est pas grâce à toi, qu'on sait que c'est le Troupeau d'Or, qui nous harcèle ? T'as une idée du danger qu'ils représentent ? On doit s'occuper d'eux maintenant, alors je reste ici, et mes poneys aussi.",
+            "persuade/success": "<p>… que Tartarus l'emporte. Soit.</p><p>Un assaut, des morts, et de la paperasse à remplir, où une fin de journée tranquille : je choisis la seconde option. <p>On remballe, tout le monde ! <i>[Il signale ses troupes]</i> Ne me fais pas regretter ce choix.</p>",
+            "sergeant-exit": "Je vous laisser gérer tout ça.",
+            "situation": "Un petit nombre, terré dans cette petite ferme, armés jusqu'aux dents. On les a encerclés en bonne et due forme, ils ne veulent pas sortir, ils ne veulent pas se rendre. Le Capitaine veut qu'on les chope vivant, pour les interroger, alors pour le moment, on tient la position.",
+            "withdrawal-thanks": "Un choix judicieux.",
+            "withdrawn": "On est déjà en train de partir, grâce à toi. Maintenant dégage le chemin, j'ai une troupe à manoeuvrer."
+        }
+    }
+}

@@ -1,0 +1,13 @@
+{
+  "dialogs": {
+    "cristal-den/bartender": {
+      "do-order-drink": "Bien sûr, je vais prendre un verre.",
+      "entry": "Bonjour ! Ravi de vous revoir ! Vous voulez boire un verre ?",
+      "exit-entry": "Je n'ai besoin de rien, salut !",
+      "exit-without-drinks": "Rien du tout.",
+      "meeting": "Bonjour ! C'est toujours agréable de voir de nouveaux visages ici ! Bienvenue au Café des Rêves Cristallins ! Comment puis-je être utile ?",
+      "order-drink": "Choisissez votre poison",
+      "order-drink-alt": "Vous buvez autre chose ?"
+    }
+  }
+}

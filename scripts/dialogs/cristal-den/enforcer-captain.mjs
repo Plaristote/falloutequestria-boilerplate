@@ -205,4 +205,8 @@ export default class extends DialogHelper {
       return "<p>" + this.dialog.tr("work/outpost/report/on-wolves-found-followup") + "</p>";
     return "";
   }
+
+  sendToPotioks() {
+    game.setVariable("cristalDenEnforcersRecommendToPotiok", 1);
+  }
 }
