@@ -1,4 +1,14 @@
 {
+  "damage": "Dégâts",
+  "damageType": "Type de dégâts",
+  "range": "Portée",
+  "damageTypes": {
+    "energy": "Energie",
+    "explosion": "Explosion",
+    "piercing": "Perçant",
+    "slash": "Coupant",
+    "blunt": "Contendant"
+  },
   "Out of ammo!": "Plus de munitions !",
     "use-modes": {
         "hit": "Frapper",

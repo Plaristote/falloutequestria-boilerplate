@@ -1,4 +1,14 @@
 {
+    "damage": "Damage",
+    "damageType": "Damage type",
+    "range": "Range",
+    "damageTypes": {
+      "energy": "Energy",
+      "explosion": "Explosion",
+      "piercing": "Piercing",
+      "slash": "Slash",
+      "blunt": "Blunt"
+    },
     "use-modes": {
         "hit": "Hit",
         "burst": "Burst",

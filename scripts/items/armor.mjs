@@ -32,7 +32,7 @@ export default class ArmorBehaviour extends ItemBehaviour {
   getDescription() {
     return i18n.t("item-descriptions." + this.model.itemType)
       + "<br><br>"
-      + (this.mitigationData ? this.mitigationTable() : null);
+      + (this.mitigationData ? this.mitigationTable() : "");
   }
 
   mitigationTable() {
