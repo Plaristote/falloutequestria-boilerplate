@@ -27,6 +27,10 @@ export class Gun extends Weapon {
     return 2;
   }
 
+  getDamageType() {
+    return "piercing";
+  }
+
   getAnimationSteps(target) {
     return [
       { type: "Animation", animation: "use", object: this.user },

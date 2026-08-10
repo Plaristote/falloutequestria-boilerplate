@@ -2,6 +2,18 @@ import {ItemBehaviour} from "./item.mjs";
 import {getValueFromRange, randomCheck} from "../behaviour/random.mjs";
 import {areInContact} from "../behaviour/pathfinding.mjs";
 
+function weaponDescription(model) {
+  let html = "<table>";
+  const damageRange = model.script.getDamageRange();
+  const damageType = model.script.getDamageType();
+  const range = model.script.getRange();
+
+  html += `<tr><th>${i18n.t("damage")}</th><td>${damageRange[0]} - ${damageRange[1]}</td></tr>`;
+  html += `<tr><th>${i18n.t("damageType")}</th><td>${i18n.t("damageTypes." + damageType)}</td></tr>`;
+  html += `<tr><th>${i18n.t("range")}</th><td>${range}</td></tr>`;
+  return html + "</table>";
+}
+
 export class WeaponBehaviour extends ItemBehaviour {
   constructor(model) {
     super(model);
@@ -11,6 +23,12 @@ export class WeaponBehaviour extends ItemBehaviour {
       this.skill = "unarmed";
     if (this.hitSound == undefined)
       this.hitSound = "hoof2hoof/punch";
+  }
+
+  getDescription() {
+    return i18n.t("item-descriptions." + this.model.itemType)
+         + "<br><br>"
+         + weaponDescription(this.model);
   }
 
   isValidTarget(object) {
