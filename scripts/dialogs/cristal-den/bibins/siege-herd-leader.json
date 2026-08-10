@@ -36,13 +36,6 @@
             "mood": "smile",
             "text": "after-fight"
         },
-        "enforcers-left": {
-            "answers": [
-            ],
-            "hook": "onEnforcersLeft",
-            "mood": "smile",
-            "text": "after-fight"
-        },
         "entry": {
             "answers": [
                 "start-bibin-quest",
@@ -51,7 +44,6 @@
                 "entry-provocative-exit",
                 "entry-exit"
             ],
-            "hook": "onBibinStart",
             "mood": "angry",
             "text": "entry"
         },

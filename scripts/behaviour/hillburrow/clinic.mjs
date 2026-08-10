@@ -30,4 +30,9 @@ export class Clinic extends Shop {
     if (!drunkenQuestOver())
       failDrunkenQuest();
   }
+
+  shopOccupants() {
+    const list = super.shopOccupants();
+    return list.filter(character => character.objectName !== "drunk");
+  }
 }

@@ -182,9 +182,9 @@ class Dialog {
   reportRescueQuest() {
     if (this.rescueHerdQuest) {
       if (this.rescueHerdQuest.isObjectiveCompleted("rescue"))
-        return this.dialog.tr("pinnedHerd/report-success");
+        return "pinnedHerd/report-success";
       else if (this.rescueHerdQuest.failed)
-        return this.dialog.tr("pinnedHerd/report-failure");
+        return "pinnedHerd/report-failure";
     }
   }
 

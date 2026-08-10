@@ -1,0 +1,9 @@
+{
+  "dialogs": {
+    "junkville/dog-jail": {
+      "accept": "Ouais, bien sûr, qu'est-ce que je fou ici, de toute façon ? Retournons dans ma cellule !",
+      "entry": "Que fais-tu ici, petit poney ? Retourne dans ta cellule.",
+      "start-combat": "Mais je n'y retournerai pas. "
+    }
+  }
+}

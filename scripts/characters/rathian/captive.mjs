@@ -53,7 +53,7 @@ export default class Rathian extends Base {
     if (this.cellDoor.locked) // unloking
       this.onCellDoorOpening();
     else if (level.isInsideZone(cellZone, this.model)) {
-      this.attacksOnSight = false;
+      this.model.attacksOnSight = false;
       if ((this.dealWithRathianFlag & DealWithRathian.CellOpened) > 0)
         this.model.setVariable("dealWithRathian", this.dealWithRathianFlag - DealWithRathian.CellOpened);
     }
@@ -66,7 +66,7 @@ export default class Rathian extends Base {
 
   onCellDoorOpening() {
     console.log("onCellDoorOpening called");
-    this.attacksOnSight = true;
+    this.model.attacksOnSight = true;
     this.toggleDealWithRathianFlag(DealWithRathian.CellOpened);
     if ((this.dealWithRathianFlag & DealWithRathian.HelpLeave) > 0)
       this.escapeWithPlayer();

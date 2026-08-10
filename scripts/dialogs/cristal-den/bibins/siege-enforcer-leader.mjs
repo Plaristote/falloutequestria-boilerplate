@@ -1,4 +1,4 @@
-import {skillContest} from "../../../cmap/helpers/checks.mjs";
+import {skillCheck} from "../../../cmap/helpers/checks.mjs";
 import {requireQuest, QuestFlags} from "../../../quests/helpers.mjs";
 
 class Dialog {
@@ -92,8 +92,8 @@ class Dialog {
       return "persuade/refuse-known-threat";
     }
 
-    const dc = this.knowsGoldenHerd ? 25 : 15;
-    const winner = skillContest(game.player, this.dialog.npc, "speech", dc);
+    const dc = this.knowsGoldenHerd ? 150 : 125;
+    const winner = skillCheck(game.player, "speech", { target: dc });
     if (winner == game.player) {
       this.quest.script.pushUniqueEvent("desc-enforcers-persuaded");
       this.onWithdraw();
@@ -104,7 +104,8 @@ class Dialog {
   }
 
   get bribeCost() {
-    return this.knowsGoldenHerd ? 500 : 250;
+    const base = this.knowsGoldenHerd ? 5000 : 1500;
+    return game.player.statistics.barter > 75 ? base / 2 : base;
   }
 
   canOfferBribe() {

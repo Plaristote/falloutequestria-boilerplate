@@ -605,7 +605,7 @@
                 "ask-about-job",
                 "entry-exit"
             ],
-            "hook": "reportRescueQuest",
+            "mood": "smile",
             "text": "entry/default"
         },
         "entry/introduction": {

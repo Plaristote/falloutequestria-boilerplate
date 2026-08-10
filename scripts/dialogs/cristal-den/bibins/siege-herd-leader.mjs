@@ -4,10 +4,9 @@ class Dialog {
   }
 
   getEntryPoint() {
+    this.quest.script.pushUniqueEvent("desc-met-herd-leader");
     if (this.dialog.npc.hasVariable("onBibinStart"))
       return "on-bibin-start";
-    if (this.quest.script.enforcersWithdrewPeacefully)
-      return "enforcers-left";
     if (this.quest.script.foughtAlongHerd)
       return "after-fight";
   }
@@ -25,21 +24,14 @@ class Dialog {
   }
 
   hasKilledEnforcers() {
-    return this.quest.isObjectiveCompleted("kill-scouts");
+    return this.quest.isObjectiveCompleted("kill-scouts") || this.quest.script.enforcersWithdrewPeacefully;
   }
 
   onBibinStart() {
     if (this.dialog.npc.hasVariable("onBibinStart"))
       return { textKey: "on-bibin-restart" };
-    else {
+    else
       this.dialog.npc.setVariable("onBibinStart", 1);
-      this.quest.script.pushUniqueEvent("desc-met-herd-leader");
-    }
-  }
-
-  onEnforcersLeft() {
-    this.completeQuest();
-    level.addTextBubble(this.dialog.npc, this.dialog.tr("leave-bubble"), 4500, "yellow");
   }
 
   completeQuest() {
@@ -48,6 +40,7 @@ class Dialog {
     this.quest.script.pushUniqueEvent("desc-rescued-herd");
     this.quest.completeObjective("rescue");
     this.quest.completed = true;
+    level.addTextBubble(this.dialog.npc, this.dialog.tr("leave-bubble"), 4500, "yellow");
     level.script.herdWithdraw();
   }
 

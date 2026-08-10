@@ -5,13 +5,13 @@ function generateGear(inventory, difficultyRoll) {
     "itemType": "saddle"
   };
   inventory.items.push({
-    "itemType": "223-ammo",
+    "itemType": "5.56-ammo",
     "quantity": Math.ceil(difficultyRoll / 2)
   });
   inventory.slots["use-1"] = {
     "hasItem": true,
     "slotType": "any",
-    "itemType": "hunting-rifle",
+    "itemType": "assault-rifle",
     "ammo": 10,
     "quantity": 1,
     "useMode": "use"
