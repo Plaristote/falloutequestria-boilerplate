@@ -66,10 +66,13 @@ export class WeaponBehaviour extends ItemBehaviour {
 
     if (this.fireSound)
       game.sounds.play(this.fireSound);
+    if (this.isStealthy != true && this.user.sneaking)
+      this.user.sneaking = false;
     return randomCheck(successRate, {
       failure:         this.triggerDodgeUse.bind(this, target),
       criticalFailure: this.triggerCriticalFailure.bind(this, target),
-      success:         super.triggerUseOn.bind(this, target)
+      success:         super.triggerUseOn.bind(this, target, false),
+      criticalSuccess: super.triggerUseOn.bind(this, target, true)
     }, this.user);
   }
 
@@ -96,13 +99,16 @@ export class WeaponBehaviour extends ItemBehaviour {
     return true;
   }
 
-  useOn(target) {
-    var damage = getValueFromRange(...this.getDamageRange(), this.user);
+  useOn(target, criticalSuccess) {
+    const messageKey = `messages.weapons.${criticalSuccess ? "critical-success" : "use"}`;
+    let damage = getValueFromRange(...this.getDamageRange(), this.user);
 
     if (this.getDamageType && typeof target.script?.mitigateDamage == "function")
       damage = target.script.mitigateDamage(damage, this.getDamageType(), this.user);
+    if (criticalSuccess)
+      damage = this.onCriticalHit(target, damage);
     game.appendToConsole(
-      i18n.t("messages.weapons.use", {
+      i18n.t(messageKey, {
         user: this.user.statistics.name,
         item: this.model.displayName,
         target: target.statistics.name,
@@ -113,6 +119,10 @@ export class WeaponBehaviour extends ItemBehaviour {
     this.playHitSound(target, damage);
     this._lastDamage = damage;
     return true;
+  }
+
+  onCriticalHit(target, damage) {
+    return Math.max(damage + 1, damage * 2);
   }
 
   playMissSound(target) {
@@ -136,8 +146,9 @@ export class WeaponBehaviour extends ItemBehaviour {
 
       baseToHit -= aggravatingFactor * Math.max(0, distance - 1);
       baseToHit *= (vision / 100);
+    } else if (target && target.unconscious) {
+      baseToHit = Math.max(100, attackerWeaponSkill) - defenderArmorClass / 2;
     }
-    //console.log(attackerWeaponSkill, defenderArmorClass);
     return Math.max(0, Math.min(baseToHit, 95));
   }
 

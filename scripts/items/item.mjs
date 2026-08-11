@@ -96,10 +96,10 @@ export class ItemBehaviour {
     return false;
   }
 
-  triggerUseOn(target) {
+  triggerUseOn(target, criticalSuccess = false) {
     return {
       steps:    this.getAnimationSteps(target),
-      callback: this.useOn.bind(this, target)
+      callback: this.useOn.bind(this, target, criticalSuccess)
     };
   }
 

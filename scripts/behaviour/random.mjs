@@ -18,6 +18,8 @@ export function randomCheck(threshold, handlers, roller = null) {
     return handlers.criticalFailure();
   else if (roll >= threshold && handlers.failure)
     return handlers.failure();
+  else if (roll < 5 && handlers.criticalSuccess)
+    return handlers.criticalSuccess();
   else if (handlers.success)
     return handlers.success();
   return null;
