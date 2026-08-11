@@ -151,8 +151,9 @@
         "use": "{{user}} a utilise {{item}}",
         "weapons": {
             "dodge": "{{target}} a esquive une attaque de {{user}}.",
-            "use": "{{user}} a utilise {{item}} sur {{target}} pour {{damage}} dommages.",
-            "critical-failure": "{{user}} échoue catastrophiquement en essayant d'utiliser {{item}}."
+            "use": "{{user}} a utilise {{item}} sur {{target}} pour {{damage}} points de dégâts.",
+            "critical-failure": "{{user}} échoue catastrophiquement en essayant d'utiliser {{item}}.",
+            "critical-success": "{{user}} frappe critiquement {{target}} avec {{item}} et inflige {{damage}} points de dégâts."
         },
         "wont-barter": "Cette personne refuse de troquer avec toi.",
         "xp-gain": "Tu as gagne {{xp}} points d'experience.",
