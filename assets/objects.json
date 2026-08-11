@@ -153,7 +153,7 @@
     "combat-armor": {
         "icon": "combat-armor.webp",
         "isGroupable": true,
-        "scriptName": "armor.mjs",
+        "scriptName": "combat-armor.mjs",
         "sprite": "metal-armor",
         "type": "armor",
         "value": 2500,
