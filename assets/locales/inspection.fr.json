@@ -17,7 +17,7 @@
         },
         "moveable-object": {
           "found": "Après une inspection plus minutieuse, tu te dis que ce {{target}} cache quelque chose. Tu devrais peut-être essayer de le déplacer.",
-          "look": "Ce {{target}} cache quelque chose. Tu pourrais le déplacer.",
+          "look": "Tu vois {{target}}.",
           "moved": "Tu vois {{target}}. Tu l'as déplacé pour découvrir un passage."
         },
         "disarmed": "C'est desarme.",

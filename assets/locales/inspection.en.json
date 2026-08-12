@@ -17,7 +17,7 @@
         },
         "moveable-object": {
           "found": "Upon closer inspection, you notice {{target}} seems to be hiding something. Perhaps you should shove it away.",
-          "look": "You see {{target}}. It seems to be hiding something. Maybe you could move it away.",
+          "look": "You see {{target}}.",
           "moved": "You see {{target}}. You shoved it aside to reveal a hidden path."
         },
         "disarmed": "It's disarmed.",

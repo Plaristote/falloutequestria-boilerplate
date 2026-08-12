@@ -76,7 +76,7 @@ export class MovableObject {
     } else if (!this.canMove && this.tryToDetectMovableObject(user)) {
       message += "found";
       this.canMove = true;
-    } else if (this.canMove) {
+    } else {
       message += "look";
     }
     user.lookAt(this.model);
