@@ -155,6 +155,11 @@
             "critical-failure": "{{user}} échoue catastrophiquement en essayant d'utiliser {{item}}.",
             "critical-success": "{{user}} frappe critiquement {{target}} avec {{item}} et inflige {{damage}} points de dégâts."
         },
+        "movable-object": {
+          "no-room-to-move": "Il n'y a pas d'emplacement pour déplacer cet objet.",
+          "failed-to-move": "Tu essaye de déplacer l'objet, mais tes efforts sont vains.",
+          "moved": "Tu mobilises tes jambes, préserves ton dos, et parviens à déplacer l'objet hors du chemin."
+        },
         "wont-barter": "Cette personne refuse de troquer avec toi.",
         "xp-gain": "Tu as gagne {{xp}} points d'experience.",
         "repair-success": "Tu as réparé {{target}}.",
