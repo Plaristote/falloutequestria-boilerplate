@@ -50,7 +50,7 @@ export class MovableObject {
     if (position)
       game.asyncAdvanceTime(5, () => { this.onAttemptedToPushAt(user, position); });
     else
-      game.appendToConsole(i18n.t("actions.no-room-to-move-object"));
+      game.appendToConsole(i18n.t("messages.movable-object.no-room-to-move"));
     return true;
   }
 
@@ -58,14 +58,14 @@ export class MovableObject {
     if (this.tryToMoveMovableObject(user)) {
       this.onSuccessfullPushAt(user, position);
     } else {
-      game.appendToConsole(i18n.t("actions.failed-to-move-movable-object"));
+      game.appendToConsole(i18n.t("messages.movable-object.failed-to-move"));
     }
   }
 
   onSuccessfullPushAt(user, position) {
     this.moved = true;
     level.setObjectPosition(this.model, position.x, position.y, this.model.floor);
-    game.appendToConsole(i18n.t("actions.moved-moveable-object"));
+    game.appendToConsole(i18n.t("messages.movable-object.moved"));
   }
 
   onLook(user) {
