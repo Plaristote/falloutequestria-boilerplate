@@ -1,6 +1,8 @@
 {
     "dialogs": {
         "hillburrow/inkeeper": {
+            "about-water-carrier": "Hmm. Je crois qu'il vit près de la source d'eau. C'est au Nord-Ouest de la ville.",
+            "ask-about-water-carrier": "Je cherche Mighty Hobo, le porteur d'eau. Tu peux m'aider ?",
             "ask-room": "J'ai besoin d'une chambre.",
             "exit-entry": "Au revoir."
         }

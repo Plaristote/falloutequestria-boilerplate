@@ -8,6 +8,7 @@ import {
 import {
   saboteurShouldDisappear
 } from "../../quests/hillburrow/sabotage.mjs";
+import {isPlayerLookingForWaterCarrier} from "../../quests/cristal-den/bibins-sabotage-delivery.mjs";
 
 class Dialog {
   constructor(dialog) {
@@ -26,6 +27,10 @@ class Dialog {
 
   get sheriffQuest() {
     return game.quests.getQuest("hillburrow/oldSheriffMurder");
+  }
+
+  canAskAboutWaterCarrier() {
+    return isPlayerLookingForWaterCarrier();
   }
 
   canNegociateSheriffQuestReward() {

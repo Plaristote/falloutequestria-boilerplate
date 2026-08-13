@@ -10,6 +10,16 @@ export function onSuitcaseOpened() {
   game.appendToConsole(quest.tr("suitcase-opened-notification"));
 }
 
+export function isPlayerLookingForWaterCarrier() {
+  const quest = game.quests.getQuest(questName);
+  return quest && quest.script.hasEvent("learn-water-carrier-identity");
+}
+
+export function triggerLearnWaterCarrierIdentity() {
+  const quest = requireQuest(questName, Quest.HiddenQuest);
+  quest.script.pushUniqueEvent("learn-water-carrier-identity");
+}
+
 export class BibinsSabotageDelivery extends QuestHelper {
   constructor(model) {
     super(model);

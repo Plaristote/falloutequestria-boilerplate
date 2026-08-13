@@ -1,5 +1,10 @@
 {
     "answers": {
+        "ask-about-water-carrier": {
+            "availableHook": "canAskAboutWaterCarrier",
+            "state": "about-water-carrier",
+            "text": "ask-about-water-carrier"
+        },
         "ask-room": {
             "state": "innDialog",
             "text": "ask-room"
@@ -10,8 +15,14 @@
     },
     "entryPoint": "entry",
     "states": {
+        "about-water-carrier": {
+            "answers": [
+            ],
+            "text": "about-water-carrier"
+        },
         "entry": {
             "answers": [
+                "ask-about-water-carrier",
                 "ask-room",
                 "exit-entry"
             ],

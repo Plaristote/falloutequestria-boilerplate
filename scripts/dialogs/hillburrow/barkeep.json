@@ -11,6 +11,10 @@
             "state": "about-npc",
             "text": "ask-about-npc"
         },
+        "ask-about-water-carrier": {
+            "availableHook": "canAskAboutWaterCarrier",
+            "text": "ask-about-water-carrier"
+        },
         "exit": {
             "text": "exit"
         },
@@ -71,15 +75,20 @@
             "mood": "smile",
             "text": "about-npc"
         },
+        "about-water-carrier": {
+            "answers": [
+            ],
+            "mood": "smile",
+            "text": "about-water-carrier"
+        },
         "entry": {
             "answers": [
+                "ask-about-water-carrier",
                 "ask-about-drinks",
                 "quest-sheriff-murder-start",
                 "ask-about-npc",
                 "exit-without-drinks"
             ],
-            "hook": "",
-            "mood": "",
             "text": "entry"
         },
         "order-drink": {
@@ -93,8 +102,6 @@
             "answers": [
                 "quest-sheriff-back-to-entry"
             ],
-            "hook": "",
-            "mood": "",
             "text": "quest-sheriff-about-mercenaries"
         },
         "quest-sheriff-about-night-more": {
@@ -102,7 +109,6 @@
                 "quest-sheriff-back-to-entry"
             ],
             "hook": "toldAboutDrunkenMasterDisputeWithSheriff",
-            "mood": "",
             "text": "quest-sheriff-about-night-more"
         },
         "quest-sheriff-about-suspects": {
@@ -111,7 +117,6 @@
                 "quest-sheriff-back-to-entry"
             ],
             "hook": "toldAboutMercenariesInvolvementInSheriffMurder",
-            "mood": "",
             "text": "quest-sheriff-about-suspects"
         },
         "quest-sheriff-about-the-night": {
@@ -119,7 +124,6 @@
                 "quest-sheriff-ask-about-night-more",
                 "quest-sheriff-back-to-entry"
             ],
-            "mood": "",
             "text": "quest-sheriff-about-the-night"
         },
         "quest-sheriff-murder": {
@@ -128,8 +132,6 @@
                 "quest-sheriff-ask-about-the-night",
                 "quest-sheriff-exit"
             ],
-            "hook": "",
-            "mood": "",
             "text": "quest-sheriff-murder"
         }
     }

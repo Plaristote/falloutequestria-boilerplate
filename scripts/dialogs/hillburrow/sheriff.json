@@ -13,6 +13,9 @@
         "about-npc": {
             "text": "about-npc"
         },
+        "about-water-carrier-thanks": {
+            "text": "quest-old-sheriff-briefing-reaction"
+        },
         "accept-old-sheriff-quest": {
             "state": "quest-old-sheriff-briefing",
             "text": "accept-old-sheriff-quest"
@@ -20,6 +23,11 @@
         "ask-about-npc": {
             "state": "about-npc",
             "text": "ask-about-npc"
+        },
+        "ask-about-water-carrier": {
+            "availableHook": "canAskAboutWaterCarrier",
+            "state": "about-water-carrier",
+            "text": "ask-about-water-carrier"
         },
         "ask-about-work": {
             "hook": "onAskedForWork",
@@ -206,14 +214,21 @@
             ],
             "text": "about-npc"
         },
+        "about-water-carrier": {
+            "answers": [
+                "about-water-carrier-thanks",
+                "back-to-entry"
+            ],
+            "text": "about-water-carrier"
+        },
         "entry": {
             "answers": [
                 "report-quest-old-sherif",
+                "ask-about-water-carrier",
                 "ask-about-work",
                 "ask-about-npc",
                 "exit-entry"
             ],
-            "hook": "",
             "text": "entry"
         },
         "name-already-known": {
@@ -243,7 +258,6 @@
             "answers": [
                 "old-sherif-report-cancel"
             ],
-            "hook": "",
             "mood": "dubious",
             "text": "quest-old-sherif-report/drunken-master"
         },
@@ -254,7 +268,6 @@
                 "old-sherif-report-drunken-master",
                 "old-sherif-report-cancel"
             ],
-            "hook": "",
             "mood": "smile",
             "text": "quest-old-sherif-report/entry"
         },
@@ -280,7 +293,6 @@
                 "reject-old-sheriff-quest-alt",
                 "reject-old-sheriff-quest"
             ],
-            "hook": "",
             "text": "quest-old-sheriff"
         },
         "quest-old-sheriff-arrestation/after-fight": {
@@ -305,7 +317,6 @@
                 "hobo-after-fight-vendetta",
                 "hobo-after-fight-exit-alt"
             ],
-            "hook": "",
             "text": "quest-old-sheriff-arrestation/after-fight-whats-next"
         },
         "quest-old-sheriff-arrestation/already-dead": {
@@ -313,7 +324,6 @@
                 "old-sheriff-already-dead-start-vendetta",
                 "old-sheriff-already-dead-conclusion"
             ],
-            "hook": "",
             "mood": "sad",
             "text": "quest-old-sheriff-arrestation/already-dead"
         },
@@ -323,7 +333,6 @@
                 "old-sheriff-closure-partner-up",
                 "old-sheriff-closure-give-up"
             ],
-            "hook": "",
             "mood": "angry",
             "text": "quest-old-sheriff-arrestation/entry"
         },
@@ -333,7 +342,6 @@
                 "old-sheriff-closure-partner-up",
                 "old-sheriff-closure-give-up"
             ],
-            "hook": "",
             "mood": "angry",
             "text": "quest-old-sheriff-arrestation/greater-plan"
         },
@@ -350,7 +358,6 @@
                 "old-sheriff-closure-partner-up",
                 "old-sheriff-closure-give-up"
             ],
-            "hook": "",
             "text": "quest-old-sheriff-arrestation/vendetta-start"
         },
         "quest-old-sheriff-arrestation/vengeance-start": {
@@ -390,7 +397,6 @@
                 "quest-old-sheriff-negociate-badly",
                 "reject-old-sheriff-quest"
             ],
-            "hook": "",
             "mood": "smile",
             "text": "quest-old-sheriff-reward-asked"
         }

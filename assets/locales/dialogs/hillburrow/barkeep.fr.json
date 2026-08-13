@@ -2,8 +2,10 @@
     "dialogs": {
         "hillburrow/barkeep": {
             "about-npc": "Je suis {{npc}}. Rien de spécial à dire sur moi, je prépare des boissons et je veille à ce que les habitants de Hillburrow soient heureux et bien hydratés ! Et toi, qui es-tu ?",
+            "about-water-carrier": "Mighty Hobo ? Bah, reste dans le coin, et tu finira par le croiser. D'habitude, il vient boire un coup après son travail, vers 18h.",
             "ask-about-drinks": "Qu'avez-vous à la pression ?",
             "ask-about-npc": "Qui es-tu ?",
+            "ask-about-water-carrier": "Je cherche Mighty Hobo, le porteur d'eau.",
             "entry": "Salut, {{knownName}} ! Qu'est-ce que ce sera ?",
             "exit-without-drinks": "Pas de boisson pour moi cette fois ! Au revoir !",
             "order-drink": "Nous avons de la bière pression à {{beerPrice}} capsules. J'ai aussi du whisky à {{whiskeyPrice}} capsules, ou du Sparkle Cola à {{colaPrice}} capsules. Qu'est-ce que ce sera ?",
@@ -13,14 +15,14 @@
             "quest-sheriff-about-suspects": "Scratchy Lead était un peu réservé, mais c'était un gentil poney dans l'ensemble. Je ne pense pas que quiconque en ville le détestait. Mais, vous savez… parfois, les mercenaires de Potiok viennent boire ici. Et parfois, Scratchy Lead venait aussi. J'ai vu Apathy Flake l'embêter à plusieurs reprises. C'est le chef des mercenaires. D'après ce que j'ai compris, Scratchy était censé résoudre une affaire pour eux, et Apathy pensait qu'il ne s'investissait pas assez. Tu devrais peut-être enquêter là-dessus.",
             "quest-sheriff-about-the-night": "Oui… c'est bizarre, tu sais, quand quelque chose d'aussi tragique arrive, on se souvient de chaque détail de la journée. Il est passé par ici. Il a pris un verre. Un whisky, double, sans glaçons. Il est resté une demi-heure environ, puis il est parti.",
             "quest-sheriff-ask-about-drunken": "Quoi ?",
-            "quest-sheriff-ask-about-night-more" : "Y a-t-il eu un événement inhabituel cette nuit-là ?",
-            "quest-sheriff-ask-about-suspicions" : "Tu connais quelqu'un qui pourrait en vouloir à Scratchy Lead ?",
-            "quest-sheriff-ask-about-the-night" : "Scratchy Lead est-il venu ici la nuit de sa mort ?",
-            "quest-sheriff-back-to-entry" : "Je voudrais poser une autre question.",
-            "quest-sheriff-exit" : "Merci d'avoir répondu à mes questions. Je m'en vais.",
-            "quest-sheriff-find-mercenaries" : "Où puis-je trouver ces mercenaires ?",
-            "quest-sheriff-murder" : "Quelle tragédie, sa mort… tout le monde l'aimait. Qu'est-ce que tu veux savoir ?",
-            "quest-sheriff-murder-start" : "J'ai entendu dire que le shérif Scratchy Lead avait l'habitude de fréquenter cet endroit. Serais-tu prêt à répondre à quelques-unes de mes questions ?",
+            "quest-sheriff-ask-about-night-more": "Y a-t-il eu un événement inhabituel cette nuit-là ?",
+            "quest-sheriff-ask-about-suspicions": "Tu connais quelqu'un qui pourrait en vouloir à Scratchy Lead ?",
+            "quest-sheriff-ask-about-the-night": "Scratchy Lead est-il venu ici la nuit de sa mort ?",
+            "quest-sheriff-back-to-entry": "Je voudrais poser une autre question.",
+            "quest-sheriff-exit": "Merci d'avoir répondu à mes questions. Je m'en vais.",
+            "quest-sheriff-find-mercenaries": "Où puis-je trouver ces mercenaires ?",
+            "quest-sheriff-murder": "Quelle tragédie, sa mort… tout le monde l'aimait. Qu'est-ce que tu veux savoir ?",
+            "quest-sheriff-murder-start": "J'ai entendu dire que le shérif Scratchy Lead avait l'habitude de fréquenter cet endroit. Serais-tu prêt à répondre à quelques-unes de mes questions ?",
             "tell-name": "Je suis {{name}}.",
             "tell-name-reject": "Je pourrais te le dire. Mais après, je devrais te tuer."
         }

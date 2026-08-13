@@ -1,4 +1,5 @@
 import {QuestFlags, requireQuest} from "../../quests/helpers.mjs";
+import {triggerLearnWaterCarrierIdentity} from "../../quests/cristal-den/bibins-sabotage-delivery.mjs";
 import * as Checks from "../../cmap/helpers/checks.mjs";
 
 function triggerWaterCarrierLeadInSheriffQuest(self) {
@@ -44,6 +45,7 @@ class Dialog {
   onLearnedIdentity() {
     this.dialog.npc.setVariable("identity-known", 1);
     triggerWaterCarrierLeadInSheriffQuest(this);
+    triggerLearnWaterCarrierIdentity();
   }
 
   dynamiteHasBeenFound() {

@@ -1,4 +1,5 @@
 import {BarkeepHelper} from "../barkeep.mjs";
+import {isPlayerLookingForWaterCarrier} from "../../quests/cristal-den/bibins-sabotage-delivery.mjs";
 
 class Dialog extends BarkeepHelper {
   constructor(dialog) {
@@ -13,6 +14,10 @@ class Dialog extends BarkeepHelper {
     if (this.dialog.npc.hasVariable("knownsName"))
       return this.dialog.player.statistics.name;
     return i18n.t("common.stranger");
+  }
+
+  canAskAboutWaterCarrier() {
+    return isPlayerLookingForWaterCarrier();
   }
 
   canAskAboutSheriffMurder() {

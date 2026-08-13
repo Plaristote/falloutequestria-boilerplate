@@ -3,6 +3,8 @@
         "hillburrow/steward": {
             "about-steward": "Qui es-tu ?",
             "about-steward-answer": "Je suis {{npc}}, et t'es dans le magasin du village. C'est moi qui gère les stocks, et qui troque avec les marchands… ou les voyageurs comme toi. T'es là pour troquer ?",
+            "about-water-carrier": "Mighty Hobo ? Ouais. Il vit dans une cabane à la lisière de la ville. D'ici, dirige toi vers le Nord, et tu finira par tomber dessus. Il s'y trouve probablement pas pendant la journée, par contre.",
+            "ask-about-water-carrier": "Je cherche Mighty Hobo, un porteur d'eau. Tu sais où je peux le trouver ?",
             "drunken-quest": "J'ai une trousse de médecin pour toi juste ici. Ca fera {{doctorBagCost}} capsules.",
             "drunken-quest-about-potioks": "Les Potioks et leurs sbires. C'est un gang du Havre Cristallin, ils dominent ce village. C'est pas exactement des tendres. Beaucoup des habitants ici ne sont pas du coin. Les Potioks sont venus ici pour prendre le contrôle ed la mine de charbon. Les locaux étaient pas coopératifs, alors ils les ont butés, et les ont remplacés par des vagabonds du Havre. On est pas essentiels, faciles à remplacer, et ils se gènent pas pour le faire quand on est pas coopératifs.",
             "drunken-quest-ask-about-potioks": "Putain mais c'est qui les connards de propriétaires, alors, et pourquoi ils te buteraient pour une trousse de médecin manquante ?",

@@ -1,8 +1,13 @@
 import DialogHelper from "../merchant.mjs";
 import {drunkenQuestDoctorBagNeeded} from "../../quests/hillburrow/saveDrunkenMaster.mjs";
+import {isPlayerLookingForWaterCarrier} from "../../quests/cristal-den/bibins-sabotage-delivery.mjs";
 import {skillContest} from "../../cmap/helpers/checks.mjs";
 
 class Dialog extends DialogHelper {
+  canAskAboutWaterCarrier() {
+    return isPlayerLookingForWaterCarrier();
+  }
+
   canSaveDrunkenMaster() {
     return drunkenQuestDoctorBagNeeded();
   }
@@ -12,10 +17,9 @@ class Dialog extends DialogHelper {
   }
 
   get doctorBagCost() {
-    console.log("doctorBagCost getter called");
     if (this.dialog.npc.getVariable("lowered-doctor-bag-price") == 1)
-      return 150;
-    return 200;
+      return 90;
+    return 180;
   }
 
   onBuyDoctorsBag() {
@@ -34,6 +38,12 @@ class Dialog extends DialogHelper {
       return "drunken-quest-on-negociate-success";
     }
     return "drunken-quest-on-negociate-failure";
+  }
+
+  onStartNegotiateDoctorBag() {
+    if (game.hasVariable("potiokBittyDead"))
+      return "drunken-quest-on-negociate-success";
+    return "drunken-quest-on-negociate";
   }
 }
 

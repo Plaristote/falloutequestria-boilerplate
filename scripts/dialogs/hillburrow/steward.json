@@ -1,25 +1,21 @@
 {
     "answers": {
         "": {
-            "availableHook": "",
-            "hook": "",
-            "state": ""
         },
         "about-steward": {
-            "availableHook": "",
             "state": "about-steward-answer",
             "text": "about-steward"
         },
+        "ask-about-water-carrier": {
+            "availableHook": "canAskAboutWaterCarrier",
+            "state": "about-water-carrier",
+            "text": "ask-about-water-carrier"
+        },
         "drunken-quest-ask-about-potioks": {
-            "availableHook": "",
-            "hook": "",
             "state": "drunken-quest-about-potioks",
             "text": "drunken-quest-ask-about-potioks"
         },
         "drunken-quest-cantpay": {
-            "availableHook": "",
-            "hook": "",
-            "state": "",
             "text": "drunken-quest-cantpay"
         },
         "drunken-quest-lower-price": {
@@ -30,12 +26,10 @@
         "drunken-quest-pay": {
             "availableHook": "canPayDoctorsBag",
             "hook": "onBuyDoctorsBag",
-            "state": "",
             "text": "drunken-quest-pay"
         },
         "drunken-quest-try-negociate": {
-            "availableHook": "",
-            "hook": "",
+            "hook": "onStartNegotiateDoctorBag",
             "state": "drunken-quest-on-negociate",
             "text": "drunken-quest-try-negociate"
         },
@@ -43,7 +37,6 @@
             "text": "entry-exit"
         },
         "lets-trade": {
-            "availableHook": "",
             "state": "trade",
             "text": "lets-trade"
         },
@@ -63,8 +56,14 @@
                 "lets-trade",
                 "no-trade"
             ],
-            "hook": "",
+            "mood": "neutral",
             "text": "about-steward-answer"
+        },
+        "about-water-carrier": {
+            "answers": [
+            ],
+            "mood": "neutral",
+            "text": "about-water-carrier"
         },
         "drunken-quest": {
             "answers": [
@@ -72,6 +71,7 @@
                 "drunken-quest-try-negociate",
                 "drunken-quest-cantpay"
             ],
+            "mood": "neutral",
             "text": "drunken-quest"
         },
         "drunken-quest-about-potioks": {
@@ -80,11 +80,13 @@
                 "drunken-quest-lower-price",
                 "drunken-quest-cantpay"
             ],
+            "mood": "angry",
             "text": "drunken-quest-about-potioks"
         },
         "drunken-quest-on-cantpay": {
             "answers": [
             ],
+            "mood": "sad",
             "text": "drunken-quest-on-cantpay"
         },
         "drunken-quest-on-negociate": {
@@ -94,6 +96,7 @@
                 "drunken-quest-lower-price",
                 "drunken-quest-cantpay"
             ],
+            "mood": "sad",
             "text": "drunken-quest-on-negociate"
         },
         "drunken-quest-on-negociate-failure": {
@@ -101,6 +104,7 @@
                 "drunken-quest-pay",
                 "drunken-quest-cantpay"
             ],
+            "mood": "sad",
             "text": "drunken-quest-on-negociate-failure"
         },
         "drunken-quest-on-negociate-success": {
@@ -108,22 +112,25 @@
                 "drunken-quest-pay",
                 "drunken-quest-cantpay"
             ],
+            "mood": "smile",
             "text": "drunken-quest-on-negociate-success"
         },
         "entry": {
             "answers": [
                 "start-drunken-quest",
+                "ask-about-water-carrier",
                 "lets-trade",
                 "about-steward",
                 "entry-exit"
             ],
-            "hook": "",
+            "mood": "smile",
             "text": "entry"
         },
         "trade": {
             "answers": [
             ],
             "hook": "barter",
+            "mood": "smile",
             "text": "trade"
         }
     }

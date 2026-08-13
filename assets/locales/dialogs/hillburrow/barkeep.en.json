@@ -2,8 +2,10 @@
     "dialogs": {
         "hillburrow/barkeep": {
             "about-npc": "I'm {{npc}}. Nothing much to tell about me, I just make drinks and I keep the fine people of Hillburrow happy and hydrated ! And who might you be ?",
+            "about-water-carrier": "Mighty Hobo ? Well, stick around, and you'll see him eventually. He usually comes here after work, around 6 in the afternoon.",
             "ask-about-drinks": "What do you have on tap ?",
             "ask-about-npc": "Who are you ?",
+            "ask-about-water-carrier": "I'm looking for Mighty Hobo, a water carrier.",
             "entry": "Howdy, {{knownName}} ! What are you drinking ?",
             "exit": "",
             "exit-without-drinks": "No drinks for me this time ! Bye !",

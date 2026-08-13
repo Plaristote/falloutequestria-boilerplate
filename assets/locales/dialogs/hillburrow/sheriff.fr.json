@@ -2,7 +2,9 @@
     "dialogs": {
         "hillburrow/sheriff": {
             "about-npc": "Mon nom est {{npc}}. C'est moi qui fait respecter l'ordre dans ce patelin.",
+            "about-water-carrier": "Le porteur d'eau ? Ouais, je crois qu'il vit dans une cabane, près de la source d'eau. Sors d'ici par la porte de derrière, dirige-toi vers ta gauche, ce sera devant toi.",
             "ask-about-npc": "Qui es-tu ?",
+            "ask-about-water-carrier": "Je cherche Mighty Hobo, un porteur d'eau. Tu sais où je peux le trouver ?",
             "ask-about-work": "Je cherche du travail. Il y a quelque chose à faire dans le coin ?",
             "back-to-entry": "Parlons d'autre chose.",
             "entry": "'jour. Besoin d'aide ?",
