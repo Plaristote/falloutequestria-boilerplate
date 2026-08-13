@@ -30,6 +30,24 @@
             "availableHook": "canUseScrollHolodisk",
             "state": "scroll-logs/holodisk-entry",
             "text": "use-scroll-holodisk"
+        },
+        "sentinel-imprint-attempt-self": {
+            "hook": "attemptSelfImprint",
+            "state": "sentinel-lookup/imprint-failure",
+            "text": "sentinel-imprint-attempt-self"
+        },
+        "sentinel-imprint-retry": {
+            "hook": "attemptSelfImprint",
+            "state": "sentinel-lookup/imprint-failure",
+            "text": "sentinel-imprint-retry"
+        },
+        "sentinel-destroy-attempt": {
+            "hook": "attemptDestroySentinel",
+            "state": "sentinel-lookup/destroyed",
+            "text": "sentinel-destroy-attempt"
+        },
+        "sentinel-lookup-leave": {
+            "text": "sentinel-lookup-leave"
         }
     },
     "entryPoint": "entry",
@@ -74,6 +92,9 @@
         },
         "sentinel-lookup/entry": {
             "answers": [
+                "sentinel-imprint-attempt-self",
+                "sentinel-destroy-attempt",
+                "sentinel-lookup-leave"
             ],
             "text": "sentinel-lookup/entry"
         },
@@ -81,6 +102,32 @@
             "answers": [
             ],
             "text": "sentinel-lookup/searched"
+        },
+        "sentinel-lookup/imprint-success": {
+            "answers": [
+                "sentinel-lookup-leave"
+            ],
+            "text": "sentinel-lookup/imprint-success"
+        },
+        "sentinel-lookup/imprint-failure": {
+            "answers": [
+                "sentinel-imprint-retry",
+                "sentinel-destroy-attempt",
+                "sentinel-lookup-leave"
+            ],
+            "text": "sentinel-lookup/imprint-failure"
+        },
+        "sentinel-lookup/destroyed": {
+            "answers": [
+                "sentinel-lookup-leave"
+            ],
+            "text": "sentinel-lookup/destroyed"
+        },
+        "sentinel-lookup/rathian-intervenes": {
+            "answers": [
+                "sentinel-lookup-leave"
+            ],
+            "text": "sentinel-lookup/rathian-intervenes"
         }
     }
 }

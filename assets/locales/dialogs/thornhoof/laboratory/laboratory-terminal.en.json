@@ -13,7 +13,16 @@
             "search-over": "<i>You look upon the files, and see nothing that catch your interest.</i>",
             "search-try-again": "Try again.",
             "sentinel-lookup/searched": "<i>You hacked your way into some suspicious encrypted files. They are design documents for a sensible project called <b>Sentinel</b>.</i>",
-            "use-scroll-holodisk": "Insert Vellum Scroll's holodisk"
+            "use-scroll-holodisk": "Insert Vellum Scroll's holodisk",
+            "sentinel-lookup/entry": "<i>The console lights up with Sentinel's authentication protocol. The magical imprint is right there, waiting to be claimed - or wiped out for good.</i>",
+            "sentinel-imprint-attempt-self": "Try to apply the imprint on yourself",
+            "sentinel-imprint-retry": "Try again",
+            "sentinel-destroy-attempt": "Destroy the imprint",
+            "sentinel-lookup-leave": "Step away from the terminal",
+            "sentinel-lookup/imprint-success": "<i>Arcane script crawls up the console and into you. Something settles at the back of your skull - cold, vast, and now unmistakably yours. Sentinel has a new master.</i>",
+            "sentinel-lookup/imprint-failure": "<i>The ritual slips out of your grasp. Whatever this imprint is made of, it isn't ready to answer to you yet.</i>",
+            "sentinel-lookup/destroyed": "<i>The console sparks, then goes dark for good. Whatever Sentinel might have become, it never will now.</i>",
+            "sentinel-lookup/rathian-intervenes": "<i>Before you can finish, Rathian grabs your hoof away from the console.</i><br>\n\"Not like this.\""
         }
     }
 }

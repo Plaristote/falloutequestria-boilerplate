@@ -5,3 +5,9 @@ export const DealWithRathian = {
   LeftWithPlayer: 8,
   GaveUpSentinel: 16
 };
+
+export const SentinelOutcome = {
+  AppliedToRathian: 1,
+  AppliedToPlayer: 2,
+  Destroyed: 3
+};

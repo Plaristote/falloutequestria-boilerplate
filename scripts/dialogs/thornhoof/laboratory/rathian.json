@@ -10,6 +10,23 @@
             "hook": "waitHere",
             "text": "ask-wait"
         },
+        "ask-about-sentinel-fate": {
+            "availableHook": "canDiscussSentinelFate",
+            "state": "sentinel-decision/entry",
+            "text": "ask-about-sentinel-fate"
+        },
+        "sentinel-decision-ask-destroy": {
+            "hook": "destroySentinelWithRathian",
+            "state": "sentinel-decision/destroyed",
+            "text": "sentinel-decision-ask-destroy"
+        },
+        "sentinel-decision-ask-imprint": {
+            "state": "sentinel-decision/refuse-imprint",
+            "text": "sentinel-decision-ask-imprint"
+        },
+        "sentinel-decision-nevermind": {
+            "text": "sentinel-decision-nevermind"
+        },
         "convince-waiting": {
             "availableHook": "canConvinceToWait",
             "state": "about-waiting/convinced",
@@ -54,6 +71,7 @@
             "answers": [
                 "ask-come-with",
                 "ask-wait",
+                "ask-about-sentinel-fate",
                 "leave-entry"
             ],
             "text": "entry"
@@ -62,6 +80,28 @@
             "answers": [
             ],
             "text": "first-time"
+        },
+        "sentinel-decision/entry": {
+            "answers": [
+                "sentinel-decision-ask-destroy",
+                "sentinel-decision-ask-imprint",
+                "sentinel-decision-nevermind"
+            ],
+            "mood": "dubious",
+            "text": "sentinel-decision/entry"
+        },
+        "sentinel-decision/destroyed": {
+            "answers": [
+            ],
+            "mood": "smile",
+            "text": "sentinel-decision/destroyed"
+        },
+        "sentinel-decision/refuse-imprint": {
+            "answers": [
+                "sentinel-decision-nevermind"
+            ],
+            "mood": "angry",
+            "text": "sentinel-decision/refuse-imprint"
         }
     }
 }

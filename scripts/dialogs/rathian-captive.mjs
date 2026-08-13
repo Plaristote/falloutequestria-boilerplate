@@ -119,6 +119,7 @@ class Dialog {
     console.log("DECISION HELP");
     this.dialog.npc.setVariable("acquireSentinelWithPlayer", 1);
     this.dialog.npc.setVariable("waitForCellToOpen", 1);
+    this.quest.setVariable("rathianAccompanying", 1);
   }
 
   letsGoAlready() {

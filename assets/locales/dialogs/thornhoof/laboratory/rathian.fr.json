@@ -4,7 +4,9 @@
       "bubbles": {
         "lets-repair-generator": "Je vais mettre le générateur en route.",
         "hacked-generator-terminal": "On a les accès root sur ce terminal.",
-        "lets-hack-turret": "Je vais prendre contrôle du turret !"
+        "lets-hack-turret": "Je vais prendre contrôle du turret !",
+        "claiming-sentinel": "C'est fait. Sentinel m'obéira désormais.",
+        "betrayal": "Je peux pas te laisser faire ça."
       }
     }
   }

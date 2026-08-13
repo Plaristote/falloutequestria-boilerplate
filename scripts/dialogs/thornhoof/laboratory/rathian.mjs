@@ -1,4 +1,5 @@
 import {States} from "../../../characters/rathian/thornhoof-laboratory-quest.mjs";
+import {SentinelOutcome} from "../../../characters/rathian/flags.mjs";
 
 class Dialog {
   constructor(dialog) {
@@ -36,6 +37,20 @@ class Dialog {
   onConvincedToWait() {
     this.canWaitHere = 1;
     this.letsGo();
+  }
+
+  canDiscussSentinelFate() {
+    return this.quest.hasVariable("rathianConvinced")
+      && !this.quest.hasVariable("sentinelOutcome");
+  }
+
+  destroySentinelWithRathian() {
+    const terminal = level.findObject("2.laboratory.terminal#1");
+
+    terminal.script.sentinelResolved = true;
+    this.quest.setVariable("sentinelOutcome", SentinelOutcome.Destroyed);
+    this.quest.setVariable("rathianConsented", 1);
+    this.quest.completeObjective("dealWithRathian");
   }
 }
 

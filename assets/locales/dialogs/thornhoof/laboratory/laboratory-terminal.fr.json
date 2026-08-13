@@ -14,6 +14,15 @@
             "search-try-again": "Essayer à nouveau",
             "sentinel-lookup/searched": "<i>Tu hacke le terminal et obtiens l'accès à des fichiers protégés. Ce sont des spécifications pour un projet sensible, nommé <b>Sentinelle</b>.",
             "use-scroll-holodisk": "Insérer l'holodisque de Vellum Scroll"
+            "sentinel-lookup/entry": "<i>L'écran montre le processus d'authentification de Sentinel. La marque magique est juste là, prête à être appliquée à nouveau - ou supprimée pour toujours.</i>",
+            "sentinel-imprint-attempt-self": "Appliquer la marque sur l'utilisateur",
+            "sentinel-imprint-retry": "Essayer à nouveau",
+            "sentinel-destroy-attempt": "Détruire la marque",
+            "sentinel-lookup-leave": "Quitter le terminal",
+            "sentinel-lookup/imprint-success": "<i>Des scriptures arcaniques s'activent autour de toi et de la console. Une sensation étrange envahit ton crâne, quelque chose de froid, infiniement vaste, et définitivement tiens. Sentinel a trouvé un nouveau maître.</i>",
+            "sentinel-lookup/imprint-failure": "<i>Le rituel échappe à ta compréhension. Quelque soit les mécanismes arcaniques qui constituent cette marque magique, tu n'arrive pas à en faire sens.</i>",
+            "sentinel-lookup/destroyed": "<i>Quelques étincelles échappent du terminal, qui s'éteint pour toujours. Quel que fut le potentiel de Sentinel, plus personne ne pourra en prendre le contrôle.</i>",
+            "sentinel-lookup/rathian-intervenes": "<i>Avant que tu puisse compléter la tâche, Rathian attrape ta jambe et t'éloigne de la console. Il te dit :</i><br>Pas comme ça."
         }
     }
 }

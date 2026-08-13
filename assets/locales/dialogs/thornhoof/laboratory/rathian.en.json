@@ -6,17 +6,26 @@
             "about-waiting/unconvinced": "Well, I can take care of myself just fine. Carry on.",
             "ask-come-with": "Let's go.",
             "ask-wait": "Wait here.",
+            "ask-about-sentinel-fate": "About Sentinel...",
             "bubbles": {
                 "hacked-generator-terminal": "I got us admin privileges on that terminal.",
                 "lets-hack-turret": "I'm gonna take over the turret !",
-                "lets-repair-generator": "Let's fix the generator first."
+                "lets-repair-generator": "Let's fix the generator first.",
+                "claiming-sentinel": "This is it. Sentinel is finally mine.",
+                "betrayal": "You'd really take it for yourself ? I can't let you."
             },
             "convince-waiting": "The path up ahead is dangerous. I must get you there in one piece, else this will all have been for nothing.",
             "entry": "What's up ?",
             "first-time": "The Ministry of Arcane Science laboratory. We should look for the control room. It's probably further underground. It might not be a bad idea to turn the power on too.",
             "giveup-waiting": "Alright, do as you want.",
             "leave-entry": "Nothing.",
-            "unconvincing-waiting": "I'm not trying to screw you Rathian, I'm just trying to avoid you dying a stupid death !"
+            "unconvincing-waiting": "I'm not trying to screw you Rathian, I'm just trying to avoid you dying a stupid death !",
+            "sentinel-decision/entry": "I still think Sentinel shouldn't wake up. Not for me, not for you, not for anypony. What do you want to do about it ?",
+            "sentinel-decision-ask-destroy": "Destroy it, once and for all.",
+            "sentinel-decision-ask-imprint": "Apply the imprint on me instead.",
+            "sentinel-decision-nevermind": "Never mind, let's keep going.",
+            "sentinel-decision/destroyed": "Good. This is the right call. Give me a moment... There. It's done - nopony will ever wake Sentinel up now.",
+            "sentinel-decision/refuse-imprint": "No. I meant what I said back in that cell. If you go through with it, don't expect me to just stand there."
         }
     }
 }

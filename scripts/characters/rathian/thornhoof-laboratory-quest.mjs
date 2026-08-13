@@ -1,4 +1,5 @@
 import {CharacterBehaviour} from "../character.mjs";
+import {SentinelOutcome} from "./flags.mjs";
 
 const datastore = "thornhoof-laboratory-";
 export const States = {
@@ -7,6 +8,9 @@ export const States = {
   RepairedGenerator: 2,
   HackLaboratoryTurret: 3,
   Waiting: 4,
+  ClaimSentinel: 5,
+  ClaimedSentinel: 6,
+  Hostile: 7,
   Done: 1000
 };
 
@@ -26,6 +30,18 @@ export default class Rathian extends CharacterBehaviour {
     return "thornhoof/laboratory/rathian";
   }
 
+  get sentinelQuest() {
+    return game.quests.getQuest("stable-103/rathian");
+  }
+
+  get wantsSentinelForHimself() {
+    return this.model.hasVariable("acquireSentinelWithPlayer") && !this.isConvinced;
+  }
+
+  get isConvinced() {
+    return this.sentinelQuest.hasVariable("rathianConvinced");
+  }
+
   bubble(key, params) {
     return i18n.t(`dialogs.thornhoof/laboratory/rathian.bubbles.${key}`, params);
   }
@@ -39,8 +55,18 @@ export default class Rathian extends CharacterBehaviour {
       this.state = States.HackLaboratoryTurret;
       break ;
     case "laboratory":
+      if (this.wantsSentinelForHimself)
+        this.state = States.ClaimSentinel;
       break ;
     }
+  }
+
+  shouldTurnHostile() {
+    return this.isConvinced
+      && this.state !== States.Hostile
+      && this.state !== States.Done
+      && this.sentinelQuest.getVariable("sentinelOutcome", 0) === SentinelOutcome.AppliedToPlayer
+      && !this.sentinelQuest.hasVariable("rathianConsented");
   }
 
   autopilot() {
@@ -59,6 +85,12 @@ export default class Rathian extends CharacterBehaviour {
       case States.HackLaboratoryTurret:
         this.hackLaboratoryTurret();
         break ;
+      case States.ClaimSentinel:
+        this.claimSentinelTask();
+        break ;
+      case States.Hostile:
+        this.betrayPlayer();
+        break ;
     }
   }
 
@@ -75,14 +107,10 @@ export default class Rathian extends CharacterBehaviour {
       actions.pushAnimation("use");
       actions.pushScript({
         onTrigger: () => {
-          console.log("Coucou petite perruche #1");
           generator.script.toggleRunning();
-          console.log("Coucou petite perruche #2");
           this.state = States.RepairedGenerator;
-          console.log("Coucou petite perruche #3");
         },
         onCancel: () => {
-          console.log("Oops canceled !!!!!!");
         }
       });
       actions.start();
@@ -127,6 +155,49 @@ export default class Rathian extends CharacterBehaviour {
           turret.statistics.faction.popUp();
           terminal.script.hacked = true;
           this.state = States.Default;
+        }
+      });
+      actions.start();
+    }
+  }
+
+  claimSentinelTask() {
+    const terminal = level.findObject("2.laboratory.terminal#1");
+    const actions = this.model.actionQueue;
+
+    if (terminal.script.sentinelResolved) {
+      this.state = States.ClaimedSentinel;
+      return ;
+    }
+    if (actions.isEmpty()) {
+      actions.pushSpeak(this.bubble("claiming-sentinel"), 3000, "white");
+      actions.pushWait(1);
+      actions.pushReach(terminal);
+      actions.pushAnimation("use");
+      actions.pushScript({
+        onTrigger: () => {
+          terminal.script.sentinelResolved = true;
+          this.sentinelQuest.setVariable("sentinelOutcome", SentinelOutcome.AppliedToRathian);
+          this.sentinelQuest.completeObjective("dealWithRathian");
+          this.state = States.ClaimedSentinel;
+        }
+      });
+      actions.start();
+    }
+  }
+
+  betrayPlayer() {
+    const actions = this.model.actionQueue;
+
+    if (actions.isEmpty()) {
+      actions.pushSpeak(this.bubble("betrayal"), 3000, "white");
+      actions.pushScript({
+        onTrigger: () => {
+          game.playerParty.removeCharacter(this.model);
+          this.model.statistics.faction = "rathian";
+          game.player.setAsEnemy(this.model);
+          this.model.setAsEnemy(game.player);
+          this.state = States.Done;
         }
       });
       actions.start();
