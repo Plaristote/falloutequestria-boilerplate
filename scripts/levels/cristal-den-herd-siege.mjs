@@ -1,21 +1,30 @@
 import {LevelBase} from "./base.mjs";
 
+function removeLiveCharacter(character) {
+  if (character.isAlive())
+    level.deleteObject(character);
+}
+
 export default class extends LevelBase {
   get quest() {
     return game.quests.getQuest("cristal-den/bibins-rescue-herd");
   }
 
   get scouts() {
-    return level.findGroup("scouts").objects;
+    return Array.from(level.findGroup("scouts").objects);
   }
 
   get herders() {
-    return level.findGroup("herd").objects;
+    return Array.from(level.findGroup("herd").objects);
   }
 
   onExit() {
-    if (this.quest && this.quest.isObjectiveFailed("rescue"))
-      this.scoutRemoval();
+    if (this.quest) {
+      if (this.quest.isObjectiveFailed("rescue"))
+        this.scoutRemoval();
+      else if (this.quest.isObjectiveCompleted("rescue"))
+        this.herdRemoval();
+    }
   }
 
   herdWithdraw() {
@@ -27,6 +36,10 @@ export default class extends LevelBase {
   }
 
   scoutRemoval() {
-    this.scouts.forEach(character => level.deleteObject(character));
+    this.scouts.forEach(removeLiveCharacter);
+  }
+
+  herdRemoval() {
+    this.herders.forEach(removeLiveCharacter);
   }
 }

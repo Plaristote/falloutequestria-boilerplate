@@ -11,7 +11,7 @@ export class TerminalAlimentation extends Terminal {
 
   get dialogEntryState() {
     if (level.getVariable("power") == 1)
-      return "normal/entry";
+      return "alim-restored";
     return "restricted-alim/entry";
   }
 }

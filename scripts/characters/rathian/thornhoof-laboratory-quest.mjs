@@ -66,8 +66,9 @@ export default class Rathian extends CharacterBehaviour {
     const generator = level.findObject("1.generator-room.generator#1");
     const actions = this.model.actionQueue;
 
-    if (generator.script.enabled) this.state = States.Default;
-    if (!generator.script.enabled && actions.isEmpty()) {
+    if (generator.script.running)
+      this.state = States.Default;
+    else if (actions.isEmpty()) {
       actions.pushSpeak(this.bubble("lets-repair-generator"), 3000, "white");
       actions.pushWait(1);
       actions.pushReach(generator);

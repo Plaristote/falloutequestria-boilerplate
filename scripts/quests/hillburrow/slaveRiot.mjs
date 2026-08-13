@@ -195,6 +195,15 @@ export class SlaveRiot extends QuestHelper {
     });
   }
 
+  startImprovisedRiot() {
+    this.model.setVariable("riotStarted", 2);
+    level.setVariable("riotStarted", 1);
+    game.diplomacy.setAsEnemy(true, "hillburrow-potioks", "hillburrow-slaves");
+    guards.forEach(guard => {
+      guard.script.onSlaveRiot();
+    });
+  }
+
   onCharacterKilled(character) {
     if (level.name == "hillburrow-backtown") {
       const guardGroup = level.findGroup("guards");

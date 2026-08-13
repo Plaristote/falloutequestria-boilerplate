@@ -24,7 +24,7 @@ class Dialog {
   }
 
   canStumbleUponSentinel() {
-    return this.sentinelQuest && this.sentinelQuest.hasVariable("knowsAboutSentinel") && !this.npc.hasVariable("foundAboutSentinel");
+    return this.sentinelQuest && this.sentinelQuest.hasVariable("knowsAboutSentinel") && !this.dialog.npc.hasVariable("foundAboutSentinel");
   }
 
   foundScrollLogs() {

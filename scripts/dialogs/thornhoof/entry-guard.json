@@ -13,6 +13,7 @@
             "text": "ask-for-no-trouble"
         },
         "ask-whats-happening": {
+            "state": "introduction",
             "text": "ask-whats-happening"
         },
         "go-to-meeting": {

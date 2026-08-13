@@ -23,7 +23,7 @@ export default class extends QuestHelper {
     return text;
   }
 
-  onItemPicked() {
+  onItemPicked(item) {
     if (isBookItem(item) && this.hasEnoughBooks())
       this.model.completeObjective("books");
   }

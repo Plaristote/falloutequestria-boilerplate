@@ -61,4 +61,11 @@ export class RainyPurple extends Slave {
     this.model.isUnique = true;
     game.quests.addQuest("cristal-den/rainy-purple-vendetta").script.goToQuest();
   }
+
+  onCharacterDetected(character) {
+    if (game.playerParty.containsCharacter(character) && game.diplomacy.areEnemies("player", "hillburrow-potioks")) {
+      const quest = game.quests.addQuest("hillburrow/slaveRiot");
+      quest.script.startImprovisedRiot();
+    }
+  }
 }

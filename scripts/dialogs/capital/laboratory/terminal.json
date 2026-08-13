@@ -118,6 +118,7 @@
             "text": "chemistry-lab-experiment-note-2"
         },
         "chemistry-lab-further-celestial-device": {
+            "availableHook": "knowsAboutARM",
             "state": "chemistry-lab/celestial-device-hint",
             "text": "chemistry-lab-further-celestial-device"
         },
@@ -198,6 +199,12 @@
     },
     "entryPoint": "",
     "states": {
+        "alim-restored": {
+            "answers": [
+                "leave-terminal"
+            ],
+            "text": "alim-restored"
+        },
         "chemistry-lab/celestial-device-hint": {
             "answers": [
                 "chemistry-back-to-main-menu",
@@ -238,7 +245,9 @@
         },
         "chemistry-lab/notes": {
             "answers": [
-                "chemistry-lab-further-celestial-device"
+                "chemistry-lab-further-celestial-device",
+                "chemistry-back-to-main-menu",
+                "leave-terminal"
             ],
             "text": "chemistry-lab/notes"
         },
@@ -303,6 +312,12 @@
                 "leave-terminal"
             ],
             "text": "control-room/log-index"
+        },
+        "entrance-terminal": {
+            "answers": [
+                "leave-terminal"
+            ],
+            "text": "entrance-terminal"
         },
         "restricted-alim/alim-data-lookup": {
             "answers": [

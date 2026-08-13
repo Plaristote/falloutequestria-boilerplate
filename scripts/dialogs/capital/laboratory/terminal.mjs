@@ -70,6 +70,10 @@ class Dialog {
     }
   }
 
+  knowsAboutARM() {
+    return game.quests.getQuest("celestialDevice").hasObjective("find-arm-module");
+  }
+
   learnedAboutLog47() { this.learnedAboutLogs(47); }
   learnedAboutLog65() { this.learnedAboutLogs(65); }
   learnedAboutLog93() { this.learnedAboutLogs(93); }

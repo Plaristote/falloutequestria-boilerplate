@@ -11,7 +11,7 @@ export class TerminalEntrace extends Terminal {
 
   get dialogEntryState() {
     if (level.getVariable("power") == 1)
-      return "normal/entry";
+      return "entrance-terminal";
     return "restricted-mode/entry";
   }
 }

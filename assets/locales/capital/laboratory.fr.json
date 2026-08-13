@@ -3,7 +3,8 @@
     "laboratory": {
       "terminal-not-alimented": "Ce terminal ne fonctionne pas.",
       "on-blood-pact": "Aïe ! J'ai peut-être fait une connerie, moi.",
-      "elevator-needs-power": "L'ascenseur ne répond pas. Il n'a pas l'air alimenté."
+      "elevator-needs-power": "L'ascenseur ne répond pas. Il n'a pas l'air alimenté.",
+      "generator#1-is-beyond-fixing": "Tu bricole ce générateur quelque temps, jusqu'à réaliser que ses circuits sont détérioriés au-delà de toute tentative de réparation."
     }
   }
 }
