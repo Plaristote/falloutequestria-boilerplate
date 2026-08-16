@@ -11,6 +11,7 @@ export const States = {
   ClaimSentinel: 5,
   ClaimedSentinel: 6,
   Hostile: 7,
+  DiscussPlan: 8,
   Done: 1000
 };
 
@@ -65,15 +66,28 @@ export default class Rathian extends CharacterBehaviour {
     return this.isConvinced
       && this.state !== States.Hostile
       && this.state !== States.Done
-      && this.sentinelQuest.getVariable("sentinelOutcome", 0) === SentinelOutcome.AppliedToPlayer
-      && !this.sentinelQuest.hasVariable("rathianConsented");
+      && this.sentinelQuest.hasVariable("rathianStoppedPlayer");
+  }
+
+  shouldDiscussPlan() {
+    const outcome = this.sentinelQuest.getVariable("sentinelOutcome", 0);
+    return (outcome === SentinelOutcome.AppliedToRathian || outcome === SentinelOutcome.Destroyed)
+      && this.state !== States.Hostile
+      && this.state !== States.DiscussPlan
+      && this.state !== States.Done
+      && !this.sentinelQuest.hasVariable("discussedSentinelPlan");
   }
 
   autopilot() {
     if (!this.model.actionQueue.isEmpty()) return ;
     console.log("Rathian Autopilot", this.state);
+    if (this.shouldTurnHostile())
+      this.state = States.Hostile;
+    else if (this.shouldDiscussPlan())
+      this.state = States.DiscussPlan;
     switch (this.state) {
       case States.Default:
+      case States.ClaimedSentinel:
         this.followPlayer(4);
         break ;
       case States.RepairGenerator:
@@ -87,6 +101,9 @@ export default class Rathian extends CharacterBehaviour {
         break ;
       case States.ClaimSentinel:
         this.claimSentinelTask();
+        break ;
+      case States.DiscussPlan:
+        this.discussPlanTask();
         break ;
       case States.Hostile:
         this.betrayPlayer();
@@ -179,7 +196,33 @@ export default class Rathian extends CharacterBehaviour {
           terminal.script.sentinelResolved = true;
           this.sentinelQuest.setVariable("sentinelOutcome", SentinelOutcome.AppliedToRathian);
           this.sentinelQuest.completeObjective("dealWithRathian");
+          this.state = States.DiscussPlan;
+        }
+      });
+      actions.start();
+    }
+  }
+
+  discussPlanTask() {
+    const actions = this.model.actionQueue;
+    const outcome = this.sentinelQuest.getVariable("sentinelOutcome");
+    let dialogState;
+
+    switch (outcome) {
+    case SentinelOutcome.AppliedToRathian:
+      dialogState = "aftermath/claimed/entry";
+      break ;
+    default:
+      dialogState = "aftermath/destroyed/entry";
+      break ;
+    }
+
+    if (actions.isEmpty()) {
+      actions.pushReach(game.player);
+      actions.pushScript({
+        onTrigger: () => {
           this.state = States.ClaimedSentinel;
+          level.initializeDialog(this.model, this.dialog, dialogState);
         }
       });
       actions.start();

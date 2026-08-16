@@ -6,6 +6,19 @@ class Dialog {
     this.dialog = dialog;
   }
 
+  getEntryPoint() {
+    if (this.dialog.npc.state === States.DiscussPlan && !this.quest.hasVariable("discussedSentinelPlan")) {
+      return this.quest.getVariable("sentinelOutcome", 0) === SentinelOutcome.AppliedToRathian
+        ? "aftermath/claimed/entry"
+        : "aftermath/destroyed/entry";
+    }
+    return "entry";
+  }
+
+  get quest() {
+    return game.quests.getQuest("stable-103/rathian");
+  }
+
   get isWaiting() {
     return this.dialog.npc.state == States.Waiting;
   }
@@ -51,6 +64,21 @@ class Dialog {
     this.quest.setVariable("sentinelOutcome", SentinelOutcome.Destroyed);
     this.quest.setVariable("rathianConsented", 1);
     this.quest.completeObjective("dealWithRathian");
+  }
+
+  resolveSentinelDiscussion(planFlag) {
+    this.quest.setVariable("discussedSentinelPlan", 1);
+    this.quest.setVariable(planFlag, 1);
+    this.dialog.npc.unsetVariable("promptedSentinelDiscussion");
+    this.dialog.npc.state = States.Default;
+  }
+
+  agreeToConfrontOvermare() {
+    this.resolveSentinelDiscussion("planConfrontOvermare");
+  }
+
+  agreeToDestroySentinelAtStable() {
+    this.resolveSentinelDiscussion("planDestroySentinelAtStable");
   }
 }
 

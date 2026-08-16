@@ -1,0 +1,74 @@
+{
+    "answers": {
+        "terminal-activate-self": {
+            "state": "player-options/activate",
+            "text": "terminal-activate-self"
+        },
+        "terminal-destroy": {
+            "state": "player-options/destroy",
+            "text": "terminal-destroy"
+        },
+        "terminal-leave": {
+            "text": "terminal-leave"
+        },
+        "terminal-let-overmare-proceed": {
+            "state": "overmare-activates/done",
+            "text": "terminal-let-overmare-proceed"
+        }
+    },
+    "entryPoint": "nothing-to-do/entry",
+    "states": {
+        "already-resolved": {
+            "answers": [
+            ],
+            "text": "already-resolved"
+        },
+        "not-yours/entry": {
+            "answers": [
+            ],
+            "text": "not-yours/entry"
+        },
+        "nothing-to-do/entry": {
+            "answers": [
+            ],
+            "text": "nothing-to-do/entry"
+        },
+        "overmare-activates/done": {
+            "answers": [
+            ],
+            "hook": "overmareActivatesSentinel",
+            "mood": "smile",
+            "text": "overmare-activates/done"
+        },
+        "overmare-activates/entry": {
+            "answers": [
+                "terminal-let-overmare-proceed",
+                "terminal-leave"
+            ],
+            "mood": "sad",
+            "text": "overmare-activates/entry"
+        },
+        "player-options/activate": {
+            "answers": [
+            ],
+            "hook": "activateSentinelAsPlayer",
+            "mood": "cocky",
+            "text": "player-options/activate"
+        },
+        "player-options/destroy": {
+            "answers": [
+            ],
+            "hook": "destroySentinelAtTerminal",
+            "mood": "cocky",
+            "text": "player-options/destroy"
+        },
+        "player-options/entry": {
+            "answers": [
+                "terminal-activate-self",
+                "terminal-destroy",
+                "terminal-leave"
+            ],
+            "text": "player-options/entry"
+        }
+    }
+}

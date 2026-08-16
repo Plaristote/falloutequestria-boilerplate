@@ -53,14 +53,17 @@ class Dialog {
   }
 
   onIntimidate() {
-    if (intimidateCheck(game.player, this.dialog.npc))
+    if (intimidateCheck(game.player, this.dialog.npc)) {
       level.setVariable("guardsIntimidated", 1);
-    else
-      this.startFight();
+      return "conflict/intimidate-success";
+    }
+    this.startFight();
+    return "conflict/intimidate-failure";
   }
 
   startFight() {
-    game.diplomacy.setAsEnemy(true, "player", "stable-103");
+    game.player.sneaking = false;
+    level.script.startFight();
   }
 }
 

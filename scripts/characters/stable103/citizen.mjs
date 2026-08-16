@@ -30,6 +30,10 @@ export class Citizen extends PasserbyBehaviour {
     ];
   }
 
+  initialize() {
+    this.model.attacksOnSight = false;
+  }
+
   goToNextLocation() {
     if (game.timeManager.hour > 21 || game.timeManager.hour < 7)
       this.goToHome();

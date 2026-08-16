@@ -1,11 +1,8 @@
 import {CharacterBehaviour} from "../character.mjs";
 
-class Character extends CharacterBehaviour {
+export default class extends CharacterBehaviour {
   constructor(model) {
     super(model);
+    this.model.attacksOnSight = false;
   }
-}
-
-export function create(model) {
-  return new Character(model);
 }

@@ -5,7 +5,7 @@ export default class extends LevelBase {
   onLoaded() {
     super.onLoaded();
     if (this.rathianQuest.isObjectiveCrossedOff("dealWithRathian"))
-      this.initializePreEndGameScene();
+      this.initializeEndGame();
   }
 
   onExit() {
@@ -25,6 +25,24 @@ export default class extends LevelBase {
     return level.findGroup("guards");
   }
 
+  get exitZone() {
+    return level.getTileZone("exit");
+  }
+
+  get exitZoneEnabled() {
+    return this.exitZone.enabled;
+  }
+
+  set exitZoneEnabled(value) {
+    this.exitZone.enabled = value;
+  }
+
+  isTrappedInJail(character) {
+    const zone = level.getTileZone("containment-cell");
+    const door = level.findObject("level#0.jail.door");
+    return level.isInsideZone(zone, character) && !door.opened && door.locked;
+  }
+
   moveCharacterToJail(character) {
     const door = level.findObject("level#0.jail.door");
 
@@ -34,8 +52,24 @@ export default class extends LevelBase {
     game.playerParty.removeCharacter(character);
   }
 
+  initializeEndGame() {
+    level.setVariable("endGameOnExit", 1);
+    this.exitZoneEnabled = false;
+    this.initializeEndGameRathian();
+    this.initializePreEndGameScene();
+  }
+
+  initializeEndGameRathian() {
+    const rathian = game.getCharacter("rathian");
+
+    if (game.playerParty.containsCharacter(rathian)) {
+      rathian.setScript("rathian/stable103-end-scene");
+    }
+  }
+
   initializePreEndGameScene() {
     let guardIndex = 0;
+
     this.guards.objects.forEach(guard => {
       level.setCharacterPosition(guard, 32 + guardIndex, 47, 0);
       guardIndex++;

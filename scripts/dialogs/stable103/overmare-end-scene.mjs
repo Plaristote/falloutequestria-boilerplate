@@ -1,4 +1,4 @@
-import {DealWithRathian} from "../../characters/rathian/flags.mjs";
+import {DealWithRathian, SentinelOutcome} from "../../characters/rathian/flags.mjs";
 
 class Dialog {
   constructor(dialog) {
@@ -29,7 +29,7 @@ class Dialog {
   }
 
   get hasMagicalImprint() {
-    return true; // TODO
+    return this.rathianQuest.getVariable("sentinelOutcome", 0) == SentinelOutcome.AppliedToPlayer;
   }
 
   getEntryPoint() {
@@ -146,7 +146,7 @@ class Dialog {
   }
 
   endGameOnStableOpening() {
-    // TODO implement end game
+    game.setVariable("gameEnding", "stable-opened");
     game.gameFinished();
   }
 

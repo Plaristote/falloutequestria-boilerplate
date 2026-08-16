@@ -1,5 +1,48 @@
 {
     "answers": {
+        "aftermath-claimed-agree": {
+            "hook": "agreeToConfrontOvermare",
+            "state": "aftermath/claimed/agreed",
+            "text": "aftermath-claimed-agree"
+        },
+        "aftermath-claimed-back-to-hub": {
+            "state": "aftermath/claimed/entry",
+            "text": "aftermath-claimed-back-to-hub"
+        },
+        "aftermath-claimed-press-overmare": {
+            "state": "aftermath/claimed/press-overmare",
+            "text": "aftermath-claimed-press-overmare"
+        },
+        "aftermath-claimed-worry-overmare": {
+            "state": "aftermath/claimed/worry-overmare",
+            "text": "aftermath-claimed-worry-overmare"
+        },
+        "aftermath-claimed-worry-stable": {
+            "state": "aftermath/claimed/worry-stable",
+            "text": "aftermath-claimed-worry-stable"
+        },
+        "aftermath-destroyed-agree": {
+            "hook": "agreeToDestroySentinelAtStable",
+            "state": "aftermath/destroyed/agreed",
+            "text": "aftermath-destroyed-agree"
+        },
+        "aftermath-destroyed-back-to-hub": {
+            "state": "aftermath/destroyed/entry",
+            "text": "aftermath-destroyed-back-to-hub"
+        },
+        "aftermath-destroyed-worry-overmare": {
+            "state": "aftermath/destroyed/worry-overmare",
+            "text": "aftermath-destroyed-worry-overmare"
+        },
+        "aftermath-destroyed-worry-stable": {
+            "state": "aftermath/destroyed/worry-stable",
+            "text": "aftermath-destroyed-worry-stable"
+        },
+        "ask-about-sentinel-fate": {
+            "availableHook": "canDiscussSentinelFate",
+            "state": "sentinel-decision/entry",
+            "text": "ask-about-sentinel-fate"
+        },
         "ask-come-with": {
             "availableHook": "isWaiting",
             "hook": "letsGo",
@@ -10,10 +53,16 @@
             "hook": "waitHere",
             "text": "ask-wait"
         },
-        "ask-about-sentinel-fate": {
-            "availableHook": "canDiscussSentinelFate",
-            "state": "sentinel-decision/entry",
-            "text": "ask-about-sentinel-fate"
+        "convince-waiting": {
+            "availableHook": "canConvinceToWait",
+            "state": "about-waiting/convinced",
+            "text": "convince-waiting"
+        },
+        "giveup-waiting": {
+            "text": "giveup-waiting"
+        },
+        "leave-entry": {
+            "text": "leave-entry"
         },
         "sentinel-decision-ask-destroy": {
             "hook": "destroySentinelWithRathian",
@@ -26,17 +75,6 @@
         },
         "sentinel-decision-nevermind": {
             "text": "sentinel-decision-nevermind"
-        },
-        "convince-waiting": {
-            "availableHook": "canConvinceToWait",
-            "state": "about-waiting/convinced",
-            "text": "convince-waiting"
-        },
-        "giveup-waiting": {
-            "text": "giveup-waiting"
-        },
-        "leave-entry": {
-            "text": "leave-entry"
         },
         "unconvincing-waiting": {
             "state": "about-waiting/unconvinced",
@@ -67,6 +105,72 @@
             "mood": "cocky",
             "text": "about-waiting/unconvinced"
         },
+        "aftermath/claimed/agreed": {
+            "answers": [
+            ],
+            "mood": "cocky",
+            "text": "aftermath/claimed/agreed"
+        },
+        "aftermath/claimed/entry": {
+            "answers": [
+                "aftermath-claimed-worry-overmare",
+                "aftermath-claimed-worry-stable",
+                "aftermath-claimed-agree"
+            ],
+            "mood": "smile",
+            "text": "aftermath/claimed/entry"
+        },
+        "aftermath/claimed/press-overmare": {
+            "answers": [
+                "aftermath-claimed-back-to-hub"
+            ],
+            "mood": "dubious",
+            "text": "aftermath/claimed/press-overmare"
+        },
+        "aftermath/claimed/worry-overmare": {
+            "answers": [
+                "aftermath-claimed-press-overmare",
+                "aftermath-claimed-back-to-hub"
+            ],
+            "mood": "dubious",
+            "text": "aftermath/claimed/worry-overmare"
+        },
+        "aftermath/claimed/worry-stable": {
+            "answers": [
+                "aftermath-claimed-back-to-hub"
+            ],
+            "mood": "smile",
+            "text": "aftermath/claimed/worry-stable"
+        },
+        "aftermath/destroyed/agreed": {
+            "answers": [
+            ],
+            "mood": "smile",
+            "text": "aftermath/destroyed/agreed"
+        },
+        "aftermath/destroyed/entry": {
+            "answers": [
+                "aftermath-destroyed-worry-overmare",
+                "aftermath-destroyed-worry-stable",
+                "aftermath-destroyed-agree"
+            ],
+            "mood": "dubious",
+            "text": "aftermath/destroyed/entry"
+        },
+        "aftermath/destroyed/worry-overmare": {
+            "answers": [
+                "aftermath-destroyed-back-to-hub"
+            ],
+            "mood": "dubious",
+            "text": "aftermath/destroyed/worry-overmare"
+        },
+        "aftermath/destroyed/worry-stable": {
+            "answers": [
+                "aftermath-destroyed-back-to-hub"
+            ],
+            "mood": "smile",
+            "text": "aftermath/destroyed/worry-stable"
+        },
         "entry": {
             "answers": [
                 "ask-come-with",
@@ -81,6 +185,12 @@
             ],
             "text": "first-time"
         },
+        "sentinel-decision/destroyed": {
+            "answers": [
+            ],
+            "mood": "smile",
+            "text": "sentinel-decision/destroyed"
+        },
         "sentinel-decision/entry": {
             "answers": [
                 "sentinel-decision-ask-destroy",
@@ -89,12 +199,6 @@
             ],
             "mood": "dubious",
             "text": "sentinel-decision/entry"
-        },
-        "sentinel-decision/destroyed": {
-            "answers": [
-            ],
-            "mood": "smile",
-            "text": "sentinel-decision/destroyed"
         },
         "sentinel-decision/refuse-imprint": {
             "answers": [

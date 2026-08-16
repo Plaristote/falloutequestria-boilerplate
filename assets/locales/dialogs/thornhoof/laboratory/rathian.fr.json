@@ -6,8 +6,36 @@
         "hacked-generator-terminal": "On a les accès root sur ce terminal.",
         "lets-hack-turret": "Je vais prendre contrôle du turret !",
         "claiming-sentinel": "C'est fait. Sentinel m'obéira désormais.",
-        "betrayal": "Je peux pas te laisser faire ça."
-      }
+        "betrayal": "Je peux pas te laisser faire ça.",
+        "wants-to-talk": "Hé, nous devrions parler de ce qui se passe maintenant."
+      },
+      "aftermath-claimed-agree": "Très bien. Allons arranger les choses.",
+      "aftermath-claimed-back-to-hub": "Bref. ",
+      "aftermath-claimed-press-overmare": "Ce n'est pas vraiment une promesse.",
+      "aftermath-claimed-worry-overmare": "Qu'est-ce qui lui arrive, exactement ?",
+      "aftermath-claimed-worry-stable": "Et les habitants ? Qu'est-ce qui leur arrive ?",
+      "aftermath-destroyed-agree": "Très bien. Finissons ce que nous avons commencé.",
+      "aftermath-destroyed-worry-overmare": "Qu'en est-il de l'Overmare ? C'est elle qui a gardé ça secret en premier lieu.",
+      "aftermath-destroyed-worry-stable": "Et tu n'as pas l'intention de faire entrer une armée dans l'étable, n'est-ce pas ?",
+      "aftermath/claimed/agreed": "Alors c'est décidé. En route. L'étable 103 se prépare pour ton grand retour.",
+      "aftermath/claimed/entry": "C'est fait. Sentinel me répondra à présent. Et je me suis assuré que le système d'authentification ne serait plus utilisable. Retournons à l'étable 103. Je prendrais ce qui revient de droit aux Rangers, et l'Overmare se tiendra à l'écart - d'une manière ou d'une autre.",
+      "aftermath/destroyed/agreed": "Bien. Allons-y - plus tôt ce sera derrière nous, plus tôt j'arrêterai de regarder par-dessus mon épaule.",
+      "aftermath/destroyed/entry": "Détruire l'empreinte nous fait gagner du temps, mais ça ne suffira pas. Sentinel est toujours là-bas, endormie, tout comme ce qui pourrait inciter quelqu'un d'autre à finir ce que j'ai presque fait. Nous devons allez à l'étable et la mettre hors d'état de nuire, pour de bon.",
+      "ask-about-sentinel-fate": "À propos de Sentinel...",
+      "ask-come-with": "On s'en va.",
+      "ask-wait": "Attends ici.",
+      "convince-waiting": "La voie à suivre est dangereuse. Je dois t'y amener en un seul morceau, sinon tout cela n'aura servi à rien.",
+      "entry": "Qu'est-ce qu'il y a ?",
+      "first-time": "Le laboratoire du Ministère des Sciences Arcaniques. Nous devrions chercher la salle de contrôle. C'est probablement plus bas. Ce n'est peut-être pas une mauvaise idée d'allumer le courant aussi.",
+      "giveup-waiting": "D'accord, fais ce que tu veux.",
+      "leave-entry": "Rien du tout.",
+      "sentinel-decision-ask-destroy": "Détruis-le. Une fois pour toute.",
+      "sentinel-decision-ask-imprint": "Applique plutôt l'emprunte sur moi.",
+      "sentinel-decision-nevermind": "Tant pis, continuons.",
+      "sentinel-decision/destroyed": "Bien. C'est la bonne décision. Donnes-moi un moment. Voilà, c'est fait : plus personne ne pourra réveiller Sentinel maintenant. À l'exception de l'Overamre.",
+      "sentinel-decision/entry": "Je pense toujours que Sentinel ne devrait pas se réveiller. Pas pour moi, pas pour toi, pas pour n'importe quel poney.",
+      "sentinel-decision/refuse-imprint": "Non. Je pensais ce que j'ai dit dans ma cellule. Si tu vas jusqu'au bout, ne t'attends pas à ce que je reste là sans rien faire.",
+      "unconvincing-waiting": "Je n'essaie pas de te baiser Rathian, j'essaie juste d'éviter que tu meures d'une mort stupide !"
     }
   }
 }

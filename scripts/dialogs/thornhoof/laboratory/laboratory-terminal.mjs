@@ -35,7 +35,7 @@ class Dialog {
   }
 
   rathianAccompanying() {
-    return game.playerParty.contains(game.getCharacter("rathian"));
+    return game.playerParty.containsCharacter(game.getCharacter("rathian"));
   }
 
   rathianConvinced() {

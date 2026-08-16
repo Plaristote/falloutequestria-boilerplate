@@ -6,10 +6,12 @@
         },
         "conflict-fight": {
             "hook": "startFight",
+            "state": "conflict/fight",
             "text": "conflict-fight"
         },
         "conflict-intimidate": {
             "hook": "onIntimidate",
+            "state": "conflict/intimidate-failure",
             "text": "conflict-intimidate"
         },
         "follow-to-overmare": {
@@ -59,6 +61,24 @@
             ],
             "mood": "angry",
             "text": "conflict"
+        },
+        "conflict/fight": {
+            "answers": [
+            ],
+            "mood": "angry",
+            "text": "conflict/fight"
+        },
+        "conflict/intimidate-success": {
+            "answers": [
+            ],
+            "mood": "cocky",
+            "text": "conflict/intimidate-success"
+        },
+        "conflict/intimidate-failure": {
+            "answers": [
+            ],
+            "mood": "angry",
+            "text": "conflict/intimidate-failure"
         },
         "entry": {
             "answers": [

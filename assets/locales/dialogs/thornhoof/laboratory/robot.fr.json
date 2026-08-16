@@ -1,0 +1,12 @@
+{
+  "dialogs": {
+    "thornhoof/laboratory/robot": {
+      "ask-to-follow": "Suis-moi. ",
+      "ask-to-stay": "Reste ici. ",
+      "entry": "À votre service.",
+      "follow": "Ouvre la voie.",
+      "leave": "J'ai besoin de rien.",
+      "stay": "Très bien. Je vais rester ici pour l'instant."
+    }
+  }
+}

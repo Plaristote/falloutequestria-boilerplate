@@ -1,0 +1,16 @@
+{
+    "dialogs": {
+        "stable103/overmare-terminal": {
+            "already-resolved": "<i>Le terminal ne répond plus.</i>",
+            "not-yours/entry": "<i>Le terminal ne répond pas.</i>",
+            "nothing-to-do/entry": "<i>Ce terminal semble être en veille. Tu ne trouve pas comment l'activer.</i>",
+            "player-options/activate": "<p>Une lumière arcanique envahit la console. Des lignes de textes défilent pendant quelques instants. Soudainement, le sol se met à trembler. L'écran devient noir. Puis une notification apparait. Sentinel est activé. Son armée se réveille. Elle n'attend plus que tes ordres.</p>",
+            "player-options/destroy": "<p>Une lumière arcanique envahit la console. Des lignes de texte défilent pendant quelques instants. Soudainement, toute l'étable se met à trembler, pendant un moment qui semble une eternité. Le tremblement se calme. L'écran devient noir. Un message te le confirme: Sentinel a été désactivée de manière permanente.",
+            "player-options/entry": "<p>Le terminal semble reconnaître l'emprunte dès que tu t'en approche. Sentinel attends d'être activée.</p>",
+            "terminal-activate-self": "Activer Sentinel",
+            "terminal-destroy": "Détruire Sentinel",
+            "terminal-leave": "Ne rien faire pour l'instant.",
+            "terminal-let-overmare-proceed": "Do it."
+        }
+    }
+}

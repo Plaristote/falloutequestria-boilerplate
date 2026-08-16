@@ -1,0 +1,16 @@
+{
+    "dialogs": {
+        "stable103/overmare-terminal": {
+            "already-resolved": "<i>The terminal is unresonsive.</i>",
+            "not-yours/entry": "<i>The termianl does not respond to you.</i>",
+            "nothing-to-do/entry": "<i>The terminal seems to be asleep. You don't see any way to wake it up.</i>",
+            "player-options/activate": "<p>The console floods with arcane light, lines of text run through the screen. Suddenly, the ground starts shaking. The screen becomes dark. A notification appears. Sentinel is activated. Its army woke up, and is waiting for your command.</p>",
+            "player-options/destroy": "<p>The console floods with arcane light, lines of text run through the screen. Suddenly, the whole Stabke starts to shake. After a short while, the shaking stops. The screen becomes dark. And a message appear, confirming that Sentinel has been permanently disabled.",
+            "player-options/entry": "<p>The console recognizes the imprint the moment you're close enough. Sentinel is waiting for you to wake it up.</p>",
+            "terminal-activate-self": "Wake up Sentinel",
+            "terminal-destroy": "Destroy Sentinel",
+            "terminal-leave": "Don't do anything yet.",
+            "terminal-let-overmare-proceed": "Do it."
+        }
+    }
+}
