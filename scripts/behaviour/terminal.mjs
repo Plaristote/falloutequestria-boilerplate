@@ -42,10 +42,12 @@ export default class {
 
   onUse(user) {
     if (user === level.player) {
-      if (this.canBeUsed || this.canBeUsed === undefined)
-        level.initializeDialog(this.model, this.dialog);
-      else
+      if (level.combat)
+        game.appendToConsole(i18n.t("messages.not-available-in-combat"));
+      else if (this.canBeUsed === false)
         game.appendToConsole(i18n.t("messages.nothing-happens"));
+      else
+        level.initializeDialog(this.model, this.dialog);
     }
     return true;
   }
