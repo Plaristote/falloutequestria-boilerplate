@@ -1,0 +1,75 @@
+{
+  "bubbles/trash-talk": {
+  "evil": {
+    "hurt": {
+      "0": "C'est tout ce que tu as ?",
+      "1": "Ha ! J'ai à peine senti ça !",
+      "2": "Ma grand-mère tape plus fort.",
+      "3": "Mignon. À mon tour maintenant.",
+      "4": "Là, tu commences vraiment à m'énerver.",
+      "5": "Même en piquant comme ça, tu finiras par mourir épuisé.",
+      "6": "Ah ! Ça chatouille.",
+      "7": "C'est censé me faire peur ?",
+      "8": "J'ai connu pire dans une bagarre de bar.",
+      "9": "Tu appelles ça frapper ?",
+      "10": "Continue d'essayer. Avec un peu de chance…",
+      "11": "C'est tout ? Je salue presque l'effort.",
+      "12": "Va falloir faire mieux que ça.",
+      "13": "Ouh, ça fait peur. J'en tremble de tous mes membres.",
+      "14": "Tu tapes comme un poulain, pédale !"
+    },
+    "hurt-bad": {
+      "0": "Ok… ça, ça a fait mal.",
+      "1": "Tu vas le regretter… si j'arrête de saigner avant.",
+      "2": "Je suis pas encore mort, espèce d'ordure.",
+      "3": "Aïe… coup de chance.",
+      "4": "Ça va laisser des cicatrices. Sur toi aussi.",
+      "5": "Je m'en suis sorti après pire que ça.",
+      "6": "T'as intérêt à finir le boulot. Moi, je le ferais, c'est sûr.",
+      "7": "Je sens plus ma jambe… pas besoin pour te tuer.",
+      "8": "C'est mon sang ? Oh merde.",
+      "9": "C'est tout ce que t'as ? Merde… réponds pas à ça…",
+      "10": "Va me falloir un toubib. Après tes funérailles.",
+      "11": "Aïe… mes jambes sont toujours là ? Bien.",
+      "12": "Merde… t'as failli m'avoir.",
+      "13": "Encore un comme ça et je vais vraiment m'énerver.",
+      "14": "Héhé… j'ai survécu à pire. Je crois."
+    },
+    "attacking": {
+      "0": "Je vais prendre mon pied !",
+      "1": "Dis bonsoir !",
+      "2": "Rien de personnel. Enfin, peut-être un peu.",
+      "3": "Celui-là, c'est pour la route.",
+      "4": "Bouge pas, ça va faire très mal.",
+      "5": "Voyons de quel bois tu es fait.",
+      "6": "Dis bonjour aux vers de terre pour moi.",
+      "7": "Souris ! Ça va faire mal.",
+      "8": "Fuis si tu veux. Ça rend le truc plus marrant.",
+      "9": "J'attendais ça depuis ce matin.",
+      "10": "C'est là que ça fait mal !",
+      "11": "Essaie de pas trop hurler.",
+      "12": "T'aurais dû rester chez toi.",
+      "13": "L'heure de faire un carnage.",
+      "14": "Baisse la tête. En fait, non."
+    },
+    "squadmateDied": {
+      "0": "Tu vas payer pour ça !",
+      "1": "C'était mon équipier, espèce de fils de pute !",
+      "2": "Je vais repeindre les murs avec toi !",
+      "3": "Là, je suis furax.",
+      "4": "Tu vas le rejoindre six pieds sous terre !",
+      "5": "C'est une dette que tu vas payer dans la douleur.",
+      "6": "Ok, maintenant c'est une affaire personnelle.",
+      "7": "Tu as buté l'un des miens. Grosse erreur.",
+      "8": "J'espère que t'es fier de toi. Profites-en tant que ça dure.",
+      "9": "D'accord. Fini de jouer.",
+      "10": "T'aurais dû me tuer en premier, connard ! Tu vas le regretter !",
+      "11": "Je vais te faire regretter de m'avoir raté.",
+      "12": "Tu viens de gagner une mort lente.",
+      "13": "C'était mon ami, espèce de salaud !",
+      "14": "Tu sera pas mort pour rien, frèrot !"
+    }
+  },
+  "neutral": {}
+  }
+}
