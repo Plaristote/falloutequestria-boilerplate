@@ -19,7 +19,7 @@ function generateGear(inventory, difficultyRoll) {
     inventory.slots["use-1"] = {
       "hasItem": true,
       "slotType": "any",
-      "itemTpe": "mouthgun",
+      "itemType": "mouthgun",
       "ammo": 10,
       "quantity": 1,
       "useMode": "use"
@@ -43,8 +43,17 @@ function generateGear(inventory, difficultyRoll) {
   }
 }
 
+function generateLoot(inventory) {
+  if (Math.random() * 100 > 75) {
+    inventory.items.push({
+      "itemType": "bottlecaps",
+      "quantity": Math.round(Math.random() * 15)
+    );
+  }
+}
+
 export default function junkvilleBanditsParty(difficultyRoll) {
-  const count = Math.ceil(Math.random() * (difficultyRoll / 15));
+  const count = 2 + Math.ceil(Math.random() * (difficultyRoll / 15));
   const list = [];
   let hintAvailable = canGenerateLocationHint();
 
@@ -65,6 +74,7 @@ export default function junkvilleBanditsParty(difficultyRoll) {
       hintAvailable = false;
     }
     generateGear(data.inventory, difficultyRoll);
+    generateLoot(data.inventory);
     list.push(data);
   }
   return {

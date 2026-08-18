@@ -2,6 +2,7 @@
   "randomEncounters": {
     "and": " et ",
     "names": {
+      "Bandits": "bandits",
       "Wolves": "loups",
       "Timberwolves": "lupus sylvains",
       "Rats": "rats",
