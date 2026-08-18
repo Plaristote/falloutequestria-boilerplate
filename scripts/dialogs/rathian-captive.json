@@ -238,7 +238,7 @@
             "text": "decision-help-open-door"
         },
         "decision-kill-rathian": {
-            "hook": "startFight",
+            "hook": "killRathian",
             "text": "decision-kill-rathian"
         },
         "decision-leave-rathian": {
@@ -264,7 +264,7 @@
             "text": "decision-sentinel-self"
         },
         "decision-sentinel-self-kill": {
-            "hook": "startFight",
+            "hook": "killRathianOverSentinelDecision",
             "text": "decision-sentinel-self-kill"
         },
         "decision-sentinel-self-push": {
