@@ -3,6 +3,7 @@ import {CharacterBehaviour} from "./character.mjs";
 class Player extends CharacterBehaviour {
   constructor(model) {
     super(model);
+    delete this.trashTalker;
   }
 
   getAvailableInteractions() {

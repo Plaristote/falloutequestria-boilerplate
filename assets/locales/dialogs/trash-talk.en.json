@@ -1,0 +1,75 @@
+{
+  "bubbles/trash-talk": {
+    "evil": {
+      "hurt": {
+        "0": "That all you got?",
+        "1": "Ha! Barely felt that!",
+        "2": "My grandma hits harder.",
+        "3": "Cute. Now it's my turn.",
+        "4": "You're just making me angry now",
+        "5": "Sting like that and you're still gonna die tired.",
+        "6": "That tickled. Let's see how you like this",
+        "7": "Is that supposed to scare me?",
+        "8": "I've had worse from a bar fight.",
+        "9": "You call that a hit?",
+        "10": "Keep trying. Maybe you'll get lucky.",
+        "11": "That's it? I almost respect the effort.",
+        "12": "You're gonna have to do better than that.",
+        "13": "Ooh, scary. My knees are shaking.",
+        "14": "You hit like a foal, fool."
+      },
+      "hurt-bad": {
+        "0": "Okay… that one hurt.",
+        "1": "You're gonna regret that… if I stop bleeding first.",
+        "2": "I ain't dead yet, you bastard.",
+        "3": "Ouch… lucky shot.",
+        "4": "That's gonna leave a mark. On you too.",
+        "5": "I've crawled out of worse.",
+        "6": "You better finish this. I sure as hell would.",
+        "7": "Can't feel my arm… don't need it to kill you.",
+        "8": "Is that blood mine? Doesn't matter.",
+        "9": "That all you got? Shit… don't answer that…",
+        "10": "I'm gonna need a medic. After your funeral.",
+        "11": "Ow… are my legs still there? Good.",
+        "12": "Damn… you almost had me there.",
+        "13": "One more like that and I'm gonna be really pissed.",
+        "14": "Heh… I survived worse. I think."
+      },
+      "attacking": {
+        "0": "I'm going to enjoy this!",
+        "1": "Say goodnight!",
+        "2": "Nothing personal. Well, maybe a little.",
+        "3": "This one's for the road.",
+        "4": "Hold still, this'll only hurt a lot.",
+        "5": "Let's see what you're made of.",
+        "6": "Say hi to the worms for me.",
+        "7": "Smile! This is gonna hurt.",
+        "8": "Run if you want. Makes it more fun.",
+        "9": "I've been waiting all day for this.",
+        "10": "Here comes the bad part!",
+        "11": "Try not to scream too loud.",
+        "12": "You should've stayed home.",
+        "13": "Time to make a mess.",
+        "14": "Duck. Actually, don't."
+      },
+      "squadmateDied": {
+        "0": "You're gonna pay for that!",
+        "1": "That was my crew, you son of a bitch!",
+        "2": "I'm gonna paint the walls with you!",
+        "3": "Now I'm pissed.",
+        "4": "You'll join him in the dirt!",
+        "5": "That's one debt you're gonna pay in blood.",
+        "6": "You just made this personal.",
+        "7": "You killed one of mine. Big mistake.",
+        "8": "I hope you're proud of yourself. Enjoy it while it lasts.",
+        "9": "That's it. No more games.",
+        "10": "You should've killed me first, asshole! You'll regret this!",
+        "11": "I'm gonna make you wish you missed.",
+        "12": "You just bought yourself a slow death.",
+        "13": "That was my friend, you bastard!",
+        "14": "I'll make sure you don't die alone, pal."
+      }
+    },
+    "neutral": {}
+  }
+}

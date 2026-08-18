@@ -20,4 +20,8 @@ export default class Dog extends Rat {
           break ;
     }
   }
+
+  selectSquadLeader(candidates) {
+    return candidates.filter(candidate => candidate.characterSheet == "wolf-alpha")[0];
+  }
 }
