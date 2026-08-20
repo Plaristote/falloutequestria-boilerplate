@@ -9,6 +9,7 @@
       "reported-to-randy": "Annoncer la victoire à Randy",
       "desc-dogs-told-lair": "Les Chiens à Diamant t'ont dit que des bandits ont installé leur campement dans leurs tunnels, de l'autre côté de la ville. Ils ont sappés leurs propres tunnels pour les empêcher de progresser, mais il existe une autre entrée, via l'extérieur.",
       "desc-item-told-lair": "En faisant les poches d'un bandit décédé, tu as trouvé une note portant des indications sur l'emplacement du campement des raiders. Il est situé proche d'une ville nommée Junkville.",
+      "desc-find-nest": "Tu as finalement trouvé le campement des bandits. L'entrée de la caverne est juste assez discrète pour qu'il soit presque impossible de la trouver, depuis l'extérieur, sans aide.",
       "desc-given-by-dogs": "Rex, chef des Chiens à Diamant, t'as parlé d'une bande de raiders qui ont récemment envahit ses tunnels. Ils ont blessés plusieurs membres de la meute, et les ont forcé à se retirer plus profondément dans les tunnels.",
       "desc-given-by-cook": "Randy, de Junkville, t'as parlé de bandits qui terrorisent les voyageurs, dernièrement. Avec la recrudescence d'attaques dans le coin, ils ont probablement installé un camp proche d'ici. Randy veut que tu le trouve.",
       "desc-talked-with-dogs": "Rex, chef des Chiens à Diamant, a aussi dit avoir des problèmes avec les bandits. Ils ont envahit les tunnels, blessant plusieurs chiens, et les forçant à se replier dans les profondeurs des tunnels.",
@@ -18,6 +19,7 @@
       "desc-victory-with-junkville": "Avec le soutien des volontaires de Junkville, vous avez chassé les bandits de leur repère souterrain, assurant la sécurité des voyageurs et des caravanes. Du moins, jusqu'à ce que de nouveaux bandits viennent combler le vide.",
       "desc-victory-with-dogs": "Avec l'aide des chiens à diamant, tu as pu chasser les bandits de leur repère souterrain. Les chiens à diamant peuvent maintenant reprendre possession des tunnels qu'ils ont si durement creusés.",
       "desc-let-randy-fight": "Randy et la bonne gent de Junkville est allée botter le derrière des bandits. Certains n'en sont pas revenus, mais c'est le prix à payer pour la justice.",
+      "desc-victory-solo": "Tu es venu, tu as vu, tu as vaincu. Les bandits ne sont plus. La population de cette région chantera sûrement tes hauts faits pour les générations à venir.",
       "desc-removed-bandits": "Les bandits ne sont plus une menace."
     }
   },
