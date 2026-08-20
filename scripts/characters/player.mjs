@@ -6,6 +6,10 @@ class Player extends CharacterBehaviour {
     delete this.trashTalker;
   }
 
+  get isResting() {
+    return this.model.getVariable("resting") == true;
+  }
+
   getAvailableInteractions() {
     return [];
     return super.getAvailableInteractions(); // TODO

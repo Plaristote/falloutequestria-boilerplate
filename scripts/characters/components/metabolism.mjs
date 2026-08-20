@@ -10,7 +10,10 @@ export class MetabolismComponent extends MovementComponent {
     }
   }
 
-  get isResting() { return this.model.getVariable("resting") == true; }
+  get isResting() {
+    return this.model.getVariable("resting") == true
+        || (game.player.script.isResting && game.playerParty.containsCharacter(this.model));
+  }
   get metabolismState() { return this.model.getVariable("metabolismState"); }
   set metabolismState(value) { this.model.setVariable("metabolismState", value); }
 
