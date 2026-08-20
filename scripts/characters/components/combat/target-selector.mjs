@@ -45,8 +45,12 @@ export default class TargetSelector {
         || (weapon2 && weapon2.isInRange(target));
   }
 
+  getTargetList() {
+    return this.model.fieldOfView.getEnemies();
+  }
+
   getCandidates() {
-    const enemies = this.model.fieldOfView.getEnemies();
+    const enemies = this.getTargetList();
     let inRange = [];
     let others  = [];
 
