@@ -45,6 +45,11 @@ export class JunkvilleStabletechFacility extends LevelBase {
         sentinel.setAnimation("fall-down");
       }
     });
+    this.openSecurityDoors();
+  }
+
+  openSecurityDoors() {
+    this.guardRoomDoors.forEach(door => { door.locked = false; });
   }
 
   get powerEnabled() {
@@ -64,6 +69,11 @@ export class JunkvilleStabletechFacility extends LevelBase {
         result.push(object[i]);
     }
     return result;
+  }
+
+  get guardRoomDoors() {
+    const group = level.findGroup("doors");
+    return ["security-south", "security-west"].map(key => group.findObject(key));
   }
 }
 
