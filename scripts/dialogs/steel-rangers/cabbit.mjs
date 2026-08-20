@@ -24,7 +24,7 @@ export default class Dialog {
     });
   }
 
-  get canGiveThornhoofDevice() {
+  canGiveThornhoofDevice() {
     const quest = game.quests.getQuest("steel-rangers/hoarfrostQuest");
     return quest && quest.isObjectiveCompleted("report") && game.player.inventory.count("thornhoof-laboratory-device") > 0;
   }
@@ -58,12 +58,16 @@ export default class Dialog {
     })
   }
 
-  get canAskToJoin() {
-    return !game.quests.hasQuest("steel-rangers/join");
+  canAskToJoin() {
+    return !game.quests.hasQuest("steel-rangers/join") && game.hasVariable("steelRangersKnown");
   }
 
   addSteelRangerQuest() {
     game.quests.addQuest("steel-rangers/join");
+  }
+
+  toldAboutSteelRangers() {
+    game.setVariable("steelRangersKnown", 1);
   }
 
   entryAlt() {

@@ -101,6 +101,11 @@ class Dialog {
     this.dialog.npc.inventory.addItemOfType("stabletech-facility-key");
     game.quests.addQuest("junkvilleStabletechFacility");
   }
+
+  toldAboutSteelRangers() {
+    game.setVariable("steelRangersKnown", 1);
+    game.setVariable("steelRangersKnowRathian", 1);
+  }
 }
 
 export function create(dialog) {

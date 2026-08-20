@@ -281,7 +281,8 @@ export default class JunkvilleCavernBandits extends QuestHelper {
     if (!success) return ;
     if ((name === "reported-to-leader" && this.hasEvent("given-by-dogs")) ||
         (name === "reported-to-randy" && this.hasEvent("given-by-cook")) ||
-        (name === "remove-bandits" && this.hasEvent("given-by-cook") && !game.getCharacter("junkville-cook").isAlive())
+        (name === "remove-bandits" && this.hasEvent("given-by-cook") && !game.getCharacter("junkville-cook").isAlive()) ||
+        (name === "remove-bandits" && !this.hasEvent("given-by-dogs") && !this.hasEvent("given-by-cook"))
     ) {
       this.model.completed = true;
     }

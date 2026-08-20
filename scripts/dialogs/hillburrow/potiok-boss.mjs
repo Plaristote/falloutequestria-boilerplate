@@ -195,7 +195,7 @@ class Dialog {
   }
 
   sabotageKilledWaterCarrier() {
-    return (this.sabotageWaterCarrierDied() || this.sabogtageQuest.foughtWaterCarrier;
+    return this.sabotageWaterCarrierDied() || this.sabogtageQuest.foughtWaterCarrier;
   }
 
   sabotageWaterCarrierDied() {

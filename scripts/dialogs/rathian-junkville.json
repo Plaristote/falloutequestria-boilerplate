@@ -103,6 +103,8 @@
             "answers": [
                 "ask-something-else"
             ],
+            "hook": "toldAboutSteelRangers",
+            "mood": "smile",
             "text": "about-steel-rangers"
         },
         "celestial-device/arm-whereabouts": {

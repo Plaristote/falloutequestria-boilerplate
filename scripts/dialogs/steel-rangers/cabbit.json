@@ -25,6 +25,7 @@
             "text": "ask-about-place"
         },
         "ask-about-steel-rangers": {
+            "hook": "toldAboutSteelRangers",
             "state": "entry-alt",
             "text": "ask-about-steel-rangers"
         },
