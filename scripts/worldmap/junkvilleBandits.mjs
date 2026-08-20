@@ -48,7 +48,7 @@ function generateLoot(inventory) {
     inventory.items.push({
       "itemType": "bottlecaps",
       "quantity": Math.round(Math.random() * 15)
-    );
+    });
   }
 }
 
