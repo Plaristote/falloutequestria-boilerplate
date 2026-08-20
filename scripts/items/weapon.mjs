@@ -64,6 +64,7 @@ export class WeaponBehaviour extends ItemBehaviour {
   triggerUseOn(target) {
     const successRate = this.getUseSuccessRate(target);
 
+    this.user.script.lastTarget = target;
     if (this.fireSound)
       game.sounds.play(this.fireSound);
     if (this.isStealthy != true && this.user.sneaking)

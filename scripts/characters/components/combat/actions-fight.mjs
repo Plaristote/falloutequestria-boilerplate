@@ -1,6 +1,6 @@
 function evaluatePathfindingOption(target, x, y) {
-  const value = level.getVisionQuality(target.position.x, target.position.y, x, y);
-  return value - 1;
+  const value = level.getVisionQuality(target.position.x, target.position.y, x, y) - 1;
+  return this.parent.adjustPositionScore ? this.parent.adjustPositionScore(x, y, value) : value;
 }
 
 function evaluatePathfindingOptionForWeapon(target, weapon, threshold, x, y) {

@@ -5,6 +5,8 @@ import ThreatTable from "./combat/threat-table.mjs";
 import TargetSelector from "./combat/target-selector.mjs";
 import {canTrashTalk, TrashTalkComponent} from "./combat/trash-talker.mjs";
 
+import CompanionFighterComponent from "./companion/fighter.mjs";
+
 export class CombatComponent extends SkillTargetComponent {
   constructor(model) {
     super(model);
@@ -16,11 +18,24 @@ export class CombatComponent extends SkillTargetComponent {
       this.trashTalker = new TrashTalkComponent(this);
   }
 
+  onPartyJoined() {
+    if (!this.companionFighterComponent) {
+      this.companionFighterComponent = new CompanionFighterComponent(this);
+      this.companionFighterComponent.attach();
+    }
+  }
+  onPartyLeft() {
+    if (this.companionFighterComponent) {
+      this.companionFighterComponent.detach();
+      this.companionFighterComponent = undefined;
+    }
+  }
+
   get moraleImmune() { return false; }
 
   get judgementSource() { return undefined; }
 
-  adjustThread(candidate, rawThreat) { return rawThreat; }
+  adjustThreat(candidate, rawThreat) { return rawThreat; }
 
   onTalkTo() {
     if (this.model.isEnemy(level.player))  {
@@ -35,6 +50,7 @@ export class CombatComponent extends SkillTargetComponent {
   onDamageTaken(amount, dealer) {
     console.log("on damage taken", amount, dealer);
     if (dealer && dealer !== this.model) {
+      this.lastAttacker = dealer;
       this.threatTable.register(dealer, amount);
       if (this.trashTalker) this.trashTalker.triggerTaunt("hurt");
     }
@@ -89,7 +105,7 @@ export class CombatComponent extends SkillTargetComponent {
     if (!isContinuation)
       this.threatTable.decay();
     if (this.findCombatTarget()) {
-      const result = this.model.morale > 0 ? this.fightCombatTarget() : this.runAwayFromCombatTarget();
+      const result = this.model.morale > 0 || this.moraleImmune ? this.fightCombatTarget() : this.runAwayFromCombatTarget();
 
       if (result != null)
         return result;
@@ -97,6 +113,10 @@ export class CombatComponent extends SkillTargetComponent {
       return this.searchForNextCombatTarget();
     }
     console.log(this.logPrefix, "- pass turn", this.model);
+    this.onPassTurn();
+  }
+
+  onPassTurn() {
     level.passTurn(this.model);
   }
 
@@ -129,7 +149,7 @@ export class CombatComponent extends SkillTargetComponent {
   onCombatActionQueueCompleted() {
     console.log(this.logPrefix, "triggering turn again, action completed");
     if (level.isCharacterTurn(this.model) && this._combatRunAP != this.model.actionPoints) {
-      this.onTurnStart();
+      this.onTurnStart(true);
     }
   }
 }
