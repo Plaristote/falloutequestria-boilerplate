@@ -18,14 +18,14 @@ export class CombatComponent extends SkillTargetComponent {
       this.trashTalker = new TrashTalkComponent(this);
   }
 
-  onPartyJoined() {
-    if (!this.companionFighterComponent) {
+  onPartyJoined(party) {
+    if (!this.companionFighterComponent && party == game.playerParty) {
       this.companionFighterComponent = new CompanionFighterComponent(this);
       this.companionFighterComponent.attach();
     }
   }
-  onPartyLeft() {
-    if (this.companionFighterComponent) {
+  onPartyLeft(party) {
+    if (this.companionFighterComponent && party == game.playerParty) {
       this.companionFighterComponent.detach();
       this.companionFighterComponent = undefined;
     }

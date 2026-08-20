@@ -44,7 +44,7 @@ export default class extends TargetSelector {
   }
 
   findTarget() {
-    const preferred = this.getComamndTarget();
+    const preferred = this.getCommandTarget();
     const complianceActive = preferred && preferred.isAlive() && Math.random() < this.commandCompliance;
 
     this._commandTarget = complianceActive ? preferred : null;
