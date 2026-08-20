@@ -5,7 +5,7 @@ function evaluatePathfindingOption(target, x, y) {
 
 function evaluatePathfindingOptionForWeapon(target, weapon, threshold, x, y) {
   const successRate = weapon.script.getUseSuccessRateAt(target, { x, y });
-  return successRate >= threshold ? evaluatePathfindingOption(target, x, y) : -1;
+  return successRate >= threshold ? evaluatePathfindingOption.bind(this)(target, x, y) : -1;
 }
 
 export default class {
