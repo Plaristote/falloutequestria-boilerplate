@@ -162,25 +162,6 @@
         "teleport": "Teleportation",
         "title": "Sorts"
     },
-    "tutorial": {
-        "1": "PipBuck",
-        "10": "Champ de vision",
-        "11": "Pièges",
-        "12": "Zones de sortie",
-        "2": "Déplacement",
-        "3": "Intéragir",
-        "4": "Crochetage",
-        "5": "Combat",
-        "6": "Actions",
-        "7": "Niveau supérieur",
-        "8": "Naviguer",
-        "9": "Explosifs",
-        "disabled": "Sans aide",
-        "enabled": "Avec aide",
-        "next": "Suivant",
-        "open": "Ouvrir tutorial",
-        "previous": "Precedent"
-    },
     "worldmap": {
         "places": {
             "random-desert-cabin": "une cabane au milieu du desert"
