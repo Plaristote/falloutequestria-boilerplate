@@ -228,25 +228,7 @@
             "passerby-3": "Hey {{name}} ! Sorry, I'm busy right now, see you later !"
         }
     },
-    "tutorial": {
-        "1": "PipBuck",
-        "10": "Field of View",
-        "11": "Traps",
-        "12": "Exit zones",
-        "2": "Movement",
-        "3": "Interaction",
-        "4": "Lockpick",
-        "5": "Combat",
-        "6": "Actions",
-        "7": "Level up",
-        "8": "Looking around",
-        "9": "Explosives",
-        "disabled": "Disabled",
-        "enabled": "Enabled",
-        "next": "Next",
-        "open": "Show tutorial",
-        "previous": "Previous"
-    },
+    "timeOfDay": "{{hour}}h{{minute}}",
     "worldmap": {
         "places": {
             "random-desert-cabin": "a shack in the middle of the desert"
