@@ -25,7 +25,9 @@ export default class {
     const movement = this.findBestPosition(this.weapon);
 
     actions.reset();
-    if (movement.ap >= 0 && this.scheduleActions(movement)) {
+    if (movement.ap < 0)
+      return "unreachable";
+    else if (this.scheduleActions(movement)) {
       console.log(this.logPrefix, "starting ActionQueue");
       return actions.start();
     }

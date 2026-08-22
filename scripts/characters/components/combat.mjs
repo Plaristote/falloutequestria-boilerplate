@@ -99,11 +99,15 @@ export class CombatComponent extends SkillTargetComponent {
   }
 
   onTurnStart(isContinuation = false) {
-    this._combatRunCount++;
-    this._combatRunAP = this.model.actionPoints;
-    console.log(this.logPrefix, "on turn start", this.model, this.combatTarget);
-    if (!isContinuation)
+    if (!isContinuation) {
+      this._combatRunCount++;
+      this._combatRunAP = this.model.actionPoints;
+      console.log(this.logPrefix, "on turn start", this.model, this.combatTarget);
       this.threatTable.decay();
+      this.targetSelector.reset();
+    } else {
+      console.log(this.logPrefix, "on turn reentry", this.model, this.combatTarget);
+    }
     if (this.findCombatTarget()) {
       const result = this.model.morale > 0 || this.moraleImmune ? this.fightCombatTarget() : this.runAwayFromCombatTarget();
 
@@ -123,12 +127,19 @@ export class CombatComponent extends SkillTargetComponent {
   fightCombatTarget() {
     const equipment = new EquipmentEquinoid(this.model);
     const turnActions = new FightTurnActions(this);
+    let result;
 
     equipment.swapWeapons();
     turnActions.slotName = equipment.pickBestUseSlotToUseAgainst(this.combatTarget);
-    if (this.trashTalker)
+    result = turnActions.run();
+    if (result === "unreachable") {
+      this.targetSelector.excludedTargets.add(this.combatTarget);
+      this.combatTarget = this.targetSelector.pickTarget();
+      return this.hasCombatTarget() ? this.fightCombatTarget() : null;
+    }
+    if (this.trashTalker && result != null)
       this.trashTalker.triggerTaunt("attacking");
-    return turnActions.run();
+    return result;
   }
 
   runAwayFromCombatTarget() {

@@ -17,7 +17,7 @@ export default class TrashTalkComponent {
     this.parent     = parent;
     this.model      = parent.model;
     this.alignment  = options.alignment || "evil";
-    this.chance     = options.talkRatio || 0.25;
+    this.chance     = options.talkRatio || 0.15;
     this.cooldownMs = 6000;
     this._lastTauntAt = 0;
   }
