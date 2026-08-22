@@ -1,0 +1,15 @@
+{
+  "tutorial": {
+    "1": "PipBuck",
+    "2": "Déplacement",
+    "3": "Intéragir",
+    "4": "Combat",
+    "5": "Inventaire",
+    "6": "Actions",
+    "disabled": "Sans aide",
+    "enabled": "Avec aide",
+    "next": "Suivant",
+    "open": "Ouvrir tutorial",
+    "previous": "Precedent"
+  }
+}

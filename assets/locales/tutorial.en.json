@@ -1,0 +1,16 @@
+{
+  "tutorial": {
+    "1": "PipBuck",
+    "2": "Movement",
+    "3": "Interaction",
+    "4": "Combat",
+    "5": "Inventory",
+    "6": "Actions",
+    "disabled": "Disabled",
+    "enabled": "Enabled",
+    "next": "Next",
+    "open": "Show tutorial",
+    "previous": "Previous"
+  }
+}
+
