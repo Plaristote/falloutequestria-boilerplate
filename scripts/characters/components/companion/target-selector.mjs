@@ -30,7 +30,9 @@ export default class extends TargetSelector {
   }
 
   getTargetList() {
-    return uniqueArray([...super.getTargetList(), ...this.supportedCharacter.fieldOfView.getEnemies()]);
+    const supportedTargets = this.supportedCharacter.fieldOfView.getEnemies()
+      .filter(character => !this.excludedTargets.has(character));
+    return uniqueArray([...super.getTargetList(), ...supportedTargets]);
   }
 
   getCommandTarget() {

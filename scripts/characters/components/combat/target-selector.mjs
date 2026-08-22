@@ -12,6 +12,11 @@ export default class TargetSelector {
   constructor(parent) {
     this.parent = parent;
     this.model = parent.model;
+    this.excludedTargets = new Set();
+  }
+
+  reset() {
+    this.excludedTargets.clear();
   }
 
   get threatTable() { return this.parent.threatTable; }
@@ -46,7 +51,8 @@ export default class TargetSelector {
   }
 
   getTargetList() {
-    return this.model.fieldOfView.getEnemies();
+    return this.model.fieldOfView.getEnemies()
+      .filter(character => !this.excludedTargets.has(character));
   }
 
   getCandidates() {
