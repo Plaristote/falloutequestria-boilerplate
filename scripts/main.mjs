@@ -73,10 +73,10 @@ export default class extends RandomEncounterComponent {
   }
 
   randomIntroduceRathian() {
-    const minDelay = 60 * 60 * 24 * 1;
+    const minDelay = 60 * 60 * 12 * 1;
     const minStartAt = game.getVariable("startedAt") + minDelay;
 
-    if (game.timeManager.getTimestamp() > startAt) {
+    if (game.timeManager.getTimestamp() > minStartAt) {
       this.rathianIt = this.rathianIt ? this.rathianIt + 1 : 1;
       if (getValueFromRange(this.rathianIt, 10) >= 8)
         this.introduceRathian();
