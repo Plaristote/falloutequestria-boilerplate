@@ -1,6 +1,22 @@
 import {LevelBase} from "./base.mjs";
 
 class Level extends LevelBase {
+  initialize() {
+    this.displayTutorialPage(0);
+  }
+
+  displayTutorialPage(page) {
+    if (!level.hasVariable(`tutorial-${page}-shown`) && level.tutorial?.enabled) {
+      level.tutorial.page = page;
+      level.tutorial.visible = true;
+      level.setVariable(`tutorial-${page}-shown`, 1);
+    }
+  }
+
+  onCombatStarted() {
+    this.displayTutorialPage(3);
+  }
+
   onExit() {
     const accessComputer = level.findObject("access-computer");
     accessComputer.setVariable("enabled", true);
