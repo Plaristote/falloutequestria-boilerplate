@@ -62,6 +62,7 @@
         "trialStartKey": "A rusty key found deep in the cavern of trials.",
         "note": "A note with some text written on it. You'll need to pick it up first to be able to read it.",
         "note-readable": "<p>The note says:</p><p>{{content}}</p>",
+        "mouthgun": "A compact 9mm pistol built around a mouth-operated trigger. Light, reliable, and easy to keep at the ready, it’s a practical little sidearm for anypony who prefers to keep their hooves free.",
         "tuxedo": "An elegant tuxedo."
     },
     "item-slots": {
@@ -90,7 +91,7 @@
         "food-croissant": "Croissant",
         "frag-grenade": "Grenade",
         "gemstone": "Gemstones",
-        "health-potion": "Potion de vie",
+        "health-potion": "Health potion",
         "hoof-blades": "Hoof blades",
         "laser-rifle": "Laser rifle",
         "laser-smg": "Laser SMG",
@@ -99,6 +100,7 @@
         "melee-bucking": "Buck",
         "melee-hoofercut": "Hoofercut",
         "metal-armor": "Metal armor",
+        "mouthgun": "9mm mouth-gun",
         "pickaxe": "Pickaxe",
         "power-armor": "Power Armor",
         "power-hoof": "Power hoof",

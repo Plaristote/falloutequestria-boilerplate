@@ -42,7 +42,8 @@
         "rebar-club": "Arme de fortune, lourde, mais dangereuse pour ceux qui se trouvent de son mauvais côté.",
         "ripper": "Hybride terrifiant entre un couteau de combat et une tronçonneuse, le ripper traverse aisément la chair comme l'armure.",
         "sledgehammer": "Une grosse massue, utilisé dans les travaux de démolition. Bien que difficile à manier, elle est idéale pour repousser des groupes d'indésirables.",
-        "sniper-rifle": "Un fusil montable sur selle, pour le tir de précision. Complexe à manier, il peut faire de très gros trous, dans des cibles fort éloignées."
+        "sniper-rifle": "Un fusil montable sur selle, pour le tir de précision. Complexe à manier, il peut faire de très gros trous, dans des cibles fort éloignées.",
+        "mouthgun": "Un pistolet 9 mm compact conçu autour d’une détente actionnée avec la bouche. Léger, fiable et facile à garder à portée de tir, c’est une petite arme de bouche pratique pour les poneys qui préfèrent garder leurs sabots libres."
     },
     "item-slots": {
         "armor": "Armure",
@@ -74,6 +75,7 @@
         "lockpicking-kit": "Kit de crochetage",
         "melee-bucking": "Ruade",
         "melee-hoofercut": "Coup de sabot",
+        "mouthgun": "Arme de bouche 9mm",
         "power-armor": "Super-Armure",
         "power-hoof": "Super-Sabots",
         "power-sledgehammer": "Super-Masse",
