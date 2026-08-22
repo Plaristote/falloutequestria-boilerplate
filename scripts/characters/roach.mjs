@@ -9,5 +9,6 @@ export class Roach extends CharacterBehaviour {
     this.prepareRoamTask(3);
     this.squadComponent = new SquadFighterComponent(this);
     this.bodyDecayDuration = 60 * 60 * 48;
+    this.xpBaseValue = 40;
   }
 }

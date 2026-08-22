@@ -6,5 +6,6 @@ export class ShadowPony extends CharacterBehaviour {
     super(model);
     injectRoamTask(this);
     this.prepareRoamTask(3);
+    this.xpBaseValue = 95;
   }
 }

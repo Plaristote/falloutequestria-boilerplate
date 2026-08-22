@@ -6,5 +6,6 @@ export default class FeralGhoul extends CharacterBehaviour {
     super(model);
     injectRoamTask(this);
     this.prepareRoamTask(10);
+    this.xpBaseValue = 60;
   }
 }
