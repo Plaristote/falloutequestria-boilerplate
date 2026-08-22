@@ -42,6 +42,15 @@ export class QuestHelper {
     return this.events.indexOf(event) >= 0;
   }
 
+  hasOneOfEvents(events) {
+    for (let i = 0 ; i < events.length ; ++i)
+    {
+      if (this.hasEvent(events[i]))
+        return true;
+    }
+    return false;
+  }
+
   onCompleted() {
     if (this.model.failed)
       this.onFailed();
