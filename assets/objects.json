@@ -253,6 +253,15 @@
         "value": 3,
         "weight": 1
     },
+    "fixer": {
+        "icon": "fixer.webp",
+        "isGroupable": true,
+        "scriptName": "fixer.mjs",
+        "sprite": "health-potion",
+        "type": "consommables",
+        "value": 90,
+        "weight": 1
+    },
     "food-bread": {
         "icon": "bread.png",
         "isGroupable": true,
