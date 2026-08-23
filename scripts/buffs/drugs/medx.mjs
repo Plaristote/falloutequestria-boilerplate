@@ -9,7 +9,13 @@ export default class extends DrugBuff {
     return 240 * 1000;
   }
 
-  updateModifiers() {
-    this.updateModifier("damageResistance", true, 25, 40);
+  get withdrawalDuration() {
+    return 1 * 24 * 60 * 60 * 1000;
+  }
+
+  get modifierDefinitions() {
+    return [
+      {statisticName: "damageResistance", positive: true, base: 25, limit: 40}
+    ];
   }
 }

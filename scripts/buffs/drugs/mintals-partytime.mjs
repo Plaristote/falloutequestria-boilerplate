@@ -1,6 +1,10 @@
 import DrugBuff from "../helpers/drug.mjs";
 
 export default class extends DrugBuff {
+  get addictionGroup() {
+    return "mintals";
+  }
+
   get storageScope() {
     return "partytime-mintals-modifier-";
   }
@@ -9,10 +13,16 @@ export default class extends DrugBuff {
     return 300 * 1000;
   }
 
+  get withdrawalDuration() {
+    return 2 * 24 * 60 * 60 * 1000;
+  }
+
   updateModifiers() {
-    this.updateModifier("intelligence", true, 2, 4);
-    this.updateModifier("science", true, 25, 60);
-    this.updateModifier("repair", true, 25, 60);
-    this.updateModifier("luck", true, 2, 5);
+    return [
+      {statisticName: "intelligence", positive: true, base: 2, limit: 4},
+      {statisticName: "science", positive: true, base: 25, limit: 60},
+      {statisticName: "repair", positive: true, base: 25, limit: 60},
+      {statisticName: "luck", positive: true, base: 2, limit: 5},
+    ];
   }
 }
