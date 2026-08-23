@@ -58,6 +58,10 @@ export default class extends StackableBuff {
     return [];
   }
 
+  get withdrawalModifierDefinitions() {
+    return this.modifierDefinitions;
+  }
+
   get isAddicted() {
     return this.model.target.getVariable(this.addictionStatusKey, 0) == 1;
   }
@@ -86,7 +90,7 @@ export default class extends StackableBuff {
   }
 
   applyWithdrawal() {
-    const modifiers = this.modifierDefinitions
+    const modifiers = this.withdrawalModifierDefinitions
       .filter(desc => desc.positive)
       .map(desc => ({statisticName: desc.statisticName, amount: desc.base}));
 

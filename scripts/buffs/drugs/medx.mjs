@@ -18,4 +18,10 @@ export default class extends DrugBuff {
       {statisticName: "damageResistance", positive: true, base: 25, limit: 40}
     ];
   }
+
+  get withdrawalModifierDefinitions() {
+    return [
+      {statisticName: "endurance", positive: true, base: 2, limit: 3}
+    ];
+  }
 }
