@@ -67,7 +67,7 @@
             },
             "carryWeight": "La quantité maximale de charge que votre personnage peut porter, en livres.",
             "charisma": "Combinaison d'apparence et de charme. Un haut Charisme est important pour les personnages qui souhaitent influencer par le discours.",
-            "chem-resistant": "Les drogues t'affectent moitié moins longtemps que la normale, mais tes chances de devneir dépendant sont aussi réduites de 50%.",
+            "chem-resistant": "Les drogues t'affectent moitié moins longtemps que la normale, mais tes chances de devenir dépendant sont aussi réduites de 50%.",
             "chem-reliant": "Tu as l'habitude des drogues. Ta chance de devenir dépendant est deux fois plus forte, mais tu te remet beaucoup plus vite des effets du manque.",
             "criticalChance": "Les chances d'infliger un coup critique en combat sont augmentées de ce montant.",
             "damageResistance": "Tout dommage reçu est réduit de ce montant. La résistance aux dommages peut être améliorée en portant une armure.",

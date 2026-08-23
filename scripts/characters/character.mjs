@@ -1,5 +1,6 @@
 import {SceneActorComponent} from "./components/sceneActor.mjs";
 import {awarenessHint} from "../cmap/perks/awareness.mjs";
+import * as Finesse from "../cmap/traits/finesse.mjs";
 
 export class CharacterBehaviour extends SceneActorComponent {
   constructor(model) {
@@ -146,10 +147,11 @@ export class CharacterBehaviour extends SceneActorComponent {
 
   mitigateDamage(damage, type, dealer) {
     const armor = this.model.inventory.getEquippedItem("armor");
+    const resistance = Finesse.modifyDamageResistance(this.model.statistics.damageResistance, dealer);
 
     if (armor?.script?.mitigateDamage)
       damage = armor.script.mitigateDamage(damage, type);
-    damage -= Math.ceil(damage * this.model.statistics.damageResistance / 100);
+    damage -= Math.ceil(damage * resistance / 100);
     return damage;
   }
 
