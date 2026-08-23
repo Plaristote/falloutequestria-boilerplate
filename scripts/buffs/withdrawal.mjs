@@ -56,6 +56,16 @@ export default class {
       this.model.remove();
   }
 
+  cureAllAddictions() {
+    const drugs = this.drugs;
+
+    for (const drugName of Object.keys(drugs)) {
+      this.revertEntry(drugs[drugName]);
+      this.cureAddiction(drugName);
+    }
+    this.model.remove();
+  }
+
   cureAddiction(drugName) {
     this.model.target.setVariable(`addiction-${drugName}-status`, 0);
   }
