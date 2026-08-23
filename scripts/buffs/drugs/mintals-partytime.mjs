@@ -17,7 +17,7 @@ export default class extends DrugBuff {
     return 2 * 24 * 60 * 60 * 1000;
   }
 
-  updateModifiers() {
+  get modifierDefinitions() {
     return [
       {statisticName: "intelligence", positive: true, base: 2, limit: 4},
       {statisticName: "science", positive: true, base: 25, limit: 60},
