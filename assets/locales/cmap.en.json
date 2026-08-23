@@ -25,6 +25,7 @@
         "carryWeight": "Carry weight",
         "charisma": "Charisma",
         "chem-resistant": "Chem resistant",
+        "chem-reliant": "Chem reliant",
         "criticalChance": "Critical chance",
         "damageResistance": "Damage resistance",
         "descriptions": {
@@ -46,6 +47,7 @@
             "carryWeight": "The maximum amount of equipment your character can carry, in pounds.",
             "charisma": "A combination of appearance and charm. A high Charisma is important for characters that want to influence people with words.",
             "chem-resistant": "Chems only affect you half as long as normal, but your chance to be addicted is also only 50% of normal.",
+            "chem-reliant": "You are more easily addicted to chems. Your chance to be addicted by chem use is twice normal, but you recover faster from their ill effects.",
             "criticalChance": "The chance to cause a critical hit in combat is increased by this amount.",
             "damageResistance": "Any damage taken is reduced by this amount. Damage Resistance can be increased by wearing armor.",
             "earlierSequence": "You are more likely to move before your opponents in combat, since your Sequence is +2 for each level of this Perk.",

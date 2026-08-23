@@ -9,8 +9,14 @@ export default class extends DrugBuff {
     return 120 * 1000;
   }
 
-  updateModifiers() {
-    this.updateModifier("armorClass", true, 10, 30);
-    this.updateModifier("actionPoints", true, 2, 3);
+  get withdrawalDuration() {
+    return 3 * 24 * 60 * 60 * 1000;
+  }
+
+  get modifierDefinitions() {
+    return [
+      {statisticName: "armorClass", positive: true, base: 10, limit: 30},
+      {statisticName: "actionPoints", positive: true, base: 2, limit: 3},
+    ];
   }
 }
