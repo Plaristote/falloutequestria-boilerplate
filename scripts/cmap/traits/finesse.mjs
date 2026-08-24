@@ -14,7 +14,7 @@ export function onToggled(characterSheet, toggled) {
 
 
 export function modifyDamageResistance(resistance, dealer) {
-  if (dealer.statistics.traits.indexOf("finesse"))
+  if (dealer && dealer.statistics.traits.indexOf("finesse"))
     return resistance + 30;
   return resistance;
 }
