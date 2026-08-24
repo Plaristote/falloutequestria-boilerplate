@@ -1,10 +1,11 @@
 import {ZoneEffectComponent} from "./zoneEffect.mjs";
+import {getValueFromRange} from "../../behaviour/random.mjs";
 
 export class AcidZoneEffect extends ZoneEffectComponent {
   applyEffectOn(character) {
     if (character.getObjectType() == "Character") {
       const resistance = character.statistics.poisonResistance;
-      var damage = getValueFromRange(10, 20);
+      let damage = getValueFromRange(10, 20);
 
       damage = damage * (resistance / 100);
       damage = Math.ceil(damage);
