@@ -95,10 +95,14 @@ export default class Dialog {
     return "scavengers/about";
   }
 
+  get canHelpWithBandits() {
+    return !this.banditsQuest || !this.banditsQuest.isObjectiveCompleted("locate-nest");
+  }
+
   get canAskAboutWoundedDogs() {
     return this.dialog.npc.getVariable("canAskAboutWoundedDogs", 0) == 1
         && this.scavengerHealedWoundedDogs
-        && (!this.banditsQuest || !this.banditsQuest.script.talkedWithDogs);
+        && (!this.canHelpWithBandits || !this.banditsQuest.script.talkedWithDogs);
   }
 
   scavengerAbout() {
@@ -232,7 +236,8 @@ export default class Dialog {
   negociateCanBringUp() {
     return  this.scavengerHealedWoundedDogs
         &&  this.scavengerQuest?.isObjectiveCompleted("save-captives")
-        && !this.negociateQuest?.isObjectiveCompleted("peaceful-resolve");
+        && !this.negociateQuest?.isObjectiveCompleted("peaceful-resolve")
+        && game.dataEngine.isLevelActive("junkville");
   }
 
   negociateHasStartedDebate() {

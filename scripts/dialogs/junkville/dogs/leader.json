@@ -134,6 +134,7 @@
             "text": "distrust-threaten"
         },
         "explained-maybe-i-can-help": {
+            "availableHook": "canHelpWithBandits",
             "state": "first-contact/bandit-proposal",
             "text": "explained-maybe-i-can-help"
         },
@@ -142,9 +143,11 @@
             "text": "explained-not-one-of-them"
         },
         "explained-sounds-like-your-problem": {
+            "state": "first-contact/why-here",
             "text": "explained-sounds-like-your-problem"
         },
         "explained-tell-me-more": {
+            "availableHook": "canHelpWithBandits",
             "state": "first-contact/bandit-details",
             "text": "explained-tell-me-more"
         },
@@ -443,6 +446,8 @@
         },
         "first-contact/bandit-details": {
             "answers": [
+                "explained-maybe-i-can-help",
+                "explained-sounds-like-your-problem",
                 "details-intro-back"
             ],
             "mood": "angry",
