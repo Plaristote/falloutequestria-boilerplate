@@ -116,11 +116,11 @@ export class CombatComponent extends SkillTargetComponent {
     } else if (typeof this.searchForNextCombatTarget == "function") {
       return this.searchForNextCombatTarget();
     }
-    console.log(this.logPrefix, "- pass turn", this.model);
     this.onPassTurn();
   }
 
   onPassTurn() {
+    console.log(this.logPrefix, "- pass turn", this.model);
     level.passTurn(this.model);
   }
 
