@@ -93,13 +93,6 @@ export class Gun extends Weapon {
       this.onOutOfAmmo();
     return false;
   }
-
-  triggerDodgeUse(target) {
-    return {
-      steps: this.getAnimationSteps(target),
-      callback: this.onDodged.bind(this, target)
-    };
-  }
 };
 
 export function create(model) {

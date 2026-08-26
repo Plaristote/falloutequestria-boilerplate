@@ -35,7 +35,7 @@ export default class MeleeAttack extends Weapon {
   }
 
   playMissSound(target) {
-    target.script.playReactionSound("dodge", 1);
+    game.sounds.play("ponies/melee/miss");
   }
 };
 
