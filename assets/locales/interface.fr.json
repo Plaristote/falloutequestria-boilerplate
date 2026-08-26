@@ -154,7 +154,19 @@
             "miss": "{{user}} a raté une attaque contre {{user}}.",
             "use": "{{user}} a utilise {{item}} sur {{target}} pour {{damage}} points de dégâts.",
             "critical-failure": "{{user}} échoue catastrophiquement en essayant d'utiliser {{item}}.",
-            "critical-success": "{{user}} frappe critiquement {{target}} avec {{item}} et inflige {{damage}} points de dégâts."
+            "critical-success": "{{user}} frappe critiquement {{target}} avec {{item}} et inflige {{damage}} points de dégâts.",
+            "criticalSuccess": {
+              "disarm": "{{user}} a désarmé {{target}} !",
+              "fall-prone": "{{target}} tombe au sol, et perds des points d'action.",
+              "ko": "{{target}} s'est fait salement touché par {{user}} et perds conscience."
+            },
+            "criticalFailure": {
+              "disarm": "{{user}} a complétement raté et a laissé tomber son arme.",
+              "fall-prone": "{{user}} rate horriblement son attaque et se pète la gueule",
+              "ko": "{{user}} rate complètement son attaque et s'est assomé.",
+              "lost-ammo": "{{user}} a complétement raté et a vidé son chargeur.",
+              "weapon-destroyed": "L'arme de {{user}} a malfonctionné et est détruite."
+            }
         },
         "movable-object": {
           "no-room-to-move": "Il n'y a pas d'emplacement pour déplacer cet objet.",

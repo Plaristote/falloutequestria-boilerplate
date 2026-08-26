@@ -126,7 +126,19 @@
             "critical-success": "{{user}} critically hit {{target}} with {{item}} and inflicted {{damage}} damage.",
             "dodge": "{{target}} dodged an attack from {{user}}.",
             "miss": "{{user}} missed an attack against {{target}}.",
-            "use": "{{user}} used {{item}} on {{target}} for {{damage}} damage."
+            "use": "{{user}} used {{item}} on {{target}} for {{damage}} damage.",
+            "criticalSuccess": {
+              "disarm": "{{user}} disarmed {{target}}!",
+              "fall-prone": "{{target}} was hit hard by {{user}} and fell prone, losing action points for the next turn.",
+              "ko": "{{target}} was hit hard by {{user}} and lost consciousness."
+            },
+            "criticalFailure": {
+              "disarm": "{{user}} completely failed and dropped their weapon.",
+              "fall-prone": "{{user}} missed his attack completely and fell on his face.",
+              "ko": "{{user}} completely missed his attack and knocked themselves out.",
+              "lost-ammo": "{{user}} completely missed and wasted all their ammo.",
+              "weapon-destroyed": "{{user}}'s weapon misfired and was destroyed."
+            }
         },
         "movable-object": {
           "no-room-to-move": "There doesn't seem to be room to move that out of the way.",
