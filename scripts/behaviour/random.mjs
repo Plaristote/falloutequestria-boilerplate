@@ -20,7 +20,23 @@ export function randomCheck(threshold, handlers, roller = null) {
     return handlers.failure();
   else if (roll < 5 && handlers.criticalSuccess)
     return handlers.criticalSuccess();
-  else if (handlers.success)
-    return handlers.success();
+  else if (roll < threshold && handlers.success)
+    return handlers.success(roll);
   return null;
+}
+
+export function randomCheckByOutcomes(handlers, roller = null) {
+  const thresholds = Object.keys(handlers.outcomes).map(i => parseInt(i)).sort();
+  const successHandlers = handlers.outcomes;
+  const failureThreshold = Math.min(...thresholds);
+
+  handlers.success = function(roll) {
+    for (let i = 0 ; i < thresholds.length ; ++i) {
+      const threshold = thresholds[i];
+      if (roll < threshold) {
+        return successHandlers[threshold]();
+      }
+    }
+  };
+  return randomCheck(failureThreshold, handlers, roller);
 }

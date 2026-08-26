@@ -1,5 +1,5 @@
 import {ItemBehaviour} from "./item.mjs";
-import {getValueFromRange, randomCheck} from "../behaviour/random.mjs";
+import {getValueFromRange, randomCheck, randomCheckByOutcomes} from "../behaviour/random.mjs";
 import {areInContact} from "../behaviour/pathfinding.mjs";
 
 function weaponDescription(model) {
@@ -12,6 +12,23 @@ function weaponDescription(model) {
   html += `<tr><th>${i18n.t("damageType")}</th><td>${i18n.t("damageTypes." + damageType)}</td></tr>`;
   html += `<tr><th>${i18n.t("range")}</th><td>${range}</td></tr>`;
   return html + "</table>";
+}
+
+export function weaponSuccessRate(weapon, target, position, defenderArmorClass) {
+  const attackerWeaponSkill = weapon.getUserSkillValue();
+  let   baseToHit           = 10 + attackerWeaponSkill - defenderArmorClass;
+
+  if (weapon.isRangedWeapon()) {
+    const distance          = target.getDistance(position.x, position.y);
+    const aggravatingFactor = 12 - weapon.getUserPerception();
+    const vision            = level.getVisionQuality(target.position.x, target.position.y, position.x, position.y);
+
+    baseToHit -= aggravatingFactor * Math.max(0, distance - 1);
+    baseToHit *= (vision / 100);
+  } else if (target && target.unconscious) {
+    baseToHit = Math.max(100, attackerWeaponSkill) - defenderArmorClass / 2;
+  }
+  return Math.max(0, Math.min(baseToHit, 95));
 }
 
 export class WeaponBehaviour extends ItemBehaviour {
@@ -63,29 +80,59 @@ export class WeaponBehaviour extends ItemBehaviour {
 
   triggerUseOn(target) {
     const successRate = this.getUseSuccessRate(target);
+    const missRate = this.getMissThreshold(target);
+    const outcomes = {};
 
+    outcomes[missRate] = this.triggerDodgeUse.bind(this, target);
+    outcomes[successRate] = super.triggerUseOn.bind(this, target, false);
     this.user.script.lastTarget = target;
     if (this.fireSound)
       game.sounds.play(this.fireSound);
     if (this.isStealthy != true && this.user.sneaking)
       this.user.sneaking = false;
-    return randomCheck(successRate, {
-      failure:         this.triggerDodgeUse.bind(this, target),
+    return randomCheckByOutcomes({
+      failure:         this.triggerMissUse.bind(this, target),
       criticalFailure: this.triggerCriticalFailure.bind(this, target),
-      success:         super.triggerUseOn.bind(this, target, false),
-      criticalSuccess: super.triggerUseOn.bind(this, target, true)
+      criticalSuccess: super.triggerUseOn.bind(this, target, true),
+      outcomes
     }, this.user);
+  }
+
+  triggerMissUse(target) {
+    return {
+      steps: this.getUseAnimation(target),
+      callback: this.onMissed.bind(this, target)
+    }
   }
 
   triggerDodgeUse(target) {
     return {
-      steps: this.getUseAnimation(target),
+      steps: [
+        ...this.getUseAnimation(target),
+        {
+          type: "Animation",
+          animation: "dodge",
+          object: target
+        }
+      ],
       callback: this.onDodged.bind(this, target)
     }
   }
 
   triggerCriticalFailure(target) {
     return this.triggerDodgeUse(target);
+  }
+
+  onMissed(target) {
+    target.attackedBy(this.user);
+    game.appendToConsole(
+      i18n.t("messages.weapons.miss", {
+        user: this.user.displayName,
+        target: target.displayName
+      })
+    );
+    this.playMissSound(target);
+    return true;
   }
 
   onDodged(target) {
@@ -96,7 +143,7 @@ export class WeaponBehaviour extends ItemBehaviour {
         target: target.displayName
       })
     );
-    this.playMissSound(target);
+    this.playDodgeSound(target);
     return true;
   }
 
@@ -127,6 +174,10 @@ export class WeaponBehaviour extends ItemBehaviour {
   }
 
   playMissSound(target) {
+  }
+
+  playDodgeSound(target) {
+    this.playMissSound(target);
     if (target?.script?.playReactionSound)
       target.script.playReactionSound("dodged");
   }
@@ -136,21 +187,8 @@ export class WeaponBehaviour extends ItemBehaviour {
   }
 
   getUseSuccessRateAt(target, position) {
-    const attackerWeaponSkill = this.getUserSkillValue();
     const defenderArmorClass  = this.getTargetArmorClass(target);
-    let   baseToHit           = 10 + attackerWeaponSkill - defenderArmorClass;
-
-    if (this.isRangedWeapon()) {
-      const distance          = target.getDistance(position.x, position.y);
-      const aggravatingFactor = 12 - this.getUserPerception();
-      const vision            = level.getVisionQuality(target.position.x, target.position.y, position.x, position.y);
-
-      baseToHit -= aggravatingFactor * Math.max(0, distance - 1);
-      baseToHit *= (vision / 100);
-    } else if (target && target.unconscious) {
-      baseToHit = Math.max(100, attackerWeaponSkill) - defenderArmorClass / 2;
-    }
-    return Math.max(0, Math.min(baseToHit, 95));
+    return weaponSuccessRate(this, target, position, defenderArmorClass);
   }
 
   getUseSuccessRate(target) {
@@ -166,6 +204,14 @@ export class WeaponBehaviour extends ItemBehaviour {
     baseToHit += 8 * Math.max(0, this.getUserPerception() - 2);
     baseToHit -= Math.max(0, distance - 1) * 7;
     return Math.max(0, Math.min(baseToHit, 95));
+  }
+
+  getMissThresholdAt(target, position) {
+    return weaponSuccessRate(this, target, position, 0);
+  }
+
+  getMissThreshold(target) {
+    return this.getMissThresholdAt(target, this.user.position);
   }
 }
 
