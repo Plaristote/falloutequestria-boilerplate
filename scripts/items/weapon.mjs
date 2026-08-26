@@ -1,6 +1,7 @@
 import {ItemBehaviour} from "./item.mjs";
 import {getValueFromRange, randomCheck, randomCheckByOutcomes} from "../behaviour/random.mjs";
 import {areInContact} from "../behaviour/pathfinding.mjs";
+import {rollCriticalSuccess, rollCriticalFailure, criticalSuccessMessage, criticalFailureMessage} from "./critical-effects.mjs";
 
 function weaponDescription(model) {
   let html = "<table>";
@@ -120,7 +121,19 @@ export class WeaponBehaviour extends ItemBehaviour {
   }
 
   triggerCriticalFailure(target) {
-    return this.triggerDodgeUse(target);
+    return {
+      steps: this.getUseAnimation(target),
+      callback: () => {
+        const result = rollCriticalFailure(target, this.model);
+        if (result != null) {
+          target.attackedBy(this.user);
+          game.appendToConsole(criticalFailureMessage(result, this.user, target));
+        } else {
+          this.onMissed(target);
+        }
+        return true;
+      }
+    };
   }
 
   onMissed(target) {
@@ -170,7 +183,16 @@ export class WeaponBehaviour extends ItemBehaviour {
   }
 
   onCriticalHit(target, damage) {
-    return Math.max(damage + 1, damage * 2);
+    const result = rollCriticalSuccess(target, this.model);
+
+    damage = Math.max(damage + 1, damage * 2);
+    if (result != null) {
+      if (result.type == "critical-damage")
+        damage += result.damage;
+      else
+        game.appendToConsole(criticalSuccessMessage(result, this.user, target));
+    }
+    return damage;
   }
 
   playMissSound(target) {

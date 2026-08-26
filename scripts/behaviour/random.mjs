@@ -26,9 +26,9 @@ export function randomCheck(threshold, handlers, roller = null) {
 }
 
 export function randomCheckByOutcomes(handlers, roller = null) {
-  const thresholds = Object.keys(handlers.outcomes).map(i => parseInt(i)).sort();
+  const thresholds = Object.keys(handlers.outcomes).map(i => parseInt(i)).sort((a, b) => a - b);
   const successHandlers = handlers.outcomes;
-  const failureThreshold = Math.min(...thresholds);
+  const failureThreshold = Math.max(...thresholds);
 
   handlers.success = function(roll) {
     for (let i = 0 ; i < thresholds.length ; ++i) {

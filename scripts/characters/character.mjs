@@ -133,7 +133,7 @@ export class CharacterBehaviour extends SceneActorComponent {
       "ponies": ["earth-pony", "pegasus", "unicorn"],
       "ghoul": ["ghoul"]
     }
-    if (["damaged, fall, dodge"])
+    if (["damaged", "fall"].indexOf(reaction) >= 0)
       reaction = `${reaction}-${1 + Math.floor(Math.random() * 1.99)}`;
     else
       reaction = `${reaction}-1`;
