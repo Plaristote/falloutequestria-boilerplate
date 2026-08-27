@@ -2,6 +2,7 @@ import * as Checks from "../../cmap/helpers/checks.mjs";
 import {QuestFlags} from "../../quests/helpers.mjs";
 import {saboteurShouldDisappear} from "../../quests/hillburrow/sabotage.mjs";
 import {potiokDefaultSlavePrice} from "../../quests/cristal-den/slavers-errand.mjs";
+import {hasSuitcaseBeenOpened} from "../../quests/cristal-den/bibins-sabotage-delivery.mjs";
 
 class Dialog {
   constructor(dialog) {
@@ -195,7 +196,7 @@ class Dialog {
   }
 
   sabotageKilledWaterCarrier() {
-    return this.sabotageWaterCarrierDied() || this.sabogtageQuest.foughtWaterCarrier;
+    return this.sabotageWaterCarrierDied() || this.sabotageQuest.script.foughtWaterCarrier;
   }
 
   sabotageWaterCarrierDied() {
@@ -225,6 +226,18 @@ class Dialog {
       game.asyncAdvanceTime(15);
       return "sabotage/accusation/water-carrier/404ed";
     }
+  }
+
+  sabotageHasSuitcaseEvidence() {
+    return hasSuitcaseBeenOpened()
+      && game.player.inventory.count("bibin-sabotage-suitcase") > 0
+      && !this.sabotageKnowsAboutConfession();
+  }
+
+  sabotageReportSuitcaseEvidence() {
+    this.sabotageQuest.script.onWaterCarrierConfessed();
+    this.sabotageQuest.script.discoverBibinInvolvement();
+    game.player.inventory.removeItemOfType("bibin-sabotage-suitcase");
   }
 
   giveSabotagePayment() {

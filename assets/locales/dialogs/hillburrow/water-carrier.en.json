@@ -28,6 +28,7 @@
             "delivery-contents-failure": "Yes, but Bibin told me not to tell anypony. You are anypony. I can't tell you.",
             "delivery-contents-success": "I guess you're right… it's boomsticks. I have to plant those in the coal mine every once in a while.",
             "delivery-entry": "Oh ! Thanks !",
+            "delivery-entry-suitcase-opened": "<p>Oh ! That's Bibin's. Thanks !</p>\n<p><i>He opens the suitcase, and his face drops.</i></p><p>Oh… it's been opened. You know what this means, right ? I can't let you walk away. Sorry.",
             "delivery-exit": "Well, my work here is done ! See you later !",
             "delivery-message-received": "Oh, er… hi ! Thanks ! I won't disappoint !",
             "delivery-tell-message": "He says hi, and he wants you to keep up the good work !",

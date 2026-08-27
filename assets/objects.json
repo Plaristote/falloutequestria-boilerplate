@@ -83,8 +83,9 @@
     "bibin-sabotage-suitcase": {
         "icon": "suitcase.png",
         "isGroupable": false,
+        "scriptName": "quests/bibin-sabotage-suitcase.mjs",
         "sprite": "misc",
-        "type": "misc",
+        "type": "quests",
         "value": 50,
         "weight": 25
     },

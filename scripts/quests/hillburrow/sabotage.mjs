@@ -73,6 +73,10 @@ export class Sabotage extends QuestHelper {
     this.model.setVariable("knowsAboutTiming", 1);
   }
 
+  discoverBibinInvolvement() {
+    this.model.setVariable("bibinFoundOut", 1);
+  }
+
   startWaterCarrierScene() {
     const self = this;
 

@@ -104,6 +104,7 @@
         },
         "start-bibin-delivery": {
             "availableHook": "hasBibinDeliveryQuest",
+            "hook": "onMakeDelivery",
             "state": "delivery-entry",
             "text": "start-bibin-delivery"
         }
@@ -115,8 +116,6 @@
                 "ask-about-sabotage",
                 "back-to-entry"
             ],
-            "hook": "",
-            "mood": "",
             "text": "about-dynamite"
         },
         "about-home": {
@@ -125,7 +124,6 @@
                 "back-to-entry"
             ],
             "hook": "findOutDynamiteFromNpc",
-            "mood": "",
             "text": "about-home"
         },
         "about-job": {
@@ -133,8 +131,6 @@
                 "ask-about-water-carrying",
                 "back-to-entry"
             ],
-            "hook": "",
-            "mood": "",
             "text": "about-job"
         },
         "about-npc": {
@@ -144,7 +140,6 @@
                 "ask-about-job",
                 "back-to-entry"
             ],
-            "mood": "",
             "text": "about-npc"
         },
         "about-sabotage": {
@@ -153,24 +148,18 @@
                 "interrogate-sabotage-1",
                 "interrogate-sabotage-give-up"
             ],
-            "hook": "",
-            "mood": "",
             "text": "about-sabotage"
         },
         "about-talkative": {
             "answers": [
                 "back-to-entry"
             ],
-            "hook": "",
-            "mood": "",
             "text": "about-talkative"
         },
         "about-water-carrying": {
             "answers": [
                 "back-to-entry-alt"
             ],
-            "hook": "",
-            "mood": "",
             "text": "about-water-carrying"
         },
         "delivery-contents-entry": {
@@ -179,8 +168,6 @@
                 "delivery-ask-password",
                 "delivery-exit"
             ],
-            "hook": "",
-            "mood": "",
             "text": "delivery-contents-entry"
         },
         "delivery-contents-failure": {
@@ -188,8 +175,6 @@
                 "delivery-ask-password",
                 "delivery-exit"
             ],
-            "hook": "",
-            "mood": "",
             "text": "delivery-contents-failure"
         },
         "delivery-contents-success": {
@@ -198,7 +183,6 @@
                 "delivery-exit"
             ],
             "hook": "onDeliveryLearnedSuitcaseContents",
-            "mood": "",
             "text": "delivery-contents-success"
         },
         "delivery-entry": {
@@ -212,14 +196,19 @@
             "mood": "smile",
             "text": "delivery-entry"
         },
+        "delivery-entry-suitcase-opened": {
+            "answers": [
+                "sabotage-intimiadation-failed-reaction"
+            ],
+            "mood": "sad",
+            "text": "delivery-entry-suitcase-opened"
+        },
         "delivery-message-received": {
             "answers": [
                 "delivery-ask-password",
                 "delivery-ask-details",
                 "delivery-exit"
             ],
-            "hook": "",
-            "mood": "",
             "text": "delivery-message-received"
         },
         "delivery-password": {
@@ -228,7 +217,6 @@
                 "delivery-exit"
             ],
             "hook": "onDeliveryLearnedPassword",
-            "mood": "",
             "text": "delivery-password"
         },
         "entry": {
@@ -238,8 +226,6 @@
                 "ask-about-home",
                 "bye"
             ],
-            "hook": "",
-            "mood": "",
             "text": "entry"
         },
         "sabotage-about-bibin": {
@@ -248,8 +234,6 @@
                 "sabotage-about-bibin-press-further",
                 "sabotage-let-go"
             ],
-            "hook": "",
-            "mood": "",
             "text": "sabotage-about-bibin"
         },
         "sabotage-about-bibin-2": {
@@ -258,7 +242,6 @@
                 "sabotage-let-go"
             ],
             "hook": "onLearnAboutBibinInvolvment",
-            "mood": "",
             "text": "sabotage-about-bibin-2"
         },
         "sabotage-confession": {
@@ -275,7 +258,6 @@
                 "confession-exit"
             ],
             "hook": "onLearnAboutBibinInvolvment",
-            "mood": "",
             "text": "sabotage-confession-more"
         },
         "sabotage-intimidation-fail": {
@@ -293,7 +275,6 @@
                 "sabotage-let-go"
             ],
             "hook": "onConfessionHeard",
-            "mood": "",
             "text": "sabotage-intimidation-success"
         }
     }

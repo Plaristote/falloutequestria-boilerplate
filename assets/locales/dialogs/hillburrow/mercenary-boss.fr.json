@@ -1,0 +1,37 @@
+{
+  "dialogs": {
+    "hillburrow/mercenary-boss": {
+      "about-npc": "Moi c'est {{npc}}. Regarde bien tous les connards qui gardent cet endroit. Je suis le plus connard de tous, et c'est à moi qu'ils obéissent, tu vois ?",
+      "about-npc-provoke": "Bah ! T'es mignon toi !",
+      "ask-about-npc": "Bonjour. Moi c'est {{name}}. Et toi ?",
+      "ask-about-sabotage": "Je vois. Peux-tu m'en dire plus sur ces incidents ?",
+      "ask-about-sabotage-timing": "Dis-moi, quel serait le meilleur moment pour que le coupable vienne poser ses pièges sans être vu ?",
+      "ask-about-sabotage-timing-insist": "Et pourtant, quelqu'un a réussi à passer outre votre \"surveillance\" et a détruit d'importants moyens de production. Tu veux m'aider à trouver qui est responsable, ou tu veux continuer à en parler avec Bitty Potiok ? Je veux savoir quand votre surveillance s'est relachée.",
+      "ask-about-sabotage-whereabouts": "Allez ! Je vois bien que t'y connais un rayon en flingues et en destruction ! Tu peux pas au moins me dire quel type d'explosif a été utilisé ?",
+      "ask-about-sabotages": "Bitty Potiok m'a dit de vous poser des questions sur les sabotages.",
+      "ask-about-sheriff-murder": "J'ai quelques questions sur le meurtre de Scratchy Lead, si ça ne te dérange pas d'y répondre.",
+      "back-to-entry": "Parlons d'autre chose.",
+      "entry": "Qu'est-ce qu'il y a ?",
+      "exit-entry": "Rien. À plus tard.",
+      "fight/entry": "Attention où tu met les sabots. Mes gars nous regardent. Je peux pas te laisser me marcher sur la bite sans devoir affirmer mon autorité, tu saisis ?",
+      "quest-seriff-murder-ask-suspicions": "Tu connais pas quelqu'un qui aurait eu une raison de se débarasser de lui ?",
+      "quest-seriff-murder-exit": "Ce sera tout. Merci de ta coopération.",
+      "quest-sheriff-murder": "Le meurtre de Scratchy Lead ? Bon débarras. Ce vieil imbécile était inutile. Assis sur son cul toute la journée, il n'a jamais résolu un crime de sa carrière… c'est bon de savoir qu'il ne gaspille plus l'air qu'il respirait auparavant.",
+      "quest-sheriff-murder-about-case": "Il travaillait pas pour nous : il devait juste faire son travail. Des esclaves ont été tués à la mine de charbon. Un malade mental a posé des explosifs près de l'exploitation. Plusieurs fois. Ca tue les esclaves, ça endommage les outils. Scratchy Lead n'a jamais pu obtenir la moindre information sur le connard qui nous sabote.",
+      "quest-sheriff-murder-ask-about-case": "On m'a dit que Scratchy Lead enquêtait sur un problème, pour vous. De quoi s'agissait-il ?",
+      "quest-sheriff-murder-back-to-entry": "J'ai d'autres questions.",
+      "quest-sheriff-murder-confront": "C'est pour ça que tu l'as tué ?",
+      "quest-sheriff-murder-on-confront": "Ha ! Je vois que tu es tout aussi mauvais détective que lui ! Non, je n'ai pas tué ce poney. J'ai mieux à faire de mon temps.",
+      "quest-sheriff-murder-sabotage": "Je pourrais. Mais tu ferais mieux d'en parler à Bitty. Elle est probablement dans son bureau en ce moment. C'est de l'autre côté du couloir.",
+      "quest-sheriff-suspicions": "Je sais pas te dire. Peut-être un connard qui se croyait menacé par Scratchy. Mais je t'ai déjà dit, Scratchy Lead était un sheriff pourri, il aurait pas pu menacer n'iporte quel criminel, même s'il avait été foutu d'en trouver un.",
+      "sabotage-ask-something-else": "J'ai d'autres questions sur le sabotage.",
+      "sabotage-nothing-more-to-ask": "Je n'ai plus d'autres questions.",
+      "sabotage-solve-explosive-via-science": "Cela ressemble à de la nitroglycérine. C'est très sensible au mouvement et exploserait facilement dans ces circonstances. Mais c'est aussi très décliat à manipuler, surtout si le coupable avait eu peu de temps pour poser ses pièges. Le moyen le plus simple d'atteindre ce résultat aurait probablement été d'utiliser des bâtons de dynamite, en bricolant les bâtons pour les rendre moins stables, ce qui peut être fait directement sur l'emplacement du piège.",
+      "sabotage/about-explosive-reaction": "Euh… ouais, ça a l'air de coller…je suppose… dynamite alors. Pas de pénurie de cela dans notre région, notre poney aurait pu l'obtenir de n'importe où.",
+      "sabotage/about-explosives": "Je ne vois pas en quoi cela va t'aider à attraper ta cible… Mais je ne peux pas t'aider beaucoup. Tout ce que je peux vous dire, c'est qu'ils cachent quelque chose dans le sol qui se déclenche lorsque nos esclaves essaient de creuser.",
+      "sabotage/about-timing": "Qu'est-ce que t'essaye d'insinuer, hein ? Il n'y a pas de relachement ! Mes poneys et moi, on surveille cet endroit ! Personne peut nous échapper !",
+      "sabotage/about-timing-answer": "Ouais, ouais, je suppose que tu as raison... de temps en temps, mes poneys et moi allons en ville. On boit quelques verres au bar, on se fait chier et on revient. Je suppose que le coupable a attendu que nous allions boire, et a tendu le piège quand certains d'entre nous étaient absents.<br>Rends-moi service et ne dis pas ça à Bitty. Elle me harcelerait à mort à ce sujet, et je ne suis pas du genre à écouter ses diatribes.",
+      "sabotage/entry": "Bah… j'en sais pas plus que ça. Je ne sais pas à quoi s'attend Bitty. Mes poneys et moi, on est des guerriers. Pas des putains de détectives. Je pourrais trouver une centaine de façons de te déchirer membre par membre, mais quand il s'agit de résoudre une sorte de mystère merdique, ça me concerne pas."
+    }
+  }
+}

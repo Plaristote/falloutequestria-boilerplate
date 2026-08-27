@@ -150,6 +150,12 @@
             "state": "sabotage/accusations",
             "text": "sabotage-start-accusations"
         },
+        "sabotage-suitcase-evidence": {
+            "availableHook": "sabotageHasSuitcaseEvidence",
+            "hook": "sabotageReportSuitcaseEvidence",
+            "state": "sabotage/accusation/water-carrier/about-bibin",
+            "text": "sabotage-suitcase-evidence"
+        },
         "sabotage-water-carrier-convince": {
             "availableHook": "sabotageCanConvinceOfWaterCarierCuplability",
             "state": "sabotage/accusation/water-carrier/whereabouts",
@@ -341,6 +347,7 @@
         },
         "sabotage/entry": {
             "answers": [
+                "sabotage-suitcase-evidence",
                 "sabotage-start-accusations",
                 "sabotage-mention-dynamite",
                 "accept-sabotage-quest",
@@ -352,6 +359,7 @@
         "sabotage/more-intel": {
             "answers": [
                 "sabotage-mention-dynamite",
+                "sabotage-suitcase-evidence",
                 "accept-sabotage-quest",
                 "about-sabotage-motives"
             ],
@@ -361,6 +369,7 @@
         "sabotage/motives": {
             "answers": [
                 "sabotage-mention-dynamite",
+                "sabotage-suitcase-evidence",
                 "accept-sabotage-quest",
                 "about-sabotage-pointers"
             ],

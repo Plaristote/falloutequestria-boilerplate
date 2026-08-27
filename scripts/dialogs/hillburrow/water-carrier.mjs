@@ -20,6 +20,12 @@ function triggerWaterCarrierLeadInSheriffQuest(self) {
   }
 }
 
+export function receiveSuitcaseEntryState() {
+  const suitcase = game.player.inventory.getItemOfType("bibin-sabotage-suitcase");
+  const suitcaseWasOpened = suitcase.script.isOpened;
+  return suitcaseWasOpened ? "delivery-entry-suitcase-opened" : "delivery-entry";
+}
+
 class Dialog {
   constructor(dialog) {
     this.dialog = dialog;
@@ -27,7 +33,7 @@ class Dialog {
   }
 
   get sabotageQuest() {
-    return game.quests.getQuest("hillburrow/sabotage");
+    return requireQuest("hillburrow/sabotage", QuestFlags.HiddenQuest);
   }
 
   get deliveryQuest() {
@@ -77,7 +83,7 @@ class Dialog {
   }
 
   onLearnAboutBibinInvolvment() {
-    this.sabotageQuest.setVariable("bibinFoundOut", 1);
+    this.sabotageQuest.script.discoverBibinInvolvement();
   }
 
   startFight() {
@@ -94,11 +100,15 @@ class Dialog {
     return this.identityKnown && this.deliveryQuest && game.player.inventory.count("bibin-sabotage-suitcase") > 0;
   }
 
+  onMakeDelivery() {
+    return receiveSuitcaseEntryState();
+  }
+
   onDeliveryDone() {
     const suitcase = game.player.inventory.getItemOfType("bibin-sabotage-suitcase");
+    const suitcaseWasOpened = suitcase.script.isOpened;
 
-    suitcase.script.useOn(this.dialog.npc);
-    game.player.inventory.destroyItem(suitcase);
+    suitecase.script.giveTo(this.dialog.npc);
     this.deliveryQuest.completeObjective("delivery");
   }
 
@@ -109,7 +119,7 @@ class Dialog {
 
   onDeliveryLearnedSuitcaseContents() {
     const quest = requireQuest("hillburrow/sabotage", QuestFlags.HiddenQuest);
-    quest.completeObjective("confession");
+    quest.script.onWaterCarrierConfessed();
     this.onLearnAboutBibinInvolvment();
   }
 
