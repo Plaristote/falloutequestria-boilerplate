@@ -35,6 +35,8 @@ export class CombatComponent extends SkillTargetComponent {
 
   get judgementSource() { return undefined; }
 
+  get hasWillToFight() { return this.model.morale > 0 || this.moraleImmune; }
+
   adjustThreat(candidate, rawThreat) { return rawThreat; }
 
   onTalkTo() {
@@ -109,8 +111,7 @@ export class CombatComponent extends SkillTargetComponent {
       console.log(this.logPrefix, "on turn reentry", this.model, this.combatTarget);
     }
     if (this.findCombatTarget()) {
-      const result = this.model.morale > 0 || this.moraleImmune ? this.fightCombatTarget() : this.runAwayFromCombatTarget();
-
+      const result = this.fightOrFleeCombatTarget(isContinuation);
       if (result != null)
         return result;
     } else if (typeof this.searchForNextCombatTarget == "function") {
@@ -122,6 +123,15 @@ export class CombatComponent extends SkillTargetComponent {
   onPassTurn() {
     console.log(this.logPrefix, "- pass turn", this.model);
     level.passTurn(this.model);
+  }
+
+  fightOrFleeCombatTarget() {
+    if (!this.hasWillToFight()) {
+      if (this.trashTalker && !isContinuation)
+        this.trashTalker.triggerTaunt("fleeing");
+      return this.runAwayFromCombatTarget();
+    }
+    return this.fightCombatTarget();
   }
 
   fightCombatTarget() {

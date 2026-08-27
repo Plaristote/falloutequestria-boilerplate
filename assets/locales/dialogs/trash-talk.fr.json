@@ -68,6 +68,23 @@
       "12": "Tu viens de gagner une mort lente.",
       "13": "C'était mon ami, espèce de salaud !",
       "14": "Tu sera pas mort pour rien, frèrot !"
+    },
+    "fleeing": {
+      "0": "Attends ! On peut en parler !",
+      "1": "Ok, ok ! T'as gagné ! Je me casse !",
+      "2": "Tire pas ! Je me barre !",
+      "3": "Pitié ! Je veux pas crever !",
+      "4": "Fait chier ! Je me tire d'ici !",
+      "5": "Recule ! Je cherche pas les emmerdes !",
+      "6": "Prends tout ce que tu veux ! Mais laisse-moi partir !",
+      "7": "Pitié, je me rends ! J'arrête de me battre !",
+      "8": "Non, non, non ! Approche pas !",
+      "9": "Je suis trop jeune pour finir en bouillie !",
+      "10": "À l'aide ! Quelqu'un, aidez-moi ! Ils vont me buter !",
+      "11": "Pitié ! J'ai une famille… enfin, peut-être…",
+      "12": "T'es pas obligé de faire ça ! Je t'en supplie !",
+      "13": "J'en ai eu assez !",
+      "14": "Désolé ! Désolé ! Me tue pas, je t'en prie !"
     }
   },
   "neutral": {}
