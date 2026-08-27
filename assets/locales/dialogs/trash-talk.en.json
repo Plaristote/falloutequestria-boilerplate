@@ -68,6 +68,23 @@
         "12": "You just bought yourself a slow death.",
         "13": "That was my friend, you bastard!",
         "14": "I'll make sure you don't die alone, pal."
+      },
+      "fleeing": {
+        "0": "Wait! We can talk about this!",
+        "1": "Okay, okay! You win! I'm leaving!",
+        "2": "Don't shoot! I'm running!",
+        "3": "Please! I don't wanna die!",
+        "4": "Screw this! I'm getting the hell out of here!",
+        "5": "Back off! I don't want any trouble!",
+        "6": "Just let me go!",
+        "7": "Please, I surrender! I'm done fighting!",
+        "8": "No, no, no! Stay away from me!",
+        "9": "I'm too young to get blasted into paste!",
+        "10": "Help! Somepony help me! They're trying to kill me!",
+        "11": "Please! I've got a family… y'know, I <i>might</i> have one!",
+        "12": "You don't have to do this! I'm begging you!",
+        "13": "Have mercy! I've had enough!",
+        "14": "I'm sorry! I'm sorry! Just don't kill me!"
       }
     },
     "neutral": {}

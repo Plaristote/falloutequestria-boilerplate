@@ -27,7 +27,8 @@ export class SquadFighterComponent {
   get squad() { return this.script.squad || this.model.parent?.objects; }
 
   get squadMates() {
-    return (this.squad || []).filter(character => character.type == "Character" && character !== this.model);
+    const faction = this.model.statistics.faction;
+    return (this.squad || []).filter(character => character.type == "Character" && character.statistics.faction == faction && character !== this.model);
   }
 
   get leader()    { return this.computeLeader(); }
