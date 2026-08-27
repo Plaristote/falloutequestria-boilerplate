@@ -8,7 +8,7 @@ export default class RebarClub extends WeaponBehaviour {
   }
 
   getActionPointCost() {
-    return 3;
+    return 4;
   }
 
   getDamageType() {
@@ -16,7 +16,7 @@ export default class RebarClub extends WeaponBehaviour {
   }
 
   getDamageRange() {
-    return [5, 12];
+    return [8, 16];
   }
 
   getAnimationSteps(target) {
