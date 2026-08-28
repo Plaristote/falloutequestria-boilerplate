@@ -126,7 +126,7 @@ export class CombatComponent extends SkillTargetComponent {
   }
 
   fightOrFleeCombatTarget() {
-    if (!this.hasWillToFight()) {
+    if (!this.hasWillToFight) {
       if (this.trashTalker && !isContinuation)
         this.trashTalker.triggerTaunt("fleeing");
       return this.runAwayFromCombatTarget();
