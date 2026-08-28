@@ -1,0 +1,28 @@
+{
+  "quests": {
+    "hillburrow/sabotage": {
+      "title": "A Bang-Up Investigation",
+      "description": "<p>Somepony has been sabotaging Hillburrow's coal mine: a string of unexplained explosions has been wrecking equipment and killing slaves. Bitty Potiok, who runs the mine, wants it to stop, and she wants you to find out who's responsible.</p>",
+      "desc-gotPointersFromBitty": "<p>Bitty Potiok suggested you talk to Apathy Flake, the mercenary chief who'd been looking into the explosions before you got involved.</p>",
+      "desc-gotMotivesFromBitty": "<p>According to Bitty, plenty of ponies could want to see the mine fail: her own brother Rewan, the original inhabitants of Hillburrow, or simply anyone holding a grudge against the Potiok family.</p>",
+      "desc-talkedToMercenaryBoss": "<p>You spoke with Apathy Flake about his own investigation into the sabotage.</p>",
+      "desc-foundWaterCarrierDynamite": "<p>While poking around the water carrier's shack, you found stacks of dynamite, the same kind used to blow up the mine's equipment.</p>",
+      "desc-waterCarrierConfessed": "<p>You gathered enough to be sure of it: the water carrier was behind the explosions.</p>",
+      "desc-figuredOutExplosives": "<p>You pieced together how the dynamite was being smuggled in and set up around the mine.</p>",
+      "desc-learnedAboutTiming": "<p>You figured out when the saboteur usually strikes, which should make it easier to catch them in the act.</p>",
+      "desc-discoveredBibinInvolvement": "<p>It turned out the water carrier wasn't acting alone: he'd been taking orders from Bibin, a small-time gangster from the Cristal Den slums with a grudge against the Potioks.</p>",
+      "desc-waterCarrierTakenToBoss": "<p>You brought the water carrier before Bitty Potiok, so she could deal with him personally.</p>",
+      "desc-foughtWaterCarrier": "<p>Things turned violent: the water carrier wasn't willing to come quietly, and you had to fight him off.</p>",
+      "desc-sentByMatriarch": "<p>You came to Hillburrow on behalf of the Potiok Matriarch herself, tasked with looking into why the mine's output had dropped.</p>",
+      "desc-warnedPotioksAboutBibin": "<p>You made sure the Potioks were warned that Bibin and his people were behind the attacks.</p>",
+      "desc-reportedFindingsToBitty": "<p>You reported everything you'd found back to Bitty Potiok, closing the case on the mine's saboteur.</p>",
+      "desc-killedBittyPotiok": "<p>Bitty Potiok is dead. Whatever happened to her, she never got to hear what you'd found out, and the investigation died with her.</p>",
+      "findCulprit": "Find out who's sabotaging the mine",
+      "talkToMercenaryBoss": "Talk to Apathy Flake",
+      "confrontBrother": "Confront Rewan Potiok",
+      "findWaterCarrierDynamite": "Investigate the water carrier",
+      "confession": "Get to the bottom of the water carrier's involvement",
+      "warnPotioks": "Warn the Potioks about Bibin"
+    }
+  }
+}

@@ -19,6 +19,7 @@ export function saboteurShouldDisappear() {
 
 export function sabotageReportedToMatriarch() {
   game.quests.getQuest(questName).completeObjective("mustWarnPotioksAboutBibin");
+  quest.script.pushUniqueEvent("warnedPotioksAboutBibin");
 }
 
 export function canReportSabotageToMatriarch() {
@@ -37,44 +38,67 @@ export class Sabotage extends QuestHelper {
     this.model.addObjective("findCulprit", this.tr("findCulprit"));
   }
 
+  getDescription() {
+    let text = "";
+
+    if (this.sentByMatriarch)
+      text += this.tr("desc-sentByMatriarch");
+    if (this.model.hasVariable("receivedFromBitty"));
+      text += this.tr("description");
+    this.events.forEach(event => {
+      text += this.tr(`desc-${event}`);
+    });
+    return text;
+  }
+
   onCharacterKilled(character) {
-    if (character.characterSheet === "hillburrow/bitty-potiok")
+    if (character.characterSheet === "hillburrow/bitty-potiok") {
       this.model.failed = true;
+      this.pushUniqueEvent("killedBittyPotiok");
+    }
   }
 
   onPointersGivenByBittyPotiok() {
     this.model.addObjective("talkToMercenaryBoss", this.tr("talkToMercenaryBoss"));
+    this.pushUniqueEvent("gotPointersFromBitty");
   }
 
   onMotivesSuggestedByBittyPotiok() {
     this.model.addObjective("confrontBrother", this.tr("confrontBrother"));
+    this.pushUniqueEvent("gotMotivesFromBitty");
   }
 
   onTalkedWithMercenaryBoss() {
     this.onPointersGivenByBittyPotiok();
     this.model.completeObjective("talkToMercenaryBoss");
+    this.pushUniqueEvent("talkedToMercenaryBoss");
   }
 
   onFoundWaterCarrierDynamite() {
     this.model.addObjective("findWaterCarrierDynamite", this.tr("findWaterCarrierDynamite"));
     this.model.completeObjective("findWaterCarrierDynamite");
+    this.pushUniqueEvent("foundWaterCarrierDynamite");
   }
 
   onWaterCarrierConfessed() {
     this.model.addObjective("confession", this.tr("confession"));
     this.model.completeObjective("confession");
+    this.pushUniqueEvent("waterCarrierConfessed");
   }
 
   onFigureOutSabotageExplosives() {
     this.model.setVariable("knowsAboutDymamite", 1);
+    this.pushUniqueEvent("figuredOutExplosives");
   }
 
   onLearnAboutSabotageTiming() {
     this.model.setVariable("knowsAboutTiming", 1);
+    this.pushUniqueEvent("learnedAboutTiming");
   }
 
   discoverBibinInvolvement() {
     this.model.setVariable("bibinFoundOut", 1);
+    this.pushUniqueEvent("discoveredBibinInvolvement");
   }
 
   startWaterCarrierScene() {
@@ -92,6 +116,7 @@ export class Sabotage extends QuestHelper {
 
   setupWaterCarrierScene() {
     this.model.setVariable("bittyInterrogatedHobo", 1);
+    this.pushUniqueEvent("waterCarrierTakenToBoss");
     level.script.waterCarrierInterrogationScene.initialize();
   }
 
@@ -130,6 +155,7 @@ export class Sabotage extends QuestHelper {
 
   set foughtWaterCarrier(value) {
     this.model.setVariable("foughtHobo", value ? 1 : 0);
+    if (value) this.pushUniqueEvent("foughtWaterCarrier");
   }
 
   get potiokKilledWaterCarrier() {
@@ -147,6 +173,7 @@ export class Sabotage extends QuestHelper {
   completeWaterCarrierRoute() {
     this.model.completeObjective("findCulprit");
     this.model.completed = true;
+    this.pushUniqueEvent("reportedFindingsToBitty");
   }
 
   onSuccess() {

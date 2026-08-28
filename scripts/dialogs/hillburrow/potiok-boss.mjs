@@ -54,6 +54,7 @@ class Dialog {
 
   onTakeOnNewQuest() {
     game.quests.addQuest("hillburrow/sabotage", QuestFlags.HiddenQuest);
+    this.sabotageQuest.setVariable("receivedFromBitty", 1);
     if (this.sabotageQuest.hidden)
       return "sabotage/entry";
   }

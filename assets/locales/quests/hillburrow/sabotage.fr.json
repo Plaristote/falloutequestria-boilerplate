@@ -1,0 +1,28 @@
+{
+"quests": {
+"hillburrow/sabotage": {
+"title": "Une enquête explosive",
+"description": "<p>Quelqu'un sabote la mine de charbon de Hillburrow : une série d'explosions inexpliquées détruit du matériel et tue des esclaves. Bitty Potiok, qui dirige la mine, veut que ça cesse et elle veut que tu découvres qui est responsable.</p>",
+"desc-gotPointersFromBitty": "<p>Bitty Potiok t'a conseillé de parler à Apathy Flake, le chef des mercenaires qui enquêtait sur les explosions avant que tu ne t'en mêles.</p>",
+"desc-gotMotivesFromBitty": "<p>D'après Bitty, de nombreux poneys pourraient vouloir voir la mine échouer : son propre frère Rewan, les habitants d'origine de Hillburrow, ou tout simplement quelqu'un qui en voudrait à la famille Potiok.</p>",
+"desc-talkedToMercenaryBoss": "<p>Tu as parlé avec Apathy Flake de son enquête sur le sabotage.</p>",
+"desc-foundWaterCarrierDynamite": "<p>En fouillant la cabane du porteur d'eau, tu as trouvé des tas de dynamite, du même type que celle utilisée pour faire sauter le matériel de la mine.</p>",
+"desc-waterCarrierConfessed": "<p>Tu as réuni suffisamment d'éléments pour en être certain : le porteur d'eau était derrière les explosions.</p>",
+"desc-figuredOutExplosives": "<p>Tu as compris comment la dynamite était introduite clandestinement dans la mine et disposée à différents endroits.</p>",
+"desc-learnedAboutTiming": "<p>Tu as découvert à quel moment le saboteur frappe généralement, ce qui devrait te permettre de l'attraper plus facilement sur le fait.</p>",
+"desc-discoveredBibinInvolvement": "<p>Il s'est avéré que le porteur d'eau n'agissait pas seul : il recevait ses ordres de Bibin, un petit gangster des taudis du Repaire de Cristal qui en voulait à la famille Potiok.</p>",
+"desc-waterCarrierTakenToBoss": "<p>Tu as amené le porteur d'eau devant Bitty Potiok, afin qu'elle puisse s'occuper de lui personnellement.</p>",
+"desc-foughtWaterCarrier": "<p>Les choses ont dégénéré : le porteur d'eau n'était pas disposé à se laisser emmener sans résistance, et tu as dû le combattre.</p>",
+"desc-sentByMatriarch": "<p>Tu es venu à Hillburrow au nom de la Matriarche Potiok elle-même, chargé de découvrir pourquoi la production de la mine avait diminué.</p>",
+"desc-warnedPotioksAboutBibin": "<p>Tu t'es assuré de prévenir les Potiok que Bibin et ses hommes étaient derrière les attaques.</p>",
+"desc-reportedFindingsToBitty": "<p>Tu as rapporté tout ce que tu avais découvert à Bitty Potiok, mettant ainsi un terme à l'enquête sur le saboteur de la mine.</p>",
+"desc-killedBittyPotiok": "<p>Bitty Potiok est morte. Quoi qu'il lui soit arrivé, elle n'a jamais pu apprendre ce que tu avais découvert, et l'enquête est morte avec elle.</p>",
+"findCulprit": "Découvre qui sabote la mine",
+"talkToMercenaryBoss": "Parle à Apathy Flake",
+"confrontBrother": "Confronte Rewan Potiok",
+"findWaterCarrierDynamite": "Enquête sur le porteur d'eau",
+"confession": "Découvre toute la vérité sur l'implication du porteur d'eau",
+"warnPotioks": "Préviens les Potiok au sujet de Bibin"
+}
+}
+}
