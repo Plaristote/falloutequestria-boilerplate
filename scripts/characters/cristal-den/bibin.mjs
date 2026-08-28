@@ -5,4 +5,9 @@ export class Bibin extends CharacterBehaviour {
     super(model);
     this.dialog = "cristal-den/bibin";
   }
+
+  onDied() {
+    game.setVariable("bibinDead", 1);
+    super.onDied();
+  }
 }

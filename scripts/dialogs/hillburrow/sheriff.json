@@ -96,6 +96,12 @@
             "state": "quest-old-sheriff-arrestation/vendetta-start",
             "text": "old-sheriff-already-dead-start-vendetta"
         },
+        "old-sheriff-ask-join-adventures": {
+            "availableHook": "canPersuadeSheriffToJoin",
+            "hook": "attemptRecruitSheriff",
+            "state": "old-sheriff-join-adventures-refuse",
+            "text": "old-sheriff-ask-join-adventures"
+        },
         "old-sheriff-closure-against-murder": {
             "availableHook": "canStartVendetta",
             "state": "quest-old-sheriff-arrestation/greater-plan",
@@ -132,9 +138,36 @@
             "hook": "triggerOffscreenVengeance",
             "text": "old-sheriff-completion-exit"
         },
+        "old-sheriff-more-about-murder": {
+            "availableHook": "canTellSheriffMoreAboutMurder",
+            "state": "old-sheriff-more-about-murder",
+            "text": "old-sheriff-more-about-murder-answer"
+        },
+        "old-sheriff-offer-vendetta-bibin": {
+            "availableHook": "isBibinAlive",
+            "state": "quest-old-sheriff-arrestation/vendetta-confirmed",
+            "text": "old-sheriff-offer-vendetta-bibin"
+        },
         "old-sheriff-quest-ask-reward": {
             "state": "quest-old-sheriff-reward-asked",
             "text": "old-sheriff-quest-ask-reward"
+        },
+        "old-sheriff-reveal-bibin-dead": {
+            "availableHook": "isBibinDead",
+            "state": "old-sheriff-bibin-already-dead",
+            "text": "old-sheriff-reveal-bibin-dead"
+        },
+        "old-sheriff-tell-bibin-suspicions": {
+            "availableHook": "hasBibinSuspicionsOnly",
+            "hook": "onToldSheriffAboutBibin",
+            "state": "old-sheriff-bibin-story-suspicions",
+            "text": "old-sheriff-tell-bibin-suspicions"
+        },
+        "old-sheriff-tell-full-bibin-story": {
+            "availableHook": "knowsFullBibinStory",
+            "hook": "onToldSheriffAboutBibin",
+            "state": "old-sheriff-bibin-story-full",
+            "text": "old-sheriff-tell-full-bibin-story"
         },
         "old-sheriff-vendetta-come-with": {
             "state": "quest-old-sheriff-arrestation/vendetta-confirmed",
@@ -152,6 +185,7 @@
         },
         "quest-old-sheriff-negociate": {
             "availableHook": "canNegociateSheriffQuestReward",
+            "hook": "increaseSheriffQuestReward",
             "state": "quest-old-sheriff-on-negociate-success",
             "text": "quest-old-sheriff-negociate"
         },
@@ -224,6 +258,7 @@
         "entry": {
             "answers": [
                 "report-quest-old-sherif",
+                "old-sheriff-more-about-murder",
                 "ask-about-water-carrier",
                 "ask-about-work",
                 "ask-about-npc",
@@ -242,6 +277,58 @@
                 "back-to-entry"
             ],
             "text": "no-more-work"
+        },
+        "old-sheriff-bibin-already-dead": {
+            "answers": [
+                "old-sheriff-ask-join-adventures",
+                "back-to-entry"
+            ],
+            "mood": "dubious",
+            "text": "old-sheriff-bibin-already-dead"
+        },
+        "old-sheriff-bibin-story-full": {
+            "answers": [
+                "old-sheriff-offer-vendetta-bibin",
+                "old-sheriff-reveal-bibin-dead",
+                "old-sheriff-ask-join-adventures",
+                "back-to-entry"
+            ],
+            "mood": "angry",
+            "text": "old-sheriff-bibin-story-full"
+        },
+        "old-sheriff-bibin-story-suspicions": {
+            "answers": [
+                "old-sheriff-offer-vendetta-bibin",
+                "old-sheriff-reveal-bibin-dead",
+                "old-sheriff-ask-join-adventures",
+                "back-to-entry"
+            ],
+            "mood": "dubious",
+            "text": "old-sheriff-bibin-story-suspicions"
+        },
+        "old-sheriff-join-adventures-accept": {
+            "answers": [
+            ],
+            "hook": "startCompanionship",
+            "mood": "cocky",
+            "text": "old-sheriff-join-adventures-accept"
+        },
+        "old-sheriff-join-adventures-refuse": {
+            "answers": [
+                "back-to-entry"
+            ],
+            "mood": "sad",
+            "text": "old-sheriff-join-adventures-refuse"
+        },
+        "old-sheriff-more-about-murder": {
+            "answers": [
+                "old-sheriff-tell-full-bibin-story",
+                "old-sheriff-tell-bibin-suspicions",
+                "old-sheriff-ask-join-adventures",
+                "back-to-entry"
+            ],
+            "mood": "neutral",
+            "text": "old-sheriff-more-about-murder"
         },
         "quest-old-sherif-report/complete": {
             "answers": [

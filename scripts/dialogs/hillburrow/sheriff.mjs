@@ -22,11 +22,19 @@ class Dialog {
   }
 
   get sheriffQuestReward() {
-    return 150;
+    return this.dialog.npc.getVariable("sheriffQuestRewardAmount", 150);
   }
 
   get sheriffQuest() {
     return game.quests.getQuest("hillburrow/oldSheriffMurder");
+  }
+
+  get sabotageQuest() {
+    return game.quests.getQuest("hillburrow/sabotage");
+  }
+
+  get deliveryQuest() {
+    return game.quests.getQuest("cristal-den/bibins-sabotage-delivery");
   }
 
   canAskAboutWaterCarrier() {
@@ -35,6 +43,10 @@ class Dialog {
 
   canNegociateSheriffQuestReward() {
     return this.dialog.player.statistics.barter > 75;
+  }
+
+  increaseSheriffQuestReward() {
+    this.dialog.npc.setVariable("sheriffQuestRewardAmount", this.sheriffQuestReward * 2);
   }
 
   startOldSheriffQuest() {
@@ -125,6 +137,49 @@ class Dialog {
   canStartVendetta() {
     const sabotageQuest = game.quests.getQuest("hillburrow/sabotage");
     return this.oldSheriffMurderCanSolve() && sabotageQuest.script.knowsAboutBibinInvolvment;
+  }
+
+  hasBibinDeliveryQuest() {
+    return game.quests.hasQuest("cristal-den/bibins-sabotage-delivery");
+  }
+
+  knowsFullBibinStory() {
+    const delivery = this.deliveryQuest;
+    return (this.sabotageQuest && this.sabotageQuest.script.knowsAboutBibinInvolvment)
+      || (delivery && delivery.isObjectiveCompleted("delivery"));
+  }
+
+  hasBibinSuspicionsOnly() {
+    return game.hasVariable("knowsWaterCarrierBibinLink") && !this.knowsFullBibinStory();
+  }
+
+  canTellSheriffMoreAboutMurder() {
+    return this.sheriffQuest
+      && this.sheriffQuest.isObjectiveCompleted("solveMurder")
+      && this.hasBibinDeliveryQuest()
+      && !this.dialog.npc.hasVariable("toldSheriffAboutBibin");
+  }
+
+  onToldSheriffAboutBibin() {
+    this.dialog.npc.setVariable("toldSheriffAboutBibin", 1);
+  }
+
+  isBibinAlive() {
+    return !game.hasVariable("bibinDead");
+  }
+
+  isBibinDead() {
+    return game.hasVariable("bibinDead");
+  }
+
+  canPersuadeSheriffToJoin() {
+    return true;
+  }
+
+  attemptRecruitSheriff() {
+    return game.hasVariable("bibinDead") || game.player.statistics.speech >= 100
+        ? "old-sheriff-join-adventures-accept"
+        : "old-sheriff-join-adventures-refuse";
   }
 
   startCompanionship() {

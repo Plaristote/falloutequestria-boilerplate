@@ -37,6 +37,10 @@ class Dialog {
     return !(saboteur && saboteur.isAlive());
   }
 
+  introSabotage() {
+    game.setVariable("knowsWaterCarrierBibinLink", 1);
+  }
+
   onAcceptedSabotageJob() {
     game.worldmap.revealCity("hillburrow");
     game.quests.addQuest("cristal-den/bibins-sabotage-delivery");
