@@ -66,6 +66,10 @@
         "delivery-exit": {
             "text": "delivery-exit"
         },
+        "delivery-password-surprise": {
+            "state": "delivery-password-2",
+            "text": "delivery-password-surprise"
+        },
         "delivery-tell-message": {
             "state": "delivery-message-received",
             "text": "delivery-tell-message"
@@ -213,11 +217,19 @@
         },
         "delivery-password": {
             "answers": [
+                "delivery-password-surprise",
                 "delivery-ask-details",
                 "delivery-exit"
             ],
             "hook": "onDeliveryLearnedPassword",
             "text": "delivery-password"
+        },
+        "delivery-password-2": {
+            "answers": [
+                "delivery-ask-details",
+                "delivery-exit"
+            ],
+            "text": "delivery-password-2"
         },
         "entry": {
             "answers": [
