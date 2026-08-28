@@ -18,9 +18,9 @@ export function onEvidenceRevealed() {
   const quest = game.quests.addQuest(questName, QuestFlags.HiddenQuest);
   quest.completeObjective("findMurderer");
   if (quest.script.hasEvent("talkedWithWaterCarrier"))
-    quest.script.events.push("foundSheriffStar");
+    quest.script.pushUniqueEvent("foundSheriffStar");
   else
-    quest.script.events.push("foundSheriffStarAlt");
+    quest.script.pushUniqueEvent("foundSheriffStarAlt");
 }
 
 export function startWaterCarrierScene() {
