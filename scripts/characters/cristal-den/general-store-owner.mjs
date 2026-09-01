@@ -9,4 +9,8 @@ export default class GeneralStoreOwner extends ShopOwner {
   get shop() {
     return level.findGroup("shop");
   }
+
+  get bed() {
+    return level.findObject("shop.room.bed");
+  }
 }
