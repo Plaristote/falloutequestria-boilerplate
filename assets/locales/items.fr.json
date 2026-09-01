@@ -43,7 +43,12 @@
         "ripper": "Hybride terrifiant entre un couteau de combat et une tronçonneuse, le ripper traverse aisément la chair comme l'armure.",
         "sledgehammer": "Une grosse massue, utilisé dans les travaux de démolition. Bien que difficile à manier, elle est idéale pour repousser des groupes d'indésirables.",
         "sniper-rifle": "Un fusil montable sur selle, pour le tir de précision. Complexe à manier, il peut faire de très gros trous, dans des cibles fort éloignées.",
-        "mouthgun": "Un pistolet 9 mm compact conçu autour d’une détente actionnée avec la bouche. Léger, fiable et facile à garder à portée de tir, c’est une petite arme de bouche pratique pour les poneys qui préfèrent garder leurs sabots libres."
+        "mouthgun": "Un pistolet 9 mm compact conçu autour d’une détente actionnée avec la bouche. Léger, fiable et facile à garder à portée de tir, c’est une petite arme de bouche pratique pour les poneys qui préfèrent garder leurs sabots libres.",
+        "skill-book-medicine": "Un livre pour apprendre les premiers secours, et certaines procédures plus compliquées.",
+        "skill-book-outdoorsman": "Un livre sur la vie en plein air, avec pleins de conseils sur les méthodes de campement et le déplacement en milieu hostile.",
+        "skill-book-repair": "Un bouquin qui enseigne la réparation d'appareils électronique, et quelques généralités de bricolage.",
+        "skill-book-science": "Un livre pour en apprendre plus sur les sciences.",
+        "skill-book-spellcasting": "Un livre pour améliorer ses techniques magiques."
     },
     "item-slots": {
         "armor": "Armure",
@@ -91,6 +96,9 @@
 	"skill-book-medicine": "Manuel de premiers secours",
         "skill-book-outdoorsman": "Guide de survie",
         "skill-book-smallGuns": "Magazine de flingues",
+  "skill-book-repair": "Amoureuses Attentions (pour les causes déséspérées)",
+  "skill-book-science": "Grand Livre de la Science",
+  "skill-book-spellcasting": "Guide de Balistique Arcanique",
 	"bottlecaps": "Capsules",
 	"tuxedo": "Costume",
         "sparkle-cola": "Sparkle Cola",
