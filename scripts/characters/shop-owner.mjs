@@ -1,6 +1,6 @@
 import {CharacterBehaviour} from "./character.mjs";
 
-export class ShopOwner extends CharacterBehaviour {
+export default class ShopOwner extends CharacterBehaviour {
   constructor(model) {
     super(model);
   }
