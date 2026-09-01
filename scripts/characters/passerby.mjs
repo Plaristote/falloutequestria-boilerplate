@@ -7,7 +7,7 @@ export const textBubbles = [
   {content: i18n.t("bubbles.passerby-3"), duration: 5000 }
 ];
 
-export class PasserbyBehaviour extends CharacterBehaviour {
+export default class PasserbyBehaviour extends CharacterBehaviour {
   constructor(model, locations, intervals = {min: 10, max: 25}) {
     super(model);
     this.passerbyLocations = locations;
@@ -22,9 +22,10 @@ export class PasserbyBehaviour extends CharacterBehaviour {
   }
 
   goToNextLocation() {
-    var travelStarted = false;
+    let travelStarted = false;
+    const actions = this.model.actionQueue;
 
-    if (!level.combat && this.isPasserbyBehaviourEnabled()) {
+    if (!level.combat && this.isPasserbyBehaviourEnabled() && actions.isEmpty()) {
       const locationIt = Math.floor(Math.random() * 100) % this.passerbyLocations.length;
       const location = this.passerbyLocations[locationIt];
       var position = {x: 0, y: 0 };
@@ -34,10 +35,14 @@ export class PasserbyBehaviour extends CharacterBehaviour {
       else
         position = location;
       if (position.z !== undefined)
-        this.model.actionQueue.pushReachNear(position.x, position.y, position.z, 3);
+        actions.pushReachNear(position.x, position.y, position.z, 3);
       else
-        this.model.actionQueue.pushReachNear(position.x, position.y, 3);
-      travelStarted = this.model.actionQueue.start();
+        actions.pushReachNear(position.x, position.y, 3);
+      actions.pushScript({
+        onTrigger: this.onTravelCompleted.bind(this),
+        onCancel: this.scheduleNextTravel.bind(this)
+      });
+      travelStarted = actions.start();
     }
     if (!travelStarted)
       this.scheduleNextTravel();
@@ -52,5 +57,8 @@ export class PasserbyBehaviour extends CharacterBehaviour {
   onActionQueueCompleted() {
     super.onActionQueueCompleted();
     this.scheduleNextTravel();
+  }
+
+  onTravelCompleted() {
   }
 }
