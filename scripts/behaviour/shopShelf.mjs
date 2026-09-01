@@ -5,6 +5,7 @@ const moneyItems = ["bottlecaps"];
 
 function dropRateFor(item) {
   if (item.itemType.startsWith("skill-book")) return 0.01;
+  if (item.itemType.startsWith("spell-book")) return 0.02;
   switch (item.category) {
   case "ammo": return 0.8;
   case "consommables": return 0.5;

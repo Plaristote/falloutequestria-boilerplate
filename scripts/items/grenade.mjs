@@ -11,6 +11,10 @@ export class Grenade extends WeaponBehaviour {
     this.isExplosive = true;
   }
 
+  getDamageType() {
+    return "explosion";
+  }
+
   attemptToUseAt(x, y) {
     if (!this.user.hasLineOfSight(x, y))
       this.logFailure(i18n.t("messages.no-line-of-sight"));
