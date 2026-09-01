@@ -53,6 +53,10 @@ export default class Pimp extends CharacterBehaviour {
     });
   }
 
+  get officeLights() {
+    return level.tilemap.getLightLayer("brothel-office");
+  }
+
   onDied() {
     const quest = requireQuest("cristal-den/pimp-changeling", QuestFlags.HiddenQuest);
     quest.script.onPimpKilled();

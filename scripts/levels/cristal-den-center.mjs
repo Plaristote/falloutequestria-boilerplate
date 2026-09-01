@@ -1,4 +1,5 @@
 import {LevelBase} from "./base.mjs";
+import {popPasserby} from "../characters/popping-passerby.mjs";
 
 function prepareRainyPurpleVendetta() {
   const quest = game.quests.getQuest("cristal-den/rainy-purple-vendetta");
@@ -9,7 +10,26 @@ function prepareRainyPurpleVendetta() {
 }
 
 export class CristalDenCenter extends LevelBase {
+  initialize() {
+    level.tasks.addUniqueTask("passerbyTick", 28912, 0);
+  }
+
   onLoaded() {
     prepareRainyPurpleVendetta();
+  }
+
+  passerbyTick() {
+    const randomValue = Math.random() * 3;
+
+    if (randomValue > 2) {
+      popPasserby({
+        popZones: ["cristal-den-entrance", "cristal-den-rld", "cristal-den-slums"],
+        buildings: ["shop", "weapon-shop", "clinic"],
+        characterOptions: ["cristal-den/caravaneer-A", "cristal-den/caravaneer-B", "cristal-den/guard"],
+        generateInventory: function(inventory) {
+          inventory.addItemOfType("bottlecaps", Math.ceil(Math.random() * 50));
+        }
+      });
+    }
   }
 }
