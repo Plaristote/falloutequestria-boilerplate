@@ -1,3 +1,10 @@
+import {RoutineComponent} from "./routine.mjs";
+
+const defaultRoutine = [
+  { hour: "6",  minute: "0", callback: "openInnRoutine"  },
+  { hour: "23", minute: "59", callback: "closeInnRoutine" }
+];
+
 function expellPlayerFromControlZone(group) {
   const occupants = group ? group.getControlZoneOccupants() : [];
 
@@ -35,10 +42,15 @@ export default class Inn {
     this.model = model;
     if (typeof this.roomGroup === "undefined")
       this.roomGroup = this.model;
+    this.routineComponent =  new RoutineComponent(this, this.routine || defaultRoutine);
   }
 
   initialize() {
     this.lockAllRooms();
+  }
+
+  get lightLayer() {
+    return level.tilemap.getLightLayer(this.model.path);
   }
 
   get innkeeper() {
@@ -75,6 +87,16 @@ export default class Inn {
         count++;
     }
     return count;
+  }
+
+  openInnRoutine() {
+    if (this.lightLayer)
+      this.lightLayer.visible = true;
+  }
+
+  closeInnRoutine() {
+    if (this.lightLayer)
+      this.lightLayer.visible = false;
   }
 
   getRandomRoom() {

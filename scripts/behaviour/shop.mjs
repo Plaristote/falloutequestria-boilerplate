@@ -37,6 +37,10 @@ export class Shop {
     this.routineComponent =  new RoutineComponent(this, routine || defaultRoutine);
   }
 
+  get lightLayer() {
+    return level.tilemap.getLightLayer(this.model.path);
+  }
+
   get shopDoors() {
     return this.model.find(object => object.type == "Doorway");
   }
@@ -75,6 +79,7 @@ export class Shop {
 
   onLoaded() {
     this.shopDoors.forEach(door => {
+      if (!door.script) return ;
       overrideBehaviour(door.script, "canGoThrough", character => {
         return character == this.shopOwner;
       });
@@ -114,14 +119,19 @@ export class Shop {
   }
 
   openShopRoutine() {
-    if (this.isShopOwnerConscious())
+    if (this.isShopOwnerConscious()) {
       this.shopDoors.forEach(door => door.locked = false);
+      if (this.lightLayer)
+        this.lightLayer.visible = true;
+    }
   }
 
   closeShopRoutine() {
     if (this.isShopOwnerConscious()) {
       this.shopDoors.forEach(door => { door.opened = false; door.locked = true });
       this.chaseCustomers();
+      if (this.lightLayer)
+        this.lightLayer.visible = false;
     }
   }
 
