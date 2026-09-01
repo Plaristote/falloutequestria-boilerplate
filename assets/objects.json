@@ -474,6 +474,15 @@
         "value": 275,
         "weight": 5
     },
+    "skill-book-science": {
+        "icon": "science-book.webp",
+        "isGroupable": true,
+        "scriptName": "skillbook.mjs",
+        "sprite": "book",
+        "type": "consommables",
+        "value": 500,
+        "weight": 5
+    },
     "skill-book-smallGuns": {
         "icon": "smallguns-book.png",
         "isGroupable": true,
@@ -481,6 +490,15 @@
         "sprite": "book",
         "type": "consommables",
         "value": 250,
+        "weight": 3
+    },
+    "skill-book-spellcasting": {
+        "icon": "spellcasting-book.webp",
+        "isGroupable": true,
+        "scriptName": "skillbook.mjs",
+        "sprite": "book",
+        "type": "consommables",
+        "value": 340,
         "weight": 3
     },
     "sniper-rifle": {
