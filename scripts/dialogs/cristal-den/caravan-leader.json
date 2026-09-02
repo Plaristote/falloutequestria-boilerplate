@@ -6,14 +6,49 @@
             "state": "about-caravan-answer",
             "text": "about-caravan"
         },
+        "about-expedition": {
+            "state": "about-expedition-answer",
+            "text": "about-expedition"
+        },
+        "about-expedition-danger": {
+            "state": "about-expedition-danger-answer",
+            "text": "about-expedition-danger"
+        },
+        "about-expedition-ghouls": {
+            "state": "about-expedition-ghouls-answer",
+            "text": "about-expedition-ghouls"
+        },
+        "about-expedition-why": {
+            "state": "about-expedition-why-answer",
+            "text": "about-expedition-why"
+        },
         "about-joining": {
             "state": "about-joining-answer",
             "text": "about-joining"
+        },
+        "ask-about-arm-module": {
+            "availableHook": "canAskAboutArmModule",
+            "state": "about-celestial-device-answer",
+            "text": "ask-about-arm-module"
+        },
+        "ask-about-celestial-device": {
+            "availableHook": "canAskAboutCelestialDevice",
+            "state": "about-celestial-device-answer",
+            "text": "ask-about-celestial-device"
         },
         "ask-join-caravan": {
             "availableHook": "canJoinCaravan",
             "hook": "onJoinCaravan",
             "text": "ask-join-caravan"
+        },
+        "ask-join-caravan-to-steel-rangers": {
+            "hook": "onAskJoinCaravanToSteelRangers",
+            "text": "ask-join-caravan-to-steel-rangers"
+        },
+        "ask-join-expedition": {
+            "availableHook": "canJoinExpedition",
+            "hook": "onJoinExpedition",
+            "text": "ask-join-expedition"
         },
         "caravan-cancel": {
             "text": "caravan-cancel"
@@ -24,6 +59,13 @@
         },
         "entry-exit": {
             "text": "entry-exit"
+        },
+        "expedition-cancel": {
+            "text": "expedition-cancel"
+        },
+        "expedition-start": {
+            "hook": "startExpedition",
+            "text": "expedition-start"
         },
         "talk-about-thornhoof-caravan": {
             "availableHook": "thornhoofCaravanCanBringUp",
@@ -86,12 +128,60 @@
             "answers": [
                 "about-joining"
             ],
+            "hook": "onAskedAboutCaravan",
             "mood": "smile",
             "text": "about-caravan-answer"
+        },
+        "about-celestial-device-answer": {
+            "answers": [
+                "ask-join-caravan-to-steel-rangers"
+            ],
+            "text": "about-celestial-device-answer"
+        },
+        "about-expedition-answer": {
+            "answers": [
+                "about-expedition-ghouls",
+                "about-expedition-danger",
+                "about-expedition-why",
+                "expedition-start",
+                "expedition-cancel"
+            ],
+            "mood": "smile",
+            "text": "about-expedition-answer"
+        },
+        "about-expedition-danger-answer": {
+            "answers": [
+                "about-expedition-ghouls",
+                "about-expedition-why",
+                "expedition-start",
+                "expedition-cancel"
+            ],
+            "mood": "dubious",
+            "text": "about-expedition-danger-answer"
+        },
+        "about-expedition-ghouls-answer": {
+            "answers": [
+                "about-expedition-danger",
+                "about-expedition-why",
+                "expedition-start",
+                "expedition-cancel"
+            ],
+            "mood": "dubious",
+            "text": "about-expedition-ghouls-answer"
+        },
+        "about-expedition-why-answer": {
+            "answers": [
+                "about-expedition-ghouls",
+                "about-expedition-danger",
+                "expedition-start",
+                "expedition-cancel"
+            ],
+            "text": "about-expedition-why-answer"
         },
         "about-joining-answer": {
             "answers": [
             ],
+            "hook": "onAskedAboutCaravan",
             "mood": "smile",
             "text": "about-joining-answer"
         },
@@ -104,11 +194,19 @@
             "answers": [
                 "talk-about-thornhoof-caravan",
                 "ask-join-caravan",
+                "ask-join-expedition",
+                "ask-about-celestial-device",
+                "ask-about-arm-module",
                 "about-caravan",
                 "about-joining",
                 "entry-exit"
             ],
             "text": "entry"
+        },
+        "expedition-later": {
+            "answers": [
+            ],
+            "text": "expedition-later"
         },
         "join-caravan": {
             "answers": [
@@ -116,6 +214,14 @@
                 "caravan-cancel"
             ],
             "text": "join-caravan"
+        },
+        "join-expedition": {
+            "answers": [
+                "about-expedition",
+                "expedition-start",
+                "expedition-cancel"
+            ],
+            "text": "join-expedition"
         },
         "ranaway": {
             "answers": [
@@ -133,6 +239,11 @@
             "hook": "giveReward",
             "mood": "smile",
             "text": "reward"
+        },
+        "steel-rangers-need-caravaneer": {
+            "answers": [
+            ],
+            "text": "steel-rangers-need-caravaneer"
         },
         "thornhoof-caravan/accept-approved": {
             "answers": [
@@ -213,6 +324,12 @@
                 "thornhoof-1-silvertide"
             ],
             "text": "thornhoof-caravan/who-else"
+        },
+        "too-many-expedition-failures": {
+            "answers": [
+            ],
+            "mood": "angry",
+            "text": "too-many-expedition-failures"
         },
         "too-many-failures": {
             "answers": [

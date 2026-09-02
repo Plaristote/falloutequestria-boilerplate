@@ -2,7 +2,7 @@ import {Shop} from "../shop.mjs";
 
 export default class extends Shop {
   constructor(model) {
-    this.model = model;
+    super(model);
   }
 
   refillShop() {

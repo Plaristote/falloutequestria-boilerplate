@@ -38,6 +38,57 @@ class Dialog extends ThornhoofCaravanComponent {
     this.dialog.npc.tasks.addTask("startCaravan", 350, 1);
   }
 
+  onAskedAboutCaravan() {
+    game.setVariable("knowsLaurieIsCaravaneer", 1);
+  }
+
+  knowsLaurieIsCaravaneer() {
+    return game.getVariable("knowsLaurieIsCaravaneer", 0) == 1;
+  }
+
+  getCelestialDeviceQuest() {
+    return game.quests.getQuest("celestialDevice");
+  }
+
+  isLookingForArmModule() {
+    const quest = this.getCelestialDeviceQuest();
+    return !!(quest && quest.hasObjective("find-arm-module"));
+  }
+
+  hasUnresolvedCelestialDeviceLead() {
+    const quest = this.getCelestialDeviceQuest();
+    return !!(quest && !quest.isObjectiveCompleted("find-arm-module"));
+  }
+
+  canAskAboutCelestialDevice() {
+    return this.knowsLaurieIsCaravaneer()
+      && this.hasUnresolvedCelestialDeviceLead()
+      && !this.isLookingForArmModule();
+  }
+
+  canAskAboutArmModule() {
+    return this.knowsLaurieIsCaravaneer()
+      && this.hasUnresolvedCelestialDeviceLead()
+      && this.isLookingForArmModule();
+  }
+
+  onAskJoinCaravanToSteelRangers() {
+    if (!this.canJoinCaravan())
+      return "steel-rangers-need-caravaneer";
+    this.dialog.npc.script.nextCaravanDestination = "steel-rangers-bunker";
+    return game.timeManager.weekDay == 1 ? "join-caravan" : "caravan-later";
+  }
+
+  canJoinExpedition() {
+    return game.getVariable("fargo-ghoul-hunter-on", 0) == 1;
+  }
+
+  onJoinExpedition() {
+  }
+
+  startExpedition() {
+  }
+
   get pendingReward() {
     return game.script.caravan.pendingReward;
   }

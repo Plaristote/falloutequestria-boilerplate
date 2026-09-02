@@ -20,8 +20,10 @@ export class CristalDenCenter extends LevelBase {
 
   passerbyTick() {
     const randomValue = Math.random() * 3;
+    const now = Date.now();
 
-    if (randomValue > 2) {
+    if (randomValue > 2 && (!this.lastPasserby || (this.lastPasserby + 28) > now)) {
+      this.lastPasserby = now;
       popPasserby({
         popZones: ["cristal-den-entrance", "cristal-den-rld", "cristal-den-slums"],
         buildings: ["shop", "weapon-shop", "clinic"],

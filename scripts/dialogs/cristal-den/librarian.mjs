@@ -1,9 +1,4 @@
-class Dialog {
-  constructor(dialog) {
-    this.dialog = dialog;
-  }
-}
+import {MerchantHelper} from "../merchant.mjs";
 
-export function create(dialog) {
-  return new Dialog(dialog);
+export default class extends MerchantHelper {
 }

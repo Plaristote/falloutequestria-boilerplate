@@ -1,4 +1,4 @@
-import {QuestHelper} from "./helpers.mjs";
+import {QuestHelper, requireQuest, QuestFlags} from "./helpers.mjs";
 
 export default class extends QuestHelper {
   initialize() {
@@ -74,7 +74,7 @@ export default class extends QuestHelper {
     switch (name) {
     case "findLair":
       this.model.location = "unhaus";
-      break ;
+      requireQuest("unhaus/investigateUnhaus", QuestFlags.HiddenQuest).script.onDiscoveredHive();
     }
   }
 }

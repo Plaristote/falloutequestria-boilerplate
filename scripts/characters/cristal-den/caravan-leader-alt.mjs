@@ -1,5 +1,21 @@
 import {CharacterBehaviour} from "../character.mjs";
 
+function caravanForceNextDestination(value) {
+  const weekDay = game.timeManager.weekDay;
+  const days = weekDay == 0 ? 1 : 9 - weekDay;
+  const seconds = game.timeManager.secondsUntilTime({ days, hour: 23, minute: 59, second: 59 });
+  game.setVariable("enforceNextCaravanAt", game.timeManager.getTimestamp() + seconds);
+  game.setVariable("enforceNextCaravan", value);
+}
+
+function caravanForcedNextDestination() {
+  const timestamp = game.getVariable("enforceNextCaravanAt", 0);
+
+  if (timestamp > game.timeManager.getTimestamp())
+    return game.getVariable("enforceNextCaravan");
+  return null;
+}
+
 export default class extends CharacterBehaviour {
   constructor(model) {
     super(model);
@@ -25,11 +41,15 @@ export default class extends CharacterBehaviour {
       const candidates = ["junkville", "hillburrow", "steel-ranger-bunker"];
       if (game.hasVariable("thornhoofCaravanEnabled"))
         candidates.push("thornhoof");
-      return candidates[step] || "junkville";
+      return caravanForcedNextDestination() || candidates[step] || "junkville";
     }
 
     // On departure from anywhere else
     return "cristal-den";
+  }
+
+  set nextCaravanDestination(value) {
+    caravanForceNextDestination(value);
   }
 
   startCaravan() {

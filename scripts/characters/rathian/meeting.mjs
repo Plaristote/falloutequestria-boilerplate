@@ -11,6 +11,9 @@ function isDropOffLevel() {
 
 export default class Rathian extends Base {
   get dialog() {
+    const tasks = this.model.tasks;
+    if (tasks.hasTask("switchScript") || tasks.hasTask("removeRathian") || tasks.hasTask("goToLevelExit") || this.exiting)
+      return null;
     return "rathian-introduction";
   }
   
@@ -37,7 +40,6 @@ export default class Rathian extends Base {
     if (isDropOffLevel()) {
       console.log("Rathian dropping ovv");
       game.playerParty.removeCharacter(this.model);
-      this.stopFollowingPlayer();
       this.model.movementMode = "walking";
       this.model.tasks.addTask("talkOnArrival", 1000, 1);
       if (level.name === "junkville") {
@@ -83,6 +85,7 @@ export default class Rathian extends Base {
   goToLevelExit() {
     const reschedule = () => this.model.tasks.addTask("goToLevelExit", 5000, 1);
 
+    this.exiting = true;
     toLevelExitAction(this.model, reschedule);
   }
 }

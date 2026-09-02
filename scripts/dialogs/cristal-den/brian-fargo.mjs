@@ -1,4 +1,5 @@
 import {skillCheck} from "../../cmap/helpers/checks.mjs";
+import {requireQuest, QuestFlags} from "../../quests/helpers.mjs";
 
 class Dialog {
   constructor(dialog) {
@@ -9,8 +10,113 @@ class Dialog {
     game.setVariable("fargo-caravan-on", 1);
   }
 
-  acceptNegociatorQuest() {
-    // TODO implement negociator quest entry hook
+  canPickCaravanSkill() {
+    return !this.hasCaravanJob();
+  }
+
+  canPickGunnerSkill() {
+    return !this.hasGhoulHunterJob();
+  }
+
+  hasCaravanJob() {
+    return game.getVariable("fargo-caravan-on", 0) == 1;
+  }
+
+  hasGhoulHunterJob() {
+    return game.getVariable("fargo-ghoul-hunter-on", 0) == 1;
+  }
+
+  hasInvestigateUnhausJob() {
+    return !!game.quests.getQuest("unhaus/investigateUnhaus") || !!game.getVariable("toldFargoAboutChangelings");
+  }
+
+  hasAnyFargoJob() {
+    return this.hasCaravanJob() || this.hasGhoulHunterJob() || this.hasInvestigateUnhausJob();
+  }
+
+  hasRemainingSkillJob() {
+    return !this.hasCaravanJob() || !this.hasGhoulHunterJob() || this.canAcceptInvestigateUnhaus();
+  }
+
+  canAskForFirstJob() {
+    return !this.hasAnyFargoJob();
+  }
+
+  canAskForMoreWork() {
+    return this.hasAnyFargoJob() && this.hasRemainingSkillJob();
+  }
+
+  canAskAboutPlace() {
+    return !this.hasAnyFargoJob();
+  }
+
+  canAskAboutCelestialDevice() {
+    return this.hasAnyFargoJob();
+  }
+
+  hasNoMoreWorkToOffer() {
+    return this.hasAnyFargoJob() && !this.hasRemainingSkillJob();
+  }
+
+  onEnterWorkAnswer() {
+    game.setVariable("knowsLaurieIsCaravaneer", 1);
+    if (this.dialog.previousAnswer === "work-ghoul-hunter-accept")
+      return {text: this.dialog.tr("work-answer-too-weak"), mood: "cocky"};
+    if (this.hasAnyFargoJob())
+      return {text: this.dialog.tr("work-answer-repeat"), mood: "cocky"};
+  }
+
+  ghoulHunterLevelTest() {
+    const partyLevels = game.playerParty.list.reduce(
+      (total, character) => total + character.statistics.level / 2,
+      0
+    );
+    const score = game.player.statistics.level + partyLevels;
+    if (score < 10)
+      return "work-answer";
+  }
+
+  onAcceptedGhoulHunterWork() {
+    game.setVariable("fargo-ghoul-hunter-on", 1);
+  }
+
+  getChangelingQuest() {
+    return requireQuest("changelingQuest", QuestFlags.HiddenQuest);
+  }
+
+  hasFoundChangelingHive() {
+    const quest = this.getChangelingQuest();
+    return !!(quest && quest.isObjectiveCompleted("findLair"));
+  }
+
+  canAcceptInvestigateUnhaus() {
+    return !game.quests.getQuest("unhaus/investigateUnhaus") && !this.hasFoundChangelingHive();
+  }
+
+  hasFoundUnhausSecretButNotToldFargo() {
+    return this.hasFoundChangelingHive() && !game.getVariable("toldFargoAboutChangelings");
+  }
+
+  acceptInvestigateUnhausQuest() {
+    if (!game.quests.getQuest("unhaus/investigateUnhaus"))
+      game.quests.addQuest("unhaus/investigateUnhaus");
+  }
+
+  convinceFargoChangelingsTest() {
+    if (!skillCheck(game.player, "speech", {dice: 50, target: 100}))
+      return "work-investigator-not-convinced";
+  }
+
+  onFargoConvincedChangelingsReal() {
+    game.setVariable("toldFargoAboutChangelings", 1);
+
+    const investigateQuest = game.quests.getQuest("unhaus/investigateUnhaus");
+    if (investigateQuest && !investigateQuest.completed) {
+      investigateQuest.completeObjective("find-hive");
+      investigateQuest.completed = true;
+    }
+    // TODO changeling detection spell quest ?
+    //requireQuest("cristal-den/changelingDetectionSpell");
   }
 
   hasThornhoofCaravanQuest() {

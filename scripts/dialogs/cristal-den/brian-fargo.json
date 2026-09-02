@@ -2,40 +2,59 @@
     "answers": {
         "": {
         },
+        "accept-investigate-unhaus": {
+            "availableHook": "canAcceptInvestigateUnhaus",
+            "hook": "acceptInvestigateUnhausQuest",
+            "state": "work-investigator-accepted",
+            "text": "accept-investigate-unhaus"
+        },
         "accept-pay-thornhoof-caravan": {
             "availableHook": "thornhoofCaravanCanPay",
             "state": "thornhoof-caravan/convinced",
             "text": "accept-pay-thornhoof-caravan"
         },
-        "accept-work-negociator": {
-            "hook": "acceptNegociatorQuest",
-            "text": "accept-work-negociator"
+        "ask-about-place": {
+            "availableHook": "canAskAboutPlace",
+            "state": "about-place",
+            "text": "ask-about-place"
         },
-        "ask-about-bibin": {
-            "state": "work-negociator-bibin",
-            "text": "ask-about-bibin"
+        "ask-celestial-device": {
+            "availableHook": "canAskAboutCelestialDevice",
+            "state": "about-celestial-device",
+            "text": "ask-celestial-device-arm",
+            "textHook": "askAboutCelestialDeviceLine"
         },
-        "ask-about-potioks": {
-            "state": "work-negociator-potioks",
-            "text": "ask-about-potioks"
+        "ask-for-more-work": {
+            "availableHook": "canAskForMoreWork",
+            "state": "work-answer",
+            "text": "ask-for-more-work"
         },
         "ask-for-work": {
+            "availableHook": "canAskForFirstJob",
             "state": "work-answer",
             "text": "ask-for-work"
         },
-        "ask-negociator-leads": {
-            "state": "work-negociator-leads",
-            "text": "ask-negociator-leads"
+        "ask-for-work-all-done": {
+            "availableHook": "hasNoMoreWorkToOffer",
+            "state": "work-all-done",
+            "text": "ask-for-work-all-done"
         },
-        "back-to-work-negociator": {
-            "state": "work-negociator",
-            "text": "back-to-work-negociator"
+        "convince-fargo-changelings": {
+            "hook": "convinceFargoChangelingsTest",
+            "state": "work-investigator-convinced",
+            "text": "convince-fargo-changelings"
         },
         "exit-entry": {
             "text": "exit-entry"
         },
-        "reject-work-negociator": {
-            "text": "reject-work-negociator"
+        "give-up-convince-fargo-changelings": {
+            "state": "work-investigator-not-convinced",
+            "text": "give-up-convince-fargo-changelings"
+        },
+        "reject-investigate-unhaus": {
+            "availableHook": "canAcceptInvestigateUnhaus",
+            "state": "work-investigator-rejected",
+            "text": "reject-investigate-unhaus"
         },
         "start-thornhoof-caravan": {
             "availableHook": "hasThornhoofCaravanQuest",
@@ -70,6 +89,16 @@
             "state": "thornhoof-caravan/on-join-escort-survival",
             "text": "thornhoof-join-escort-survival"
         },
+        "warn-fargo-changelings-found": {
+            "availableHook": "hasFoundUnhausSecretButNotToldFargo",
+            "state": "work-investigator-reveal",
+            "text": "warn-fargo-changelings-found"
+        },
+        "warn-fargo-changelings-found-alt": {
+            "availableHook": "hasFoundUnhausSecretButNotToldFargo",
+            "state": "work-investigator-reveal",
+            "text": "warn-fargo-changelings-found-alt"
+        },
         "work-caravan-accept": {
             "state": "work-caravan-start",
             "text": "work-caravan-accept"
@@ -85,28 +114,65 @@
             "state": "work-caravan-rejected",
             "text": "work-caravan-reject"
         },
+        "work-ghoul-ask-steel-rangers": {
+            "state": "work-ghoul-steel-rangers",
+            "text": "work-ghoul-ask-steel-rangers"
+        },
+        "work-ghoul-hunter-accept": {
+            "hook": "ghoulHunterLevelTest",
+            "state": "work-ghoul-hunter-start",
+            "text": "work-ghoul-hunter-accept"
+        },
+        "work-ghoul-hunter-ask-about-route": {
+            "state": "work-ghoul-hunter-route-details",
+            "text": "work-ghoul-hunter-ask-about-route"
+        },
+        "work-ghoul-hunter-reject": {
+            "state": "work-ghoul-hunter-rejected",
+            "text": "work-ghoul-hunter-reject"
+        },
         "work-skills-cancel": {
             "text": "work-skills-cancel"
         },
         "work-skills-gunner": {
-            "state": "work-caravan",
+            "availableHook": "canPickGunnerSkill",
+            "state": "work-ghoul-hunter",
             "text": "work-skills-gunner"
         },
         "work-skills-talker": {
-            "state": "work-negociator",
+            "availableHook": "canAcceptInvestigateUnhaus",
+            "state": "work-investigator",
             "text": "work-skills-talker"
         },
         "work-skills-wastelander": {
+            "availableHook": "canPickCaravanSkill",
             "state": "work-caravan",
             "text": "work-skills-wastelander"
         }
     },
     "entryPoint": "entry",
     "states": {
+        "about-celestial-device": {
+            "answers": [
+            ],
+            "mood": "angry",
+            "text": "about-celestial-device"
+        },
+        "about-place": {
+            "answers": [
+            ],
+            "mood": "angry",
+            "text": "about-place"
+        },
         "entry": {
             "answers": [
                 "start-thornhoof-caravan",
+                "warn-fargo-changelings-found-alt",
                 "ask-for-work",
+                "ask-about-place",
+                "ask-for-more-work",
+                "ask-for-work-all-done",
+                "ask-celestial-device",
                 "exit-entry"
             ],
             "mood": "angry",
@@ -181,6 +247,12 @@
             "mood": "angry",
             "text": "thornhoof-caravan/on-test-fail"
         },
+        "work-all-done": {
+            "answers": [
+            ],
+            "mood": "cocky",
+            "text": "work-all-done"
+        },
         "work-answer": {
             "answers": [
                 "work-skills-gunner",
@@ -188,7 +260,14 @@
                 "work-skills-wastelander",
                 "work-skills-cancel"
             ],
+            "hook": "onEnterWorkAnswer",
             "text": "work-answer"
+        },
+        "work-answer-too-weak": {
+            "answers": [
+            ],
+            "mood": "angry",
+            "text": "work-answer-too-weak"
         },
         "work-caravan": {
             "answers": [
@@ -210,33 +289,83 @@
             "hook": "onAcceptedCaravanWork",
             "text": "work-caravan-start"
         },
-        "work-negociator": {
+        "work-ghoul-hunter": {
             "answers": [
-                "accept-work-negociator",
-                "ask-negociator-leads",
-                "reject-work-negociator"
+                "work-ghoul-hunter-accept",
+                "work-ghoul-hunter-ask-about-route",
+                "work-ghoul-hunter-reject"
             ],
-            "text": "work-negociator"
+            "text": "work-ghoul-hunter"
         },
-        "work-negociator-bibin": {
+        "work-ghoul-hunter-rejected": {
             "answers": [
-                "back-to-work-negociator"
             ],
-            "text": "work-negociator-bibin"
+            "mood": "cocky",
+            "text": "work-ghoul-hunter-rejected"
         },
-        "work-negociator-leads": {
+        "work-ghoul-hunter-route-details": {
             "answers": [
-                "ask-about-potioks",
-                "back-to-work-negociator"
+                "work-ghoul-hunter-accept",
+                "work-ghoul-ask-steel-rangers",
+                "work-ghoul-hunter-reject"
             ],
-            "text": "work-negociator-leads"
+            "mood": "cocky",
+            "text": "work-ghoul-hunter-route-details"
         },
-        "work-negociator-potioks": {
+        "work-ghoul-hunter-start": {
             "answers": [
-                "ask-about-bibin",
-                "back-to-work-negociator"
             ],
-            "text": "work-negociator-potioks"
+            "hook": "onAcceptedGhoulHunterWork",
+            "text": "work-ghoul-hunter-start"
+        },
+        "work-ghoul-steel-rangers": {
+            "answers": [
+                "work-ghoul-hunter-accept",
+                "work-ghoul-hunter-reject"
+            ],
+            "mood": "angry",
+            "text": "work-ghoul-steel-rangers"
+        },
+        "work-investigator": {
+            "answers": [
+                "accept-investigate-unhaus",
+                "warn-fargo-changelings-found",
+                "reject-investigate-unhaus"
+            ],
+            "text": "work-investigator"
+        },
+        "work-investigator-accepted": {
+            "answers": [
+            ],
+            "hook": "revealUnhaus",
+            "text": "work-investigator-accepted"
+        },
+        "work-investigator-convinced": {
+            "answers": [
+            ],
+            "hook": "onFargoConvincedChangelingsReal",
+            "mood": "dubious",
+            "text": "work-investigator-convinced"
+        },
+        "work-investigator-not-convinced": {
+            "answers": [
+            ],
+            "mood": "angry",
+            "text": "work-investigator-not-convinced"
+        },
+        "work-investigator-rejected": {
+            "answers": [
+            ],
+            "mood": "cocky",
+            "text": "work-investigator-rejected"
+        },
+        "work-investigator-reveal": {
+            "answers": [
+                "convince-fargo-changelings",
+                "give-up-convince-fargo-changelings"
+            ],
+            "mood": "dubious",
+            "text": "work-investigator-reveal"
         }
     }
 }
