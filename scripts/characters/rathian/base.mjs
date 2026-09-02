@@ -1,4 +1,5 @@
 import {CharacterBehaviour} from "../character.mjs";
+import {CompanionCharacter} from "../components/companion.mjs";
 import {DealWithRathian} from "./flags.mjs";
 
 function gaveUpSentinel(model) {
@@ -6,7 +7,7 @@ function gaveUpSentinel(model) {
   return (flag & DealWithRathian.GaveUpSentinel) > 0;
 }
 
-export default class Rathian extends CharacterBehaviour {
+export default class Rathian extends CompanionCharacter {
   get trackingQuest() {
     return game.quests.getQuest("stable-103/rathian");
   }

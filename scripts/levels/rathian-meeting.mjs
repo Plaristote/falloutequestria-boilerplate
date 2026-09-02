@@ -62,7 +62,8 @@ class Level extends LevelBase {
   onLoaded() {
     this.bandits = makeBanditsParty();
     this.rathianParty = makeRathianParty();
-    this.rathianParty.list[0].isUnique = true;
+    if (this.rathianParty && this.rathianParty.list.length > 0)
+      this.rathianParty.list[0].isUnique = true;
     this.scene = new MeetingScene(this);
     if (!level.hasVariable("prepared")) {
       level.setVariable("prepared", 1);
@@ -95,10 +96,6 @@ class Level extends LevelBase {
     if (this.rathianParty)
       this.rathianParty.removeCharacter(npc);
     game.playerParty.addCharacter(npc);
-  }
-  playerJoinsRathian() {
-    this.rathianJoinsPlayer();
-    level.tasks.addTask("goToJunkville", 150, 1);
   }
   goToJunkville() {
     console.log("Trigger goToJunkville");

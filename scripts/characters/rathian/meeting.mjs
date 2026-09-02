@@ -9,11 +9,9 @@ function isDropOffLevel() {
   return city !== null && exceptionLevel.indexOf(levelName) == -1;
 }
 
-class Rathian extends Base {
+export default class Rathian extends Base {
   get dialog() {
-    if (level.name === "rathian-meeting" && game.playerParty.find(this.model) == null)
-      return "rathian-introduction";
-    return null;
+    return "rathian-introduction";
   }
   
   get textBubbles() {
@@ -32,16 +30,6 @@ class Rathian extends Base {
       damage = 1;
     }
     return super.mitigateDamage(damage, type, dealer);
-  }
-
-  startFollowingPlayer() {
-    this.model.statistics.faction = "player";
-    this.model.tasks.addUniqueTask("followPlayer", 6123, 0);
-  }
-  
-  stopFollowingPlayer() {
-    this.model.statistics.faction = "";
-    this.model.tasks.removeTask("followPlayer");
   }
 
   insertedIntoZone(zoneName) {
@@ -98,9 +86,3 @@ class Rathian extends Base {
     toLevelExitAction(this.model, reschedule);
   }
 }
-
-export function create(model) {
-  console.log("CREATING MEETING RATHIAN");
-  return new Rathian(model);
-}
-

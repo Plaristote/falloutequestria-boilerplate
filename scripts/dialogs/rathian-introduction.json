@@ -1,11 +1,14 @@
 {
     "answers": {
         "": {
-            "state": ""
         },
         "accept-help": {
             "state": "device-answer",
             "text": "accept-help"
+        },
+        "back-to-entry": {
+            "hook": "getEntryPoint",
+            "text": "back-to-entry"
         },
         "backpedal-help": {
             "state": "accompany",
@@ -14,10 +17,6 @@
         "come-later": {
             "state": "exit-come-later",
             "text": "come-later"
-        },
-        "come-with": {
-            "state": "exit-come-with",
-            "text": "come-with"
         },
         "join-party": {
             "state": "exit-join-party",
@@ -49,9 +48,15 @@
     },
     "entryPoint": "introduction",
     "states": {
+        "about-junkville": {
+            "answers": [
+                "back-to-entry"
+            ],
+            "mood": "smile",
+            "text": "about-junkville"
+        },
         "accompany": {
             "answers": [
-                "come-with",
                 "join-party",
                 "come-later",
                 "leave-me-alone"
@@ -61,7 +66,6 @@
         },
         "device-answer": {
             "answers": [
-                "come-with",
                 "join-party",
                 "come-later"
             ],
@@ -71,14 +75,7 @@
         "exit-come-later": {
             "answers": [
             ],
-            "hook": "",
             "text": "exit-come-later"
-        },
-        "exit-come-with": {
-            "answers": [
-            ],
-            "hook": "onComeWith",
-            "text": "exit-come-with"
         },
         "exit-join-party": {
             "answers": [
@@ -100,7 +97,6 @@
                 "reject-help",
                 "backpedal-help"
             ],
-            "hook": "",
             "text": "stable-answer"
         },
         "untrust-answer": {

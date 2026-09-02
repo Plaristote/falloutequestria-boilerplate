@@ -1,7 +1,7 @@
 import {isFacilityQuestAvailable, isFacilityQuestComplete} from "../quests/junkvilleStabletechFacility.mjs";
 import CrafterComponent from "./crafter.mjs"
 
-class Dialog {
+export default class Dialog {
   constructor(dialog) {
     this.dialog = dialog;
     this.crafter = new CrafterComponent(this);
