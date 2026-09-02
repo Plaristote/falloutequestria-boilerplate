@@ -1,0 +1,35 @@
+{
+  "dialogs": {
+    "companion": {
+      "entry": "De quoi as-tu besoin, {{name}} ?",
+      "reentry": "Il te faut quelque chose d'autre ?",
+      "entry-tactics": "Il faut qu'on discute de nos tactiques.",
+      "entry-equipment": "Il faut qu'on parle de ton équipement.",
+      "entry-distance": "J'aimerais changer notre distance",
+      "entry-exit": "Je voulais juste m'assurer que tout allait bien.",
+      "back": "Oublie ça, parlons d'autre chose.",
+      "distance": "À quelle distance tu veux que je me tienne ?",
+      "distance-close": "Reste près de moi.",
+      "distance-medium": "Ne t'éloigne pas, mais ne me colle pas.",
+      "distance-far": "Reste à distance.",
+      "tactics": "Comment est-ce que je devrais me battre ?",
+      "tactics-fire-support": "Concentre toi sur les cibles que j'attaque.",
+      "tactics-suppressing-fire": "Protège-moi, ne laisse personne me bloquer le chemin.",
+      "tactics-solo": "Bats-toi indépendamment de moi.",
+      "tactics-solo-prompt": "Comment je devrais choisir qui attaquer ?",
+      "tactics-solo-tactician": "Neutralise les ennemis les plus forts en premier.",
+      "tactics-solo-predator": "Élimine les cibles les plus vulnérables.",
+      "tactics-solo-opportunist": "Comme tu le sens.",
+      "equipment": "Qu'est-ce que tu veux que je change ?",
+      "equip-slot-use": "Ton arme.",
+      "equip-slot-use-1": "Ton arme.",
+      "equip-slot-use-2": "Ton arme secondaire.",
+      "equip-slot-armor": "Ton armure.",
+      "equip-slot-saddle": "Ta selle.",
+      "equip-slot-prompt": "Qu'est-ce que je devrais utiliser ?",
+      "equip-slot-current": "J'utilise {{item}} à cet emplacement.",
+      "equip-slot-empty": "Je n'ai rien à équiper ici.",
+      "equip-no-ammo": "Je peux pas équiper {{item}}, j'ai aucune munitions pour ça."
+    }
+  }
+}

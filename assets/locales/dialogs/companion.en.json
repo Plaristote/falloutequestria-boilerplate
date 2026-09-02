@@ -1,0 +1,35 @@
+{
+  "dialogs": {
+    "companion": {
+      "entry": "What do you need, {{name}}?",
+      "reentry": "Anything else?",
+      "entry-tactics": "We need to work out our tactics.",
+      "entry-equipment": "We need to talk about your equipment.",
+      "entry-distance": "We need to talk about distance.",
+      "entry-exit": "Just checking on you. Bye.",
+      "back": "Never mind, let's talk about something else.",
+      "distance": "How close do you want me to stick to you?",
+      "distance-close": "Stay close to me.",
+      "distance-medium": "Keep some distance.",
+      "distance-far": "Stay well back.",
+      "tactics": "How do you want me to handle a fight?",
+      "tactics-fire-support": "Attack whoever I'm already attacking.",
+      "tactics-suppressing-fire": "Don't let anyone get in my way.",
+      "tactics-solo": "Handle it your own way.",
+      "tactics-solo-prompt": "How should I pick my targets?",
+      "tactics-solo-tactician": "Neutralize the biggest threats first.",
+      "tactics-solo-predator": "Go for the kills.",
+      "tactics-solo-opportunist": "Play it balanced.",
+      "equipment": "What do you want me carrying?",
+      "equip-slot-use": "My weapon.",
+      "equip-slot-use-1": "My primary weapon.",
+      "equip-slot-use-2": "My secondary weapon.",
+      "equip-slot-armor": "My armor.",
+      "equip-slot-saddle": "My saddle.",
+      "equip-slot-prompt": "What should I equip there?",
+      "equip-slot-current": "Right now I've got the {{item}} equipped there.",
+      "equip-slot-empty": "I don't have anything that would fit there.",
+      "equip-no-ammo": "I can't equip the {{item}}, I don't have any ammo for it."
+    }
+  }
+}
