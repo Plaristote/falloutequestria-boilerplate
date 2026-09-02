@@ -7,12 +7,16 @@ export const StalkingDistances = {
 };
 
 export class CompanionCharacter extends CharacterBehaviour {
+  get party() {
+    return game.playerParty;
+  }
+
   startCompanionship() {
-    game.playerParty.addCharacter(this.model);
+    this.party.addCharacter(this.model);
   }
 
   endCompanionship() {
-    game.playerParty.removeCharacter(this.model);
+    this.party.removeCharacter(this.model);
   }
 
   onPartyJoined() {
@@ -25,20 +29,23 @@ export class CompanionCharacter extends CharacterBehaviour {
     this.model.tasks.removeTask("playerStalking");
   }
 
-  findCombatTarget() {
-    super.findCombatTarget();
-    if (!this.combatTarget) {
-      for (let i = 0 ; i < game.playerParty.list.length ; ++i) {
-        const companion = game.playerParty.list[i];
-        const enemies = companion.fieldOfView.getEnemies();
+  lookForCombatTargetInParty() {
+    for (let i = 0 ; i < this.party.list.length ; ++i) {
+      const companion = this.party.list[i];
+      const enemies = companion.fieldOfView.getEnemies();
 
-        if (enemies.length) {
-          this.combatTarget = enemies[0];
-          return true;
-        }
+      if (enemies.length) {
+        this.combatTarget = enemies[0];
+        return true;
       }
     }
     return false;
+  }
+
+  findCombatTarget() {
+    if (super.findCombatTarget() !== true)
+      return this.lookForCombatTargetInParty();
+    return true;
   }
 
   onDied() {
