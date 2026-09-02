@@ -1,17 +1,30 @@
 import {skillCheck, skillContest} from "../cmap/helpers/checks.mjs";
 
-export class DialogHelper {
-  constructor(dialog) {
-    const levelScript = typeof level !== "undefined" ? level.script : null;
+export function ambianceForNpc(npc) {
+  const levelScript = typeof level !== "undefined" ? level.script : null;
 
+  if (levelScript && levelScript.ambiance) {
+    if (typeof levelScript.ambiance == "function")
+      return levelScript.ambiance(this.dialog.npc);
+    else
+      return levelScript.ambiance;
+  }
+  return "wasteland";
+}
+
+export default class DialogHelper {
+  constructor(dialog) {
     this.dialog = dialog;
-    if (levelScript && levelScript.ambiance)
-      this.dialog.ambiance = level.getScriptObject().ambiance;
+    this.dialog.ambiance = ambianceForNpc(this.dialog.npc);
     //this.updateMood();
   }
 
   get npcScript() {
-    return this.dialog.npc.getScriptObject();
+    return this.dialog.npc.script;
+  }
+
+  tr(name, vars = {}) {
+    return this.dialog.tr(name, vars);
   }
 
   firstMeetingCheck() {

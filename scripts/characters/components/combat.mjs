@@ -13,7 +13,6 @@ export class CombatComponent extends SkillTargetComponent {
     this._combatRunCount = 0;
     this.threatTable = new ThreatTable();
     this.targetSelector = new TargetSelector(this);
-    this.targetAttitude = undefined;
     if (canTrashTalk(model))
       this.trashTalker = new TrashTalkComponent(this);
   }
@@ -30,6 +29,8 @@ export class CombatComponent extends SkillTargetComponent {
       this.companionFighterComponent = undefined;
     }
   }
+
+  get targetAttitude() { return this.model.getVariable("targetAttitude"); }
 
   get moraleImmune() { return false; }
 

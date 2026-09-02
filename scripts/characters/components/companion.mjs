@@ -1,23 +1,27 @@
 import {CharacterBehaviour} from "../character.mjs";
 
 export const StalkingDistances = {
-  "close": 2,
-  "medium": 4,
-  "far": 6
+  "close":  2,
+  "medium": 6,
+  "far":    10
 };
 
 export class CompanionCharacter extends CharacterBehaviour {
   startCompanionship() {
     game.playerParty.addCharacter(this.model);
-    this.model.attacksOnSight = false;
-    this.model.statistics.faction = "player";
-    this.playerStalking();
   }
 
   endCompanionship() {
     game.playerParty.removeCharacter(this.model);
+  }
+
+  onPartyJoined() {
+    this.model.attacksOnSight = false;
+    this.playerStalking();
+  }
+
+  onPartyLeft() {
     this.model.attacksOnSight = true;
-    this.model.statistics.faction = this.fallbackFaction || "";
     this.model.tasks.removeTask("playerStalking");
   }
 
