@@ -25,7 +25,7 @@ export class CharacterBehaviour extends SceneActorComponent {
     if (value > 0)
       this.model.setVariable("spell-casted", value);
     else
-      this.model.removeVariable("spell-casted");
+      this.model.unsetVariable("spell-casted");
   }
 
   delayedRemoval(delay = 2500) {
@@ -57,6 +57,8 @@ export class CharacterBehaviour extends SceneActorComponent {
         if (this.canTalk())
           interactions.unshift("talk-to");
       }
+      if (game.player.statistics.race == "unicorn")
+        interactions.push("use-spell");
       return interactions;
     }
     return ["use", "look"];
