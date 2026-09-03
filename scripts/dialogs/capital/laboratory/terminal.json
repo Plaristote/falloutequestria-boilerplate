@@ -436,6 +436,7 @@
                 "computer-room-back-to-logs",
                 "leave-terminal"
             ],
+            "hook": "learnedAboutLog101",
             "text": "scientist-room/log-entries/101"
         },
         "scientist-room/log-entries/113": {
@@ -443,6 +444,7 @@
                 "computer-room-back-to-logs",
                 "leave-terminal"
             ],
+            "hook": "learnedAboutLog113",
             "text": "scientist-room/log-entries/113"
         },
         "scientist-room/log-entries/14": {
@@ -450,6 +452,7 @@
                 "scientist-back-to-logs",
                 "leave-terminal"
             ],
+            "hook": "learnedAboutLog14",
             "text": "scientist-room/log-entries/14"
         },
         "scientist-room/log-entries/47": {

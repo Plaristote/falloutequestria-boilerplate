@@ -1,0 +1,11 @@
+{
+  "quests": {
+    "unhaus/investigateUnhaus": {
+      "title": "Caravaniers disparus",
+      "description": "Deux des caravaniers de Narbie Fargo ont disparus lors d'une halte à Inhaus, une petite ville sur la route de commerce vers le Sud. Des poneys disparaissent souvent dans les terres désolées, mais Fargo a une mauvaise intuition. Trouve ce qui s'est vraiment passé.",
+      "desc-solved": "Tu as découert le pot aux roses : Inhaus abrite une colonie de changelins, des créatures capables de prendre l'apparence d'autres poneys. Cela pourrait expliquer la disparition de quelques poneys par-ci par-la.",
+      "find-hive": "Trouve ce qui est arrivé aux caravaniers"
+    }
+  }
+}
+

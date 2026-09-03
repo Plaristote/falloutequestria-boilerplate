@@ -36,6 +36,11 @@
             "state": "about-celestial-device-answer",
             "text": "ask-about-celestial-device"
         },
+        "ask-about-ghoul-hunt-aftermath": {
+            "availableHook": "hasPendingExpeditionDebrief",
+            "state": "expedition-debrief",
+            "text": "ask-about-ghoul-hunt-aftermath"
+        },
         "ask-join-caravan": {
             "availableHook": "canJoinCaravan",
             "hook": "onJoinCaravan",
@@ -63,14 +68,60 @@
         "expedition-cancel": {
             "text": "expedition-cancel"
         },
+        "expedition-camp": {
+            "hook": "campBeforeContinuing",
+            "text": "expedition-camp"
+        },
+        "expedition-continue": {
+            "hook": "continueExpedition",
+            "text": "expedition-continue"
+        },
+        "expedition-debrief-generic": {
+            "state": "expedition-debrief-noticed",
+            "text": "expedition-debrief-generic"
+        },
+        "expedition-debrief-perception": {
+            "availableHook": "canNoticeGhoulsFledFromShadowPony",
+            "state": "expedition-debrief-confirmed",
+            "text": "expedition-debrief-perception"
+        },
+        "expedition-in-progress-exit": {
+            "text": "expedition-in-progress-exit"
+        },
+        "expedition-threat-resolved-exit": {
+            "text": "expedition-threat-resolved-exit"
+        },
+        "expedition-retreat": {
+            "availableHook": "canRetreatFromExpedition",
+            "hook": "retreatFromExpedition",
+            "text": "expedition-retreat"
+        },
         "expedition-start": {
+            "availableHook": "canStartExpeditionToday",
             "hook": "startExpedition",
             "text": "expedition-start"
+        },
+        "explain-shadow-pony-origin": {
+            "availableHook": "canExplainShadowPonyOrigin",
+            "hook": "explainShadowPonyOrigin",
+            "state": "expedition-threat-explained",
+            "text": "explain-shadow-pony-origin"
+        },
+        "reassure-laurie-source-destroyed": {
+            "availableHook": "canReassureLaurieSourceDestroyed",
+            "hook": "reassureLaurieSourceDestroyed",
+            "state": "expedition-source-destroyed",
+            "text": "reassure-laurie-source-destroyed"
         },
         "talk-about-thornhoof-caravan": {
             "availableHook": "thornhoofCaravanCanBringUp",
             "state": "thornhoof-caravan/entry",
             "text": "talk-about-thornhoof-caravan"
+        },
+        "tell-laurie-ghoul-threat-resolved": {
+            "availableHook": "canReportGhoulThreatResolved",
+            "state": "expedition-threat-resolved",
+            "text": "tell-laurie-ghoul-threat-resolved"
         },
         "thornhoof-1-plea-for-help": {
             "state": "thornhoof-caravan/pleaded",
@@ -197,16 +248,13 @@
                 "ask-join-expedition",
                 "ask-about-celestial-device",
                 "ask-about-arm-module",
+                "ask-about-ghoul-hunt-aftermath",
+                "tell-laurie-ghoul-threat-resolved",
                 "about-caravan",
                 "about-joining",
                 "entry-exit"
             ],
             "text": "entry"
-        },
-        "expedition-later": {
-            "answers": [
-            ],
-            "text": "expedition-later"
         },
         "join-caravan": {
             "answers": [
@@ -221,7 +269,90 @@
                 "expedition-start",
                 "expedition-cancel"
             ],
+            "hook": "onEnterJoinExpedition",
             "text": "join-expedition"
+        },
+        "expedition-debrief": {
+            "answers": [
+                "expedition-debrief-perception",
+                "expedition-debrief-generic"
+            ],
+            "mood": "dubious",
+            "text": "expedition-debrief"
+        },
+        "expedition-debrief-confirmed": {
+            "answers": [
+            ],
+            "hook": "startGhoulExpeditionQuestForReal",
+            "mood": "dubious",
+            "text": "expedition-debrief-confirmed"
+        },
+        "expedition-debrief-noticed": {
+            "answers": [
+            ],
+            "hook": "startGhoulExpeditionQuestForReal",
+            "mood": "dubious",
+            "text": "expedition-debrief-noticed"
+        },
+        "expedition-in-progress": {
+            "answers": [
+                "expedition-continue",
+                "expedition-camp",
+                "expedition-retreat",
+                "expedition-in-progress-exit"
+            ],
+            "hook": "onEnterExpeditionInProgress",
+            "mood": "dubious",
+            "text": "expedition-in-progress"
+        },
+        "expedition-ranaway": {
+            "answers": [
+            ],
+            "text": "expedition-ranaway"
+        },
+        "expedition-ranawayReward": {
+            "answers": [
+            ],
+            "text": "expedition-ranawayReward"
+        },
+        "expedition-reward": {
+            "answers": [
+            ],
+            "hook": "giveExpeditionReward",
+            "mood": "smile",
+            "text": "expedition-reward"
+        },
+        "expedition-threat-explained": {
+            "answers": [
+                "reassure-laurie-source-destroyed",
+                "expedition-threat-resolved-exit"
+            ],
+            "mood": "dubious",
+            "text": "expedition-threat-explained"
+        },
+        "expedition-threat-resolved": {
+            "answers": [
+                "explain-shadow-pony-origin",
+                "reassure-laurie-source-destroyed",
+                "expedition-threat-resolved-exit"
+            ],
+            "hook": "onReportGhoulThreatResolved",
+            "mood": "smile",
+            "text": "expedition-threat-resolved"
+        },
+        "expedition-source-destroyed": {
+            "answers": [
+                "explain-shadow-pony-origin",
+                "expedition-threat-resolved-exit"
+            ],
+            "mood": "smile",
+            "text": "expedition-source-destroyed"
+        },
+        "expedition-wipedout": {
+            "answers": [
+            ],
+            "mood": "sad",
+            "text": "expedition-wipedout"
         },
         "ranaway": {
             "answers": [

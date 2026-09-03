@@ -1,0 +1,21 @@
+{
+  "quests": {
+    "cristal-den/ghoulExpedition": {
+      "title": "Something in the Dark",
+      "description": "The ghouls roaming the desert near the capital ruins aren't just wandering, they're fleeing something. Whatever's chasing them out of the ruins needs to be found, and dealt with.",
+      "desc-foundClues": "You found information on the origins of the creature, called a Shadow Pony. They were created in the Umbridge Lab, from remains of King Sombra.",
+      "desc-killedEntity": "You destroyed the source of the corruption, ensuring that Shadow Ponies would never be made again.",
+      "desc-solved": "Whatever was driving the ghouls out of the capital ruins has been dealt with. The desert road should be a little safer for it.",
+      "killCount": "Neutralized monsters:",
+      "findClues": "Information:",
+      "report-to-laurie": "Talk to Laurie",
+      "bubbles": {
+        "encounter-line": "Contact! Eyes up, get ready!",
+        "shadow-pony-line": "Holy Celestia, what the buck is THAT?!"
+      },
+      "messages": {
+        "expedition-completed": "The expedition made it back to Cristal Den, you earned {{xp}} experience."
+      }
+    }
+  }
+}

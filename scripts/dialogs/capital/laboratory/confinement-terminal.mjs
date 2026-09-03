@@ -1,4 +1,4 @@
-import {requireQuest} from "../../../quests/helpers.mjs";
+import {requireQuest, QuestFlags} from "../../../quests/helpers.mjs";
 
 class Dialog {
   constructor(dialog) {
@@ -43,7 +43,11 @@ class Dialog {
   }
 
   bigRevealIndex() {
+    const firstReveal = !this.calledOut;
+
     this.calledOut = true;
+    if (firstReveal)
+      requireQuest("cristal-den/ghoulExpedition", QuestFlags.HiddenQuest).script.findClue("sombra-identity");
     switch (this.dialog.previousAnswer) {
     case "ask-who-is-that":  this.canJokeAboutAge       = true; break ;
     case "ask-how-got-here": this.knowsHowEntityGotHere = true; break ;

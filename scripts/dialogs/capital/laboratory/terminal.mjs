@@ -1,4 +1,5 @@
 import {skillCheck} from "../../../cmap/helpers/checks.mjs";
+import {requireQuest, QuestFlags} from "../../../quests/helpers.mjs";
 
 class Dialog {
   constructor(dialog) {
@@ -74,9 +75,16 @@ class Dialog {
     return game.quests.getQuest("celestialDevice").hasObjective("find-arm-module");
   }
 
-  learnedAboutLog47() { this.learnedAboutLogs(47); }
-  learnedAboutLog65() { this.learnedAboutLogs(65); }
-  learnedAboutLog93() { this.learnedAboutLogs(93); }
+  learnedAboutLog47() { this.learnedAboutLogs(47); this.registerShadowPonyClue(47); }
+  learnedAboutLog65() { this.learnedAboutLogs(65); this.registerShadowPonyClue(65); }
+  learnedAboutLog93() { this.learnedAboutLogs(93); this.registerShadowPonyClue(93); }
+  learnedAboutLog14()  { this.registerShadowPonyClue(14); }
+  learnedAboutLog101() { this.registerShadowPonyClue(101); }
+  learnedAboutLog113() { this.registerShadowPonyClue(113); }
+
+  registerShadowPonyClue(clueId) {
+    requireQuest("cristal-den/ghoulExpedition", QuestFlags.HiddenQuest).script.findClue(clueId);
+  }
 
   learnedAboutLogs(id) {
     let logsSeen = JSON.parse(game.getVariable("readOmbrageLogs", "[]"));

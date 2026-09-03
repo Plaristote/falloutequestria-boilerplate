@@ -4,4 +4,10 @@ export class CaravanLeader extends CharacterBehaviour {
   constructor(model) {
     super(model);
   }
+
+  startGhoulHunterExpedition() {
+    game.script.ghoulHunterExpedition.startExpedition(
+      game.worldmap.getCurrentCity().name
+    );
+  }
 }

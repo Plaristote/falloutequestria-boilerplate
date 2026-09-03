@@ -1,0 +1,21 @@
+{
+  "quests": {
+    "cristal-den/ghoulExpedition": {
+      "title": "Tapis dans la pénombre",
+      "description": "Les goules férales qui rôdent autour de la capitale ne sont pas juste en train de rôder, elles fuient quelque chose. Quelque soit les créatures qui les chassent hors des ruines, elles doivent être éliminées.",
+      "desc-foundClues": "Tu as trouvé des informations sur l'origine des créatures, appelées Poneys des Ombres, et crées dans le laboratoire Ombrage à partir des restes du Roi Sombra.",
+      "desc-killedEntity": "Tu as détruit la source de la corruption, assurant que de telles créatures n'apparaîtraient plus jamais.",
+      "desc-solved": "Les monstres qui terrifiaient les goules hors de la capitale ont été neutralisés. Les routes du désert seront un peu plus sûres grâce à ça.",
+      "killCount": "Monstres neutralisés :",
+      "findClues": "Informations :",
+      "report-to-laurie": "Parler à Laurie",
+      "bubbles": {
+        "encounter-line": "Les voilà ! Branle bas de combat !",
+        "shadow-pony-line": "Celestia, putain mais c'est QUOI ça ?"
+      },
+      "messages": {
+        "expedition-completed": "L'expédition est retournée au Havre Cristallin avec succès, tu as gagné {{xp}} points d'experience."
+      }
+    }
+  }
+}

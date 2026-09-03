@@ -296,9 +296,9 @@ export default class CaravanProcess {
     const parties = generateHostileEncounter();
 
     game.randomEncounters.startEncounter(generateEncounterLevel(), {
-      "title": "caravan-attack",
-      "parties": parties,
-      "callback": () => {
+      title: "caravan-attack",
+      parties: parties,
+      callback: () => {
         level.insertPartyIntoZone(this.party, "encounter-zone-2");
         loadCaravansIntoLevel(this.caravanCount);
       }

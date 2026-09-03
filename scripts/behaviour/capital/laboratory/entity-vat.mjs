@@ -1,3 +1,5 @@
+import {requireQuest, QuestFlags} from "../../../quests/helpers.mjs";
+
 export class EntityVat {
   constructor(model) {
     this.model = model;
@@ -34,5 +36,6 @@ export class EntityVat {
     game.player.statistics.addExperience(150);
     this.model.setAnimation("vat-computer-destroyed-right");
     this.destroyed = true;
+    requireQuest("cristal-den/ghoulExpedition", QuestFlags.HiddenQuest).script.onEntityKilled();
   }
 }

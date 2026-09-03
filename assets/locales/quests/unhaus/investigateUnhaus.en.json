@@ -1,0 +1,10 @@
+{
+  "quests": {
+    "unhaus/investigateUnhaus": {
+      "title": "Missing Caravaneers",
+      "description": "A couple of Narbie Fargo's caravaneers vanished during a stopover in Unhaus, a small waystation town on one of the trade roads. Ponies go missing in the wasteland all the time, but Fargo is convinced there's more to this one. Find out what really happened.",
+      "desc-solved": "You found out the truth: Unhaus hides a colony of changelings, creatures able to take the shape of a pony. That would certainly explain a disappearance or two.",
+      "find-hive": "Find out what happened to the missing caravaneers"
+    }
+  }
+}
