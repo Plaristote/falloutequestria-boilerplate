@@ -57,15 +57,16 @@ export default class PlasmaRifle extends Rifle {
   }
 
   attemptToUseAt(x, y) {
-    if (this.model.ammo <= 0) {
-      this.onOutOfAmmo();
-    } else {
-      this.model.ammo -= 1;
-      if (this.user.useActionPoints(this.getActionPointCost()))
+    if (this.user.useActionPoints(this.getActionPointCost())) {
+      if (this.model.ammo <= 0) {
+        this.onOutOfAmmo();
+      } else {
+        this.model.ammo -= 1;
         return this.triggerUseAt(x, y);
-      else
-        this.logFailure(i18n.t("messages.not-enough-ap"));
+      }
     }
+    else
+      this.logFailure(i18n.t("messages.not-enough-ap"));
     return false;
   }
 
