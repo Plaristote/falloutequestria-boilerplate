@@ -116,6 +116,10 @@ class Dialog extends DialogHelper {
     return this.dialog.previousAnswer !== "answer-ask-why-help";
   }
 
+  canRejectMoney() {
+    return this.dialog.previousAnswer === "answer-ask-why-help";
+  }
+
   canAskAboutMayor() {
     return this.dialog.previousAnswer !== "ask-about-mayor" && game.hasVariable("metUnhausMayor");
   }
@@ -171,6 +175,7 @@ class Dialog extends DialogHelper {
       return { textKey: "about-changeling-kills" };
     case "ask-about-mines":
       return { textKey: "about-slavery" };
+    case "ideal-surrender":
     case "meeting-as-enemy-surrender":
       return { textKey: "on-meeting-surrender" };
     case "meeting-as-enemy-argue":

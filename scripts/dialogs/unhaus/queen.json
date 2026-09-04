@@ -28,7 +28,7 @@
             "text": "answer-meeting-listen"
         },
         "answer-reject-money": {
-            "availableHook": "disabled",
+            "availableHook": "canRejectMoney",
             "state": "on-reject-money",
             "text": "answer-reject-money"
         },
@@ -77,6 +77,30 @@
             "availableHook": "canReportAboutMission",
             "hook": "nextReportState",
             "text": "give-report"
+        },
+        "ideal-no-answer": {
+            "state": "on-ideal-no-answer",
+            "text": "ideal-no-answer"
+        },
+        "ideal-protect-weak": {
+            "state": "on-ideal-protect-weak",
+            "text": "ideal-protect-weak"
+        },
+        "ideal-protect-weak-fight": {
+            "state": "start-fight",
+            "text": "ideal-protect-weak-fight"
+        },
+        "ideal-surrender": {
+            "state": "prompt",
+            "text": "ideal-surrender"
+        },
+        "ideal-survival": {
+            "state": "on-ideal-survival",
+            "text": "ideal-survival"
+        },
+        "ideal-survivor-fight": {
+            "state": "start-fight",
+            "text": "ideal-survivor-fight"
         },
         "meeting-as-enemy-argue": {
             "state": "prompt",
@@ -167,8 +191,31 @@
             "mood": "angry",
             "text": "meeting-as-enemy"
         },
+        "on-ideal-no-answer": {
+            "answers": [
+            ],
+            "hook": "startFight",
+            "text": "on-ideal-no-answer"
+        },
+        "on-ideal-protect-weak": {
+            "answers": [
+                "ideal-protect-weak-fight",
+                "ideal-surrender"
+            ],
+            "text": "on-ideal-protect-weak"
+        },
+        "on-ideal-survival": {
+            "answers": [
+                "ideal-survivor-fight",
+                "ideal-surrender"
+            ],
+            "text": "on-ideal-survival"
+        },
         "on-reject-money": {
             "answers": [
+                "ideal-protect-weak",
+                "ideal-survival",
+                "ideal-no-answer"
             ],
             "text": "on-reject-money"
         },
