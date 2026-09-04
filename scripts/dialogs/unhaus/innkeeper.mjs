@@ -18,6 +18,12 @@ export default class extends Innkeeper {
     return level.findObject("backtrack") != null;
   }
 
+  canRent(type) {
+    if (this.roomsAreNowFree && type === "night")
+      return true;
+    return super.canRent(type);
+  }
+
   pickRandomRoom() {
     if (this.backtrackRentingRoom)
       return 2;

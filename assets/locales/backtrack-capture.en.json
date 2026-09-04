@@ -1,0 +1,10 @@
+{
+  "scenes": {
+    "backtrack-capture": {
+       "backtrack-reaction": "Wait... this was a trap ? You lead me right into their trap !",
+       "custody-1": "That's far enough. This one belongs to the hive now.",
+       "custody-2": "Stand aside, outsider. This doesn't concern you anymore. Unless you'd like it to.",
+       "escort": "Move him out."
+      }
+  }
+}

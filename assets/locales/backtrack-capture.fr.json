@@ -1,0 +1,10 @@
+{
+  "scenes": {
+    "backtrack-capture": {
+       "backtrack-reaction": "Attends... c'était un piège ? Tu m'as amené dans un piège ?",
+       "custody-1": "Halte. Celui-ci appartient à la colonie, désormais.",
+       "custody-2": "Écarte-toi, collaborateur. Cela ne te concerne plus. À moins que tu ne sois pas d'accord ?",
+       "escort": "Amenez-le en cellule."
+      }
+  }
+}

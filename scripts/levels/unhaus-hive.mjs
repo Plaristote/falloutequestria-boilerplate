@@ -52,7 +52,7 @@ export default class extends LevelBase {
   }
 
   onZoneExited(zoneName, character) {
-    if (this.playerShouldStayInJail && character === game.player && zoneName === "jail-cell-3")
+    if (this.playerShouldStayInJail && character === game.player && zoneName === "jail-cell-3" && !level.hasVariable("guardSentPlayerToQueen"))
       game.diplomacy.setAsEnemy(true, "player", "changeling-hive");
   }
 
