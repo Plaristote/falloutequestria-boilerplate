@@ -1,0 +1,316 @@
+{
+    "answers": {
+        "about-after-war": {
+            "state": "about-self/about-after-war-answer",
+            "text": "about-after-war"
+        },
+        "about-welcome-exit": {
+            "text": "about-welcome-exit"
+        },
+        "ask-about-before-war": {
+            "state": "about-self/about-before-war",
+            "text": "ask-about-before-war"
+        },
+        "ask-about-broken-lens": {
+            "state": "about-town/broken-lens/intro",
+            "text": "ask-about-broken-lens"
+        },
+        "ask-about-current-occupation": {
+            "state": "about-self/about-current-occupation",
+            "text": "ask-about-current-occupation"
+        },
+        "ask-about-dangers": {
+            "state": "about-self/about-dangers",
+            "text": "ask-about-dangers"
+        },
+        "ask-about-feral-ghoul-2": {
+            "state": "about-self/about-feralization",
+            "text": "ask-about-feral-ghoul-2"
+        },
+        "ask-about-feral-ghouls": {
+            "text": "ask-about-feral-ghouls"
+        },
+        "ask-about-ghouls": {
+            "state": "about-self/about-ghouls",
+            "text": "ask-about-ghouls"
+        },
+        "ask-about-self": {
+            "state": "about-self/intro",
+            "text": "ask-about-self"
+        },
+        "ask-about-weapon-skills": {
+            "availableHook": "canAskAboutWeaponSkills",
+            "state": "about-self/about-weapon-skills",
+            "text": "ask-about-weapon-skills"
+        },
+        "ask-about-welcome": {
+            "state": "about-welcome",
+            "text": "ask-about-welcome"
+        },
+        "ask-mecenary-join": {
+            "availableHook": "canAskToJoin",
+            "hook": "askToJoin",
+            "state": "mercenary-job/lack-reputation",
+            "text": "ask-mecenary-join"
+        },
+        "ask-mercenary-name": {
+            "availableHook": "canAskMercenaryName",
+            "hook": "onAskMercenaryName",
+            "state": "about-self/drink-offered-name",
+            "text": "ask-mercenary-name"
+        },
+        "ask-more-politeness": {
+            "state": "about-welcome-2",
+            "text": "ask-more-politeness"
+        },
+        "entry-exit": {
+            "text": "entry-exit"
+        },
+        "mercenary-job-convince": {
+            "availableHook": "canConvinceMercenaryForFree",
+            "state": "mercenary-job/convince-accept",
+            "text": "mercenary-job-convince"
+        },
+        "mercenary-job-decline": {
+            "text": "mercenary-job-decline"
+        },
+        "mercenary-job-negotiate": {
+            "availableHook": "canNegotiateMercenaryPrice",
+            "hook": "negotiateMercenaryPrice",
+            "state": "mercenary-job/negotiate-refuse",
+            "text": "mercenary-job-negotiate"
+        },
+        "mercenary-job-pay-full": {
+            "availableHook": "canPayMercenaryFullPrice",
+            "hook": "payMercenaryFullPrice",
+            "state": "mercenary-job/accept",
+            "text": "mercenary-job-pay-full"
+        },
+        "mercenary-lack-reputation-leave": {
+            "text": "mercenary-lack-reputation-leave"
+        },
+        "no-more-questions": {
+            "text": "no-more-questions"
+        },
+        "offer-a-drink": {
+            "availableHook": "canBuyDrink",
+            "state": "about-self/drink-offered",
+            "text": "offer-a-drink"
+        },
+        "offer-a-drink-2": {
+            "availableHook": "canBuyDrink",
+            "state": "about-self/drink-offered",
+            "text": "offer-a-drink-2"
+        },
+        "offer-more-drink": {
+            "availableHook": "canBuyDrink",
+            "state": "about-self/drink-offered",
+            "text": "offer-more-drink"
+        },
+        "offer-more-drink-refuse": {
+            "text": "offer-more-drink-refuse"
+        },
+        "talk-about-something-else": {
+            "state": "about-self/prompt-more-questions",
+            "text": "talk-about-something-else"
+        },
+        "tell-about-fell-shadow-knights": {
+            "availableHook": "canClaimShadowKnightsFell",
+            "state": "about-self/about-fell-shadow-knights",
+            "text": "tell-about-fell-shadow-knights"
+        }
+    },
+    "entryPoint": "entry",
+    "states": {
+        "about-self/about-after-war-answer": {
+            "answers": [
+                "ask-mecenary-join",
+                "talk-about-something-else"
+            ],
+            "hook": "tellAboutMercenaryPast",
+            "mood": "neutral",
+            "text": "about-self/about-after-war-answer"
+        },
+        "about-self/about-before-war": {
+            "answers": [
+                "talk-about-something-else"
+            ],
+            "mood": "smile",
+            "text": "about-self/about-before-war"
+        },
+        "about-self/about-current-occupation": {
+            "answers": [
+                "ask-about-dangers",
+                "ask-about-weapon-skills",
+                "talk-about-something-else"
+            ],
+            "mood": "cocky",
+            "text": "about-self/about-current-occupation"
+        },
+        "about-self/about-dangers": {
+            "answers": [
+                "tell-about-fell-shadow-knights",
+                "talk-about-something-else"
+            ],
+            "mood": "neutral",
+            "text": "about-self/about-dangers"
+        },
+        "about-self/about-fell-shadow-knights": {
+            "answers": [
+                "talk-about-something-else"
+            ],
+            "hook": "toldAboutFellShadowNight",
+            "mood": "smile",
+            "text": "about-self/about-fell-shadow-knights"
+        },
+        "about-self/about-feral-ghouls": {
+            "answers": [
+                "ask-about-feral-ghoul-2",
+                "talk-about-something-else"
+            ],
+            "mood": "cocky",
+            "text": "about-self/about-feral-ghouls"
+        },
+        "about-self/about-feralization": {
+            "answers": [
+                "talk-about-something-else"
+            ],
+            "mood": "angry",
+            "text": "about-self/about-feralization"
+        },
+        "about-self/about-ghouls": {
+            "answers": [
+                "ask-about-feral-ghouls",
+                "ask-about-before-war"
+            ],
+            "mood": "angry",
+            "text": "about-self/about-ghouls"
+        },
+        "about-self/about-weapon-skills": {
+            "answers": [
+                "about-after-war",
+                "ask-about-before-war",
+                "talk-about-something-else"
+            ],
+            "mood": "smile",
+            "text": "about-self/about-weapon-skills"
+        },
+        "about-self/drink-offered": {
+            "answers": [
+                "ask-about-current-occupation",
+                "ask-about-ghouls",
+                "ask-mercenary-name",
+                "no-more-questions"
+            ],
+            "hook": "buyDrink",
+            "mood": "cocky",
+            "text": "about-self/drink-offered"
+        },
+        "about-self/drink-offered-name": {
+            "answers": [
+                "ask-about-current-occupation",
+                "ask-about-ghouls",
+                "no-more-questions"
+            ],
+            "mood": "dubious",
+            "text": "about-self/drink-offered-name"
+        },
+        "about-self/intro": {
+            "answers": [
+                "ask-about-broken-lens",
+                "offer-a-drink-2",
+                "about-welcome-exit"
+            ],
+            "mood": "angry",
+            "text": "about-self/intro"
+        },
+        "about-self/prompt-more-questions": {
+            "answers": [
+                "offer-more-drink",
+                "offer-more-drink-refuse"
+            ],
+            "mood": "smile",
+            "text": "about-self/prompt-more-questions"
+        },
+        "about-town/broken-lens/intro": {
+            "answers": [
+                "about-welcome-exit"
+            ],
+            "mood": "cocky",
+            "text": "about-town/broken-lens/intro"
+        },
+        "about-welcome": {
+            "answers": [
+                "ask-more-politeness",
+                "offer-a-drink",
+                "about-welcome-exit"
+            ],
+            "mood": "cocky",
+            "text": "about-welcome"
+        },
+        "about-welcome-2": {
+            "answers": [
+                "about-welcome-exit"
+            ],
+            "mood": "laugh",
+            "text": "about-welcome-2"
+        },
+        "entry": {
+            "answers": [
+                "ask-mecenary-join",
+                "ask-about-welcome",
+                "ask-about-self",
+                "entry-exit"
+            ],
+            "mood": "angry",
+            "text": "entry"
+        },
+        "mercenary-job/accept": {
+            "answers": [
+            ],
+            "hook": "startMercenaryCompanionship",
+            "mood": "smile",
+            "text": "mercenary-job/accept"
+        },
+        "mercenary-job/convince-accept": {
+            "answers": [
+            ],
+            "hook": "startMercenaryCompanionship",
+            "mood": "smile",
+            "text": "mercenary-job/convince-accept"
+        },
+        "mercenary-job/intro": {
+            "answers": [
+                "mercenary-job-pay-full",
+                "mercenary-job-negotiate",
+                "mercenary-job-convince",
+                "mercenary-job-decline"
+            ],
+            "mood": "cocky",
+            "text": "mercenary-job/intro"
+        },
+        "mercenary-job/lack-reputation": {
+            "answers": [
+                "mercenary-lack-reputation-leave"
+            ],
+            "mood": "angry",
+            "text": "mercenary-job/lack-reputation"
+        },
+        "mercenary-job/negotiate-accept": {
+            "answers": [
+            ],
+            "hook": "startMercenaryCompanionship",
+            "mood": "smile",
+            "text": "mercenary-job/negotiate-accept"
+        },
+        "mercenary-job/negotiate-refuse": {
+            "answers": [
+                "mercenary-job-pay-full",
+                "mercenary-job-convince",
+                "mercenary-job-decline"
+            ],
+            "mood": "angry",
+            "text": "mercenary-job/negotiate-refuse"
+        }
+    }
+}

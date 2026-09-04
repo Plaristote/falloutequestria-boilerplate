@@ -183,7 +183,6 @@ class Dialog {
   }
 
   startCompanionship() {
-    game.playerParty.addCharacter(this.dialog.npc);
     level.addTextBubble(this.dialog.npc, this.dialog.t("on-start-companionship"), 3500, "green");
     this.dialog.npc.setScript("companions/sheriff.mjs");
     this.dialog.npc.script.startCompanionship();
