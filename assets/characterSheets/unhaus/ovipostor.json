@@ -35,10 +35,10 @@
     "cha": 5,
     "end": 5,
     "eye-color": [
-        0,
-        0,
-        0,
-        0
+        221,
+        203,
+        41,
+        195
     ],
     "face-accessories": [
     ],
@@ -48,7 +48,7 @@
         0,
         0
     ],
-    "face-theme": "",
+    "face-theme": "changeling",
     "faction": "changeling-hive",
     "gender": "male",
     "hair-color": [

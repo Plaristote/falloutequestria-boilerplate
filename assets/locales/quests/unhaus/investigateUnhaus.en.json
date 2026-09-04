@@ -1,10 +1,12 @@
 {
   "quests": {
     "unhaus/investigateUnhaus": {
-      "title": "Missing Caravaneers",
-      "description": "A couple of Narbie Fargo's caravaneers vanished during a stopover in Unhaus, a small waystation town on one of the trade roads. Ponies go missing in the wasteland all the time, but Fargo is convinced there's more to this one. Find out what really happened.",
+      "title": "The Missing Ponies of Unhaus",
+      "description": "Something is happening in the town of Unhaus. You've been asked to investigate.",
+      "desc-backtrack-gave-quest": "The daughter of Backtrack disappeared in Unhaus. He's been staying there ever since, looking for her, and is getting desperate. He's asked for you to help him find her.",
+      "desc-fargo-gave-quest": "A couple of Narbie Fargo's caravaneers vanished during a stopover in Unhaus, a small waystation town on one of the trade roads. Ponies go missing in the wasteland all the time, but Fargo is convinced there's more to this one. Find out what really happened.",
       "desc-solved": "You found out the truth: Unhaus hides a colony of changelings, creatures able to take the shape of a pony. That would certainly explain a disappearance or two.",
-      "find-hive": "Find out what happened to the missing caravaneers"
+      "find-hive": "Find out what's going on in Unhaus"
     }
   }
 }

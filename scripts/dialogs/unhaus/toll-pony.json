@@ -37,7 +37,7 @@
             "text": "leave-prompt"
         },
         "meeting-ans-quest": {
-            "availableHook": "knowsAboutInsectPony",
+            "availableHook": "lookingIntoRumors",
             "state": "meeting-quest",
             "text": "meeting-ans-quest"
         },
@@ -49,7 +49,12 @@
             "state": "prompt",
             "text": "meeting-ans-visiting"
         },
+        "meeting-quest-ans-caravaneers": {
+            "availableHook": "knowsAboutDisappearedCaravaneers",
+            "text": "meeting-quest-ans-caravaneers"
+        },
         "meeting-quest-ans-insects": {
+            "availableHook": "knowsAboutInsectPony",
             "state": "prompt",
             "text": "meeting-quest-ans-insects"
         },
@@ -102,10 +107,21 @@
         "meeting-quest": {
             "answers": [
                 "meeting-quest-ans-secret",
+                "meeting-quest-ans-caravaneers",
                 "meeting-quest-ans-insects"
             ],
             "mood": "smile",
             "text": "meeting-quest"
+        },
+        "meeting-quest-caravaneers": {
+            "answers": [
+            ],
+            "text": "meeting-quest-caravaneers"
+        },
+        "meeting-quest-secrecy": {
+            "answers": [
+            ],
+            "text": "meeting-quest-secrecy"
         },
         "prompt": {
             "answers": [

@@ -7,8 +7,10 @@ export default class extends DialogHelper {
 
   getEntryPoint() {
     game.setVariable("metUnhausMayor", 1);
-    if (this.firstMeetingCheck())
+    if (this.firstMeetingCheck()) {
+      level.setVariable("guestRoomIsFree", 1);
       return "meeting";
+    }
   }
 
   aboutInsect() {
@@ -55,17 +57,17 @@ export default class extends DialogHelper {
     return this.dialog.previousAnswer != "ask-about-insects" && this.knowsAboutInsectPony();
   }
 
-  get canPressAboutInsectPony() {
+  canPressAboutInsectPony() {
     const stats = game.player.statistics;
     return this.dialog.previousAnswer == "ask-about-insects" &&
       (stats.intelligence >= 8 || stats.outdoorsman > 58);
   }
 
-  get canPressUsingMagic() {
+  canPressUsingMagic() {
     return game.player.statistics.spellcasting > 60;
   }
 
-  get canPressUsingSpeech() {
+  canPressUsingSpeech() {
     return game.player.statistics.speech > 70;
   }
 }

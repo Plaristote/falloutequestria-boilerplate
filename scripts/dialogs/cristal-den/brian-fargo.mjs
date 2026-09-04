@@ -98,8 +98,11 @@ class Dialog {
   }
 
   acceptInvestigateUnhausQuest() {
-    if (!game.quests.getQuest("unhaus/investigateUnhaus"))
-      game.quests.addQuest("unhaus/investigateUnhaus");
+    let quest = game.quests.getQuest("unhaus/investigateUnhaus");
+
+    if (!quest)
+      quest = game.quests.addQuest("unhaus/investigateUnhaus");
+    quest.script.onFargoGaveQuest();
   }
 
   convinceFargoChangelingsTest() {

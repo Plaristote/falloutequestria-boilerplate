@@ -1,0 +1,153 @@
+{
+    "answers": {
+        "ask-about-poneva": {
+            "state": "prompt",
+            "text": "ask-about-poneva"
+        },
+        "ask-about-suspicious": {
+            "state": "prompt",
+            "text": "ask-about-suspicious"
+        },
+        "ask-if-ran-away": {
+            "availableHook": "canAskIfRanAway",
+            "state": "prompt",
+            "text": "ask-if-ran-away"
+        },
+        "attempt-lead-to-trap": {
+            "availableHook": "canAttemptLeadToTrap",
+            "state": "reveal-clue/ask",
+            "text": "attempt-lead-to-trap"
+        },
+        "convince-backtrack": {
+            "state": "lead-to-trap/convince",
+            "text": "convince-backtrack"
+        },
+        "exit-backtrack": {
+            "text": "exit-backtrack"
+        },
+        "help-backtrack/accept": {
+            "availableHook": "canOfferHelpBacktrack",
+            "state": "help-backtrack/accepted",
+            "text": "help-backtrack/accept"
+        },
+        "help-backtrack/decline": {
+            "availableHook": "canOfferHelpBacktrack",
+            "state": "prompt",
+            "text": "help-backtrack/decline"
+        },
+        "hive-ally/agree": {
+            "availableHook": "canJoinBacktrackFight",
+            "state": "hive-ally/prompt",
+            "text": "hive-ally/agree"
+        },
+        "hive-ally/caution": {
+            "availableHook": "canJoinBacktrackFight",
+            "state": "hive-ally/prompt",
+            "text": "hive-ally/caution"
+        },
+        "hive-ally/exit": {
+            "hook": "leaveBacktrackDialogue",
+            "text": "hive-ally/exit"
+        },
+        "lead-to-trap": {
+            "availableHook": "canLeadToTrap",
+            "state": "lead-to-trap/doubt",
+            "text": "lead-to-trap"
+        },
+        "reveal-clue/nevermind": {
+            "state": "prompt",
+            "text": "reveal-clue/nevermind"
+        },
+        "reveal-hive": {
+            "availableHook": "canRevealHive",
+            "state": "reveal-hive/accepted",
+            "text": "reveal-hive"
+        },
+        "tell-about-investigation": {
+            "availableHook": "canTellAboutInvestigation",
+            "state": "prompt",
+            "text": "tell-about-investigation"
+        }
+    },
+    "entryPoint": "prompt",
+    "states": {
+        "greeting": {
+            "answers": [
+                "ask-about-poneva",
+                "ask-if-ran-away",
+                "ask-about-suspicious",
+                "tell-about-investigation",
+                "help-backtrack/accept",
+                "help-backtrack/decline",
+                "attempt-lead-to-trap",
+                "exit-backtrack"
+            ],
+            "text": "greeting"
+        },
+        "help-backtrack/accepted": {
+            "answers": [
+                "attempt-lead-to-trap"
+            ],
+            "hook": "acceptHelpBacktrack",
+            "mood": "sad",
+            "text": "help-backtrack/accepted"
+        },
+        "hive-ally/prompt": {
+            "answers": [
+                "hive-ally/agree",
+                "hive-ally/caution",
+                "hive-ally/exit"
+            ],
+            "hook": "hiveAllyPrompt",
+            "text": "hive-ally/prompt"
+        },
+        "lead-to-trap-success": {
+            "answers": [
+            ],
+            "text": "lead-to-trap-success"
+        },
+        "lead-to-trap/convince": {
+            "answers": [
+            ],
+            "hook": "attemptLeadToTrap",
+            "text": "lead-to-trap-refused"
+        },
+        "lead-to-trap/doubt": {
+            "answers": [
+                "convince-backtrack"
+            ],
+            "mood": "dubious",
+            "text": "lead-to-trap-doubt"
+        },
+        "prompt": {
+            "answers": [
+                "attempt-lead-to-trap",
+                "help-backtrack/accept",
+                "ask-about-poneva",
+                "ask-if-ran-away",
+                "ask-about-suspicious",
+                "tell-about-investigation",
+                "help-backtrack/decline",
+                "exit-backtrack"
+            ],
+            "hook": "prompt",
+            "text": "prompt"
+        },
+        "reveal-clue/ask": {
+            "answers": [
+                "lead-to-trap",
+                "reveal-hive",
+                "reveal-clue/nevermind"
+            ],
+            "mood": "neutral",
+            "text": "reveal-clue-ask"
+        },
+        "reveal-hive/accepted": {
+            "answers": [
+            ],
+            "hook": "revealHiveToBacktrack",
+            "mood": "angry",
+            "text": "reveal-hive-accepted"
+        }
+    }
+}

@@ -1,0 +1,45 @@
+{
+    "dialogs": {
+        "unhaus/backtrack": {
+            "bubbles": {
+                "found-daughter": "That's her coat... that's HER! Baby, it's me, it's daddy!"
+            },
+            "about-poneva": "Poneva? It's south of here, well outside the Crystal Wasteland. Balefire hit it hard during the war, but ponies have resettled since. Now it's a major center of trade. Half the caravans on this road run through there these days. I made a decent living there myself, hauling and trading. It's a dangerous town though, and I didn't want my daughter to live there. I wanted somewhere safer to raise her. I waited to make enough money to move someplace calmer. <i>*He lets out a hollow laugh.*</i> Look how that worked out.",
+            "about-suspicious-activity": "Kinda. I get strange vibes from the Unhaus ponies. They're weird. But there's more to it than that. The first night I spent alone at the inn, something tried to get in my room. They were being quiet, trying to unlock the door. But I have a very light sleep, and I sleep with my shotgun at hoof range: I shot two times through the door. I must've touched something, because there was some blood on the ground. If I were you, I'd avoid sleeping in this creepy town.",
+            "ask-about-poneva": "You said you came from Poneva ?",
+            "ask-about-suspicious": "Have you noticed anything strange since you've been here?",
+            "ask-if-ran-away": "How do you know she didn't just run away?",
+            "attempt-lead-to-trap": "I might know where your daughter is.",
+            "convince-backtrack": "You wouldn't believe it either, if you hadn't seen it yourself.",
+            "exit-backtrack": "I need to get going.",
+            "greeting": "You're not from around here, are you? <i>*He looks you over, sizing you up.*</i> Name's Backtrack. Look, I don't have time for pleasantries, so I'll just say it: I need your help. My daughter and I caught passage on a caravan out of Poneva, headed for Crystal Den. We stopped here for the night. When it was time to move again, she was gone. No struggle I could find, no note, nothing. That was weeks ago. I've been camped in this rathole ever since, asking every face that passes through if they've seen her.",
+            "help-backtrack/accept": "I'll help you find her.",
+            "help-backtrack/accepted": "Thank you. I mean that. I can't trust anypony from Unhaus with this. But you're passing through. You've got no reason to lie to me, and no reason not to help besides. Start wherever you like. Just find her. Or... find out what happened to her. I have to know.",
+            "help-backtrack/decline": "I can't help you right now.",
+            "hive-ally/agree": "I'm with you.",
+            "hive-ally/caution": "We should be careful in here.",
+            "hive-ally/exit": "Let's move.",
+            "hive-ally/prompt": "This place is... insane. I can't believe that thing has been under the town this whole time.<br>\nThat must be where my daughter was taken. She's still in here somewhere, and now I've got nothing left to lose finding her. I'm not leaving until I've torn this place apart, room by room, and put down every last one of these things I find in my way.",
+            "hive-ally/prompt-avenged": "It's done. She's dead.<br>\nIt doesn't feel like I thought it would. But it's done.<br>\nI'm going to stay here a while... with her. Thank you. For all of it.",
+            "hive-ally/prompt-daughter-found": "<i>*His eyes are burning.*</i> I found her. She's... she's dead. They killed her. Fed on her.<br>\nChangelings have queens, right ? I don't care what happens to me anymore. I'm going to find that queen, and I'm going to make her feel every single thing my little girl went through. Are you with me ?",
+            "lead-to-trap": "Come with me, I'll show you.",
+            "lead-to-trap-doubt": "Where are we going? I don't like the sound of this too much.",
+            "lead-to-trap-refused": "You're starting to sound like the ponies of this town. Show me something real, or this conversation's over.",
+            "lead-to-trap-success": "Fine. Show me. Now, before I talk myself out of it.",
+            "on-decline-help": "<i>*He doesn't hide his disappointment.*</i><br>Of course not. Nopony ever can. Find me if that changes. I'm not going anywhere. I can't, not without her.",
+            "on-hive-ally-agree": "Good. Stay sharp, and stay close.",
+            "on-hive-ally-caution": "My daughter is nearby. I can feel it. I'm done being careful.",
+            "on-hive-ally-caution-alt": "I lost everything. I'm done being careful.",
+            "on-ran-away-question": "<i>*His jaw tightens.*</i> Because I know my daughter. Because she wouldn't leave without a word, not to me, not after everything we've been through to get this far. And because nopony just vanishes into thin air in the middle of the night without leaving a single hoofprint. Ask me that again, and we're done talking.",
+            "on-reveal-clue-nevermind": "<i>*His face falls, just for a second before he catches himself.*</i> ...Fine. Just don't waste my time again.",
+            "on-told-about-investigation": "<i>*He goes very still.*</i><br>Two more. Just gone, like her? <i>*He shakes his head slowly.*</i> That's not a coincidence, not in such a small town. Whatever's picking ponies off this road, it's not done, and it didn't start with my daughter either. Whatever you're digging into, we're digging into the same hole. We should work together. I'll tell you if I learn anything new, and you do the same for me.",
+            "prompt": "Please tell me you've found something. Anything.",
+            "prompt-following": "Lead on. Every second we stand here talking is a second we're not moving.",
+            "reveal-clue-ask": "<i>*His whole body goes rigid.*</i><br>What ? Where ? Tell me. Right now !",
+            "reveal-clue/nevermind": "Actually... never mind.",
+            "reveal-hive": "There's a hive of changelings under this town. That's where she'll be.",
+            "reveal-hive-accepted": "Changelings ? I won't believe it until I see it. What are we waiting for? Take me there. Now.",
+            "tell-about-investigation": "I'm already looking into something like this. Two caravaneers went missing after a stop here."
+        }
+    }
+}

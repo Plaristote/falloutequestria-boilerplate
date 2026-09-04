@@ -1,4 +1,4 @@
-import {getValueFromRange} from "../behaviour/random.mjs";
+import {getValueFromRange} from "../random.mjs";
 import {generateEncounterLevel} from "../../worldmap/encounterLevels.mjs";
 
 const expeditionPartyName = "ghoul-hunter-expedition";

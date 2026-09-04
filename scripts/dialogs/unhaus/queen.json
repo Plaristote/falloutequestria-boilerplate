@@ -53,7 +53,8 @@
         "ask-about-mission": {
             "availableHook": "canAskAboutMission",
             "hook": "nextMissionState",
-            "text": "ask-about-mission"
+            "text": "ask-about-mission",
+            "textHook": "askAboutMissionText"
         },
         "ask-about-reproduction": {
             "state": "about-changelings",
@@ -105,8 +106,13 @@
             "state": "petiole-quest/why",
             "text": "petiole-quest/ask-why-there"
         },
-        "petiole-quest/report-cancel": {
-            "text": "petiole-quest/report-cancel"
+        "searching-father/accept": {
+            "state": "searching-father/accepted",
+            "text": "petiole-quest/accept"
+        },
+        "searching-father/ask-why": {
+            "state": "searching-father/why",
+            "text": "searching-father/ask-why"
         },
         "shoot-asks-questions-later": {
             "state": "start-fight",
@@ -189,7 +195,10 @@
         },
         "petiole-quest/report-success": {
             "answers": [
+                "ask-about-mission",
+                "exit-prompt"
             ],
+            "hook": "onPetioleQuestReportSuccess",
             "text": "petiole-quest/report-success"
         },
         "petiole-quest/why": {
@@ -212,6 +221,42 @@
             ],
             "hook": "prompt",
             "text": "on-meeting-surrender"
+        },
+        "searching-father/accepted": {
+            "answers": [
+            ],
+            "hook": "acceptSearchingFatherQuest",
+            "text": "searching-father/accepted"
+        },
+        "searching-father/give": {
+            "answers": [
+                "searching-father/accept",
+                "searching-father/ask-why",
+                "petiole-quest/ask-more-questions"
+            ],
+            "hook": "giveSearchingFatherQuest",
+            "text": "searching-father/give"
+        },
+        "searching-father/report-failure": {
+            "answers": [
+            ],
+            "hook": "startFight",
+            "text": "searching-father/report-failure"
+        },
+        "searching-father/report-success": {
+            "answers": [
+                "ask-about-mission",
+                "exit-prompt"
+            ],
+            "hook": "onSearchingFatherReportSuccess",
+            "text": "searching-father/report-success"
+        },
+        "searching-father/why": {
+            "answers": [
+                "searching-father/accept",
+                "petiole-quest/ask-more-questions"
+            ],
+            "text": "searching-father/why"
         },
         "start-fight": {
             "answers": [

@@ -22,10 +22,14 @@ class Dialog {
     return game.quests.getQuest("changelingQuest");
   }
 
-  get canAskAboutInsectPony() {
+  canAskAboutInsectPony() {
     return this.changelingQuest
         && this.changelingQuest.isObjectiveCompleted("findAboutUnhaus")
         && !this.changelingQuest.isObjectiveCompleted("findLair");
+  }
+
+  canRevealChangeling() {
+    return this.canAskAboutInsectPony() && game.player.statistics.perception >= 6;
   }
 }
 

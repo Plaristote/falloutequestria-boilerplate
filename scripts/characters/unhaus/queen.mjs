@@ -15,8 +15,11 @@ export default class extends CharacterBehaviour {
   }
 
   onCharacterDetected(character) {
-    console.log(this.model.path, character.path, "QUEEN DETECTED CHARACTER", character == game.player, !this.model.hasVariable("met"), this.model.isEnemy(character));
-    if (character == game.player && !this.model.hasVariable("met") && this.model.isEnemy(character))
+    const canMakePeace = character == game.player
+                         && !this.model.hasVariable("met")
+                         && this.model.isEnemy(character)
+                         && !level.script.backtrack;
+    if (canMakePeace)
       this.onHostileMeeting();
     else
       super.onCharacterDetected(character);

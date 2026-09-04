@@ -1,10 +1,12 @@
 {
   "quests": {
     "unhaus/investigateUnhaus": {
-      "title": "Caravaniers disparus",
-      "description": "Deux des caravaniers de Narbie Fargo ont disparus lors d'une halte à Inhaus, une petite ville sur la route de commerce vers le Sud. Des poneys disparaissent souvent dans les terres désolées, mais Fargo a une mauvaise intuition. Trouve ce qui s'est vraiment passé.",
+      "title": "Les Disparus de Inhaus",
+      "description": "Quelque chose se passe dans la ville de Inhaus. On t'a demandé de mener l'enquête.",
+      "desc-backtrack-gave-quest": "La fille de Backtrace a disparu lors d'une halte à Unhaus. Il est resté dans la ville depuis lors, cherchant sa fille. Il commence à désespérer, et t'as demandé de l'aider à la retrouver.",      "desc-fargo-gave-quest": "Deux des caravaniers de Narbie Fargo ont disparus lors d'une halte à Inhaus, une petite ville sur la route de commerce vers le Sud. Des poneys disparaissent souvent dans les terres désolées, mais Fargo a une mauvaise intuition. Trouve ce qui s'est vraiment passé.",
+      "desc-fargo-gave-quest": "Deux des caravaniers de Narbie Fargo ont disparus lors d'une halte à Inhaus, une petite ville sur la route de commerce vers le Sud. Des poneys disparaissent souvent dans les terres désolées, mais Fargo a une mauvaise intuition. Trouve ce qui s'est vraiment passé.",
       "desc-solved": "Tu as découert le pot aux roses : Inhaus abrite une colonie de changelins, des créatures capables de prendre l'apparence d'autres poneys. Cela pourrait expliquer la disparition de quelques poneys par-ci par-la.",
-      "find-hive": "Trouve ce qui est arrivé aux caravaniers"
+      "find-hive": "Trouve ce qui se trame à Unhaus"
     }
   }
 }

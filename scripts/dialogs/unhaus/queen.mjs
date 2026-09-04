@@ -12,12 +12,76 @@ class Dialog extends DialogHelper {
       return this.dialog.npc.script.dialogShouldStartAsHostile ? "meeting-as-enemy" : "meeting";
     if (this.reportPetioleQuestState() === "petiole-quest/report-failure")
       return "petiole-quest/report-failure";
+    if (this.reportSearchingFatherState() === "searching-father/report-failure")
+      return "searching-father/report-failure";
+  }
+
+  // Quest chain, in the order the Queen offers them. Reordering is just
+  // reordering this array - no numeric stages to keep in sync.
+  //
+  // Each quest can be resolved out of band (Backtrack killed/led to the
+  // trap via his own dialog, Petiole's pimp dealt with some other way)
+  // before the Queen has ever formally given it, or while an earlier quest
+  // in the list is still open. nextMissionState()/nextReportState() walk
+  // the list in order and stop at the first quest that isn't fully
+  // acknowledged yet - so an already-resolved later quest just waits its
+  // turn rather than jumping the queue, and the Queen still always leads
+  // with whichever quest is first in this array.
+  get questChain() {
+    return [
+      { id: "unhaus/searching-father", giveState: "searching-father/give", reportStateFn: this.reportSearchingFatherState.bind(this) },
+      { id: "cristal-den/pimp-changeling", giveState: "petiole-quest/give", reportStateFn: this.reportPetioleQuestState.bind(this) }
+    ];
+  }
+
+  acknowledgedKey(questId) {
+    return "acknowledged-" + questId.replace(/\//g, "-");
+  }
+
+  isAcknowledged(questId) {
+    return this.dialog.npc.hasVariable(this.acknowledgedKey(questId));
+  }
+
+  acknowledge(questId) {
+    this.dialog.npc.setVariable(this.acknowledgedKey(questId), 1);
+  }
+
+  // Quest objects get created the moment a quest is *offered* (see
+  // givePetioleQuest()/giveSearchingFatherQuest()), not once it's accepted -
+  // so game.quests.hasQuest() alone can't tell "offered" from "accepted".
+  // This flag is only set in acceptQueenQuest(), once the player actually
+  // says yes.
+  acceptedKey(questId) {
+    return "accepted-" + questId.replace(/\//g, "-");
+  }
+
+  isAccepted(questId) {
+    return this.dialog.npc.hasVariable(this.acceptedKey(questId));
+  }
+
+  markAccepted(questId) {
+    this.dialog.npc.setVariable(this.acceptedKey(questId), 1);
+  }
+
+  get hasEngagedWithQueen() {
+    return this.questChain.some(entry => this.isAccepted(entry.id) || this.isAcknowledged(entry.id));
+  }
+
+  askAboutMissionText() {
+    if (this.isAccepted(this.questChain[0].id))
+      return this.dialog.tr("ask-about-mission-alt");
+    return this.dialog.tr("ask-about-mission");
   }
 
   nextMissionState() {
-    switch (this.dialog.npc.getVariable("questsGiven", 0)) {
-    case 0:
-      return "petiole-quest/give";
+    for (const entry of this.questChain) {
+      if (this.isAcknowledged(entry.id))
+        continue ;
+      if (entry.reportStateFn())
+        return "no-more-quests"; // resolved, waiting on a report first
+      if (this.isAccepted(entry.id))
+        return "no-more-quests"; // accepted, still active
+      return entry.giveState;
     }
     return "no-more-quests";
   }
@@ -27,13 +91,13 @@ class Dialog extends DialogHelper {
   }
 
   nextReportState() {
-    let result;
-    switch (this.dialog.npc.getVariable("questsGiven", 0)) {
-    case 1:
-      result = this.reportPetioleQuestState();
-      break ;
+    for (const entry of this.questChain) {
+      if (this.isAcknowledged(entry.id))
+        continue ;
+      const reportState = entry.reportStateFn();
+      return reportState ? reportState : "no-more-report";
     }
-    return result ? result : "no-more-report";
+    return "no-more-report";
   }
 
   canReportAboutMission() {
@@ -41,7 +105,7 @@ class Dialog extends DialogHelper {
   }
 
   canExitDialogue() {
-    return this.dialog.npc.hasVariable("questsGiven") && this.exitBlocked !== true;
+    return this.hasEngagedWithQueen && this.exitBlocked !== true;
   }
 
   canDenounceCaput() {
@@ -69,7 +133,7 @@ class Dialog extends DialogHelper {
   }
 
   canAskAboutMines() {
-    return this.dialog.previousAnswer !== "ask-about-slavery" && false; // TODO
+    return this.dialog.previousAnswer !== "ask-about-mines" && false; // TODO
   }
 
   meeting() {
@@ -81,7 +145,7 @@ class Dialog extends DialogHelper {
       return { textKey: "meeting-sneak" };
     case "denounce-caput":
       this.changelingQuest.setVariable("caputDenounced", 1);
-      return { textKey: "caput-denounced" };
+      return { textKey: "caput-denounce" };
     case "answer-ask-why-help":
       return { textKey: "meeting-money" };
     }
@@ -105,12 +169,18 @@ class Dialog extends DialogHelper {
       return { textKey: "about-mayor" };
     case "tell-about-changeling-kills":
       return { textKey: "about-changeling-kills" };
-    case "ask-about-slavery":
+    case "ask-about-mines":
       return { textKey: "about-slavery" };
     case "meeting-as-enemy-surrender":
       return { textKey: "on-meeting-surrender" };
     case "meeting-as-enemy-argue":
       return { textKey: "on-meeting-as-enemy-argue" };
+    case "petiole-quest/ask-more-questions":
+      // Shared "wait, one more thing" answer used by both quests' give/why
+      // states to back out without accepting - undoes the give-hook's
+      // exitBlocked=true so the player isn't stranded if they don't accept.
+      this.exitBlocked = false;
+      break ;
     }
   }
 
@@ -135,6 +205,53 @@ class Dialog extends DialogHelper {
     }
   }
 
+  // Fires the "you've thrown in your lot with the hive" main-quest
+  // resolution exactly once, on whichever quest the player accepts first -
+  // not hard-coded to a specific one, since that's exactly what reordering
+  // the chain would otherwise silently break.
+  acceptQueenQuest(questId, textKey) {
+    let text = this.dialog.tr(textKey);
+
+    this.markAccepted(questId);
+    if (!this.changelingQuest.hasVariable("queenProposal")) {
+      this.changelingQuest.setVariable("queenProposal", 1);
+      this.changelingQuest.completed = true;
+      if (this.changelingQuest.hasVariable("kidnapped"))
+        text += "<br>" + this.dialog.tr("kidnapped-equipment-location");
+    }
+    this.exitBlocked = false;
+    return text;
+  }
+
+  giveSearchingFatherQuest() {
+    if (!game.quests.hasQuest("unhaus/searching-father"))
+      game.quests.addQuest("unhaus/searching-father");
+    this.exitBlocked = true;
+  }
+
+  acceptSearchingFatherQuest() {
+    return this.acceptQueenQuest("unhaus/searching-father", "searching-father/accepted");
+  }
+
+  reportSearchingFatherState() {
+    const quest = game.quests.getQuest("unhaus/searching-father");
+
+    if (quest) {
+      if (quest.failed)
+        return "searching-father/report-failure";
+      return quest.completed ? "searching-father/report-success" : null;
+    }
+    return null;
+  }
+
+  onSearchingFatherReportSuccess() {
+    const quest = game.quests.getQuest("unhaus/searching-father");
+
+    this.acknowledge("unhaus/searching-father");
+    if (quest && quest.script.killedDirectly)
+      return { textKey: "searching-father/report-success-murder" };
+  }
+
   givePetioleQuest() {
     let quest;
 
@@ -148,15 +265,7 @@ class Dialog extends DialogHelper {
   }
 
   acceptPetioleQuest() {
-    let text = this.dialog.tr("petiole-quest/accepted");
-
-    this.dialog.npc.setVariable("questsGiven", 1);
-    this.exitBlocked = false;
-    if (this.changelingQuest.hasVariable("kidnapped"))
-      text += "<br>" + this.dialog.tr("kidnapped-equipment-location");
-    this.changelingQuest.setVariable("queenProposal", 1);
-    this.changelingQuest.completed = true;
-    return text;
+    return this.acceptQueenQuest("cristal-den/pimp-changeling", "petiole-quest/accepted");
   }
 
   reportPetioleQuestState() {
@@ -168,6 +277,10 @@ class Dialog extends DialogHelper {
       return quest.completed ? "petiole-quest/report-success" : null;
     }
     return null;
+  }
+
+  onPetioleQuestReportSuccess() {
+    this.acknowledge("cristal-den/pimp-changeling");
   }
 }
 

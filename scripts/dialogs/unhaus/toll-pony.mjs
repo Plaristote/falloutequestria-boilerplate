@@ -18,6 +18,8 @@ class Dialog extends DialogHelper {
       return { textKey: "prompt-visiting", mood: "dubious" };
     case "meeting-quest-ans-secret":
       return { textKey: "meeting-quest-secrecy", mood: "neutral" };
+    case "meeting-quest-ans-caravaneers":
+      return { textKey: "meeting-quest-caravaneers", mood: "dubious" };
     case "meeting-quest-ans-insects":
       return { textKey: "meeting-quest-insects", mood: "dubious" };
     case "ask-about-location":
@@ -39,11 +41,23 @@ class Dialog extends DialogHelper {
     return game.quests.getQuest("changelingQuest");
   }
 
-  get knowsAboutInsectPony() {
+  get investigateUnhaus() {
+    return game.quests.getQuest("unhaus/investigateUnhaus");
+  }
+
+  lookingIntoRumors() {
+    return this.knowsAboutInsectPony() || this.knowsAboutDisappearedCaravaneers();
+  }
+
+  knowsAboutDisappearedCaravaneers() {
+    return this.investigateUnhaus && this.investigateUnhaus.script.hasEvent("fargo-gave-quest");
+  }
+
+  knowsAboutInsectPony() {
     return this.changelingQuest && this.changelingQuest.isObjectiveCompleted("findAboutUnhaus");
   }
 
-  get knowsAboutInsectUnderground() {
+  knowsAboutInsectUnderground() {
     return this.changelingQuest && this.changelingQuest.isObjectiveCompleted("findLair");
   }
 }

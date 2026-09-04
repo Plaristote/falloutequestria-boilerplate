@@ -14,9 +14,21 @@ export default class extends Innkeeper {
     return level.hasVariable("guestRoomIsFree");
   }
 
+  get backtrackRentingRoom() {
+    return level.findObject("backtrack") != null;
+  }
+
+  pickRandomRoom() {
+    if (this.backtrackRentingRoom)
+      return 2;
+    return super.pickRandomRoom();
+  }
+
   spendMoney(price) {
     if (!this.roomsAreNowFree)
       super.spendMoney(price);
+    else
+      level.unsetVariable("guestRoomIsFree");
   }
 
   innDialogLine(params) {
