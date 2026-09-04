@@ -1,0 +1,45 @@
+{
+  "dialogs": {
+    "unhaus/backtrack": {
+      "bubbles": {
+        "found-daughter": "C'est... c'est ELLE ! Elle est là ! Ma puce, c'est moi, c'est papa !"
+       },
+      "about-poneva": "Poneva ? C'est au sud d'ici, bien au-delà des Terres Désolées de Cristal. Le Balefire l'a durement frappée pendant la guerre, mais des poneys s'y sont réinstallés depuis. Maintenant, c'est un important centre commercial. La moitié des caravanes qui empruntent cette route y passent de nos jours. J'y gagnais moi-même correctement ma vie, en transportant et en faisant du commerce. Mais c'est une ville dangereuse, et je ne voulais pas que ma fille y vive. Je voulais un endroit plus sûr où l'élever. J'ai attendu d'avoir assez d'argent pour partir m'installer dans un endroit plus tranquille. <i>*Il laisse échapper un rire creux.*</i> Regarde où ça m'a mené.",
+      "about-suspicious-activity": "En quelque sorte. Les poneys d'Unhaus me donnent une drôle d'impression. Ils sont bizarres. Mais il y a plus que ça. La première nuit que j'ai passée seul à l'auberge, quelque chose a essayé d'entrer dans ma chambre. Ça faisait ça discrètement, en essayant de déverrouiller la porte. Mais j'ai le sommeil très léger, et je dors avec mon fusil à pompe à portée de sabot : j'ai tiré deux fois à travers la porte. J'ai dû toucher quelque chose, parce qu'il y avait du sang par terre. Si j'étais toi, j'éviterais de dormir dans cette ville glauque.",
+      "ask-about-poneva": "Tu as dit que tu venais de Poneva ?",
+      "ask-about-suspicious": "Tu as remarqué quelque chose d'étrange depuis que tu es ici ?",
+      "ask-if-ran-away": "Comment sais-tu qu'elle ne s'est pas simplement enfuie ?",
+      "attempt-lead-to-trap": "Je sais peut-être où se trouve ta fille.",
+      "convince-backtrack": "Tu ne le croirais pas non plus si tu ne l'avais pas vu de tes propres yeux.",
+      "exit-backtrack": "Je dois y aller.",
+      "greeting": "Tu n'es pas du coin, hein ? <i>*Il te dévisage, te jaugeant du regard.*</i> Je m'appelle Backtrack. Écoute, je n'ai pas le temps pour les politesses, alors je vais aller droit au but : j'ai besoin de ton aide. Ma fille et moi avons trouvé une place dans une caravane au départ de Poneva, en direction de Crystal Den. Nous nous sommes arrêtés ici pour la nuit. Quand il a fallu repartir, elle avait disparu. Je n'ai trouvé aucune trace de lutte, aucune note, rien. C'était il y a des semaines. Depuis, je campe dans ce trou à rats, demandant à chaque personne qui passe si elle l'a vue.",
+      "help-backtrack/accept": "Je vais t'aider à la retrouver.",
+      "help-backtrack/accepted": "Merci. Je le pense vraiment. Je ne peux faire confiance à aucun poney d'Unhaus pour ça. Mais toi, tu ne fais que passer. Tu n'as aucune raison de me mentir, et aucune raison de ne pas m'aider, après tout. Commence où tu veux. Retrouve-la. Ou... découvre ce qui lui est arrivé. Il faut que je sache.",
+      "help-backtrack/decline": "Je ne peux pas t'aider pour le moment.",
+      "hive-ally/agree": "Je suis avec toi.",
+      "hive-ally/caution": "On devrait faire attention ici.",
+      "hive-ally/exit": "Allons-y.",
+      "hive-ally/prompt": "Cet endroit est... complètement dingue. Je n'arrive pas à croire que cette chose se trouvait sous la ville depuis tout ce temps.<br>\nC'est forcément là qu'ils ont emmené ma fille. Elle est encore quelque part ici, et maintenant je n'ai plus rien à perdre pour la retrouver. Je ne partirai pas avant d'avoir fouillé cet endroit de fond en comble, pièce par pièce, et abattu jusqu'au dernier de ces trucs qui se mettra sur mon chemin.",
+      "hive-ally/prompt-avenged": "C'est fini. Elle est morte.<br>\nJe ne pensais pas que je me sentirais comme ça. Mais c'est fini.<br>\nJe vais rester ici un moment... avec elle. Merci. Pour tout.",
+      "hive-ally/prompt-daughter-found": "<i>*Ses yeux sont brûlants de rage.*</i> Je l'ai trouvée. Elle est... elle est morte. Ils l'ont tuée. Ils se sont nourris d'elle.<br>\nLes changelins ont des reines, pas vrai ? Je me fiche de ce qui peut m'arriver maintenant. Je vais trouver cette reine, et je vais lui faire ressentir chacune des choses que ma petite fille a endurées. Tu es avec moi ?",
+      "lead-to-trap": "Viens avec moi, je vais te montrer.",
+      "lead-to-trap-doubt": "Où allons-nous ? Je n'aime pas trop ce que ça implique.",
+      "lead-to-trap-refused": "Tu commences à parler comme les poneys de cette ville. Montre-moi quelque chose de concret, ou cette conversation est terminée.",
+      "lead-to-trap-success": "D'accord. Montre-moi. Maintenant, avant que je ne change d'avis.",
+      "on-decline-help": "<i>*Il ne cache pas sa déception.*</i><br>Bien sûr que non. Personne ne le peut jamais. Retrouve-moi si tu changes d'avis. Je ne bougerai pas d'ici. Je ne peux pas, pas sans elle.",
+      "on-hive-ally-agree": "Bien. Reste sur tes gardes et reste près de moi.",
+      "on-hive-ally-caution": "Ma fille est tout près. Je le sens. J'en ai fini avec la prudence.",
+      "on-hive-ally-caution-alt": "J'ai tout perdu. J'en ai fini avec la prudence.",
+      "on-ran-away-question": "<i>*Sa mâchoire se crispe.*</i> Parce que je connais ma fille. Elle ne serait pas partie sans dire un mot, pas à moi, pas après tout ce qu'on a traversé pour arriver jusqu'ici. Et parce que personne ne disparaît comme ça en pleine nuit sans laisser la moindre empreinte de sabot. Pose-moi encore cette question, et notre conversation s'arrête là.",
+      "on-reveal-clue-nevermind": "<i>*Son visage se décompose, l'espace d'une seconde avant qu'il ne se ressaisisse.*</i> ...D'accord. Mais ne me fais plus perdre mon temps.",
+      "on-told-about-investigation": "<i>*Il se fige complètement.*</i><br>Deux autres. Disparus, comme elle ? <i>*Il secoue lentement la tête.*</i> Ce n'est pas une coïncidence, pas dans une si petite ville. Quoi que ce soit qui enlève des poneys sur cette route, ce n'est pas fini, et ça n'a pas commencé avec ma fille non plus. Quoi que tu cherches à découvrir, on creuse le même trou. On devrait travailler ensemble. Je te dirai si j'apprends quelque chose de nouveau, et tu feras de même pour moi.",
+      "prompt": "Dis-moi que tu as trouvé quelque chose. N'importe quoi.",
+      "prompt-following": "Montre-moi le chemin. Chaque seconde qu'on passe ici à parler est une seconde qu'on ne passe pas à avancer.",
+      "reveal-clue-ask": "<i>*Tout son corps se raidit.*</i><br>Quoi ? Où ? Dis-moi. Tout de suite !",
+      "reveal-clue/nevermind": "En fait... laisse tomber.",
+      "reveal-hive": "Il y a une ruche de changelins sous cette ville. C'est là qu'elle doit être.",
+      "reveal-hive-accepted": "Des changelins ? Je ne le croirai pas avant de l'avoir vu de mes propres yeux. Qu'est-ce qu'on attend ? Emmène-moi là-bas. Maintenant.",
+      "tell-about-investigation": "Je cherche déjà à comprendre quelque chose de similaire. Deux caravaniers ont disparu après s'être arrêtés ici."
+    }
+  }
+}
