@@ -23,6 +23,7 @@
         "neutral": "neutre"
     },
     "cmap": {
+        "skin": "Apparence",
         "abysmal": "Nul",
         "actionPoints": "Points d'action",
         "agility": "Agilité",
