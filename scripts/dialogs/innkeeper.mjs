@@ -38,9 +38,13 @@ export class Innkeeper extends MerchantHelper {
     this.inn.script.showRentedRoom(this.dialog.npc);
   }
 
+  pickRandomRoom() {
+    return this.inn.script.getRandomRoom();
+  }
+
   buy(choice) {
     const price = priceForUser(choice, this.dialog.player);
-    const roomNumber = this.inn.script.getRandomRoom();
+    const roomNumber = this.pickRandomRoom();
     let durationInSeconds;
     let duration = { "hour": 9 };
 
