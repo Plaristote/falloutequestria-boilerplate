@@ -1,6 +1,6 @@
 import {OwnedStorage} from "./ownedStorage.mjs";
 
-const refillDelay = 1000*60*60*24*7;
+export const refillDelay = 1000*60*60*24*7;
 const moneyItems = ["bottlecaps"];
 
 function dropRateFor(item) {

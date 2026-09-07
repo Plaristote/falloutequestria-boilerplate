@@ -139,7 +139,8 @@ export class Shop {
     const storages = this.shopShelfs;
 
     if (storages && storages.length) {
-      barterController.removeInventory(this.shopOwner.inventory);
+      if (this.withOwnerInventory !== true)
+        barterController.removeInventory(this.shopOwner.inventory);
       storages.forEach(function(storage) {
         barterController.addInventory(storage.objectName, storage.inventory);
       });
