@@ -1793,7 +1793,7 @@
         },
         "explosion": {
             "frameCount": 35,
-            "frameInterval": 5,
+            "frameInterval": 10,
             "height": 89,
             "offsetX": 0,
             "offsetY": 0,
