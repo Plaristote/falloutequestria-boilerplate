@@ -12,12 +12,25 @@ export function makeOrderChoice(self, item, options) {
 export default class MerchantHelper extends DialogHelper {
   constructor(dialog) {
     super(dialog);
-    if (this.shop)
+    if (this.shop) {
+      if (this.hasCanSellFunction)
+        this.shop.script.withOwnerInventory = true;
       this.shop.script.initializeBarterController(this.dialog.barter);
+    }
+  }
+
+  canSell(item) {
+    if (this.hasCanSellFunction)
+      return this.dialog.npc.script.canSell(item);
+    return true;
   }
 
   get shop() {
     return this.dialog.npc.script?.shop;
+  }
+
+  get hasCanSellFunction() {
+    return typeof this.dialog.npc.script.canSell == "function";
   }
 
   get merchantDiscount() {
