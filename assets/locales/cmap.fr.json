@@ -43,7 +43,8 @@
             "drunk": "Ivre",
             "ko": "Inconscient",
             "poisoned": "Empoisonné",
-            "rested": "En forme"
+            "rested": "En forme",
+            "magic-exhaustion": "Fatigue Magique"
         },
         "carryWeight": "Capacité en poids",
         "charisma": "Charisme",

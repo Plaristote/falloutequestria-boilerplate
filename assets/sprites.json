@@ -1741,6 +1741,46 @@
         "defaultSource": "characters/diamond-dog-gray.png"
     },
     "effects": {
+        "arcane-ball-bottom": {
+            "frameCount": 15,
+            "frameInterval": 66,
+            "height": 32,
+            "offsetX": 0,
+            "offsetY": 0,
+            "repeat": true,
+            "source": "projectiles/arcane-ball.png",
+            "width": 29
+        },
+        "arcane-ball-left": {
+            "frameCount": 15,
+            "frameInterval": 66,
+            "height": 32,
+            "offsetX": 0,
+            "offsetY": 28,
+            "repeat": true,
+            "source": "projectiles/arcane-ball.png",
+            "width": 29
+        },
+        "arcane-ball-right": {
+            "frameCount": 15,
+            "frameInterval": 66,
+            "height": 32,
+            "offsetX": 0,
+            "offsetY": 84,
+            "repeat": true,
+            "source": "projectiles/arcane-ball.png",
+            "width": 29
+        },
+        "arcane-ball-up": {
+            "frameCount": 15,
+            "frameInterval": 66,
+            "height": 32,
+            "offsetX": 0,
+            "offsetY": 56,
+            "repeat": true,
+            "source": "projectiles/arcane-ball.png",
+            "width": 29
+        },
         "bullet": {
             "frameCount": 1,
             "frameInterval": 0,

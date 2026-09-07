@@ -21,7 +21,8 @@
             "drunk": "Drunk",
             "ko": "Unconscious",
             "poisoned": "Poisoned",
-            "rested": "Rested"
+            "rested": "Rested",
+            "magic-exhaustion": "Magic Exhaustion"
         },
         "carryWeight": "Carry weight",
         "charisma": "Charisma",
