@@ -1,4 +1,4 @@
-export const bookwormRequirement = 30;
+export const bookwormRequirement = 20;
 
 export function isAvailableFor(characterSheet) {
   return false;
