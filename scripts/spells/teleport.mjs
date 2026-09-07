@@ -1,7 +1,7 @@
 import {spellCast} from "./base.mjs";
 
+const difficulty = 4;
 export const targetMode = 2;
-
 export const actionPointCost = 2;
 
 export function use(character, x, y) {
@@ -12,7 +12,7 @@ export function use(character, x, y) {
       game.appendToConsole(i18n.t("messages.out-of-range"));
     return false;
   }
-  return spellCast(3, character, triggerUse);
+  return spellCast(difficulty, character, triggerUse);
 }
 
 export function triggerUse(character, x, y) {

@@ -156,6 +156,8 @@
     },
     "spells": {
         "empty-spellbook": "Tu n'as pas encore appris de sorts",
+        "arcane-bolt": "Projectile arcanique",
+        "arcane-missile": "Missiles arcaniques",
         "polymorph": "Métamorphose",
         "purification": "Purification",
         "sleep": "Torpeur",

@@ -1,10 +1,29 @@
 import {skillCheck} from "../cmap/helpers/checks.mjs";
 import {getValueFromRange} from "../behaviour/random.mjs";
 
+const exhaustionRecoveryMin = 2 * 60 * 60 * 1000;
+const exhaustionRecoveryMax = 30 * 60 * 1000;
+
+function getExhaustionRecoveryInterval(character) {
+  const stat = Math.max(character.statistics.endurance, character.statistics.intelligence);
+  const clamped = Math.min(Math.max(stat, 1), 10);
+  const ratio = (clamped - 1) / 9;
+
+  return exhaustionRecoveryMin
+       - ratio * (exhaustionRecoveryMin - exhaustionRecoveryMax);
+}
+
+function rollsMagicExhaustionSave(character) {
+  const dice = 10;
+  const target = 12;
+  const enduranceSuccess = skillCheck(character, "endurance", { dice, target });
+  const luckSuccess = skillCheck(character, "luck", { dice, target });
+  return enduranceSuccess || luckSuccess;
+}
+
 function exhaustionLevel(character) {
-  const handle = character.getScriptObject();
   const endurance = character.statistics.endurance + Math.floor(character.statistics.spellcasting / 33);
-  const level = Math.max(0, handle.castCount - endurance);
+  const level = Math.max(0, character.script.castCount - endurance);
 
   if (level && character === game.player)
     game.appendToConsole(i18n.t("messages.spellcast-exhausted"));
@@ -12,10 +31,12 @@ function exhaustionLevel(character) {
 }
 
 function exhaustion(character) {
-  const handle = character.getScriptObject();
+  const level = exhaustionLevel(character);
 
-  handle.castCount++;
-  character.tasks.addTask("reduceSpellExhaustion", 120000);
+  character.script.castCount++;
+  if (level > 0 && !rollsMagicExhaustionSave(character))
+    character.addBuff("magic-exhaustion");
+  character.tasks.addTask("reduceSpellExhaustion", getExhaustionRecoveryInterval(character));
   return exhaustionLevel(character);
 }
 
@@ -29,17 +50,23 @@ function defaultFailure(character) {
   character.takeDamage(damage, null);
 }
 
+export function useSuccessTarget(difficulty, character) {
+  const malus = exhaustionLevel(character);
+  return difficulty * 25 + malus * 25;
+}
+
 export function spellCast(difficulty, character, callbacks) {
   const malus = exhaustion(character);
-  var callback;
+  let callback;
+  let success = false;
 
   console.log("spellCast attempt by", character.displayName, "difficulty", difficulty, "malus", malus);
   if (typeof callbacks == "function")
     callbacks = { success: callbacks };
   if (!callbacks.failure)
     callbacks.failure = defaultFailure;
-  skillCheck(character, "spellcasting", {
-    target:  difficulty * 25 + malus * 25,
+  success = skillCheck(character, "spellcasting", {
+    target:  useSuccessTarget(difficulty, character),
     success: function() { callback = callbacks.success; },
     failure: function() { callback = callbacks.failure; },
     criticalSuccess: function() { callback = callbacks.criticalSuccess || callbacks.success; },
@@ -47,6 +74,7 @@ export function spellCast(difficulty, character, callbacks) {
   });
   return {
     steps: [{ type: "Animation", animation: "use", object: character }],
-    callback: callback
+    callback,
+    success
   };
 }

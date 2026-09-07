@@ -45,6 +45,7 @@
             "ko": "Inconscient",
             "poisoned": "Empoisonné",
             "rested": "En forme",
+            "magic-exhaustion": "Fatigue Magique",
             "dark-magic-buff": "Puissance sombre",
             "dark-magic-sickness": "Sombre faiblesse"
         },

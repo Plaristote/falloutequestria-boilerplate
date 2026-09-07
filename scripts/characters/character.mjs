@@ -37,8 +37,13 @@ export class CharacterBehaviour extends SceneActorComponent {
   }
 
   reduceSpellExhaustion() {
-    if (this.castCount > 0)
+    if (this.castCount > 0) {
       this.castCount--;
+      if (this.isResting) {
+        this.castCount -= this.model.statistics.healingRate;
+        this.model.tasks.decreaseIterationsFor("reduceSpellExhaustion", this.model.statistics.healingRate);
+      }
+    }
   }
 
   getHint() {

@@ -702,6 +702,24 @@
         "value": 12,
         "weight": 1
     },
+    "spell-book-arcane-bolt": {
+        "icon": "spellbook.png",
+        "isGroupable": true,
+        "scriptName": "spellbook.mjs",
+        "sprite": "book",
+        "type": "consommables",
+        "value": 150,
+        "weight": 2
+    },
+    "spell-book-arcane-missile": {
+        "icon": "spellbook.png",
+        "isGroupable": true,
+        "scriptName": "spellbook.mjs",
+        "sprite": "book",
+        "type": "consommables",
+        "value": 850,
+        "weight": 4
+    },
     "spell-book-frost-armor": {
         "icon": "spellbook.png",
         "isGroupable": true,
