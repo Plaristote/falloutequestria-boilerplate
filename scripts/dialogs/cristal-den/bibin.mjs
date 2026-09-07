@@ -242,16 +242,16 @@ class Dialog {
 
   canStartThirdQuest() {
     return this.enforcersQuest != null && this.enforcersQuest.completed
-        && (this.potiokAssassinationQuest == null || this.potiokAssassinationQuest.hidden);
-  }
-
-  canStartFourthQuest() {
-    return this.potiokAssassinationQuest != null && this.potiokAssassinationQuest.completed
         && (this.rescueHerdQuest == null || this.rescueHerdQuest.hidden);
   }
 
+  canStartFourthQuest() {
+    return this.rescueHerdQuest != null && this.rescueHerdQuest.completed
+        && (this.potiokAssassinationQuest == null || this.potiokAssassinationQuest.hidden);
+  }
+
   finishedAllQuests() {
-    return this.rescueHerdQuest != null && this.rescueHerdQuest.completed;
+    return this.potiokAssassinationQuest != null && this.potiokAssassinationQuest.completed;
   }
 
   canStartNextQuest() {
@@ -261,14 +261,14 @@ class Dialog {
   goToNextQuestIntroState() {
     if (this.canStartSecondQuest())
       return "enforcers/intro";
-    else if (this.canStartThirdQuest()) {
+    else if (this.canStartThirdQuest())
+      return "pinnedHerd/intro";
+    else if (this.canStartFourthQuest()) {
       if (Potioks.allHeirsDead() && Potioks.matriarchDead())
         return "potiokAssassination/already-done";
       else
         return "potiokAssassination/intro";
     }
-    else if (this.canStartFourthQuest())
-      return "pinnedHerd/intro";
     return "entry/no-more-work";
   }
 

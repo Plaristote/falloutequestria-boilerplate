@@ -87,7 +87,7 @@ class Dialog {
   }
 
   isOldSheriffMurderQuestOngoing() {
-    return this.sheriffQuest && this.sheriffQuest.inProgress;
+    return this.sheriffQuest && this.sheriffQuest.inProgress && !this.sheriffQuest.hidden;
   }
 
   oldSheriffSolveMurder() {

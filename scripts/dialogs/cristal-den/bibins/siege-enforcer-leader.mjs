@@ -24,7 +24,7 @@ class Dialog {
 
   getEntryPoint() {
     this.dialog.npc.setVariable("met", 1);
-    this.quest.script.pushUniqueEvent("desc-met-enforcer");
+    this.quest.script.pushUniqueEvent("met-enforcer");
 
     if (this.herdKilled)
       return this.hasLeftAfterHerdKilled ? "herd-dead-aftermath" : "herd-dead";
@@ -76,7 +76,7 @@ class Dialog {
 
   onAcceptNegotiator() {
     game.setVariable("cristalDenSiegeSentAsNegotiator", 1);
-    this.quest.script.pushUniqueEvent("desc-sent-as-negotiator");
+    this.quest.script.pushUniqueEvent("sent-as-negotiator");
   }
 
   attemptPersuade() {
@@ -88,18 +88,18 @@ class Dialog {
     this.persuadeAttempted = true;
 
     if (this.knowsGoldenHerd && !this.goldenHerdBrokenAtThornhoof) {
-      this.quest.script.pushUniqueEvent("desc-persuade-refused-known-threat");
+      this.quest.script.pushUniqueEvent("persuade-refused-known-threat");
       return "persuade/refuse-known-threat";
     }
 
     const dc = this.knowsGoldenHerd ? 150 : 125;
     const winner = skillCheck(game.player, "speech", { target: dc });
     if (winner == game.player) {
-      this.quest.script.pushUniqueEvent("desc-enforcers-persuaded");
+      this.quest.script.pushUniqueEvent("enforcers-persuaded");
       this.onWithdraw();
       return "persuade/success";
     }
-    this.quest.script.pushUniqueEvent("desc-persuade-failed");
+    this.quest.script.pushUniqueEvent("persuade-failed");
     return "persuade/failure";
   }
 
@@ -120,7 +120,7 @@ class Dialog {
 
   payBribe() {
     game.player.inventory.removeItemOfType("bottlecaps", this.bribeCost);
-    this.quest.script.pushUniqueEvent("desc-enforcers-bribed");
+    this.quest.script.pushUniqueEvent("enforcers-bribed");
     this.onWithdraw();
   }
 
@@ -130,7 +130,7 @@ class Dialog {
 
   onHerdDeadReaction() {
     this.hasLeftAfterHerdKilled = true;
-    this.quest.script.pushUniqueEvent("desc-herd-killed");
+    this.quest.script.pushUniqueEvent("herd-killed");
 
     const scouts = level.findGroup("scouts");
     if (scouts)

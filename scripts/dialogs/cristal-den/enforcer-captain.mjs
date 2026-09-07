@@ -51,10 +51,23 @@ export default class extends DialogHelper {
   }
 
   askAbout() {
-    if (!this.dialog.npc.hasVariable("askedAbout") && game.player.statistics.charisma > 6) {
+    if (!this.dialog.npc.hasVariable("askedAbout") && (game.player.statistics.charisma >= 5 || game.player.statistics.traits.indexOf("sex-appeal") >= 0)) {
       this.dialog.npc.setVariable("askedAbout", 1);
       return "about-enforcers/confusion";
     }
+  }
+
+  sexAttempt() {
+    if (game.player.statistics.traits.indexOf("sex-appeal") >= 0)
+      return "sexing/entry";
+    return "sexing/failed";
+  }
+
+  sexingAction() {
+    game.asyncAdvanceTime(60);
+    game.dataEngine.addReputation("cristal-den", 10);
+    this.dialog.npc.setVariable("sexed", 1);
+    return "sexing/afterwards";
   }
 
   workEntry() {
@@ -181,7 +194,7 @@ export default class extends DialogHelper {
   }
 
   outpostWorkCanReport() {
-    return this.outpostQuest.inProgress && this.outpostQuest.isObjectiveCompleted("investigate");
+    return this.outpostQuest?.inProgress && this.outpostQuest.isObjectiveCompleted("investigate");
   }
 
   outpostWorkCanReportHerd() {

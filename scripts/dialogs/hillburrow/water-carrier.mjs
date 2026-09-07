@@ -108,7 +108,7 @@ class Dialog {
     const suitcase = game.player.inventory.getItemOfType("bibin-sabotage-suitcase");
     const suitcaseWasOpened = suitcase.script.isOpened;
 
-    suitecase.script.giveTo(this.dialog.npc);
+    suitcase.script.giveTo(this.dialog.npc);
     this.deliveryQuest.completeObjective("delivery");
   }
 

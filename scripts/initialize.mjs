@@ -20,6 +20,9 @@ function initializePlayerInventory() {
   if (proficiencies.indexOf("speech") >= 0) {
     game.player.inventory.addItemOfType("mint-als", 2);
   }
+  if (proficiencies.indexOf("spellcasting") >= 0) {
+    game.player.statistics.spells.push("arcane-bolt");
+  }
 }
 
 export function initialize() {

@@ -1,11 +1,11 @@
 {
     "answers": {
         "about-messing-around": {
+            "hook": "onAskAboutTrouble",
             "state": "on-trouble",
             "text": "about-messing-around"
         },
         "ask-about-place": {
-            "hook": "onAskAboutPlace",
             "state": "about-enforcers",
             "text": "ask-about-place"
         },

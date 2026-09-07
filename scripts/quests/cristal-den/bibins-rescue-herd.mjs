@@ -20,7 +20,7 @@ export default class BibinsRescueHerd extends QuestHelper {
   }
 
   getDescription() {
-    return this.events.map(event => `<p>${this.tr(event)}</p>`).join("");
+    return this.events.map(event => `<p>${this.tr("desc-" + event)}</p>`).join("");
   }
 
   get xpReward() {
@@ -49,7 +49,7 @@ export default class BibinsRescueHerd extends QuestHelper {
 
     if (group.find(object => object.isAlive()).length == 0) {
       this.model.completeObjective("kill-scouts");
-      this.pushUniqueEvent("desc-scouts-killed");
+      this.pushUniqueEvent("scouts-killed");
     }
   }
 
@@ -58,7 +58,7 @@ export default class BibinsRescueHerd extends QuestHelper {
 
     if (group.find(object => object.isAlive()).length == 0) {
       this.model.failObjective("rescue");
-      this.pushUniqueEvent("desc-herd-killed");
+      this.pushUniqueEvent("herd-killed");
     }
   }
 

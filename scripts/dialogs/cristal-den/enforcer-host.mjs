@@ -5,10 +5,10 @@ class Dialog {
     this.dialog = dialog;
   }
 
-  onAskAboutPlace() {
+  onAskAboutTrouble() {
     if (areDenSlaversDead() && this.askAboutPlaceUseDenSlaverIntro())
       return "on-trouble-slavers-wiped-out";
-    if (game.dataEngine.getReputation("cristal-den") < 25)
+    if (game.dataEngine.getReputation("cristal-den") <= -25)
       return "on-trouble-bad-rep";
     return "on-trouble";
   }

@@ -534,6 +534,15 @@
         "value": 500,
         "weight": 25
     },
+    "quest-bibin-outpost-note": {
+        "icon": "ovipostor-note.png",
+        "isGroupable": false,
+        "scriptName": "quests/bibins-outpost-note.mjs",
+        "sprite": "misc",
+        "type": "quests",
+        "value": 0,
+        "weight": 0
+    },
     "quest-hillburrow-murder-evidence": {
         "icon": "sherif-star.png",
         "isGroupable": false,

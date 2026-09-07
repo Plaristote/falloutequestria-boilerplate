@@ -18,5 +18,11 @@
       "solve-murder": "Find the motive",
       "talk-to-doctor": "Ask Hillburrow's doctor"
     }
+  },
+  "item-descriptions": {
+    "quest-hillburrow-murder-evidence": "A Sheriff star you found on Mighty Hobo, the water carrier from Hillburrow."
+  },
+  "items": {
+    "quest-hillburrow-murder-evidence": "Sheriff star"
   }
 }

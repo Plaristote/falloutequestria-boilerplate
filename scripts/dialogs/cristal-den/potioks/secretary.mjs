@@ -19,6 +19,10 @@ class Dialog {
     return level.getVariable("sentByPat", 0) == 1 && !hasPotiokSpyQuest();
   }
 
+  wasSentByEnforcers() {
+    return game.getVariable("cristalDenEnforcersRecommendToPotiok", 0) == 1 && !hasPotiokSpyQuest();
+  }
+
   matriarchWillReceiveAboutBitty() {
     const result = this.matriarchWillReceiveAboutJob();
 

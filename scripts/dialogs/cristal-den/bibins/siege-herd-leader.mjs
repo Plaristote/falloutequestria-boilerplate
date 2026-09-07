@@ -4,7 +4,7 @@ class Dialog {
   }
 
   getEntryPoint() {
-    this.quest.script.pushUniqueEvent("desc-met-herd-leader");
+    this.quest.script.pushUniqueEvent("met-herd-leader");
     if (this.dialog.npc.hasVariable("onBibinStart"))
       return "on-bibin-start";
     if (this.quest.script.foughtAlongHerd)
@@ -36,8 +36,8 @@ class Dialog {
 
   completeQuest() {
     if (this.quest.script.foughtAlongHerd)
-      this.quest.script.pushUniqueEvent("desc-fought-off-enforcers");
-    this.quest.script.pushUniqueEvent("desc-rescued-herd");
+      this.quest.script.pushUniqueEvent("fought-off-enforcers");
+    this.quest.script.pushUniqueEvent("rescued-herd");
     this.quest.completeObjective("rescue");
     this.quest.completed = true;
     level.addTextBubble(this.dialog.npc, this.dialog.tr("leave-bubble"), 4500, "yellow");
@@ -45,7 +45,7 @@ class Dialog {
   }
 
   startFight() {
-    this.quest.script.pushUniqueEvent("desc-betrayed-herd");
+    this.quest.script.pushUniqueEvent("betrayed-herd");
     level.findGroup("herd").objects.forEach(model => model.attacksOnSight = true);
     this.dialog.npc.setAsEnemy(game.player);
   }

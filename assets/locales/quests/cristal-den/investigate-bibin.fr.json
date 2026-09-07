@@ -1,0 +1,15 @@
+{
+  "quests": {
+    "cristal-den/investigate-bibin": {
+      "title": "Une épine dans le sabot",
+      "description": "La Matriarche veut trouver quelque chose d'incriminant contre Bibin. Rapproche toi de lui, intègre ses troupes, et trouve la preuve de ce que Bibin trame en secret.",
+      "desc-sneaky-job": "Se rapprocher de Bibin n'est plus tout à fait une option - ses gardes te tirent à vue. Tu va devoir trouver un autre moyen : par exemple, une infiltration discrète pour fouiner dans ses effets personnels.",
+      "desc-met-herd-leader": "Tu as trouvé ta preuve. Bibin t'as envoyé à la rescousse de ses \"amis\" d'une patrouille du Havre Cristallin. Et ses amis étaient des soldats de la Meute d'Or.",
+      "desc-found-note": "Tu as trouvé une preuve dans une note dénichée dans les affaires de Bibin: des indications sur des tours de gardes, des patrouilles, accompagné d'un plan d'attaque... qui concerne l'avant-poste qui a été attaqué récemment par la Meute d'Or. Coïncidence ? Je ne pense pas.",
+      "desc-complete": "Tu as tout cafté à la Matriarche. Elle n'a pas semblée très surprise. Elle prépare maintenant quelque chose de gros.",
+      "findEvidence": "Trouve une preuve des crimes de Bibin",
+      "confirmTies": "Fais ton rapport à la Matriarche",
+      "outpost-note": "<p><b>AVANT-POSTE #4 - CONFIDENTIEL</b></p><p>0600 - 4 gardes, 4 en patrouille<br>1200 - 8 gardes<br>1800 - 4 gardes, 4 en patrouille<br>0000 - 8 gardes<br>Radio: 91.7</p><p><i>Scribbled hastily, in a different hoofwriting:</i><br>Hit at 1830. Intercept patrol on north road. Kill radio operator first. Move onto the outpost.</p>"
+    }
+  }
+}

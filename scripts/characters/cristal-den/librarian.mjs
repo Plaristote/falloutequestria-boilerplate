@@ -9,4 +9,8 @@ export default class extends CharacterBehaviour {
   get bed() {
     return level.findObject("house#2.bed");
   }
+
+  canSell(item) {
+    return true;
+  }
 }

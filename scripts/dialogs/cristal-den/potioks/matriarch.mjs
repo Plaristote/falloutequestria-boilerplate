@@ -1,3 +1,4 @@
+import {DialogHelper} from "../../helpers.mjs";
 import {
   canWarnPotioksAboutBibin,
   canReportSabotageToMatriarch,
@@ -13,10 +14,12 @@ import {
 import {enforcersKnowAboutHerdScouts} from "../../../quests/cristal-den/copper.mjs";
 import {RanchAccess} from "../../../levels/cristal-den-ranch.mjs";
 import {skillContest} from "../../../cmap/helpers/checks.mjs";
+import {hasSuitcaseBeenOpened} from "../../../quests/cristal-den/bibins-sabotage-delivery.mjs";
+import {QuestFlags} from "../../../quests/helpers.mjs";
 
-class Dialog {
+export default class Dialog extends DialogHelper  {
   constructor(dialog) {
-    this.dialog = dialog;
+    super(dialog);
   }
 
   getEntryPoint() {
@@ -47,74 +50,256 @@ class Dialog {
     return level.getVariable("sentByPat", 0) == 1 && !hasPotiokSpyQuest();
   }
 
+  wasSentByEnforcers() {
+    return game.getVariable("cristalDenEnforcersRecommendToPotiok", 0) == 1 && !hasPotiokSpyQuest();
+  }
+
   wasSentByBibin() {
-    return false;
+    return game.quests.hasQuest("cristal-den/bibins-potiok-assassination");
   }
 
-  canAskMoreJobs() {
-    if (this.sneakJobQuest?.completed) {
-      if (this.saboteurQuestCanStartOrReport())
-        return true;
-    }
-    return false;
-  }
-
-  askMoreJobs() {
-    if (this.saboteurQuestCanStartOrReport())
-      return "sabotage/init/entry";
-    else if (this.saboteurQuest?.completed && !game.quests.hasQuest("cristal-den/investigate-bibin")) {
-      if (this.knowsAboutGoldenHerdAndBibin)
-        return "bibin-job/init/entry-herd";
-      else if (bibinSabotageReportedToMatriarch())
-        return "bibin-job/init/entry-no-herd";
-    }
-    return "no-jobs-available";
-  }
-
+  // BEGIN Bibin Investigation/Battle
   get investigateBibinQuest() {
     return game.quests.getQuest("cristal-den/investigate-bibin");
   }
 
-  investigateBibinQuestStart() {
-    if (!game.quests.hasQuest("cristal-den/investigate-bibin"))
-      game.quests.addQuest("cristal-den/investigate-bibin");
+  get bibinInvestigationOver() {
+    return this.investigateBibinQuest?.completed === true;
   }
 
-  investigateBibinAskAboutSuspicions() {
-    if (learnedAboutSavageConnection())
-      return "bibin-job/init/suspicions-spy";
-    return "bibin-job/init/suspicions-hunch";
+  canOfferBibinInvestigation() {
+    return this.sneakJobQuest?.completed && !this.investigateBibinQuest;
   }
 
-  investigateBibinAskAboutHerd() {
-    if (false) // TODO if herd already destroyed
-      return "bibin-job/init/about-herd-destroyed";
-    return "bibin-job/init/about-herd";
+  get playerIsEnemyWithBibin() {
+    return game.diplomacy.areEnemies("player", "bibins-band");
   }
 
-  investigateBibinCanNegociate() {
-    return game.player.statistics.barter >= 80;
+  isPlayerEnemyWithBibin() {
+    return this.playerIsEnemyWithBibin;
   }
 
-  investigateBibinNegociated() {
-    game.player.statistics.addExperience(125);
-    tins.investigateBibinQuest.script.onNegociatedPayment();
+  get bibinInvestigationReward() {
+    return this.dialog.npc.getVariable("bibinInvestigationReward", 750);
   }
 
-  get investigateBibinReward() {
-    return this.investigateBibin?.script?.reward || 1000;
+  set bibinInvestigationReward(value) {
+    this.dialog.npc.setVariable("bibinInvestigationReward", value);
   }
 
-  playerLearnsAboutHerdTatoo() {
-    game.setVariable("playerKnowsAboutHerdTatoos", 1);
+  get bibinInvestigationIncreasedReward() {
+    return this.bibinInvestigationReward + 250;
+  }
+
+  bibinInvestigationCanNegociateReward() {
+    return this.bibinInvestigationReward < 1000;
+  }
+
+  bibinInvestigationNegociateReward() {
+    if (skillContest(game.player, this.dialog.npc, "barter") == game.player) {
+      this.bibinInvestigationReward = this.bibinInvestigationIncreasedReward;
+      return "bibin-investigation/offer/negociate-success";
+    }
+    return "bibin-investigation/offer/negociate-failure";
+  }
+
+  startBibinInvestigation() {
+    game.quests.addQuest("cristal-den/investigate-bibin");
+  }
+
+  get bibinRescueHerdQuest() {
+    return game.quests.getQuest("cristal-den/bibins-rescue-herd");
+  }
+
+  canOpenBibinReport() {
+    return game.quests.hasQuest("cristal-den/investigate-bibin") &&
+           (this.canReportHerdConnection() || this.canReportNote() || this.canReportSuitcase());
+  }
+
+  get bibinTiesAlreadyConfirmed() {
+    return this.investigateBibinQuest?.isObjectiveCompleted("confirmTies") === true;
+  }
+
+  canReportHerdConnection() {
+    return this.investigateBibinQuest && !this.bibinTiesAlreadyConfirmed
+        && this.bibinRescueHerdQuest?.script?.hasEvent("met-herd-leader") === true;
+  }
+
+  canReportNote() {
+    return this.investigateBibinQuest && !this.bibinTiesAlreadyConfirmed
+        && this.investigateBibinQuest.script.canReportOutpostNote();
+  }
+
+  canReportSuitcase() {
+    return !this.dialog.npc.hasVariable("bibinInvolvedInSabotage") && hasSuitcaseBeenOpened();
+  }
+
+  reportHerdConnection() {
+    this.confirmBibinTies();
+  }
+
+  reportNote() {
+    this.confirmBibinTies();
+  }
+
+  confirmBibinTies() {
+    this.investigateBibinQuest.completeObjective("confirmTies");
+    game.player.inventory.addItemOfType("bottlecaps", this.bibinInvestigationReward);
+  }
+
+  reportSuitcase() {
+    this.dialog.npc.setVariable("bibinInvolvedInSabotage", 1);
+  }
+
+  canOrganizeBibinBattle() {
+    return this.bibinTiesAlreadyConfirmed
+        && !game.quests.hasQuest("cristal-den/bibins-final-battle")
+        && !game.quests.hasQuest("cristal-den/bibins-potiok-assassination");
+  }
+
+  startBibinBattlePrep() {
+    game.quests.addQuest("cristal-den/bibins-final-battle");
+  }
+
+  get bibinBattleQuest() {
+    return game.quests.getQuest("cristal-den/bibins-final-battle");
+  }
+
+  canTriggerBibinBattle() {
+    return this.bibinBattleQuest?.inProgress === true;
+  }
+
+  canTriggerBibinBattleWithAllSupport() {
+    return this.bibinBattleQuest.isObjectiveCompleted("recruitSlavers")
+        && this.bibinBattleQuest.isObjectiveCompleted("recruitCaravaneers")
+  }
+
+  canTriggerBibinBattleWithCaravanSupport() {
+    return !this.bibinBattleQuest.isObjectiveCompleted("recruitSlavers")
+        && this.bibinBattleQuest.isObjectiveCompleted("recruitCaravaneers")
+  }
+
+  canTriggerBibinBattleWithSlaverSupport() {
+    return this.bibinBattleQuest.isObjectiveCompleted("recruitSlavers")
+        && !this.bibinBattleQuest.isObjectiveCompleted("recruitCaravaneers")
+  }
+
+  triggerBibinBattle() {
+    this.bibinBattleQuest.script.startBattle();
+  }
+
+  canAskMoreJobs() {
+    if (this.canOfferBibinInvestigation())
+      return true;
+    if (!this.heirsProgramOpen)
+      return false;
+    if (this.heirJobs.some((job) => job.canStart()))
+      return true;
+    return canDiscussSuccession();
+  }
+
+  askMoreJobs() {
+    if (this.canOfferBibinInvestigation())
+      return "bibin-investigation/offer/entry";
+
+    const next = this.heirJobs.find((job) => job.canStart());
+
+    if (next)
+      return next.entryState;
+    if (canDiscussSuccession())
+      return "heirs/succession/entry";
+    return "no-jobs-available";
+  }
+
+  reportOnBitty() {
+    this.dialog.npc.setVariable("currentHeirAudit", "bitty");
+  }
+
+  reportOnRewan() {
+    this.dialog.npc.setVariable("currentHeirAudit", "rewan");
+  }
+
+  reportOnCrafty() {
+    this.dialog.npc.setVariable("currentHeirAudit", "crafty");
+  }
+
+  canReportOnRewan() {
+    return rewanSecurityQuestCanReport();
+  }
+
+  canReportOnCrafty() {
+    return craftyWorkshopQuestCanReport();
+  }
+
+  get currentHeirAudit() {
+    return this.dialog.npc.getVariable("currentHeirAudit");
+  }
+
+  get currentHeirName() {
+    return HEIRS[this.currentHeirAudit]?.name;
+  }
+
+  rateHeirGood() {
+    rateHeir(this.currentHeirAudit, Rating.POSITIVE);
+  }
+
+  rateHeirMedium() {
+    rateHeir(this.currentHeirAudit, Rating.NEUTRAL);
+  }
+
+  rateHeirBad() {
+    rateHeir(this.currentHeirAudit, Rating.NEGATIVE);
+  }
+
+  rateHeirSkip() {
+  }
+
+  continueToHeirReportDetails() {
+    return `heirs/${this.currentHeirAudit}/report-details`;
+  }
+
+  canSuggestTroutAsHeir() {
+    return canSuggestTrout();
+  }
+
+  hasRatedBitty() {
+    return !isHeirDead("bitty") && hasRatedHeir("bitty");
+  }
+
+  hasRatedRewan() {
+    return !isHeirDead("rewan") && hasRatedHeir("rewan");
+  }
+
+  hasRatedCrafty() {
+    return !isHeirDead("crafty") && hasRatedHeir("crafty");
+  }
+
+  suggestBitty() {
+    suggestHeir("bitty");
+  }
+
+  suggestRewan() {
+    suggestHeir("rewan");
+  }
+
+  suggestCrafty() {
+    suggestHeir("crafty");
+  }
+
+  suggestTrout() {
+    suggestHeir("trout");
+  }
+
+  matriarchAgreesWithSuggestion() {
+    return true;
+  }
+
+  finalizeSuggestedHeir() {
+    finalizeHeir(this.currentHeirAudit);
   }
 
   get knowsAboutGoldenHerdAndBibin() {
     return learnedAboutSavageConnection() || enforcersKnowAboutHerdScouts();
-  }
-
-  get saboteurQuestCanStartOrReport() {
-    return !this.saboteurQuest || !this.saboteurQuest.script.sentByMatriarch || !this.saboteurQuest.script.reportedToMatriarch;
   }
 
   get sneakJobReward() {
@@ -168,10 +353,6 @@ class Dialog {
 
   sneakJobSpyKilled() {
     return this.sneakJobQuest && this.sneakJobQuest.getVariable("killedSpy", 0) == 1;
-  }
-
-  sneakJobHasFoundSpy() {
-    return this.sneakJobQuest && this.sneakJobQuest.isObjectiveCompleted("findSpy");
   }
 
   sneakJobHasFoundSpy() {
@@ -233,8 +414,4 @@ class Dialog {
   endSabotageReportWithBibinInvolvement() {
     bibinSabotageReportedToMatriarch();
   }
-}
-
-export function create(dialog) {
-  return new Dialog(dialog);
 }

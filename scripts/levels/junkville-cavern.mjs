@@ -17,10 +17,18 @@ import {
 
 import killArray from "../characters/killArray.mjs";
 
+class SelectiveAcidZoneEffect extends AcidZoneEffect {
+  applyEffectOn(target) {
+    if (target.statistics.race == "mutated-rat" || target.statistics.race == "giant-rat")
+      return ;
+    super.applyEffectOn(target);
+  }
+}
+
 export default class JunkvilleCavern {
   constructor(model) {
     this.model = model;
-    this.acidZone = new AcidZoneEffect(this, {
+    this.acidZone = new SelectiveAcidZoneEffect(this, {
       zone: level.tilemap.getZone("acid-zone"),
       scope: "acidZone", interval: 3000
     });

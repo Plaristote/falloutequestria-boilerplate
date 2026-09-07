@@ -10,6 +10,7 @@
             "text": "ask-about"
         },
         "ask-about-confusion-encourage": {
+            "hook": "sexAttempt",
             "text": "ask-about-confusion-encourage"
         },
         "ask-about-confusion-reject": {
@@ -88,6 +89,11 @@
         },
         "prompt-leave": {
             "text": "prompt-leave"
+        },
+        "sexing-action": {
+            "hook": "sexingAction",
+            "state": "sexing/afterwards",
+            "text": "sexing-action"
         },
         "work-entry-continue": {
             "state": "work/patrol/intro",
@@ -188,6 +194,29 @@
             ],
             "mood": "angry",
             "text": "prompt"
+        },
+        "sexing/afterwards": {
+            "answers": [
+                "ask-for-work",
+                "prompt-leave"
+            ],
+            "mood": "smile",
+            "text": "sexing/afterwards"
+        },
+        "sexing/entry": {
+            "answers": [
+                "sexing-action"
+            ],
+            "mood": "smile",
+            "text": "sexing/entry"
+        },
+        "sexing/failed": {
+            "answers": [
+                "ask-for-work",
+                "prompt-leave"
+            ],
+            "mood": "angry",
+            "text": "sexing/failed"
         },
         "work/ask-name": {
             "answers": [

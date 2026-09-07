@@ -1,0 +1,9 @@
+{
+  "cristal-den": {
+    "potioks": {
+      "cant-enter-ranch": "Circule. C'est une prioriété privée.."
+      "door-guard": { "proximity-warning": "Les Potioks ne reçoivent pas n'importe qui. T'as une raison d'être ici ?" },
+      "cant-enter-matriarch-office": "Hep ! Tu peux pas débarquer comme ça sans rendez-vous !"
+    }
+  }
+}

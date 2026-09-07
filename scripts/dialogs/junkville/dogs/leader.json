@@ -275,6 +275,10 @@
             "state": "scavengers/wounded-intro",
             "text": "exit"
         },
+        "scavenger-release-continue": {
+            "hook": "scavengerAfterCaptivesFreed",
+            "text": "exit"
+        },
         "scavengers-release-now": {
             "state": "scavengers/release-request",
             "text": "scavengers-release-now"
@@ -676,6 +680,12 @@
             "hook": "scavengerAbout",
             "text": "scavengers/about"
         },
+        "scavengers/ask-supplies-no-bargain": {
+            "answers": [
+            ],
+            "mood": "sad",
+            "text": "scavengers/ask-supplies-no-bargain"
+        },
         "scavengers/captives": {
             "answers": [
                 "captives-ask-demands",
@@ -686,6 +696,7 @@
         },
         "scavengers/convince-success": {
             "answers": [
+                "scavenger-release-continue"
             ],
             "hook": "scavengerConvincedToRelease",
             "mood": "dubious",
@@ -699,6 +710,7 @@
         },
         "scavengers/intimidation-success": {
             "answers": [
+                "scavenger-release-continue"
             ],
             "text": "scavengers/intimidation-success"
         },

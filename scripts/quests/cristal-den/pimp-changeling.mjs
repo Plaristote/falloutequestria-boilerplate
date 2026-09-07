@@ -1,5 +1,10 @@
 import {QuestHelper, QuestFlags, requireQuest} from "../helpers.mjs";
 
+export function troutReplacedByChangeling() {
+  const quest = requireQuest("cristal-den/pimp-changeling", QuestFlags.HiddenQuest);
+  return !quest.script.petioleKilled && quest.isObjectiveCompleted("swapPimp");
+}
+
 export default class PimpChangeling extends QuestHelper {
   get xpReward() {
     let total = 1325;

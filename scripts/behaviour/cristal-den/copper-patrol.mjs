@@ -2,6 +2,54 @@ import CaravanProcess from "../../caravan.mjs";
 
 let instance = null;
 
+const caravanPartyName = "cristal-den-patrol-escort";
+
+const inventoryGuard = {
+  "items": [
+     {
+       "animation": "misc",
+       "float": false,
+       "itemType": "9mm-ammo",
+        "objectName": "9mm-ammo",
+       "quantity": 24,
+       "spriteName": "items",
+       "useMode": ""
+     }
+  ],
+  "slots": {
+    "armor": {
+      "animation": "metal-armor",
+      "float": false,
+      "hasItem": true,
+      "itemType": "combat-armor",
+      "mtx": 0,
+      "mty": 0,
+      "nextX": 0,
+      "nextY": 0,
+      "objectName": "combat-armor",
+      "quantity": 1,
+      "rx": 0,
+      "ry": 0,
+      "slotType": "armor",
+      "spriteName": "items",
+      "useMode": "use",
+      "x": -1,
+      "y": -1
+    },
+    "use-2": {
+      "animation": "mouthgun",
+      "hasItem": true,
+      "itemType": "mouthgun",
+      "ammo": 10,
+      "objectName": "mouthgun",
+      "quantity": 1,
+      "slotType": "any",
+      "spriteName": "items",
+      "useMode": "use"
+    }
+  }
+};
+
 class PatrolProcess extends CaravanProcess {
   get quest() {
     return game.quests.getQuest("cristal-den/copper-patrol")
@@ -13,6 +61,20 @@ class PatrolProcess extends CaravanProcess {
 
   get variableStore() {
     return this.quest;
+  }
+
+  caravanPartyData(members = null) {
+    if (members === null) {
+      members = [];
+      for (let i = 0 ; i < this.escortMembersCount ; ++i) {
+        members.push({ sheet: "cristal-den/guard", inventory: inventoryGuard });
+      }
+    }
+    return {
+      "name": caravanPartyName,
+      "members": members,
+      "faction": "cristal-den"
+    }
   }
 
   start() {

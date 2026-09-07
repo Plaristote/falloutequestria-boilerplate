@@ -99,6 +99,10 @@ export class JunkvilleDumpsDisappeared extends QuestHelper {
     return this.model.hasVariable("ransomSkipped");
   }
 
+  get ransomResolved() {
+    return this.model.isObjectiveCompleted("bring-ransom") || this.model.hasVariable("reportedHealedDogs");
+  }
+
   get requiredSupplies() {
     return { "medikit": 1, "healing-potion": 5 };
   }
@@ -153,7 +157,7 @@ export class JunkvilleDumpsDisappeared extends QuestHelper {
       text += `<p>${this.model.tr("desc-initby-dogs")}</p>`;
       break ;
     }
-    if (this.ransomActive) {
+    if (this.suppliesRequested && !this.ransomResolved) {
       text += `<p>${this.model.tr("desc-ransom")}</p>`;
     }
     if (this.model.isObjectiveCompleted("healWoundedDogs")) {
@@ -183,7 +187,7 @@ export class JunkvilleDumpsDisappeared extends QuestHelper {
         objectives.push({
           label: this.tr("heal-wounded-dogs"), success: true
         });
-      } else if (this.ransomActive) {
+      } else if (this.suppliesRequested && !this.ransomResolved) {
         objectives.push({
           label: this.tr("bring-ransom"),
           success: this.captiveAlive() && this.model.isObjectiveCompleted("bring-ransom"),

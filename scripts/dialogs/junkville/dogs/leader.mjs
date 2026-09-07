@@ -85,8 +85,8 @@ export default class Dialog {
 
   onCaptiveRansomNotYet() {
     return captiveReleaseAuthorized()
-      ? this.dialog.tr("scavengers/on-ransom-not-yet")
-      : this.dialog.tr("scavengers/on-ransom-not-yet-freed");
+      ? this.dialog.tr("scavengers/on-ransom-not-yet-freed")
+      : this.dialog.tr("scavengers/on-ransom-not-yet");
   }
 
   woundedDogsTopic() {
@@ -137,6 +137,13 @@ export default class Dialog {
   scavengerConvincedToRelease() {
     authorizeCaptiveRelease();
     enableScavengerRansom("alt");
+  }
+
+  scavengerAfterCaptivesFreed() {
+    const script = this.scavengerQuest.script;
+    if (script.ransomActive || script.ransomResolved)
+      return "";
+    return "scavengers/ask-supplies-no-bargain";
   }
 
   scavengerWoundedHealed() {

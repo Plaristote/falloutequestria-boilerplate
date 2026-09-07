@@ -1,0 +1,9 @@
+{
+  "cristal-den": {
+    "potioks": {
+      "cant-enter-ranch": "Move along. This is private property.",
+      "door-guard": { "proximity-warning": "Potioks don't just see anybody. State your business or leave." },
+      "cant-enter-matriarch-office": "Wait. You can't just barge in without an appointment."
+    }
+  }
+}

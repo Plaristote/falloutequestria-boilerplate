@@ -43,6 +43,7 @@
             "text": "recruit-pitch-caps"
         },
         "recruit-pitch-sneak": {
+            "hook": "recruitPitchSneak",
             "state": "recruitment/success",
             "text": "recruit-pitch-sneak"
         },
@@ -115,6 +116,12 @@
             "hook": "",
             "mood": "dubious",
             "text": "recruitment/failure"
+        },
+        "recruitment/failure-conspicuous": {
+            "answers": [
+            ],
+            "mood": "dubious",
+            "text": "recruitment/failure-conspicuous"
         },
         "recruitment/success": {
             "answers": [

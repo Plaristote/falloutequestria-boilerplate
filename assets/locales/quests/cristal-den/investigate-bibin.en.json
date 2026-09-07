@@ -1,0 +1,15 @@
+{
+  "quests": {
+    "cristal-den/investigate-bibin": {
+      "title": "A thorn in her hoof",
+      "description": "The Matriarch wants something she can use against Bibin. Get close to him, work your way into his crew, and find proof of what he's really up to.",
+      "desc-sneaky-job": "Getting close to Bibin isn't an option anymore - his crew shoots you on sight. You'll have to find your proof another way: get into his belongings without him knowing.",
+      "desc-met-herd-leader": "You found your proof. Bibin sent you to rescue his \"friends\" from a Cristal Den patrol. Turns out his friends are Golden Herd, through and through.",
+      "desc-found-note": "You found proof, of all places, in a note among Bibin's belongings: guard shifts for one of the enforcers' outposts, with an attack plan scrawled onto it in a different hoofwriting. That outpost was the one hit by the Golden Herd.",
+      "desc-completed": "You told the Matriarch everything. Seems like she was already expecting that news. She's preparing something big.",
+      "findEvidence": "Find proof of Bibin's misdeeds",
+      "confirmTies": "Report back to the Matriarch",
+      "outpost-note": "<p><b>GUARD OUTPOST #4 — CONFIDENTIAL</b></p><p>0600 — 4 guards, 4 on patrol<br>1200 — 8 guards<br>1800 — 4 guards, 4 on patrol<br>0000 — 8 guards<br>Radio: 91.7</p><p><i>Scribbled hastily, in a different hoofwriting:</i><br>Hit at 1830. Intercept patrol on north road. Kill radio operator first. Move onto the outpost.</p>"
+    }
+  }
+}

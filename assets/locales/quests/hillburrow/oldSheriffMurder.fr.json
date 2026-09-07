@@ -18,5 +18,11 @@
       "solve-murder": "Trouver le mobile du crime",
       "talk-to-doctor": "Parler au docteur de Hillburrow"
     }
+  },
+  "item-descriptions": {
+    "quest-hillburrow-murder-evidence": "Une étoile de shérif que tu as trouvé sur Mighty Hobo, le porteur d'eau à Hillburrow."
+  },
+  "items": {
+    "quest-hillburrow-murder-evidence": "Etoile de shérif"
   }
 }
