@@ -11,6 +11,8 @@ export default class CompanionDialog extends DialogHelper {
   }
 
   tr(name, vars = {}) {
+    if (!vars.name)
+      vars.name = this.dialog.player.displayName;
     if (name.startsWith("companion."))
       return this.dialog.tWithFallback(name, vars, i18n.t(`dialogs.${name}`, vars));
     return this.dialog.tr(name, vars);
