@@ -11,7 +11,7 @@ export function randomInterval(min, max) {
 }
 
 export function randomCheck(threshold, handlers, roller = null) {
-  const criticalThreshold = isJinxed(level.player) ? 5 : 15;
+  const criticalThreshold = isJinxed(level.player) ? 15 : 5;
   const criticalSuccessThreshold = roller ? roller.statistics.criticalChance : 5;
   const roll = getValueFromRange(0, 100, roller);
 
