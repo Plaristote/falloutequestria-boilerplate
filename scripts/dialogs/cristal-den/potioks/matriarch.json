@@ -9,6 +9,9 @@
             "hook": "askMoreJobs",
             "text": "ask-more-jobs"
         },
+        "back-prompt": {
+            "text": "exit"
+        },
         "back-to-sabotage-report": {
             "state": "sabotage/report-follow-up",
             "text": "back-to-sabotage-report"
@@ -43,7 +46,6 @@
         },
         "bibin-investigation-trigger-battle": {
             "availableHook": "canTriggerBibinBattle",
-            "hook": "triggerBibinBattle",
             "state": "bibin-investigation/trigger-battle",
             "text": "bibin-investigation-trigger-battle"
         },
@@ -494,6 +496,13 @@
     },
     "entryPoint": "intrusion",
     "states": {
+        "bibin-investigation/battle/lost": {
+            "answers": [
+            ],
+            "hook": "matriarchTurnsHostile",
+            "mood": "angry",
+            "text": "bibin-investigation/battle/lost"
+        },
         "bibin-investigation/battle/start-full-support": {
             "answers": [
                 "bibin-trigger-battle-start",
@@ -517,6 +526,21 @@
             ],
             "mood": "neutral",
             "text": "bibin-investigation/battle/start-partial-support"
+        },
+        "bibin-investigation/battle/won": {
+            "answers": [
+            ],
+            "hook": "grantHenchponyStatus",
+            "mood": "smile",
+            "text": "bibin-investigation/battle/won"
+        },
+        "bibin-investigation/killed-out-of-band": {
+            "answers": [
+                "back-prompt"
+            ],
+            "hook": "acknowledgeBibinKilledIndependently",
+            "mood": "dubious",
+            "text": "bibin-investigation/killed-out-of-band"
         },
         "bibin-investigation/offer/accepted": {
             "answers": [

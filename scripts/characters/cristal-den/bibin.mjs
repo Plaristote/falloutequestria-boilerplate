@@ -8,6 +8,7 @@ export class Bibin extends CharacterBehaviour {
 
   onDied() {
     game.setVariable("bibinDead", 1);
+    game.dataEngine.addReputation(100, "potioks");
     super.onDied();
   }
 }

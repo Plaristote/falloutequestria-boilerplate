@@ -1,5 +1,6 @@
 import {LevelBase} from "./base.mjs";
 import {potiokSpyQuestStarted, onEndPotiokSpyEscape, onExitPotiokSpyEscape} from "../quests/cristal-den/potioks-spy.mjs";
+import {bibinFinalBattleOngoing, onExitBibinFinalBattle} from "../quests/cristal-den/bibins-final-battle.mjs";
 
 export class CristalDenSlums extends LevelBase {
   onZoneEntered(zoneName, object) {
@@ -11,5 +12,7 @@ export class CristalDenSlums extends LevelBase {
   onExit() {
     if (potiokSpyQuestStarted())
       onExitPotiokSpyEscape();
+    if (bibinFinalBattleOngoing())
+      onExitBibinFinalBattle();
   }
 }

@@ -1,4 +1,4 @@
-import {LockedStorage} from "../../locked-storage.mjs"
+import {LockedStorage} from "../locked-storage.mjs"
 
 export default class extends LockedStorage {
   constructor(model) {

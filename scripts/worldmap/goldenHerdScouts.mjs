@@ -1,29 +1,4 @@
-function generateGear(inventory, difficultyRoll) {
-  inventory.slots["saddle"] = {
-    "hasItem": true,
-    "slotType": "saddle",
-    "itemType": "saddle"
-  };
-  inventory.items.push({
-    "itemType": "5.56-ammo",
-    "quantity": Math.ceil(difficultyRoll / 2)
-  });
-  inventory.slots["use-1"] = {
-    "hasItem": true,
-    "slotType": "any",
-    "itemType": "assault-rifle",
-    "ammo": 10,
-    "quantity": 1,
-    "useMode": "use"
-  };
-  inventory.slots["use-2"] = {
-    "hasItem": true,
-    "slotType": "any",
-    "itemType": "combat-knife",
-    "quantity": 1,
-    "useMode": "use"
-  };
-}
+import {generateGear} from "../equipments/golden-herd.mjs";
 
 export default function (difficultyRoll) {
   const count = Math.ceil(Math.random() * (difficultyRoll / 10));

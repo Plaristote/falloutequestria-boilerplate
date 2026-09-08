@@ -23,6 +23,7 @@ export default class Dialog extends DialogHelper  {
   }
 
   getEntryPoint() {
+    const firstMeeting = this.firstMeetingCheck();
     let entryPoint = "intrusion";
 
     if (this.dialog.npc.hasVariable("sabotagePrompt")) {
@@ -31,10 +32,18 @@ export default class Dialog extends DialogHelper  {
     } else if (this.dialog.npc.hasVariable("jobPrompt")) {
       this.dialog.npc.unsetVariable("jobPrompt");
       entryPoint = "sneak-job/apply/entry";
-    } else if (this.dialog.npc.hasVariable("met")) {
+    } else if (this.bibinBattleQuest?.completed && !this.dialog.npc.hasVariable("bibinBattleWonAcknowledged")) {
+      this.dialog.npc.setVariable("bibinBattleWonAcknowledged", 1);
+      entryPoint = "bibin-investigation/battle/won";
+    } else if (this.bibinBattleQuest?.failed && !this.dialog.npc.hasVariable("bibinBattleLostAcknowledged")) {
+      this.dialog.npc.setVariable("bibinBattleLostAcknowledged", 1);
+      entryPoint = "bibin-investigation/battle/lost";
+    } else if (this.bibinKilledIndependently && !this.dialog.npc.hasVariable("bibinOutOfBandKillAcknowledged")) {
+      this.dialog.npc.setVariable("bibinOutOfBandKillAcknowledged", 1);
+      entryPoint = "bibin-investigation/killed-out-of-band";
+    } else if (!firstMeeting) {
       entryPoint = "prompt";
     }
-    this.dialog.npc.setVariable("met", 1);
     return entryPoint;
   }
 
@@ -58,6 +67,14 @@ export default class Dialog extends DialogHelper  {
     return game.quests.hasQuest("cristal-den/bibins-potiok-assassination");
   }
 
+  get bibinDead() {
+    return game.hasVariable("bibinDead");
+  }
+
+  get bibinKilledIndependently() {
+    return this.bibinDead && this.bibinBattleQuest?.completed !== true;
+  }
+
   // BEGIN Bibin Investigation/Battle
   get investigateBibinQuest() {
     return game.quests.getQuest("cristal-den/investigate-bibin");
@@ -68,7 +85,7 @@ export default class Dialog extends DialogHelper  {
   }
 
   canOfferBibinInvestigation() {
-    return this.sneakJobQuest?.completed && !this.investigateBibinQuest;
+    return !this.bibinKilledIndependently && this.sneakJobQuest?.completed && !this.investigateBibinQuest;
   }
 
   get playerIsEnemyWithBibin() {
@@ -112,7 +129,7 @@ export default class Dialog extends DialogHelper  {
   }
 
   canOpenBibinReport() {
-    return game.quests.hasQuest("cristal-den/investigate-bibin") &&
+    return !this.bibinKilledIndependently && game.quests.hasQuest("cristal-den/investigate-bibin") &&
            (this.canReportHerdConnection() || this.canReportNote() || this.canReportSuitcase());
   }
 
@@ -152,7 +169,7 @@ export default class Dialog extends DialogHelper  {
   }
 
   canOrganizeBibinBattle() {
-    return this.bibinTiesAlreadyConfirmed
+    return !this.bibinKilledIndependently && this.bibinTiesAlreadyConfirmed
         && !game.quests.hasQuest("cristal-den/bibins-final-battle")
         && !game.quests.hasQuest("cristal-den/bibins-potiok-assassination");
   }
@@ -166,7 +183,7 @@ export default class Dialog extends DialogHelper  {
   }
 
   canTriggerBibinBattle() {
-    return this.bibinBattleQuest?.inProgress === true;
+    return !this.bibinKilledIndependently && this.bibinBattleQuest?.inProgress === true;
   }
 
   canTriggerBibinBattleWithAllSupport() {
@@ -186,6 +203,19 @@ export default class Dialog extends DialogHelper  {
 
   triggerBibinBattle() {
     this.bibinBattleQuest.script.startBattle();
+  }
+
+  grantHenchponyStatus() {
+    game.player.statistics.togglePerk("potion-henchpony", true);
+  }
+
+  matriarchTurnsHostile() {
+    game.diplomacy.setAsEnemy(true, "player", "potioks");
+  }
+
+  acknowledgeBibinKilledIndependently() {
+    if (this.investigateBibinQuest && !this.investigateBibinQuest.completed)
+      this.investigateBibinQuest.failed = true;
   }
 
   canAskMoreJobs() {

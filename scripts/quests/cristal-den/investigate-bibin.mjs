@@ -6,6 +6,13 @@ export class InvestigateBibin extends QuestHelper {
     this.model.addObjective("findEvidence");
   }
 
+  get xpReward() {
+    let xp = 1250;
+    if (this.metHerdLeader) xp += 250;
+    if (this.hasNoteEvidence) xp += 250;
+    return xp;
+  }
+
   getDescription() {
     let text = `<p>${this.model.tr("description")}</p>`;
 
