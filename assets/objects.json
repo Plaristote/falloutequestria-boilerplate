@@ -534,6 +534,15 @@
         "value": 500,
         "weight": 25
     },
+    "power-sledgehammer": {
+        "icon": "power-sledge.webp",
+        "isGroupable": true,
+        "scriptName": "power-sledgehammer.mjs",
+        "sprite": "misc",
+        "type": "weapon",
+        "value": 3750,
+        "weight": 12
+    },
     "quest-bibin-outpost-note": {
         "icon": "ovipostor-note.png",
         "isGroupable": false,
@@ -683,6 +692,15 @@
         "type": "consommables",
         "value": 340,
         "weight": 3
+    },
+    "sledgehammer": {
+        "icon": "sledgehammer.webp",
+        "isGroupable": true,
+        "scriptName": "sledgehammer.mjs",
+        "sprite": "misc",
+        "type": "weapon",
+        "value": 250,
+        "weight": 12
     },
     "sniper-rifle": {
         "icon": "sniper-rifle.webp",

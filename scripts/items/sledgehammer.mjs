@@ -1,5 +1,5 @@
 import {WeaponBehaviour} from "./weapon.mjs";
-import {getValueFromRange} from "../behaviour/random.mjs";
+import {randomCheck, getValueFromRange} from "../behaviour/random.mjs";
 import {BlastWave} from "../behaviour/explosion.mjs";
 import {attemptPushAway} from "./push.mjs";
 
@@ -75,7 +75,7 @@ export default class Sledgehammer extends WeaponBehaviour {
   applySwingOnTarget(target) {
     if (target.getObjectType() == "Character" && target != this.user) {
       const damage = this.getDamageFor(target);
-      const successRate = getUseSuccessRateAt(target);
+      const successRate = this.getUseSuccessRateAt(target);
 
       randomCheck(successRate, {
         success: () => {
@@ -84,12 +84,12 @@ export default class Sledgehammer extends WeaponBehaviour {
           }));
           target.takeDamage(damage, this.user);
           attemptPushAway(target, damage, this.user.position);
-        }
+        },
         failure: () => {
           game.appendToConsole(i18n.t("messages.weapons.dodge", {
             target: target.displayName,
             user: this.user.displayName
-          });
+          }));
         }
       });
     }
@@ -123,7 +123,7 @@ export default class Sledgehammer extends WeaponBehaviour {
     game.appendToConsole(i18n.t("messages.weapons.critical-failure", {
       user: this.user.displayName,
       item: this.model.displayName
-    })
+    }));
     this.user.takeDamage(this.getDamageFor(this.user), null);
   }
 }
