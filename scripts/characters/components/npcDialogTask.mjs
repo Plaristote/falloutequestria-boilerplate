@@ -21,7 +21,7 @@ class NpcDialogTask {
   }
   
   persistParts() {
-    this.parent.setVariable("NpcDialogTask", JSON.stringify(parts));
+    this.parent.setVariable("NpcDialogTask", JSON.stringify(this.parts));
   }
   
   setTargetsTaskState(value) {

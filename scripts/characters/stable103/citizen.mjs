@@ -1,4 +1,4 @@
-import {PasserbyBehaviour} from "../passerby.mjs";
+import PasserbyBehaviour from "../passerby.mjs";
 
 function initializeHomePosition(character) {
   if (!character.hasVariable("homeX")) {

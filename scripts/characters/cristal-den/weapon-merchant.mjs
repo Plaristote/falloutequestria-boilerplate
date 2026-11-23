@@ -1,4 +1,4 @@
-import {ShopOwner} from "./../shop-owner.mjs";
+import ShopOwner from "./../shop-owner.mjs";
 import {RoutineComponent} from "../../behaviour/routine.mjs";
 import {callGuards, AlarmLevel} from "../components/alarm.mjs";
 import {overrideBehaviour} from "../../behaviour/override.mjs";

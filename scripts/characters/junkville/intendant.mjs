@@ -1,4 +1,4 @@
-import {ShopOwner} from "../shop-owner.mjs";
+import ShopOwner from "../shop-owner.mjs";
 import {overrideBehaviour} from "../../behaviour/override.mjs";
 import {RoutineComponent} from "../../behaviour/routine.mjs";
 import {routine, initializeRoutineUser} from "./resident-routine.mjs";

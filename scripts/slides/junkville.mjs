@@ -1,4 +1,5 @@
 import {areCaptorsDead} from "../quests/junkvilleDumpsDisappeared.mjs";
+import {hasAltLeaderTakenOver} from "../quests/junkvilleNegociateWithDogs.mjs";
 import {
   hasCavernBanditsQuest,
   banditsCleared,

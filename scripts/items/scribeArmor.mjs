@@ -1,4 +1,4 @@
-import {ArmorBehaviour} from "./armor.mjs";
+import ArmorBehaviour from "./armor.mjs";
 
 class Armor extends ArmorBehaviour  {
   constructor(model) {

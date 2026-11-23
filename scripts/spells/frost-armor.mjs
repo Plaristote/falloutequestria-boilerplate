@@ -7,14 +7,14 @@ export const targetMode = 1;
 
 export const actionPointCost = 3;
 
-export function use(chracter) {
+export function use(character) {
   const buff = character.getBuff(buffName);
 
   if (buff) {
     game.appendToConsole(i18n.t("messages.invalid-target"));
     return false;
   }
-  return spellCast(difficulty, character, triggerUse );
+  return spellCast(difficulty, character, triggerUse.bind(null, character));
 }
 
 export function triggerUse(character) {

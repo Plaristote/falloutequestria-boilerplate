@@ -76,7 +76,7 @@ export default class extends LevelBase {
   onExitBacktrackAssault() {
     const backtrack = this.backtrack;
     const searchingFather = game.quests.getQuest("unhaus/searching-father");
-    const quest = requireQuest("investigateUnhaus");
+    const quest = requireQuest("unhaus/investigateUnhaus");
     const jailed = searchingFather && searchingFather.completed;
 
     if (backtrack && backtrack.isAlive()) {

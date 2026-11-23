@@ -1,4 +1,4 @@
-import {ShopOwner} from "./../shop-owner.mjs";
+import ShopOwner from "./../shop-owner.mjs";
 import {RoutineComponent} from "../../behaviour/routine.mjs";
 
 export default class extends ShopOwner {

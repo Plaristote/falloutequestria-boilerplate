@@ -74,7 +74,7 @@ export default class extends QuestHelper {
   }
 
   set playerAdvanceAmount(value) {
-    return this.model.setVariable("paidInAdvance", value);
+    this.model.setVariable("paidInAdvance", value);
   }
 
   get playerReceivedReward() {

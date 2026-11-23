@@ -1,8 +1,8 @@
 import {isJinxed, getValueFromRange} from "./behaviour/random.mjs";
-import {generateHostileEncounter} from "worldmap/hostileEncounters.mjs";
-import {generateEncounterLevel} from "worldmap/encounterLevels.mjs";
-import loadCaravansIntoLevel from "worldmap/caravanEncounterPlacement.mjs";
-import inventoryCaravaneer from "equipments/caravaneers.mjs";
+import {generateHostileEncounter} from "./worldmap/hostileEncounters.mjs";
+import {generateEncounterLevel} from "./worldmap/encounterLevels.mjs";
+import loadCaravansIntoLevel from "./worldmap/caravanEncounterPlacement.mjs";
+import inventoryCaravaneer, {inventoryFighter} from "./equipments/caravaneers.mjs";
 
 const caravanPartyName = "caravan-escort";
 

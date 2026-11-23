@@ -123,7 +123,7 @@ class Dialog {
   }
 
   crystalsQuestToldAboutCrystalMagic() {
-    this.crystalsQuest.script.flags.add(CrystalQuestFlags.CounselorKnowsAboutCrystalMagic);
+    this.crystalsQuest.script.flags.add(CrystalsQuestFlags.CounselorKnowsAboutCrystalMagic);
   }
 
   crystalsQuestFinish() {

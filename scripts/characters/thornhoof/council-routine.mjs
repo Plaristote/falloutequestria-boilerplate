@@ -6,7 +6,7 @@ export const routine = [
   { hour: "19", minute: "29", callback: "goToHome" }
 ];
 
-export default CouncilAttendant extends CharacterBehaviour {
+export default class CouncilAttendant extends CharacterBehaviour {
   constructor(model) {
     super(model);
     this.routineComponent = new RoutineComponent(this, routine);

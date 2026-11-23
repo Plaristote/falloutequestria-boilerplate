@@ -1,4 +1,4 @@
-import {ShopOwner} from "./../../shop-owner.mjs";
+import ShopOwner from "./../../shop-owner.mjs";
 
 export default class Owner extends ShopOwner {
   constructor(model) {

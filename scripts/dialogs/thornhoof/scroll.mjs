@@ -80,7 +80,7 @@ class Dialog {
   }
 
   labQuestTryToStart() {
-    const crystalQuest = game.quests.getQuest("thornhoof/crystalsQuest");
+    const crystalQuest = game.quests.getQuest("thornhoof/refugeesCrystals");
     const fightQuest = game.quests.getQuest("thornhoof/refugeesFight");
 
     if (fightQuest && fightQuest.completed)

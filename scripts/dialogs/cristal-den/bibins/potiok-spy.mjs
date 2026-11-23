@@ -30,7 +30,7 @@ class Dialog {
   }
 
   murderAvailableAfterConfession() {
-    return !canProbeAboutSavageConnection();
+    return !this.canProbeAboutSavageConnection();
   }
 
   canConvinceToTellAboutConfession() {

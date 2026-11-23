@@ -1,4 +1,4 @@
-import {Rifle} from "./rifle.mjs";
+import Rifle from "./rifle.mjs";
 
 export default class SniperRifle extends Rifle {
   constructor(model) {

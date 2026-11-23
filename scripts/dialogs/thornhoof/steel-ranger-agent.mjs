@@ -1,6 +1,6 @@
 import {skillCheck} from "../../cmap/helpers/checks.mjs";
 import {QuestFlags, requireQuest} from "../../quests/helpers.mjs";
-import {DialogHelper} from "../helpers.mjs";
+import DialogHelper from "../helpers.mjs";
 
 class Dialog extends DialogHelper {
   constructor(dialog) {

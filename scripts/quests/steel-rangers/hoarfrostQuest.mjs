@@ -1,4 +1,4 @@
-import {QuestHelper} from "../helpers.mjs";
+import {QuestHelper, QuestFlags, requireQuest} from "../helpers.mjs";
 
 const itemId = "thornhoof-laboratory-device";
 
@@ -36,7 +36,6 @@ export default class extends QuestHelper {
       break ;
     case "delivery":
       this.model.completed = true;
-      if (game.quests.getQuest("thorn"))
       break ;
     }
   }

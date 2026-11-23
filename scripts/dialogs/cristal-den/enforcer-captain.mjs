@@ -1,4 +1,4 @@
-import {DialogHelper} from "../helpers.mjs";
+import DialogHelper from "../helpers.mjs";
 import {matriarchDead} from "../../quests/cristal-den/potioks.mjs";
 
 export default class extends DialogHelper {

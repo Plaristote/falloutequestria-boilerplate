@@ -31,6 +31,7 @@ export default class extends CharacterBehaviour {
           refugeesFightQuest().script.woundedDetected = 1;
           break ;
         }
+        // falls through: the medic saw through the disguise
       case 2:
         message += "matchDescription";
         refugeesFightQuest().script.woundedDetected = 2;

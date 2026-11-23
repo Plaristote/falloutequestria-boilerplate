@@ -46,7 +46,7 @@ function abort() {
   const quest = game.quests.getQuest(questName);
 
   level.script.removeSlaves();
-  slaveRiot.completed = slaveRiot.failed = true;
+  quest.completed = quest.failed = true;
 }
 
 function finalize() {
@@ -176,7 +176,7 @@ export class SlaveRiot extends QuestHelper {
   startRiot() {
     const weaponInventory = game.getCharacter("hillburrow/rainy-purple").inventory;
     const slaves = level.find("slaves.*");
-    const guards = level.find("guards.**.*");
+    const guards = level.findGroup("guards").find(c => c.type == "Character");
 
     slaves.forEach(slave => {
       slave.script.seekAndDestroy.enable();
@@ -196,6 +196,7 @@ export class SlaveRiot extends QuestHelper {
   }
 
   startImprovisedRiot() {
+    const guards = level.findGroup("guards").find(c => c.type == "Character");
     this.model.setVariable("riotStarted", 2);
     level.setVariable("riotStarted", 1);
     game.diplomacy.setAsEnemy(true, "hillburrow-potioks", "hillburrow-slaves");

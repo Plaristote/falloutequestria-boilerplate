@@ -19,14 +19,14 @@ export function triggerUse(character, target, critical) {
   const maxHeal = stats.maxHitPoints - stats.hitPoints;
   const healed = Math.floor(Math.min(maxHeal, 5 + getValueFromRange(1, skill / 9)));
 	
-  character.statistics.hitPoints += healed;
+  stats.hitPoints += healed;
   game.appendToConsole(i18n.t("messages.spellcast-success", {
     character: character.displayName,
     spell: i18n.t("spells.heal")
   }) + ' ' + i18n.t("messages.healed", {
-    target: stats.name,
+    target: target.displayName,
     hp: healed
-  });
+  }));
 }
 
 export function criticalSuccess(character, target) {
@@ -35,11 +35,11 @@ export function criticalSuccess(character, target) {
   target.statistics.hitPoints += healed;
   game.appendToConsole(i18n.t("messages.spellcast-critical-success", {
     character: character.displayName,
-    spell: i18n.t("spells.ead")
+    spell: i18n.t("spells.heal")
   }) + ' ' + i18n.t("messages.healed", {
     target: target.displayName,
     hp: healed
-  });
+  }));
 }
 
 export function criticalFailure(character) {

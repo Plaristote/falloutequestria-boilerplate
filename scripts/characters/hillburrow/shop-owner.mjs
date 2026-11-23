@@ -1,5 +1,5 @@
 import {CharacterBehaviour} from "../character.mjs";
-import {ShopOwner} from "../shop-owner.mjs";
+import ShopOwner from "../shop-owner.mjs";
 
 class HillburrowShopOwner extends ShopOwner {
   constructor(model) {

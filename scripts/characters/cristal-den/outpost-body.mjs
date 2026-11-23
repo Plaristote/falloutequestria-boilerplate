@@ -22,7 +22,7 @@ export default class extends CharacterBehaviour {
       else
         game.appendToConsole(this.quest.tr("inspect-body-floor-0-failure"));
     } else {
-      quest.setVariable("inspect-body-success", 1);
+      this.quest.setVariable("inspect-body-success", 1);
       game.appendToConsole(this.quest.tr("inspect-body-floor-1"));
     }
     return true;

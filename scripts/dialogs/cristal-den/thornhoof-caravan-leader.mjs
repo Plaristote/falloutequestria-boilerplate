@@ -1,10 +1,5 @@
-import {DialogHelper} from "../helpers.mjs";
+import DialogHelper from "../helpers.mjs";
 import {multipleSkillContest} from "../../cmap/helpers/checks.mjs";
-
-function arrayCount(array, value) {
-  const map = arr.reduce((acc, e) => acc.set(e, (acc.get(e) || 0) + 1), new Map());
-  return Array.from(map.values()).length;
-}
 
 export default class extends DialogHelper {
   get thornhoofCaravan() {

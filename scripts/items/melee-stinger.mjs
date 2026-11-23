@@ -1,4 +1,4 @@
-import {MeleeAttack} from "./melee.mjs";
+import MeleeAttack from "./melee.mjs";
 import {randomCheck} from "../behaviour/random.mjs";
 
 class Stinger extends MeleeAttack {

@@ -84,7 +84,7 @@ export default class Rathian extends Base {
     this.toggleDealWithRathianFlag(DealWithRathian.LeftWithPlayer);
     if (!this.shouldGetSentinelWithPlayer) {
       this.model.tasks.removeTask("followPlayer");
-      game.uniqueCharacterStorage.detachCharacter(rathian);
+      game.uniqueCharacterStorage.detachCharacter(this.model);
     }
   }
 

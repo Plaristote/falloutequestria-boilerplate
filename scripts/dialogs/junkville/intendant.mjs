@@ -1,4 +1,4 @@
-import {DialogHelper} from "../helpers.mjs";
+import DialogHelper from "../helpers.mjs";
 import {requireQuest} from "../../quests/helpers.mjs";
 import {
   hasFoundDisappearedPonies,

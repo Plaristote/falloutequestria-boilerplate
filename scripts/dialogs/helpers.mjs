@@ -71,7 +71,7 @@ export class BarterAnswer {
   }
 
   get passed() { return this.dialog.npc.getVariable(`barterCheck-${this.name}`, 0) === 1; }
-  set passed(value) { return this.dialog.npc.setVariable(`barterCheck-${this.name}`, value ? 1 : 0); }
+  set passed(value) { this.dialog.npc.setVariable(`barterCheck-${this.name}`, value ? 1 : 0); }
   get visibilityCallback() { return this.runVisibilityCheck.bind(this); }
   get triggerCallback() { return this.runCallback.bind(this); }
 

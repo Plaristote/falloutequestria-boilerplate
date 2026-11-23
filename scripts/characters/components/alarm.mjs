@@ -6,9 +6,9 @@ export const AlarmLevel = {
 export function callGuards(guards, target, alarmLevel) {
   console.log("Calling guards", guards, guards.objects.length,
     "to position", target.position.x, target.position.y, target.floor, target);
-  for (var i = 0 ; i < guards.groups.length ; ++i)
+  for (let i = 0 ; i < guards.groups.length ; ++i)
     callGuards(guards.groups[i], target, alarmLevel);
-  for (var i = 0 ; i < guards.objects.length ; ++i) {
+  for (let i = 0 ; i < guards.objects.length ; ++i) {
     guards.objects[i].script.receiveAlarmSignal(
       target.position.x, target.position.y, target.floor, target, alarmLevel
     );
@@ -42,7 +42,7 @@ export class AlarmComponent {
     this.model.setVariable("alarmAtZ", value.z);
   }
   get alarmLevel() { return this.model.getVariable("alarmLevel"); }
-  set alarmLevel(value) { return this.model.setVariable("alarmLevel", value); }
+  set alarmLevel(value) { this.model.setVariable("alarmLevel", value); }
   get targetPath() { return this.model.getVariable("alarmTarget"); }
   set targetPath(value) { this.model.setVariable("alarmTarget", value); }
   get target() { return level.findObject(this.targetPath); }

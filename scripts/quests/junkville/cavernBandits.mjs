@@ -50,8 +50,24 @@ export function reportedToRandy() {
   return hasQuest() && getQuest().isObjectiveCompleted("reported-to-randy");
 }
 
-export function hasNegociatedBanditsReward() {
+export function hasNegotiatedBanditsReward() {
   return hasQuest() && getQuest().getVariable("randyReward", 0) > 0;
+}
+
+// Legacy spelling, kept for existing callers.
+export const hasNegociatedBanditsReward = hasNegotiatedBanditsReward;
+
+// Randy's reward is 100 caps, or 150 when the player won the barter contest.
+export function hasImprovedBanditsReward() {
+  return hasQuest() && getQuest().getVariable("randyReward", 0) >= 150;
+}
+
+export function banditsRewardClaimed() {
+  return hasQuest() && getQuest().getVariable("randyRewardClaimed", 0) == 1;
+}
+
+export function claimBanditsReward() {
+  requireQuest(questName).setVariable("randyRewardClaimed", 1);
 }
 
 export function randyShouldReprimandAboutFleeingBanditBattle() {

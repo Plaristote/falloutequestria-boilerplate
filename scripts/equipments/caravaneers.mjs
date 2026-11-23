@@ -2,7 +2,7 @@ export default function inventoryCaravaneer(i = 0) {
   return i % 3 == 0 ? inventoryFighter : inventoryShooter;
 }
 
-const inventoryFighter = {
+export const inventoryFighter = {
   "items": [
     {
       "animation": "misc",

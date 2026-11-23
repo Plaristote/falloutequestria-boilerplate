@@ -67,7 +67,7 @@ export default class extends StackableBuff {
   }
 
   set isAddicted(value) {
-    return this.model.target.setVariable(this.addictionStatusKey, value ? 1 : 0);
+    this.model.target.setVariable(this.addictionStatusKey, value ? 1 : 0);
   }
 
   initialize() {
@@ -79,6 +79,11 @@ export default class extends StackableBuff {
   repeat() {
     super.repeat();
     this.onDoseTaken();
+    this.updateModifiers();
+  }
+
+  finalize() {
+    this.charges = 0;
     this.updateModifiers();
   }
 

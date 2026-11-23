@@ -1,5 +1,5 @@
-import {Rifle} from "./rifle.mjs";
-import {ThrowableBehaviour, throwCurve} from "./throwable.mjs";
+import Rifle from "./rifle.mjs";
+import {ThrowableBehaviour, makeThrowCurve} from "./throwable.mjs";
 import {getValueFromRange} from "../behaviour/random.mjs";
 import {explode} from "../behaviour/explosion.mjs";
 
@@ -51,7 +51,7 @@ export default class PlasmaRifle extends Rifle {
         speed: 250,
         fromX: from.x, fromY: from.y,
         toX: target.x, toY: target.y,
-        position: throwCurve
+        position: makeThrowCurve(from, target)
       }
     ];
   }

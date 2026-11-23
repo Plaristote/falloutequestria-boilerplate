@@ -24,6 +24,7 @@ export default class Dialog {
         return { textKey: "start-quest-awkward", mood: "angry" };
       case "start-quest-lie":
         game.quests.addQuest("cristal-den/pimp-changeling");
+        // falls through
       case "start-quest-normal":
         this.dialog.npc.script.quest.completeObjective("talkToPetiole");
         return { textKey: "start-quest" };

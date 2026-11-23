@@ -1,9 +1,9 @@
-import {getValueFromRange} from "behaviour/random.mjs";
-import {skillCheck} from "cmap/helpers/checks.mjs";
-import OutdoorsCheck from "worldmap/outdoorsCheck.mjs";
-import {generateHostileEncounter} from "worldmap/hostileEncounters.mjs";
-import {generateEncounterLevel} from "worldmap/encounterLevels.mjs";
-import {onSpecialEncounterOccured, availableSpecialEncounters} from "worldmap/specialEncounters.mjs";
+import {getValueFromRange} from "./behaviour/random.mjs";
+import {skillCheck} from "./cmap/helpers/checks.mjs";
+import OutdoorsCheck from "./worldmap/outdoorsCheck.mjs";
+import {generateHostileEncounter} from "./worldmap/hostileEncounters.mjs";
+import {generateEncounterLevel} from "./worldmap/encounterLevels.mjs";
+import {onSpecialEncounterOccured, availableSpecialEncounters} from "./worldmap/specialEncounters.mjs";
 
 const RandomEncounterChart = {
   None:     0,
@@ -55,6 +55,7 @@ export class RandomEncounterComponent {
           this.triggerSpecialEncounter();
           break ;
         }
+        // falls through: no special encounter available, treated as a dungeon roll
       case RandomEncounterChart.Dungeon:
         console.log("/!!\\ FOUND A DUNGEON (none implemented yet though)");
         break ;

@@ -2,7 +2,7 @@ import {getValueFromRange} from "../behaviour/random.mjs";
 import goldenHerdScoutParty from "./goldenHerdScouts.mjs";
 import steelRangerScoutParty from "./steelRangerScouts.mjs";
 import crystalDenScoutParty from "./crystalDenScouts.mjs";
-import {canJunkvilleBanditsPop, junkvilleBanditsParty} from "./junkvilleBandits.mjs";
+import junkvilleBanditsParty, {canJunkvilleBanditsPop} from "./junkvilleBandits.mjs";
 import {canSlaversPop, slaversParty} from "./slavers.mjs";
 
 function availableEncounters() {
@@ -23,9 +23,12 @@ function availableEncounters() {
   if (zones.indexOf("capital-surroundings") >= 0) {
     // Roaches, feral ghouls, maybe shadow knights ?
     const quest = game.quests.getQuest("cristal-den/ghoulExpedition");
-    const ghoulDifficulty = difficultyRoll / ((quest && quest.completed) ? 2 : 1);
+    const ghoulDifficultyDivider = (quest && quest.completed) ? 2 : 1;
     array.push(function(difficultyRoll) { return { "name": "Roaches",      "avoidRoll": (80 + difficultyRoll / 4), "members": [{"sheet": "roach", "script": "roach.mjs", "amount": 3 + Math.ceil(difficultyRoll / 20)}, {"sheet": "roach-big", "script": "roach.mjs", "amount": Math.ceil(difficultyRoll / 33)}] }; });
-    array.push(function(difficultyRoll) { return { "name": "Feral Ghouls", "avoidRoll": (70 + ghoulDifficultyRoll / 4), "members": [{"sheet": "capital/feral-ghoul-1", "script": "feral-ghoul.mjs", "amount": 2 + Math.ceil(ghoulDifficultyRoll / 23)}, {"sheet": "capital/feral-ghoul-1", "script": "feral-ghoul.mjs", "amount": 2 + Math.ceil(ghoulDifficultyRoll / 18)}] }; });
+    array.push(function(difficultyRoll) {
+      const ghoulDifficultyRoll = difficultyRoll / ghoulDifficultyDivider;
+      return { "name": "Feral Ghouls", "avoidRoll": (70 + ghoulDifficultyRoll / 4), "members": [{"sheet": "capital/feral-ghoul-1", "script": "feral-ghoul.mjs", "amount": 2 + Math.ceil(ghoulDifficultyRoll / 23)}, {"sheet": "capital/feral-ghoul-2", "script": "feral-ghoul.mjs", "amount": 2 + Math.ceil(ghoulDifficultyRoll / 18)}] };
+    });
   }
   if (zones.indexOf("golden-horde-siege") >= 0) {
     for (let i = 0 ; i < 6 ; ++i)

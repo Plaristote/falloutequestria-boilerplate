@@ -20,6 +20,7 @@ import {
   hasCavernBanditsQuest,
   canReportNestLocationToRandy,
   banditsCleared,
+  banditsRewardClaimed,
   banditsResolution,
   banditsDefeatedWithJunkvilleHelp,
   reportedToRandy,
@@ -441,7 +442,8 @@ export default class Dialog extends Innkeeper {
 
   onReportBanditsBattle() {
     this.banditsQuest.completeObjective("reported-to-randy");
-    game.player.inventory.addItemOfType("bottlecaps", this.banditsReward);
+    if (!banditsRewardClaimed())
+      game.player.inventory.addItemOfType("bottlecaps", this.banditsReward);
     switch (banditsResolution()) {
       case "junkville-help": return "bandits/battle-report-together";
       case "dogs-help":      return "bandits/battle-report-dogs";

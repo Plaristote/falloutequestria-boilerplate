@@ -1,4 +1,4 @@
-import {Rifle} from "./rifle.mjs";
+import Rifle from "./rifle.mjs";
 import {isBursting, triggerBurstUseOn} from "./burst.mjs";
 
 export default class AssaultRifle extends Rifle {

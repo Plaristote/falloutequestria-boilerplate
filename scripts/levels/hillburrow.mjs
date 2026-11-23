@@ -77,7 +77,7 @@ export class Hillburrow extends LevelBase {
       if (character.isAlive())
         game.uniqueCharacterStorage.saveCharacterFromCurrentLevel(character);
       else
-        leve.tasks.removeTask("refreshWaterCarrier");
+        level.tasks.removeTask("refreshWaterCarrier");
     }
   }
 }

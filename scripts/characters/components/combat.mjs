@@ -3,7 +3,7 @@ import EquipmentEquinoid from "./combat/equipment-equinoid.mjs";
 import FightTurnActions from "./combat/actions-fight.mjs";
 import ThreatTable from "./combat/threat-table.mjs";
 import TargetSelector from "./combat/target-selector.mjs";
-import {canTrashTalk, TrashTalkComponent} from "./combat/trash-talker.mjs";
+import TrashTalkComponent, {canTrashTalk} from "./combat/trash-talker.mjs";
 
 import CompanionFighterComponent from "./companion/fighter.mjs";
 
@@ -126,7 +126,7 @@ export class CombatComponent extends SkillTargetComponent {
     level.passTurn(this.model);
   }
 
-  fightOrFleeCombatTarget() {
+  fightOrFleeCombatTarget(isContinuation = false) {
     if (!this.hasWillToFight) {
       if (this.trashTalker && !isContinuation)
         this.trashTalker.triggerTaunt("fleeing");

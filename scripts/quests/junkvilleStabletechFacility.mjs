@@ -48,7 +48,7 @@ export class JunkvilleStabletechFacility extends QuestHelper {
   get xpReward() { return 2500; }
 
   get learnedFromRathian() { return this.model.getVariable("learnedFromRathian", 0) == 1; }
-  set learnedFromRathian(value) { return this.model.setVariable("learnedFromRathian", value ? 1 : 0); }
+  set learnedFromRathian(value) { this.model.setVariable("learnedFromRathian", value ? 1 : 0); }
 
   getDescription() {
     let text = "";

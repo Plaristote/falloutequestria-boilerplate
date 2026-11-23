@@ -1,4 +1,4 @@
-import {DialogHelper} from "../helpers.mjs";
+import DialogHelper from "../helpers.mjs";
 
 class Dialog extends DialogHelper {
   constructor(dialog) {

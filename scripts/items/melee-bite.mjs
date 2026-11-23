@@ -1,4 +1,4 @@
-import {MeleeAttack} from "./melee.mjs";
+import MeleeAttack from "./melee.mjs";
 
 function biteSoundForCharacter(model) {
   switch (model.statistics.race) {

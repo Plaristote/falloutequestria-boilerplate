@@ -1,4 +1,4 @@
-import {DialogHelper} from "./helpers.mjs";
+import DialogHelper from "./helpers.mjs";
 
 export function makeOrderChoice(self, item, options) {
   return {

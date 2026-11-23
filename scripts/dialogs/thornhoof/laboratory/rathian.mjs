@@ -28,7 +28,7 @@ class Dialog {
   }
 
   set canWaitHere(value) {
-    return this.dialog.npc.setVariable("canWaitAtThornhoofLaboratory", value);
+    this.dialog.npc.setVariable("canWaitAtThornhoofLaboratory", value);
   }
 
   letsGo() {

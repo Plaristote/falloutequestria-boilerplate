@@ -173,6 +173,7 @@ export function finalizeBattle(options) {
 
 export function clearBattle(options) {
   const quest = requireQuest(questName);
+  const { survivors } = options;
 
   if (quest.getVariable("battleState") !== 2) {
     finalizeBattle({

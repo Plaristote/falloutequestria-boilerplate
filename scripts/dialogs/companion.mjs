@@ -1,4 +1,4 @@
-import {DialogHelper} from "./helpers.mjs";
+import DialogHelper from "./helpers.mjs";
 
 const DISTANCE_SETTINGS = ["close", "medium", "far"];
 const SUPPORT_STYLES    = ["fire-support", "suppressing-fire"];

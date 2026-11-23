@@ -1,4 +1,4 @@
-import {AutoClosingDoor} from "door-auto-close.mjs";
+import {AutoClosingDoor} from "./door-auto-close.mjs";
 
 export class VaultDoor extends AutoClosingDoor {
   constructor(model) {

@@ -1,16 +1,20 @@
 import {ItemBehaviour} from "./item.mjs";
 import {getValueFromRange, randomCheck} from "../behaviour/random.mjs";
 
-export function throwCurve(percentage) {
-  let xDelta = (percentage * (target.x - from.x));
-  let yDelta = (percentage * (target.y - from.y));
-  if (percentage < 0.5)
-    yDelta -= dist * percentage;
-  else
-    yDelta -= dist * (1 - percentage);
-  return {
-    x: from.x + xDelta,
-    y: from.y + yDelta
+export function makeThrowCurve(from, target) {
+  const dist = Math.sqrt(Math.pow(from.x - target.x, 2) + Math.pow(from.y - target.y, 2));
+
+  return function throwCurve(percentage) {
+    let xDelta = (percentage * (target.x - from.x));
+    let yDelta = (percentage * (target.y - from.y));
+    if (percentage < 0.5)
+      yDelta -= dist * percentage;
+    else
+      yDelta -= dist * (1 - percentage);
+    return {
+      x: from.x + xDelta,
+      y: from.y + yDelta
+    };
   };
 }
 
@@ -109,7 +113,6 @@ export class ThrowableBehaviour extends ItemBehaviour {
     const steps  = this.getUseAnimation();
     const from   = this.user.spritePosition;
     const target = level.getRenderPositionForTile(x, y);
-    const dist = Math.sqrt(Math.pow(from.x - target.x, 2) + Math.pow(from.y - target.y, 2));
 
     if (from.x != target.x || from.y != target.y) {
       steps.push({
@@ -119,7 +122,7 @@ export class ThrowableBehaviour extends ItemBehaviour {
         fromX: from.x, fromY: from.y,
         toX: target.x, toY: target.y,
         speed: 250,
-        position: throwCurve
+        position: makeThrowCurve(from, target)
       });
     }
     return steps;

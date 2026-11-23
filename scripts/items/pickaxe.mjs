@@ -1,4 +1,4 @@
-import {MeleeAttack} from "./melee.mjs";
+import MeleeAttack from "./melee.mjs";
 
 export class Pickaxe extends MeleeAttack {
   constructor(model) {

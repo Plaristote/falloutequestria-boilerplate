@@ -1,6 +1,6 @@
 import {ShopShelf, refillDelay} from "./shopShelf.mjs";
 
-const spellRefilDelay = refillDelay / 2;
+const spellRefillDelay = refillDelay / 2;
 
 const spellbookDropRates = {
   "spell-book-arcane-bolt":    0.10, // value 150

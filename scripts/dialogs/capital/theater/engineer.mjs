@@ -1,4 +1,4 @@
-import {DialogHelper, SkillAnswer, BarterAnswer} from "../../helpers.mjs";
+import DialogHelper, {SkillAnswer, BarterAnswer} from "../../helpers.mjs";
 import {skillContest} from "../../../cmap/helpers/checks.mjs";
 import CrafterComponent from "../../crafter.mjs";
 

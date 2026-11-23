@@ -1,4 +1,4 @@
-import {MerchantHelper, makeOrderChoice} from "./merchant.mjs";
+import MerchantHelper, {makeOrderChoice} from "./merchant.mjs";
 
 function onDrinkAlcohol() {
   game.asyncAdvanceTime(5, () => {

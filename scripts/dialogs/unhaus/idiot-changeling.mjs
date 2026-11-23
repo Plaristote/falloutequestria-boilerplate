@@ -1,4 +1,4 @@
-import {DialogHelper} from "../helpers.mjs";
+import DialogHelper from "../helpers.mjs";
 
 class Dialog extends DialogHelper {
   constructor(dialog) {
@@ -76,7 +76,7 @@ class Dialog extends DialogHelper {
   }
 
   set metInHive(value) {
-    return this.dialog.npc.setVariable("metInHive", value ? 1 : 0);
+    this.dialog.npc.setVariable("metInHive", value ? 1 : 0);
   }
 
   get changelingQuest() {

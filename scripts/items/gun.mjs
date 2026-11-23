@@ -96,5 +96,5 @@ export class Gun extends Weapon {
 };
 
 export function create(model) {
-  return new Handgun(model);
+  return new Gun(model);
 }

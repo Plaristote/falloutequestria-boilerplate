@@ -1,5 +1,5 @@
 import {LevelBase} from "./base.mjs";
-import {NegociationAssembly} from "../scenes/junkville/negociationAssembly.mjs";
+import NegociationAssembly from "../scenes/junkville/negociationAssembly.mjs";
 import {
   helpfulDisappearDelay,
   findHelpfulRescueRouteState,

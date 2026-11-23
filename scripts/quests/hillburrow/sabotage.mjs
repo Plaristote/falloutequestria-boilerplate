@@ -18,7 +18,9 @@ export function saboteurShouldDisappear() {
 }
 
 export function sabotageReportedToMatriarch() {
-  game.quests.getQuest(questName).completeObjective("mustWarnPotioksAboutBibin");
+  const quest = game.quests.getQuest(questName);
+
+  quest.completeObjective("mustWarnPotioksAboutBibin");
   quest.script.pushUniqueEvent("warnedPotioksAboutBibin");
 }
 

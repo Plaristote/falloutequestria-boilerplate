@@ -1,4 +1,4 @@
-import {MerchantHelper} from "./merchant.mjs";
+import MerchantHelper from "./merchant.mjs";
 
 const prices = {
   "night": 15,

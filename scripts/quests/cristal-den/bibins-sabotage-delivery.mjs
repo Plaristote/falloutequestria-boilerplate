@@ -22,7 +22,7 @@ export function isPlayerLookingForWaterCarrier() {
 }
 
 export function triggerLearnWaterCarrierIdentity() {
-  const quest = requireQuest(questName, Quest.HiddenQuest);
+  const quest = requireQuest(questName, QuestFlags.HiddenQuest);
   quest.script.pushUniqueEvent("learn-water-carrier-identity");
 }
 
@@ -48,6 +48,7 @@ export class BibinsSabotageDelivery extends QuestHelper {
         if (this.model.isObjectiveCompleted("delivery")) { break ; }
         else { this.model.failObjective("delivery"); }
       }
+      // falls through: killing the water carrier before delivery fails the whole quest
       case "bibin":
         this.model.failed = true;
         break ;

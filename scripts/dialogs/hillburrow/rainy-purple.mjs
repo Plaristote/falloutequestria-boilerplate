@@ -1,4 +1,4 @@
-import {DialogHelper} from "../helpers.mjs";
+import DialogHelper from "../helpers.mjs";
 import {areDenSlaversDead} from "../../characters/cristal-den/slavers/denSlaversDead.mjs";
 import {requireQuest} from "../../quests/helpers.mjs";
 

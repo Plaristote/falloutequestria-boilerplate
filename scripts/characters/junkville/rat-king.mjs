@@ -1,4 +1,4 @@
-import CharacterBehaviour from "./../rat.mjs";
+import {Rat as CharacterBehaviour} from "../rat.mjs";
 
 export default class extends CharacterBehaviour {
   constructor(model) {
