@@ -42,7 +42,13 @@
             "scavengers/towards-cook-alt": "Des fouilleurs disparus ? Merde. Randy s'inquiétait pour eux… avant qu'il ne meure. Je suppose qu'on va devoir s'occuper de ça nous-mêmes. Qu'est-ce que je peux faire pour aider ?",
             "trade": "Voilà ce que j'ai à vendre, jette un oeil !",
             "customer": "cher client",
-            "about-leader-dead": "Eh bien, les gens d'ici aiment croire que ce coin est une espèce d'utopie anarchiste. Jusqu'ici, tout le monde écoutait Randy. Mais il est mort. Je sais pas comment les choses vont se passer, à partir de là.<br>\nJe suppose qu'on est tout seul. Le future est toujours plein de questions sans réponses, hein ?"
+            "about-leader-dead": "Eh bien, les gens d'ici aiment croire que ce coin est une espèce d'utopie anarchiste. Jusqu'ici, tout le monde écoutait Randy. Mais il est mort. Je sais pas comment les choses vont se passer, à partir de là.<br>\nJe suppose qu'on est tout seul. Le future est toujours plein de questions sans réponses, hein ?",
+            "about-safety-bandits": "Ben, pour commencer, personne n'est responsable de la protection de la ville, ni même du maintien de l'ordre. Jusqu'à maintenant, les gens se protègent les uns les autres. Mais en ce moment c'est pire : une bande de pillards s'est installée quelque part dans les cavernes sous la décharge, et ils s'en prennent à quiconque s'aventure là-bas. On est à la merci de la première bande organisée qui passerait dans le coin… et celle-ci est déjà un peu trop proche.",
+            "ask-safety-bandits-more": "Des pillards dans les cavernes ? Dis-m'en plus.",
+            "about-safety-bandits-more": "Je n'en sais pas beaucoup, honnêtement. C'est Randy qui s'occupe des tunnels et des chiens, et tout le monde l'écoute. Va lui parler à l'auberge.",
+            "about-safety-bandits-more-randy-dead": "Je te dirais d'aller voir Randy, mais il n'est plus là. Personne ici ne peut mener un combat contre une bande de pillards. Si tu veux qu'on règle ça, il faudra t'en charger toi-même.",
+            "about-safety-bandits-cleared": "Hm. Je disais que cet endroit n'était pas sûr, et tu es allé exterminer les pillards des cavernes. Je suppose que tu m'as donné tort, du moins pour l'instant. Personne n'est vraiment chargé de l'ordre ici, et la prochaine bande nous trouvera tout aussi démunis… mais j'avoue que je dors un peu mieux ce soir.",
+            "about-safety-bandits-cleared-randy-dead": "Je t'ai dit que cet endroit n'était pas sûr, et j'aurais préféré avoir tort. Tu as éliminé les pillards, mais ça nous a coûté Randy, et c'est lui qui tenait cette ville. Il ne reste personne pour nous protéger de la prochaine bande. Je suis plus inquiète que jamais."
         }
     }
 }

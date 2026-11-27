@@ -77,18 +77,22 @@
             "text": "bibin-trigger-battle-start"
         },
         "bitty-appreciation-bad": {
+            "hook": "rateBittyBad",
             "state": "sabotage/bitty-leadership/on-bad",
             "text": "bitty-appreciation-bad"
         },
         "bitty-appreciation-good": {
+            "hook": "rateBittyGood",
             "state": "sabotage/bitty-leadership/on-good",
             "text": "bitty-appreciation-good"
         },
         "bitty-appreciation-medium": {
+            "hook": "rateBittyMedium",
             "state": "sabotage/bitty-leadership/on-medium",
             "text": "bitty-appreciation-medium"
         },
         "bitty-appreciation-reject": {
+            "hook": "rateBittySkip",
             "state": "sabotage/bitty-leadership/on-skip",
             "text": "bitty-appreciation-reject"
         },
@@ -122,6 +126,10 @@
             "state": "heirs/leadership/entry",
             "text": "heirs-leadership-entry"
         },
+        "heirs-report-done": {
+            "hook": "afterHeirReport",
+            "text": "heirs-report-done"
+        },
         "heirs-rewan-init-accept": {
             "state": "heirs/rewan/init/accepted",
             "text": "heirs-rewan-init-accept"
@@ -134,6 +142,18 @@
             "hook": "finalizeSuggestedHeir",
             "state": "heirs/succession/done",
             "text": "heirs-succession-conclude"
+        },
+        "heirs-succession-intro-continue": {
+            "state": "heirs/succession/entry",
+            "text": "heirs-succession-intro-continue"
+        },
+        "heirs-succession-reconsider": {
+            "state": "heirs/succession/entry",
+            "text": "heirs-succession-reconsider"
+        },
+        "heirs-succession-refuse": {
+            "state": "heirs/succession/refused",
+            "text": "heirs-succession-refuse"
         },
         "hide-bibin-involvement": {
             "state": "sabotage/about-saboteur",
@@ -497,8 +517,7 @@
     "entryPoint": "intrusion",
     "states": {
         "bibin-investigation/battle/lost": {
-            "answers": [
-            ],
+            "answers": [],
             "hook": "matriarchTurnsHostile",
             "mood": "angry",
             "text": "bibin-investigation/battle/lost"
@@ -528,8 +547,7 @@
             "text": "bibin-investigation/battle/start-partial-support"
         },
         "bibin-investigation/battle/won": {
-            "answers": [
-            ],
+            "answers": [],
             "hook": "grantHenchponyStatus",
             "mood": "smile",
             "text": "bibin-investigation/battle/won"
@@ -543,14 +561,12 @@
             "text": "bibin-investigation/killed-out-of-band"
         },
         "bibin-investigation/offer/accepted": {
-            "answers": [
-            ],
+            "answers": [],
             "hook": "startBibinInvestigation",
             "text": "bibin-investigation/offer/accepted"
         },
         "bibin-investigation/offer/declined": {
-            "answers": [
-            ],
+            "answers": [],
             "mood": "angry",
             "text": "bibin-investigation/offer/declined"
         },
@@ -619,8 +635,7 @@
             "text": "bibin-investigation/report/note"
         },
         "bibin-investigation/report/suitcase": {
-            "answers": [
-            ],
+            "answers": [],
             "mood": "neutral",
             "text": "bibin-investigation/report/suitcase"
         },
@@ -636,13 +651,11 @@
             "text": "bibin-investigation/trigger-battle"
         },
         "enforcers-job/init": {
-            "answers": [
-            ],
+            "answers": [],
             "text": "enforcers-job/init"
         },
         "heirs/crafty/init/accepted": {
-            "answers": [
-            ],
+            "answers": [],
             "hook": "heirsCraftyAcceptToGo",
             "text": "heirs/crafty/init/accepted"
         },
@@ -654,8 +667,7 @@
             "text": "heirs/crafty/init/entry"
         },
         "heirs/crafty/init/refused": {
-            "answers": [
-            ],
+            "answers": [],
             "mood": "angry",
             "text": "heirs/crafty/init/refused"
         },
@@ -667,7 +679,9 @@
         },
         "heirs/crafty/report-details": {
             "answers": [
+                "heirs-report-done"
             ],
+            "hook": "heirDebriefDone",
             "text": "heirs/crafty/report-details"
         },
         "heirs/leadership/entry": {
@@ -677,6 +691,7 @@
                 "rate-heir-bad",
                 "rate-heir-skip"
             ],
+            "hook": "heirLeadershipEntry",
             "text": "heirs/leadership/entry"
         },
         "heirs/leadership/on-bad": {
@@ -708,8 +723,7 @@
             "text": "heirs/leadership/on-skip"
         },
         "heirs/rewan/init/accepted": {
-            "answers": [
-            ],
+            "answers": [],
             "hook": "heirsRewanAcceptToGo",
             "text": "heirs/rewan/init/accepted"
         },
@@ -721,8 +735,7 @@
             "text": "heirs/rewan/init/entry"
         },
         "heirs/rewan/init/refused": {
-            "answers": [
-            ],
+            "answers": [],
             "mood": "angry",
             "text": "heirs/rewan/init/refused"
         },
@@ -734,12 +747,14 @@
         },
         "heirs/rewan/report-details": {
             "answers": [
+                "heirs-report-done"
             ],
+            "hook": "heirDebriefDone",
             "text": "heirs/rewan/report-details"
         },
         "heirs/succession/done": {
-            "answers": [
-            ],
+            "answers": [],
+            "hook": "successionDone",
             "text": "heirs/succession/done"
         },
         "heirs/succession/entry": {
@@ -747,16 +762,30 @@
                 "suggest-heir-bitty",
                 "suggest-heir-rewan",
                 "suggest-heir-crafty",
-                "suggest-heir-trout"
+                "suggest-heir-trout",
+                "heirs-succession-refuse"
             ],
             "text": "heirs/succession/entry"
         },
+        "heirs/succession/intro": {
+            "answers": [
+                "heirs-succession-intro-continue"
+            ],
+            "text": "heirs/succession/intro"
+        },
         "heirs/succession/on-suggestion": {
             "answers": [
-                "heirs-succession-conclude"
+                "heirs-succession-conclude",
+                "heirs-succession-reconsider"
             ],
-            "hook": "matriarchAgreesWithSuggestion",
+            "hook": "reactToSuggestion",
             "text": "heirs/succession/on-suggestion"
+        },
+        "heirs/succession/refused": {
+            "answers": [],
+            "hook": "refuseToChooseHeir",
+            "mood": "angry",
+            "text": "heirs/succession/refused"
         },
         "intrusion": {
             "answers": [
@@ -808,8 +837,7 @@
             "text": "intrusion-questions"
         },
         "no-jobs-available": {
-            "answers": [
-            ],
+            "answers": [],
             "text": "no-jobs-available"
         },
         "prompt": {
@@ -897,13 +925,11 @@
             "text": "sabotage/entry"
         },
         "sabotage/exit": {
-            "answers": [
-            ],
+            "answers": [],
             "text": "sabotage/exit"
         },
         "sabotage/init/accepted": {
-            "answers": [
-            ],
+            "answers": [],
             "hook": "saboteurAcceptToGo",
             "text": "sabotage/init/accepted"
         },
@@ -916,8 +942,7 @@
             "text": "sabotage/init/entry"
         },
         "sabotage/init/refused": {
-            "answers": [
-            ],
+            "answers": [],
             "mood": "angry",
             "text": "sabotage/init/refused"
         },
@@ -1002,8 +1027,7 @@
             "text": "sneak-job/increase-reward"
         },
         "sneak-job/on-accepted": {
-            "answers": [
-            ],
+            "answers": [],
             "hook": "sneakJobAccepted",
             "text": "sneak-job/on-accepted"
         },
@@ -1023,8 +1047,7 @@
             "text": "sneak-job/on-found"
         },
         "sneak-job/on-rejected": {
-            "answers": [
-            ],
+            "answers": [],
             "text": "sneak-job/on-rejected"
         },
         "sneak-job/on-report-death-misjudged": {

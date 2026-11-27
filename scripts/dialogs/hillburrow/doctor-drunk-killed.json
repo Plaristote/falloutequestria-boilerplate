@@ -1,0 +1,28 @@
+{
+    "answers": {
+        "answer-apologize": {
+            "state": "no-forgiveness",
+            "text": "answer-apologize"
+        },
+        "answer-leave": {
+            "text": "answer-leave"
+        }
+    },
+    "entryPoint": "entry",
+    "states": {
+        "entry": {
+            "answers": [
+                "answer-apologize",
+                "answer-leave"
+            ],
+            "mood": "angry",
+            "text": "entry"
+        },
+        "no-forgiveness": {
+            "answers": [
+            ],
+            "mood": "angry",
+            "text": "no-forgiveness"
+        }
+    }
+}

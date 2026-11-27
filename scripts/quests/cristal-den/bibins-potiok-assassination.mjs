@@ -1,5 +1,18 @@
 import {QuestHelper, QuestFlags, requireQuest} from "../helpers.mjs";
 import * as Potioks from "./potioks.mjs";
+import {isTroutHeir, isTroutDead} from "./heir-selection.mjs";
+
+// Bibin does not care about Trout Potiok... until the Matriarch names him her heir: then he
+// becomes a target like any other. (Only the player and the changelings know that "Trout"
+// is Petiole, so killing Petiole is what kills Trout.)
+export function troutIsTarget() {
+  return isTroutHeir();
+}
+
+export function allPotiokTargetsDead() {
+  return Potioks.matriarchDead() && Potioks.allHeirsDead()
+      && (!troutIsTarget() || isTroutDead());
+}
 
 export default class extends QuestHelper {
   constructor(model) {
@@ -11,6 +24,14 @@ export default class extends QuestHelper {
     this.model.location = "cristal-den";
   }
 
+  getDescription() {
+    let text = `<p>${this.tr("description")}</p>`;
+
+    if (troutIsTarget())
+      text += `<p>${this.tr(isTroutDead() ? "desc-trout-dead" : "desc-trout-heir")}</p>`;
+    return text;
+  }
+
   getObjectives() {
     const objectives = [];
 
@@ -19,8 +40,8 @@ export default class extends QuestHelper {
       success: Potioks.matriarchDead()
     });
     objectives.push({
-      label: this.tr("kill-pat"),
-      success: Potioks.patDead()
+      label: this.tr("kill-rewan"),
+      success: Potioks.rewanDead()
     });
     objectives.push({
       label: this.tr("kill-bitty"),
@@ -30,7 +51,13 @@ export default class extends QuestHelper {
       label: this.tr("kill-crafty"),
       success: Potioks.craftyDead()
     });
-    if (Potioks.matriarchDead() && Potioks.allHeirsDead()) {
+    if (troutIsTarget() && !this.model.completed) {
+      objectives.push({
+        label: this.tr("kill-trout"),
+        success: isTroutDead()
+      });
+    }
+    if (allPotiokTargetsDead()) {
       objectives.push({
         label: this.tr("report"),
         success: this.model.isObjectiveCompleted("report"),
@@ -41,6 +68,6 @@ export default class extends QuestHelper {
   }
 
   get canReport() {
-    return Potioks.matriarchDead() && Potioks.allHeirsDead() && !this.model.completed;
+    return allPotiokTargetsDead() && !this.model.completed;
   }
 }

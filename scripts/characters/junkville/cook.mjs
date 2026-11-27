@@ -2,6 +2,7 @@ import {CharacterBehaviour} from "../character.mjs";
 import {requireQuest} from "../../quests/helpers.mjs";
 import {RoutineComponent} from "../../behaviour/routine.mjs";
 import {routine, initializeRoutineUser} from "./resident-routine.mjs";
+import {assemblyTalkBubbles} from "./assembly.mjs";
 
 export class Cook extends CharacterBehaviour {
   constructor(model) {
@@ -24,6 +25,10 @@ export class Cook extends CharacterBehaviour {
     if (this.routineComponent.isActiveRoutine("assembly"))
       return this.shouldTalkAboutDogDealDecision() ? "junkville/cook" : null;
     return "junkville/cook";
+  }
+
+  get textBubbles() {
+    return assemblyTalkBubbles(this.model);
   }
 
   get bed() {

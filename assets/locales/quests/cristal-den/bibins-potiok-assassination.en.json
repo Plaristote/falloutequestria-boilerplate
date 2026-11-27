@@ -1,0 +1,16 @@
+{
+  "quests": {
+    "cristal-den/bibins-potiok-assassination": {
+      "title": "Wiping out the Potioks",
+      "description": "Bibin wants the Potiok family gone: the Matriarch and each of her heirs. Once it is done, report to him.",
+      "kill-matriarch": "Kill the Potiok Matriarch",
+      "kill-rewan": "Kill Rewan Potiok",
+      "kill-bitty": "Kill Bitty Potiok",
+      "kill-crafty": "Kill Crafty Potiok",
+      "kill-trout": "Kill Trout Potiok, the newly named heir",
+      "report": "Report to Bibin",
+      "desc-trout-heir": "The Matriarch has named Trout Potiok her heir, so Bibin wants him dead like the rest. Bibin does not know that \"Trout\" is really Petiole, a changeling: only you and the hive do. Killing Petiole is the only way to kill Trout.",
+      "desc-trout-dead": "\"Trout\" is dead: Petiole, the changeling wearing his face, was killed. As far as Bibin can tell, the last of the Potioks is gone."
+    }
+  }
+}

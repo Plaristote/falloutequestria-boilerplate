@@ -1,0 +1,39 @@
+{
+    "answers": {
+        "answer-leave": {
+            "text": "answer-leave"
+        },
+        "answer-secret": {
+            "state": "secret-reaction",
+            "text": "answer-secret"
+        },
+        "answer-wastes": {
+            "state": "wastes-reaction",
+            "text": "answer-wastes"
+        }
+    },
+    "entryPoint": "entry",
+    "states": {
+        "entry": {
+            "answers": [
+                "answer-wastes",
+                "answer-secret",
+                "answer-leave"
+            ],
+            "mood": "smile",
+            "text": "entry"
+        },
+        "secret-reaction": {
+            "answers": [
+            ],
+            "mood": "dubious",
+            "text": "secret-reaction"
+        },
+        "wastes-reaction": {
+            "answers": [
+            ],
+            "mood": "smile",
+            "text": "wastes-reaction"
+        }
+    }
+}

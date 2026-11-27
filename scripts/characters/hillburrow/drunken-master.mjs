@@ -1,5 +1,6 @@
 import {CharacterBehaviour} from "../character.mjs";
 import {RoutineComponent} from "../../behaviour/routine.mjs";
+import {onMedicineUsedOnDrunk, onDoctorBagUsedOnDrunk} from "../../quests/hillburrow/saveDrunkenMaster.mjs";
 
 const routine = [
   { hour: "10", minute: "0", callback: "goToDrink" },
@@ -34,6 +35,17 @@ export class DrunkenMaster extends CharacterBehaviour {
       return true;
     }
     return false;
+  }
+
+  onUseMedicine(user) {
+    if (!this.isHealed && onMedicineUsedOnDrunk(user))
+      return true;
+    return super.onUseMedicine(user);
+  }
+
+  onDoctorBagUsed(user, item) {
+    if (this.isHealed) return false;
+    return onDoctorBagUsedOnDrunk(user);
   }
 
   onHealed() {

@@ -563,6 +563,7 @@
                 "argue-future",
                 "debate-leave"
             ],
+            "hook": "negociateDebateEntry",
             "mood": "dubious",
             "text": "negociations/debate-entry"
         },

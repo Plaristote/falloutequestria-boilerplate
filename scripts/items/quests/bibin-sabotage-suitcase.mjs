@@ -2,9 +2,10 @@ import {ItemBehaviour}  from "../item.mjs";
 import {hasSuitcaseBeenOpened, onSuitcaseOpened} from "../../quests/cristal-den/bibins-sabotage-delivery.mjs";
 import {receiveSuitcaseEntryState} from "../../dialogs/hillburrow/water-carrier.mjs";
 
-export class BibinSabotageSuitcase extends ItemBehaviour {
+export default class BibinSabotageSuitcase extends ItemBehaviour {
   constructor(model) {
     super(model);
+    this.useModes = ["use"];
   }
 
   get requiresTarget() {
@@ -16,7 +17,8 @@ export class BibinSabotageSuitcase extends ItemBehaviour {
   }
 
   useOn(target) {
-    if (!target && !this.isOpened)
+    // Using the item from the inventory targets the item itself.
+    if ((!target || target == this.model) && !this.isOpened)
       onSuitcaseOpened();
     else if (target == game.getCharacter("hillburrow/water-carrier"))
       level.initializeDialog(target, "hillburrow/water-carrier", receiveSuitcaseEntryState());

@@ -8,6 +8,11 @@ export class Boss extends CharacterBehaviour {
     this.speakOnDetection = true;
   }
 
+  // Scheduled by the dialog (so that it closes first), see slaversErrand escort.
+  startSlaveConvoy() {
+    game.script.slaveConvoy.startConvoy();
+  }
+
   onDied() {
     updateDenSlaversDead();
     super.onDied();

@@ -1,4 +1,7 @@
 {
+  "messages": {
+    "patrol-completed": "Vous avez mené la patrouille à bien. Le captaine attendra votre rapport."
+  },
   "quests": {
     "cristal-den/copper-patrol": {
       "title": "Patrouille du Havre",

@@ -6,6 +6,9 @@ function onChampionTitleAcquired() {
   game.player.statistics.togglePerk("boxingChampion", true);
 }
 
+// Prize for beating boxer-1 ... boxer-4. The last one is the title fight.
+const fightPrizes = [150, 250, 400, 800];
+
 export class Gym {
   constructor(model) {
     this.model = model;
@@ -101,8 +104,30 @@ export class Gym {
 
   set playerWinCount(value) {
     this.model.setVariable("winCount", value);
-    if (value > 0 && value >= this.boxers.length)
+  }
+
+  // Every boxer of the gym, dead or alive: the title is won by getting through all of them.
+  get boxerCount() {
+    return this.model.find("boxer-*").length;
+  }
+
+  // The title is awarded once, when the player is done with the last boxer.
+  checkChampionTitle() {
+    if (this.model.hasVariable("championTitleAwarded"))
+      return ;
+    const remaining = this.playerCurrentOpponent; // also skips boxers that are not around anymore
+
+    if (!remaining && this.playerWinCount >= Math.max(1, this.boxerCount)) {
+      this.model.setVariable("championTitleAwarded", 1);
       onChampionTitleAcquired();
+    }
+  }
+
+  prizeForOpponent(opponent) {
+    const match = /^boxer-(\d+)$/.exec(opponent ? opponent.objectName : "");
+    const index = match ? parseInt(match[1], 10) : this.playerWinCount + 1;
+
+    return fightPrizes[Math.min(Math.max(index, 1), fightPrizes.length) - 1];
   }
 
   get playerCurrentOpponent() {
@@ -201,6 +226,7 @@ export class Gym {
   triggerPlayerCombat() {
     const opponent = this.playerCurrentOpponent;
 
+    this.model.unsetVariable("fightPrize");
     opponent.statistics.faction = "";
     opponent.setAsEnemy(game.player);
   }
@@ -210,7 +236,7 @@ export class Gym {
 
     this.combatWinner = game.player;
     this.onPlayerCombatEnds();
-    xpGain = 100 + (this.playerWinCount - 1) * 60;
+    xpGain = 100 + this.playerWinCount * 60;
     game.player.statistics.addExperience(xpGain);
     game.appendToConsole(i18n.t("messages.xp-gain", { xp: xpGain }));
   }
@@ -225,6 +251,7 @@ export class Gym {
     const actions = this.referee.actionQueue;
     const self = this;
     const playerWin = this.combatWinner == game.player;
+    const prize = this.prizeForOpponent(opponent);
     const winnerName = playerWin ? this.ringName : this.combatWinner.displayName;
 
     game.dataEngine.addReputation("cristal-den", playerWin ? 5 : -5);
@@ -242,8 +269,12 @@ export class Gym {
     actions.pushWait(5);
     actions.pushScript({
       onTrigger: function() {
-        if (playerWin)
+        if (playerWin) {
+          // Fixed now: the prize must not depend on the win count when the manager pays it.
+          self.model.setVariable("fightPrize", prize);
           self.playerWinCount++;
+          self.checkChampionTitle();
+        }
         opponent.statistics.faction = "cristal-den";
         opponent.setAsFriendly(game.player);
         game.player.wakeUp();

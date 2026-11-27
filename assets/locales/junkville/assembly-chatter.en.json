@@ -1,0 +1,26 @@
+{
+  "junkville-assembly": {
+    "chatter-1": "Point of order ! Who stole the point of order ?",
+    "chatter-2": "I move that we table the motion about the tables. Somepony stole them.",
+    "chatter-3": "Can we vote on whether we should vote ?",
+    "chatter-4": "Item four on the agenda: the smell. Again.",
+    "chatter-5": "As stated in the minutes of the last meeting… nopony took minutes. Somepony ate the paper.",
+    "chatter-6": "I'd like to speak on behalf of the radroaches, who cannot speak for themselves.",
+    "chatter-7": "Funny how this anarchist utopia always votes whatever Randy suggests.",
+    "chatter-8": "My motion was seconded by my own shadow. That counts, right ?",
+    "chatter-9": "Quorum is whoever's still awake.",
+    "chatter-10": "I demand a recount. Of the votes, and of the bottlecaps.",
+    "chatter-11": "Who put \"fix the roof\" on the agenda again ? It's a skylight now. It's a feature.",
+    "chatter-12": "Shh. I'm trying to nap with my eyes open.",
+    "chatter-13": "Democracy is great, but have you ever tried a committee about a committee ?",
+    "chatter-14": "This assembly is sponsored by the wasteland. Nopony else wanted to.",
+    "talk-1": "Shh, we're in the middle of the communal assembly.",
+    "talk-2": "Can it wait ? The assembly is on. Not that anypony is listening.",
+    "talk-3": "Assembly time ! Sit down, speak up, and please don't mention the budget.",
+    "talk-4": "Every evening, the same debate. Tonight's special: whose turn it is to bring snacks.",
+    "talk-5": "I'd chat, but I have a very important seat to keep warm for the assembly.",
+    "talk-debate-running": "Shh ! The debate is on !",
+    "talk-waiting-for": "The communal assembly will start soon. We're still waiting on {{name}}.",
+    "talk-waiting-all-here": "The communal assembly will start soon. I think everypony is here, we're just waiting for the formalities."
+  }
+}

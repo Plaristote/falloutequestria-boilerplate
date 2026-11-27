@@ -51,6 +51,7 @@
         },
         "meeting-quest-ans-caravaneers": {
             "availableHook": "knowsAboutDisappearedCaravaneers",
+            "state": "prompt",
             "text": "meeting-quest-ans-caravaneers"
         },
         "meeting-quest-ans-insects": {

@@ -5,6 +5,7 @@ import {
   finalizeBattle,
   clearBattle,
   safeObjectiveCompleted,
+  ensureNegotiationQuest,
   shouldAltLeaderTakeOver,
   makeAltLeaderTakeOver,
   prepareDiamondDogsOnCavernAccessTransgression
@@ -19,6 +20,7 @@ import {
 
 export class JunkvilleUnderground extends LevelBase {
   onLoaded() {
+    ensureNegotiationQuest();
     if (game.getVariable("junkville-dog-hole") === true) {
       level.tasks.addTask("onFellIntoHole", 100, 1);
       game.unsetVariable("junkville-dog-hole");
@@ -180,6 +182,18 @@ export class JunkvilleUnderground extends LevelBase {
     if (!dolly || !dolly.isAlive()) return;
     dolly.actionQueue.pushWait(1);
     dolly.actionQueue.pushSpeak(i18n.t("junkville.dogs.dolly-reacts-to-negociation"), 3200, "red");
+    dolly.actionQueue.start();
+  }
+
+  // Dolly's grumbling when Fido frees the scavengers - the reason the "I heard
+  // you call Fido weak" option exists on her side. Only plays once.
+  dollyBadmouthsFido() {
+    const dolly = level.findObject("dog-alt-leader");
+
+    if (!dolly || !dolly.isAlive() || dolly.hasVariable("spokeAgainstLeader")) return;
+    dolly.setVariable("spokeAgainstLeader", 1);
+    dolly.actionQueue.pushWait(1);
+    dolly.actionQueue.pushSpeak(i18n.t("junkville.dogs.dolly-badmouths-leader"), 3200, "red");
     dolly.actionQueue.start();
   }
 

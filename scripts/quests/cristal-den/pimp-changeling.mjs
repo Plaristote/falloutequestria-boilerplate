@@ -1,8 +1,9 @@
 import {QuestHelper, QuestFlags, requireQuest} from "../helpers.mjs";
 
 export function troutReplacedByChangeling() {
-  const quest = requireQuest("cristal-den/pimp-changeling", QuestFlags.HiddenQuest);
-  return !quest.script.petioleKilled && quest.isObjectiveCompleted("swapPimp");
+  // getQuest, not requireQuest: asking must not create the quest as a side effect.
+  const quest = game.quests.getQuest("cristal-den/pimp-changeling");
+  return !!quest && !quest.script.petioleKilled && quest.isObjectiveCompleted("swapPimp");
 }
 
 export default class PimpChangeling extends QuestHelper {

@@ -1,0 +1,16 @@
+{
+  "quests": {
+    "cristal-den/bibins-potiok-assassination": {
+      "title": "Éradiquer les Potiok",
+      "description": "Bibin veut la famille Potiok hors d'état de nuire : la Matriarche et chacun de ses héritiers. Une fois que c'est fait, faites-lui votre rapport.",
+      "kill-matriarch": "Tuer la Matriarche Potiok",
+      "kill-rewan": "Tuer Rewan Potiok",
+      "kill-bitty": "Tuer Bitty Potiok",
+      "kill-crafty": "Tuer Crafty Potiok",
+      "kill-trout": "Tuer Trout Potiok, le nouvel héritier",
+      "report": "Faire son rapport à Bibin",
+      "desc-trout-heir": "La Matriarche a nommé Trout Potiok son héritier : Bibin le veut donc mort comme les autres. Il ignore que « Trout » est en réalité Petiole, une changeling : seuls vous et la ruche le savez. Tuer Petiole est le seul moyen de tuer Trout.",
+      "desc-trout-dead": "« Trout » est mort : Petiole, la changeling qui portait son visage, a été tuée. Pour autant que Bibin puisse le dire, le dernier des Potiok a disparu."
+    }
+  }
+}

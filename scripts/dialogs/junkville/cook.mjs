@@ -12,7 +12,9 @@ import {
   hasRandyAgreedToNegotiate,
   bothAgreedToNegotiate,
   canDiscussPeaceWithDogs,
-  fidoAcceptedTradeOfGems
+  fidoAcceptedTradeOfGems,
+  peaceMediationKind,
+  revealNegotiationQuest
 } from "../../quests/junkvilleNegociateWithDogs.mjs";
 import {isHelpfulQuestAvailable, teleportToCaverns as helpfulQuestGoToCaverns} from "../../quests/junkville/findHelpful.mjs";
 import {opinionVarName} from "../../scenes/junkville/negociationAssembly.mjs";
@@ -123,7 +125,7 @@ export default class Dialog extends Innkeeper {
   }
 
   get negociateQuest() {
-    return requireQuest("junkvilleNegociateWithDogs");
+    return requireQuest("junkvilleNegociateWithDogs", QuestFlags.HiddenQuest);
   }
 
   availableHauntedHeapQuest() {
@@ -198,17 +200,16 @@ export default class Dialog extends Innkeeper {
   }
 
   hasDogMediationQuest() {
-    if (game.quests.hasQuest("junkvilleNegociateWithDogs"))
-      return requireQuest("junkvilleNegociateWithDogs").inProgress;
-    return false;
+    const quest = game.quests.getQuest("junkvilleNegociateWithDogs");
+    return !!quest && !quest.hidden && quest.inProgress;
   }
 
   hasDogTradeRoute() {
-    return this.dogsStillAlive() && requireQuest("junkvilleNegociateWithDogs").getVariable("mediation") == "trade";
+    return this.dogsStillAlive() && peaceMediationKind() == "trade";
   }
 
   hasDogZoneRoute() {
-    return this.dogsStillAlive() && requireQuest("junkvilleNegociateWithDogs").getVariable("mediation") == "zone";
+    return this.dogsStillAlive() && peaceMediationKind() == "zone";
   }
 
   dogsHoldingHostages() {
@@ -501,7 +502,7 @@ export default class Dialog extends Innkeeper {
   }
 
   negociateBringUp() {
-    const quest = requireQuest("junkvilleNegociateWithDogs");
+    const quest = revealNegotiationQuest();
 
     this.dialog.npc.setVariable("negociateBroughtUp", 1);
     if (!hasRandyAgreedToNegotiate())

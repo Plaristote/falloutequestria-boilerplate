@@ -3,6 +3,7 @@ import {requireQuest} from "../../quests/helpers.mjs";
 import {
   hasFoundDisappearedPonies,
 } from "../../quests/junkvilleDumpsDisappeared.mjs";
+import {banditsCleared} from "../../quests/junkville/cavernBandits.mjs";
 
 class Dialog extends DialogHelper {
   constructor(dialog) {
@@ -35,6 +36,28 @@ class Dialog extends DialogHelper {
     if (game.hasVariable("junkvilleCookDied"))
       return this.dialog.t("about-leader-dead");
     level.setVariable("intendantToldAboutLeader", true);
+  }
+
+  get randyIsDead() {
+    return game.hasVariable("junkvilleCookDied");
+  }
+
+  // The "unsafe" answer depends on the raider situation in the caverns:
+  // still around -> she mentions them, gone -> player proved her wrong
+  // (unless Randy paid with his life for it).
+  aboutSafety() {
+    if (!banditsCleared())
+      return { textKey: "about-safety-bandits" };
+    return { textKey: this.randyIsDead ? "about-safety-bandits-cleared-randy-dead" : "about-safety-bandits-cleared" };
+  }
+
+  safetyCanAskAboutBandits() {
+    return !banditsCleared();
+  }
+
+  aboutSafetyBanditsMore() {
+    if (this.randyIsDead)
+      return { textKey: "about-safety-bandits-more-randy-dead" };
   }
 
   isLookingForCelestialDevice() {

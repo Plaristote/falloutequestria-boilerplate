@@ -223,6 +223,7 @@
     "doctor-bag": {
         "icon": "doctors-bag.webp",
         "isGroupable": true,
+        "scriptName": "doctor-bag.mjs",
         "sprite": "health-potion",
         "type": "consommables",
         "value": 180,

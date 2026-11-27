@@ -1,4 +1,4 @@
-import {completeDrunkenQuest, healDuringDrunkenQuest} from "../../quests/hillburrow/saveDrunkenMaster.mjs";
+import {completeDrunkenQuest, healDuringDrunkenQuest, drunkenQuestMedicineWithoutBag} from "../../quests/hillburrow/saveDrunkenMaster.mjs";
 
 class Dialog {
   constructor(dialog) {
@@ -44,6 +44,11 @@ class Dialog {
 
   canPerformHeal() {
     return game.player.statistics.race === "unicorn" && game.player.statistics.spellcasting >= 75;
+  }
+
+  // Same threshold as using the medicine skill directly on the patient.
+  canHealWithMedicineSkill() {
+    return game.player.statistics.medicine > drunkenQuestMedicineWithoutBag;
   }
 
   tryToHeal() {

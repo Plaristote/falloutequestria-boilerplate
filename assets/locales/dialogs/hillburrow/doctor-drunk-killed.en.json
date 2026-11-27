@@ -1,0 +1,10 @@
+{
+    "dialogs": {
+        "hillburrow/doctor-drunk-killed": {
+            "entry": "<i>The patient's chest doesn't rise anymore. The doctor drops what she was holding, and looks at you with eyes full of fury.</i><br/><br/>WHAT HAVE YOU DONE ?! He was STABLE ! I only needed a bag and a little time, and you had to play the hero, you reckless, arrogant BUTCHER !",
+            "answer-apologize": "I'm sorry. I thought I could save him.",
+            "answer-leave": "…",
+            "no-forgiveness": "Sorry ? SORRY ?! Sorry won't put him back together ! Get out of my clinic. I never want to see your face or hear your voice again. And I'll make sure all of Hillburrow knows what you did !"
+        }
+    }
+}

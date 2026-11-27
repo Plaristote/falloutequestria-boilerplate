@@ -115,7 +115,6 @@
             "text": "meeting-as-enemy-reject"
         },
         "meeting-as-enemy-surrender": {
-            "state": "prompt",
             "text": "meeting-as-enemy-surrender"
         },
         "petiole-quest/accept": {
@@ -129,6 +128,28 @@
         "petiole-quest/ask-why-there": {
             "state": "petiole-quest/why",
             "text": "petiole-quest/ask-why-there"
+        },
+        "potiok-quest/accept": {
+            "state": "potiok-quest/accepted",
+            "text": "petiole-quest/accept"
+        },
+        "potiok-quest/ask-why": {
+            "state": "potiok-quest/why",
+            "text": "potiok-quest/ask-why"
+        },
+        "potiok-quest/pitch-done": {
+            "state": "prompt",
+            "text": "potiok-quest/pitch-done"
+        },
+        "potiok-quest/pitch-trout": {
+            "availableHook": "canPitchTrout",
+            "hook": "pitchTrout",
+            "text": "potiok-quest/pitch-trout"
+        },
+        "potiok-quest/pitch-trout-after-briefing": {
+            "availableHook": "canPitchTroutAfterBriefing",
+            "hook": "pitchTrout",
+            "text": "potiok-quest/pitch-trout"
         },
         "searching-father/accept": {
             "state": "searching-father/accepted",
@@ -255,10 +276,78 @@
             ],
             "text": "petiole-quest/why"
         },
+        "potiok-quest/accepted": {
+            "answers": [
+            ],
+            "hook": "acceptPotiokQuest",
+            "text": "potiok-quest/accepted"
+        },
+        "potiok-quest/give": {
+            "answers": [
+                "potiok-quest/accept",
+                "potiok-quest/ask-why",
+                "potiok-quest/pitch-trout",
+                "petiole-quest/ask-more-questions"
+            ],
+            "hook": "givePotiokQuest",
+            "text": "potiok-quest/give"
+        },
+        "potiok-quest/report-success": {
+            "answers": [
+                "ask-about-mission",
+                "exit-prompt"
+            ],
+            "hook": "onPotiokQuestReportSuccess",
+            "text": "potiok-quest/report-success"
+        },
+        "potiok-quest/report-success-heir": {
+            "answers": [
+                "ask-about-mission",
+                "exit-prompt"
+            ],
+            "hook": "onPotiokQuestReportSuccess",
+            "text": "potiok-quest/report-success-heir"
+        },
+        "potiok-quest/trout-plan-ok": {
+            "answers": [
+                "potiok-quest/accept",
+                "petiole-quest/ask-more-questions"
+            ],
+            "text": "potiok-quest/trout-plan-ok"
+        },
+        "potiok-quest/trout-plan-ok-later": {
+            "answers": [
+                "potiok-quest/pitch-done"
+            ],
+            "text": "potiok-quest/trout-plan-ok-later"
+        },
+        "potiok-quest/trout-plan-refused": {
+            "answers": [
+                "potiok-quest/accept",
+                "petiole-quest/ask-more-questions"
+            ],
+            "mood": "angry",
+            "text": "potiok-quest/trout-plan-refused"
+        },
+        "potiok-quest/trout-plan-refused-later": {
+            "answers": [
+                "potiok-quest/pitch-done"
+            ],
+            "text": "potiok-quest/trout-plan-refused-later"
+        },
+        "potiok-quest/why": {
+            "answers": [
+                "potiok-quest/accept",
+                "potiok-quest/pitch-trout",
+                "petiole-quest/ask-more-questions"
+            ],
+            "text": "potiok-quest/why"
+        },
         "prompt": {
             "answers": [
                 "give-report",
                 "ask-about-mission",
+                "potiok-quest/pitch-trout-after-briefing",
                 "ask-about-changelings",
                 "ask-why-help",
                 "ask-about-mines",

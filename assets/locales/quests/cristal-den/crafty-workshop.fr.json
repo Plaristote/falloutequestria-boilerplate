@@ -1,0 +1,9 @@
+{
+  "quests": {
+    "cristal-den/crafty-workshop": {
+      "title": "Atelier de Crafty",
+      "description": "<p>La Matriarche vous a demandé de découvrir si l'atelier d'outils agricoles de Crafty est une vraie entreprise. (Provisoire : cette mission se termine dès qu'elle est acceptée.)</p>",
+      "placeholder": "Aller voir l'atelier de Crafty"
+    }
+  }
+}

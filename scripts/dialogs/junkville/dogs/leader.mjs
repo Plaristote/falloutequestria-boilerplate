@@ -13,9 +13,11 @@ import {
   NEGOTIATE_FIDO_ARGUMENT_FLAGS,
   hasMediationStarted,
   startMediation,
-  hasRandyAgreedToNegotiate
+  hasRandyAgreedToNegotiate,
+  revealNegotiationQuest
 } from "../../../quests/junkvilleNegociateWithDogs.mjs";
 import {
+  banditsCleared,
   banditsDefeatedWithJunkvilleHelp,
   sendDogReinforcement
 } from "../../../quests/junkville/cavernBandits.mjs";
@@ -52,6 +54,15 @@ export default class Dialog {
 
   get scavengerHealedWoundedDogs() { return this.scavengerQuest?.isObjectiveCompleted("healWoundedDogs"); }
 
+  // Dolly sneers at Fido's softness whenever the scavengers get freed
+  // (bubble over her head + unlocks her "you called Fido weak" line).
+  dollyBadmouthsFido() {
+    const script = level.getScriptObject();
+
+    if (script && typeof script.dollyBadmouthsFido === "function")
+      script.dollyBadmouthsFido();
+  }
+
   hasScavengerQuest() {
     return game.quests.hasQuest("junkvilleDumpsDisappeared");
   }
@@ -77,6 +88,7 @@ export default class Dialog {
       if (success) {
         authorizeCaptiveRelease();
         skipScavengerRansom();
+        this.dollyBadmouthsFido();
         return "scavengers/intimidation-success";
       }
     }
@@ -102,6 +114,7 @@ export default class Dialog {
   get canAskAboutWoundedDogs() {
     return this.dialog.npc.getVariable("canAskAboutWoundedDogs", 0) == 1
         && this.scavengerHealedWoundedDogs
+        && !banditsCleared() // the bandit lead is moot once the bandits are gone
         && (!this.canHelpWithBandits || !this.banditsQuest.script.talkedWithDogs);
   }
 
@@ -137,6 +150,7 @@ export default class Dialog {
   scavengerConvincedToRelease() {
     authorizeCaptiveRelease();
     enableScavengerRansom("alt");
+    this.dollyBadmouthsFido();
   }
 
   scavengerAfterCaptivesFreed() {
@@ -149,6 +163,7 @@ export default class Dialog {
   scavengerWoundedHealed() {
     this.scavengerQuest.setVariable("reportedHealedDogs", 1);
     authorizeCaptiveRelease();
+    this.dollyBadmouthsFido();
   }
 
   scavengerCanPayRansom() {
@@ -160,6 +175,7 @@ export default class Dialog {
     this.scavengerQuest.script.woundedDogs = 0;
     this.scavengerQuest.completeObjective("bring-ransom");
     authorizeCaptiveRelease();
+    this.dollyBadmouthsFido();
   }
 
   scavengerOnRansomNext() {
@@ -273,8 +289,7 @@ export default class Dialog {
   negociateOnArgueFuture()  { return this.negociateApplyArgument("fidoDebateUsedFuture", "point-future-made"); }
 
   negociateApplyArgument(flag, reactionState) {
-    if (!this.negociateQuest || this.negociateQuest.hidden)
-      game.quests.addQuest("junkvilleNegociateWithDogs");
+    revealNegotiationQuest();
     this.negociateQuest.setVariable(flag, true);
     if (this.negociateDebatePoints() >= 2) {
       startMediation();
@@ -285,6 +300,7 @@ export default class Dialog {
   }
 
   negociateBringUp() {
+    revealNegotiationQuest();
     this.dialog.npc.setVariable("negociateBroughtUp", 1);
     if (!hasMediationStarted())
       return "negociations/debate-entry";
@@ -298,9 +314,17 @@ export default class Dialog {
   }
 
   negociateBringUpText() {
+    if (hasRandyAgreedToNegotiate() && !hasMediationStarted())
+      return this.dialog.tr("bring-up-negociations-randy-ready");
     if (!this.dialog.npc.hasVariable("negociateBroughtUp"))
       return this.dialog.tr("bring-up-negociations-init");
     return this.dialog.tr("bring-up-negociations");
+  }
+
+  // Fido's opening line of the debate: reacts to Randy already being on board.
+  negociateDebateEntry() {
+    if (hasRandyAgreedToNegotiate())
+      return { textKey: "negociations/debate-entry-randy-ready", mood: "dubious" };
   }
 
   negociateEntry() {

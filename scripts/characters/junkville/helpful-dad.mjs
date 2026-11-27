@@ -2,6 +2,7 @@ import {CharacterBehaviour} from "../character.mjs";
 import {helpfulHasDisappeared} from "../../quests/junkville/findHelpful.mjs";
 import {RoutineComponent} from "../../behaviour/routine.mjs";
 import {routine, initializeRoutineUser} from "./resident-routine.mjs";
+import {assemblyTalkBubbles} from "./assembly.mjs";
 
 export const sobbingBubbles = [
   {content: i18n.t("bubbles.sobbing-1"), duration: 3000},
@@ -26,6 +27,10 @@ export default class HelpfulDad extends CharacterBehaviour {
   }
 
   get textBubbles() {
+    const assemblyBubbles = assemblyTalkBubbles(this.model);
+
+    if (assemblyBubbles)
+      return assemblyBubbles;
     if (helpfulHasDisappeared() && game.quests.getQuest("junkville/findHelpful")?.completed !== true)
       return sobbingBubbles;
     return greetingsBubbles;

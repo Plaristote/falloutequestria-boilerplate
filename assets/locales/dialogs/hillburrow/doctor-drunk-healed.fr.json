@@ -1,0 +1,12 @@
+{
+    "dialogs": {
+        "hillburrow/doctor-drunk-healed": {
+            "answer-leave": "Ce n'était rien. Je vous laisse reprendre la main.",
+            "answer-secret": "Une bonne docteure ne révèle jamais ses sources.",
+            "answer-wastes": "Je l'ai appris dans les terres désolées, un patient à la fois.",
+            "entry": "<i>Vous vous écartez du patient. Il respire lentement mais régulièrement, et un peu de couleur revient sur son visage. La docteure fixe votre travail, la bouche entrouverte.</i><br/><br/>Je… c'était… Ça fait des années que je fais ça et je n'ai jamais vu personne refermer une plaie interne aussi proprement. Où diable avez-vous appris des techniques pareilles ?",
+            "secret-reaction": "Hein ? C'est l'exact inverse de ce que ferait un bon médecin. Soit, garde tes secrets. Tu as quand même gagné ma gratitude, et je ne la donne pas à la légère.",
+            "wastes-reaction": "Un patient à la fois… eh bien, c'est une sacrée école. Si un jour vous voulez partager ce que vous savez, ma porte est ouverte. Merci. Sincèrement."
+        }
+    }
+}

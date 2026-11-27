@@ -82,7 +82,7 @@ class Dialog extends ThornhoofCaravanComponent {
   onAskJoinCaravanToSteelRangers() {
     if (!this.canJoinCaravan())
       return "steel-rangers-need-caravaneer";
-    this.dialog.npc.script.nextCaravanDestination = "steel-rangers-bunker";
+    this.dialog.npc.script.nextCaravanDestination = "steel-ranger-bunker";
     return game.timeManager.weekDay == 1 ? "join-caravan" : "caravan-later";
   }
 

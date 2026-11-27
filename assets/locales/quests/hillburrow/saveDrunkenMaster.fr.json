@@ -8,7 +8,15 @@
       "desc-failed": "Mais le temps, c'est de l'argent, et tu n'en avais pas à dépenser pour un poney assez stupide pour se retrouver dans une telle situation. Une fois de plus, c'est la séléction naturelle qui a gagné.",
       "desc-saved": "Tu devrais peut-être essayer de retrouver ce poney. Vu l'odeur d'alcool qu'il dégageait, ce doit être un habitué du bar.",
       "findDoctorBag": "Ramener une malette médicale",
-      "saveDrunkenMaster": "Sauver le patient du docteur"
+      "saveDrunkenMaster": "Sauver le patient du docteur",
+      "needs-doctor-bag": "Le patient a un pieu planté dans l'estomac. Impossible d'opérer une blessure interne à main nue : il vous faut une sacoche de médecin.",
+      "needs-doctor-bag-have": "Le patient a un pieu planté dans l'estomac. Impossible d'opérer à main nue, mais vous avez une sacoche de médecin. Essayez de l'utiliser sur lui.",
+      "surgery-started": "Vous retroussez vos manches et commencez à opérer le poney blessé…",
+      "surgery-success": "Le pieu est retiré, l'estomac recousu, et l'hémorragie est stoppée. Le patient va vivre.",
+      "surgery-failure": "Vous sentez quelque chose céder sous vos sabots. Le patient convulse une fois, puis s'affaisse. Il est mort.",
+      "doctor-refuses": "Ne m'adresse pas la parole, assassin !",
+      "desc-player-healed-bag": "Vous avez mis la main sur une sacoche de médecin et opéré le patient vous-même. Tout s'est bien passé, et la docteure en est restée sans voix.",
+      "desc-killed-patient": "Vous avez pris les choses en main, et raté l'opération. Le patient est mort sur le sol de la clinique. La docteure ne vous adressera plus jamais la parole, et la nouvelle va se répandre dans Hillburrow."
     }
   }
 }

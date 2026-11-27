@@ -118,26 +118,20 @@ class Dialog {
     game.player.inventory.addItemOfType("bottlecaps", this.betPotentialGains);
   }
 
-  fightWinningPriceAt(it) {
-    switch (it) {
-      case 1: return 250;
-      case 2: return 400;
-      case 3: return 800;
-    }
-    return 100;
-  }
-
   get fightWinningPrice() {
-    return this.fightWinningPriceAt(this.gym.script.playerWinCount);
+    return this.gym.getVariable("fightPrize", 0) || this.nextFightWinningPrice;
   }
 
   get nextFightWinningPrice() {
-    return this.fightWinningPriceAt(this.gym.script.playerWinCount + 1);
+    return this.gym.script.prizeForOpponent(this.gym.script.playerCurrentOpponent);
   }
 
   fightEarnings() {
+    const prize = this.fightWinningPrice;
+
+    // fightPrize stays set until the next fight: the dialog text may be rendered after this hook.
     this.gym.unsetVariable("fightWon");
-    game.player.inventory.addItemOfType("bottlecaps", this.fightWinningPrice);
+    game.player.inventory.addItemOfType("bottlecaps", prize);
   }
 
   fight() {

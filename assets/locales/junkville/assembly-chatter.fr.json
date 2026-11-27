@@ -1,0 +1,26 @@
+{
+  "junkville-assembly": {
+    "chatter-1": "Motion d'ordre ! Qui a volé la motion d'ordre ?",
+    "chatter-2": "Je propose qu'on mette à l'ordre du jour la motion sur les tables. Quelqu'un les a volées.",
+    "chatter-3": "On peut voter pour savoir si on doit voter ?",
+    "chatter-4": "Point quatre à l'ordre du jour : l'odeur. Encore.",
+    "chatter-5": "Comme indiqué dans le compte rendu de la dernière réunion… personne n'a pris de notes. Quelqu'un a mangé le papier.",
+    "chatter-6": "J'aimerais parler au nom des radcafards, qui ne peuvent pas parler pour eux-mêmes.",
+    "chatter-7": "C'est drôle, cette utopie anarchiste vote toujours ce que Randy propose.",
+    "chatter-8": "Ma motion a été appuyée par mon ombre. Ça compte, non ?",
+    "chatter-9": "Le quorum, c'est ceux qui ne dorment pas encore.",
+    "chatter-10": "Je demande un recomptage. Des voix, et des capsules.",
+    "chatter-11": "Qui a encore mis « réparer le toit » à l'ordre du jour ? C'est une lucarne maintenant. C'est une fonctionnalité.",
+    "chatter-12": "Chut. J'essaie de dormir les yeux ouverts.",
+    "chatter-13": "La démocratie, c'est génial, mais avez-vous déjà essayé un comité sur un comité ?",
+    "chatter-14": "Cette assemblée est sponsorisée par les terres désolées. Personne d'autre ne voulait.",
+    "talk-1": "Chut, on est en pleine assemblée communale.",
+    "talk-2": "Ça peut attendre ? L'assemblée a commencé. Pas que quelqu'un écoute.",
+    "talk-3": "C'est l'heure de l'assemblée ! Assieds-toi, parle fort, et ne mentionne pas le budget.",
+    "talk-4": "Chaque soir, le même débat. Au menu ce soir : à qui le tour d'apporter les grignotages.",
+    "talk-5": "Je discuterais bien, mais j'ai un siège très important à garder au chaud pour l'assemblée.",
+    "talk-debate-running": "Chut ! Le débat est en cours !",
+    "talk-waiting-for": "L'assemblée communale va bientôt commencer. On attend encore {{name}}.",
+    "talk-waiting-all-here": "L'assemblée communale va bientôt commencer. Je crois que tout le monde est là, on attend les formalités."
+  }
+}

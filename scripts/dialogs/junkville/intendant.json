@@ -35,6 +35,11 @@
             "state": "about-safety",
             "text": "ask-safety"
         },
+        "ask-safety-bandits-more": {
+            "availableHook": "safetyCanAskAboutBandits",
+            "state": "about-safety-bandits-more",
+            "text": "ask-safety-bandits-more"
+        },
         "ask-scavenger-ransom": {
             "availableHook": "isLookingForScavengerRansom",
             "state": "scavengers/ransom-entry",
@@ -128,10 +133,20 @@
         },
         "about-safety": {
             "answers": [
+                "ask-safety-bandits-more",
                 "ask-something-else",
                 "end-ask"
             ],
+            "hook": "aboutSafety",
             "text": "about-safety"
+        },
+        "about-safety-bandits-more": {
+            "answers": [
+                "ask-something-else",
+                "end-ask"
+            ],
+            "hook": "aboutSafetyBanditsMore",
+            "text": "about-safety-bandits-more"
         },
         "about-town": {
             "answers": [

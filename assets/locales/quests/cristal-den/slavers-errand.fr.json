@@ -9,7 +9,13 @@
       "desc-report-deficit": "<p>Finalement, Bitty Potiok est bien trop pingre, et tu n'as pas profité de l'opération. Tu as même perdu {{amount}} capsules. Dans quel monde cynique vis-tu où même l'esclavage ne paie pas ?</p>",
       "desc-report-benefit": "<p>Grâce à tes talents de négociation, tu as réussi à obtenir un profit de {{amount}} capsules. L'argent n'a pas d'odeur !</p>",
       "fetchSlaves": "Achète des esclaves",
-      "reportToBittyPotiok": "Retourne voir Bitty Potiok"
+      "reportToBittyPotiok": "Retourne voir Bitty Potiok",
+      "escortConvoy": "Escorter les esclaves jusqu'à Hillburrow ({{alive}}/{{total}} en vie)",
+      "desc-escort-started": "<p>Pour payer moins, vous avez accepté d'escorter vous-même le convoi d'esclaves jusqu'à Hillburrow. Vous avez payé {{price}} capsules aux esclavagistes. Les esclaves ne se battront pas : ils fuiront, et tout ce qui attaque le convoi s'en prendra à eux.</p>",
+      "desc-escort-arrived": "<p>Le convoi est arrivé à Hillburrow avec {{delivered}} esclaves sur {{total}}.</p>",
+      "desc-escort-heavy-losses": "<p>Presque personne n'a survécu au voyage. Bitty ne va pas être contente.</p>",
+      "desc-escort-wiped": "<p>Tous les esclaves sont morts sur la route. Bitty Potiok ne vous le pardonnera pas.</p>",
+      "desc-escort-deserted": "<p>Vous avez abandonné le convoi à son sort. Bitty Potiok ne vous le pardonnera pas.</p>"
     }
   }
 }

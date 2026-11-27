@@ -136,6 +136,14 @@
             ],
             "text": "end-quest"
         },
+        "heir-reaction": {
+            "answers": [
+                "ask-about-pimping",
+                "exit-pimping"
+            ],
+            "mood": "angry",
+            "text": "heir-reaction"
+        },
         "on-cute": {
             "answers": [
             ],

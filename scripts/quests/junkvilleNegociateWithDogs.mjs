@@ -1,4 +1,4 @@
-import {QuestHelper, requireQuest} from "./helpers.mjs";
+import {QuestHelper, QuestFlags, requireQuest} from "./helpers.mjs";
 import killArray from "../characters/killArray.mjs";
 import {
   isLookingForDisappearedPonies,
@@ -30,9 +30,23 @@ export const NEGOTIATE_RANDY_ARGUMENT_FLAGS = [
   "randyDebateUsedSafety"
 ];
 
+// The quest exists (hidden) from the very first visit to the diamond dogs'
+// tunnels, so that objectives such as "safe" can be tracked from the start.
+export function ensureNegotiationQuest() {
+  return requireQuest(questName, QuestFlags.HiddenQuest);
+}
+
+// Called once negotiating actually becomes an option (Randy or Fido bring it up).
+export function revealNegotiationQuest() {
+  return requireQuest(questName, QuestFlags.NormalQuest);
+}
+
 export function safeObjectiveCompleted() {
-  if (hasQuest())
-    getQuest().completeObjective("safe");
+  const quest = ensureNegotiationQuest();
+
+  // Only the first safe return from the tunnels grants the reward.
+  if (!quest.isObjectiveCompleted("safe"))
+    quest.completeObjective("safe");
 }
 
 export function mediationNeedsCaptiveRelease() {
@@ -87,13 +101,26 @@ export function fidoAcceptedTradeOfGems() {
   return hasQuest() && getQuest().isObjectiveCompleted("fido-accepted-trade");
 }
 
+// What kind of peace was settled: "trade" if Fido agreed to trade AND the
+// assembly accepted it, otherwise a bare "zone" boundary (no trade).
+// (The legacy "mediation" variable is no longer written by anything.)
+export function peaceMediationKind() {
+  const quest = getQuest();
+
+  if (quest
+      && quest.isObjectiveCompleted("fido-accepted-trade")
+      && quest.getVariable("junkvilleDecision") === "accept")
+    return "trade";
+  return "zone";
+}
+
 export function hasBattleStarted() {
   return hasQuest() && getQuest().hasVariable("battleState");
 }
 
 export function allowedInCaverns() {
   const quest = getQuest();
-  return !quest || !quest.isObjectiveCompleted("peaceful-resolve") || quest.getVariable("mediation") == "trade";
+  return !quest || !quest.isObjectiveCompleted("peaceful-resolve") || peaceMediationKind() == "trade";
 }
 
 export function prepareDiamondDogsOnCavernAccessTransgression() {
@@ -215,6 +242,11 @@ export function shouldAltLeaderTakeOver() {
       && !hasBattleStarted();
 }
 
+export function hasAltLeaderBeenConvinced() {
+  return hasQuest() &&
+         getQuest().isObjectiveCompleted("alt-leader-convinced");
+}
+
 export function hasAltLeaderTakenOver() {
   return hasQuest() &&
          getQuest().isObjectiveCompleted("alt-leader-took-over");
@@ -302,7 +334,8 @@ export class JunkvilleNegociateWithDogs extends QuestHelper {
         : `<p>${this.model.tr("desc-decision-pending")}</p>`;
     }
     if (bothAgreedToNegotiate() && this.model.isObjectiveCompleted("peaceful-resolve")) {
-      text += this.model.getVariable("mediation") === "trade"
+      console.log(questName, "-> peace kind:", peaceMediationKind(), "trade accepted:", fidoAcceptedTradeOfGems(), "decision:", this.model.getVariable("junkvilleDecision"));
+      text += peaceMediationKind() === "trade"
         ? `<p>${this.model.tr("desc-peace-trade")}</p>`
         : `<p>${this.model.tr("desc-peace-boundary")}</p>`;
     }

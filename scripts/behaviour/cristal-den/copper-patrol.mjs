@@ -32,6 +32,20 @@ class PatrolProcess extends CaravanProcess {
     }
   }
 
+  // A patrol escorts guards, not caravan wagons: no wagon in the encounters.
+  get caravanCount() {
+    return 0;
+  }
+
+  // The patrol's experience is granted when reporting to the captain.
+  get paysCaravanReward() {
+    return false;
+  }
+
+  announceArrival() {
+    game.appendToConsole(i18n.t("messages.patrol-completed"));
+  }
+
   start() {
     this.startCaravanWithPath([
       "cristal-den",

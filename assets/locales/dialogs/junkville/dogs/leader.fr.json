@@ -155,7 +155,9 @@
             "why-here-following-trail": "Je suis la piste de poneys disparus.",
             "why-here-none-of-your-business": "C'est pas tes oignons.",
             "why-here-traveler": "Je ne suis qu'un vagabond des terres désolées, rien de plus.",
-            "wounded-intro-tell-me-more": "Est-ce que je peux faire quelque chose pour aider ?"
+            "wounded-intro-tell-me-more": "Est-ce que je peux faire quelque chose pour aider ?",
+            "bring-up-negociations-randy-ready": "Randy dit que Junkville est prête à discuter.",
+            "negociations/debate-entry-randy-ready": "Junkville est prête à discuter ? Les poneys t'ont envoyé me le dire ?<br><br>…J'avoue que je ne m'y attendais pas. Mes chiens blessés vont mieux grâce à toi, et je ne l'ai pas oublié. Mais un seul geste de bonté n'efface pas des générations de méfaits. Donne-moi des raisons d'ouvrir notre porte, et j'écouterai."
         }
     }
 }

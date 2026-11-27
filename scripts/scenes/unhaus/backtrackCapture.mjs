@@ -92,15 +92,26 @@ export class BacktrackCaptureScene extends SceneManager {
   }
 
   resolveCapture() {
-    const jailZone = level.getZoneFromName("jail-cell-4");
-
-    level.moveCharacterToZone(this.backtrack, jailZone);
+    this.lockBacktrackInCell();
     this.backtrack.inventory.unequipAllItems();
     this.backtrack.inventory.transferTo(level.script.jailShelf.inventory);
     this.backtrack.setAsEnemy(game.player);
     game.quests.getQuest("unhaus/searching-father").script.onLedToTrap();
     this.finalize();
     Array.from(this.guards.list).forEach(character => { level.deleteObject(character); });
+  }
+
+  lockBacktrackInCell() {
+    const jailZone = level.getZoneFromName("jail-cell-4");
+    const door = level.findObject("floor-1.jail.cell-4.door");
+
+    level.moveCharacterToZone(this.backtrack, jailZone);
+    this.backtrack.tasks.removeTask("followPlayer");
+    this.backtrack.actionQueue.reset();
+    if (door) {
+      door.opened = false;
+      door.locked = true;
+    }
   }
 
   onCombatTurn(character)          { this.startFight(); }

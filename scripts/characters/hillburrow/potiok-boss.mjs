@@ -1,3 +1,4 @@
+import {notifyPotiokDeath} from "../../quests/cristal-den/potioks.mjs";
 import {CharacterBehaviour} from "../character.mjs";
 
 class PotiokBoss extends CharacterBehaviour {
@@ -8,6 +9,7 @@ class PotiokBoss extends CharacterBehaviour {
 
   onDied() {
     game.setVariable("potiokBittyDead", 1);
+    notifyPotiokDeath();
     super.onDied();
   }
 }

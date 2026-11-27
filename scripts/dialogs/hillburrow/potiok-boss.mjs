@@ -18,17 +18,54 @@ class Dialog {
   }
 
   getEntryPoint() {
+    if (this.escortFailed)
+      return this.slaversErrand.script.escortFailure == "wiped" ? "slavers-errand/execution-wiped" : "slavers-errand/execution-deserted";
     if (this.sabotageQuest && !this.sabotageQuest.hidden && !this.sabotageQuest.completed)
       return "sabotage/entry";
     else if (this.slaversErrand) {
       if (!this.slaversErrand.isObjectiveCompleted("fetchSlaves"))
         return "slavers-errand/waiting-slaves";
       if (!this.slaversErrand.isObjectiveCompleted("reportToBittyPotiok"))
-        return "slavers-errand/waiting-report";
+        return this.waitingReportState;
     }
     else
       return null;
     return "entry";
+  }
+
+  // BEGIN Slaves errand, escorted convoy
+  get escortFailed() {
+    return !!this.slaversErrand && this.slaversErrand.failed && this.slaversErrand.script.escortStarted;
+  }
+
+  get slavesDelivered() {
+    return this.slaversErrand.script.slavesDelivered;
+  }
+
+  get slavesLost() {
+    return this.slaversErrand.script.slavesLost;
+  }
+
+  // How Bitty receives the slaves depends on how many survived the trip.
+  get waitingReportState() {
+    const script = this.slaversErrand.script;
+
+    switch (script.lossTier) {
+    case "heavy": return "slavers-errand/waiting-report-furious";
+    case "some":  return "slavers-errand/waiting-report-angry";
+    }
+    return script.escortStarted ? "slavers-errand/waiting-report-escort" : "slavers-errand/waiting-report";
+  }
+
+  // The player abandoned the convoy or let every slave die: Bitty has them executed.
+  startExecution() {
+    game.diplomacy.setAsEnemy(true, "player", "hillburrow-potioks");
+    this.onFightGuards();
+  }
+
+  startExecutionFlee() {
+    game.diplomacy.setAsEnemy(true, "player", "hillburrow-potioks");
+    this.onChasedAway();
   }
 
   startCombat() {
@@ -154,7 +191,7 @@ class Dialog {
   }
 
   get slaversErrandRefundAmount() {
-    return this.slaversErrandSlaveCost * 10;
+    return this.slaversErrandSlaveCost * this.slaversErrand.script.slavesDelivered;
   }
 
   /*

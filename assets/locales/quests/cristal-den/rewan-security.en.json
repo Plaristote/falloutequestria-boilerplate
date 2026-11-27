@@ -1,0 +1,9 @@
+{
+  "quests": {
+    "cristal-den/rewan-security": {
+      "title": "Rewan's works",
+      "description": "<p>The Matriarch asked you to see how her son Rewan handles the disappearances at his works on the outskirts. (Placeholder: this job is completed as soon as it is accepted.)</p>",
+      "placeholder": "Visit Rewan's works"
+    }
+  }
+}

@@ -3,7 +3,10 @@
     "dogs": {
       "leaderReactToDuelDefeat": "Dolly… elle eut été une ardente cheftaine pour les chiens… le destin en a décidé autrement.",
       "dogA-reactToDuelDefeat": "Le petit poney a tué Dolly !",
-      "dogB-reactToDuelDefeat": "C'était un combat loyal. Laisse-le partir."
+      "dogB-reactToDuelDefeat": "C'était un combat loyal. Laisse-le partir.",
+      "dolly-reacts-to-negociation": "Alors c'est ça… le vieux cabot va vraiment traiter avec la surface.",
+      "dolly-badmouths-leader": "Faible. Libérer ces rats de la surface sans rien exiger… Fido s'est ramolli.",
+      "dolly-greets-convinced": "Poney. Tâche de ne pas te perdre dans nos tunnels. La parole de Fido me suffit, désormais."
     },
     "escape-from-dogs-success": "Tu es sorti sain et sauf des galeries des chiens à diamant. Tu gagne {{xp}} points d'experience.",
     "dumps-dog-hole-heard": "Il y a quelque chose de curieux dans cette zone. Un faible courant d’air remonte du sol, chargé d’une odeur de terre humide."

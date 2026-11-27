@@ -1,0 +1,9 @@
+{
+  "quests": {
+    "cristal-den/crafty-workshop": {
+      "title": "Crafty's workshop",
+      "description": "<p>The Matriarch asked you to find out whether Crafty's farming tools workshop is a real enterprise. (Placeholder: this job is completed as soon as it is accepted.)</p>",
+      "placeholder": "Visit Crafty's workshop"
+    }
+  }
+}

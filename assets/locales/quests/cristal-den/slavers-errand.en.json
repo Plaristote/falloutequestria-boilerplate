@@ -9,7 +9,13 @@
       "desc-report-deficit": "<p>In the end, Bitty Potiok was stingy, and you didn't make any money. You even lost {{amount}} caps. What insane world do you live in that even slavery doesn't pay ?</p>",
       "desc-report-benefit": "<p>Thanks to your negociating skills, you managed to make a profit of {{amount}} caps. Dirty money still is money.</p>",
       "fetchSlaves": "Acquire slaves",
-      "reportToBittyPotiok": "Go back to Bitty Potiok"
+      "reportToBittyPotiok": "Go back to Bitty Potiok",
+      "escortConvoy": "Escort the slaves to Hillburrow ({{alive}}/{{total}} alive)",
+      "desc-escort-started": "<p>To pay less, you agreed to escort the slave convoy to Hillburrow yourself. You paid {{price}} caps to the slavers. The slaves will not fight; they will run, and anything that attacks the convoy will go for them.</p>",
+      "desc-escort-arrived": "<p>The convoy reached Hillburrow with {{delivered}} slaves out of {{total}}.</p>",
+      "desc-escort-heavy-losses": "<p>Hardly anyone survived the trip. Bitty is not going to be happy.</p>",
+      "desc-escort-wiped": "<p>Every slave died on the road. Bitty Potiok will not forgive that.</p>",
+      "desc-escort-deserted": "<p>You abandoned the convoy to its fate. Bitty Potiok will not forgive that.</p>"
     }
   }
 }

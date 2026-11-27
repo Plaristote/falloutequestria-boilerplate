@@ -14,7 +14,11 @@ function assemblyRoutine(model) {
   if (zone && !game.level.isInsideZone(zone, model)) {
     model.actionQueue.pushMoveToZone(zone);
     model.actionQueue.pushScript({
-      onTrigger: function() {},
+      onTrigger: function() {
+        // Movement ended: if the pony isn't at the assembly (blocked path, etc.), try again.
+        if (!game.level.isInsideZone(zone, model))
+          model.script.routineComponent.rescheduleRoutineAction();
+      },
       onCancel: function() {
         model.script.routineComponent.rescheduleRoutineAction();
       }

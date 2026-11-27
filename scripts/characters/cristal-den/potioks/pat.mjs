@@ -5,10 +5,5 @@ export default class extends CharacterBehaviour {
     super(model);
     this.dialog = "cristal-den/potioks/pat";
   }
-
-  onDied() {
-    game.setVariable("potiokPatDead", 1);
-    super.onDied();
-  }
 }
 

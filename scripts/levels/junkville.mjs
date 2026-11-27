@@ -6,6 +6,7 @@ import {
   finalizeRescueRoute
 } from "../quests/junkville/findHelpful.mjs";
 import {HelpfulReturnScene} from "../scenes/junkville/helpfulReturn.mjs";
+import {sayChatter, gatherStragglers} from "../characters/junkville/assembly.mjs";
 
 class Level extends LevelBase {
   constructor(model) {
@@ -84,6 +85,7 @@ class Level extends LevelBase {
   onLoaded() {
     this.helpfulReturnScene = new HelpfulReturnScene(this);
     super.onLoaded();
+    level.tasks.addUniqueTask("assemblyChatter", 3500, 0);
     this.prepareRathian();
     this.prepareCook();
     if (findHelpfulRescueRouteState() == 3)
@@ -108,6 +110,17 @@ class Level extends LevelBase {
     level.tasks.addUniqueTask("waitForAssembly", 5 * 1000, 0);
   }
 
+  // Ambient chatter at the communal assembly (9pm - 11pm), except while the
+  // quest-related debate is playing - it has its own scripted lines.
+  assemblyChatter() {
+    const hour = game.timeManager.hour;
+
+    if (hour < 21 || hour >= 23 || level.combat) return ;
+    gatherStragglers()
+    if (this.negociationScene.active || Math.random() > 0.65) return ;
+    sayChatter();
+  }
+
   waitForAssembly() {
     if (level.getVariable("nextAssemblyEnd") < game.timeManager.getTimestamp()) {
       const participants = level.find(character => {
@@ -121,13 +134,14 @@ class Level extends LevelBase {
       const participants = level.find(character => {
         return character.type == "Character" && character.statistics.faction === "junkville";
       });
+      // Minutes elapsed since 9pm. (Don't rely on `minute` alone: it wraps every hour.)
+      const waited = (game.timeManager.hour - 21) * 60 + game.timeManager.minute;
+      const everyoneIdle = participants.every(participant => participant.actionQueue.isEmpty());
+      const enoughGathered = actors.length >= participants.length - 1;
 
-      for (let i = 0 ; i < participants.length ; ++i) {
-        const participant = participants[i];
-        if (!participant.actionQueue.isEmpty())
-          return ;
-      }
-      if (actors.length >= participants.length - 1 || (game.timeManager.hour >= 21 && game.timeManager.minute >= 2)) {
+      // Normally wait for everyone to settle. But a single villager with a stuck
+      // or endless action queue must not hold the assembly hostage forever.
+      if ((everyoneIdle && (enoughGathered || waited >= 2)) || waited >= 10) {
         level.tasks.removeTask("waitForAssembly");
         this.negociationScene.initialize();
       }

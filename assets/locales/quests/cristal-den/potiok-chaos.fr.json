@@ -1,0 +1,16 @@
+{
+  "quests": {
+    "cristal-den/potiok-chaos": {
+      "title": "Le chaos chez les Potioks",
+      "description": "La Reine Changeling veut que la dynastie Potiok se déchire, pour que les affaires de la ruche passent inaperçues à Crystal Den.",
+      "sowChaos": "Faire tomber la dynastie Potiok",
+      "sowChaosEither": "Faire tomber la dynastie Potiok : soit tuer la Matriarche et laisser ses héritiers se disputer le siège, soit obtenir que la Matriarche nomme Trout Potiok (Petiole) son héritier",
+      "desc-options": "Il y a deux façons d'y parvenir. La sanglante : tuer la Matriarche et laisser les héritiers s'entre-déchirer. La discrète : Petiole porte déjà le visage de Trout Potiok ; si la Matriarche nomme Trout héritier, la maison Potiok revient à la ruche sans une goutte de sang.",
+      "installTrout": "Obtenir que la Matriarche nomme Trout Potiok son héritier",
+      "desc-trout-plan": "Petiole porte déjà le visage de Trout Potiok. Plutôt que de verser le sang, vous ferez nommer Trout héritier par la Matriarche.",
+      "desc-completed-chaos": "La Matriarche est morte. Ses héritiers vont s'entre-déchirer pour sa succession, et Crystal Den en sera occupée pendant longtemps.",
+      "desc-completed-heir": "La Matriarche a nommé Trout son héritier. Les Potioks ont offert leur maison à la ruche sans s'en douter.",
+      "desc-failed": "Le plan s'est effondré, et les Potioks sont sur leurs gardes."
+    }
+  }
+}

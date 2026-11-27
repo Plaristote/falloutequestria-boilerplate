@@ -14,8 +14,36 @@ import {
 import {enforcersKnowAboutHerdScouts} from "../../../quests/cristal-den/copper.mjs";
 import {RanchAccess} from "../../../levels/cristal-den-ranch.mjs";
 import {skillContest} from "../../../cmap/helpers/checks.mjs";
+import {HEIRS, isHeirDead} from "../../../quests/cristal-den/potioks.mjs";
+import {
+  Rating,
+  rateHeir,
+  hasRatedHeir,
+  canDiscussSuccession,
+  canSuggestTrout,
+  suggestHeir,
+  getSuggestedHeir,
+  resolveMatriarchChoice,
+  finalizeHeir,
+  getChosenHeir,
+  setRefusedToChoose,
+  wasSuccessionIntroduced,
+  markSuccessionIntroduced
+} from "../../../quests/cristal-den/heir-selection.mjs";
+import {
+  rewanSecurityQuestCanStart,
+  rewanSecurityQuestCanReport,
+  rewanSecurityAcceptToGo,
+  rewanSecurityReportedToMatriarch
+} from "../../../quests/cristal-den/rewan-security.mjs";
 import {hasSuitcaseBeenOpened} from "../../../quests/cristal-den/bibins-sabotage-delivery.mjs";
 import {QuestFlags} from "../../../quests/helpers.mjs";
+import {
+  craftyWorkshopQuestCanStart,
+  craftyWorkshopQuestCanReport,
+  craftyWorkshopAcceptToGo,
+  craftyWorkshopReportedToMatriarch
+} from "../../../quests/cristal-den/crafty-workshop.mjs";
 
 export default class Dialog extends DialogHelper  {
   constructor(dialog) {
@@ -41,6 +69,10 @@ export default class Dialog extends DialogHelper  {
     } else if (this.bibinKilledIndependently && !this.dialog.npc.hasVariable("bibinOutOfBandKillAcknowledged")) {
       this.dialog.npc.setVariable("bibinOutOfBandKillAcknowledged", 1);
       entryPoint = "bibin-investigation/killed-out-of-band";
+    } else if (canDiscussSuccession() && !wasSuccessionIntroduced()) {
+      // She has heard about every living heir: she brings up the succession herself.
+      markSuccessionIntroduced();
+      entryPoint = "heirs/succession/intro";
     } else if (!firstMeeting) {
       entryPoint = "prompt";
     }
@@ -218,6 +250,38 @@ export default class Dialog extends DialogHelper  {
       this.investigateBibinQuest.failed = true;
   }
 
+  // The heirs program starts once Hillburrow has been dealt with: either the
+  // sabotage was reported to her, or Bitty can't be reported on anymore.
+  get heirsProgramOpen() {
+    const sabotage = this.saboteurQuest;
+
+    return isHeirDead("bitty")
+        || !!sabotage && (sabotage.failed || sabotage.isObjectiveCompleted("mustWarnPotioksAboutBibin"));
+  }
+
+  get heirJobs() {
+    return [
+      {
+        id: "rewan",
+        entryState: "heirs/rewan/init/entry",
+        canStart: rewanSecurityQuestCanStart
+      },
+      {
+        id: "crafty",
+        entryState: "heirs/crafty/init/entry",
+        canStart: craftyWorkshopQuestCanStart
+      }
+    ];
+  }
+
+  heirsRewanAcceptToGo() {
+    rewanSecurityAcceptToGo();
+  }
+
+  heirsCraftyAcceptToGo() {
+    craftyWorkshopAcceptToGo();
+  }
+
   canAskMoreJobs() {
     if (this.canOfferBibinInvestigation())
       return true;
@@ -241,6 +305,10 @@ export default class Dialog extends DialogHelper  {
     return "no-jobs-available";
   }
 
+  // Reporting hooks: each just remembers which heir this conversation is
+  // about, so the shared "heirs/leadership/*" appreciation subtree below
+  // knows who to rate. The static "state" on the corresponding answer
+  // handles the actual navigation, these hooks are side-effect only.
   reportOnBitty() {
     this.dialog.npc.setVariable("currentHeirAudit", "bitty");
   }
@@ -282,8 +350,52 @@ export default class Dialog extends DialogHelper  {
   }
 
   rateHeirSkip() {
+    // "I don't have an opinion" still counts as having reported on the heir,
+    // otherwise the player could never get to the succession.
+    rateHeir(this.currentHeirAudit, Rating.NONE);
   }
 
+  // Bitty is rated in the Hillburrow sabotage debrief ("bitty-appreciation-*").
+  rateBittyGood() {
+    rateHeir("bitty", Rating.POSITIVE);
+  }
+
+  rateBittyMedium() {
+    rateHeir("bitty", Rating.NEUTRAL);
+  }
+
+  rateBittyBad() {
+    rateHeir("bitty", Rating.NEGATIVE);
+  }
+
+  rateBittySkip() {
+    rateHeir("bitty", Rating.NONE);
+  }
+
+  // Leadership question, phrased for the heir being audited.
+  heirLeadershipEntry() {
+    return { textKey: `heirs/leadership/entry-${this.currentHeirAudit}` };
+  }
+
+  // Runs on "heirs/<heir>/report-details": the debrief is over for that heir.
+  heirDebriefDone() {
+    switch (this.currentHeirAudit) {
+    case "rewan":
+      rewanSecurityReportedToMatriarch();
+      break ;
+    case "crafty":
+      craftyWorkshopReportedToMatriarch();
+      break ;
+    }
+  }
+
+  // After the last debrief she goes straight to the succession.
+  afterHeirReport() {
+    return canDiscussSuccession() ? "heirs/succession/entry" : "prompt";
+  }
+
+  // After the shared appreciation exchange, route back into whichever
+  // heir's own report content (the actual news) started this conversation.
   continueToHeirReportDetails() {
     return `heirs/${this.currentHeirAudit}/report-details`;
   }
@@ -320,12 +432,28 @@ export default class Dialog extends DialogHelper  {
     suggestHeir("trout");
   }
 
-  matriarchAgreesWithSuggestion() {
-    return true;
+  // Her reaction to the player's pick, in character. She goes along with a
+  // pick she can live with, and overrides one the player themself rated
+  // badly when a better-rated heir is alive (see resolveMatriarchChoice).
+  reactToSuggestion() {
+    const suggested = getSuggestedHeir();
+    const result = resolveMatriarchChoice(suggested);
+
+    if (result.agrees)
+      return { textKey: `heirs/succession/react-${suggested}` };
+    return { textKey: `heirs/succession/override-${result.heir}`, mood: "angry" };
+  }
+
+  refuseToChooseHeir() {
+    setRefusedToChoose();
   }
 
   finalizeSuggestedHeir() {
-    finalizeHeir(this.currentHeirAudit);
+    finalizeHeir();
+  }
+
+  successionDone() {
+    return { textKey: `heirs/succession/done-${getChosenHeir()}` };
   }
 
   get knowsAboutGoldenHerdAndBibin() {

@@ -1,0 +1,16 @@
+{
+  "quests": {
+    "cristal-den/potiok-chaos": {
+      "title": "Chaos among the Potioks",
+      "description": "The Changeling Queen wants the Potiok dynasty to tear itself apart, so the hive's affairs go unnoticed in Crystal Den.",
+      "sowChaos": "Bring the Potiok dynasty down",
+      "sowChaosEither": "Bring the Potiok dynasty down: either kill the Matriarch and let her heirs fight over the seat, or have the Matriarch name Trout Potiok (Petiole) her heir",
+      "desc-options": "There are two ways to do this. The bloody one: kill the Matriarch and let the heirs tear each other apart. The quiet one: Petiole already wears Trout Potiok's face, so if the Matriarch names Trout her heir, the Potiok house is the hive's without a drop of blood.",
+      "installTrout": "Get the Matriarch to name Trout Potiok her heir",
+      "desc-trout-plan": "Petiole already wears Trout Potiok's face. Rather than spill blood, you will have the Matriarch name him heir.",
+      "desc-completed-chaos": "The Matriarch is dead. Her heirs will tear each other apart over the succession, and Crystal Den will be busy with it for a long time.",
+      "desc-completed-heir": "The Matriarch named Trout her heir. The Potioks have handed their house to the hive without suspecting it.",
+      "desc-failed": "The plan fell apart, and the Potioks are on their guard."
+    }
+  }
+}

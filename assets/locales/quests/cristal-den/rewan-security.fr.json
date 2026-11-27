@@ -1,0 +1,9 @@
+{
+  "quests": {
+    "cristal-den/rewan-security": {
+      "title": "Atelier de Rewan",
+      "description": "<p>La Matriarche vous a demandé de voir comment son fils Rewan gère les disparitions dans ses ateliers en périphérie. (Provisoire : cette mission se termine dès qu'elle est acceptée.)</p>",
+      "placeholder": "Aller voir les ateliers de Rewan"
+    }
+  }
+}

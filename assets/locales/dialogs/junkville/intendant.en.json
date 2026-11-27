@@ -42,7 +42,13 @@
             "introduction": "Hello, and welcome to Junkville ! My name's Midnight Facade, and I manage the town supplies. Come to me if you need anything, and I'll sell it to you ! So, what brings you to our small corner of the Crystal wastes ?",
             "nothing-needed": "I don't need anything, just came by to say hi !",
             "open-trade": "I need supplies. Show me what you're selling.",
-            "trade": "Here are my supplies, take a look !"
+            "trade": "Here are my supplies, take a look !",
+            "about-safety-bandits": "Well, for starters, no one's in charge of protecting the town, or even keeping order. Up until now, the folks have been keeping each other safe. But lately it's worse than that: there's a band of raiders holed up somewhere in the caverns under the dump, and they prey on anyone who wanders down there. We're at the mercy of the first organized raider band that comes this way… and this one is already a little too close.",
+            "ask-safety-bandits-more": "Raiders in the caverns ? Tell me more.",
+            "about-safety-bandits-more": "I don't know much, honestly. Randy's the one who's been dealing with the tunnels and the dogs, and everypony listens to him. Go talk to him at the inn.",
+            "about-safety-bandits-more-randy-dead": "I'd tell you to talk to Randy, but he's gone. Nobody here can lead a fight against a raider band. If you want something done about them, you're going to have to do it yourself.",
+            "about-safety-bandits-cleared": "Hm. I said this place wasn't safe, and then you went and wiped out the raiders in the caverns. I guess you proved me wrong, at least for now. Nobody is really in charge of keeping order around here, and the next band will find us just as unprepared… but I'll admit I sleep a little better tonight.",
+            "about-safety-bandits-cleared-randy-dead": "I told you this place wasn't safe, and I wish I hadn't been right. You got rid of the raiders, but it cost us Randy, and he was what held this town together. Nobody's left to protect us from the next band. I'm more worried than ever."
         }
     }
 }

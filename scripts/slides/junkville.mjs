@@ -1,5 +1,5 @@
 import {areCaptorsDead} from "../quests/junkvilleDumpsDisappeared.mjs";
-import {hasAltLeaderTakenOver} from "../quests/junkvilleNegociateWithDogs.mjs";
+import {hasAltLeaderTakenOver, peaceMediationKind} from "../quests/junkvilleNegociateWithDogs.mjs";
 import {
   hasCavernBanditsQuest,
   banditsCleared,
@@ -27,7 +27,7 @@ function getJunkvilleEndingState() {
     else if (negotiateQuest.getVariable("escaped", false))
       dogsOutcome = "battle-fled";
     else if (negotiateQuest.isObjectiveCompleted("peaceful-resolve"))
-      dogsOutcome = negotiateQuest.getVariable("mediation") === "trade" ? "peace-trade" : "peace-boundary";
+      dogsOutcome = peaceMediationKind() === "trade" ? "peace-trade" : "peace-boundary";
     else if (areCaptorsDead())
       dogsOutcome = "dogs-wiped-out";
     else if (hasAltLeaderTakenOver())

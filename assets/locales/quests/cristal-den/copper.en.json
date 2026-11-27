@@ -1,4 +1,7 @@
 {
+  "messages": {
+    "patrol-completed": "You successfully completed the patrol. The captain will expect your report."
+  },
   "quests": {
     "cristal-den/copper-patrol": {
       "title": "Patrolling the wasteland",

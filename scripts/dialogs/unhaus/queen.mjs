@@ -1,5 +1,7 @@
 import DialogHelper from "../helpers.mjs";
-import {requireQuest} from "../../quests/helpers.mjs";
+import {requireQuest, QuestFlags} from "../../quests/helpers.mjs";
+import {skillContest} from "../../cmap/helpers/checks.mjs";
+import {troutReplacedByChangeling} from "../../quests/cristal-den/pimp-changeling.mjs";
 
 class Dialog extends DialogHelper {
   constructor(model) {
@@ -14,6 +16,8 @@ class Dialog extends DialogHelper {
       return "petiole-quest/report-failure";
     if (this.reportSearchingFatherState() === "searching-father/report-failure")
       return "searching-father/report-failure";
+    if (this.reportPotiokQuestState() === "potiok-quest/report-failure")
+      return "potiok-quest/report-failure";
   }
 
   // Quest chain, in the order the Queen offers them. Reordering is just
@@ -27,10 +31,14 @@ class Dialog extends DialogHelper {
   // acknowledged yet - so an already-resolved later quest just waits its
   // turn rather than jumping the queue, and the Queen still always leads
   // with whichever quest is first in this array.
+  //
+  // cristal-den/potiok-chaos comes last because it leans on Petiole
+  // already having Trout Potiok's face - see givePetioleQuest() below.
   get questChain() {
     return [
       { id: "unhaus/searching-father", giveState: "searching-father/give", reportStateFn: this.reportSearchingFatherState.bind(this) },
-      { id: "cristal-den/pimp-changeling", giveState: "petiole-quest/give", reportStateFn: this.reportPetioleQuestState.bind(this) }
+      { id: "cristal-den/pimp-changeling", giveState: "petiole-quest/give", reportStateFn: this.reportPetioleQuestState.bind(this) },
+      { id: "cristal-den/potiok-chaos", giveState: "potiok-quest/give", reportStateFn: this.reportPotiokQuestState.bind(this) }
     ];
   }
 
@@ -180,6 +188,8 @@ class Dialog extends DialogHelper {
       return { textKey: "on-meeting-surrender" };
     case "meeting-as-enemy-argue":
       return { textKey: "on-meeting-as-enemy-argue" };
+    case "potiok-quest/pitch-done":
+      return { textKey: "potiok-quest/pitch-back" };
     case "petiole-quest/ask-more-questions":
       // Shared "wait, one more thing" answer used by both quests' give/why
       // states to back out without accepting - undoes the give-hook's
@@ -286,6 +296,77 @@ class Dialog extends DialogHelper {
 
   onPetioleQuestReportSuccess() {
     this.acknowledge("cristal-den/pimp-changeling");
+  }
+
+  givePotiokQuest() {
+    // NormalQuest also reveals the quest if the player already improvised it (hidden).
+    requireQuest("cristal-den/potiok-chaos", QuestFlags.NormalQuest);
+    this.exitBlocked = true;
+  }
+
+  acceptPotiokQuest() {
+    const text = this.acceptQueenQuest("cristal-den/potiok-chaos", "potiok-quest/accepted");
+
+    if (this.troutPlanApproved)
+      game.quests.getQuest("cristal-den/potiok-chaos").script.proposeTroutPlan();
+    return text;
+  }
+
+  get troutPlanApproved() {
+    return this.dialog.npc.hasVariable("trout-plan-approved");
+  }
+
+  // The player can pitch the quiet way: Petiole is already wearing Trout
+  // Potiok's face, so let the Matriarch name him heir instead of killing the
+  // family. Offered while the quest is being given, or afterwards.
+  canPitchTrout() {
+    const quest = game.quests.getQuest("cristal-den/potiok-chaos");
+
+    return troutReplacedByChangeling()
+        && !this.troutPlanApproved
+        && !this.dialog.npc.hasVariable("trout-plan-refused")
+        && (!quest || (!quest.completed && !quest.failed));
+  }
+
+  // In the opening dialogue state, the option only makes sense once the quest is accepted.
+  // During the mission briefing, canPitchTrout() alone applies.
+  canPitchTroutAfterBriefing() {
+    return this.isAccepted("cristal-den/potiok-chaos") && this.canPitchTrout();
+  }
+
+  pitchTrout() {
+    const later = this.isAccepted("cristal-den/potiok-chaos");
+    let approved = skillContest(game.player, this.dialog.npc, "speech") === game.player;
+
+    if (approved) {
+      this.dialog.npc.setVariable("trout-plan-approved", 1);
+      if (later)
+        game.quests.getQuest("cristal-den/potiok-chaos").script.proposeTroutPlan();
+      return later ? "potiok-quest/trout-plan-ok-later" : "potiok-quest/trout-plan-ok";
+    }
+    this.dialog.npc.setVariable("trout-plan-refused", 1);
+    return later ? "potiok-quest/trout-plan-refused-later" : "potiok-quest/trout-plan-refused";
+  }
+
+  reportPotiokQuestState() {
+    const quest = game.quests.getQuest("cristal-den/potiok-chaos");
+
+    if (quest) {
+      if (quest.failed)
+        return "potiok-quest/report-failure";
+      if (!quest.completed)
+        return null;
+      // Two ways to finish this one: the bloody way (matriarch and heirs
+      // dead - see Potioks.chaosSown in the quest script) or the quiet way
+      // (Trout Potiok, secretly Petiole, made heir). Same completion flag,
+      // different debrief.
+      return quest.script.troutIsHeir ? "potiok-quest/report-success-heir" : "potiok-quest/report-success";
+    }
+    return null;
+  }
+
+  onPotiokQuestReportSuccess() {
+    this.acknowledge("cristal-den/potiok-chaos");
   }
 }
 

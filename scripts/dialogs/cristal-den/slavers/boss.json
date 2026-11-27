@@ -12,6 +12,16 @@
             "state": "slavers-errand/on-explosions",
             "text": "slavers-errand/about-explosions"
         },
+        "slavers-errand/accept-escort": {
+            "availableHook": "slaversErrandCanPayEscort",
+            "state": "slavers-errand/on-escort-accepted",
+            "text": "slavers-errand/accept-escort"
+        },
+        "slavers-errand/ask-escort-discount": {
+            "availableHook": "slaversErrandCanOfferEscort",
+            "state": "slavers-errand/escort-offer",
+            "text": "slavers-errand/ask-escort-discount"
+        },
         "slavers-errand/ask-for-slaves": {
             "state": "slavers-errand/slave-sale",
             "text": "slavers-errand/ask-for-slaves"
@@ -23,6 +33,10 @@
         },
         "slavers-errand/cannot-buy": {
             "text": "slavers-errand/cannot-buy"
+        },
+        "slavers-errand/decline-escort": {
+            "state": "slavers-errand/slave-sale",
+            "text": "slavers-errand/decline-escort"
         },
         "slavers-errand/negociate-event-further-beyond": {
             "hook": "onNegociateEvenFurtherBeyond",
@@ -57,6 +71,7 @@
         "on-negociate-even-further-beyond": {
             "answers": [
                 "slavers-errand/buy-slaves",
+                "slavers-errand/ask-escort-discount",
                 "slavers-errand/cannot-buy"
             ],
             "mood": "",
@@ -80,15 +95,32 @@
             "mood": "",
             "text": "slavers-errand/entry"
         },
+        "slavers-errand/escort-offer": {
+            "answers": [
+                "slavers-errand/accept-escort",
+                "slavers-errand/decline-escort",
+                "slavers-errand/cannot-buy"
+            ],
+            "hook": "",
+            "mood": "cocky",
+            "text": "slavers-errand/escort-offer"
+        },
         "slavers-errand/negociate": {
             "answers": [
                 "slavers-errand/buy-slaves",
+                "slavers-errand/ask-escort-discount",
                 "slavers-errand/negociate-further",
                 "slavers-errand/cannot-buy"
             ],
             "hook": "onNegociate",
             "mood": "cocky",
             "text": "slavers-errand/negociate"
+        },
+        "slavers-errand/on-escort-accepted": {
+            "answers": [],
+            "hook": "onEscortAccepted",
+            "mood": "cocky",
+            "text": "slavers-errand/on-escort-accepted"
         },
         "slavers-errand/on-explosions": {
             "answers": [
@@ -101,6 +133,7 @@
         "slavers-errand/on-negociate-even-further-beyond": {
             "answers": [
                 "slavers-errand/buy-slaves",
+                "slavers-errand/ask-escort-discount",
                 "slavers-errand/cannot-buy"
             ],
             "hook": "",
@@ -110,6 +143,7 @@
         "slavers-errand/on-negociate-failure": {
             "answers": [
                 "slavers-errand/buy-slaves",
+                "slavers-errand/ask-escort-discount",
                 "slavers-errand/cannot-buy"
             ],
             "mood": "angry",
@@ -118,6 +152,7 @@
         "slavers-errand/on-negociate-further": {
             "answers": [
                 "slavers-errand/buy-slaves",
+                "slavers-errand/ask-escort-discount",
                 "slavers-errand/negociate-event-further-beyond",
                 "slavers-errand/cannot-buy"
             ],
@@ -126,8 +161,7 @@
             "text": "slavers-errand/on-negociate-further"
         },
         "slavers-errand/on-slaves-bought": {
-            "answers": [
-            ],
+            "answers": [],
             "hook": "onSlavesBought",
             "mood": "cocky",
             "text": "slavers-errand/on-slaves-bought"
@@ -135,6 +169,7 @@
         "slavers-errand/slave-sale": {
             "answers": [
                 "slavers-errand/buy-slaves",
+                "slavers-errand/ask-escort-discount",
                 "slavers-errand/negociate-outraged",
                 "slavers-errand/cannot-buy"
             ],

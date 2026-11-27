@@ -29,6 +29,11 @@
         "medical-check-2-fail": {
             "text": "medical-check-2-fail"
         },
+        "medical-check-2-medicine": {
+            "availableHook": "canHealWithMedicineSkill",
+            "state": "on-heal-medicine-prompt",
+            "text": "medical-check-2-medicine"
+        },
         "medical-check-2-success": {
             "availableHook": "canPerformHeal",
             "state": "on-heal-prompt",
@@ -111,6 +116,12 @@
             "mood": "angry",
             "text": "negociate-doctor-bag-failure"
         },
+        "on-heal-medicine-prompt": {
+            "answers": [
+                "perform-heal"
+            ],
+            "text": "on-heal-medicine-prompt"
+        },
         "on-heal-prompt": {
             "answers": [
                 "perform-heal"
@@ -125,6 +136,7 @@
         "on-medical-check-success": {
             "answers": [
                 "medical-check-2-success",
+                "medical-check-2-medicine",
                 "medical-check-2-fail"
             ],
             "text": "on-medical-check-success"

@@ -1,6 +1,7 @@
 import {QuestHelper, QuestFlags, requireQuest} from "../../quests/helpers.mjs";
 import {skillContest} from "../../cmap/helpers/checks.mjs";
 import * as Potioks from "../../quests/cristal-den/potioks.mjs";
+import {allPotiokTargetsDead} from "../../quests/cristal-den/bibins-potiok-assassination.mjs";
 
 class Dialog {
   constructor(dialog) {
@@ -264,7 +265,7 @@ class Dialog {
     else if (this.canStartThirdQuest())
       return "pinnedHerd/intro";
     else if (this.canStartFourthQuest()) {
-      if (Potioks.allHeirsDead() && Potioks.matriarchDead())
+      if (allPotiokTargetsDead())
         return "potiokAssassination/already-done";
       else
         return "potiokAssassination/intro";

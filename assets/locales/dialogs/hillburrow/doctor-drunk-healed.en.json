@@ -1,0 +1,12 @@
+{
+    "dialogs": {
+        "hillburrow/doctor-drunk-healed": {
+            "answer-leave": "It was nothing. I'll let you take it from here.",
+            "answer-secret": "A good doctor never reveals her sources.",
+            "answer-wastes": "Picked it up in the wastes, one patient at a time.",
+            "entry": "<i>You step back from the patient. He's breathing slowly but steadily, and a bit of color is coming back to his face. The doctor stares at your work, mouth half open.</i><br/><br/>I… that was… I've been doing this for years and I've never seen anypony close an internal wound that clean. Where in Equestria did you learn techniques like these ?",
+            "secret-reaction": "That… sounds like the exact opposite of what a good doctor would do. Keep your secrets, then. You've still got my gratitude, and I don't give it out lightly.",
+            "wastes-reaction": "That's a hell of a school. If you ever feel like sharing what you know, my door is open. Thank you. Truly."
+        }
+    }
+}

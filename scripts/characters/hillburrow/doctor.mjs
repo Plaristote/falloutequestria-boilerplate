@@ -1,5 +1,5 @@
 import {CharacterBehaviour} from "../character.mjs";
-import {drunkenQuestOver} from "../../quests/hillburrow/saveDrunkenMaster.mjs"
+import {drunkenQuestOver, drunkenQuestKilledPatient} from "../../quests/hillburrow/saveDrunkenMaster.mjs"
 
 class Doctor extends CharacterBehaviour {
   constructor(model) {
@@ -7,9 +7,21 @@ class Doctor extends CharacterBehaviour {
   }
 
   get dialog() {
+    // She never speaks to the pony who killed her patient again.
+    if (drunkenQuestKilledPatient())
+      return null;
     if (drunkenQuestOver())
       return "hillburrow/doctor";
     return "hillburrow/doctor-drunk-quest";
+  }
+
+  get textBubbles() {
+    if (drunkenQuestKilledPatient()) {
+      return [
+        { content: game.quests.getQuest("hillburrow/saveDrunkenMaster").tr("doctor-refuses"), duration: 4000, color: "red" }
+      ];
+    }
+    return undefined;
   }
 
   get shop() {

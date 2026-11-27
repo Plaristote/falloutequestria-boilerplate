@@ -180,6 +180,14 @@
             "state": "slavers-errand/price-not-upped",
             "text": "slavers-errand-ask-more-money"
         },
+        "slavers-errand-execution-fight": {
+            "hook": "startExecution",
+            "text": "slavers-errand-execution-fight"
+        },
+        "slavers-errand-execution-flee": {
+            "hook": "startExecutionFlee",
+            "text": "slavers-errand-execution-flee"
+        },
         "slavers-errand-negociate-refund": {
             "hook": "slaversErrandNegociateRefund",
             "state": "slavers-errand/refund-negociation-rejected",
@@ -387,9 +395,24 @@
             "mood": "dubious",
             "text": "slavers-errand/about-money"
         },
-        "slavers-errand/exit": {
+        "slavers-errand/execution-deserted": {
             "answers": [
+                "slavers-errand-execution-fight",
+                "slavers-errand-execution-flee"
             ],
+            "mood": "angry",
+            "text": "slavers-errand/execution-deserted"
+        },
+        "slavers-errand/execution-wiped": {
+            "answers": [
+                "slavers-errand-execution-fight",
+                "slavers-errand-execution-flee"
+            ],
+            "mood": "angry",
+            "text": "slavers-errand/execution-wiped"
+        },
+        "slavers-errand/exit": {
+            "answers": [],
             "mood": "smile",
             "text": "slavers-errand/exit"
         },
@@ -440,9 +463,32 @@
             "mood": "smile",
             "text": "slavers-errand/waiting-report"
         },
-        "slavers-errand/waiting-slaves": {
+        "slavers-errand/waiting-report-angry": {
             "answers": [
+                "slaves-errand-gift-slaves",
+                "ask-slaves-errand-refund"
             ],
+            "hook": "slaversErrandReported",
+            "mood": "angry",
+            "text": "slavers-errand/waiting-report-angry"
+        },
+        "slavers-errand/waiting-report-escort": {
+            "answers": [
+                "slaves-errand-gift-slaves",
+                "ask-slaves-errand-refund"
+            ],
+            "hook": "slaversErrandReported",
+            "mood": "smile",
+            "text": "slavers-errand/waiting-report-escort"
+        },
+        "slavers-errand/waiting-report-furious": {
+            "answers": [],
+            "hook": "slaversErrandReported",
+            "mood": "angry",
+            "text": "slavers-errand/waiting-report-furious"
+        },
+        "slavers-errand/waiting-slaves": {
+            "answers": [],
             "mood": "dubious",
             "text": "slavers-errand/waiting-slaves"
         }

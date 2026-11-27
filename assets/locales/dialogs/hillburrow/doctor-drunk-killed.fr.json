@@ -1,0 +1,10 @@
+{
+    "dialogs": {
+        "hillburrow/doctor-drunk-killed": {
+            "entry": "<i>La poitrine du patient ne se soulève plus. La docteure laisse tomber ce qu'elle tenait, et vous regarde, les yeux pleins de fureur.</i><br/><br/>QU'EST-CE QUE VOUS AVEZ FAIT ?! Il était STABLE ! Il me fallait juste une sacoche et un peu de temps, et il a fallu que vous jouiez les héros, espèce de BOUCHER téméraire et arrogant !",
+            "answer-apologize": "Je suis désolé. Je pensais pouvoir le sauver.",
+            "answer-leave": "…",
+            "no-forgiveness": "Désolé ? DÉSOLÉ ?! Désolé ne va pas le recoller ! Sortez de ma clinique. Je ne veux plus jamais voir votre visage ni entendre votre voix. Et je m'assurerai que tout Hillburrow sache ce que vous avez fait !"
+        }
+    }
+}

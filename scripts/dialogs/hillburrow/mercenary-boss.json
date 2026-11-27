@@ -90,7 +90,6 @@
         "about-timing-answer": {
             "answers": [
             ],
-            "mood": "",
             "text": "about-timing-answer"
         },
         "entry": {
@@ -100,14 +99,12 @@
                 "ask-about-sabotages",
                 "exit-entry"
             ],
-            "hook": "",
             "mood": "neutral",
             "text": "entry"
         },
         "fight/entry": {
             "answers": [
             ],
-            "hook": "",
             "mood": "angry",
             "text": "fight/entry"
         },
@@ -128,7 +125,6 @@
                 "quest-sheriff-murder-back-to-entry"
             ],
             "hook": "onTalkAboutSabotage",
-            "mood": "",
             "text": "quest-sheriff-murder-about-case"
         },
         "quest-sheriff-murder-on-confront": {
@@ -143,16 +139,12 @@
                 "quest-seriff-murder-exit",
                 "quest-sheriff-murder-back-to-entry"
             ],
-            "hook": "",
-            "mood": "",
             "text": "quest-sheriff-murder-sabotage"
         },
         "quest-sheriff-suspicions": {
             "answers": [
                 "quest-sheriff-murder-back-to-entry"
             ],
-            "hook": "",
-            "mood": "",
             "text": "quest-sheriff-suspicions"
         },
         "sabotage/about-explosive-reaction": {
@@ -167,7 +159,6 @@
                 "sabotage-solve-explosive-via-science",
                 "sabotage-ask-something-else"
             ],
-            "mood": "",
             "text": "sabotage/about-explosives"
         },
         "sabotage/about-timing": {
@@ -175,7 +166,6 @@
                 "ask-about-sabotage-timing-insist",
                 "sabotage-ask-something-else"
             ],
-            "hook": "",
             "mood": "angry",
             "text": "sabotage/about-timing"
         },
@@ -193,7 +183,7 @@
                 "ask-about-sabotage-whereabouts",
                 "sabotage-nothing-more-to-ask"
             ],
-            "mood": "",
+            "mood": "laugh",
             "text": "sabotage/entry"
         }
     }

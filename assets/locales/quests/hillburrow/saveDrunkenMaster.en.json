@@ -8,7 +8,15 @@
       "desc-failed": "But you just couldn't bother to spend time on somepony dumb enough to end up this badly wounded. Natural selection prevailed once again.",
       "desc-saved": "Maybe you could've a chat with that poney. Considering the alcohol stench, you can guess he's a regular at the bar.",
       "findDoctorBag": "Fetch a doctor bag",
-      "saveDrunkenMaster": "Save the doctor's patient"
+      "saveDrunkenMaster": "Save the doctor's patient",
+      "needs-doctor-bag": "The patient has a wooden stake stuck through his stomach. You can't operate on an internal wound with your bare hooves: you need a doctor's bag.",
+      "needs-doctor-bag-have": "The patient has a wooden stake stuck through his stomach. You can't operate with your bare hooves, but you do have a doctor's bag. Try using it on him.",
+      "surgery-started": "You roll up your sleeves and start operating on the wounded pony…",
+      "surgery-success": "The stake is out, the stomach is sewn up, and the bleeding stopped. The patient is going to live.",
+      "surgery-failure": "You feel something give way under your hooves. The patient convulses once, then goes limp. He's dead.",
+      "doctor-refuses": "Don't you dare speak to me, murderer !",
+      "desc-player-healed-bag": "You got your hooves on a doctor's bag and operated on the patient yourself. Everything went smoothly, and the doctor was left speechless.",
+      "desc-killed-patient": "You took the matter into your own hooves, and botched the operation. The patient died on the floor of the clinic. The doctor will never speak to you again, and word of it will spread through Hillburrow."
     }
   }
 }

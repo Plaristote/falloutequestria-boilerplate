@@ -1,4 +1,5 @@
 import * as Checks from "../../../cmap/helpers/checks.mjs";
+import {escortDiscountRate} from "../../../quests/cristal-den/slavers-errand.mjs";
 
 class Dialog {
   constructor(dialog) {
@@ -12,7 +13,35 @@ class Dialog {
   isSlaversErrandActive() {
     const quest =  game.quests.getQuest("cristal-den/slavers-errand");
 
-    return quest && !quest.isObjectiveCompleted("fetchSlaves");
+    // Not anymore once the player has taken the convoy to escort (it can still fail).
+    return quest && !quest.isObjectiveCompleted("fetchSlaves") && !quest.failed && !quest.script.escortStarted;
+  }
+
+  // BEGIN Escort: the player walks the slaves to Hillburrow for a discount
+  get slaversErrandEscortPrice() {
+    return Math.ceil(this.slaversErrandPrice * (1 - escortDiscountRate));
+  }
+
+  get slaversErrandEscortDiscountPercent() {
+    return Math.round(escortDiscountRate * 100);
+  }
+
+  slaversErrandCanOfferEscort() {
+    // Other travels (caravans, expeditions) use the same machinery: one at a time.
+    return game.script.activeProcesses.length === 0;
+  }
+
+  slaversErrandCanPayEscort() {
+    return game.player.inventory.count("bottlecaps") >= this.slaversErrandEscortPrice;
+  }
+
+  onEscortAccepted() {
+    const price = this.slaversErrandEscortPrice;
+
+    game.player.inventory.removeItemOfType("bottlecaps", price);
+    this.slaversErrand.script.spent += price;
+    this.slaversErrand.script.startEscort(price);
+    this.dialog.npc.tasks.addTask("startSlaveConvoy", 350, 1);
   }
 
   slaversErrandCanNegociate() {

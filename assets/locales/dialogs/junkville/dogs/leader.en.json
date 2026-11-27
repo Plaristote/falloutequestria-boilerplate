@@ -177,7 +177,9 @@
             "why-here-following-trail": "I'm following the trail of some missing ponies.",
             "why-here-none-of-your-business": "None of your business.",
             "why-here-traveler": "I'm a wasteland traveler, nothing more.",
-            "wounded-intro-tell-me-more": "Is there anything I can do?"
+            "wounded-intro-tell-me-more": "Is there anything I can do?",
+            "bring-up-negociations-randy-ready": "Randy says Junkville is ready to talk.",
+            "negociations/debate-entry-randy-ready": "Junkville is ready to talk ? The ponies sent you to tell me that ?<br><br>…I'll admit I did not expect it. My wounded dogs got better thanks to you, and I haven't forgotten it. But a single act of kindness doesn't undo generations of misdeeds. Give me reasons to open our door, and I'll listen."
         }
     }
 }

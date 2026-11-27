@@ -13,7 +13,7 @@
             "search-over": "<i>Tu regarde parmi les fichiers, mais tu ne vois rien qui attire ton attention.</i>",
             "search-try-again": "Essayer à nouveau",
             "sentinel-lookup/searched": "<i>Tu hacke le terminal et obtiens l'accès à des fichiers protégés. Ce sont des spécifications pour un projet sensible, nommé <b>Sentinelle</b>.",
-            "use-scroll-holodisk": "Insérer l'holodisque de Vellum Scroll"
+            "use-scroll-holodisk": "Insérer l'holodisque de Vellum Scroll",
             "sentinel-lookup/entry": "<i>L'écran montre le processus d'authentification de Sentinel. La marque magique est juste là, prête à être appliquée à nouveau - ou supprimée pour toujours.</i>",
             "sentinel-imprint-attempt-self": "Appliquer la marque sur l'utilisateur",
             "sentinel-imprint-retry": "Essayer à nouveau",

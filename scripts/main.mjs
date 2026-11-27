@@ -1,6 +1,7 @@
 import {RandomEncounterComponent} from "./randomEncounters.mjs";
 import Caravan from "./caravan.mjs";
 import GhoulHunterExpedition from "./behaviour/cristal-den/ghoulHunterExpedition.mjs";
+import SlaveConvoy from "./behaviour/cristal-den/slaveConvoy.mjs";
 import cristalDenPatrol from "./behaviour/cristal-den/copper-patrol.mjs";
 import {getValueFromRange} from "./behaviour/random.mjs";
 import makeEndGameSlides from "./slides/endGame.mjs";
@@ -14,6 +15,7 @@ export default class extends RandomEncounterComponent {
     super(model);
     this.caravan = new Caravan;
     this.ghoulHunterExpedition = new GhoulHunterExpedition;
+    this.slaveConvoy = new SlaveConvoy;
   }
 
   get rathianIntroduced() { return game.hasVariable("rathianIntroduced"); }
@@ -22,7 +24,7 @@ export default class extends RandomEncounterComponent {
   set rathianTrack(value) { game.setVariable("rathianTrack", value); }
 
   get activeCaravans() {
-    return [this.caravan, this.ghoulHunterExpedition, cristalDenPatrol()]
+    return [this.caravan, this.ghoulHunterExpedition, this.slaveConvoy, cristalDenPatrol()]
       .filter(caravan => caravan.hasCaravan);
   }
   get activeProcesses() {

@@ -1,4 +1,5 @@
 import {potiokRuleEnded} from "../../../quests/cristal-den/potioks.mjs";
+import {isTroutHeir} from "../../../quests/cristal-den/heir-selection.mjs";
 
 export default class Dialog {
   constructor(dialog) {
@@ -13,8 +14,14 @@ export default class Dialog {
       this.dialog.npc.script.quest.script.onTalkedToPetioleAfterQuest();
       return "end-quest";
     }
-    else if (this.questCompleted)
+    else if (this.questCompleted) {
+      // First thing she brings up once the Matriarch has made "Trout" (her) the heir.
+      if (isTroutHeir() && !this.dialog.npc.hasVariable("talkedAboutHeir")) {
+        this.dialog.npc.setVariable("talkedAboutHeir", 1);
+        return "heir-reaction";
+      }
       return "pimping";
+    }
     return "start-quest";
   }
 
