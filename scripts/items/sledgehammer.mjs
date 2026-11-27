@@ -37,7 +37,9 @@ export default class Sledgehammer extends WeaponBehaviour {
   }
 
   getRange() {
-    return 0;
+    if (this.model.useMode == "swing")
+      return 0;
+    return super.getRange();
   }
 
   useOn(target) {

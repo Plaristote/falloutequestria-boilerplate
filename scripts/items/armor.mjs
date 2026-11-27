@@ -24,7 +24,7 @@ export default class ArmorBehaviour extends ItemBehaviour {
       const value = this.mitigationData[damageType];
 
       if (value)
-        return damage - Math.round(damage * value);
+        return Math.max(0, damage - Math.round(damage * value));
     }
     return damage;
   }
