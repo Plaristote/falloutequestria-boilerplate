@@ -1,11 +1,13 @@
 function evaluateWeapon(user, weapon) {
+  if (typeof weapon.script?.getDamageRange != "function")
+    return 0;
   const damage = weapon.script.getDamageRange();
   const average = (damage[0] + damage[1]) / 2;
   return average * user.statistics[weapon.script.skill] / 100;
 }
 
 function evaluateSidearm(user, weapon) {
-  return weapon.script.getActionPointCost() < 5
+  return typeof weapon.script?.getActionPointCost == "function" && weapon.script.getActionPointCost() < 5
     ? evaluateWeapon(user, weapon)
     : 0;
 }
@@ -31,7 +33,7 @@ export default class {
       return item.category === "weapon" && weaponHasEnoughAmmo(item);
     });
     return candidates.sort((itemA, itemB) => {
-      return evaluator(itemB, this.model) - evaluator(itemA, this.model);
+      return evaluator(this.model, itemB) - evaluator(this.model, itemA);
     })[0];
   }
 
