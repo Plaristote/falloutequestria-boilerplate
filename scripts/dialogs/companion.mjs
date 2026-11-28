@@ -22,6 +22,12 @@ export default class CompanionDialog extends DialogHelper {
     return this.entryDialog();
   }
 
+  isFreeBarter() {
+    const npc = this.dialog.npc;
+ 
+    return npc.script?.freeTrade !== false && game.playerParty.containsCharacter(npc);
+  }
+
   get customMenuAnswers() {
     return [];
   }
