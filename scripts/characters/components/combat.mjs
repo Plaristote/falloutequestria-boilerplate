@@ -1,5 +1,6 @@
 import {SkillTargetComponent} from "./skillTarget.mjs";
 import EquipmentEquinoid from "./combat/equipment-equinoid.mjs";
+import Scavenger from "./combat/scavenger.mjs";
 import FightTurnActions from "./combat/actions-fight.mjs";
 import ThreatTable from "./combat/threat-table.mjs";
 import TargetSelector from "./combat/target-selector.mjs";
@@ -13,6 +14,7 @@ export class CombatComponent extends SkillTargetComponent {
     this._combatRunCount = 0;
     this.threatTable = new ThreatTable();
     this.targetSelector = new TargetSelector(this);
+    this.scavenger = new Scavenger(this);
     if (canTrashTalk(model))
       this.trashTalker = new TrashTalkComponent(this);
   }
@@ -140,6 +142,8 @@ export class CombatComponent extends SkillTargetComponent {
     const turnActions = new FightTurnActions(this);
     let result;
 
+    if (this.scavenger.tryScavenge())
+      return true;
     equipment.swapWeapons();
     turnActions.slotName = equipment.pickBestUseSlotToUseAgainst(this.combatTarget);
     result = turnActions.run();

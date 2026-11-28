@@ -1,4 +1,4 @@
-function evaluateWeapon(user, weapon) {
+export function evaluateWeapon(user, weapon) {
   if (typeof weapon.script?.getDamageRange != "function")
     return 0;
   const damage = weapon.script.getDamageRange();
